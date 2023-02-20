@@ -1,0 +1,464 @@
+---
+title: "GOVT6139</br>Research methods"
+subtitle: "Week 01</br>Introduction and overview"
+author: "Francesco Bailo"
+institute: "The University of Sydney"
+date: "Semester 1, 2023 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+background-image: url(https://upload.wikimedia.org/wikipedia/en/6/6a/Logo_of_the_University_of_Sydney.svg)
+background-size: 95%
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, 
+                      dev = 'svg', out.width = "45%", fig.width = 6,
+                      fig.align="center")
+
+```
+
+---
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
+---
+
+## Your teacher
+	
+Francesco Bailo (francesco.bailo@sydney.edu.au)
+
+I am a Lecturer in the School of Social and Political Sciences, University of Sydney. I am interested in researching forms of political engagement and political talk on social media. I researched the emergence and dynamics of online communities, the role between news organisations and social media, and the interdependence between social media activists and news organisations. I have engaged with and applied quantitative research methods developing expertise in quantitative text analysis (NLP) and network analysis.
+
+This year I am teaching GOVT6139 and SSPS4102.
+
+Fun fact: I took GOVT6139 in 2014 during my PhD. 
+
+---
+
+# Some tips
+
+
+* Ask questions sooner than later, and ask questions at any point.
+
+--
+
+* All seminar slides are available from Canvas (go to "Modules") by the beginning of the seminar, so keep them open on your laptop (this makes opening links much easier).
+
+.center[<img src = "https://media.giphy.com/media/pNpONEEg3pLIQ/giphy.gif"></img>]
+
+---
+
+## How are seminars run?
+
+Mix of 
+
+- Lectures;
+
+- Discussions (including on readings): Discussions will generally be prompted by questions you will be required to answer through Canvas and Mentimeter (you will try this soon!);
+
+- Group work;
+
+- Data labs (in Week 10 and 11).
+
+## Expectations
+
+- Attend class in-person or (only if authorised by the universit) via Zoom.
+
+- Do the readings before coming to class.
+
+- Come to class prepared to contribute to the discussion and share reflections on the readings.
+
+---
+
+
+## What do we mean by Research Design?
+
+A class focused on how research in the social sciences is conducted.
+
+Key questions:
+
+* What is *knowledge*? *How* do we know? And *what* we know and what can we know?
+
+* How do we critically evaluate research?
+
+* How do we do research and conduct our research processes?
+
+.pull-right[<img src = 'https://media.giphy.com/media/3orieUe6ejxSFxYCXe/giphy.gif' width = '90%'></img>]
+
+---
+
+## Can we trust research (in the social sciences)?
+
+– Not a matter of research can / cannot be trusted
+
+– Every study has strengths and weaknesses
+
+– Different types of studies have different knowledge claims (interpretivism vs positivism)
+
+– Many areas are debated: e.g. economic conditions and protest
+
+– Research results specific to the context in which they were studied
+
+– Knowledge a cumulative endeavor (meta-analyses / systematic reviews)
+
+– Surveys: All depends on how the survey was conducted
+
+---
+
+## This semester is about unpacking ...
+
+1. What is **knowledge** (in the social and political sciences) and
+
+2. How is it **generated**?
+
+.center[<img src = "https://media.giphy.com/media/3oKIP9cJEOO9ljKoCc/giphy.gif" width = "50%"></img>]
+
+---
+
+## Why to take this class? (1/2)
+
+
+### Understand the processes by which research is conducted in the social sciences.
+
+So what?
+
+– Become a critical consumer of research
+
+– Build a foundation to be able to conduct social science research
+
+– Real world relevance, e.g. understand how survey research is conducted and whether it can be trusted
+
+– Understand strengths and weaknesses of different research approaches e.g. interviews vs surveys
+
+– Understand new frontiers on methods
+
+– Evidence-based policy making
+
+– Professionally relevant skills
+
+---
+
+## Why to take this class? (2/2)
+
+### What the class is
+
+– Broad introduction to research design and methods
+
+– Both qualitative and quantitative approaches
+
+– Opportunity to develop a research proposal
+
+– Foundation for future research (e.g. Masters / PhD / work settings)
+
+### What the class is not 
+
+– An advanced statistics course (although we will do some #Rstat in week 10 & 11)
+
+– Opportunity to conduct a research project
+
+– Note there are specialist qualitative / quantitative methods classes also on offer
+
+---
+
+## What is research? What is research design? And what do we mean by research methods?
+
+Let's take this chocolate study...
+
+.center[<img src = '/Users/fbai9728/Documents/GitHub/GOVT6139/img/chocolate-study.png' width = '60%'></img>]
+
+Youmans, R. J., & Jee, B. D. (2007). Fudging the numbers: Distributing chocolate influences student evaluations of an undergraduate course. *Teaching of Psychology*, 34(4), 245–247. https://doi.org/10.1080/00986280701700318
+
+---
+
+https://doi.org/10.1080/00986280701700318
+
+Let's skim through the paper (is very short!) 
+
+Then answer these questions: 
+
+1. What *knowledge* is produced by the paper?
+
+2. How was that *knowledge* produced? That is, how was the research *designed*?
+
+3. How much do you *trust* this knowledge? 
+
+4. And why? 
+
+---
+
+## How to contribute you answers
+
+1. Enter your answers in Canvas
+
+Then, 
+
+2. Copy/paste them into Menti => https://www.menti.com/al8jn8dsxbqa
+
+
+---
+
+## My own research 
+
+### 1. Emergence, interaction, and diffusion of *political opinions* online
+
+.center[
+<img src = "../img/bailo-research-lines.png" height=350px />
+]
+
+### 2. Impacts of social media technologies and services on *political participation and organisation*
+
+---
+
+#### 1. Emergence, interaction, and diffusion of *political opinions* online
+
+* Cross-disciplinary research: Digital ethnography, Computer science and Political science. 
+* Loops involving Qualitative, Quantitative & Computational methods.
+
+##### Key research questions
+
+* What opinions do **emerge** online, but also when and where?
+
+* How do opinions **interact** with other opinions through the Cloud and its online communities?
+
+* What factors determine the speed and reach of the **diffusion** of opinions? 
+
+---
+  
+#### 2. Impact of social media technologies and services on *political participation and organisation*
+
+* Political science research: Parties, Movements, Campaigns and Elections.
+* Qualitative, Quantitative & Computational methods.
+
+##### Key research questions
+
+* Can "Internet capital" offset a lack of social capital in facilitating participation and organisation?
+
+* Does Internet capital facilitate the organisation of political discontent from the margin (low-social capital areas)?
+
+* Do Internet technologies and services create more political instability by facilitating the emergence of new political actors (individuals or organisations)?
+  
+* Do social media negatively affect the quality of political deliberation? What factors, technologies or services are important in reducing the quality of online conversation? 
+
+
+---
+
+## Reflection: Experiences of engaging with research
+
+In groups, introduce yourself, and discuss briefly (5 mins):
+
+- A situation where you had to deal with questions of research methods
+
+- E.g. in your studies, or in your work, or understanding reporting in the media
+
+- What challenges did you face?
+
+- What questions do you have about the process of how research is conducted?
+
+Prepare to share your ideas with the class by creating a document (Word or PPT in Teams => "Week 01")! 
+
+
+---
+
+## Course Outline (1/2)
+
+**Week 1**: Introduction
+
+**Week 2**: Foundations: Ontology and Epistemology (w/t Peter Chen)
+
+**Week 3**: Research Design (I): Questions, Theories, Hypotheses, Variables, Measurements
+
+**Week 4**: Research Design (II): Causal Inference
+
+**Week 5**: Research Design (III): Case selection
+
+**Week 6**: Qualitative Methods (I): Data Collection (w/t Peter Chen)
+
+**Week 7**: Qualitative Methods (II): Data Analysis (w/t Peter Chen)
+
+* A1 is due (via Canvas)
+
+---
+
+## Course Outline (2/2)
+
+**Week 8**: Quantitative Methods (I): Data Collection
+
+*Mid Semester break*
+
+**Week 9**: Public holiday (but start working on Week 10 readings)
+
+**Week 10**: Quantitative Methods (II): Data Analysis
+
+* R lab: Make sure you install R and RStudio
+
+**Week 11**: Quantitative Methods (III): Data Analysis + lab
+
+* Draft A2 for peer review is due (via Canvas)
+
+**Week 12**: Research Proposal: Peer Feedback Workshop
+
+* Peer review of three A2s is due (via Canvas) 
+
+**Week 13**: New frontiers and Conclusions
+
+* A2 is due (via Canvas)
+
+---
+
+## Building blocks of the research process
+
+### Weeks 02-05
+
+.pull-left[
+
+- **Week 02**: Ontology and epistemology
+
+    - Philosophical worldviews
+    
+    – Interpretivism and positivism
+
+- **Week 03**: Questions, theories, hypotheses, variables,
+measurements
+
+    - Asking good research questions
+    
+    - Theory and hypotheses
+    
+    - Concepts and measures
+    
+]
+    
+.pull-right[
+
+- **Week 04**: Causal inference
+    
+    - Types of research design
+    
+    - Causality
+    
+- **Week 05**: Case selection
+
+    - How do we choose cases? How many?
+  
+]
+    
+---
+    
+### Week 06 and 07: Qualitative Methods
+
+.pull-left[
+
+- **Week 06**: Qualitative data collection
+
+    - Interviews
+    
+    - Focus groups
+    
+    - Observational techniques
+    
+    - Document analysis
+
+]
+
+
+.pull-right[
+
+- **Week 07**: Qualitative data analysis
+
+    - What to do with the data once you've collected it?
+    
+    - Data management and analysis
+    
+    - Thematic analysis
+    
+    - Discourse analysis
+
+]
+
+---
+
+### Week 08, 10 and 11: Quantitative Methods
+
+.pull-left[
+
+- **Week 08**: Quantitative data collection
+
+    - Types of quantitative data
+    
+    - Surveys
+
+- **Week 10 & 11**: Quantitative data analysis
+
+    - Once we've collected the data – how do we analyse it?
+    
+    - Univariate, bivariate, multivariate analyses
+    
+    - Intro to statistical software (R and RStudio)
+    
+]
+
+.pull-right[
+
+.center[<img src = 'https://media.giphy.com/media/3o6YfTUIfDYjPdnk52/giphy.gif'></img>]
+
+]
+
+---
+
+### Weeks 12-13: Wrapping up
+
+- **Week 12**
+
+    - Research proposal peer feedback workshop (Remember: Draft is due in Week 11, Peer review before class in Week 12)
+    
+      - What are the most common issues emerging during peer review?
+      
+      - How to address them? 
+
+.pull-left[
+
+- **Week 13**
+
+    - New frontiers in methodology
+    
+    - Big data
+    
+    - Replication
+    
+]
+    
+    
+.pull-right[.center[<img src = 'https://media.tenor.com/ErExbOKBsA4AAAAC/back-off-man.gif'></img>]]
+
+---
+
+## Assessment overview
+
+1. Research article review (30%) due **Week 07**
+
+2. Research proposal (0%, draft for peer-review) **Week 11** 
+
+3. Research proposal (60%) **Week 13** 
+
+4. Seminar participation (10%) ongoing
+
+---
+
+
+## Deadlines, Tasks and Canvas
+
+* Let's check Canvas [assignments page](https://canvas.sydney.edu.au/courses/47713/assignments)
+
+* Let's check Canvas [calendar page](https://canvas.sydney.edu.au/calendar?include_contexts=course_47713#view_name=month&view_start=2023-02-20)
+
+* Let's check Canvas [syllabus page](https://canvas.sydney.edu.au/courses/47713/assignments/syllabus)
+
