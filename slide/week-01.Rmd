@@ -58,6 +58,8 @@ class: inverse, center, middle
 
 * All seminar slides are available from Canvas (go to "Modules") by the beginning of the seminar, so keep them open on your laptop (this makes opening links much easier).
 
+--
+
 .center[<img src = "https://media.giphy.com/media/pNpONEEg3pLIQ/giphy.gif"></img>]
 
 ---
@@ -86,17 +88,16 @@ Mix of
 ---
 ## What are your expectations for GOVT6139?
 
-(Directly below or link to Padlet from Canvas)
+(Directly below, in a new tab or link to Padlet from Canvas)
 
-<div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://sydney.padlet.org/embed/od6fji8ag6yjnwig" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p><div style="display:flex;align-items:center;justify-content:end;margin:0;height:28px"><a href="https://padlet.com?ref=embed" style="display:block;flex-grow:0;margin:0;border:none;padding:0;text-decoration:none" target="_blank"><div style="display:flex;align-items:center;"><img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" style="padding:0;margin:0;background:0 0;border:none;box-shadow:none" alt="Made with Padlet"></div></a></div></div>
-
-
+<div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://sydney.padlet.org/embed/od6fji8ag6yjnwig" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:400px;display:block;padding:0;margin:0"></iframe></p><div style="display:flex;align-items:center;justify-content:end;margin:0;height:28px"><a href="https://padlet.com?ref=embed" style="display:block;flex-grow:0;margin:0;border:none;padding:0;text-decoration:none" target="_blank"><div style="display:flex;align-items:center;"><img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" style="padding:0;margin:0;background:0 0;border:none;box-shadow:none" alt="Made with Padlet"></div></a></div></div>
 
 ---
 class: inverse, center, middle
 
 # An overview
 
+---
 
 ## What do we mean by Research Design?
 
@@ -186,6 +187,11 @@ So what?
 -Note there are specialist qualitative / quantitative methods classes also on offer
 
 ---
+class: inverse, center, middle
+
+# A quick excercise on research and knowledge
+
+---
 
 ## What is research? What is research design? And what do we mean by research methods?
 
@@ -211,24 +217,36 @@ Then answer these questions:
 
 4. And why? 
 
----
+### How to contribute you answers
 
-## How to contribute you answers
+.pull-left[
 
-1. Enter your answers in Canvas
+1. Enter your answers in Canvas ([here](https://canvas.sydney.edu.au/courses/47713/assignments/444083?module_item_id=1901981) or from directly from Canvas)
 
 Then, 
 
-2. Copy/paste them into Menti 
+2. Copy/paste them into Menti
+
+]
+
+.pull-right[
 
 .center[<img src ='../img/menti-week-01.png' width = '35%'></img>
 
-or https://www.menti.com/al8jn8dsxbqa]
+or https://www.menti.com/al8jn8dsxbqa (link also from Canvas)]
 
+]
+
+---
+class: inverse, center, middle
+
+# Something about my own research 
+
+<img src = 'https://media.giphy.com/media/MqE9IzBsmmShq/giphy.gif'></img>
 
 ---
 
-## My own research 
+### What do I study?
 
 ### 1. Emergence, interaction, and diffusion of *political opinions* online
 
@@ -240,12 +258,12 @@ or https://www.menti.com/al8jn8dsxbqa]
 
 ---
 
-#### 1. Emergence, interaction, and diffusion of *political opinions* online
+## 1. Emergence, interaction, and diffusion of *political opinions* online
 
 * Cross-disciplinary research: Digital ethnography, Computer science and Political science. 
 * Loops involving Qualitative, Quantitative & Computational methods.
 
-##### Key research questions
+### Key research questions
 
 * What opinions do **emerge** online, but also when and where?
 
@@ -255,12 +273,12 @@ or https://www.menti.com/al8jn8dsxbqa]
 
 ---
   
-#### 2. Impact of social media technologies and services on *political participation and organisation*
+## 2. Impact of social media technologies and services on *political participation and organisation*
 
 * Political science research: Parties, Movements, Campaigns and Elections.
 * Qualitative, Quantitative & Computational methods.
 
-##### Key research questions
+### Key research questions
 
 * Can "Internet capital" offset a lack of social capital in facilitating participation and organisation?
 
@@ -272,21 +290,34 @@ or https://www.menti.com/al8jn8dsxbqa]
 
 
 ---
+class: inverse, center, middle
 
-## Reflection: Experiences of engaging with research
+# Reflection
+
+---
+
+## Group task: Experiences of engaging with research
 
 In groups, introduce yourself, and discuss briefly (5 mins):
 
 - A situation where you had to deal with questions of research methods
 
-- E.g. in your studies, or in your work, or understanding reporting in the media
+    - E.g. in your studies, or in your work, or understanding reporting in the media
 
 - What challenges did you face?
 
 - What questions do you have about the process of how research is conducted?
 
-Prepare to share your ideas with the class by creating a document (Word or PPT in Teams => "Week 01")! 
+After discussing, share your individually or as group on Padlet (next slide...)
 
+---
+
+<div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://sydney.padlet.org/embed/ai5luwp4vmmwbkfl" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p><div style="display:flex;align-items:center;justify-content:end;margin:0;height:28px"><a href="https://padlet.com?ref=embed" style="display:block;flex-grow:0;margin:0;border:none;padding:0;text-decoration:none" target="_blank"><div style="display:flex;align-items:center;"><img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" style="padding:0;margin:0;background:0 0;border:none;box-shadow:none" alt="Made with Padlet"></div></a></div></div>
+
+---
+class: inverse, center, middle
+
+# Course Outline
 
 ---
 
@@ -488,12 +519,19 @@ measurements
 .center[<img src = 'https://media.giphy.com/media/G4pFuFdDewNyZlUYJV/giphy.gif' width = '40%'></img>]
 
 ---
+class: inverse, center, middle
+
+# Tools
+
+<img src = 'https://media.giphy.com/media/l0G18BkChcRRctMZ2/giphy.gif' width = '50%'></img>
+
+---
 
 ## Let's talk about... tools! (1/2)
 
 * You need a **reference management software**. And you need it now!
 
-    * If you are not using one yet I suggest you install Zotero (+ browser plugin, + Word plugin). Other popular option: EndNote. What RMS are you using? 
+    * If you are not using one yet I suggest you install Zotero (+ browser plugin, + Word plugin). Other popular option is EndNote. What RMS are you using? 
   
 .center[<img src ='../img/menti-week-01.png' width = '30%'></img> 
 
@@ -583,7 +621,13 @@ ChatGPT is for written information what JPEG is for images. Interpolation is wha
 
 See: *ChatGPT Is a Blurry JPEG of the Web* by Ted Chiang  (https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web)
 
+---
 
+# Do you want to demo ChatGPT now?
+
+.center[![](https://media.giphy.com/media/BpGWitbFZflfSUYuZ9/giphy.gif)]
+
+https://chat.openai.com/chat
 ---
 class: inverse, center, middle
 
