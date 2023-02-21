@@ -70,7 +70,7 @@ Mix of
 
 - Lectures;
 
-- Discussions (including on readings): Discussions will generally be prompted by questions you will be required to answer through Canvas and Mentimeter (you will try this soon!);
+- Discussions (including on readings): Discussions will generally be prompted by questions you will be required to answer through Canvas, Mentimeter, Padlet;
 
 - Group work;
 
@@ -78,11 +78,20 @@ Mix of
 
 ## My expectations
 
-- Attend class in-person or (only if authorised by the universit) via Zoom.
+- Attend class in-person or (only if authorised by the university) via Zoom. If you attend via Zoom and you are not RE, your attendance will not count towards attendance requirements (90% of classes).
 
-- Do the readings before coming to class.
+- Do the readings before coming to class and come to class prepared to contribute to the discussion and share reflections on the readings.
 
-- Come to class prepared to contribute to the discussion and share reflections on the readings.
+---
+
+## Let's get to know the class!
+
+Open Menti ...
+
+.center[<img src ='../img/menti-week-01.png' width = '35%'></img>
+
+or https://www.menti.com/al8jn8dsxbqa (link also from Canvas)]
+
 
 
 ---
@@ -117,19 +126,19 @@ Key questions:
 
 ## Can we trust research (in the social sciences)?
 
--Not a matter of research can / cannot be trusted
+- Not a matter of research can / cannot be trusted
 
--Every study has strengths and weaknesses
+- Every study has strengths and weaknesses
 
--Different types of studies have different knowledge claims (interpretivism vs positivism)
+- Different types of studies have different knowledge claims (interpretivism vs positivism)
 
--Many areas are debated: e.g. economic conditions and protest
+- Many areas are debated: e.g. economic conditions and protest
 
--Research results specific to the context in which they were studied
+- Research results specific to the context in which they were studied
 
--Knowledge a cumulative endeavor (meta-analyses / systematic reviews)
+- Knowledge a cumulative endeavor (meta-analyses / systematic reviews)
 
--Surveys: All depends on how the survey was conducted
+- Surveys: All depends on how the survey was conducted
 
 ---
 
@@ -150,19 +159,19 @@ Key questions:
 
 So what?
 
--Become a critical consumer of research
+- Become a critical consumer of research
 
--Build a foundation to be able to conduct social science research
+- Build a foundation to be able to conduct social science research
 
--Real world relevance, e.g. understand how survey research is conducted and whether it can be trusted
+- Real world relevance, e.g. understand how survey research is conducted and whether it can be trusted
 
--Understand strengths and weaknesses of different research approaches e.g. interviews vs surveys
+- Understand strengths and weaknesses of different research approaches e.g. interviews vs surveys
 
--Understand new frontiers on methods
+- Understand new frontiers on methods
 
--Evidence-based policy making
+- Evidence-based policy making
 
--Professionally relevant skills
+- Professionally relevant skills
 
 ---
 
@@ -170,21 +179,21 @@ So what?
 
 ### What the class is
 
--Broad introduction to research design and methods
+- Broad introduction to research design and methods
 
--Both qualitative and quantitative approaches
+- Both qualitative and quantitative approaches
 
--Opportunity to develop a research proposal
+- Opportunity to develop a research proposal
 
--Foundation for future research (e.g. Masters / PhD / work settings)
+- Foundation for future research (e.g. Masters / PhD / work settings)
 
 ### What the class is not 
 
--An advanced statistics course (although we will do some #Rstat in week 10 & 11)
+- An advanced statistics course (although we will do some #Rstat in week 10 & 11)
 
--Opportunity to conduct a research project
+- Opportunity to conduct a research project
 
--Note there are specialist qualitative / quantitative methods classes also on offer
+- Note there are specialist qualitative / quantitative methods classes also on offer
 
 ---
 class: inverse, center, middle
@@ -505,6 +514,20 @@ measurements
 4. Seminar participation (10%) ongoing
 
 .center[<img src = 'https://media.giphy.com/media/ybQIv0CsYm1XY9A8Dm/giphy.gif' width = '35%'></img>]
+
+---
+
+##= What makes a good seminar participation grade?
+
+- Attendance and participation.
+
+- Read the required readings in advance of each class.
+
+- Come prepared to discuss the readings and demonstrate engagement with the material in the course.
+
+- Share ideas and questions.
+
+- Respectful of others and allows others to participate.
 
 ---
 
