@@ -47,7 +47,7 @@ I would like to acknowledge the Traditional Owners of Australia and recognise th
     * Variables
     * Measurements
 
-* Group exercise
+* Individual exercise
 
 * Primary and secondary data
 
@@ -366,7 +366,7 @@ undermined satisfaction with democracy.
 
 You can post your answers to Canvas after entering them in Menti.
 
-```{r}
+```{r echo = F}
 library(countdown)
 
 countdown(minutes = 8, seconds = 00)
