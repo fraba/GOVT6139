@@ -730,18 +730,334 @@ DiagrammeR::grViz("
 ## Case selection: Selection bias
 
 .pull-left[
-See [Geddes. (1990). How the Cases You Choose Affect the Answers You Get: Selection Bias in Comparative Politics. *Political Analysis*, 2(1), 131–150. https://doi.org/10.1093/pan/2.1.131](https://sydney.leganto.exlibrisgroup.com/leganto/public/61USYD_INST/citation/28748680100005106?auth=SAML)
+See Geddes. (1990). How the Cases You Choose Affect the Answers You Get: Selection Bias in Comparative Politics. *Political Analysis*, 2(1), 131–150. https://doi.org/10.1093/pan/2.1.131 [Canvas link](https://sydney.leganto.exlibrisgroup.com/leganto/public/61USYD_INST/citation/28748680100005106?auth=SAML)
 ]
 
 .pull-right[
-<img src = ''></img>
+.center[<img src = 'https://static-cambridge-org.ezproxy.library.sydney.edu.au/covers/PAN_0_0_0/political_analysis.jpg?send-full-size-image=true' height ="200"></img>]
 ]
 
-* What is selection bias in comparative research?
+</br>
+
+* What is selection bias in comparative research? Can you think of an example?
 
 * How does selection bias arise?
 
 * What can be done to avoid selection bias?
+
+.center[
+*Post your answers in Canvas, then in Menti.* 
+https://www.menti.com/al6apbvk2557
+  ]
+
+---
+
+### Selection bias
+
+.pull-left[
+
+**What is selection bias?**
+
+Those included in the study are different to those excluded – in a way that influences study result.
+
+It’s a risk if you select cases by the dependent variable.
+
+Although in practice Mill’s methods are fine for small-N comparative research.<sup>1</sup> 
+
+.footnote[[1] What do we mean by this?]
+
+]
+
+.pull-right[
+
+*Example*
+
+**RQ: How to be successful?**
+
+* Selection bias:
+    * Look at the habits of “successful” people only.
+    * Infer that traits shared by successful people have led to their success. e.g. rising early, hard work, exercise etc.
+    
+* Better: Look at the habits of lots of people (both “successful” and “unsuccessful”).
+    * Are there traits common among the successful people but not the unsuccessful people?
+
+]
+
+---
+
+
+#### Example: Selection bias – COVID-19 testing in March 2020
+
+.pull-left[
+
+At beginning of the pandemic, requirement to get tested for COVID-19 in many places:
+* International travel in the 14 days before the onset of illness.
+or
+* Close contact in the 14 days before illness onset with a confirmed case of COVID-19.
+Conclusions drawn about who gets COVID-19
+
+> ... the rest of our confirmed cases, to this day, have <mark>either had overseas or interstate travel or they have had contact with a confirmed case</mark>.<sup>1<sup>
+
+.footnote[[1] [The Guardian, 24 Mar 2020](https://www.theguardian.com/world/live/2020/mar/24/coronavirus-australia-national-cabinet-to-consider-lockdowns-of-covid-19-hotspots-live-updates?page=with:block-5e79a4ec8f08e46329cb4ae9#block-5e79a4ec8f08e46329cb4ae9).]
+
+]
+
+.pull-right[
+
+> ... people returning from overseas, <mark>which is currently the greatest source of cases</mark>. <sup>2</sup>
+
+**What is the problem here?**
+
+* They have limited variation on their independent variables (overseas travel / contact with a confirmed case) by only allowing one value of their independent variables
+
+* Need to have variation in independent variables. E.g. testing people who had/hadn’t been overseas and assess effects on dependent variable – testing positive for COVID-19.
+
+.footnote[[2] [The Guardian, 27 Mar 2020](https://www.theguardian.com/australia-news/2020/mar/27/nsw-on-the-brink-of-announcing-italy-style-stage-3-lockdown-to-slow-the-spread-of-coronavirus?CMP=gu_com#:~:text=people%20returning%20from%20overseas%2C%20which%20is%20currently%20the%20greatest%20source%20of%20cases.).]
+
+
+]
+
+---
+
+.pull-left[
+
+### Geddes (1990) – How the cases you choose affect the answers you get
+
+Geddes advises *against* selection on the dependent variable. 
+
+<img src = 'https://y.yarn.co/3574bbf6-7978-4682-8c9e-31b317343065_text.gif'></img>
+
+.center[**Why?**]
+
+]
+
+.pull-right[
+
+```{r fig.width=4, fig.height=3, echo = F, out.width="100%", dev = 'svg'}
+require(tidyverse)
+set.seed(28100)
+df <- 
+  data.frame(label = c(LETTERS[1:9]),
+             x = jitter(10:2, factor = 1.2),
+             y = jitter(10:2, factor = 1.2)) %>%
+  dplyr::mutate(selected = ifelse(y > 8, T, F))
+
+ggplot(df, aes(x, y, label = label, fill = selected)) +
+  geom_label() +
+  geom_hline(yintercept = 8.5, linetype = 2) +
+  scale_fill_brewer(palette = "Set2") +
+  theme_bw() +
+  scale_x_continuous(limits = c(1,11)) +
+  scale_y_continuous(limits = c(1,11)) +
+  labs(x = "Ind. variable (Factor X)", 
+       y = "Dep. variable (e.g. GDP growth)",
+       caption = '1. Assumed relationship\nbetween Factor X and the dependent variable')
+```
+
+```{r fig.width=4, fig.height=3, echo = F, out.width="100%", dev = 'svg'}
+require(tidyverse)
+set.seed(28100)
+df %>%
+  dplyr::mutate(x = jitter(rep(9, length(x)), factor = 2)) %>%
+  ggplot(aes(x, y, label = label, fill = selected)) +
+  geom_label() +
+  geom_hline(yintercept = 8.5, linetype = 2) +
+  scale_fill_brewer(palette = "Set2") +
+  theme_bw() +
+  scale_x_continuous(limits = c(1,11)) +
+  scale_y_continuous(limits = c(1,11)) +
+  labs(x = "Ind. variable (Factor X)", 
+       y = "Dep. variable (e.g. GDP growth)", 
+       caption = '2. Possible relationship\nbetween Factor X and the dependent variable')
+```
+
+]
+
+---
+
+.pull-left[
+
+### Geddes (1990) – How the cases you choose affect the answers you get
+
+Geddes advises *against* selection on the dependent variable because of **two types of errors**
+
+1. Concluding that any *factor shared* by the cases is the cause of the dependent variable
+
+2. Assuming that the relationship identified *within* the set of cases would apply to other cases
+
+**Solution?**
+
+* Random selection of cases
+* Cases should vary on the independent variable
+
+
+
+]
+
+.pull-right[
+
+```{r fig.width=4, fig.height=3, echo = F, out.width="100%", dev = 'svg'}
+require(tidyverse)
+set.seed(28100)
+df <- 
+  data.frame(label = c(LETTERS[1:9]),
+             x = jitter(10:2, factor = 1.2),
+             y = jitter(10:2, factor = 1.2)) %>%
+  dplyr::mutate(selected = ifelse(y > 8, T, F))
+
+ggplot(df, aes(x, y, label = label, fill = selected)) +
+  geom_label() +
+  geom_hline(yintercept = 8.5, linetype = 2) +
+  scale_fill_brewer(palette = "Set2") +
+  theme_bw() +
+  scale_x_continuous(limits = c(1,11)) +
+  scale_y_continuous(limits = c(1,11)) +
+  labs(x = "Ind. variable (Factor X)", 
+       y = "Dep. variable (e.g. GDP growth)",
+       caption = '1. Assumed relationship\nbetween Factor X and the dependent variable')
+```
+
+```{r fig.width=4, fig.height=3, echo = F, out.width="100%", dev = 'svg'}
+require(tidyverse)
+set.seed(28100)
+df %>%
+  dplyr::mutate(x = jitter(rep(9, length(x)), factor = 2)) %>%
+  ggplot(aes(x, y, label = label, fill = selected)) +
+  geom_label() +
+  geom_hline(yintercept = 8.5, linetype = 2) +
+  scale_fill_brewer(palette = "Set2") +
+  theme_bw() +
+  scale_x_continuous(limits = c(1,11)) +
+  scale_y_continuous(limits = c(1,11)) +
+  labs(x = "Ind. variable (Factor X)", 
+       y = "Dep. variable (e.g. GDP growth)", 
+       caption = '2. Possible relationship\nbetween Factor X and the dependent variable')
+```
+
+]
+
+---
+
+### Geddes 1990 – How the cases you choose affect the answers you get
+
+.pull-left[.center[<img src = '../img/geddes-1990-a.png'></img>]]
+
+.pull-right[.center[<img src = '../img/geddes-1990-b.png'></img>]]
+
+
+---
+class: inverse, center, middle
+
+# Selecting cases for a large-N cross-national study
+
+.center[<img src = 'https://media.giphy.com/media/yGEbmgiCJYu3u/giphy.gif'></img>]
+
+---
+
+## Selecting cases for a large N cross-national study using survey research
+
+### Considerations
+
+* What are the existing datasets?
+
+* Which dataset has the best fit in terms of:
+
+    * Countries of interest
+    * Survey questions that measure concepts of interest
+    * Survey timing
+    
+* Of the countries covered, which countries should I include:
+
+    * All countries for which there is data?
+    * Just democratic countries? Just authoritarian countries?
+    * Countries in a particular region or grouping (e.g. OECD)?
+    
+* All depends on your research question and the theory you would like to test
+
+---
+
+### Selecting cases for a large N cross-national study using survey research
+
+* Major comparative survey datasets
+
+    * Comparative Study of Electoral Systems (1996-present, 57 countries)
+    
+        * Timed with elections, Questions focused on elections; mostly democratic OECD countries.
+        
+    * World Values Survey (1981-present, over 100 countries, waves every 5 years or so)
+    
+        * Questions focused on values, attitudes, political behavior; wide range of countries – variation in political system & economic development.
+        
+    * Regional barometer surveys (e.g. Eurobarometer, Asian barometer)
+    
+    * European Social Survey
+    
+* Which countries are included?
+
+    * Depends on funding available, initiative of country teams, and survey focus.
+
+---
+
+## Example: Selecting cases for a study of the effects of the global financial crisis (2007-08) on citizen political engagement in cross-national comparison
+
+### Considerations
+
+1. Survey timing – to have a quasi experimental research design – needed data from before and after the ‘treatment’ the financial crisis
+
+2.	Survey question wording - Need cross-national survey instrument with questions on my dependent variables (protest participation, civic engagement, support for democracy)
+
+3.	Country coverage – Are countries of interest included? Should have variation – countries hard hit and not hard hit by crisis
+
+Selected 18 countries in the *World Values Survey* (WVS). WVS was best fit on 1. and 2. although was missing some key countries of interest (e.g. Greece) on 3.
+
+---
+
+background-image: url(../img/wvs-gfc.jpg)
+
+---
+
+#  Selecting cases for large-N cross-national study
+
+Can be country level data (different unit of analysis)
+
+* Driven by data availability
+
+* More cases = more statistical power
+
+* Potential variables: level of economic growth (World Bank, OECD), level of democracy (Varieties of Democracy), corruption (Corruption Perceptions Index)
+
+Examples:
+
+* Przeworski and Limongi (1997) Modernization Theories and Facts
+
+* Sung (2004) Democracy and political corruption: A cross-national comparison
+
+---
+class: inverse, center, middle
+
+## Questions on case selection?
+
+---
+
+## Exercise: Designing a [case / small-N / large-N] study
+
+Forms groups of max. 6 students, then join one of the groups in Week 04 on Canvas. 
+
+Say we're interested in explaining *the effects of economic development (independent variable) on citizen participation in protest (dependent variable)*.
+
+What are some ways we could design a research project around this, as:
+
+* A case study (Groups 01, 05, 09)
+
+* A small-N comparative study using MSSD (Groups 02, 06, 10)
+
+* A small-N comparative study using MDSD (Groups 03, 07, 11)
+
+* A large-N comparative study (Groups 04, 08, 12)
+
+Consider the characteristics of each approach and consider the variables you might want to include. 
+
+Then suggest what cases you would select and why.
 
 
 
