@@ -1,6 +1,6 @@
 ---
 title: "GOVT6139</br>Research design"
-subtitle: "Week 03</br> Week 3: Research Design (I) </br> Questions, Theories, Hypotheses, Variables, Measurements"
+subtitle: "Week 03</br> Research Design (I) </br> Questions, Theories, Hypotheses, Variables, Measurements"
 author: "Francesco Bailo"
 institute: "The University of Sydney"
 date: "Semester 1, 2023 (updated: `r Sys.Date()`)"

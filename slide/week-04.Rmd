@@ -1,6 +1,6 @@
 ---
 title: "GOVT6139</br>Research design"
-subtitle: "Week 03</br> Week 4: Research Design (II) </br> Case selection"
+subtitle: "Week 04</br>Research Design (II) </br> Case selection"
 author: "Francesco Bailo"
 institute: "The University of Sydney"
 date: "Semester 1, 2023 (updated: `r Sys.Date()`)"
@@ -749,6 +749,13 @@ See Geddes. (1990). How the Cases You Choose Affect the Answers You Get: Selecti
 *Post your answers in Canvas, then in Menti.* 
 https://www.menti.com/al6apbvk2557
   ]
+  
+```{r echo = F}
+
+library(countdown)
+
+countdown(minutes = 7, seconds = 00)
+```
 
 ---
 
@@ -1061,5 +1068,11 @@ Then suggest what cases you would select and why.
 
 Post your answer in Canvas, then share it in Paddlet.
 
+```{r echo = F}
+
+library(countdown)
+
+countdown(minutes = 15, seconds = 00)
+```
 
 
