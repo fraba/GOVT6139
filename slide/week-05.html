@@ -31,7 +31,7 @@ class: center, middle, inverse, title-slide
 ### The University of Sydney
 ]
 .date[
-### Semester 1, 2023 (updated: 2023-03-20)
+### Semester 1, 2023 (updated: 2023-03-21)
 ]
 
 ---
@@ -205,19 +205,19 @@ Adapted from: https://plato.stanford.edu/entries/causation-metaphysics/
 
 ##### Casuality
 
-<div id="htmlwidget-b793f2b94743ac68ba28" style="width:100%;height:75px;" class="grViz html-widget "></div>
-<script type="application/json" data-for="htmlwidget-b793f2b94743ac68ba28">{"x":{"diagram":"\n  digraph graph2 {\n  \n  graph [layout = dot, rankdir = LR]\n  \n  # node definitions with substituted label text\n  node [shape = oval, style = filled]\n  X [label = \"X\nEducation\", fillcolor = Orange]\n  Y [label = \"Y\nDemocracy\", fillcolor = Lightblue]\n  \n  X -> Y\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-43ef96fb7ff37014b516" style="width:100%;height:75px;" class="grViz html-widget "></div>
+<script type="application/json" data-for="htmlwidget-43ef96fb7ff37014b516">{"x":{"diagram":"\n  digraph graph2 {\n  \n  graph [layout = dot, rankdir = LR]\n  \n  # node definitions with substituted label text\n  node [shape = oval, style = filled]\n  X [label = \"X\nEducation\", fillcolor = Orange]\n  Y [label = \"Y\nDemocracy\", fillcolor = Lightblue]\n  \n  X -> Y\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 ##### Reverse casuality
 
-<div id="htmlwidget-636a2e2152951b8c8822" style="width:100%;height:75px;" class="grViz html-widget "></div>
-<script type="application/json" data-for="htmlwidget-636a2e2152951b8c8822">{"x":{"diagram":"\n  digraph graph2 {\n  \n  graph [layout = dot, rankdir = LR]\n  \n  # node definitions with substituted label text\n  node [shape = oval, style = filled]\n  X [label = \"X\nEducation\", fillcolor = Orange]\n  Y [label = \"Y\nDemocracy\", fillcolor = Lightblue]\n  \n  Y -> X\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-db3ca94d445042a09e63" style="width:100%;height:75px;" class="grViz html-widget "></div>
+<script type="application/json" data-for="htmlwidget-db3ca94d445042a09e63">{"x":{"diagram":"\n  digraph graph2 {\n  \n  graph [layout = dot, rankdir = LR]\n  \n  # node definitions with substituted label text\n  node [shape = oval, style = filled]\n  X [label = \"X\nEducation\", fillcolor = Orange]\n  Y [label = \"Y\nDemocracy\", fillcolor = Lightblue]\n  \n  Y -> X\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 ##### Spurious relationship
 
 
-<div id="htmlwidget-065350f87dc9f530e55f" style="width:100%;height:105px;" class="grViz html-widget "></div>
-<script type="application/json" data-for="htmlwidget-065350f87dc9f530e55f">{"x":{"diagram":"\n  digraph graph2 {\n  \n  graph [layout = dot, rankdir = LR]\n  \n  # node definitions with substituted label text\n  node [shape = oval, style = filled]\n  X [label = \"X\nEducation\", fillcolor = Orange]\n  Y [label = \"Y\nDemocracy\", fillcolor = Lightblue]\n  Z [label = \"Z\nEconomic\ndevelopment\"]\n  \n  Z-> X; Z -> Y\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-3e9fe331d613556781be" style="width:100%;height:105px;" class="grViz html-widget "></div>
+<script type="application/json" data-for="htmlwidget-3e9fe331d613556781be">{"x":{"diagram":"\n  digraph graph2 {\n  \n  graph [layout = dot, rankdir = LR]\n  \n  # node definitions with substituted label text\n  node [shape = oval, style = filled]\n  X [label = \"X\nEducation\", fillcolor = Orange]\n  Y [label = \"Y\nDemocracy\", fillcolor = Lightblue]\n  Z [label = \"Z\nEconomic\ndevelopment\"]\n  \n  Z-> X; Z -> Y\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 ]
 
@@ -364,6 +364,11 @@ Research design refers to the logical method by which we  propose to test a hypo
 * Or can be quantitative (using correlation and regression analysis)
 
 ---
+class: inverse, center, middle
+
+# True experimental design (or classic experiment)
+
+---
 
 ## True experimental design
 
@@ -399,8 +404,8 @@ Also referred to as **randomized** **controlled** experiment.
 
 #### Logic of experimental research design
 
-<div id="htmlwidget-c7b102f50fbc69a9c3a7" style="width:100%;height:150px;" class="grViz html-widget "></div>
-<script type="application/json" data-for="htmlwidget-c7b102f50fbc69a9c3a7">{"x":{"diagram":"\n  digraph graph2 {\n  \n  graph [layout = dot, rankdir = LR]\n  \n  # node definitions with substituted label text\n  node [shape = oval, style = filled]\n  P [label = \"A (possibly undefined)\npopulation\"]\n  S [label = \"Pool of\nsubjects\"]\n  T [label = \"Treatment\ngroup\", shape = box, fillcolor = Lightblue]\n  C [label = \"Control\ngroup\", shape = box, fillcolor = Orange]\n  \n  P -> S -> T; S -> C\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-9668fa4253ba5234d36f" style="width:100%;height:150px;" class="grViz html-widget "></div>
+<script type="application/json" data-for="htmlwidget-9668fa4253ba5234d36f">{"x":{"diagram":"\n  digraph graph2 {\n  \n  graph [layout = dot, rankdir = LR]\n  \n  # node definitions with substituted label text\n  node [shape = oval, style = filled]\n  P [label = \"A (possibly undefined)\npopulation\"]\n  S [label = \"Pool of\nsubjects\"]\n  T [label = \"Treatment\ngroup\", shape = box, fillcolor = Lightblue]\n  C [label = \"Control\ngroup\", shape = box, fillcolor = Orange]\n  \n  P -> S -> T; S -> C\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 #### Results of Hypothetical Media Experiment
 
@@ -445,6 +450,11 @@ Also referred to as **randomized** **controlled** experiment.
 * Amazon Mechanical Turk (pay people to complete surveys)
 
 * Ideally would have sample representative of the population of interest (e.g. adult Australians) – for experimental approaches this is hard and rarely done
+
+---
+
+background-image: url(../img/monroe-2000-a.png)
+background-size: 75%
 
 ---
 
@@ -523,6 +533,11 @@ They test both and find:
 * Top-down monitoring more effective in reducing corruption.
 
 ---
+class: inverse, center, middle
+
+# Quasi-experimental design
+
+---
 
 ## Quasi-experimental design
 
@@ -562,8 +577,8 @@ Also referred to as *natural experiments*
 
 #### Logic of Quasi Experiments
 
-<div id="htmlwidget-2579692d8fcf3d7c0a39" style="width:100%;height:150px;" class="grViz html-widget "></div>
-<script type="application/json" data-for="htmlwidget-2579692d8fcf3d7c0a39">{"x":{"diagram":"\n  digraph graph2 {\n  \n  graph [layout = dot, rankdir = LR]\n  \n  # node definitions with substituted label text\n  node [shape = oval, style = filled]\n  P [label = \"Population\n(i.e. Scandinavian countries)\"]\n  S [label = \"Subset\nof\ncountries\"]\n  T [label = \"Treatment: Implements\nCOVID-19 lockdown\n(e.g. Norway, Finland)\", shape = box, fillcolor = Lightblue]\n  C [label = \"Control: Does not\nimplement COVID-19 lockdown\n(e.g.Sweden)\", shape = box, fillcolor = Orange]\n  \n  P -> S -> T; S -> C\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-d62c1e4e9d03dc0ef3b5" style="width:100%;height:150px;" class="grViz html-widget "></div>
+<script type="application/json" data-for="htmlwidget-d62c1e4e9d03dc0ef3b5">{"x":{"diagram":"\n  digraph graph2 {\n  \n  graph [layout = dot, rankdir = LR]\n  \n  # node definitions with substituted label text\n  node [shape = oval, style = filled]\n  P [label = \"Population\n(i.e. Scandinavian countries)\"]\n  S [label = \"Subset\nof\ncountries\"]\n  T [label = \"Treatment: Implements\nCOVID-19 lockdown\n(e.g. Norway, Finland)\", shape = box, fillcolor = Lightblue]\n  C [label = \"Control: Does not\nimplement COVID-19 lockdown\n(e.g.Sweden)\", shape = box, fillcolor = Orange]\n  \n  P -> S -> T; S -> C\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 #### Hypothetical Quasi-Experiment
 
@@ -592,6 +607,12 @@ Also referred to as *natural experiments*
 
 ---
 
+background-image: url(../img/monroe-2000-b.png)
+background-size: 75%
+
+
+---
+
 ## Example quasi-experiment: Rain and voter turnout (Gomez et al. 2006)
 
 .pull-left[
@@ -614,6 +635,11 @@ Also referred to as *natural experiments*
 ]
 
 ---
+class: inverse, center, middle
+
+# Observational design
+
+---
 
 ## Observational design
 
@@ -632,6 +658,11 @@ Also referred to as *natural experiments*
     * Control for other factors (e.g. using statistical methods) to ensure non-spuriousness.
 
 *In political science this approach far more common than experimental approaches. Experiments more common in psychology.*
+
+---
+
+background-image: url(../img/monroe-2000-c.png)
+background-size: 75%
 
 ---
 
@@ -694,6 +725,12 @@ Let's say you want to estimate the effect of the presence of a nuclear power pla
 
 ---
 
+class: inverse, center, middle
+
+# Internal and external validity
+
+---
+
 ## Research Design
 
 #### Internal Validity
@@ -729,7 +766,10 @@ Let's say you want to estimate the effect of the presence of a nuclear power pla
 | **Low** (e.g. using unrepresentative participants like students) - setting might not reflect real world. &lt;br/&gt; **Higher** in field experiments than lab experiments | **High** &lt;br/&gt; Real world rather than lab setting | **High** &lt;br/&gt; Real world rather than lab setting|
 
 
+---
+class: inverse, center, middle
 
+# Individual and group tasks
 
 
     </textarea>

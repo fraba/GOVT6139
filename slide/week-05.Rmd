@@ -401,6 +401,11 @@ Research design refers to the logical method by which we  propose to test a hypo
 * Or can be quantitative (using correlation and regression analysis)
 
 ---
+class: inverse, center, middle
+
+# True experimental design (or classic experiment)
+
+---
 
 ## True experimental design
 
@@ -496,6 +501,11 @@ data.frame(g = c("Treatement", "Control"),
 
 ---
 
+background-image: url(../img/monroe-2000-a.png)
+background-size: 75%
+
+---
+
 #### Example lab experiment: The New Videomalaise - Effects of Televised Incivility on Political Trust (Mutz and Reeves 2005)
 
 .pull-left[
@@ -569,6 +579,11 @@ They test both and find:
 * Fewer missing expenditures in cases where there are government audits.
 
 * Top-down monitoring more effective in reducing corruption.
+
+---
+class: inverse, center, middle
+
+# Quasi-experimental design
 
 ---
 
@@ -652,6 +667,12 @@ data.frame(g = c("Treatement group: Citizen approval of government",
 
 ---
 
+background-image: url(../img/monroe-2000-b.png)
+background-size: 75%
+
+
+---
+
 ## Example quasi-experiment: Rain and voter turnout (Gomez et al. 2006)
 
 .pull-left[
@@ -674,6 +695,11 @@ data.frame(g = c("Treatement group: Citizen approval of government",
 ]
 
 ---
+class: inverse, center, middle
+
+# Observational design
+
+---
 
 ## Observational design
 
@@ -692,6 +718,11 @@ data.frame(g = c("Treatement group: Citizen approval of government",
     * Control for other factors (e.g. using statistical methods) to ensure non-spuriousness.
 
 *In political science this approach far more common than experimental approaches. Experiments more common in psychology.*
+
+---
+
+background-image: url(../img/monroe-2000-c.png)
+background-size: 75%
 
 ---
 
@@ -754,6 +785,12 @@ Let's say you want to estimate the effect of the presence of a nuclear power pla
 
 ---
 
+class: inverse, center, middle
+
+# Internal and external validity
+
+---
+
 ## Research Design
 
 #### Internal Validity
@@ -789,6 +826,9 @@ Let's say you want to estimate the effect of the presence of a nuclear power pla
 | **Low** (e.g. using unrepresentative participants like students) - setting might not reflect real world. <br/> **Higher** in field experiments than lab experiments | **High** <br/> Real world rather than lab setting | **High** <br/> Real world rather than lab setting|
 
 
+---
+class: inverse, center, middle
 
+# Individual and group tasks
 
 
