@@ -540,4 +540,73 @@ dat %>%
 
 ```
 
+---
+class: inverse, center, middle
+
+# Multivariate analysis
+
+---
+
+## Multivariate analysis (multiple variables)
+
+### Why multivariate analysis – in particular regression analysis?
+
+#### If we are interested in causal relationships between variables, regression analysis is superior to correlation analysis.
+
+#### Correlation analysis is often done as a first-cut analysis prior to regression analysis.
+
+- Remember correlation $\neq$ causation
+
+- Conditions for causality (correlation, time order, non-spuriousness)
+
+####  In regression analysis, you need to:
+
+- decide a direction of the relationship (i.e., impact of $X$ on $Y$) – researcher needs to make justified assumptions here
+
+- control the effects of other variables.
+
+---
+
+## Linear regression model<sup>1</sup>
+
+This is the equation of the **model** for the line that **best fit** the points. 
+
+$$Y_i = \underbrace{\alpha}_{intercept} + \underbrace{\beta}_{slope} X_i + \underbrace{\epsilon_i}_{error\:term}$$
+*  **Coefficients (or parameters)**: $\alpha$ and $\beta$  are the intercept and the slope respectively of the line of best fit.
+
+* Little $i$ in $Y_i$ (and $X_i$, $\epsilon_i$)  means the value of $Y$ for each observation $i$ (or data point): $i$ will assume all value from our data set, one at the time. 
+
+* **Chance of error**: $\epsilon_i$ this captures the errors, as the line does not *perfectly* fit the data points.  
+
+    - That it, each data point is allowed to be off the regression line but
+    
+    - the chance of error is on *average* $0$.
+    
+.footnote[[1] Slides adapted from https://www.mattblackwell.org/files/teaching/gov50/regression.pdf]
+    
+---
+
+## Linear regression model
+
+### How do you find the regression line?
+
+- **Fitted (or predicted) value** for each observation $i$: $\widehat{Y}_i = \widehat{\alpha} + \widehat{\beta} X_i$
+
+- **Residual/prediction error** $\widehat{\epsilon_i} = Y_i - \widehat{Y}$
+
+- A $\widehat{hat}$ identifies *estimated* values (estimated by the model)
+
+- This estimates are calculated using the *least squares method*, which *minimises* the **sum of squares residuals** (SSR). 
+
+.pull-left[$$SSR = \sum_{i=1}^{n} \widehat{\epsilon}^2_i$$]
+
+.pull-right[.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/5/53/Linear_least_squares_example2.png' width = '60%'></img>]]
+
+---
+
+.center[<img src = '../img/blackwell-01' width = '100%'></img>]
+
+
+
+
 

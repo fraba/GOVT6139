@@ -4,7 +4,7 @@
     <title>GOVT6139Research design</title>
     <meta charset="utf-8" />
     <meta name="author" content="Francesco Bailo" />
-    <script src="libs/header-attrs-2.19/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
     <link href="libs/countdown-0.4.0/countdown.css" rel="stylesheet" />
@@ -27,7 +27,7 @@ class: center, middle, inverse, title-slide
 ### The University of Sydney
 ]
 .date[
-### Semester 1, 2023 (updated: 2023-05-01)
+### Semester 1, 2023 (updated: 2023-05-02)
 ]
 
 ---
@@ -155,7 +155,7 @@ Week 13: New frontiers and Conclusions
 .center[&lt;mark&gt;Respond on Canvas then copy/paste to Padlet&lt;/mark&gt;]
 
 
-<div class="countdown" id="timer_15b3af77" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_4a30ffa0" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -453,6 +453,75 @@ class: inverse, center, middle
 *Source: Bolt et al. (2020); OWID based on V-Dem (v13)* 
 
 &lt;img src="week-10_files/figure-html/unnamed-chunk-9-1.svg" width="65%" style="display: block; margin: auto;" /&gt;
+
+---
+class: inverse, center, middle
+
+# Multivariate analysis
+
+---
+
+## Multivariate analysis (multiple variables)
+
+### Why multivariate analysis – in particular regression analysis?
+
+#### If we are interested in causal relationships between variables, regression analysis is superior to correlation analysis.
+
+#### Correlation analysis is often done as a first-cut analysis prior to regression analysis.
+
+- Remember correlation `\(\neq\)` causation
+
+- Conditions for causality (correlation, time order, non-spuriousness)
+
+####  In regression analysis, you need to:
+
+- decide a direction of the relationship (i.e., impact of `\(X\)` on `\(Y\)`) – researcher needs to make justified assumptions here
+
+- control the effects of other variables.
+
+---
+
+## Linear regression model&lt;sup&gt;1&lt;/sup&gt;
+
+This is the equation of the **model** for the line that **best fit** the points. 
+
+`$$Y_i = \underbrace{\alpha}_{intercept} + \underbrace{\beta}_{slope} X_i + \underbrace{\epsilon_i}_{error\:term}$$`
+*  **Coefficients (or parameters)**: `\(\alpha\)` and `\(\beta\)`  are the intercept and the slope respectively of the line of best fit.
+
+* Little `\(i\)` in `\(Y_i\)` (and `\(X_i\)`, `\(\epsilon_i\)`)  means the value of `\(Y\)` for each observation `\(i\)` (or data point): `\(i\)` will assume all value from our data set, one at the time. 
+
+* **Chance of error**: `\(\epsilon_i\)` this captures the errors, as the line does not *perfectly* fit the data points.  
+
+    - That it, each data point is allowed to be off the regression line but
+    
+    - the chance of error is on *average* `\(0\)`.
+    
+.footnote[[1] Slides adapted from https://www.mattblackwell.org/files/teaching/gov50/regression.pdf]
+    
+---
+
+## Linear regression model
+
+### How do you find the regression line?
+
+- **Fitted (or predicted) value** for each observation `\(i\)`: `\(\widehat{Y}_i = \widehat{\alpha} + \widehat{\beta} X_i\)`
+
+- **Residual/prediction error** `\(\widehat{\epsilon_i} = Y_i - \widehat{Y}\)`
+
+- A `\(\widehat{hat}\)` identifies *estimated* values (estimated by the model)
+
+- This estimates are calculated using the *least squares method*, which *minimises* the **sum of squares residuals** (SSR). 
+
+.pull-left[$$SSR = \sum_{i=1}^{n} \widehat{\epsilon}^2_i$$]
+
+.pull-right[.center[&lt;img src = 'https://upload.wikimedia.org/wikipedia/commons/5/53/Linear_least_squares_example2.png' width = '60%'&gt;&lt;/img&gt;]]
+
+---
+
+.center[&lt;img src = '../img/blackwell-01' width = '100%'&gt;&lt;/img&gt;]
+
+
+
 
 
     </textarea>
