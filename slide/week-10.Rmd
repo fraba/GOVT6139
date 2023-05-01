@@ -1,0 +1,543 @@
+---
+title: "GOVT6139</br>Research design"
+subtitle: "Week 08</br>Quantitative Methods (I) </br> Data collection"
+author: "Francesco Bailo"
+institute: "The University of Sydney"
+date: "Semester 1, 2023 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+background-image: url(https://upload.wikimedia.org/wikipedia/en/6/6a/Logo_of_the_University_of_Sydney.svg)
+background-size: 95%
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, 
+                      dev = 'svg', out.width = "45%", fig.width = 6,
+                      fig.align="center")
+
+```
+
+---
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
+---
+
+## Course outline
+
+.pull-left[
+
+Week 1: Introduction
+
+Week 2: Foundations: Ontology and Epistemology
+
+Week 3: Research Design (I): Questions, Theories, Hypotheses, Variables, Measurements
+
+Week 4:	Research Design (II): Case selection
+
+Week 5: Research Design (III): Causal Inference
+
+Week 6: Qualitative Methods (I): Data Collection 
+
+Week 7: Qualitative Methods (II): Data Analysis 
+
+]
+
+.pull-right[
+
+⏸️ *Mid Semester break* ⏸️
+
+Week 8: Quantitative Methods (I): Data Collection
+
+*Week 9: 🎉 Public holiday 🎉*
+
+<mark>Week 10: Quantitative Methods (II): Data Analysis</mark> 
+
+Week 11: Quantitative Methods (II): Data Analysis lab
+
+Week 12: Research Proposal: Peer Feedback Workshop Week 
+
+Week 13: New frontiers and Conclusions
+
+]
+
+---
+
+## Today's class
+
+### Introduction to quantitative data collection (continued...)
+
+- Can we trust survey research?
+
+### Introduction to quantitative data analysis
+- Variables
+
+- Quantitative Data Analysis
+
+    - Univariate analysis (One variable)
+    
+    - Bivariate analysis (Two variables)
+    
+    - Multivariate analysis (Many variables)
+    
+- R & RStudio
+
+    
+---
+
+### General principles of good writing (not specific to this course)
+
+.pull-left[
+
+### Suggestions
+
+- Start with a plan
+- Organise using subheadings
+- Organise ideas into paragraphs
+- Start each paragraph with a clear topic sentence – that summarises the main idea of that paragraph
+- Communicate clearly
+- Use active voice
+- Assume an educated, but non- specialist audience.
+
+]
+
+.pull-right[
+
+### Things to avoid
+
+- Overly long paragraphs
+- Less common – overly short paragraphs
+- Overly long sentences
+- Overuse of passive voice
+- Overuse of quotes
+    - Use quotes selectively
+    - Usually better to paraphrase
+- Plagiarism
+    - Quotes need both a citation and quotation marks
+    - University policies treat accidental and intentional plagiarism the same
+
+
+]
+
+---
+
+## Quick recap/reflection on Survey research 
+
+–	Are surveys useful tools?
+
+–	Why / why not?
+
+–	What are the strengths and weaknesses of this approach compared to *interviews*?
+
+.center[<mark>Respond on Canvas then copy/paste to Padlet</mark>]
+
+
+```{r echo = F}
+library(countdown)
+countdown(minutes = 5, seconds = 00)
+```
+
+---
+class: inverse, center, middle
+
+# Variables
+
+---
+
+## Recap: Variables (I)
+
+> A variable is a characteristic of a unit being observed that may assume more than one of a set of values to which a **numerical measure** or a **category** from a classification can be assigned (e.g. income, age, weight, etc., and “occupation”, “industry”, “disease”, etc.)
+
+OECD https://stats.oecd.org/glossary/detail.asp?ID=2857
+
+---
+
+## Recap: Variables (II)
+
+*An attribute that can take on a range of values (e.g. for individuals: education level, age, gender; for countries; type of political regime, economic performance)*
+
+- **Independent variable** (the presumed cause)
+- **Dependent variable** (the presumed effect)
+- **Control variables** (any other variables that may be expected to influence the dependent variable)
+
+.center[<mark>The effect of $X$ (independent variable) on $Y$ (dependent variable), controlling for $Z$ (control variable(s))</mark>]
+
+$$ Y = X + Z $$
+
+### Examples: What is the independent variable and dependent variable?
+
+- What effect does education have on political participation?
+
+- What effect does social media use have on trust in government?
+
+- What effect do gender quotas have on the proportion of women in parliament?
+
+
+---
+
+## Variables and measurement
+
+Depending on how variables are measured, they can be one of three types:
+
+1. **Nominal variable** (categorical): no hierarchy (e.g. religion, sex)
+
+    * **Dichotomous variable**: Type of nominal variable where there are only two values (e.g. whether voted / sex)
+    
+2. **Ordinal variable** (categorical): some hierarchy (e.g. income group, level of education, regime type)
+
+3. **Interval variable** (continuous): (e.g. age, income)
+
+**Note**: 
+
+* These categorizations here refer to the way the variable is measured; but ...
+
+* whereas the distinction between independent and dependent variables refers to their role in the hypothesis
+
+---
+
+### Questions for you: What type of variables are these (nominal, ordinal or interval)?
+
+(Answer on Menti: https://www.menti.com/alf6dubihfkj)
+
+#### Satisfaction with democracy:
+
+> On the whole, are you very satisfied, fairly satisfied, not very satisfied or not at all satisfied with the way democracy works in Australia? Response categories [Very satisfied; fairly satisfied; not very satisfied; not at all satisfied]
+
+
+#### Leader popularity:
+
+> Using a scale from 0 to 10, please show how much you like or dislike the party leaders. If you don't know much about them, you should give them a rating of 5.
+
+#### Vote:
+
+> In the Federal election for the House of Representatives on Saturday 18 May, which party did you vote for first in the House of Representatives? Response categories [Liberal; Labor; National; Greens; Other; Did not vote]
+
+---
+
+class: inverse, center, middle
+
+# Univariate analysis
+
+---
+
+## Univariate Analysis (One Variable)
+
+### Ways to analyze
+
+- Mean (the average)
+- Other measures of central tendency - median and mode
+- Distribution of responses (e.g. can look at percentage who ‘agree’ or ‘disagree’ to an item)
+
+### How to present
+
+- Tables
+- Graphs – e.g. bar graph, pie chart
+
+###Example findings
+
+- 25% of Australians think that people in government can be trusted.
+- On average Australians rated Scott Morrison at 5.1 on a scale from 0-10 of how much they liked the leader
+
+---
+
+### Univariate Analysis: Example table Approval of leadership changes, 2010-2015
+
+*Australian Election Study* 
+
+Question wording: 
+
+> 2019: Do you approve or disapprove of the way the Liberal Party handled the leadership change in August of last year, when Scott Morrison replaced Malcolm Turnbull? [strongly approve, approve, disapprove, strongly disapprove] (Similar questions in 2010, 2013 and 2016)
+
+|                                                       |     Approve (%)    |     Disapprove (%)    |
+|-------------------------------------------------------|--------------------|-----------------------|
+|     2010: Julia Gillard replaced Kevin Rudd           |     26             |     74                |
+|     2013: Kevin Rudd replaced Julia Gillard           |     42             |     58                |
+|     2015: Malcolm Turnbull replaced Tony Abbott       |     49             |     51                |
+|     2018: Scott Morrison replaced Malcolm Turnbull    |     26             |     74                |
+
+---
+
+## Univariate Analysis: Example Satisfaction with democracy
+
+*Australian Election Study* 
+
+Question wording:
+
+> On the whole, are you very satisfied, fairly satisfied, not very satisfied or not at all satisfied with the way democracy works in Australia? (2019 survey responses)
+
+|     Very satisfied            |     8%      |
+|-------------------------------|-------------|
+|     Fairly satisfied          |     51%     |
+|     Not very satisfied        |     29%     |
+|     Not   at all satisfied    |     12%     |
+|     Total                     |     100%    |
+
+---
+
+class: inverse, center, middle
+
+# Bivariate analysis
+
+---
+
+## Bivariate Analysis (Two variables)
+
+### Looking at the relationship between two variables 
+
+### Different kinds of variables – different analyses
+
+- If you have two categorical variables (nominal variables, ordinal variables) – **tables, bar graphs**
+
+- If you have two interval (continuous) variables – **scatterplots**
+
+- If you have one categorical variable (nominal / ordinal) and one interval variable – **group means, line graph**
+
+
+---
+
+## Bivariate Analysis: Example table 
+
+## Leadership change and satisfaction with democracy
+
+*Shows the relationship between approval of leadership change (when Malcolm Turnbull replaced Tony Abbott), and satisfaction with democracy.*
+
+|     Approval of leadership change    |           Satisfied with democracy (%)    |           Not satisfied with democracy (%)    |                 Total (%)    |
+|--------------------------------------|-------------------------------------------|-----------------------------------------------|------------------------------|
+|     Strongly     disapprove          |           38                              |           62                                  |           100                |
+|           Disapprove                 |           54                              |           46                                  |           100                |
+|           Approve                    |           72                              |           28                                  |           100                |
+|     Strongly approve                 |           75                              |           25                                  |           100                |
+
+---
+
+### Bivariate Analysis: Example bar graph
+
+### Leadership change and satisfaction with democracy
+
+*Shows the relationship between approval of leadership changes (in 2010, 2015 and 2018), and satisfaction with democracy*
+
+.center[<img src = '../img/cameron-05.png' width = '90%' ></img>]
+
+---
+
+### Bivariate analysis example: Satisfaction with democracy
+
+*Source: Australian Election Study*
+
+> On the whole, are you very satisfied, fairly satisfied, not very satisfied or not at all satisfied with the way democracy works in Australia?
+
+.center[<img src = '../img/cameron-01.png' width = '85%' ></img>]
+
+---
+
+### Bivariate analysis (sub-group means) Leadership popularity (0-10 scale) by gender
+
+.center[<img src = '../img/cameron-08.png' width = '100%' ></img>]
+
+---
+
+## Bivariate Analysis (Two variables)
+
+### Relationships between two continuous variables
+
+- A variable is *related* or *unrelated* to another
+
+- A variable is *positively* or *negatively* related to another
+
+- A variable is *strongly* or *weakly* related to another
+
+- A variable has a *large* of *small* effect on another
+
+- A variable is *significantly* or *insignificantly* related to another
+
+---
+
+## Bivariate Analysis (Two variables)
+
+### Relationships between two interval (continuous) variables
+
+- The **correlation coefficient** (or $r$) measures the strength and direction of a linear relationship between two variables on a scatterplot.
+
+- A complete lack of relationship: $r = 0$
+
+- A completely negative relationship: $r = -1$
+
+- A completely positive relationship: $r = 1$
+
+- Some positive relationship: $0 < r < 1$
+
+- Some negative relationship: $-1 < r < 0$
+
+---
+
+## Scatterplots
+
+### Related or unrelated? (What is r?)
+
+```{r echo = FALSE}
+library(MASS)
+library(tidyverse)
+```
+
+
+.pull-left[
+
+```{r echo = FALSE, out.width='100%', fig.width = 3, fig.height = 3}
+
+set.seed(5)
+# create the variance covariance matrix
+sigma<-rbind(c(1,0.8), c(0.8, 1))
+# create the mean vector
+mu<-c(10, 5) 
+# generate the multivariate normal distribution
+df<-as.data.frame(mvrnorm(n=1000, mu=mu, Sigma=sigma))
+
+
+ggplot(data = df, aes(V1, V2)) + geom_point() + theme_bw() + 
+  labs(x = "X", y = "Y", caption = sprintf("Related: r = %s", round(cor(df$V1, df$V2), 2)))
+
+```
+
+]
+
+.pull-right[
+
+```{r echo = FALSE, out.width='100%', fig.width = 3, fig.height = 3}
+
+set.seed(5)
+# create the variance covariance matrix
+sigma<-rbind(c(1,0.01), c(0.01, 1))
+# create the mean vector
+mu<-c(10, 5) 
+# generate the multivariate normal distribution
+df<-as.data.frame(mvrnorm(n=1000, mu=mu, Sigma=sigma))
+
+
+ggplot(data = df, aes(V1, V2)) + geom_point() + theme_bw() + 
+  labs(x = "X", y = "Y", caption = sprintf("Unrelated: r = %s", round(cor(df$V1, df$V2), 2)))
+
+```
+
+]
+
+---
+
+### Positively or negatively related?
+
+.pull-left[
+
+```{r echo = FALSE, out.width='100%', fig.width = 3, fig.height = 3}
+
+set.seed(5)
+# create the variance covariance matrix
+sigma<-rbind(c(1,-0.8), c(-0.8, 1))
+# create the mean vector
+mu<-c(10, 5) 
+# generate the multivariate normal distribution
+df<-as.data.frame(mvrnorm(n=1000, mu=mu, Sigma=sigma))
+
+
+ggplot(data = df, aes(V1, V2)) + geom_point() + theme_bw() + 
+  labs(x = "X", y = "Y", caption = sprintf("Negatively related: r = %s", round(cor(df$V1, df$V2), 2)))
+
+```
+
+]
+
+.pull-right[
+
+```{r echo = FALSE, out.width='100%', fig.width = 3, fig.height = 3}
+
+set.seed(5)
+# create the variance covariance matrix
+sigma<-rbind(c(1,0.8), c(0.8, 1))
+# create the mean vector
+mu<-c(10, 5) 
+# generate the multivariate normal distribution
+df<-as.data.frame(mvrnorm(n=1000, mu=mu, Sigma=sigma))
+
+
+ggplot(data = df, aes(V1, V2)) + geom_point() + theme_bw() + 
+  labs(x = "X", y = "Y", caption = sprintf("Positively related: r = %s", round(cor(df$V1, df$V2), 2)))
+
+```
+
+]
+
+---
+
+## Strongly or weakly related?
+
+.pull-left[
+
+```{r echo = FALSE, out.width='100%', fig.width = 3, fig.height = 3}
+
+set.seed(5)
+# create the variance covariance matrix
+sigma<-rbind(c(1,-0.75), c(-0.75, 1))
+# create the mean vector
+mu<-c(10, 5) 
+# generate the multivariate normal distribution
+df<-as.data.frame(mvrnorm(n=1000, mu=mu, Sigma=sigma))
+
+
+ggplot(data = df, aes(V1, V2)) + geom_point() + theme_bw() + 
+  labs(x = "X", y = "Y", caption = sprintf("Strongly related: r = %s", round(cor(df$V1, df$V2), 2)))
+
+```
+
+]
+
+.pull-right[
+
+```{r echo = FALSE, out.width='100%', fig.width = 3, fig.height = 3}
+
+set.seed(5)
+# create the variance covariance matrix
+sigma<-rbind(c(1,0.4), c(0.4, 1))
+# create the mean vector
+mu<-c(10, 5) 
+# generate the multivariate normal distribution
+df<-as.data.frame(mvrnorm(n=1000, mu=mu, Sigma=sigma))
+
+
+ggplot(data = df, aes(V1, V2)) + geom_point() + theme_bw() + 
+  labs(x = "X", y = "Y", caption = sprintf("Weakly related: r = %s", round(cor(df$V1, df$V2), 2)))
+
+```
+
+]
+
+---
+
+### Bivariate Analysis: Example scatterplot
+
+### GDP per capita vs. electoral democracy in 1990, $r = 0.69$ 
+
+*Source: Bolt et al. (2020); OWID based on V-Dem (v13)* 
+
+```{r echo = F, out.width='65%', fig.width = 5, fig.height = 4, message = FALSE, warning = F}
+
+dat <- 
+  read.csv("~/Documents/GitHub/GOVT6139/data/gdp-per-capita-vs-electoral-democracy.csv") %>%
+  dplyr::filter(Year == 1990 & !is.na(GDP.per.capita), !is.na(electdem_vdem_owid))
+
+# cor(dat$GDP.per.capita, dat$electdem_vdem_owid)
+
+dat %>%
+  ggplot(aes(y = log(GDP.per.capita), x = electdem_vdem_owid)) +
+  geom_point() + theme_bw() + geom_smooth(method = "lm") +
+  labs(x = "Electoral democracy index", y = "GDP per capita (log)")
+
+```
+
+

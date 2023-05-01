@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>GOVT6139Research design</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Francesco Bailo" />
+    <script src="libs/header-attrs-2.19/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <link href="libs/countdown-0.4.0/countdown.css" rel="stylesheet" />
+    <script src="libs/countdown-0.4.0/countdown.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# GOVT6139</br>Research design
+]
+.subtitle[
+## Week 08</br>Quantitative Methods (I) </br> Data collection
+]
+.author[
+### Francesco Bailo
+]
+.institute[
+### The University of Sydney
+]
+.date[
+### Semester 1, 2023 (updated: 2023-05-01)
+]
+
+---
+
+
+background-image: url(https://upload.wikimedia.org/wikipedia/en/6/6a/Logo_of_the_University_of_Sydney.svg)
+background-size: 95%
+
+
+
+---
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
+---
+
+## Course outline
+
+.pull-left[
+
+Week 1: Introduction
+
+Week 2: Foundations: Ontology and Epistemology
+
+Week 3: Research Design (I): Questions, Theories, Hypotheses, Variables, Measurements
+
+Week 4:	Research Design (II): Case selection
+
+Week 5: Research Design (III): Causal Inference
+
+Week 6: Qualitative Methods (I): Data Collection 
+
+Week 7: Qualitative Methods (II): Data Analysis 
+
+]
+
+.pull-right[
+
+⏸️ *Mid Semester break* ⏸️
+
+Week 8: Quantitative Methods (I): Data Collection
+
+*Week 9: 🎉 Public holiday 🎉*
+
+&lt;mark&gt;Week 10: Quantitative Methods (II): Data Analysis&lt;/mark&gt; 
+
+Week 11: Quantitative Methods (II): Data Analysis lab
+
+Week 12: Research Proposal: Peer Feedback Workshop Week 
+
+Week 13: New frontiers and Conclusions
+
+]
+
+---
+
+## Today's class
+
+### Introduction to quantitative data collection (continued...)
+
+- Can we trust survey research?
+
+### Introduction to quantitative data analysis
+- Variables
+
+- Quantitative Data Analysis
+
+    - Univariate analysis (One variable)
+    
+    - Bivariate analysis (Two variables)
+    
+    - Multivariate analysis (Many variables)
+    
+- R &amp; RStudio
+
+    
+---
+
+### General principles of good writing (not specific to this course)
+
+.pull-left[
+
+### Suggestions
+
+- Start with a plan
+- Organise using subheadings
+- Organise ideas into paragraphs
+- Start each paragraph with a clear topic sentence – that summarises the main idea of that paragraph
+- Communicate clearly
+- Use active voice
+- Assume an educated, but non- specialist audience.
+
+]
+
+.pull-right[
+
+### Things to avoid
+
+- Overly long paragraphs
+- Less common – overly short paragraphs
+- Overly long sentences
+- Overuse of passive voice
+- Overuse of quotes
+    - Use quotes selectively
+    - Usually better to paraphrase
+- Plagiarism
+    - Quotes need both a citation and quotation marks
+    - University policies treat accidental and intentional plagiarism the same
+
+
+]
+
+---
+
+## Quick recap/reflection on Survey research 
+
+–	Are surveys useful tools?
+
+–	Why / why not?
+
+–	What are the strengths and weaknesses of this approach compared to *interviews*?
+
+.center[&lt;mark&gt;Respond on Canvas then copy/paste to Padlet&lt;/mark&gt;]
+
+
+<div class="countdown" id="timer_4400a5fd" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+class: inverse, center, middle
+
+# Variables
+
+---
+
+## Recap: Variables (I)
+
+&gt; A variable is a characteristic of a unit being observed that may assume more than one of a set of values to which a **numerical measure** or a **category** from a classification can be assigned (e.g. income, age, weight, etc., and “occupation”, “industry”, “disease”, etc.)
+
+OECD https://stats.oecd.org/glossary/detail.asp?ID=2857
+
+---
+
+## Recap: Variables (II)
+
+*An attribute that can take on a range of values (e.g. for individuals: education level, age, gender; for countries; type of political regime, economic performance)*
+
+- **Independent variable** (the presumed cause)
+- **Dependent variable** (the presumed effect)
+- **Control variables** (any other variables that may be expected to influence the dependent variable)
+
+.center[&lt;mark&gt;The effect of `\(X\)` (independent variable) on `\(Y\)` (dependent variable), controlling for `\(Z\)` (control variable(s))&lt;/mark&gt;]
+
+$$ Y = X + Z $$
+
+### Examples: What is the independent variable and dependent variable?
+
+- What effect does education have on political participation?
+
+- What effect does social media use have on trust in government?
+
+- What effect do gender quotas have on the proportion of women in parliament?
+
+
+---
+
+## Variables and measurement
+
+Depending on how variables are measured, they can be one of three types:
+
+1. **Nominal variable** (categorical): no hierarchy (e.g. religion, sex)
+
+    * **Dichotomous variable**: Type of nominal variable where there are only two values (e.g. whether voted / sex)
+    
+2. **Ordinal variable** (categorical): some hierarchy (e.g. income group, level of education, regime type)
+
+3. **Interval variable** (continuous): (e.g. age, income)
+
+**Note**: 
+
+* These categorizations here refer to the way the variable is measured; but ...
+
+* whereas the distinction between independent and dependent variables refers to their role in the hypothesis
+
+---
+
+### Questions for you: What type of variables are these (nominal, ordinal or interval)?
+
+(Answer on Menti: https://www.menti.com/alf6dubihfkj)
+
+#### Satisfaction with democracy:
+
+&gt; On the whole, are you very satisfied, fairly satisfied, not very satisfied or not at all satisfied with the way democracy works in Australia? Response categories [Very satisfied; fairly satisfied; not very satisfied; not at all satisfied]
+
+
+#### Leader popularity:
+
+&gt; Using a scale from 0 to 10, please show how much you like or dislike the party leaders. If you don't know much about them, you should give them a rating of 5.
+
+#### Vote:
+
+&gt; In the Federal election for the House of Representatives on Saturday 18 May, which party did you vote for first in the House of Representatives? Response categories [Liberal; Labor; National; Greens; Other; Did not vote]
+
+---
+
+class: inverse, center, middle
+
+# Univariate analysis
+
+---
+
+## Univariate Analysis (One Variable)
+
+### Ways to analyze
+
+- Mean (the average)
+- Other measures of central tendency - median and mode
+- Distribution of responses (e.g. can look at percentage who ‘agree’ or ‘disagree’ to an item)
+
+### How to present
+
+- Tables
+- Graphs – e.g. bar graph, pie chart
+
+###Example findings
+
+- 25% of Australians think that people in government can be trusted.
+- On average Australians rated Scott Morrison at 5.1 on a scale from 0-10 of how much they liked the leader
+
+---
+
+### Univariate Analysis: Example table Approval of leadership changes, 2010-2015
+
+*Australian Election Study* 
+
+Question wording: 
+
+&gt; 2019: Do you approve or disapprove of the way the Liberal Party handled the leadership change in August of last year, when Scott Morrison replaced Malcolm Turnbull? [strongly approve, approve, disapprove, strongly disapprove] (Similar questions in 2010, 2013 and 2016)
+
+|                                                       |     Approve (%)    |     Disapprove (%)    |
+|-------------------------------------------------------|--------------------|-----------------------|
+|     2010: Julia Gillard replaced Kevin Rudd           |     26             |     74                |
+|     2013: Kevin Rudd replaced Julia Gillard           |     42             |     58                |
+|     2015: Malcolm Turnbull replaced Tony Abbott       |     49             |     51                |
+|     2018: Scott Morrison replaced Malcolm Turnbull    |     26             |     74                |
+
+---
+
+## Univariate Analysis: Example Satisfaction with democracy
+
+*Australian Election Study* 
+
+Question wording:
+
+&gt; On the whole, are you very satisfied, fairly satisfied, not very satisfied or not at all satisfied with the way democracy works in Australia? (2019 survey responses)
+
+|     Very satisfied            |     8%      |
+|-------------------------------|-------------|
+|     Fairly satisfied          |     51%     |
+|     Not very satisfied        |     29%     |
+|     Not   at all satisfied    |     12%     |
+|     Total                     |     100%    |
+
+---
+
+class: inverse, center, middle
+
+# Bivariate analysis
+
+---
+
+## Bivariate Analysis (Two variables)
+
+### Looking at the relationship between two variables 
+
+### Different kinds of variables – different analyses
+
+- If you have two categorical variables (nominal variables, ordinal variables) – **tables, bar graphs**
+
+- If you have two interval (continuous) variables – **scatterplots**
+
+- If you have one categorical variable (nominal / ordinal) and one interval variable – **group means, line graph**
+
+
+---
+
+## Bivariate Analysis: Example table 
+
+## Leadership change and satisfaction with democracy
+
+*Shows the relationship between approval of leadership change (when Malcolm Turnbull replaced Tony Abbott), and satisfaction with democracy.*
+
+|     Approval of leadership change    |           Satisfied with democracy (%)    |           Not satisfied with democracy (%)    |                 Total (%)    |
+|--------------------------------------|-------------------------------------------|-----------------------------------------------|------------------------------|
+|     Strongly     disapprove          |           38                              |           62                                  |           100                |
+|           Disapprove                 |           54                              |           46                                  |           100                |
+|           Approve                    |           72                              |           28                                  |           100                |
+|     Strongly approve                 |           75                              |           25                                  |           100                |
+
+---
+
+### Bivariate Analysis: Example bar graph
+
+### Leadership change and satisfaction with democracy
+
+*Shows the relationship between approval of leadership changes (in 2010, 2015 and 2018), and satisfaction with democracy*
+
+.center[&lt;img src = '../img/cameron-05.png' width = '90%' &gt;&lt;/img&gt;]
+
+---
+
+### Bivariate analysis example: Satisfaction with democracy
+
+*Source: Australian Election Study*
+
+&gt; On the whole, are you very satisfied, fairly satisfied, not very satisfied or not at all satisfied with the way democracy works in Australia?
+
+.center[&lt;img src = '../img/cameron-01.png' width = '85%' &gt;&lt;/img&gt;]
+
+---
+
+### Bivariate analysis (sub-group means) Leadership popularity (0-10 scale) by gender
+
+.center[&lt;img src = '../img/cameron-08.png' width = '100%' &gt;&lt;/img&gt;]
+
+---
+
+## Bivariate Analysis (Two variables)
+
+### Relationships between two continuous variables
+
+- A variable is *related* or *unrelated* to another
+
+- A variable is *positively* or *negatively* related to another
+
+- A variable is *strongly* or *weakly* related to another
+
+- A variable has a *large* of *small* effect on another
+
+- A variable is *significantly* or *insignificantly* related to another
+
+---
+
+## Bivariate Analysis (Two variables)
+
+### Relationships between two interval (continuous) variables
+
+- The **correlation coefficient** (or `\(r\)`) measures the strength and direction of a linear relationship between two variables on a scatterplot.
+
+- A complete lack of relationship: `\(r = 0\)`
+
+- A completely negative relationship: `\(r = -1\)`
+
+- A completely positive relationship: `\(r = 1\)`
+
+- Some positive relationship: `\(0 &lt; r &lt; 1\)`
+
+- Some negative relationship: `\(-1 &lt; r &lt; 0\)`
+
+---
+
+## Scatterplots
+
+### Related or unrelated? (What is r?)
+
+
+
+
+.pull-left[
+
+&lt;img src="week-10_files/figure-html/unnamed-chunk-3-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right[
+
+&lt;img src="week-10_files/figure-html/unnamed-chunk-4-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+### Positively or negatively related?
+
+.pull-left[
+
+&lt;img src="week-10_files/figure-html/unnamed-chunk-5-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right[
+
+&lt;img src="week-10_files/figure-html/unnamed-chunk-6-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+## Strongly or weakly related?
+
+.pull-left[
+
+&lt;img src="week-10_files/figure-html/unnamed-chunk-7-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right[
+
+&lt;img src="week-10_files/figure-html/unnamed-chunk-8-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+### Bivariate Analysis: Example scatterplot
+
+### GDP per capita vs. electoral democracy in 1990, `\(r = 0.69\)` 
+
+*Source: Bolt et al. (2020); OWID based on V-Dem (v13)* 
+
+&lt;img src="week-10_files/figure-html/unnamed-chunk-9-1.svg" width="65%" style="display: block; margin: auto;" /&gt;
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
