@@ -569,7 +569,7 @@ class: inverse, center, middle
 
 ## Linear regression model<sup>1</sup>
 
-This is the equation of the **model** for the line that **best fit** the points. 
+This is the equation of the **model** for the line that **best fits** the points. 
 
 $$Y_i = \underbrace{\alpha}_{intercept} + \underbrace{\beta}_{slope} X_i + \underbrace{\epsilon_i}_{error\:term}$$
 *  **Coefficients (or parameters)**: $\alpha$ and $\beta$  are the intercept and the slope respectively of the line of best fit.
@@ -594,19 +594,275 @@ $$Y_i = \underbrace{\alpha}_{intercept} + \underbrace{\beta}_{slope} X_i + \unde
 
 - **Residual/prediction error** $\widehat{\epsilon_i} = Y_i - \widehat{Y}$
 
-- A $\widehat{hat}$ identifies *estimated* values (estimated by the model)
+- A $\widehat{hat}$ identifies *estimated* (by the model) values. *Estimates* are our best guesses. 
 
 - This estimates are calculated using the *least squares method*, which *minimises* the **sum of squares residuals** (SSR). 
 
 .pull-left[$$SSR = \sum_{i=1}^{n} \widehat{\epsilon}^2_i$$]
 
-.pull-right[.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/5/53/Linear_least_squares_example2.png' width = '60%'></img>]]
+.pull-right[.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/5/53/Linear_least_squares_example2.png' width = '50%'></img>]]
 
 ---
 
-.center[<img src = '../img/blackwell-01' width = '100%'></img>]
+## Let's assume this data set with two variables: 
+
+* Our **dependent variable**, our *outcome*, is the *weight* in pounds measured on a given day. 
+
+* The **independent variable**, our *predictor*, is the number of *steps* walked the previous day.
+
+So, each record in our data set, or rows, will contain two measurements:
+
+| weight (in pounds) | steps (in 1000s) |
+|--------------------|------------------|
+| 170                | 15               |
+| 172                | 20               |
+| 173                | 21               |
+| ...                | ...              |
+
+---
+
+Let's draw our data points (each record/row/observation is a point) and fit a line into it...
 
 
+```{r echo = FALSE, out.width = '85%'}
+library(magick)
+magick::image_read_pdf("../img/blackwell-regression-pages.pdf",
+                       pages = 1, density = 600)
+```
 
+
+(Sources: https://www.mattblackwell.org/files/teaching/gov50/regression.pdf)
+
+---
+
+$$\underbrace{\widehat{Y_i}}_{estimated\\(predicted)\:value} = \underbrace{\widehat{\alpha}}_{estimated\:intercept} + \underbrace{\widehat{\beta}}_{estimated\:slope} X_i + \underbrace{\widehat{\epsilon}_i}_{estimated\:error\:term\\(residual)}$$
+
+```{r echo = FALSE, out.width = '85%'}
+library(magick)
+magick::image_read_pdf("../img/blackwell-regression-pages.pdf",
+                       pages = 2, density = 600)
+```
+
+
+(Sources: https://www.mattblackwell.org/files/teaching/gov50/regression.pdf)
+
+---
+
+$$\underbrace{\widehat{Y_i}}_{estimated\\(predicted)\:value} = \underbrace{\widehat{\alpha}}_{estimated\:intercept} + \underbrace{\widehat{\beta}}_{estimated\:slope} X_i + \underbrace{\widehat{\epsilon}_i}_{estimated\:error\:term\\(residual)}$$
+
+```{r echo = FALSE, out.width = '85%'}
+library(magick)
+magick::image_read_pdf("../img/blackwell-regression-pages.pdf",
+                       pages = 3, density = 600)
+```
+
+
+(Sources: https://www.mattblackwell.org/files/teaching/gov50/regression.pdf)
+
+---
+
+$$\underbrace{\widehat{Y_i}}_{estimated\\(predicted)\:value} = \underbrace{\widehat{\alpha}}_{estimated\:intercept} + \underbrace{\widehat{\beta}}_{estimated\:slope} X_i + \underbrace{\widehat{\epsilon}_i}_{estimated\:error\:term\\(residual)}$$
+
+```{r echo = FALSE, out.width = '85%'}
+library(magick)
+magick::image_read_pdf("../img/blackwell-regression-pages.pdf",
+                       pages = 4, density = 600)
+```
+
+
+(Sources: https://www.mattblackwell.org/files/teaching/gov50/regression.pdf)
+
+---
+
+$$\underbrace{\widehat{Y_i}}_{estimated\\(predicted)\:value} = \underbrace{\widehat{\alpha}}_{estimated\:intercept} + \underbrace{\widehat{\beta}}_{estimated\:slope} X_i + \underbrace{\widehat{\epsilon}_i}_{estimated\:error\:term\\(residual)}$$
+
+```{r echo = FALSE, out.width = '85%'}
+library(magick)
+magick::image_read_pdf("../img/blackwell-regression-pages.pdf",
+                       pages = 5, density = 600)
+```
+
+
+(Sources: https://www.mattblackwell.org/files/teaching/gov50/regression.pdf)
+
+---
+
+$$\underbrace{\widehat{Y_i}}_{estimated\\(predicted)\:value} = \underbrace{\widehat{\alpha}}_{estimated\:intercept} + \underbrace{\widehat{\beta}}_{estimated\:slope} X_i + \underbrace{\widehat{\epsilon}_i}_{estimated\:error\:term\\(residual)}$$
+
+```{r echo = FALSE, out.width = '85%'}
+library(magick)
+magick::image_read_pdf("../img/blackwell-regression-pages.pdf",
+                       pages = 6, density = 600)
+```
+
+
+(Sources: https://www.mattblackwell.org/files/teaching/gov50/regression.pdf)
+
+---
+
+### But why to stop to one independent variables or predictors?<sup>1</sup>
+
+$$Y_i = \underbrace{\alpha}_{intercept} + \underbrace{\beta_1}_{coefficient\\first\:IV} \ \  \underbrace{X_{i1}}_{values\\first\:IV} \ + \ \underbrace{\beta_2}_{coefficient\\second\:IV} \ \  \underbrace{X_{i2}}_{values\\second\:IV} + ... + \underbrace{\epsilon_i}_{error\:term}$$
+#### Why do we want to add additional predictor variables (IVs)?
+
+1. We improve our **predictions** ($Y_i$), as we provide the model more information. (Of course this assumption rests on the *quality of information* we provide to the model) 
+
+2. We can offer a better **interpretations** of the relationships among our variables: " $\beta_1$ is the effect of $X_i$ *holding all other independent variables constant* " => a.k.a. **ceteris paribus**.
+
+.footnote[[1] Adapted from https://www.mattblackwell.org/files/teaching/gov50/regression-ii.pdf]
+
+---
+
+class: inverse, center, middle
+
+# Interpreting regression model results
+
+---
+
+#### Example regression table: explaining satisfaction with democracy
+
+|                                                          |     2019              |     Standard errors    |
+|----------------------------------------------------------|-----------------------|------------------------|
+|     Sociotropic retrospective     economic evaluation    |           0.501***    |           (0.084)      |
+|           Approve leadership change                      |           0.562***    |     (0.1)              |
+|     Voted for election winner                            |     0.653**           |     (0.213             |
+|     Political interest                                   |     0.349***          |     (0.102)            |
+|     University degree                                    |     0.163             |     (0.14)             |
+|     Gender (female)                                      |     -0.161            |     (0.14)             |
+|     Age (deciles)                                        |     0.0712            |     (0.049)            |
+|     Partisanship (base category     Liberal partisan)    |                       |                        |
+|     Labor partisan                                       |     0.238             |     (0.256)            |
+|     National partisan                                    |     -0.159            |     (0.573)            |
+|     Greens partisan                                      |     -0.283            |     (0.316)            |
+|     Other partisan                                       |     -1.780***         |     (0.334)            |
+|     Non-partisan                                         |     -0.559*           |     (0.249)            |
+|     N                                                    |     1,956             |                        |
+|     R2                                                   |     0.36              |                        |
+
+---
+
+#### Example regression table: explaining satisfaction with democracy (notes on previous table)
+
+* Four-point measure of satisfaction with democracy is the dependent variable. 
+
+* Standard errors in parentheses. 
+
+* Significance levels: * p<0.05, ** p<0.01, *** p<0.001 
+
+Source: Australian Election Study 2019.
+
+---
+
+## How to interpret a regression table?
+
+#### What to look for
+
+##### P-values / statistical significance
+
+* $p<0.05$ is statistically significant (i.e. there is less than 5% probability the result occurred by chance). Often indicated by stars.*
+
+##### Regression Coefficients
+
+* **Sign** (+/-) indicates whether relationship between the independent variable (cause) and dependent variable (effect) is positive/negative
+
+* **Size** indicates how great an impact the independent variable has on the dependent variable. (For a one unit change in the Independent variable, there is … change in the dependent variable.)
+
+##### R-squared ( $R^2$ )
+–	shows how much the variation in the dependent variable is explained by a set of independent variables. (e.g. a $R^2$ of 0.54 means 54% variation in the dependent variable – this is high)
+
+---
+
+## What do we mean with statistical significance?
+
+* Tells us whether our results we observe using our sample could have occurred by chance
+
+    - i.e. can you be confident that the relationship you identify is real - $\widehat{\beta} \approx \beta$ - and you would have an unlucky sample if the the relationship is not real, that is if $\widehat{\beta} \neq \beta$.
+     
+* As we are studying a sample, indicates likelihood relationship exists in the population
+
+* If $p<0.05$ (i.e. there is less than 5% probability the result occurred by chance) can reject null hypothesis (no relationship between variables)
+
+* Different $p$-levels e.g. $p<0.1$, $p<0.01$
+
+---
+
+#### Example regression table: explaining satisfaction with democracy
+
+|                                                          |     2019              |     Standard errors    |
+|----------------------------------------------------------|-----------------------|------------------------|
+|     Sociotropic retrospective     economic evaluation    |           0.501***    |           (0.084)      |
+|           Approve leadership change                      |           0.562***    |     (0.1)              |
+|     Voted for election winner                            |     0.653**           |     (0.213             |
+|     Political interest                                   |     0.349***          |     (0.102)            |
+|     University degree                                    |     0.163             |     (0.14)             |
+|     Gender (female)                                      |     -0.161            |     (0.14)             |
+|     Age (deciles)                                        |     0.0712            |     (0.049)            |
+|     Partisanship (base category     Liberal partisan)    |                       |                        |
+|     Labor partisan                                       |     0.238             |     (0.256)            |
+|     National partisan                                    |     -0.159            |     (0.573)            |
+|     Greens partisan                                      |     -0.283            |     (0.316)            |
+|     Other partisan                                       |     -1.780***         |     (0.334)            |
+|     Non-partisan                                         |     -0.559*           |     (0.249)            |
+|     N                                                    |     1,956             |                        |
+|     R2                                                   |     0.36              |                        |
+
+---
+
+## Reflections
+
+
+* What would you perceive to be the strengths of the quantitative approach?
+
+* What would be the weaknesses?
+
+* For what research questions would quantitative research be a useful tool?
+
+* For what research questions would other approaches be better suited?
+
+.center[<mark>Respond in Canvas</mark>]
+
+
+```{r echo = F}
+library(countdown)
+countdown(minutes = 7, seconds = 00)
+```
+
+---
+
+### Quantitative approach strengths
+
+* Generalizability
+
+* Can be replicated
+
+* Process more objective
+
+* Can do large-N analysis (large number of observations – e.g. countries, or people)
+
+* Good for theory testing 
+
+### Quantitative approach weaknesses:
+
+* Can complex concepts be measured / quantified?
+
+* Large-N approach has trade-offs in terms of specific case knowledge
+
+---
+
+## Group task (if time allows)
+
+* Download the "Explaining the Trump vote" paper from Canvas (Week 10 module).
+
+* Go to Table 1 on page 531 (you can read the rest of the paper at home in interested!)
+
+**Note**: As it is common, the table reports more than one model. Coefficients from each model are in a different column. You might also note that each model has different combination of independent variables.
+
+1. Identify the dependent variable (DV) and the independent variables (IVs)
+
+2. Identify the coefficients that are *significant*.
+
+3. Given the *sign* of the significant coefficients, what intepretations do you give to that relationships (IV - DV)?
+
+In our own words, explain the results. What do the results from the models tell us about the Trump vote?
 
 
