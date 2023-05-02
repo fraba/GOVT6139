@@ -1,6 +1,6 @@
 ---
 title: "GOVT6139</br>Research design"
-subtitle: "Week 08</br>Quantitative Methods (I) </br> Data collection"
+subtitle: "Week 10</br>Quantitative Methods (II) </br> Data analysis"
 author: "Francesco Bailo"
 institute: "The University of Sydney"
 date: "Semester 1, 2023 (updated: `r Sys.Date()`)"
