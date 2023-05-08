@@ -164,6 +164,24 @@ If <img src="https://www.r-project.org/logo/Rlogo.svg" style="width: 16%" /> is 
 
 ---
 
+### Rstudio: Let's creat our first R script
+
+.center[<img src="../img/rstudio-open-new-r-script.gif" width = '100%'></img>]
+
+---
+
+### Rstudio: Let's creat our first R script
+
+An R script is a text document that we can edit and save it for later use. 
+
+An R script has a ".R" extension (sometimes lower-cased, ".r"). 
+
+I contains our R code and it can be run by R.
+
+When you open a new R script document it will be blank.
+
+---
+
 ## RStudio user interface: How does it look?
 
 After launching RStudio, you should see four windows. Each windows has a number of tabs (like in a web browser). The most important tabs are:
@@ -277,6 +295,8 @@ When we use the RStudio **import feature** (shown before), we are actually askin
 health <- read.csv("../data/health.csv")
 
 ```
+
+(Once RStudio send this code to the console, we should copy/paste it to our text document open in the source editor window)
 
 This code does two things:
 
