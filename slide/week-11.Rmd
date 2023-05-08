@@ -240,6 +240,33 @@ With this code we remove all the records that contain missing data (`NA` in R). 
 
 .center[<img src = '../img/rstudio-na-omit.gif' width = '95%'></img>]
 
+---
+
+## Calculate the correlation coefficient
+
+```{r}
+cor(health$steps.lag, health$weight)
+```
+
+Remember that,
+
+1. positive correlation -> upward slope
+
+2. negative correlation -> downward slope
+
+3. high correlation -> tighter, closer to a line
+
+4. correlation cannot capture nonlinear relationship.
+
+
+---
+
+## Linear regression with one Independent Variable (IV)
+
+This is the equation for the model of the line that best fits the points:
+
+$$Y_i = \underbrace{\alpha}_{intercept} + \underbrace{\beta}_{slope} \times X_i + \underbrace{\epsilon_i}_{error\:term} $$
+
 
 ---
 

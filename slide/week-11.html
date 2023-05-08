@@ -251,6 +251,28 @@ With this code we remove all the records that contain missing data (`NA` in R). 
 
 .center[&lt;img src = '../img/rstudio-na-omit.gif' width = '95%'&gt;&lt;/img&gt;]
 
+---
+
+## Calculate the correlation coefficient
+
+
+```r
+cor(health$steps.lag, health$weight)
+```
+
+```
+## [1] -0.1907032
+```
+
+Remember that,
+
+1. positive correlation -&gt; upward slope
+
+2. negative correlation -&gt; downward slope
+
+3. high correlation -&gt; tighter, closer to a line
+
+4. correlation cannot capture nonlinear relationship.
 
 ---
 
