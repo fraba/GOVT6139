@@ -1,0 +1,257 @@
+---
+title: "GOVT6139</br>Research design"
+subtitle: "Week 11</br>Quantitative Methods (III) </br> Data Analysis lab"
+author: "Francesco Bailo"
+institute: "The University of Sydney"
+date: "Semester 1, 2023 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+background-image: url(https://upload.wikimedia.org/wikipedia/en/6/6a/Logo_of_the_University_of_Sydney.svg)
+background-size: 95%
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, 
+                      dev = 'svg', out.width = "45%", fig.width = 6,
+                      fig.align="center")
+
+require(knitr)
+require(tidyverse)
+
+```
+
+---
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
+---
+
+## Course outline
+
+.pull-left[
+
+Week 1: Introduction
+
+Week 2: Foundations: Ontology and Epistemology
+
+Week 3: Research Design (I): Questions, Theories, Hypotheses, Variables, Measurements
+
+Week 4:	Research Design (II): Case selection
+
+Week 5: Research Design (III): Causal Inference
+
+Week 6: Qualitative Methods (I): Data Collection 
+
+Week 7: Qualitative Methods (II): Data Analysis 
+
+]
+
+.pull-right[
+
+⏸️ *Mid Semester break* ⏸️
+
+Week 8: Quantitative Methods (I): Data Collection
+
+*Week 9: 🎉 Public holiday 🎉*
+
+Week 10: Quantitative Methods (II): Data Analysis
+
+<mark>Week 11: Quantitative Methods (III): Data Analysis lab</mark> 
+
+Week 12: Research Proposal: Peer Feedback Workshop Week 
+
+Week 13: New frontiers and Conclusions
+
+]
+
+---
+
+# Week 12: Peer feedback workshop
+
+### Part 1: 5-minute project presentation (45 minutes)
+
+- Prepare to present your research proposal in five minutes.
+
+- You are encouraged to preliminary share supporting materials using the [Canvas Group](https://community.canvaslms.com/t5/Canvas-Basics-Guide/What-are-Groups/ta-p/16) page for Week 12 (e.g. a one or two slide deck, or a one-page document). 
+
+- In groups of four, each student will present for five minutes - I will be strict with the timing - and then receive questions and comments for another five minutes.
+
+- You are encouraged to keep discussing this on the Canvas groups page after class.
+
+---
+
+# Week 12: Peer feedback workshop
+
+### Part 2: Brain storm on the issues you have identified with the presentations you reviewed (30 minutes)
+
+- Prepare a (short) list of issues to discuss with your group (but avoid offering details that could identify the proposal you have reviewed). 
+
+- In the same groups of four, discuss the issues and possible solutions for about 20 minutes.
+
+- Report on your discussion using Padlet (same as before, avoid offering details that could identify specific proposals): list issues and possible solutions.  
+
+---
+
+## (A very ambitious) plan for today
+
+
+1. First look at R and RStudio
+
+2. Loading data
+
+3. Viewing data 
+
+3. Visualising data
+
+4. Calculating the correlation coefficient
+
+4. Running a regression analysis
+
+5. Reporting your analysis
+
+---
+
+## Example 1: Health data<sup>1</sup>
+
+```{r echo = F}
+
+health <- read.csv("../data/health.csv")
+
+```
+
+```{r echo = F}
+
+health %>%
+  dplyr::slice(1:5) %>%
+  kable()
+
+```
+
+.footnote[[1] Slides adapted from https://www.mattblackwell.org/files/teaching/gov50/regression.pdf]
+
+---
+
+## Predict one variable using another variable
+
+Given the value $X_i$, what is our best guess for the value of $Y_i$?
+
+* The **dependent variable** $Y_i$ is our *outcome* variable.
+
+* The **independent variable** $X_i$ is our *predictor* (also *explanatory*) variable.
+
+---
+
+## Import the data
+
+```{r}
+
+health <- read.csv("../data/health.csv")
+
+```
+
+
+.center[<img src = '../img/rstudio-import.gif' width = '95%'></img>]
+
+---
+
+## Import the data (breakdown)
+
+When we use the *RStudio import feature* (shown before), we are actually asking RStudio to write this code for us.  
+
+```{r}
+
+health <- read.csv("../data/health.csv")
+
+```
+
+This code does two things:
+
+1. The **function** `read.csv("../data/health.csv")` read a comma-separated file (CSV) file, which we specify within the two parenthesis and the two quote signs.
+
+2. The **assignment operator** `<-` take the result from the function and assign it to the object `health`.
+
+
+---
+
+## View the data
+
+.center[<img src = '../img/rstudio-view.gif' width = '95%'></img>]
+
+---
+
+## Plot the data
+
+.center[<img src = '../img/rstudio-plot.gif' width = '95%'></img>]
+
+---
+
+## Plot the data (breakdown)
+
+```{r eval = F}
+plot(health$steps.lag, health$steps)
+```
+
+
+1. We need to use a *function* to plot the data. The function we want to use is `plot()`. Functions can take one or more arguments. In this case, our arguments are 
+
+    * the values for the horizontal axis (X), and
+    
+    * the values for the vertical axis (Y)
+    
+2. As we have already imported our dataset `health` (with "import dataset") into our R session (you should be able to see it in the top-right window in RStudio), we can access the values for the two axis with
+
+    * `health$steps.lag`, in which `steps.lag` is the name of our X variable, and
+    
+    * `health$weight` in which `weight` is the name of our Y variable.
+
+---
+
+## Remove missing values
+
+Let's calculate the correlation coefficient between the two variables with the function `cor()`
+
+```{r}
+cor(health$steps.lag, health$weight)
+```
+
+**Ouch**! We have some missing value in our data set (a very common issue). 
+
+Conveniently, R has a function to help us out: `na.omit()`
+
+```{r}
+health <- na.omit(health)
+```
+
+With this code we remove all the records that contain missing data (`NA` in R). You might want to notice that the number of observations changes from 644 to 643 after you running it.
+
+---
+
+## Remove missing values
+
+
+.center[<img src = '../img/rstudio-na-omit.gif' width = '95%'></img>]
+
+
+---
+
+## Linear regression with more than one Independent Variable (IV)
+
+$$Y_i = \underbrace{\alpha}_{intercept} + \underbrace{\beta_1}_{coefficient\\first\:IV} \ \  \underbrace{X_{i1}}_{values\\first\:IV} \ + \ \underbrace{\beta_2}_{coefficient\\second\:IV} \ \  \underbrace{X_{i2}}_{values\\second\:IV} + ... + \underbrace{\epsilon_i}_{error\:term}$$
+
+### Why do we want to add additional predictor variables (IVs)?
+
+1. We improve our **predictions** ( $Y_i$ ), as we provide the model more information. (Of course this assumption rests on the *quality of information* we provide to the model) 
+
+2. We can offer a better **interpretations** of the relationships among our variables: " $\beta_1$ is the effect of $X_i$ *holding all other independent variables constant* " => a.k.a. **ceteris paribus**.
+
+.footnote[[1] Adapted from https://www.mattblackwell.org/files/teaching/gov50/regression-ii.pdf]
+
