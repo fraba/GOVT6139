@@ -119,6 +119,111 @@ Week 13: New frontiers and Conclusions
 5. Reporting your analysis
 
 ---
+class: inverse, center, middle
+
+# R and RStudio
+
+.center[<img src="https://www.r-project.org/logo/Rlogo.svg" style="width: 25%" /> &nbsp; &nbsp; &nbsp; <img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg" style="width: 40%" /> ]
+
+
+---
+
+## R and RStudio
+
+* <img src="https://www.r-project.org/logo/Rlogo.svg" style="width: 8%" /> is an *objected-oriented* computer language, that is "formal language used to communicate with a computer"). 
+
+    * It is widely used among social scientists to work with data and statistical applications...
+    
+    * ... but it's a fully fledged computer language (so you can use it to send a rocket to Mars, if you want). 
+
+--
+
+* <img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg" style="width: 18%" /> is an application - formally, an integrated development environment (IDE) - designed to facilitate using R. 
+
+    * RStudio comes in two versions: a desktop application and a server application (which you access from a browser)
+    
+---
+
+## R and RStudio
+
+
+
+Using a **car metaphor**...
+
+.pull-left[
+
+If <img src="https://www.r-project.org/logo/Rlogo.svg" style="width: 16%" /> is the **engine**, 
+
+]
+
+.pull-right[<img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg" style="width: 36%" /> is the **dashboard** (and the steering wheel). ]
+
+</br>
+
+.center[<img src="../img/r-vs-rstudio.jpeg" width = '55%'></img>]
+
+---
+
+## RStudio user interface: How does it look?
+
+After launching RStudio, you should see four windows. Each windows has a number of tabs (like in a web browser). The most important tabs are:
+
+.pull-left[
+
+After launching RStudio, you should see four windows. Each windows has a number of tabs (like in a web browser). The most important tabs are:
+
+]
+
+.pull-right[
+
+.center[<img src="../img/rstudio-ui.svg" style="width: 70%" />]
+
+]
+
+1. **Upper-left window**: Your source code appears in the **source editor**.
+
+2. **Lower-left window**:  The **console**. Your R code will execute here. Code output (including errors and messages) is visualised here.
+
+3. **Lower-right window**: Your local *files* and *plots* can be accessed from here. 
+
+2. **Upper-right window**: This is a list of objects in your current **environment**.
+
+
+---
+
+## RStudio user interface: How does it look?
+
+
+.center[<img src = '../img/rstudio-ui.gif' width = '95%'></img>]
+
+---
+
+## RStudio: Running code from the editor
+
+If you want to run some code (and for *run* we mean *write* the code, then ask run to *execute* it) you can add it to a new document in your **source editor**. 
+
+In your **source editor** each tab represents a different document. These are text documents containing R code. 
+
+You can write your code here and you can save your document containing the code for later use (with "File" then "Save") as you would save a Word document. 
+
+Once you have a line of code you can *place your cursor* on the line and then hit "Run". 
+
+#### By hitting "Run"...
+
+1. You ask *RStudio* to copy paste your line into the **console**;
+
+2. You ask *R* to execute your code. R will kindly do it and will print any outcome below your code directly in the **console**. 
+
+3. If your code results in creating a *new object*, the object will now appear in the **environment** window.
+
+---
+
+## RStudio: Running code from the editor
+
+
+.center[<img src = '../img/rstudio-running-code.gif' width = '95%'></img>]
+
+---
 
 ## Example 1: Health data<sup>1</sup>
 
@@ -165,7 +270,7 @@ health <- read.csv("../data/health.csv")
 
 ## Import the data (breakdown)
 
-When we use the *RStudio import feature* (shown before), we are actually asking RStudio to write this code for us.  
+When we use the RStudio **import feature** (shown before), we are actually asking RStudio to write this code for us.  
 
 ```{r}
 
@@ -178,6 +283,35 @@ This code does two things:
 1. The **function** `read.csv("../data/health.csv")` read a comma-separated file (CSV) file, which we specify within the two parenthesis and the two quote signs.
 
 2. The **assignment operator** `<-` take the result from the function and assign it to the object `health`.
+
+---
+
+## Import the data (breakdown)
+
+```{r}
+
+health <- read.csv("../data/health.csv")
+
+```
+
+
+.pull-left[
+
+.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Medium_box%2C_open.jpg/567px-Medium_box%2C_open.jpg' width = '30%'></img> <img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Brooch%2C_arrow_%28AM_13105-1%29.jpg/640px-Brooch%2C_arrow_%28AM_13105-1%29.jpg' width = '30%'></img> <img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Bonsack_machine.png/575px-Bonsack_machine.png' width = '30%'></img>]
+
+* A *function* is a machine that can optionally take an *input* (a list of **arguments** in computer science) - and return an *output*.
+
+* With the arrow `<-` we tell R where to store the *output* from the function. 
+
+* In R information is stored in *objects*. The objects in the *environment* are of different **types** as they contain different type of information. 
+
+]
+
+.pull-right[
+
+.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/3/3b/Function_machine2.svg' width = '90%'></img>]
+
+]
 
 
 ---

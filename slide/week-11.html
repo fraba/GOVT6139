@@ -4,7 +4,7 @@
     <title>GOVT6139Research design</title>
     <meta charset="utf-8" />
     <meta name="author" content="Francesco Bailo" />
-    <script src="libs/header-attrs-2.19/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
   </head>
@@ -25,7 +25,7 @@ class: center, middle, inverse, title-slide
 ### The University of Sydney
 ]
 .date[
-### Semester 1, 2023 (updated: 2023-05-08)
+### Semester 1, 2023 (updated: 2023-05-09)
 ]
 
 ---
@@ -128,6 +128,111 @@ Week 13: New frontiers and Conclusions
 5. Reporting your analysis
 
 ---
+class: inverse, center, middle
+
+# R and RStudio
+
+.center[&lt;img src="https://www.r-project.org/logo/Rlogo.svg" style="width: 25%" /&gt; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg" style="width: 40%" /&gt; ]
+
+
+---
+
+## R and RStudio
+
+* &lt;img src="https://www.r-project.org/logo/Rlogo.svg" style="width: 8%" /&gt; is an *objected-oriented* computer language, that is "formal language used to communicate with a computer"). 
+
+    * It is widely used among social scientists to work with data and statistical applications...
+    
+    * ... but it's a fully fledged computer language (so you can use it to send a rocket to Mars, if you want). 
+
+--
+
+* &lt;img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg" style="width: 18%" /&gt; is an application - formally, an integrated development environment (IDE) - designed to facilitate using R. 
+
+    * RStudio comes in two versions: a desktop application and a server application (which you access from a browser)
+    
+---
+
+## R and RStudio
+
+
+
+Using a **car metaphor**...
+
+.pull-left[
+
+If &lt;img src="https://www.r-project.org/logo/Rlogo.svg" style="width: 16%" /&gt; is the **engine**, 
+
+]
+
+.pull-right[&lt;img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg" style="width: 36%" /&gt; is the **dashboard** (and the steering wheel). ]
+
+&lt;/br&gt;
+
+.center[&lt;img src="../img/r-vs-rstudio.jpeg" width = '55%'&gt;&lt;/img&gt;]
+
+---
+
+## RStudio user interface: How does it look?
+
+After launching RStudio, you should see four windows. Each windows has a number of tabs (like in a web browser). The most important tabs are:
+
+.pull-left[
+
+After launching RStudio, you should see four windows. Each windows has a number of tabs (like in a web browser). The most important tabs are:
+
+]
+
+.pull-right[
+
+.center[&lt;img src="../img/rstudio-ui.svg" style="width: 70%" /&gt;]
+
+]
+
+1. **Upper-left window**: Your source code appears in the **source editor**.
+
+2. **Lower-left window**:  The **console**. Your R code will execute here. Code output (including errors and messages) is visualised here.
+
+3. **Lower-right window**: Your local *files* and *plots* can be accessed from here. 
+
+2. **Upper-right window**: This is a list of objects in your current **environment**.
+
+
+---
+
+## RStudio user interface: How does it look?
+
+
+.center[&lt;img src = '../img/rstudio-ui.gif' width = '95%'&gt;&lt;/img&gt;]
+
+---
+
+## RStudio: Running code from the editor
+
+If you want to run some code (and for *run* we mean *write* the code, then ask run to *execute* it) you can add it to a new document in your **source editor**. 
+
+In your **source editor** each tab represents a different document. These are text documents containing R code. 
+
+You can write your code here and you can save your document containing the code for later use (with "File" then "Save") as you would save a Word document. 
+
+Once you have a line of code you can *place your cursor* on the line and then hit "Run". 
+
+#### By hitting "Run"...
+
+1. You ask *RStudio* to copy paste your line into the **console**;
+
+2. You ask *R* to execute your code. R will kindly do it and will print any outcome below your code directly in the **console**. 
+
+3. If your code results in creating a *new object*, the object will now appear in the **environment** window.
+
+---
+
+## RStudio: Running code from the editor
+
+
+.center[&lt;img src = '../img/rstudio-running-code.gif' width = '95%'&gt;&lt;/img&gt;]
+
+---
 
 ## Example 1: Health data&lt;sup&gt;1&lt;/sup&gt;
 
@@ -170,7 +275,7 @@ health &lt;- read.csv("../data/health.csv")
 
 ## Import the data (breakdown)
 
-When we use the *RStudio import feature* (shown before), we are actually asking RStudio to write this code for us.  
+When we use the RStudio **import feature** (shown before), we are actually asking RStudio to write this code for us.  
 
 
 ```r
@@ -182,6 +287,34 @@ This code does two things:
 1. The **function** `read.csv("../data/health.csv")` read a comma-separated file (CSV) file, which we specify within the two parenthesis and the two quote signs.
 
 2. The **assignment operator** `&lt;-` take the result from the function and assign it to the object `health`.
+
+---
+
+## Import the data (breakdown)
+
+
+```r
+health &lt;- read.csv("../data/health.csv")
+```
+
+
+.pull-left[
+
+.center[&lt;img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Medium_box%2C_open.jpg/567px-Medium_box%2C_open.jpg' width = '30%'&gt;&lt;/img&gt; &lt;img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Brooch%2C_arrow_%28AM_13105-1%29.jpg/640px-Brooch%2C_arrow_%28AM_13105-1%29.jpg' width = '30%'&gt;&lt;/img&gt; &lt;img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Bonsack_machine.png/575px-Bonsack_machine.png' width = '30%'&gt;&lt;/img&gt;]
+
+* A *function* is a machine that can optionally take an *input* (a list of **arguments** in computer science) - and return an *output*.
+
+* With the arrow `&lt;-` we tell R where to store the *output* from the function. 
+
+* In R information is stored in *objects*. The objects in the *environment* are of different **types** as they contain different type of information. 
+
+]
+
+.pull-right[
+
+.center[&lt;img src = 'https://upload.wikimedia.org/wikipedia/commons/3/3b/Function_machine2.svg' width = '90%'&gt;&lt;/img&gt;]
+
+]
 
 
 ---
@@ -273,6 +406,16 @@ Remember that,
 3. high correlation -&gt; tighter, closer to a line
 
 4. correlation cannot capture nonlinear relationship.
+
+
+---
+
+## Linear regression with one Independent Variable (IV)
+
+This is the equation for the model of the line that best fits the points:
+
+$$Y_i = \underbrace{\alpha}_{intercept} + \underbrace{\beta}_{slope} \times X_i + \underbrace{\epsilon_i}_{error\:term} $$
+
 
 ---
 
