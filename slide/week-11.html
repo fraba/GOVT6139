@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>GOVT6139Research design</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Francesco Bailo" />
+    <script src="libs/header-attrs-2.19/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# GOVT6139</br>Research design
+]
+.subtitle[
+## Week 11</br>Quantitative Methods (III) </br> Data Analysis lab
+]
+.author[
+### Francesco Bailo
+]
+.institute[
+### The University of Sydney
+]
+.date[
+### Semester 1, 2023 (updated: 2023-05-08)
+]
+
+---
+
+
+background-image: url(https://upload.wikimedia.org/wikipedia/en/6/6a/Logo_of_the_University_of_Sydney.svg)
+background-size: 95%
+
+
+
+---
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
+---
+
+## Course outline
+
+.pull-left[
+
+Week 1: Introduction
+
+Week 2: Foundations: Ontology and Epistemology
+
+Week 3: Research Design (I): Questions, Theories, Hypotheses, Variables, Measurements
+
+Week 4:	Research Design (II): Case selection
+
+Week 5: Research Design (III): Causal Inference
+
+Week 6: Qualitative Methods (I): Data Collection 
+
+Week 7: Qualitative Methods (II): Data Analysis 
+
+]
+
+.pull-right[
+
+⏸️ *Mid Semester break* ⏸️
+
+Week 8: Quantitative Methods (I): Data Collection
+
+*Week 9: 🎉 Public holiday 🎉*
+
+Week 10: Quantitative Methods (II): Data Analysis
+
+&lt;mark&gt;Week 11: Quantitative Methods (III): Data Analysis lab&lt;/mark&gt; 
+
+Week 12: Research Proposal: Peer Feedback Workshop Week 
+
+Week 13: New frontiers and Conclusions
+
+]
+
+---
+
+# Week 12: Peer feedback workshop
+
+### Part 1: 5-minute project presentation (45 minutes)
+
+- Prepare to present your research proposal in five minutes.
+
+- You are encouraged to preliminary share supporting materials using the [Canvas Group](https://community.canvaslms.com/t5/Canvas-Basics-Guide/What-are-Groups/ta-p/16) page for Week 12 (e.g. a one or two slide deck, or a one-page document). 
+
+- In groups of four, each student will present for five minutes - I will be strict with the timing - and then receive questions and comments for another five minutes.
+
+- You are encouraged to keep discussing this on the Canvas groups page after class.
+
+---
+
+# Week 12: Peer feedback workshop
+
+### Part 2: Brain storm on the issues you have identified with the presentations you reviewed (30 minutes)
+
+- Prepare a (short) list of issues to discuss with your group (but avoid offering details that could identify the proposal you have reviewed). 
+
+- In the same groups of four, discuss the issues and possible solutions for about 20 minutes.
+
+- Report on your discussion using Padlet (same as before, avoid offering details that could identify specific proposals): list issues and possible solutions.  
+
+---
+
+## (A very ambitious) plan for today
+
+
+1. First look at R and RStudio
+
+2. Loading data
+
+3. Viewing data 
+
+3. Visualising data
+
+4. Calculating the correlation coefficient
+
+4. Running a regression analysis
+
+5. Reporting your analysis
+
+---
+
+## Example 1: Health data&lt;sup&gt;1&lt;/sup&gt;
+
+
+
+
+|date       | active.calories| steps| weight| steps.lag| calorie.lag|
+|:----------|---------------:|-----:|------:|---------:|-----------:|
+|2015-08-09 |           480.0| 17.48|  168.0|        NA|          NA|
+|2015-08-10 |           995.9| 18.41|  169.1|     17.48|       480.0|
+|2015-08-11 |          1126.9| 19.59|  168.0|     18.41|       995.9|
+|2015-08-12 |           522.2| 10.40|  167.2|     19.59|      1126.9|
+|2015-08-13 |           843.8| 18.70|  168.2|     10.40|       522.2|
+
+.footnote[[1] Slides adapted from https://www.mattblackwell.org/files/teaching/gov50/regression.pdf]
+
+---
+
+## Predict one variable using another variable
+
+Given the value `\(X_i\)`, what is our best guess for the value of `\(Y_i\)`?
+
+* The **dependent variable** `\(Y_i\)` is our *outcome* variable.
+
+* The **independent variable** `\(X_i\)` is our *predictor* (also *explanatory*) variable.
+
+---
+
+## Import the data
+
+
+```r
+health &lt;- read.csv("../data/health.csv")
+```
+
+
+.center[&lt;img src = '../img/rstudio-import.gif' width = '95%'&gt;&lt;/img&gt;]
+
+---
+
+## Import the data (breakdown)
+
+When we use the *RStudio import feature* (shown before), we are actually asking RStudio to write this code for us.  
+
+
+```r
+health &lt;- read.csv("../data/health.csv")
+```
+
+This code does two things:
+
+1. The **function** `read.csv("../data/health.csv")` read a comma-separated file (CSV) file, which we specify within the two parenthesis and the two quote signs.
+
+2. The **assignment operator** `&lt;-` take the result from the function and assign it to the object `health`.
+
+
+---
+
+## View the data
+
+.center[&lt;img src = '../img/rstudio-view.gif' width = '95%'&gt;&lt;/img&gt;]
+
+---
+
+## Plot the data
+
+.center[&lt;img src = '../img/rstudio-plot.gif' width = '95%'&gt;&lt;/img&gt;]
+
+---
+
+## Plot the data (breakdown)
+
+
+```r
+plot(health$steps.lag, health$steps)
+```
+
+
+1. We need to use a *function* to plot the data. The function we want to use is `plot()`. Functions can take one or more arguments. In this case, our arguments are 
+
+    * the values for the horizontal axis (X), and
+    
+    * the values for the vertical axis (Y)
+    
+2. As we have already imported our dataset `health` (with "import dataset") into our R session (you should be able to see it in the top-right window in RStudio), we can access the values for the two axis with
+
+    * `health$steps.lag`, in which `steps.lag` is the name of our X variable, and
+    
+    * `health$weight` in which `weight` is the name of our Y variable.
+
+---
+
+## Remove missing values
+
+Let's calculate the correlation coefficient between the two variables with the function `cor()`
+
+
+```r
+cor(health$steps.lag, health$weight)
+```
+
+```
+## [1] NA
+```
+
+**Ouch**! We have some missing value in our data set (a very common issue). 
+
+Conveniently, R has a function to help us out: `na.omit()`
+
+
+```r
+health &lt;- na.omit(health)
+```
+
+With this code we remove all the records that contain missing data (`NA` in R). You might want to notice that the number of observations changes from 644 to 643 after you running it.
+
+---
+
+## Remove missing values
+
+
+.center[&lt;img src = '../img/rstudio-na-omit.gif' width = '95%'&gt;&lt;/img&gt;]
+
+---
+
+## Calculate the correlation coefficient
+
+
+```r
+cor(health$steps.lag, health$weight)
+```
+
+```
+## [1] -0.1907032
+```
+
+Remember that,
+
+1. positive correlation -&gt; upward slope
+
+2. negative correlation -&gt; downward slope
+
+3. high correlation -&gt; tighter, closer to a line
+
+4. correlation cannot capture nonlinear relationship.
+
+---
+
+## Linear regression with more than one Independent Variable (IV)
+
+`$$Y_i = \underbrace{\alpha}_{intercept} + \underbrace{\beta_1}_{coefficient\\first\:IV} \ \  \underbrace{X_{i1}}_{values\\first\:IV} \ + \ \underbrace{\beta_2}_{coefficient\\second\:IV} \ \  \underbrace{X_{i2}}_{values\\second\:IV} + ... + \underbrace{\epsilon_i}_{error\:term}$$`
+
+### Why do we want to add additional predictor variables (IVs)?
+
+1. We improve our **predictions** ( `\(Y_i\)` ), as we provide the model more information. (Of course this assumption rests on the *quality of information* we provide to the model) 
+
+2. We can offer a better **interpretations** of the relationships among our variables: " `\(\beta_1\)` is the effect of `\(X_i\)` *holding all other independent variables constant* " =&gt; a.k.a. **ceteris paribus**.
+
+.footnote[[1] Adapted from https://www.mattblackwell.org/files/teaching/gov50/regression-ii.pdf]
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
