@@ -395,7 +395,7 @@ Conveniently, R has a function to help us out: `na.omit()`
 health &lt;- na.omit(health)
 ```
 
-With this code we remove all the records that contain missing data (`NA` in R). You might want to notice that the number of observations changes from 644 to 643 after you running it.
+With this code we remove all the records that contain missing values (`NA` in R). You might want to notice that the number of observations changes from 644 to 643 after you running it.
 
 ---
 
@@ -435,7 +435,14 @@ Remember that,
 This is the equation for the model of the line that best fits the points:
 
 `$$Y_i = \underbrace{\alpha}_{intercept} + \underbrace{\beta}_{slope} \times X_i + \underbrace{\epsilon_i}_{error\:term}$$`
+Coefficients/parameters ( `\(\alpha\)` , `\(\beta\)` ): true unknown intercept/slope of the line of best fit.
 
+* Chance error `\(\epsilon_i\)` : accounts for the fact that the line doesn't perfectly fit the data.
+
+    * Each observation allowed to be off the regression line.
+    * Chance errors are 0 on average.
+    
+We don't know `\(\alpha\)` or `\(\beta\)` . How can we estimate them?
 
 ---
 
