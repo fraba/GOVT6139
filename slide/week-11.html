@@ -4,7 +4,7 @@
     <title>GOVT6139Research design</title>
     <meta charset="utf-8" />
     <meta name="author" content="Francesco Bailo" />
-    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.19/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
   </head>
@@ -82,6 +82,21 @@ Week 13: New frontiers and Conclusions
 
 ]
 
+
+---
+
+## Feedback on A1, tips for A2
+
+Overall, well done!
+
+* Be selective: You must explain something but you can't explain everything.
+
+* **Demonstrate and communicate understanding** of ideas covered in the course (you do this by *explaining* and not by *listing* facts)
+
+* **Connect** these research design / methods ideas to your topic of choice
+
+* In your A2, remember to **engage explicitly with research design and methods literature**
+
 ---
 
 # Week 12: Peer feedback workshop
@@ -124,8 +139,6 @@ Week 13: New frontiers and Conclusions
 4. Calculating the correlation coefficient
 
 4. Running a regression analysis
-
-5. Reporting your analysis
 
 ---
 class: inverse, center, middle
@@ -249,6 +262,13 @@ Once you have a line of code you can *place your cursor* on the line and then hi
 
 
 .center[&lt;img src = '../img/rstudio-running-code.gif' width = '95%'&gt;&lt;/img&gt;]
+
+---
+
+class: inverse, center, middle
+
+# Predict one variable using another variable
+# Example 1: Health data
 
 ---
 
@@ -430,23 +450,195 @@ Remember that,
 
 ---
 
-## Linear regression with one Independent Variable (IV)
+## Linear regression with one Independent Variable (IV)&lt;sup&gt;1&lt;/sup&gt;
 
 This is the equation for the model of the line that best fits the points:
 
 `$$Y_i = \underbrace{\alpha}_{intercept} + \underbrace{\beta}_{slope} \times X_i + \underbrace{\epsilon_i}_{error\:term}$$`
-Coefficients/parameters ( `\(\alpha\)` , `\(\beta\)` ): true unknown intercept/slope of the line of best fit.
+**Coefficients**/**parameters** ( `\(\alpha\)` , `\(\beta\)` ): true unknown intercept/slope of the line of best fit.
 
-* Chance error `\(\epsilon_i\)` : accounts for the fact that the line doesn't perfectly fit the data.
+* **Chance error** `\(\epsilon_i\)` : accounts for the fact that the line doesn't perfectly fit the data.
 
     * Each observation allowed to be off the regression line.
     * Chance errors are 0 on average.
     
-We don't know `\(\alpha\)` or `\(\beta\)` . How can we estimate them?
+We don't know `\(\alpha\)` or `\(\beta\)` . *How can we estimate them*?
+
+.footnote[[1] Slides from https://www.mattblackwell.org/files/teaching/gov50/regression.pdf]
+
 
 ---
 
-## Linear regression with more than one Independent Variable (IV)
+## Estimating coefficients&lt;sup&gt;1&lt;/sup&gt;
+
+* Parameters: `\(\alpha\)`, `\(\beta\)`
+
+    * Unknown features of the data-generating process.
+
+    * Chance error makes these impossible to observe directly.
+    
+* Estimates: `\(\widehat{\alpha}\)`, `\(\widehat{\beta}\)`
+
+    * An **estimate** is a function of the data that is our best guess about some
+parameter.
+
+* **Regression line**: `\(\widehat{Y} = \widehat{\alpha} + \widehat{\beta} \times x\)`
+
+    * *Average* value of `\(Y\)` when `\(X\)` is equal to `\(x\)`.
+    
+    * Represents the *best guess* or *predicted value* of the outcome at `\(x\)`.
+
+.footnote[[1] Slides from https://www.mattblackwell.org/files/teaching/gov50/regression.pdf]
+
+---
+
+## Line of best fit&lt;sup&gt;1&lt;/sup&gt;
+
+&lt;img src="week-11_files/figure-html/unnamed-chunk-10-1.svg" width="75%" style="display: block; margin: auto;" /&gt;
+
+
+.footnote[[1] Slides from https://www.mattblackwell.org/files/teaching/gov50/regression.pdf]
+
+---
+
+## Why not this line?&lt;sup&gt;1&lt;/sup&gt;
+
+&lt;img src="week-11_files/figure-html/unnamed-chunk-11-1.svg" width="55%" style="display: block; margin: auto;" /&gt;
+
+
+Because we minimise the **sum of the squared residuals** (SSR) and this line doesn't minimise SSRs.
+
+.footnote[[1] Slides from https://www.mattblackwell.org/files/teaching/gov50/regression.pdf]
+
+---
+
+## Calculating the least squares line for a data set with `lm()`
+
+In R we "fit the model" with the syntax &lt;mark&gt;`lm(y ~ x, data = mydataset)`&lt;/mark&gt;, where `y` is our DV and `x` our IV.
+
+
+
+```r
+fit &lt;- lm(weight ~ steps.lag, data = health)
+```
+
+The object `fit` now contains all the stats from fitting the linear model. 
+
+We get the coefficients `\(\alpha\)` (the coefficient) and `\(\beta\)` by entering `fit` in console
+
+
+```r
+fit
+```
+
+```
+## 
+## Call:
+## lm(formula = weight ~ steps.lag, data = health)
+## 
+## Coefficients:
+## (Intercept)    steps.lag  
+##    170.6750      -0.2308
+```
+
+---
+
+#### Intepreting the results from `lm()`
+
+We get more comprehensive results with 
+
+
+```r
+summary(fit)
+```
+
+```
+## 
+## Call:
+## lm(formula = weight ~ steps.lag, data = health)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -12.814  -2.987   1.168   3.518  11.408 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 170.67497    0.63174 270.167  &lt; 2e-16 ***
+## steps.lag    -0.23077    0.04692  -4.918 1.11e-06 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 4.679 on 641 degrees of freedom
+## Multiple R-squared:  0.03637,	Adjusted R-squared:  0.03486 
+## F-statistic: 24.19 on 1 and 641 DF,  p-value: 1.11e-06
+```
+
+---
+
+#### Intepreting the results from `lm()`
+
+.center[&lt;img src = '../img/r-lm-summary-1.gif' width = '95%'&gt;&lt;/img&gt;]
+
+---
+
+#### Intepreting the results from `lm()`
+
+* `\(\alpha\)` (intercept) = 170.67497: *average* weight in pounds when walking 0 steps the previous day.
+
+* `\(\beta_1 = -0.23077\)`: *average* change in pounds when walking an extra step the previous day.
+
+* `\(p = 1.11e-06\)` for `steps.lag`: the association between `steps.lag` and `weight` is statistically significant (note significant codes).
+
+* `\(r^2 = 0.03637\)`*: 3.6% of the variation in the dependent variable `weight` is explained by the variation of the independent variable `steps.lag` (not great, a lot remains uneplained).
+
+
+---
+
+class: inverse, center, middle
+
+# Linear regression with more than one Independent Variable
+# Example 2: US midterm elections
+
+---
+
+## Example 2: US midterm elections&lt;sup&gt;1&lt;/sup&gt;
+
+| Variable name | Description |
+| ------------- | ----------- |
+| `year` | midterm election year |
+| `president` | name of president |
+| `party` | Democrat or Republican |
+| `approval` | Gallup approval rating at midterms |
+| `seat.change` | change in the number of House seat's for the president's party |
+| `rdi.change` | change in real disposable income over the year before |
+
+
+.footnote[[1] Slides from http://www.mattblackwell.org/files/teaching/gov50/regression-ii.pdf]
+
+---
+
+## Import the data in R
+
+Use RStudio's "**Import Dataset feature**" ([here](https://fraba.github.io/GOVT6139/img/rstudio-import.gif) how) to get this code as your *path* th the `midterms.csv` file will be different.
+
+
+```r
+midterms &lt;- read.csv("../data/midterms.csv")
+```
+
+
+| year|president  |party | approval| seat.change| rdi.change|
+|----:|:----------|:-----|--------:|-----------:|----------:|
+| 1946|Truman     |D     |       33|         -55|         NA|
+| 1950|Truman     |D     |       39|         -29|        8.2|
+| 1954|Eisenhower |R     |       61|          -4|        1.0|
+| 1958|Eisenhower |R     |       57|         -47|        1.1|
+| 1962|Kennedy    |D     |       61|          -4|        5.0|
+
+
+---
+
+## Linear regression with more than one Independent Variable (IV)&lt;sup&gt;1&lt;/sup&gt;
 
 `$$Y_i = \underbrace{\alpha}_{intercept} + \underbrace{\beta_1}_{coefficient\\first\:IV} \ \  \underbrace{X_{i1}}_{values\\first\:IV} \ + \ \underbrace{\beta_2}_{coefficient\\second\:IV} \ \  \underbrace{X_{i2}}_{values\\second\:IV} + ... + \underbrace{\epsilon_i}_{error\:term}$$`
 
@@ -456,7 +648,215 @@ We don't know `\(\alpha\)` or `\(\beta\)` . How can we estimate them?
 
 2. We can offer a better **interpretations** of the relationships among our variables: " `\(\beta_1\)` is the effect of `\(X_i\)` *holding all other independent variables constant* " =&gt; a.k.a. **ceteris paribus**.
 
-.footnote[[1] Adapted from https://www.mattblackwell.org/files/teaching/gov50/regression-ii.pdf]
+.footnote[[1] Slides from https://www.mattblackwell.org/files/teaching/gov50/regression-ii.pdf]
+
+---
+
+## Predicting with multiple independent variables&lt;sup&gt;1&lt;/sup&gt;
+
+Let's say we want to predict the **change of House seat's for the president's party** using 
+
+1. president's **approval rate** and 
+
+2. **change in real disposable income over the year before**. 
+
+#### With this data set, our function will then be
+
+$$ seat.change_i = \alpha + \beta_1 \times approval_i + \beta_2 \times rdi.change_i + \epsilon_i $$
+
+.footnote[[1] Slides from https://www.mattblackwell.org/files/teaching/gov50/regression-ii.pdf]
+---
+
+
+## Predicting with multiple independent variables in R&lt;sup&gt;1&lt;/sup&gt;
+
+
+```r
+mult.fit &lt;- lm(seat.change ~ approval + rdi.change, data = midterms)
+
+mult.fit
+```
+
+```
+## 
+## Call:
+## lm(formula = seat.change ~ approval + rdi.change, data = midterms)
+## 
+## Coefficients:
+## (Intercept)     approval   rdi.change  
+##    -120.436        1.572        3.334
+```
+
+
+* `\(\alpha\)` = -117.2: *average* seat change president has 0% approval and no change
+in income levels.
+* `\(\beta_1 = 1.61\)`: *average* increase in seat change for additional percentage point
+of approval, **holding RDI change fixed**
+* `\(\beta_2 =  4.213\)`: *average* increase in seat change for each additional percentage
+point increase of RDI, **holding approval fixed**
+
+.footnote[[1] Slides from https://www.mattblackwell.org/files/teaching/gov50/regression-ii.pdf]
+
+---
+
+#### Predicting with multiple independent variables in R
+
+
+```r
+summary(mult.fit)
+```
+
+```
+## 
+## Call:
+## lm(formula = seat.change ~ approval + rdi.change, data = midterms)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -28.793 -13.405   2.787  10.407  29.218 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(&gt;|t|)   
+## (Intercept) -120.4363    30.2634  -3.980  0.00137 **
+## approval       1.5720     0.4739   3.317  0.00509 **
+## rdi.change     3.3342     2.2755   1.465  0.16495   
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 17.27 on 14 degrees of freedom
+##   (2 observations deleted due to missingness)
+## Multiple R-squared:  0.4448,	Adjusted R-squared:  0.3655 
+## F-statistic: 5.609 on 2 and 14 DF,  p-value: 0.01625
+```
+
+---
+
+## Can we predict the result of the 2018 midterm election?&lt;sup&gt;1&lt;/sup&gt;
+
+Let's assume that we are the day before of the 2018 midterm election and we want to estimate the result of the election in terms of seat change. 
+
+Our line of best fit let us produce an estimate for that election...
+
+.center[&lt;img src = 'https://media.tenor.com/QvDDT72U7lUAAAAC/crystal-ball.gif' width = '45%'&gt;&lt;/img&gt;]
+
+.footnote[[1] Slides from https://www.mattblackwell.org/files/teaching/gov50/regression-ii.pdf]
+
+---
+
+#### Can we predict the result of the 2018 midterm election?&lt;sup&gt;1&lt;/sup&gt;
+
+Let's check the values for our predictors (or IVs): `approval` and `rdi.change`.
+
+
+| year|president |party | approval| seat.change| rdi.change|
+|----:|:---------|:-----|--------:|-----------:|----------:|
+| 2018|Trump     |R     |       38|          NA|        4.1|
+
+and the coefficients from our linear model
+
+
+```r
+mult.fit
+```
+
+```
+## 
+## Call:
+## lm(formula = seat.change ~ approval + rdi.change, data = midterms)
+## 
+## Coefficients:
+## (Intercept)     approval   rdi.change  
+##    -120.436        1.572        3.334
+```
+
+.footnote[[1] Slides from https://www.mattblackwell.org/files/teaching/gov50/regression-ii.pdf]
+---
+
+#### Can we predict the result of the 2018 midterm election?
+
+Now we only need to plug the values into our formula
+
+`$$seat.change_{2018} = \alpha + \beta_1 \times approval_{2018} + \beta_2 \times rdi.change_{2018}$$`
+##### First the coefficients ...
+
+`$$seat.change_{2018} = -120.436 + 1.572 \times approval_{2018} + 3.334 \times rdi.change_{2018}$$`
+##### Then the measured values of the IVs from 2018 ...
+
+$$ seat.change_{2018} = -120.436 + 1.572 \times 38 + 3.334 \times 4.1 $$
+which we can solve using R
+
+
+```r
+-120.436 + 1.572 * 38 + 3.334 * 4.1
+```
+
+```
+## [1] -47.0306
+```
+
+Who can check the Wikipedia page for the 2018 United States House of Representatives elections?
+
+---
+
+## Does the model with a single IV produces better predictions?
+
+
+```r
+fit &lt;- lm(seat.change ~ approval, data = midterms)
+
+fit
+```
+
+```
+## 
+## Call:
+## lm(formula = seat.change ~ approval, data = midterms)
+## 
+## Coefficients:
+## (Intercept)     approval  
+##     -96.845        1.424
+```
+
+Actually, it does ...
+
+
+```r
+-96.845 + 1.424 * 38
+```
+
+```
+## [1] -42.733
+```
+
+Adding the economic variable, which is not significantly associated according to our statistical test, decreases the accuracy of our prediction. 
+
+Approval rate by itself is already a pretty effective predictor.
+
+---
+class: inverse, center, middle
+
+# Where to go next?
+
+---
+
+## R for the social sciences: Resources to get you started
+
+* Llaudet, E., &amp; Imai, K. (2022). _Data analysis for social science: A friendly and practical introduction_. Princeton University Press. https://press.princeton.edu/books/hardcover/9780691199429/data-analysis-for-social-science
+
+* Grolemund, G. (2014). _Hands-on programming with R_. O'Reilly. https://rstudio-education.github.io/hopr/ (HOPR)
+  * Publicly and fully available online: [link](https://rstudio-education.github.io/hopr/)
+  
+* Wickham, H., &amp; Grolemund, G. (2017). _R for data science_. O'Reilly. https://r4ds.had.co.nz/ (R4DS)
+  * Publicly and fully available online: [link](https://r4ds.had.co.nz/)
+  
+* Silge, J., &amp; Robinson, D. (2017). _Text mining with R: A tidy approach_. O’Reilly. https://www.tidytextmining.com/ (TMWR)
+  * Publicly and fully available online: [link](https://www.tidytextmining.com/)
+
+
+
+
+
+
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
