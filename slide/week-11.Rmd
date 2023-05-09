@@ -587,11 +587,17 @@ summary(fit)
 
 * $p = 1.11e-06$ for `steps.lag`: the association between `steps.lag` and `weight` is statistically significant (note significant codes).
 
-* $r^2 = 0.03637$*: 3.6% of the variation in the dependent variable `weight` is explained by the variation of the independent variable `steps.lag` (not great, a lot remains uneplained).
+* $r^2 = 0.03637$: 3.6% of the variation in the dependent variable `weight` is explained by the variation of the independent variable `steps.lag` (not great, a lot remains uneplained).
 
 ---
 
-## In class excercise:
+class: inverse, center, middle
+
+## In class excercise
+
+---
+
+## In class excercise
 
 Discuss in group, then submit individually your response in Canvas.
 
@@ -607,6 +613,10 @@ Discuss in group, then submit individually your response in Canvas.
 
 2. Identify the variables that have a significant effect on voting for Trump (specify the model number).
 
+```{r echo = F}
+library(countdown)
+countdown(minutes = 8, seconds = 00)
+```
 
 ---
 
@@ -800,6 +810,8 @@ class: inverse, center, middle
 * Silge, J., & Robinson, D. (2017). _Text mining with R: A tidy approach_. O’Reilly. https://www.tidytextmining.com/ (TMWR)
   * Publicly and fully available online: [link](https://www.tidytextmining.com/)
 
+* Xie, Y., Allaire, J. J., & Grolemund, G. (2019). _R Markdown: The definitive guide_. CRC Press. https://bookdown.org/yihui/rmarkdown/ (RMD)
+  * Publicly and fully available online: [link](https://bookdown.org/yihui/rmarkdown/)
 
 
 
