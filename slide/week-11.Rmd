@@ -92,13 +92,34 @@ Overall, well done!
 
 # Week 12: Peer feedback workshop
 
+
+.center[**Your draft is due tonight**!]
+
+* Make sure that your draft is not longer than 4,000 words (the limit for A2)
+
+* Yet, it is OK to submit a draft that is shorter than 4,000 words (in fact, you should submit whatever version you currently have). 
+
+#### Tomorrow I will start assigning peer reviewers. As peer reviewer
+
+* You should try to offer a feedback to three drafts. 
+
+* After reading a draft, use the rubric you find in Canvas. You can also explain your assessment with a written comment in Canvas (I am sure the other student will appreciate it!). 
+
+* If the document you are assigned to review is longer than 4,000 words, you should only read up to 4,000 words and disregard the rest (you can make a comment about this with your feedback).
+
+* As you review the drafts, take notes on critical/recurrent issues you might have encountered (so to discuss them in Week 12 in class).
+
+---
+
+# Week 12: Peer feedback workshop
+
 ### Part 1: 5-minute project presentation (45 minutes)
 
 - Prepare to present your research proposal in five minutes.
 
 - You are encouraged to preliminary share supporting materials using the [Canvas Group](https://community.canvaslms.com/t5/Canvas-Basics-Guide/What-are-Groups/ta-p/16) page for Week 12 (e.g. a one or two slide deck, or a one-page document). 
 
-- In groups of four, each student will present for five minutes - I will be strict with the timing - and then receive questions and comments for another five minutes.
+- In groups of four (groups have been already created), each student will present for five minutes - I will be strict with the timing - and then receive questions and comments for another five minutes.
 
 - You are encouraged to keep discussing this on the Canvas groups page after class.
 
@@ -113,6 +134,12 @@ Overall, well done!
 - In the same groups of four, discuss the issues and possible solutions for about 20 minutes.
 
 - Report on your discussion using Padlet (same as before, avoid offering details that could identify specific proposals): list issues and possible solutions.  
+
+---
+
+class: inverse, center, middle
+
+# Lab: R for data analysis
 
 ---
 
@@ -561,6 +588,24 @@ summary(fit)
 * $p = 1.11e-06$ for `steps.lag`: the association between `steps.lag` and `weight` is statistically significant (note significant codes).
 
 * $r^2 = 0.03637$*: 3.6% of the variation in the dependent variable `weight` is explained by the variation of the independent variable `steps.lag` (not great, a lot remains uneplained).
+
+---
+
+## In class excercise:
+
+Discuss in group, then submit individually your response in Canvas.
+
+1. Download the "Explaining the Trump vote" (available from the Assignment page on Canvas).
+
+2. Go to Table 1 on page 531 (you can read the rest of the paper at home in interested!)
+
+**Note**: As it is common, the table reports more than one model. Coefficients from each model are in a different column. You might also note that each model has different combination of independent variables.
+
+#### Task
+
+1. Identify the dependent variable (DV) and the independent variables (IVs)
+
+2. Identify the variables that have a significant effect on voting for Trump (specify the model number).
 
 
 ---
