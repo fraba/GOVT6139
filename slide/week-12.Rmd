@@ -1,0 +1,111 @@
+---
+title: "GOVT6139</br>Research design"
+subtitle: "Week 12</br>Research Proposal: Peer Feedback Workshop Week"
+author: "Francesco Bailo"
+institute: "The University of Sydney"
+date: "Semester 1, 2023 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+background-image: url(https://upload.wikimedia.org/wikipedia/en/6/6a/Logo_of_the_University_of_Sydney.svg)
+background-size: 95%
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, 
+                      dev = 'svg', out.width = "45%", fig.width = 6,
+                      fig.align="center")
+
+require(knitr)
+require(tidyverse)
+
+```
+
+---
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
+---
+
+## Course outline
+
+.pull-left[
+
+Week 1: Introduction
+
+Week 2: Foundations: Ontology and Epistemology
+
+Week 3: Research Design (I): Questions, Theories, Hypotheses, Variables, Measurements
+
+Week 4:	Research Design (II): Case selection
+
+Week 5: Research Design (III): Causal Inference
+
+Week 6: Qualitative Methods (I): Data Collection 
+
+Week 7: Qualitative Methods (II): Data Analysis 
+
+]
+
+.pull-right[
+
+⏸️ *Mid Semester break* ⏸️
+
+Week 8: Quantitative Methods (I): Data Collection
+
+*Week 9: 🎉 Public holiday 🎉*
+
+Week 10: Quantitative Methods (II): Data Analysis
+
+Week 11: Quantitative Methods (III): Data Analysis lab
+
+<mark>Week 12: Research Proposal: Peer Feedback Workshop Week</mark> 
+
+Week 13: New frontiers and Conclusions
+
+]
+
+
+---
+
+# Week 12: Peer feedback workshop
+
+### Part 1: 5-minute project presentation (45 minutes)
+
+- Prepare to present your research proposal in five minutes.
+
+- You are encouraged to preliminary share supporting materials using the [Canvas Group](https://community.canvaslms.com/t5/Canvas-Basics-Guide/What-are-Groups/ta-p/16) page for Week 12 (e.g. a one or two slide deck, or a one-page document). 
+
+- In groups of four (groups have been already created), each student will present for five minutes - I will be strict with the timing - and then receive questions and comments for another five minutes.
+
+- You are encouraged to keep discussing this on the Canvas groups page after class.
+
+```{r echo = F}
+library(countdown)
+countdown(minutes = 5, seconds = 00)
+```
+
+---
+
+# Week 12: Peer feedback workshop
+
+### Part 2: Brain storm on the issues you have identified with the presentations you reviewed (30 minutes)
+
+- Prepare a (short) list of issues to discuss with your group (but avoid offering details that could identify the proposal you have reviewed). 
+
+- In the same groups of four, discuss the issues and possible solutions for about 20 minutes.
+
+- Report on your discussion using Padlet (same as before, avoid offering details that could identify specific proposals): list issues and possible solutions.  
+
+```{r echo = F}
+library(countdown)
+countdown(minutes = 20, seconds = 00)
+```
