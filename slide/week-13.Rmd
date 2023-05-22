@@ -1,0 +1,236 @@
+---
+title: "GOVT6139</br>Research design"
+subtitle: "Week 13</br>Research Proposal: New frontiers and Conclusions"
+author: "Francesco Bailo"
+institute: "The University of Sydney"
+date: "Semester 1, 2023 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+background-image: url(https://upload.wikimedia.org/wikipedia/en/6/6a/Logo_of_the_University_of_Sydney.svg)
+background-size: 95%
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, 
+                      dev = 'svg', out.width = "45%", fig.width = 6,
+                      fig.align="center")
+
+require(knitr)
+require(tidyverse)
+
+```
+
+---
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
+---
+
+## Course outline
+
+.pull-left[
+
+Week 1: Introduction
+
+Week 2: Foundations: Ontology and Epistemology
+
+Week 3: Research Design (I): Questions, Theories, Hypotheses, Variables, Measurements
+
+Week 4:	Research Design (II): Case selection
+
+Week 5: Research Design (III): Causal Inference
+
+Week 6: Qualitative Methods (I): Data Collection 
+
+Week 7: Qualitative Methods (II): Data Analysis 
+
+]
+
+.pull-right[
+
+⏸️ *Mid Semester break* ⏸️
+
+Week 8: Quantitative Methods (I): Data Collection
+
+*Week 9: 🎉 Public holiday 🎉*
+
+Week 10: Quantitative Methods (II): Data Analysis
+
+Week 11: Quantitative Methods (III): Data Analysis lab
+
+<mark>Week 12: Research Proposal: Peer Feedback Workshop Week</mark> 
+
+Week 13: New frontiers and Conclusions
+
+]
+
+
+---
+
+## Please complete the Unit of Study Survey for GOVT6139 (if you haven't yet)!!
+
+---
+
+## Plan for today
+
+- Academic writing and publishing
+
+- New(ish) frontiers
+
+- Takeaways from GOVT6139 and wrapping up
+
+- Research proposal Q and A
+
+---
+
+class: inverse, center, middle
+
+# Academic writing and publishing
+
+---
+
+## The research process
+
+<center>
+
+```{r, echo = F, out.width = "150%"}
+
+DiagrammeR::grViz("digraph {
+  graph [layout = neato, rankdir = LR] 
+  
+  node [shape = doubleoctagon, fontsize=18]    
+  nodeWhat [label = 'What', pos = '0,2!']
+  nodeHow [label = 'How' , pos = '5,2!']
+  nodeDo [label = 'Do it',  pos = '12,2!']
+  
+  node [shape = cds, width=1.5, height=1.2, fontsize=18]        
+  nod1 [label = 'Formulate\\nresearch\\nproblem', pos = '0,0!']
+  nod2 [label = 'Conceptualise\\nresearch\\ndesign', pos = '2,0!']
+  nod3 [label =  'Construct\\ninstrument for\\ndata collection', pos = '4,0!']
+  nod4 [label =  'Select\\na\\nsample', pos = '6,0!']
+  nod5 [label =  'Write\\nresearch\\nproposal', pos = '8,0!']
+  nod6 [label =  'Collect\\ndata', pos = '10,0!']
+  nod7 [label =  'Analyse\\ndata', pos = '12,0!']
+  nod8 [label =  'Write\\nresearch\\nreport', pos = '14,0!']
+  
+  node [shape = house, width=.8, height=1, fontsize=14]  
+  nod10 [label = 'Variables\\n&\\nhypothesis', pos = '0,-2!'] 
+  nod11a [label = '\\nCausal\\ninference?', pos = '2,-2!'] 
+  nod12 [label = 'Validity &\\nreliability of\\nmeasures', pos = '4,-2!'] 
+  nod11b [label = '\\nCausal\\ninference?', pos = '6,-2!'] 
+  nod13 [label = 'Methods of\\ndata\\ncollection', pos = '10,-2!'] 
+  nod14 [label = 'Methods\\nof\\nanalysis', pos = '12,-2!'] 
+  nod15 [label = 'Principles\\nof scientific\\nwriting', pos = '14,-2!'] 
+  
+  # edge definitions with the node IDs
+  nodeWhat -> nodeHow -> nodeDo;
+  nodeWhat -> nod1; 
+  nodeHow -> nod2; nodeHow -> nod3; nodeHow -> nod4; nodeHow -> nod5;
+  nodeDo -> nod6; nodeDo -> nod7; nodeDo -> nod8;
+
+  nod1 -> nod10; nod2 -> nod11a; nod3 -> nod12; nod4 -> nod11b;
+  nod6 -> nod13; nod7 -> nod14; nod8 -> nod15;
+  
+  }", 
+  width = 800, height = 300)
+
+```
+
+</center>
+
+<mark>
+*Literature review relevant across all stages of the research process. 
+*Understanding and building upon what research has been done before.</mark>
+
+---
+
+## Writing up academic research: Structure
+
+### Commonly used structure
+
+* Introduction
+
+* Literature Review
+
+* Theory
+
+* Data and Methods
+
+* Results
+
+* Conclusions
+
+*Some variations on this – good to look at published articles (ones using a similar approach) to see how they have structured*
+
+**Note**: *literature review* & *results* are not necessarily called that, even if that’s what it is.
+
+---
+
+## Writing up academic research: Structure example
+
+### Riding information crises: the performance of far-right Twitter users in Australia during the 2019–2020 bushfires and the COVID-19 pandemic 
+(*open access here https://doi.org/10.1080/1369118X.2023.2205479*)
+
+1. Introduction
+
+    * *Includes: Hypotheses and research questions*
+
+2. Theoretical and conceptual framework
+
+    * *Literature review, defining key concepts, and theoretical frameworks for information disorders and online beheaviour*
+    
+3. Data and methods
+
+4. Results
+
+5. Discussion and conclusion
+
+---
+
+### Writing up academic research: What goes where
+
+**Note**: Every project will look different!
+
+#### Introduction
+* Scene setting
+* Research question
+* Rationale
+* What I do, what I find
+* Overview of the structure of the paper / thesis
+
+#### Literature Review
+* Overview of relevant previous research
+* Key themes and debates
+* Gap(s) that your study will address
+
+#### Theory
+* Can be part of or separate to literature review.
+* Theories can come from previous literature, and your own ideas.
+* Can develop the theory / theories you will test (with mechanisms), and any hypotheses.
+
+---
+
+### Writing up academic research: What goes where
+
+#### Data and Methods
+* Provides an overview of the research design and methods of analysis.
+* Should be sufficiently detailed that another researcher could replicate what you have done.
+
+#### Results
+* This is where your analyses will be. May be one section (e.g. for a focused journal article) or multiple sections (e.g. for a PhD thesis)
+* For quantitative work, this is where the graphs / tables presenting your findings will be and discussion of their contents.
+* For qualitative work (e.g. interviews) this is where you would unpack and analyse the qualitative data.
+
+#### Conclusions
+* What you asked. What the paper did. Overview and discussion of findings.
+* Limitations.
+* Broader discussion on any implications.
