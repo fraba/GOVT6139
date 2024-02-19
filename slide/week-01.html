@@ -4,9 +4,22 @@
     <title>GOVT6139Research design</title>
     <meta charset="utf-8" />
     <meta name="author" content="Francesco Bailo" />
-    <script src="libs/header-attrs-2.19/header-attrs.js"></script>
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script src="week-01_files/header-attrs-2.25/header-attrs.js"></script>
+    <link href="week-01_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+      });
+    </script>
+    <style>
+    .mjx-mrow a {
+      color: black;
+      pointer-events: none;
+      cursor: default;
+    }
+    </style>
+    <link rel="stylesheet" href="assets/sydney-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="assets/sydney.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -25,7 +38,7 @@ class: center, middle, inverse, title-slide
 ### The University of Sydney
 ]
 .date[
-### Semester 1, 2023 (updated: 2023-02-21)
+### Semester 1, 2024 (updated: 2024-02-19)
 ]
 
 ---
@@ -50,7 +63,7 @@ Francesco Bailo (francesco.bailo@sydney.edu.au)
 
 I am a Lecturer in the School of Social and Political Sciences, University of Sydney. I am interested in researching forms of political engagement and political talk on social media. I researched the emergence and dynamics of online communities, the role between news organisations and social media, and the interdependence between social media activists and news organisations. I have engaged with and applied quantitative research methods developing expertise in quantitative text analysis (NLP) and network analysis.
 
-This year I am teaching GOVT6139 and SSPS4102.
+This year I am teaching GOVT6139, SSPS4102 &amp; SSPS6006.
 
 Fun fact: I took GOVT6139 in 2014 during my PhD. 
 
@@ -80,30 +93,27 @@ class: inverse, center, middle
 
 Mix of 
 
-- Lectures;
+- Lectures (with four confirmed guest speakers);
 
-- Discussions (including on readings): Discussions will generally be prompted by questions you will be required to answer through Canvas, Mentimeter, Padlet;
+- Discussions (including on readings): Discussions will generally be prompted by questions you will be required to answer through Mentimeter or Padlet;
 
-- Group work;
+- Individual and group tasks (with a focus on writing for research);
 
-- Data labs (in Week 10 and 11).
+- Literature Lab in Week 3 and Data lab with R and RStudio in Week 10 (make sure to bring your laptop to class then)
+
+---
 
 ## My expectations
 
-- Attend class in-person or (only if authorised by the university) via Zoom. If you attend via Zoom and you are not RE, your attendance will not count towards attendance requirements (90% of classes).
+- Attend class in-person (the expectation is that you will attend at least 90% of classes).
 
-- Do the readings before coming to class and come to class prepared to contribute to the discussion and share reflections on the readings.
+- Read the textbook chapter assigned for that week before coming to class and come to class prepared to contribute to the discussion and share reflections on the readings.
 
 ---
 
 ## Let's get to know the class!
 
-Open Menti ...
-
-.center[&lt;img src ='../img/menti-week-01.png' width = '35%'&gt;&lt;/img&gt;
-
-or https://www.menti.com/al8jn8dsxbqa (link also from Canvas)]
-
+Open Menti https://www.menti.com/alxf5iwcwtzu (link also from Canvas)
 
 
 ---
@@ -111,7 +121,7 @@ or https://www.menti.com/al8jn8dsxbqa (link also from Canvas)]
 
 (Directly below, in a new tab or link to Padlet from Canvas)
 
-&lt;div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"&gt;&lt;p style="padding:0;margin:0"&gt;&lt;iframe src="https://sydney.padlet.org/embed/od6fji8ag6yjnwig" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:400px;display:block;padding:0;margin:0"&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;div style="display:flex;align-items:center;justify-content:end;margin:0;height:28px"&gt;&lt;a href="https://padlet.com?ref=embed" style="display:block;flex-grow:0;margin:0;border:none;padding:0;text-decoration:none" target="_blank"&gt;&lt;div style="display:flex;align-items:center;"&gt;&lt;img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" style="padding:0;margin:0;background:0 0;border:none;box-shadow:none" alt="Made with Padlet"&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"&gt;&lt;p style="padding:0;margin:0"&gt;&lt;iframe src="https://sydney.padlet.org/embed/e9h77tcpfsmkr22y" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:608px;display:block;padding:0;margin:0"&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;div style="display:flex;align-items:center;justify-content:end;margin:0;height:28px"&gt;&lt;a href="https://padlet.com?ref=embed" style="display:block;flex-grow:0;margin:0;border:none;padding:0;text-decoration:none" target="_blank"&gt;&lt;div style="display:flex;align-items:center;"&gt;&lt;img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" style="padding:0;margin:0;background:0 0;border:none;box-shadow:none" alt="Made with Padlet"&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
 
 ---
 class: inverse, center, middle
@@ -201,7 +211,7 @@ So what?
 
 ### What the class is not 
 
-- An advanced statistics course (although we will do some #Rstat in week 10 &amp; 11)
+- An advanced statistics course (Will do some #Rstat in week 10 but you should consider [Data Analytics for Social Research SSPS6006](https://www.sydney.edu.au/courses/units-of-study/2024/ssps/ssps6006.html) for a dedicated unit)
 
 - Opportunity to conduct a research project
 
@@ -218,7 +228,7 @@ class: inverse, center, middle
 
 Let's take this chocolate study...
 
-.center[&lt;img src = '/Users/fbai9728/Documents/GitHub/GOVT6139/img/chocolate-study.png' width = '60%'&gt;&lt;/img&gt;]
+.center[&lt;img src = '../img/chocolate-study.png' width = '60%'&gt;&lt;/img&gt;]
 
 Youmans, R. J., &amp; Jee, B. D. (2007). Fudging the numbers: Distributing chocolate influences student evaluations of an undergraduate course. *Teaching of Psychology*, 34(4), 245–247. https://doi.org/10.1080/00986280701700318
 
@@ -752,10 +762,16 @@ class: inverse, center, middle
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="assets/remark-zoom.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
 "highlightLines": true,
-"countIncrementalSlides": false
+"countIncrementalSlides": false,
+"ratio": "4:3",
+"navigation": {
+"scroll": false
+}
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
