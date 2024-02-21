@@ -77,21 +77,34 @@ class: inverse, center, middle
 
 Mix of 
 
-- Lectures (with four confirmed guest speakers);
+- Lectures: 
 
-- Discussions (including on readings): Discussions will generally be prompted by questions you will be required to answer through Mentimeter or Padlet;
+    * on the content covered by textbook and;
+    
+    * about the practice of research design (also with four guest lectures)
 
-- Individual and group tasks (with a focus on writing for research);
+- Discussions (including on readings): Discussions will generally be prompted by questions and answers socialised using Menti and Padlet (this would require you come to class with an Internet connected device) 
 
-- Literature Lab in Week 3 and Data lab with R and RStudio in Week 10 (make sure to bring your laptop to class then)
+- Individual and group tasks with a focus on research design and research writing;
+
+- Literature Lab in Week 3 and Data lab (with R and RStudio) in Week 10 (make sure to bring your laptop to class then)
 
 ---
 
 ## My expectations
 
-- Attend class in-person (the expectation is that you will attend at least 90% of classes).
+- Get your own copy of the textbook: Creswell, J. W., & Creswell, J. D. (2022 or 2018). *Research design qualitative, quantitative, and mixed methods approaches* (Sixth or Fifth edition). SAGE.
 
-- Read the textbook chapter assigned for that week before coming to class and come to class prepared to contribute to the discussion and share reflections on the readings.
+- Read the textbook chapter assigned each week before coming to class and come to class prepared to contribute to the discussion and share reflections on the readings.
+
+- Attend and engage in class (the expectation is that you will attend at least 90% of classes).
+
+.pull-left[.center[<img src = '../img/creswell-textbook-fourth.png' width = '45%'>]]
+
+.pull-right[.center[<img src = '../img/creswell-textbook-fifth.png' width = '45%'>]]
+
+
+
 
 ---
 
@@ -118,9 +131,58 @@ Menti link from Canvas
 
 <div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://sydney.padlet.org/embed/e9h77tcpfsmkr22y" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p><div style="display:flex;align-items:center;justify-content:end;margin:0;height:28px"><a href="https://padlet.com?ref=embed" style="display:block;flex-grow:0;margin:0;border:none;padding:0;text-decoration:none" target="_blank"><div style="display:flex;align-items:center;"><img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" style="padding:0;margin:0;background:0 0;border:none;box-shadow:none" alt="Made with Padlet"></div></a></div></div>
 
---- 
+---
 
-## Past feedback
+## What some GOVT6139 students liked last year
+
+(This is not intended to be a representative summary - just a summary of individual comments)
+
+1. The course provides a structured guide for allocating attention to research proposal components, 
+
+2. it includes peer reviews and in-class assignments that enrich learning, 
+
+3. offers extensive related readings and valuable colleague feedback for constructing research designs, and 
+
+4. allows flexibility in assignment topics within assessment criteria, enabling personalized exploration.
+
+---
+
+## What some GOVT6139 students had mixed feelings about last year
+
+### Use of sharing tools such as Menti and Padlet.
+
+* Some found that they enriched and supported the experience;
+
+* Other found them laborious and repetitive after a while.
+
+CLOSING THE LOOP: This year, we will use these tools less frequently and in a more targeted way (for context, last year GOVT6139 was offered in a hybrid mode.) 
+
+---
+
+## What some GOVT6139 students didn't like last year
+
+(This is not intendend to be a representative summary - just a summary of individual comments)
+
+1. The course needs to offer more practical exercises for writing proposals, including detailed guidance to enhance students' writing skills. 
+
+2. The lack of timely feedback on in-class group activities due to time constraints makes it challenging for students to understand if they've correctly grasped the concepts. 
+
+3. The assessment's weighting system is described as overly complex and confusing, leading to difficulties in understanding evaluation criteria.
+
+4.  Readings were sometime not utilised in lectures, sometimes felt irrelevant to the course content, or were outdated.
+
+---
+
+## What some GOVT6139 students didn't like last year
+
+CLOSING THE LOOP in 2024: 
+
+1. We introduced a textbook which is very much focused on writing a research proposal and we will make sure to discuss that content in class. Guest lectures about practical research experience will complement that. 
+
+2. We will give more time to in-class activities (including about research writing) and to provide in-class feedback on these activities. 
+
+3. I published more resources on Canvas about tasks and weighting (but please, make sure you read them and ask questions if something is not clear)
+
 
 ---
 class: inverse, center, middle
@@ -214,8 +276,6 @@ So what?
 
 - Opportunity to conduct a research project
 
-- Note there are specialist qualitative / quantitative methods classes also on offer
-
 ---
 class: inverse, center, middle
 
@@ -279,6 +339,7 @@ class: inverse, center, middle
 ## 1. Emergence, interaction, and diffusion of *political opinions* online
 
 * Cross-disciplinary research: Digital ethnography, Computer science and Political science. 
+
 * Loops involving Qualitative, Quantitative & Computational methods.
 
 ### Key research questions
@@ -504,7 +565,7 @@ Remember that a good literature review aims for *relevance* more than *completen
 
 ### Do you use it and how?
 
-.center[<img src = '../img/2024-GOVT6139-W01-menti-qr-code.png'>
+.center[<img src = '../img/2024-GOVT6139-W01-menti-qr-code.png' width = '20%'>
 
 OR 
 
@@ -528,7 +589,7 @@ No need to say that the wrong way to use it is copying/pasting ChatGPT answers i
 
 This is not only cheating but also ChatGPT will never produce *original* (that is, *creative*) work!
 
---- 
+---
 
 ### Use of GenAI in GOVT6139
 
@@ -579,7 +640,28 @@ See: Ted Chiang's [ChatGPT Is a Blurry JPEG of the Web](https://www.newyorker.co
 ---
 class: inverse, center, middle
 
-# Queries about the unit?
+# Issues with the unit?
+
+---
+
+## How to provide feedback (before the USS at the end of the semester)
+
+There are a number of channels for your to provide feedback during the course of the semester.
+
+You are always welcome to send me an email, of course, if you feel you are getting behind or confused. On top of this: 
+
+1. At the end of each class, you can **optionally** provide a quick feedback (not anonymous) as you check-in for attendance. 
+
+<img src = '../img/sres-checkin-screenshot.png' width = '80%'>
+
+If you click on the sad face, I will get back to you to check what's wrong.  
+
+---
+
+## How to provide feedback
+
+2. You will be invite to provide some anonymous feedback through Canvas in Week 4 and Week 9. The survey in Week 9 will also asked you about your experience with the textbook we are adopting. 
+
 
 ---
 
@@ -599,7 +681,7 @@ class: inverse, center, middle
 
 ## Personal queries: 
 
-Email me (francesco.bailo@sydney.edu.au, add GOVT6139 to your email's subject) or book an appointment [here].
+Email me (francesco.bailo@sydney.edu.au, add GOVT6139 to your email's subject) or book an appointment [here](https://outlook.office.com/bookwithme/user/846b379784f440f185dfc56ee6d18f1f%40sydney.edu.au/meetingtype/5e97692b-d0e1-4d86-a501-3b6a33300e6d?anonymous).
 
 ---
 
@@ -612,8 +694,6 @@ Email me (francesco.bailo@sydney.edu.au, add GOVT6139 to your email's subject) o
 > Deduction of 5% of the maximum mark for each calendar day after the due date.
 
 > After ten calendar days late, a mark of zero will be awarded.
-
-> You are expected to attend at least 90% of seminars. If you missed more than 50% of classes you might fail the unit. 
 
 ---
 
@@ -659,15 +739,14 @@ services
 - Many support services for students, do not hesitate to reach out!
 
 
---- 
-
-## How to provide feedback
-
-
-
 ---
 class: inverse, center, middle
 
 # Questions?
 
 ---
+class: center, middle
+
+# See you next week with The Selection of a Research Approach
+
+
