@@ -53,7 +53,33 @@ Do not reshare]
 
 ---
 
-## Chapter 1 Learning Objectives (1 of 2)
+class: middle, center
+
+# Any question concerning the content for this week?
+
+---
+
+# A few more words about participation in class
+
+* *Attend* & *Engage*
+
+* Some students are comfortable in speaking up in class, others less
+
+* Engagement can take different forms
+
+* If you are *not comfortable* in speaking up during class, you should alternatively:
+
+  * Post your comments using Padlet (make sure to add your name);
+  
+  * Post your comments/questions about the content using the discussion board on Canvas
+  
+  * Email me your comments or questions. 
+  
+(Also, if would really help me if you could add a photo of yourself through Canvas "Setting the scene" -> "Knowing you better")
+
+---
+
+## Chapter 1 Learning Objectives
 
 1. Define major research terms used in this book so that you can incorporate them into your projects.
 
@@ -71,7 +97,18 @@ Do not reshare]
 
 ---
 
-## Introducing Key Terms in this Chapter (1 of 2)
+## Plan for today
+
+| Time         | Content                                                                           |
+|--------------|-----------------------------------------------------------------------------------|
+| 1:00 - 1:30  | **Research approach**</br></br>Induction vs Deduction</br></br>**Philosophical Assumptions**      |
+| 1:30 - 1:45  | Task 1 (15 Min)                                                                   |
+| 1:45 - 2:20  | **Research design**</br></br>**Research methods**</br></br>Bringing everything together</br></br>Check-in |
+| 2:20 - 2:50  | Task 2 (30 Min)                                                                   |
+
+---
+
+## Introducing Key Terms in this Chapter
 
 **Research approaches** – plans and the procedures for research that span the steps
 
@@ -302,44 +339,6 @@ class: center, middle
 
 ---
 
-__Figure 1.1: A Framework for Research—The Interconnection of Worldviews, Design, and Research Methods__
-
-.center[<img src ='../img/Creswellrd6e_PPT011.jpg' width = '80%'></img>]
-
----
-
-### Or through our flow diagram ...
-
-```{r echo = F, out.width='100%'}
-
-require(DiagrammeR)
-
-grViz("                           # All instructions are within a large character string
-digraph research_diagram {    # 'digraph' means 'directional graph', then the graph name 
-  
-  # graph statement
-  #################
-graph [rankdir = TB]
-node [shape = rectangle, style = filled, fillcolor = Linen]
-  
-  'YOUR Philosophical Assumptions' [width=1]  # names of nodes
-  'YOUR Research Approach/Methodology' [width=0.8, fillcolor = Gray]
-  'YOUR Research Design' [width=0.6] 
-  'YOUR Research Methods' [width=0.4] 
-
-  # edges
-  #######
-  'YOUR Research Approach/Methodology'
-  'YOUR Research Approach/Methodology' -> 'YOUR Philosophical Assumptions' [label = 'is consistent with']
-  'YOUR Research Approach/Methodology' -> 'YOUR Research Design' [label = 'is consistent with']
-  'YOUR Research Design' -> 'YOUR Research Methods' [label = 'is consistent with']
-}
-")
-
-```
-
----
-
 ### Let's examing the Philosophical Assumpytions or Worlviews now...
 
 ```{r echo = F, out.width='100%'}
@@ -414,7 +413,7 @@ library(countdown)
 countdown(minutes = 8, seconds = 00)
 ```
 
-(You can optionally & individually add it to Padlet by adding your name...)
+You can optionally & individually share your comment with Padlet (make sure to add your name)
 
 ---
 
@@ -474,50 +473,6 @@ __Table 1.3: Alternative Research Designs__
 | Quantitative Designs | Qualitative Designs | Methods Designs |
 | :-: | :-: | :-: |
 | • Experimental and<br />quasi-experimental designs<br />• Single-subject designs<br />• Nonexperimental designs, such as surveys<br />• Longitudinal designs | • Descriptive method<br />• Narrative research<br />• Phenomenology<br />• Grounded theory<br />• Ethnography<br />• Case study<br />• Convergent<br />• Explanatory sequential<br />• Exploratory sequential<br />• Complex designs with<br />embedded core designs | • Case study<br />• Convergent<br />• Explanatory sequential<br />• Exploratory sequential<br />• Complex designs with<br />embedded core designs |
-
----
-
-## Quantitative Designs
-
-* Causal-comparative research
-
-* Correlational design
-
-* Survey research
-
-* Experimental research
-
----
-
-## Qualitative Designs
-
-* Descriptive method
-
-* Narrative research
-
-* Phenomenological research
-
-* Grounded theory
-
-* Ethnography
-
-* Case studies
-
----
-
-## Mixed Methods Designs
-
-* Integration of quantitative and qualitative research and data and analyses
-
-* Core designs
-
-  * Convergent parallel mixed methods
-  
-  * Explanatory sequential mixed methods
-  
-  * Exploratory sequential mixed methods
-  
-* Complex mixed methods designs (e.g., experiment)
 
 ---
 
@@ -632,6 +587,12 @@ __Table 1.5: Qualitative, Quantitative, and Mixed Methods Approaches (continued)
 
 class: center, middle
 
+# Week 02 Check-in
+
+---
+
+class: center, middle
+
 # TASK 2 
 
 ## The Selection of a Research Approach
@@ -655,8 +616,10 @@ countdown(minutes = 12, seconds = 00)
 
 ---
 
-### See you next week with the **Review of the Literature**. 
+class: center, middle
 
-### Remember to bring your own laptop for the literature lab!
+## See you next week with the **Review of the Literature**. 
+
+## Remember to bring your own laptop for the literature lab!
 
 
