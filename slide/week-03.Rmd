@@ -1,16 +1,25 @@
 ---
 title: "GOVT6139</br>Research design"
-subtitle: "Week 03</br> Research Design (I) </br> Questions, Theories, Hypotheses, Variables, Measurements"
+subtitle: "Week 03</br>Review of the Literature"
 author: "Francesco Bailo"
 institute: "The University of Sydney"
-date: "Semester 1, 2023 (updated: `r Sys.Date()`)"
+date: "Semester 1, 2024 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
-    lib_dir: libs
+    css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+    self_contained: false # if true, fonts will be stored locally
+    seal: true # show a title slide with YAML information
+    includes:
+      in_header: "assets/mathjax-equation-numbers.html"
     nature:
+      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+      navigation:
+        scroll: false # disable slide transitions by scrolling
+
 ---
 
 background-image: url(https://upload.wikimedia.org/wikipedia/en/6/6a/Logo_of_the_University_of_Sydney.svg)
@@ -28,1007 +37,337 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
 
 ## Acknowledgement of Country
 
-I would like to acknowledge the Traditional Owners of Australia and recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
+---
+
+class: inverse, center, middle
+
+# Chapter 2
+
+# Review of the Literature
+
+.center[Slides adapted from Creswell, Research Design 6e, SAGE Publishing, 2023 for GOVT6139 Research Design.
+
+Do not reshare]
+
+---
+
+class: middle, center
+
+# Any question concerning the content for this week?
 
 ---
 
 ## Today's class
 
-* Ontology and epistemology continued:
-    * Recap: Interpretivism and positivism
-    * Example of positivism: Government performance and dissatisfaction with democracy in Australia
-
-* Asking research questions
-
-* Building blocks of the research process:
-    * Concepts
-    * Theories
-    * Hypotheses
-    * Variables
-    * Measurements
-
-* Individual exercise
-
-* Primary and secondary data
+TBC
 
 ---
 
-## Recap: Epistemological positions
+# Chapter 2 Learning Objectives 
 
-.center[<img src = "../img/marsh-onto-epi.png" width = "100%"></img>]
+1. Explain the reasons for a literature review to defend its use in a study.
 
-(Marsh et al., 2018, p. 179)
+2. Organize a literature review consistent with a quantitative, qualitative or mixed methods approach.
 
-Note: Generally, post-positivism = *Critical* realism. Objectivity but with biases. 
+3. Describe the steps typically undertaken when conducting a literature review.
+
+4. Explain how to evaluate literature for inclusion in a literature review.
+
+6. Identify the types of terms needing definition in a scholarly research report.
 
 ---
 
-## Individual task
+# Introduction
 
-Let's quickly answer last week's questions: 
-
-* What is *ontology*? What are the main ontological positions?
-
-* What is *epistemology*? What are the main epistemological positions?
-
-You can post your answers to Canvas after entering them in Menti.
-
-```{r echo = F}
-
-library(countdown)
-
-countdown(minutes = 5, seconds = 00)
-```
+* Topic – subject or subject matter of a study
+  * e.g., "political participation", "democratic development", "compulsory voting"
+  
+.center[<img src = '../img/old-female-scholar-in-library.jpeg' width = '20%'></img>]
+  
+* Conduct literature review about the topic
+  * Worth studying?
+  * Scope?
+  * Can be studied
 
 
 ---
 
-## Recap: Epistemological positions
+# The Research Topic
 
-.pull-left[
-**Positivism**
+* Gain insight into the topic by
+    * Drafting a working title
+      * “My study is about…”
+    * Posing a brief question
+      * What needs to be answered? (which helps you define your research problem)
 
-*Objectivist ontology: Real world out there, independent of our observation*
+First step is to examine research on the topic and ask
 
-* Can therefore establish ‘real’ relationships between social phenomena
-* Can study these relationships via direct observation
-* Interested in causal relationships
-* Researcher objectivity
-
-]
-
-.pull-right[
-
-**Interpretivism**
-
-*Constructivist ontology: The world is socially constructed*
-
-* Social phenomena cannot be understood independently of our interpretation of them
-* More subjective: No observer can be objective because he/she lives in the world and participates in the social construction of reality
-* Double hermeneutic – the world is interpreted by the actors and their interpretation is interpreted by the observers
-
-]
+* How does this project contribute to the existing literature?
 
 ---
 
-## Example positivist research
+# The Research Topic
 
-.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/b/b6/Parliament_House_at_dusk%2C_Canberra_ACT.jpg' width = '75%'></img>]
+* The topic **can** be researched if
+  * You have access to participants
+  * You have resources to collect and analyze information
+* The topic **should** be researched if
+  * The research will add to the literature about the topic
+  * Scholars will be interested in the topic
+  * A study of it will advance your personal goals
+  * It is ethical to conduct the study
 
-Cameron, S. (2020). Government performance and dissatisfaction with democracy in Australia. *Australian Journal of Political Science*, 55(2), 170–190. https://doi.org/10.1080/10361146.2020.1755221
+---
+
+# The Purpose of a Literature Review
+
+* Shares the results of other studies
+
+* Relates the study to the larger dialogue in the literature
+
+* Provides a framework for establishing the importance of the study
+
+* Provides a benchmark for comparing the results to other findings
+
+* Studies need to add to the body of literature on a topic
+
+---
+
+# Organization of the Literature Review
+
+## Literature reviews take several forms:
+
+  * **Integrate** what others have done and said
+  * **Criticize** previous scholarly works
+  * **Bridge** between related topics
+  * **Identify** the central issues in the field
+
+---
+
+# Qualitative approach
+
+In qualitative research, inquirers use the literature in a manner consistent with the assumptions of **learning from the participant, not prescribing the questions** that need to be answered from the researcher’s standpoint. One of the chief reasons for conducting a qualitative study is that the study is exploratory. This usually means that not much has been written about the topic or the population being studied, and the researcher seeks to listen to participants and build an understanding based on what is heard.
+
+---
+
+# A Qualitative Structure
+
+Table 2.1: Using Literature in a Qualitative Study
+
+| Use of Literature | Criteria | Example of Suitable Strategy Types |
+| :-: | :-: | :-: |
+| The literature frames the problem in the introduction to the study.	 | There must be some literature available.	<br /> | Typically, researchers use this way in all types of qualitative studies.<br /> |
+| The literature appears in a separate section.	 | This approach is often acceptable to an audience most familiar with the traditional postpositivist approach to literature reviews.	 | Researchers with a strong quantitative orientation like this approach. 	<br /> |
+| The literature ends the study; it becomes a basis for comparing and contrasting findings of the qualitative study.	<br /> | This approach is most suitable for the inductive process of qualitative research; the literature does not guide and direct the study but becomes an aid once patterns or categories have been identified.	<br /> | Researchers with a strong qualitative orientation like this approach. 	<br /> |
+
+---
+
+# A Quantitative Structure
+
+* The use of the literature:
+* In quantitative studies, researchers use literature to:
+  * Provide direction to the research questions and hypotheses
+  * Introduce a problem
+  * Introduce and describe the theory that will be used
+  * Examine the usefulness of the theory
+  * Compare results with existing literature or predictions
+
+---
+
+# A Mixed Method Structure
+
+* The use of the literature:
+* In mixed methods studies, researchers use the literature:
+  * In either a quantitative or qualitative approach
+  * In each phase, consistent with either the quantitative or qualitative approach
+  * Relative to the intended audience
+
+# Steps in Conducting a Literature Review
+
+1. Identify key words
+
+2. Search databases
+
+3. Identify about 50 research reports in articles or books
+
+4. Collect those that are central to your topic
+
+5. Design a  __literature map__ (optional, but can be helpful)
+
+6. Draft summaries of relevant articles
+
+7. Write a literature review, **organizing it by important concepts**
+
+---
+
+# Computer Databases 
+
+Searching computerized databases:
+
+__Computerized databases of the literature __ are available the Internet
+
+Databases provide access to journal articles, conference papers and dissertations on a wealth of topics
+
+---
+
+## The University of Sydney gives access to a wide range of databases for academic publications
+
+Today we'll give a try to two
+
+### 1. Google Scholar [scholar.google.com.au](https://scholar.google.com.au/)
+
+* Free access
+* Wider underlying collection (paper and books but also pre-prints, blogposts, etc..)
+* Limited filtering functionalities
+  
+  
+### 2. Web of Science [webofscience.com](https://www.webofscience.com/)
+
+(An alternative to WoS is [Scopus](https://www.scopus.com/search))
+
+---
+
+# Priority of the Literature
+
+* A priority for selecting literature material:
+
+1. Start with broad syntheses (such as encyclopedias or handbooks if you are new to the topic
+  * E.g. *(The Oxford Handbook of Political Participation[https://global.oup.com/academic/product/the-oxford-handbook-of-political-participation-9780198861126]*)
+
+2. Turn to journal articles in peer-reviewed journals
+3. Next, consider books
+4. Then examine conference papers (Google Scholar is king here)
+5. Scan for dissertations
+6. Lastly, consider reports on the web
+
+---
+
+# Abstracting the Literature 
+
+### Abstracts summarize major elements of the article
+
+#### For research studies:
+
+* Mention the problem
+* State the central purpose
+* State information about the population and sample
+* Review key results
+* Point out methodological flaws (if a critique or methods review)
+
+---
+
+###  Abstracting studies
+
+#### For nonempirical studies (essays, opinions, etc.)
+
+* Mention the problem
+* Identify the central theme
+* State the major conclusions
+* Mention flaws in reasoning or logic (if a methodological review)
+
+---
+
+# A Literature Map (1 of 2)
+
+* A literature map of the research
+* A literature map is a visual summary of existing research on a topic
+* The structure of the literature map may be:
+  * Hierarchical pattern
+  * Flowchart layout
+  * Series of circles
+* Write a narrative description
+
+---
+
+Figure 2.1: An Example of a Literature Map
+
+![](img/Creswellrd6e_PPT021.jpg)
+
+Creswell, Research Design 6e                                            SAGE Publishing, 2023
 
 
 ---
 
-## Key research question
+# Definition of Terms
 
-### What does explain declining satisfaction with democracy in Australia?
+* Identify and define terms that readers need to understand a proposal
+* Define terms introduced in  _all_  sections of the research plan:
+  * Title of the study
+  * Problem statement
+  * Purpose statement
+  * Research questions, hypotheses, or objectives
+  * Literature review
+  * Theory base of the study
+  * Methods section
 
----
+--- 
 
-## Context 1/2 
+## General Guidelines for terms
 
-### Declining satisfaction with democracy in Australia
+Define terms when they first appear in the manuscript
 
-.center[<img src = '../img/cameron-01.png' width = '75%'></img>]
+Use specific operational definitions
 
----
+Do not define terms using everyday language, be guided by the literature
 
-## Context 2/2 
+Define terms so that they accomplish different goals
 
-### Satisfaction with democracy in Anglo-American democracies
-
-
-.center[<img src = '../img/cameron-02.png' width = '75%'></img>]
-
-Source: Comparative Study of Electoral Systems (CSES) and national election studies.
-
----
-
-## What explains declining satisfaction with democracy in Australia?
-
-Media commentary on the decline:
-
-.pull-left[
-
-* Democratic malaise affecting other advanced democracies
-
-* Frequent changes of Prime Minister
-
-> "There have been some rather unkind comments about Australia being the *Italy of the South Pacific* and the *coup capital of the world*" (Julie Bishop 2018)
-
-]
-
-.pull-right[
-.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/b/be/Portrait_of_Julie_Bishop.jpg' width = 70%></img>]
-]
-
-Cameron's paper provides an empirical test of explanations.
+One may use a definition of terms section in the manuscript
 
 ---
 
-## What explains satisfaction with democracy? 
-## Theory
+### Special Terms
 
-Key findings of previous comparative studies:
-1.	**Political institutions**
-    * Electoral system: Majoritarian vs. proportional representation
-    * Electoral winners / losers
-2.	**Culture and values**
-    * Rising levels of education affect citizen attitudes
-    * Generational change, younger generations more critical
-3.	**Government performance**
-    * Economic performance
-    * Political performance
-    
-See: Anderson and Guillory (1997); Huang et al. (2008); Inglehart (1997); Norris (1999).
+* Qualitative studies
+  * Inductive and evolutionary in nature
+  * The definition of terms may appear later in the written report, perhaps in the data analysis
+* Quantitative studies
+  * Deductive with a fixed set of objectives
+  * All relevant terms are comprehensively defined earlier in the study
+* Mixed methods studies
+  * Follows the use of quantitative or qualitative approach
+  * Clarify terms related to mixed methods
 
 ---
 
-## Explaining dissatisfaction with democracy in Australia
-## Theory II
+# Summary
 
-* **Political performance**
-    * Leadership changes: 6 Prime Minsters in a span of 8 years
-    
-    * Changes driven by party infighting not voters
-    
-    * Only one change of PM resulting from an election (2013) [Remember paper was published in 2020]
-    
-* **Economic performance**
+* Identify your topic through a brief title or central research question
+* Use the literature to
+  * Present similar studies
+  * Relate the study to the literature
+  * Provide a framework for comparison
+* Different purpose depending on approach
+* Search databases using key terms
 
-    * Voter pessimism about the state of the economy
-    
-    * In 2016 just 10% thought economy had improved in past year
 
----
+--- 
 
-## Explaining dissatisfaction with democracy in Australia
-
-### Hypotheses
-
-1. Those disapproving of the leadership changes more dissatisfied with democracy
-
-2. Those pessimistic about the economy more dissatisfied with democracy
-
-Note the IF ... THEN .... This is an important approach for multivariate analysis and positivist research
+# Check-in
 
 ---
 
-## Data and Methods I: The Australian Election Study
+# First peer-review task is due next week (Friday, 15 Mar)
 
-.pull-left[
+## Think about a research problem and a research question for your A2 (due in Week 13)
 
-* National, post-election surveys asking ≈ 250 questions about politics and the election.
+## Write max 500 words (up to a page)
 
-* 1987-2022. Satisfaction with democracy measured since 1996.
+From your textbook's glossary
 
-* Surveys representative of the Australian population.
+### Research problems 
 
-* Data available from: www.australianelectionstudy.org
+... are problems or issues that lead to the need for a study. Research problems become clear when the researcher asks "What is the need for my study?" or "What problem influenced the need to undertake this study?"
 
-]
-
-.pull-right[
-
-
-.center[<img src = '../img/cameron-03.png' width = '75%'></img>]
-
-]
 
 ---
 
-## Data and Methods II: Key measures
-
-**Dependent variable: Satisfaction with democracy** (1996-2019)
-
-> On the whole, are you very satisfied, fairly satisfied, not very satisfied or not at all satisfied with the way democracy works in Australia? [Very satisfied / Fairly satisfied / Not very satisfied / Not at all satisfied]
-
-**Independent variable: Approval of leadership changes** (2010, 2019)
-> Do you approve or disapprove of the way the [Liberal Party] handled the leadership change in [September of last year] when [Malcolm Turnbull] replaced [Tony Abbott]? [Strongly approve / Approve / Disapprove / Strongly disapprove]
-
-** Independent variable: Economic evaluations** (1987-2019)
-> And how do you think the general economic situation in Australia now compares with what it was 12 months ago? [A lot better / A little better / About the same / A little worse / A lot worse]
-
----
-
-## Dependent and independent variables (snapshot recap)
-
-The dependent variable, usually indicated with $Y$, is the variable on which the independent variable(s), usually $X$, has an effect.
-
-Synonyms from Wikipedia
-
-| independent | dependent |
-| -- | -- | 
-| input | output |
-| regressor |	regressand |
-| predictor |	predicted |
-| explanatory |	explained |
-| exogenous |	endogenous |
-| manipulated |	measured |
-| exposure |	outcome |
-
----
-
-## Data and Methods III: Approach
-
-
-### Quantitative methods
-
-* Examine trends over time
-
-* Examine relationships between variables
-
-* Regression modelling to:
-
-    * Examine effects of government performance (political and economic) on satisfaction with democracy
-    
-    * Whilst controlling for other factors expected to affect satisfaction with democracy – electoral winners/losers, education level, age etc.
-
-* Don’t worry about the details here – we will unpack all this in Weeks 8-11 on quantitative methods
-
----
-
-## Approval of leadership changes, 2010–2018
-
-> Do you approve or disapprove of the way the [Labor party] handled the leadership change [in June of this year], when [Julia Gillard] replaced [Kevin Rudd]?
-
-.center[<img src = '../img/cameron-04.png' width = '75%'></img>]
-
-Source: Australian Election Study (2010, 2016, 2019) and ANU Poll (2013).
-
----
-
-## Approval of leadership changes and satisfaction with democracy
-
-.center[<img src = '../img/cameron-05.png' width = '75%'></img>]
-
-Note: The Y-axis (vertical) is changed now. This charts directly investigates (now for the first time) the relationship between two variables.
-
----
-
-## Economic perceptions and satisfaction with democracy
-
-.center[<img src = '../img/cameron-06.png' width = '72%'></img>]
-
-Source: Australian Election Study and OECD (GDP growth).
-
-Note: Survey variables from a number of years are compared to GDP measures.
-
----
-
-## Explaining satisfaction with democracy
-
-A regression table 😱 😱 😱 (Note: Four-point measure of satisfaction with democracy is the dependent variable)
-
-.center[<img src = '../img/cameron-07.png' width = '79%'></img>]
-
----
-
-## Conclusions
-
-**The effect of government performance**
-
-* Frequent leadership changes and negative economic perceptions
-undermined satisfaction with democracy.
-
-**Contribution**
-* Sheds light on an interesting case.
-
-* Examines the effects of frequent prime ministerial turnover on citizen attitudes towards democracy.
-
-* Results suggest satisfaction with democracy in Australia reflects homegrown factors, not just global trends.
-
----
-
-## What makes this research positivist?
-
-*Assumptions*
-* Social phenomena can be directly observed and measured
-    * E.g. satisfaction with democracy measured via survey
-    * These measurements enable comparisons – between individuals, and even across countries
-    * Can examine relationships between social phenomena – e.g. attitudes towards the leadership changes and satisfaction with democracy
-    
-* Assumed objectivity of the researcher
-
-* Interested in causal explanations
-    * i.e. what caused satisfaction with democracy to decline in Australia?
-    
-* Interested to discover general, universal laws
-    * Frequent changes of political leaders (outside of elections) undermine satisfaction with democracy
-    * Testing and building upon established theories
-
----
-
-## Individual task
-
-### Think about a key difference between interpretivism and positivism in practice using as an example the research by Peter Chen and Sarah Cameron (e.g. think about research questions or methods and data).
-
-You can post your answers to Canvas after entering them in Menti.
-
-```{r echo = F}
-library(countdown)
-
-countdown(minutes = 8, seconds = 00)
-```
-
-
----
 
 class: inverse, center, middle
 
-# Introduction to research design
-
-.center[<img src = 'https://i.gifer.com/77Rw.gif'></img>]
-
----
-
-## What is research design?
-
-### Broad definition
-
-Research design can refer to a whole proposal for a research project, including the 
-
-* review of the literature, 
-* research questions, 
-* hypotheses, 
-* selection of cases,
-* details of data collection and 
-* methods of data analysis.
-
-### Narrow definition
-
-Research design refers to "the logical method by which we propose to test a hypothesis".
-
-Monroe 2018, *Essentials of Political Research*, p. 31, Chapter 3 Research Design [[link](https://www-taylorfrancis-com.ezproxy1.library.usyd.edu.au/books/9780429500749)]
-
----
-
-## The Research process
-
-.center[<img src = '../img/research-design-cycle.png' width = '85%'></img>]
-
-Source: Toshkov, D. (2017). Research design. In V. Lowndes, D. Marsh, & G. Stoker (Eds.), *Theory and Methods in Political Science* (pp. 219–236), p. 221. [[link](http://ebookcentral.proquest.com/lib/usyd/detail.action?docID=6234931)]
-
----
-
-class: inverse, center, middle
-
-# Asking research questions
-
-.center[<img src = 'https://media.giphy.com/media/ft6HpM2TALLws/giphy.gif' width = "45%"></img>]
-
----
-
-## Research Topic
-
-**Choosing a topic**
-* Familiarize yourself with existing studies in the area
-* You should identify what the key finding is in each article, book or policy debate.
-* Are there debates within the literature?
-* Do you see weaknesses? Can you think of an alternative argument? 
-* Do you think the argument is applicable to other cases which the author does not use (e.g. Asian countries)?
-* Do you see further questions?
-
-**Any puzzle?**
-* One often effective way of choosing a topic is to work on something which puzzles us.
-
----
-
-## What makes for a good research question?
-
-* Addresses an important topic in the real world.
-    * So what? Why should anyone care about this?
-    
-* Contributes to scholarly debates / literature.
-    * Has not yet been answered; or has not yet been examined in a particular context. Adds to knowledge.
-    
-* Testable.
-    * Is it a feasible question to answer?
-    * Is it sufficiently focused?
-
-* Addresses a 'puzzle'
-
----
-
-## Why develop a research question?
-
-(Note: A research question is actually... a question! With a ? at the end.)
-
-* It forces you to get clear about what you are interested to find out;
-
-* It organises, and is the basis for all other steps in the research process;
-
-* It focuses and narrows your search for information;
-
-* By requiring that it address an issue of significance in the real world, enables research to contribute to knowledge about important issues;
-
-* By requiring that it addresses an issue of significance to the academic literature, enables research to contribute to, rather than merely reproduce, existing knowledge.
-
----
-
-### Types of research questions
-
-#### Descriptive
-
-Characteristics of something, how it works or behaves - describe and model it
-
-* *Example: What are Australians’ attitudes towards democracy?*
-    
-#### Explanatory
-
-Causes of something that has occurred or is happening – explain what factors or conditions are causally connected to a known outcome
-
-* *Example: What explains (dis)satisfaction with democracy in Australia?*
-    
-#### Normative
-
-Questions about how things should be
-
-* *Example: Is it important that Australian citizens are satisfied with democracy?*
-
-
----
-
-## Example research question
-
-.pull-left[
-**Puzzle**: Satisfaction with democracy has declined rapidly in Australia. 86% of citizens satisfied in 2007; 59% in 2019. What explains this decline?
-
-**Research question**: What has caused the decline in satisfaction with democracy in Australia?
-
-Source: Australian Election Study, 2022 Trends report]
-
-.pull-right[.center[<img src = '../img/aes-2022.png' width = '105%'></img>]]
-
----
-
-## Puzzle: Australia’s political leaders are less popular than they used to be. Why?
-
-.pull-left[.center[<img src = '../img/aes-2022-leaders-a.png' width = '95%'></img>]]
-
-.pull-right[.center[<img src = '../img/aes-2022-leaders-b.png' width = '95%'></img>]]
-
-
-Source: Australian Election Study, 2022 Trends report
-
-**Research question**: Why are Australia's political leaders less popular than they used to be? (Is it the quality of leaders that's declining, or citizens' expectations that are rising?)
-
----
-
-## Example research question
-
-**Puzzle**: Sometimes political leaders are selected by their parliamentary party members (MPs), sometimes they are selected by mass party members, and sometimes they are selected in some other way. Which method of leader selection leads to better electoral outcomes?
-
-**Research question**: Which process of political leader selection results in the best electoral outcomes?
-
----
-
-## Example research question
-
-**Puzzle**: The global financial crisis that hit in 2008 was the greatest economic shock in almost 100 years, since the Great Depression of the 1930s. What effect did this have on citizen *participation* in *protests*?
-
-.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Movimiento_15M_valencia_20-05-2011.jpg' width = '65%'></img>]
-
-**Research question**: What effect did the global financial crisis have on citizen participation in protest? Did it mobilize or demobilize participation in protest?
-
----
-
-## Strategies / Good Empirical Questions
-
-.pull-left[
-
-**Good empirical questions**
-
-* *Clarity*: It must be clear and reasonably specific;
-
-* *Testability*: It must be a question that can be investigated given available empirical resources;
-
-* *Theoretical significance* and/or ‘real world’ relevance: It must be important theoretically and/or practically.
-
-* *Originality*: It should have at least some degree of originality.
-
-]
-
-.pull-right[
-
-**Reformulating questions **
-
-**Method 1**: Change the frame of reference
-* Is Albanese doing a good job as Prime Minister?
-* Does the public think that Albanese is doing a good job as Prime Minister?
-
-**Method 2**: Test the underlying argument
-* Should the government provide an economic stimulus in response to COVID-19?
-* Did an economic stimulus (under similar conditions) boost the economy?
-
-]
-
----
-
-## Reflective exercise: Good or bad research questions
-
-### Let's answer with Menti
-
----
-class: inverse, center, middle
-
-# Building blocks of the research process: 
-
-.center[<img src = 'https://media.giphy.com/media/d2ZhIkBvogTIzOik/giphy.gif' width = '40%'></img>]
-
-# Concepts, theories, hypotheses, variables, measures
-
----
-
-## Building blocks of social scientific research
-
-.pull-left[
-**Positivist approach**
-
-* Concepts
-
-* Theory
-
-* Hypothesis
-
-* Variables
-
-* Operationalisation
-
-* Measures
-
-* Unit of Analysis
-]
-
-.pull-right[
-
-<img src = 'https://media.giphy.com/media/QUAYbjd1mXQ8o/giphy.gif' width = '100%'></img>
-
-]
-
----
-
-## Concept
-
-### What is a concept?
-
-An idea or mental construct that represents phenomena in the real world
-
-#### Examples
-
-Democracy, globalization, poverty, accountability, civil society etc.
-
-### Basic problem in social science
-
-* Many concepts are abstract and lack precise and shared meaning (i.e. they are often multi-dimensional)
-
-* Concepts are “unobservable” – that is, we rely on other observable variables to measure indirectly the concept
-
-* Raises problems of measurement and how to capture abstract concepts with observable measures
-
----
-
-## Theory
-
-### What is a theory?
-
-#### A theory is a set of related propositions that attempts to explain, and sometimes predict, a set of phenomena
-
-* It is broad and general – aimed at generalized causal relationships (i.e. 'X causes Y')
-* It connects variables at the conceptual level
-* A statement as to the expected relationship between concepts
-
-#### Uses of theory in social scientific thinking
-
-* Theory provides patterns for the interpretation of data
-* Theory links one study with another
-* Theory supplies frameworks within which concepts and variables acquire substantive significance
-* Theory allows us to interpret the larger meaning of our findings for ourselves and others
-
----
-
-## Hypothesis
-
-### A hypothesis is ... 
-
-* an **empirical statement** 
-
-derived from
-
-* a **theory** (or an observable implication of a theory)
-
-Also a hypothesis ...
-
-* is focused and specific;
-
-* explicitly indicates how a researcher thinks that phenomena of interest are related
-
-* translates theory (relationship between concepts) to hypothesis (relationship between measures of those concepts)
-
-* A good hypothesis can be tested!
-
----
-
-## Variables
-
-A variable is ...
-
-*an attribute or a feature that can take on a range of values (e.g. education level, age, gender, type of political regime)*
-
-* **Independent variable** (the presumed cause, or the *input*)
-
-* **Dependent variable** (the presumed effect or the *output*)
-
-* **Control variables** (any other variables that may be expected to influence the dependent variable)
-
-* **The effect of X** (independent variable) **on Y** (dependent variable), controlling for Z (control variable)
-
-Examples:
-
-*What is the independent variable and dependent variable?*
-
-* What effect does education have on political participation?
-* What effect does social media use have on trust in government?
-* What effect do gender quotas have on the proportion of women in parliament?
-
----
-
-## An example
-
-**Research question**:  What effect does economic hardship have on protest participation?
-
-**Theory**: When people experience economic hardship they will be less likely to participate in protest.
-
-**Hypothesis**: Fewer people on lower incomes would have participated in a protest demonstration in the past year, than people on higher incomes.
-
-.pull-left[
-
-**Variables**:
-* Income (independent variable)
-* Protest participation (dependent variable)
-* Education, urban/rural (control variables)
-
-]
-
-.pull-right[
-
-<img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg/598px-Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg'></img>
-
-]
-
----
-
-## Example
-
-
-**Concepts**: Development and democracy
-
-**Theory**: Economic development results in democratic development.
-
-.pull-left[
-
-**Hypothesis**: The higher the rate of economic growth, the greater the level of democracy.
-
-**Operational (or "working") hypothesis**: The higher the rate of GDP growth (World Bank), the higher the score on the Varieties of Democracy liberal democracy index.
-
-]
-
-.pull-right[
-
-.center[<img src = 'https://assets.cambridge.org/97805217/93797/cover/9780521793797.jpg'></img>]
-
-]
-
-
-
----
-
-## Concepts vs. Measures
-
-| Concept (unobservable) | Measures (observable)| 
-| -- | -- |
-| Economic growth	| World Bank GDP growth e.g. Change of GDP growth over same quarter previous year |
-| Corruption	| e.g. transparency international corruption perception index |
-| Regime type	| e.g. Freedom House – Free / Partly Free / Not free classification |
-| Democracy	| Varieties of Democracy liberal democracy index|
-
-
-.pull-right[<img src = 'https://media.giphy.com/media/TvVck7lO4LDJS/giphy-downsized-large.gif' width = '70%'></img>]
-
----
-
-## How do we ensure that we have good measures?
-
-
-### We must ensure that our measures are a good match for our concepts
-
-### Benchmarks for accuracy:
-
-* **Validity**: A measure is valid if it actually measures what it purports to measure (i.e. the concept at hand)
-    * *Truth in measurement*
-    
-* **Reliability**: A measure is reliable to the extent that it gives the same result again if the measurement is repeated (note in reality the measurement is almost always not repeated)
-    * *Consistency in measurement*
-    
----
-
-## From theory to hypothesis
-
-<img src = '../img/from-theory-to-hypothesis.png'></img>
-
----
-
-## Two types of reasoning: Induction and deduction
-
-### Relationship between observations (evidence) and theory
-
-<img src = '../img/from-theory-to-hypothesis-a.png'></img>
-
----
-
-## Does Sherlock Holmes use inductive or deductive reasoning to solve a crime?
-
-### Let's answer with Menti
-
-.pull-left[.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/9/9e/The_Adventure_of_the_Abbey_Grange_03.jpg'></img>]]
-
-
-.pull-right[.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/7/7e/The_Adventure_of_the_Priory_School_08.jpg' ></img>]]
-
-
----
-
-## Unit of analysis
-
-
-### In deciding what to measure for a concept of your interest, it is important to understand the unit of analysis.
-
-The unit of analysis is the object that the hypothesis describes.
-
-* It can be a person (in a survey/interview study)
-* A country (in a cross-national comparison)
-* An organization (in a comparative study of organizational behavior)
-* A year (in a longitudinal analysis of a given country)
-* Can also be multi-level (people within countries)
-
-The unit of analysis often determines how a variable in a hypothesis is “operationalized” (i.e., measured)
-
-Generally speaking, all variables in a hypothesis must have the same unit of analysis
-
----
-
-## Unit of analysis
-
-Note: For a given hypothesis, there can be many ways to operationalize depending on how you define the unit of analysis
-
-**Example**: The higher the income level, the more likely citizens vote for the Republican party in the US
-
-**Question**: How can you operationalize this hypothesis?
-
-.pull-left[
-
-**Answer (1)**: Unit of Analysis (Individuals)
-* *A measure of income*: Ask a survey respondent, 'what is your household’s annual income?'
-* *A measure of voter behaviour*: Ask a survey respondent, 'Which party’s candidate did you vote for in the 2020 U.S. Presidential election?' [R: Donald Trump; D: Joe Biden; Other…]
-
-]
-
-.pull-right[
-
-**Answer (2)**: Unit of Analysis (State level)
-* *A measure of income*: Average household income in the state
-* *A measure of voter behaviour*: % of votes for the Republican candidate in the last election
-* *Warning*: Ecological fallacy – drawing inferences about individuals from group level behaviour
-
-]
-
----
-
-## Individual task
-
-### Pick any topic in political research (e.g. the war in Ukraine, government handling of Covid-19 in NSW, participation in a particular protest movement, voter behavior in elections)
-
-Construct a research approach around this including the following:
-
-1. Topic (be more specific than broad suggestions above)
-2. Research question(s)
-3. Theory
-4. Hypothesis
-5. Identify which is your *independent* and *dependent* variable
-6. What is your unit of analysis?
-7. Specify your concepts and measures
-8. Do you think your measures are valid measures?
-9. Are there alternative measures that you could use?
-10. Then (if time) with the same research question, come up with a different theory (and all the points under theory)
-
-**Submit it in Canvas then post it with Padlet**.
-
-```{r echo = F}
-
-library(countdown)
-
-countdown(minutes = 15, seconds = 00)
-
-```
-
----
-class: inverse, center, middle
-
-# Gathering evidence: 
-
-.center[<img src = 'https://media.giphy.com/media/l0HlNcJDk5X6s0OoE/giphy.gif'></img>]
-
-# Methodology, primary and secondary data
-
-
----
-
-## Gathering evidence: Methodology
-
-### Qualitative or quantitative?
-
-* *Quantitative* methods: collecting and analysing data that can be analysed *numerically* using statistics;
-    * E.g. surveys, experiments
-    
-* *Qualitative* methods: relies on words, description and *meaning* as sources of evidence rather than on the use of numbers.
-    * E.g. interviews, focus groups, ethnography, document analysis
-
-### Primary or secondary data?
-
-* Primary data: New data / information that you collect yourself;
-
-* Secondary data: Data / information collected by others.
-
----
-
-## Why use secondary data?
-
-* Many datasets free to access, saves money and time (cuts the ethics approval and data collection phase out of the research process);
-
-* Quality of existing datasets is often high;
-
-* Can enable longitudinal analysis (e.g. if someone else was collecting data since 1980s);
-
-* Facilitates cross-national research;
-
-* Making use of the extensive available data;
-
-* Pools the resources of the social science community to do more than could be done individually.
-
----
-
-## Secondary data sources in political science
-
-* Cross-national surveys
-
-    * Comparative Study of Electoral Systems
-    * World Values Survey
-    * Eurobarometer surveys
-    
-* Australian surveys
-
-    * Australian Election Study
-    * Australian Social Attitudes Survey
-    
-* Cross-national databases
-
-    * Varieties of democracy (indicators of democracy for different countries)
-    * Polity IV (indicators of democracy for different countries)
-    * World Bank / OECD (economic indicators)
-
----
-
-## Potential limitations of working with secondary data
-
-* Data quality (can be very high, but need to assess)
-
-* Data source may be missing measures for key variables of interest to answer research question
-
-* Might not cover cases (e.g. countries) of interest
-
-* Might not cover time-frame of interest
-
-* Can produce data driven rather than question or problem driven research
-
----
-
-## Why use primary data?
-
-* Not relying on the availability of existing data;
-
-* Questions drive data collection, not the other way around;
-
-* Tailored to specific objectives;
-
-* Generation of	new	data (can	share	with	the	research community).
-
----
-
-## Types of primary data collection
-
-* Focus on data collection from people (but can also collect data from institutions);
-
-* Needs ethical consideration;
-
-.pull-left[
-
-* Main techniques:
-
-    * Surveys (*quantitative*)
-    
-    * Experiments (*quantitative*)
-    
-    * Interviews (*qualitative*)
-    
-    * Ethnography (*qualitative*)
-    
-]
-
-.pull-right[<img src = 'https://media.giphy.com/media/YyrlzttvXc6Qw/giphy.gif'></img>]
-
-
----
-
-## Next week
-
-.pull-left[
-
-Week 1: Introduction
-
-Week 2: Foundations: Ontology and Epistemology
-
-Week 3: Research Design (I): Questions, Theories, Hypotheses, Variables, Measurements
-
-<mark>Week 4:	Research Design (II): Case selection</mark> 
-
-Week 5: Research Design (III): Causal Inference
-
-Week 6: Qualitative Methods (I): Data Collection 
-
-]
-
-.pull-right[
-
-Week 7: Qualitative Methods (II): Data Analysis 
-
-Week 8: Quantitative Methods (I): Data Collection 
-
-Week 9: 🎉 Public holiday 🎉
-
-Week 10: Quantitative Methods (II): Data Analysis 
-
-Week 11: Quantitative Methods (II): Data Analysis lab
-
-Week 12: Research Proposal: Peer Feedback Workshop Week 13:New frontiers and Conclusions
-
-]
-
----
-
-class: inverse, center, middle
-
-# Thank you and see you neext week!
+# Thank you and see you neext week with "The Use of Theory" (Ch 3 of the textbook)
 
 
 
