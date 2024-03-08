@@ -61,7 +61,13 @@ class: middle, center
 
 ## Today's class
 
-TBC
+| Time         | Content                                                                                                         |
+|--------------|-----------------------------------------------------------------------------------------------------------------|
+| 1:00 - 1:20  | **Research topic**</br></br>**Purpose, Organisation, Design of a Literature Review**                            |
+| 1:20 - 1:50  | Hands-on: Databases, GenAI, Zotero                                                                              |
+| 1:50 - 2:10  | Task 1: In Group (20 min)                                                                                       |
+| 2:10 - 2:30  | **Priority of the Literature**</br></br>**Abstracting the Literature**</br></br>**Key Terms**</br></br>Check-in |
+| 2:30 - 2:50  | Task 2: Individually (20 Min)                                                                                   |
 
 ---
 
@@ -100,7 +106,7 @@ TBC
     * Drafting a working title
       * “My study is about…”
     * Posing a brief question
-      * What needs to be answered? (which helps you define your research problem)
+      * What needs to be answered? (which helps you define your research problem and your research question)
 
 First step is to examine research on the topic and ask
 
@@ -148,7 +154,9 @@ First step is to examine research on the topic and ask
 
 # Qualitative approach
 
-In qualitative research, inquirers use the literature in a manner consistent with the assumptions of **learning from the participant, not prescribing the questions** that need to be answered from the researcher’s standpoint. One of the chief reasons for conducting a qualitative study is that the study is exploratory. This usually means that not much has been written about the topic or the population being studied, and the researcher seeks to listen to participants and build an understanding based on what is heard.
+In qualitative research, inquirers use the literature in a manner consistent with the assumptions of **learning from the participant, not prescribing the questions** that need to be answered from the researcher’s standpoint. 
+
+One of the chief reasons for conducting a qualitative study is that the study is **exploratory**. This usually means that not much has been written about the topic or the population being studied, and the researcher seeks to listen to participants and build an understanding based on what is heard.
 
 ---
 
@@ -183,10 +191,12 @@ Table 2.1: Using Literature in a Qualitative Study
   * In either a quantitative or qualitative approach
   * In each phase, consistent with either the quantitative or qualitative approach
   * Relative to the intended audience
+  
+---
 
 # Steps in Conducting a Literature Review
 
-1. Identify key words
+1. Identify key words (we can think of these as key *concepts*)
 
 2. Search databases
 
@@ -194,7 +204,7 @@ Table 2.1: Using Literature in a Qualitative Study
 
 4. Collect those that are central to your topic
 
-5. Design a  __literature map__ (optional, but can be helpful)
+5. Design a  __literature map__ (optional, but can be helpful to divide the literature under concepts, issues, methods and then relate this)
 
 6. Draft summaries of relevant articles
 
@@ -202,13 +212,9 @@ Table 2.1: Using Literature in a Qualitative Study
 
 ---
 
-# Computer Databases 
+class: inverse, center, middle
 
-Searching computerized databases:
-
-__Computerized databases of the literature __ are available the Internet
-
-Databases provide access to journal articles, conference papers and dissertations on a wealth of topics
+# Databases, GenAI and Zotero
 
 ---
 
@@ -222,10 +228,111 @@ Today we'll give a try to two
 * Wider underlying collection (paper and books but also pre-prints, blogposts, etc..)
 * Limited filtering functionalities
   
-  
 ### 2. Web of Science [webofscience.com](https://www.webofscience.com/)
 
 (An alternative to WoS is [Scopus](https://www.scopus.com/search))
+
+
+---
+
+## Using GenAI for research
+
+.pull-left[.center[<img src = '../img/chatgpt-hallucination-01.png' width = '80%'></img>]]
+
+.pull-right[.center[<img src = '../img/chatgpt-hallucination-02.png' width = '80%'></img>]]
+
+
+---
+
+Do you use GenAI?
+
+.center[<img src = '../img/2024-GOVT6139-W03-menti-qr-code.png' width = '25%'>
+
+OR 
+
+[www.menti.com/albb7dk8wj91](https://www.menti.com/albb7dk8wj91) 
+
+]
+
+---
+
+<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/alpr569mjknqmhb9syry2qo4vspcgav1/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
+
+---
+
+## Using Cogniti
+
+* [Literature searching coach (AI agent)](https://canvas.sydney.edu.au/courses/55191/pages/literature-searching-coach-ai-agent?module_item_id=2280367) on Canvas
+
+---
+
+# Hands-on: Install Zotero on your laptop
+
+1. Install Zotero (which includes the Word plug-in)
+
+2. Install the browser connector 
+
+3. Create a free Zotero.org account (optional - to sync across devices)
+
+Instructions: [libguides.nps.edu/zotero/install-setup](https://libguides.nps.edu/zotero/install-setup)
+
+---
+
+# Hands-on: Use Zotero for the first time
+
+1. Create a collection;
+
+2. Create an item by importing it; [libguides.nps.edu/zotero/add-items](https://libguides.nps.edu/zotero/add-items)
+
+3. Add a reference in Word. [libguides.nps.edu/zotero/cite-in-word](https://libguides.nps.edu/zotero/cite-in-word)
+
+## I need some volunteers to join the Zoom meeting and share their screen! Ideally, a mix of Windows, Mac, Chrome and Firefox...
+
+---
+
+# Hands-on: Google Scholar
+
+.center[[scholar.google.com.au](https://scholar.google.com.au/)]
+
+* Let's search for works about "compulsory voting"
+
+* Phrase searching `"compulsory voting"`
+
+* Exclude terms `"compulsory voting" -australia`
+
+---
+
+# Hands-on: Web of Science
+
+.center[[webofscience.com](https://www.webofscience.com/)]
+
+* Let's search for works about "compulsory voting"
+
+* Phrase searching `"compulsory voting"`
+
+* Exclude terms `"compulsory voting" NOT australia`
+
+* Near term `"compulsory voting" NEAR/8 australia`
+
+* Analyse results
+
+* Filters
+
+---
+
+class: center, middle
+
+# TASK 1 
+
+Complete the **Part 1: In Group** on the Task sheet (also available from Canvas)
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 20, seconds = 00)
+```
+
+
 
 ---
 
@@ -234,7 +341,7 @@ Today we'll give a try to two
 * A priority for selecting literature material:
 
 1. Start with broad syntheses (such as encyclopedias or handbooks if you are new to the topic
-  * E.g. *(The Oxford Handbook of Political Participation[https://global.oup.com/academic/product/the-oxford-handbook-of-political-participation-9780198861126]*)
+  * E.g. *[The Oxford Handbook of Political Participation](https://global.oup.com/academic/product/the-oxford-handbook-of-political-participation-9780198861126]0)*)
 
 2. Turn to journal articles in peer-reviewed journals
 3. Next, consider books
@@ -269,27 +376,6 @@ Today we'll give a try to two
 
 ---
 
-# A Literature Map (1 of 2)
-
-* A literature map of the research
-* A literature map is a visual summary of existing research on a topic
-* The structure of the literature map may be:
-  * Hierarchical pattern
-  * Flowchart layout
-  * Series of circles
-* Write a narrative description
-
----
-
-Figure 2.1: An Example of a Literature Map
-
-![](img/Creswellrd6e_PPT021.jpg)
-
-Creswell, Research Design 6e                                            SAGE Publishing, 2023
-
-
----
-
 # Definition of Terms
 
 * Identify and define terms that readers need to understand a proposal
@@ -302,19 +388,19 @@ Creswell, Research Design 6e                                            SAGE Pu
   * Theory base of the study
   * Methods section
 
---- 
+---
 
 ## General Guidelines for terms
 
-Define terms when they first appear in the manuscript
+* Define terms when they first appear in the manuscript
 
-Use specific operational definitions
+* Use specific operational definitions
 
-Do not define terms using everyday language, be guided by the literature
+* Do not define terms using everyday language, be guided by the literature
 
-Define terms so that they accomplish different goals
+* Define terms so that they accomplish different goals
 
-One may use a definition of terms section in the manuscript
+* One may use a definition of terms section in the manuscript
 
 ---
 
@@ -343,9 +429,24 @@ One may use a definition of terms section in the manuscript
 * Search databases using key terms
 
 
---- 
+---
 
 # Check-in
+
+---
+
+class: center, middle
+
+# TASK 2
+
+Complete the **Part 2: Individually** on the Task sheet (also available from Canvas)
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 20, seconds = 00)
+```
+
 
 ---
 
