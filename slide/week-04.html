@@ -10,6 +10,8 @@
     <script src="week-04_files/viz-1.8.2/viz.js"></script>
     <link href="week-04_files/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
     <script src="week-04_files/grViz-binding-1.0.11/grViz.js"></script>
+    <link href="week-04_files/countdown-0.4.0/countdown.css" rel="stylesheet" />
+    <script src="week-04_files/countdown-0.4.0/countdown.js"></script>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         TeX: { equationNumbers: { autoNumber: "AMS" } },
@@ -42,7 +44,7 @@ class: center, middle, inverse, title-slide
 ### The University of Sydney
 ]
 .date[
-### Semester 1, 2024 (updated: 2024-03-14)
+### Semester 1, 2024 (updated: 2024-03-15)
 ]
 
 ---
@@ -79,9 +81,72 @@ class: middle, center
 
 ---
 
+# Additional info on AI agents
+
+There are two GenAI tools available for you from Canvas:
+
+* Literature searching coach (AI agent)
+* Writing coach (AI agent)
+
+Use them with **extreme care** and double check every bit of information coming from them. 
+
+You should consider these tools as **experimental**. Because we are all testing how to use them, it would be great to share our experiences. I have added a [Canvas discussion board](https://canvas.sydney.edu.au/courses/55191/discussion_topics/1222303) to collect what you like to share:
+
+1. Post your prompts (i.e. your questions);
+
+2. Post the bot's responses.
+
+3. Explain how you have used these tools in your learning. 
+
+NOTE: If you have used any GenAI tools for your assignment, you **must** aknowledge their contribution (more details [here](https://canvas.sydney.edu.au/courses/55191/pages/use-of-generative-ai-and-other-marvels?module_item_id=2228838))
+
+---
+
+## University expectations of students
+
+From the Student Charter (section 8) 
+
+### The University expects the following personal conduct from students
+
+&gt; (a) treat others with respect regardless of gender, religion, race, sexuality or disability;
+
+&gt; (b) act honestly and ethically in all dealings with the University and members of its community;
+
+&gt; (c) avoid engaging in bullying, harassment or discriminatory behaviour, including on social media;
+
+&gt; (d) maintain a cooperative and collaborative approach to relationships with staff, affiliates and students;
+
+&gt; (e) use University resources equitably, responsibly and with sensitivity to the needs of others, and without impeding access or use by others; and
+
+&gt; (f) support academic freedom and freedom of speech for themselves and for others.
+
+
+---
+
+### The University expects the following academic conduct from students:
+
+&gt; (a) comply with applicable policies and procedures, faculty resolutions, award course resolutions and unit of study outlines;
+
+&gt; (b) contribute to learning and the advancement of knowledge through honest, open and respectful discussion and debate of ideas;
+
+&gt; (c) promote high academic standards;
+
+&gt; (d) act honestly and ethically in all academic matters;
+
+&gt; (e) commit to a culture of academic integrity; 
+
+&gt; (f) work collaboratively and contribute equita
+
+---
+
 ## Today's class
 
-TBC
+| Time         | Content                                                                                                                                 |
+|--------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| 1:00 - 1:20  | **Varied use of theory**&lt;/br&gt;&lt;/br&gt;**Quantitative theory use**                                                                           |
+| 1:50 - 2:10  | Task 1: In Group (20 min)                                                                                                               |
+| 2:10 - 2:30  | **Qualitative theory use**&lt;/br&gt;&lt;/br&gt;**Mixed methods theory use**&lt;/br&gt;&lt;/br&gt;Check-in&lt;/br&gt;&lt;/br&gt;Week 04 (Anonymous) student feedback survey |
+| 2:30 - 2:50  | Task 2: Individually (20 Min)    
 
 ---
 
@@ -136,6 +201,13 @@ Mixed methods researchers may do both
 
 7. Review theory’s role at end of study in findings and results, and compare to other studies
 
+
+---
+
+class: middle, center, inverse
+
+# Quantitative research
+
 ---
 
 # Definition of a Theory in Quantitative Research
@@ -152,8 +224,8 @@ The independent variable X has an effect on the dependent variable Y;
 
 &lt;center&gt;
 
-<div class="grViz html-widget html-fill-item" id="htmlwidget-36e7cd9458640a13075b" style="width:80%;height:80%;"></div>
-<script type="application/json" data-for="htmlwidget-36e7cd9458640a13075b">{"x":{"diagram":"                           \ndigraph diagram {   \n  \n  # graph statement\n  #################\ngraph [rankdir = LR]\nnode [shape = oval, style = filled, fillcolor = Linen]\n  \n  \"Independent variable X\"\n  \"Dependent variable Y\"\n  \n  # edges\n  #######\n  \"Independent variable X\"   -> \"Dependent variable Y\" [label = \"affects\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-57a562c925ac49245292" style="width:80%;height:80%;"></div>
+<script type="application/json" data-for="htmlwidget-57a562c925ac49245292">{"x":{"diagram":"                           \ndigraph diagram {   \n  \n  # graph statement\n  #################\ngraph [rankdir = LR]\nnode [shape = oval, style = filled, fillcolor = Linen]\n  \n  \"Independent variable X\"\n  \"Dependent variable Y\"\n  \n  # edges\n  #######\n  \"Independent variable X\"   -> \"Dependent variable Y\" [label = \"affects\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 &lt;/center&gt;
 
@@ -206,8 +278,8 @@ Variables may have temporal order or be measurable or observable
 
 &lt;center&gt;
 
-<div class="grViz html-widget html-fill-item" id="htmlwidget-f925c95918c9ea686c72" style="width:100%;height:504px;"></div>
-<script type="application/json" data-for="htmlwidget-f925c95918c9ea686c72">{"x":{"diagram":"                           \ndigraph diagram2 {   \n  \n  # graph statement\n  #################\ngraph [rankdir = LR]\nnode [shape = oval, style = filled, fillcolor = Linen]\n  \n  \"Independent variable X\"\n  \"Dependent variable Y\"\n  \n  # edges\n  #######\n  \"Independent variable X\"   -> \"Dependent variable Y\" [label = \"affects\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-f925b88cedf7e6810b15" style="width:100%;height:504px;"></div>
+<script type="application/json" data-for="htmlwidget-f925b88cedf7e6810b15">{"x":{"diagram":"                           \ndigraph diagram2 {   \n  \n  # graph statement\n  #################\ngraph [rankdir = LR]\nnode [shape = oval, style = filled, fillcolor = Linen]\n  \n  \"Independent variable X\"\n  \"Dependent variable Y\"\n  \n  # edges\n  #######\n  \"Independent variable X\"   -> \"Dependent variable Y\" [label = \"affects\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 &lt;/center&gt;
 
@@ -217,8 +289,8 @@ Variables may have temporal order or be measurable or observable
 
 &lt;center&gt;
 
-<div class="grViz html-widget html-fill-item" id="htmlwidget-0cc380f13e98426eb4eb" style="width:100%;height:504px;"></div>
-<script type="application/json" data-for="htmlwidget-0cc380f13e98426eb4eb">{"x":{"diagram":"                           \ndigraph diagram3 {   \n  \n  # graph statement\n  #################\ngraph [rankdir = LR]\nnode [shape = oval, style = filled, fillcolor = Linen]\n  \n  \"Independent variable X\"\n  \"Dependent variable Y\"\n  \"Mediating variable Z\"\n  \n  # edges\n  #######\n  \"Independent variable X\" ->  \"Mediating variable Z\" [label = \"affects\"]\n  \"Mediating variable Z\" -> \"Dependent variable Y\" [label = \"affects\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-8c8b0cb61f6140162108" style="width:100%;height:504px;"></div>
+<script type="application/json" data-for="htmlwidget-8c8b0cb61f6140162108">{"x":{"diagram":"                           \ndigraph diagram3 {   \n  \n  # graph statement\n  #################\ngraph [rankdir = LR]\nnode [shape = oval, style = filled, fillcolor = Linen]\n  \n  \"Independent variable X\"\n  \"Dependent variable Y\"\n  \"Mediating variable Z\"\n  \n  # edges\n  #######\n  \"Independent variable X\" ->  \"Mediating variable Z\" [label = \"affects\"]\n  \"Mediating variable Z\" -> \"Dependent variable Y\" [label = \"affects\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 &lt;/center&gt;
 
@@ -229,8 +301,8 @@ Variables may have temporal order or be measurable or observable
 
 &lt;center&gt;
 
-<div class="grViz html-widget html-fill-item" id="htmlwidget-c6917211d9ead96acd8f" style="width:100%;height:504px;"></div>
-<script type="application/json" data-for="htmlwidget-c6917211d9ead96acd8f">{"x":{"diagram":"                           \ndigraph diagram3 {   \n  \n  # graph statement\n  #################\ngraph [rankdir = LR]\nnode [shape = oval, style = filled, fillcolor = Linen]\n  \n  \"Moderating variable Z\"\n  \"Independent variable X\"\n  \"Dependent variable Y\"\n  \"effect\" [shape = circle, fillcolor = Orange]\n  \n  # edges\n  #######\n  \"Moderating variable Z\" -> \"effect\" [label = \"affects\"]\n  \"Independent variable X\" ->  \"effect\" [arrowhead = none]\n  \"effect\" -> \"Dependent variable Y\"\n  \n  \n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-c5f5f1df72f3fb1ed0b5" style="width:100%;height:504px;"></div>
+<script type="application/json" data-for="htmlwidget-c5f5f1df72f3fb1ed0b5">{"x":{"diagram":"                           \ndigraph diagram3 {   \n  \n  # graph statement\n  #################\ngraph [rankdir = LR]\nnode [shape = oval, style = filled, fillcolor = Linen]\n  \n  \"Moderating variable Z\"\n  \"Independent variable X\"\n  \"Dependent variable Y\"\n  \"effect\" [shape = circle, fillcolor = Orange]\n  \n  # edges\n  #######\n  \"Moderating variable Z\" -> \"effect\" [label = \"affects\"]\n  \"Independent variable X\" ->  \"effect\" [arrowhead = none]\n  \"effect\" -> \"Dependent variable Y\"\n  \n  \n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 &lt;/center&gt;
 
@@ -241,15 +313,28 @@ Variables may have temporal order or be measurable or observable
 
 &lt;center&gt;
 
-<div class="grViz html-widget html-fill-item" id="htmlwidget-690b8b895eef291c1001" style="width:100%;height:504px;"></div>
-<script type="application/json" data-for="htmlwidget-690b8b895eef291c1001">{"x":{"diagram":"                           \ndigraph diagram3 {   \n  \n  # graph statement\n  #################\ngraph [rankdir = LR]\nnode [shape = oval, style = filled, fillcolor = Linen]\n  \n  \"Confounding variable Z\"\n  \"Independent variable X\"\n  \"Dependent variable Y\"\n  \n  # edges\n  #######\n  \"Confounding variable Z\" -> \"Independent variable X\" [label = \"affects\"]\n  \"Confounding variable Z\" -> \"Dependent variable Y\" [label = \"affects\"]\n  \"Independent variable X\" -> \"Dependent variable Y\" [label = \"affects\"]\n  \n  \n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-8e16929fba5f72b707b0" style="width:100%;height:504px;"></div>
+<script type="application/json" data-for="htmlwidget-8e16929fba5f72b707b0">{"x":{"diagram":"                           \ndigraph diagram3 {   \n  \n  # graph statement\n  #################\ngraph [rankdir = LR]\nnode [shape = oval, style = filled, fillcolor = Linen]\n  \n  \"Confounding variable Z\"\n  \"Independent variable X\"\n  \"Dependent variable Y\"\n  \n  # edges\n  #######\n  \"Confounding variable Z\" -> \"Independent variable X\" [label = \"affects\"]\n  \"Confounding variable Z\" -> \"Dependent variable Y\" [label = \"affects\"]\n  \"Independent variable X\" -> \"Dependent variable Y\" [label = \"affects\"]\n  \n  \n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 &lt;/center&gt;
+
+---
+
+## Let's answer questions 1-3 on Menti (you can move across the slides at your own pace but leave question 4 for later)
+
+
+.center[&lt;img src ='../img/menti-week-04.png' width = '30%'&gt;&lt;/img&gt; 
+
+or https://www.menti.com/alacmk9rnt1i]
+
+---
+
+&lt;div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'&gt;&lt;iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/al1gcm8mojakjmrd3azrjh1cign32fdm/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'&gt;&lt;/iframe&gt;&lt;/div&gt;
 
 
 ---
 
-# Hupothesis and Scale in quantitative research
+# Hypothesis and Scale in quantitative research
 
   * __Hypothesis __ – prediction about a specific event or relationship between variables
   * __Scale of Measurement__  – response options available to participants on instruments or collected by researcher observing participants
@@ -282,6 +367,29 @@ An hypothesis should provide a statement that is testable if we measure both X a
 * Organizing model for
   * Research questions or hypotheses
   * Data collection procedure
+  
+  
+---
+
+# Task 1 (Group)
+
+## (Please refer to the sheet, also available from Canavas)
+
+<div class="countdown" id="timer_8e1b6222" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">20</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+
+---
+
+&lt;div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"&gt;&lt;p style="padding:0;margin:0"&gt;&lt;iframe src="https://sydney.padlet.org/embed/j7fajnneaotzqt8f" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:608px;display:block;padding:0;margin:0"&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;div style="display:flex;align-items:center;justify-content:end;margin:0;height:28px"&gt;&lt;a href="https://padlet.com?ref=embed" style="display:block;flex-grow:0;margin:0;border:none;padding:0;text-decoration:none" target="_blank"&gt;&lt;div style="display:flex;align-items:center;"&gt;&lt;img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" style="padding:0;margin:0;background:0 0;border:none;box-shadow:none" alt="Made with Padlet"&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+  
+---
+
+class: middle, center, inverse
+
+# Qualitative research
 
 ---
 
@@ -324,6 +432,26 @@ Figure 3.5:  The **Inductive Logic** of Research in a Qualitative Study (Creswel
 * Studies based on grounded theory
   * Theory derived inductively
   * Placed at the end
+  
+---
+
+## Let's answer question 4 on Menti (you can move across the slides at your own pace)
+
+
+.center[&lt;img src ='../img/menti-week-04.png' width = '30%'&gt;&lt;/img&gt; 
+
+or https://www.menti.com/alacmk9rnt1i]
+
+---
+
+&lt;div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'&gt;&lt;iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/al1gcm8mojakjmrd3azrjh1cign32fdm/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+  
+---
+
+class: middle, center, inverse
+
+# Mixed-methods research
 
 ---
 
@@ -379,6 +507,12 @@ Figure 3.5:  The **Inductive Logic** of Research in a Qualitative Study (Creswel
 
 ---
 
+class: middle, center, inverse
+
+# Distinctions Between a Theory and a Worldview
+
+---
+
 # Distinctions Between a Theory and a Worldview
 
 * Theories and worldviews are not the same
@@ -407,6 +541,32 @@ Theory is used to:
 
 ---
 
+# Check-in
+
+---
+
+# Please take 2 mins to complete the anonymous Week 04 Student feedback survey (link from Canvas)
+
+---
+
+# Task 2 (Individual)
+
+## (Please refer to the sheet, also available from Canavas)
+
+<div class="countdown" id="timer_91ea983a" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">20</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+&lt;div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"&gt;&lt;p style="padding:0;margin:0"&gt;&lt;iframe src="https://sydney.padlet.org/embed/3q5z377c8ryllpi2" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:608px;display:block;padding:0;margin:0"&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;div style="display:flex;align-items:center;justify-content:end;margin:0;height:28px"&gt;&lt;a href="https://padlet.com?ref=embed" style="display:block;flex-grow:0;margin:0;border:none;padding:0;text-decoration:none" target="_blank"&gt;&lt;div style="display:flex;align-items:center;"&gt;&lt;img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" style="padding:0;margin:0;background:0 0;border:none;box-shadow:none" alt="Made with Padlet"&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+
+---
+
+## See you next week with our first guest lecture by Christopher Pepin-Neff (slides already available on Canvas)
+
+---
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
