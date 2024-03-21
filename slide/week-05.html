@@ -4,15 +4,24 @@
     <title>GOVT6139Research design</title>
     <meta charset="utf-8" />
     <meta name="author" content="Francesco Bailo" />
-    <script src="libs/header-attrs-2.19/header-attrs.js"></script>
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script src="libs/htmlwidgets-1.6.1/htmlwidgets.js"></script>
-    <script src="libs/viz-1.8.2/viz.js"></script>
-    <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-    <script src="libs/grViz-binding-1.0.9/grViz.js"></script>
-    <script src="libs/kePrint-0.0.1/kePrint.js"></script>
-    <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <script src="week-05_files/header-attrs-2.25/header-attrs.js"></script>
+    <link href="week-05_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="week-05_files/countdown-0.4.0/countdown.css" rel="stylesheet" />
+    <script src="week-05_files/countdown-0.4.0/countdown.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+      });
+    </script>
+    <style>
+    .mjx-mrow a {
+      color: black;
+      pointer-events: none;
+      cursor: default;
+    }
+    </style>
+    <link rel="stylesheet" href="assets/sydney-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="assets/sydney.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -22,7 +31,7 @@ class: center, middle, inverse, title-slide
 # GOVT6139</br>Research design
 ]
 .subtitle[
-## Week 05</br>Research Design (III) </br> Causal inference
+## Week 05</br>Writing Strategies and Ethical Considerations
 ]
 .author[
 ### Francesco Bailo
@@ -31,7 +40,7 @@ class: center, middle, inverse, title-slide
 ### The University of Sydney
 ]
 .date[
-### Semester 1, 2023 (updated: 2023-03-21)
+### Semester 1, 2024 (updated: 2024-03-21)
 ]
 
 ---
@@ -46,45 +55,64 @@ background-size: 95%
 
 ## Acknowledgement of Country
 
-I would like to acknowledge the Traditional Owners of Australia and recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
 
 ---
+
+class: inverse, center, middle
+
+# Chapter 4
+
+# Writing Strategies and Ethical Considerations
+
+.center[Slides adapted from Creswell, Research Design 6e, SAGE Publishing, 2023 for GOVT6139 Research Design.
+
+Do not reshare]
+
+---
+
 
 ## Course outline
 
 .pull-left[
 
-Week 1: Introduction
+**Week 1**: Introduction
 
-Week 2: Foundations: Ontology and Epistemology
+**PART I PRELIMINARY CONSIDERATIONS (Weeks 2-5)**
 
-Week 3: Research Design (I): Questions, Theories, Hypotheses, Variables, Measurements
+**Week 2**: The Selection of a Research Approach
 
-Week 4:	Research Design (II): Case selection&lt;/mark&gt; 
+**Week 3**: Review of the Literature
 
-&lt;mark&gt;Week 5: Research Design (III): Causal Inference
+**Week 4**: The Use of Theory
 
-Week 6: Qualitative Methods (I): Data Collection 
+**Week 5**: Writing Strategies and Ethical Considerations + Guest lecture w/t Christopher Pepin-Neff 👈
 
-Week 7: Qualitative Methods (II): Data Analysis 
+**PART II DESIGNING RESEARCH (Weeks 6-12)**
+
+**Week 6**: The Introduction **no seminar** (public holiday)
+
+⏸️ *Mid Semester break* ⏸️
 
 ]
 
 .pull-right[
 
-⏸️ *Mid Semester break* ⏸️
 
-Week 8: Quantitative Methods (I): Data Collection 
+**Week 7**: The Purpose Statement
 
-*Week 9: 🎉 Public holiday 🎉*
+**Week 8**: Research Questions and Hypotheses + Guest Lecture w/t Charles Robert Butcher 
 
-Week 10: Quantitative Methods (II): Data Analysis 
+**Week 9**: Quantitative Methods
 
-Week 11: Quantitative Methods (II): Data Analysis lab
+**Week 10**: Quantitative Methods: Data Analysis Lab (Make sure you install R and RStudio)
 
-Week 12: Research Proposal: Peer Feedback Workshop Week 
+**Week 11**: Qualitative Methods + Guest lecture w/t Peter Chen
 
-13:New frontiers and Conclusions
+**Week 12**: Mixed Methods Procedures + Guest lecture w/t Assel Mussagulova
+
+**Week 13**: Conclusions
+
 
 ]
 
@@ -92,693 +120,266 @@ Week 12: Research Proposal: Peer Feedback Workshop Week
 
 ## Today's class
 
-### Causality
-
-* Research design approaches
-
-    * Experimental research design
-    
-    * Quasi-experimental research design
-    
-    * Observational research design
-    
-* Research design strengths and weaknesses
-
-    * Internal validity
-    
-    * External validity
-    
----
-class: inverse, center, middle
-
-# Casuality
+| Time         | Content                                         |
+|--------------|-------------------------------------------------|
+| 1:00 - 2:00  | Chris' Guest Lecture                            |
+| 2:00 - 2:20  | How to write your proposal                      |
+| 2:20 - 2:40  | Check-in &lt;br/&gt;&lt;br/&gt; Task 1: Individual (20 min) |
+| 2:40 - 3:00  | Ethical issues                                  |
 
 ---
 
-## Addressing causality in the social sciences
+# Chapter 4 Learning Objectives
 
+1. Identify the nine key topics to include in a proposal or a research study.
 
-* Positivist research often interested in examining causality
+2. Compare the differences in the structure of proposals for quantitative, qualitative, and mixed methods research studies.
 
-* What does causality mean in the social sciences?
+3. Evaluate the quality of your writing for conciseness, coherence, and unnecessary words (refer to textbook!).
 
-* We often hear the phrase ‘correlation is not causation’
-
-* So, what exactly is *correlation* and how does it differ from *causation*?
-
-* **Correlation** (or *co-variation* or *association*): Two phenomena (i.e., variables) tend to be associated. If one of the two variables changes, the other variable changes also.
-
----
-
-## Causality, an ontological and epistemological problem
-
-### Ontology
-
-What is a cause? And what is an effect? Are they part of the same entity? Are they part of different entities? 
-
-(Note that some thinks casual relations as we commonly intend them do not exist or that they are not useful concepts... 🤯)
-
-### Epistemology
-
-Can/How we determine what is an effect and what caused it?
-
-
----
-
-## Different kind of causal claims
-
-### High-level, concepts
-
-1. The drought caused the famine. [This (instance of a) drought caused this (instance of a) famine] 
-
-2. Drowsy driving causes crashes. [Any instance of drowsy driving  causes crashes.]
-
-### Low-level, measured
-
-3. How much I *water* my plant influences how tall it *grows*. [A variable influences another variable, in general.]
-
-4. How much *novocaine* a patient receives affects how much *pain* they will feel during dental surgery [A variable influences another variable, in a specific context.]
-
-
-Adapted from: https://plato.stanford.edu/entries/causation-metaphysics/
-
----
-
-## Examples of correlation/association
-
-.pull-left[
-**Ice cream sales and murders**
-
-* There is a positive correlation between *ice-cream* sales and *murder*.
-* When ice-cream sales rise, the rate of murders rises.
-* Do ice-creams cause murder? Why / why not?
-
-**Umbrellas and rain**
-
-* There is a positive correlation between *umbrella* use and *rain*.
-* When umbrellas are in use, it’s more likely to be raining
-* Do umbrellas cause rain? Why / why not?
-
-]
-
-.pull-right[
-
-&lt;img src = 'https://media.giphy.com/media/3o6Zt7qChPzoAUAmpW/giphy.gif'&gt;&lt;/img&gt;
-
-]
-
----
-
-## Conditions for Causality
-
-.pull-left[
-
-1. **Correlation (or co-variation, association)**: Two phenomena (i.e., variables) tend to be associated. If one of the two variables changes, another variable changes.
-
-2. **Time-order**: The presumed cause (an independent variable) happened before the presumed consequence (a dependent variable).
-
-3.	**Non-spuriousness**: The correlation between independent and dependent variables is not caused by other (third) factors.
-
-]
-
-.pull-right[ 
-
-##### Casuality
-
-<div id="htmlwidget-43ef96fb7ff37014b516" style="width:100%;height:75px;" class="grViz html-widget "></div>
-<script type="application/json" data-for="htmlwidget-43ef96fb7ff37014b516">{"x":{"diagram":"\n  digraph graph2 {\n  \n  graph [layout = dot, rankdir = LR]\n  \n  # node definitions with substituted label text\n  node [shape = oval, style = filled]\n  X [label = \"X\nEducation\", fillcolor = Orange]\n  Y [label = \"Y\nDemocracy\", fillcolor = Lightblue]\n  \n  X -> Y\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
-
-##### Reverse casuality
-
-<div id="htmlwidget-db3ca94d445042a09e63" style="width:100%;height:75px;" class="grViz html-widget "></div>
-<script type="application/json" data-for="htmlwidget-db3ca94d445042a09e63">{"x":{"diagram":"\n  digraph graph2 {\n  \n  graph [layout = dot, rankdir = LR]\n  \n  # node definitions with substituted label text\n  node [shape = oval, style = filled]\n  X [label = \"X\nEducation\", fillcolor = Orange]\n  Y [label = \"Y\nDemocracy\", fillcolor = Lightblue]\n  \n  Y -> X\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
-
-##### Spurious relationship
-
-
-<div id="htmlwidget-3e9fe331d613556781be" style="width:100%;height:105px;" class="grViz html-widget "></div>
-<script type="application/json" data-for="htmlwidget-3e9fe331d613556781be">{"x":{"diagram":"\n  digraph graph2 {\n  \n  graph [layout = dot, rankdir = LR]\n  \n  # node definitions with substituted label text\n  node [shape = oval, style = filled]\n  X [label = \"X\nEducation\", fillcolor = Orange]\n  Y [label = \"Y\nDemocracy\", fillcolor = Lightblue]\n  Z [label = \"Z\nEconomic\ndevelopment\"]\n  \n  Z-> X; Z -> Y\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
-
-]
-
----
-
-## Examining causation
-
-
-#### Do ice-creams cause murder?
-
-.pull-left[
-* **Association**: Are ice creams and murders positively correlated?
-    * &lt;mark&gt;Yes&lt;/mark&gt;
-* **Time-order**: Do ice-cream sales increase before the murder rate increases?
-    * &lt;mark&gt;Not sure&lt;/mark&gt;
-* **Non-spuriousness**: Can we rule out any other factors that could cause both ice-cream sales and murders?
-    * &lt;mark&gt;No, both could be caused by *seasonal* factors&lt;/mark&gt;
-* Does it meet all three conditions for causality?
-    * &lt;mark&gt;No, does not meet non-spuriousness criterion&lt;/mark&gt;
-]
-
-.pull-right[
-
-&lt;img src = 'https://media.giphy.com/media/3o6Zt7qChPzoAUAmpW/giphy.gif'&gt;&lt;/img&gt;
-
-]
-
----
-
-## Examining causation
-
-.pull-left[
-* **Association**: Is umbrella use associated with rain? (Is there more rain when umbrellas are in use?)
-    * &lt;mark&gt;Yes&lt;/mark&gt;
-* **Time-order**: Does umbrella use precede the onset of rain?
-    * &lt;mark&gt;No, it’s the other way around, people tend to get umbrellas out after it starts raining&lt;/mark&gt;
-* **Non-spuriousness**: Can we rule out any other factors that could cause both both umbrella use and rain?
-    * &lt;mark&gt;Yes&lt;/mark&gt;
-* Does it meet all three conditions for causality?
-    * &lt;mark&gt;No, does not meet time-order criterion&lt;/mark&gt;
-]
-
-.pull-right[
-
-&lt;img src = 'https://media.giphy.com/media/3oKIPstwMF15FghbYQ/giphy.gif'&gt;&lt;/img&gt;
-
-]
-
----
-
-## Examining causation
-
-* Ice-cream / umbrellas – these are simple examples unrelated to the social sciences
-
-* However, the same principles apply to problems in the social/ political sciences
-
-.center[
-&lt;img src ='https://media.giphy.com/media/d3mlE7uhX8KFgEmY/giphy.gif'&gt;&lt;/img&gt;
-]
-
----
-
-## Examining causal questions - political science
-
-### Relationship between dissatisfaction with democracy and populism
-
-* Does voter dissatisfaction with democracy increase support for populist parties?
-
-* Or does the rise of populist parties increase voter dissatisfaction with democracy?
-
-* Most studies assumed the former (e.g. Lubbers and Scheepers 2000), although a recent study showed that the relationship goes in both directions (Rooduijn et al. 2016)
-
-.center[&lt;img src ='https://ichef.bbci.co.uk/news/976/cpsprodpb/132DF/production/_100295587_thepopulists2.jpg.webp' width = '45%'&gt;&lt;/img&gt;]
-
----
-
-## Examining causal questions
-
-In the social sciences it’s not always easy to be certain of causality (i.e. not always easy to be sure that all the conditions for causality are met). Time order and non-spuriousness in particular can present challenges.
-
-
----
-
-### In some cases it is easier to determine time-order than others
-
-* E.g. age and satisfaction with democracy
-    * Someone’s age is determined (by birth year) before their attitudes towards democracy – so it’s easy to know which came first
-* Sex (M/F) also determined before political attitudes and behaviours
-
-### But in other areas (e.g. public attitudes) can be harder to know which came first
-
-* E.g. attitudes towards leadership changes and satisfaction with democracy – harder to know which came first
-     * Were people already less satisfied with democracy and so they had negative attitudes towards leadership changes?
-     * Or did they develop negative attitudes towards democracy as a result of the leadership changes?
-     * Relationship could potentially go in either direction
-
-
-**As the researcher, you need to make justified assumptions about the direction of relationships – or design your research to be able to make causal claims**
-
----
-
-## Examining causal questions
-
-### Non-spuriousness
-
-Research design choices can ensure non-spuriousness criterion is met:
-
-* Experimental designs control for other factors
-
-* In non-experimental designs can statistically control for other factors
-
-
----
-class: inverse, center, middle
-
-# Research design approaches
-
----
-
-## What is research design?
-
-### Broad definition
-
-Research design refers to a whole proposal for a research project, including the review of the literature, research questions, hypotheses, selection of cases, details of data collection and methods of data analysis.
-
-###Narrow definition
-
-Research design refers to the logical method by which we  propose to test a hypothesis.
-
-
----
-
-## Research designs for causal inference
-
-### True experimental design
-* Almost always quantitative
-
-### Quasi-experimental design
-* Often quantitative
-* Sometimes referred to as a *natural experiment*
-
-### Observational design (correlational design and statistical adjustment)
-* Can be qualitative (intentional selection of observations)
-* Or can be quantitative (using correlation and regression analysis)
-
----
-class: inverse, center, middle
-
-# True experimental design (or classic experiment)
-
----
-
-## True experimental design
-
-Also referred to as **randomized** **controlled** experiment.
-
---
-
-1.	Select subjects for your experimental study (e.g. student volunteers).
-
---
-
-2.	Randomly divide the subjects into two groups: the “treatment group” and the “control group” (randomization).
-
---
-
-3.	Measure the dependent variable in the treatment and control group.
-
---
-
-4.	Give a “stimulus (or treatment)” only to the experimental group.
-
---
-
-5.	Measure the dependent variable and compare the difference in the dependent variable between the groups (experimental effect).
-
---
-
-6.	Experimental environment (location, time, other physical aspects) is under control of the researcher
-
----
-
-## True experimental design
-
-#### Logic of experimental research design
-
-<div id="htmlwidget-9668fa4253ba5234d36f" style="width:100%;height:150px;" class="grViz html-widget "></div>
-<script type="application/json" data-for="htmlwidget-9668fa4253ba5234d36f">{"x":{"diagram":"\n  digraph graph2 {\n  \n  graph [layout = dot, rankdir = LR]\n  \n  # node definitions with substituted label text\n  node [shape = oval, style = filled]\n  P [label = \"A (possibly undefined)\npopulation\"]\n  S [label = \"Pool of\nsubjects\"]\n  T [label = \"Treatment\ngroup\", shape = box, fillcolor = Lightblue]\n  C [label = \"Control\ngroup\", shape = box, fillcolor = Orange]\n  \n  P -> S -> T; S -> C\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
-
-#### Results of Hypothetical Media Experiment
-
-&lt;table class=" lightable-paper lightable-striped" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt; Group &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Before Measure of Intention (% intending to vote) &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; After Measure of Intention (% intending to vote) &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Treatement &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 65 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 72 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Control &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 63 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 62 &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
----
-
-## True experimental design
-
-#### Settings
-
-* Controlled lab setting
-
-* Survey experiment
-
-* Field experiment
-
-#### Who participates?
-
-* Experiments often use students as participants (Why?)
-
-* Amazon Mechanical Turk (pay people to complete surveys)
-
-* Ideally would have sample representative of the population of interest (e.g. adult Australians) – for experimental approaches this is hard and rarely done
-
----
-
-background-image: url(../img/monroe-2000-a.png)
-background-size: 75%
-
----
-
-#### Example lab experiment: The New Videomalaise - Effects of Televised Incivility on Political Trust (Mutz and Reeves 2005)
-
-.pull-left[
-
-**Research question**: Does incivility in political discourse affect public regard for politics?
-
-**Theory**: ‘when viewers are exposed to televised political disagreement, it often violates well-established face- to-face social norms for the polite expression of opposing views. As a result, incivility in public discourse adversely affects trust in government’
-
-**Finding**: ‘We find that televised presentations of political differences of opinion do not, in and of themselves, harm attitudes toward politics and politicians. However, political trust is adversely affected by levels of incivility in these exchanges.’
-
-]
-
-.pull-right[
-
-#### Approach
-* Actors hired to play the roles of two congressional candidates in a television talk show set up
-* Actors stick to the same script so the substantive discussion on policy did not vary (content of discussion constant)
-* *Treatment condition 1* – actors behaved in uncivil fashion
-* *Treatment condition 2* – actors behaved in civil fashion
-* Control condition – participant did not watch tv program
-* Participants sat alone in a room with couch and TV
-* Pre-test questionnaire, watched the TV program for 20 mins, then post-test questionnaire
-
-]
-
----
-
-#### Example survey experiment: Attitudes toward Highly Skilled and Low-skilled Immigration (Hainmueller and Hiscox 2010)
-
-.pull-left[
-
-Authors identified *two concerns* leading to anti-immigrant sentiment
-* Concerns about labour market competition
-* Concerns about burden on public services
-
-They test both and find:
-* Both low-skilled and high-skilled natives prefer highly skilled immigrants
-* Economic self-interest does not influence attitudes towards immigration
-
-#### Survey respondents randomly assigned one of two questions:
-
-]
-
-.pull-right[
-
-
-
-**Version 1**: Do you agree or disagree that the US should allow more *highly skilled* immigrants from other countries to come and live here? (emphasis added)
-
-**Version 2**: Do you agree or disagree that the US should allow more *low-skilled* immigrants from other countries to come and live here? (emphasis added)
-
-&lt;img src = '../img/hainmueller-2010.gif' width = '80%'&gt;&lt;/img&gt;
-
-]
-
----
-
-## Example Field-experiment: Controlling Corruption in Indonesia (Olken 2007)
-
-**Research Question**: What is the best way to control for corruption: bottom up (i.e., citizen monitoring) or top down (i.e., audits)?
-
-#### Research Design
-* **Sample**: Random selection of 600 road projects
-
-* **Intervention**: Cases randomly assigned to either audit by government or to increased grassroots participation in monitoring
-
-* **Measure of Effect**: expert estimate of cost of road materials compared to reported costs (calculate difference between estimated and actual costs)
-
-#### Findings:
-
-* Fewer missing expenditures in cases where there are government audits.
-
-* Top-down monitoring more effective in reducing corruption.
-
----
-class: inverse, center, middle
-
-# Quasi-experimental design
-
----
-
-## Quasi-experimental design
-
-#### Design criteria include:
-
-1.	Measure the dependent variable of the subjects. (Note often need to look for this data retrospectively).
-
-2.	Wait until some subjects are exposed to the independent variable, or observe that the values of the independent variable change among the subjects. (Note: The subjects are not assigned to groups: no random assignment).
-
-3.	Measure the dependent variable again, and compare the difference in the dependent variable among the subjects.
-
-
-Also referred to as *natural experiments*
-
----
-
-## Quasi-experimental design
-
-#### When this design type can be useful
-
-* Say you have two countries that are quite similar to one another, and then something happens in one of the countries but not the other, e.g.:
-
-    * Major economic crisis
-    * Natural disaster
-    * Going to war
-    * Pandemic
-    
-* Suitable approach if you’re interested in the effect of that factor on a dependent variable
-
-* Same principle for more countries where some are naturally exposed to some kind of ‘treatment effect’ while others are not
-
-* Things that just happen in the world – not controlled by the researcher (ethics!)
-
----
-
-## Quasi-experiment (no random assignment)
-
-#### Logic of Quasi Experiments
-
-<div id="htmlwidget-d62c1e4e9d03dc0ef3b5" style="width:100%;height:150px;" class="grViz html-widget "></div>
-<script type="application/json" data-for="htmlwidget-d62c1e4e9d03dc0ef3b5">{"x":{"diagram":"\n  digraph graph2 {\n  \n  graph [layout = dot, rankdir = LR]\n  \n  # node definitions with substituted label text\n  node [shape = oval, style = filled]\n  P [label = \"Population\n(i.e. Scandinavian countries)\"]\n  S [label = \"Subset\nof\ncountries\"]\n  T [label = \"Treatment: Implements\nCOVID-19 lockdown\n(e.g. Norway, Finland)\", shape = box, fillcolor = Lightblue]\n  C [label = \"Control: Does not\nimplement COVID-19 lockdown\n(e.g.Sweden)\", shape = box, fillcolor = Orange]\n  \n  P -> S -> T; S -> C\n  }\n  ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
-
-#### Hypothetical Quasi-Experiment
-
-&lt;table class=" lightable-paper lightable-striped" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt; Group &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Before measurement &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; After measurement &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Treatement group: Citizen approval of government &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; ? &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; ? &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Control group: Citizen approval of government &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; ? &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; ? &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-
----
-
-background-image: url(../img/monroe-2000-b.png)
-background-size: 75%
-
-
----
-
-## Example quasi-experiment: Rain and voter turnout (Gomez et al. 2006)
-
-.pull-left[
-
-#### The Republicans Should Pray for Rain: Weather, Turnout, and Voting in U.S. Presidential Election
-
-* Rain reduces voter participation by around 1% per inch
-
-* Poor weather benefits the Republican party’s vote share
-
-* Weather may have contributed to Electoral College outcomes in 1960 and 2000
-
-]
-
-
-.pull-right[
-
-&lt;img src = 'https://api.time.com/wp-content/uploads/2014/11/rain-election-2012.jpg'&gt;&lt;/img&gt;
-
-]
-
----
-class: inverse, center, middle
-
-# Observational design
-
----
-
-## Observational design
-
-#### Design criteria include:
-
-1.	Select a sample of your study.
-
-2.	Measure the dependent and independent variables. (Note: The values of the independent variables must vary among the subjects.)
-
-3.	Examine the relationship between the independent and dependent variable.
-
-    * Are the variables correlated?
-    
-    * Make reasonable assumptions about time-order.
-    
-    * Control for other factors (e.g. using statistical methods) to ensure non-spuriousness.
-
-*In political science this approach far more common than experimental approaches. Experiments more common in psychology.*
-
----
-
-background-image: url(../img/monroe-2000-c.png)
-background-size: 75%
-
----
-
-### Example observational design (I): Government performance and dissatisfaction with democracy in Australia (Cameron 2020)
-
-.pull-left[
-
-* Examines the effect of changes of prime minister on satisfaction with democracy in Australia
-* Draws upon Australian Election Study (survey) data from 1996 to 2019
-* Observes attitudes towards the leadership changes (the presumed cause
-* independent variable)
-* Observes satisfaction with democracy (the presumed effect – dependent variable)
-* Controls for a number of other factors that may affect satisfaction with democracy
-]
-
-.pull-right[
-
-* Shows that disapproval of the changes of prime minister a major factor undermining satisfaction with democracy in Australia
-
-#### Approval of leadership changes and satisfaction with democracy
-
-&lt;img src = '../img/cameron-05.png'&gt;&lt;/img&gt;
-
-]
-
----
-
-### Example observational design (II): Gender, Political Knowledge, and Descriptive Representation: The Impact of Long-Term Socialization (Dassonneville and McAllister 2018)
-
-.pull-left[
-
-**Puzzle**: Many studies have shown a gender gap in political knowledge (men higher). What explains the gap?
-
-**Hypothesis**: Higher levels of women’s elected representation will increase women’s political knowledge.
-
-**Findings**: Proportion of women elected representatives at the time of the survey has no significant effect on the gender gap. But a strong and significant long-term impact for descriptive representation for respondents aged 18-21. 
-]
-
-.pull-right[
-
-In line with political socialization theories, which posit that the impact of political context is greatest during adolescence and early adulthood.
-
-**Approach**: Uses survey data from the Comparative Study of Electoral Systems and European Election Study (cross-national surveys). Measures on political knowledge, respondent age and % women in parliament.
-
-]
-
----
-
-## Observational design
-
-### Matching: A case of statistical adjustment 
-
-When justifiable, observational data can be adjusted before running a standard regression (as in the previous examples).
-
-Let's say you want to estimate the effect of the presence of a nuclear power plant on the proportion of people voting the Greens in that precinct. How do you do? 
-
-1. You can measure the statistical association between the presence of a nuclear power plant (a binary independent variable) and a continuous variable (the vote share for the Greens).
-
-2. But instead of comparing the differences between the two averages in the two groups, it might be preferable to *match* every precinct with a power plant with the most similar precinct available in the data based on a number of characteristics and demographics (e.g. unemployment, median age, education, etc.) and compare the pairwise differences. In so doing you average the difference among comparable precincts.
+4. Identify ethical issues and strategies for addressing them before conducting a study and during and after a study.
 
 ---
 
 class: inverse, center, middle
 
-# Internal and external validity
+# How to write a proposal
 
 ---
 
-## Research Design
+# Introduction
 
-#### Internal Validity
-* High internal validity = can be confident that there is a causal relationship
-* “Internal Validity is the approximate truth about inferences regarding cause-effect or causal relationships.” https://conjointly.com/kb/internal-validity/
+Have an idea of the general structure of topics
 
-.center[
-&lt;img src = 'https://conjointly.com/img/kb/Assets/images/intval.gif'&gt;&lt;/img&gt;
-]
+Structure depends on the design
 
+Be aware of good writing practices
 
----
-
-## Research Design
-
-#### External Validity
-* High external validity = can be confident that the conclusions would be generalizable to the ‘real world’ / other settings
-* “external validity refers to the approximate truth of conclusions the involve generalizations. Put in more pedestrian terms, external validity is the degree to which the conclusions in your study would hold for other persons in other places and at other times” https://conjointly.com/kb/external-validity/
-
-.center[
-&lt;img src = 'https://conjointly.com/img/kb/Assets/images/extsamp.gif' width = '60%'&gt;&lt;/img&gt;
-]
+Anticipate ethical issues prior to the study
 
 ---
 
-## Research Design – Strengths and Weaknesses
+# Topics Presented in a Proposal
 
-| **Experimental design**  | **Quasi-experimental design**  | **Observational design**  |
-|---|---|---|
-| *Internal validity* | *Internal validity* | *Internal validity* |
-| **High** &lt;br/&gt; Can be confident in causal claims because of random assignment | **Higher** than observational design &lt;br/&gt; **Lower** than experiments | **Low** &lt;br/&gt; Determining causality can be difficult |
-| *External validity* | *External validity* | *External validity* |
-| **Low** (e.g. using unrepresentative participants like students) - setting might not reflect real world. &lt;br/&gt; **Higher** in field experiments than lab experiments | **High** &lt;br/&gt; Real world rather than lab setting | **High** &lt;br/&gt; Real world rather than lab setting|
+## Arguments presented in a proposal
 
+* Consider early on in planning the study
+
+  * The major points that need to be addressed
+  
+  * How they will convey a cohesive picture of the study
+  
+  * What the core arguments to advance are
 
 ---
+
+## Arguments presented in a proposal (nine key topics, or must-have)
+
+1 What do readers need to better understand the topic?
+
+2 What do readers need to know about the topic?
+
+3 What do you propose to study?
+
+4 What is the setting, and who are the people you will study?
+
+5 What methods do you plan to use to collect data?
+
+6 How will you analyze the data?
+
+7 How will you validate the findings?
+
+8 What ethical issues will your study present?
+
+9 What do preliminary results show about the practicability and value of the proposed study?
+
+---
+
+# Check-in
+
+---
+
+class: middle, inverse
+
+# TASK 1 
+
+Individually,
+
+1. Revise four example outlines on the Task sheet;
+2. Ask any question about the items in the examples;
+2. Write the outline for your own A2 proposal;
+3. Share it the class (you can write it directly on Padlet, or you can write it down and share a photo of it).
+4. Go through the check-list on the back of the Task sheet using one of the outlines shared on Padlet.
+
+<div class="countdown" id="timer_ce651841" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">20</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+# Writing Strategies
+
+* Write ideas down early in the process rather than talking about them
+
+* Work through several drafts of a proposal rather than trying to polish the first draft
+
+* Do not edit at the early draft stage
+
+  * Start with an outline
+  
+  * Write a draft and shift and sort ideas
+  
+  * Finally, edit and polish each sentence
+  
+**Also, refer to this week chapter of the textbook for more...**
+
+---
+
 class: inverse, center, middle
 
-# Individual and group tasks
+# Ethical issues
+
+---
+
+# Ethical Issues
+
+* Research involves collecting data from people
+
+* Researchers need to
+
+  1. Protect research participants
+  2. Develop trust with research participants
+  3. Promote the integrity of research
+  4. Guard against misconduct
+  5. Cope with new problems that emerge
+
+---
+
+## Prior to beginning the study:
+
+* Consider codes of ethics
+
+* Apply to the institutional review board (in Australia: Human Research Ethics Committees)
+
+* Obtain the necessary permissions to gain access to the site and to study participants
+
+* Select a site without vested interests
+
+* Negotiate authorship for publication
+
+---
+
+## Beginning the study:
+
+* In the research problem:
+  * Identify a problem that will benefit individuals being studied
+* In the purpose and questions:
+  * Convey the purpose and sponsors of the research to participants
+* Do not pressure participants into signing consent forms, obtain informed consent from participants
+* Respect norms and charters of indigenous cultures
+* Assess the burden of research on the participants
+
+---
+
+## Collecting the data:
+
+* Respect the site, and disrupt as little as possible
+
+* Make sure all participants receive the benefits
+
+* Collaborate with participants
+
+* Avoid deceiving participants
+
+* Respect potential power imbalances, consider reciprocity
+
+* Avoid exploitation of participants
+
+* Avoid collecting harmful information
+
+---
+
+## Analyzing the data:
+
+Avoid taking sides or disregarding data
+
+Avoid disclosing only positive results – reflect the statistical tests and diversity of perspectives
+
+* Analyzing the data:
+* Respect the privacy of participants:
+  * Protect anonymity of participants
+  * Remove names from responses
+  * Qualitative researchers use aliases and pseudonyms
+
+---
+
+## Reporting, sharing, and storing data:
+
+* Do not falsify authorship, evidence, data, findings or conclusions
+
+* Do not plagiarize
+
+* Avoid disclosing information that would harm participants
+
+* Communicate in clear straightforward, appropriate language
+
+---
+
+## Reporting, sharing, and storing data:
+
+* Share data with others (e.g. stakeholders, participants)
+
+* Keep raw data and other materials for a reasonable period of time
+
+* Do not duplicate or piecemeal publications
+
+* Complete proof of compliance with ethical issues and lack of conflict of interest
+
+* Understand who owns the data
+
+---
+
+class: inverse
+
+# Summary
+
+* How to write a proposal
+
+* Use one of the outlines for a qualitative, quantitative, or mixed methods proposal
+
+* Importance of putting words on paper
+
+* Consider anticipated ethical issues and describe
+
+---
+
+class: inverse, middle, center
+
+# Thank you! 
+
+Next seminar in two weeks!
+
+A1 is due next Monday (25 March 2024): If you are late apply for a simple extension! 
+
+
+    
+
 
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="assets/remark-zoom.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
 "highlightLines": true,
-"countIncrementalSlides": false
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"navigation": {
+"scroll": false
+}
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
