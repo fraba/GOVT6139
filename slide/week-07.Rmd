@@ -170,11 +170,37 @@ Do not reshare]
 
 * Components
 
-  * Issue or problem
-  * Purpose of the study
-  * What data that will be collected
-  * Themes, statistical results, or mixed methods integrated findings that are likely
-  * Practical implications of the study
+  1. Issue or problem
+  2. Purpose of the study
+  3. What data that will be collected
+  4. Themes, statistical results, or mixed methods integrated findings that are likely
+  5. Practical implications of the study
+  
+  
+---
+
+## Group Task
+
+> Find an example of an abstract from an empirical study in your field. Highlights the **five components** that you find in the abstract. What elements are present, and what elements are missing?
+
+1. Issue or problem
+2. Purpose of the study
+3. What data that will be collected
+4. Themes, statistical results, or mixed methods integrated findings that are likely
+5. Practical implications of the study
+
+.pull-left[
+
+You can work on the task sheet and then share it on Padlet.
+
+]
+
+.pull-right[
+
+
+]
+
+
 
 ---
 
@@ -284,6 +310,11 @@ Why should we use a qualitative approach?
   * Deficiencies in the evidence
   * The importance of the problem for audiences
   
+---
+
+class: segue-yellow
+
+# Check-in
   
 ---
 
@@ -414,6 +445,14 @@ This mixed methods study will address .content-box-yellow[ [overall content aim]
 * Advances central idea in a study
 
 * Qualitative, quantitative, and mixed methods purpose statements differ
+
+
+---
+
+class: segue-red
+
+## Individual task 
+
 
 ---
 
