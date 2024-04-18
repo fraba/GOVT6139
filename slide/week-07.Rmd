@@ -121,7 +121,7 @@ Do not reshare]
 
 2. Describe reasons for an introduction’s role as a key feature of a study.
 
-3. Compare an introduction for a qualitative, quantitative, and mixed methods study.
+3. Compare an introduction for a qualitative, quantitative, and mixed methods study. (Not covered in class today, refer to the textbook!)
 
 4. Describe the four components of a good introduction to a study.
 
@@ -313,10 +313,10 @@ Why should we use a qualitative approach?
 
 * The introduction incorporates the research problem
 * Four-part deficiencies model
-  * Research problem (narrative hook)
-  * Evidence from the literature justifying the problem
-  * Deficiencies in the evidence
-  * The importance of the problem for audiences
+  1. Research problem (narrative hook)
+  2. Evidence from the literature justifying the problem
+  3. Deficiencies in the evidence
+  4. The importance of the problem for audiences
   
 ---
 
@@ -348,7 +348,7 @@ Do not reshare]
 
 4. State a quantitative purpose statement with variables and their relationships.
 
-5. Describe the four essential components of a mixed methods purpose statement.
+5. Describe the four essential components of a mixed methods purpose statement. (Not covered in class, refer to textbook)
 
 ---
 
@@ -413,6 +413,26 @@ The purpose of this .content-box-yellow[( _strategy of inquiry, such as ethnogra
 At this stage in the research, the .content-box-yellow[( _central phenomenon being studied_ )] will be generally defined as .content-box-yellow[( _provide a general definition_ )].
 
 ]
+
+---
+
+In this example from the textbook (Example 6.1) ...
+
+> The inquiry, as part of uncovering meaning, articulated “essences” of meaning in mothers’ lived experiences when their wished-for babies died. Using the lens of the feminist perspective, the focus was on mothers’ memories and their “living through” experience. This perspective facilitated breaking through the silence surrounding mothers’ experiences; it assisted in articulating and amplifying mothers’ memories and their stories of loss. Methods of inquiry included phenomenological reflection on data elicited by existential investigation of mothers’ experiences, and investigation of the phenomenon in the creative arts. 
+
+
+.content-box-green[
+
+In which sentence does the author disclose the central **phenomenon** explored in the study?
+
+]
+
+.pull-left[.center[<img src ='../img/menti-week-07-01.png' width = '45%'></img> ]]
+.pull-right[or https://www.menti.com/alpimxhp15af]
+
+---
+
+<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/altu6ruakaopr8xatf6b7c8vktghbn7m/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
 
 ---
 

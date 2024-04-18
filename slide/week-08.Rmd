@@ -1,16 +1,25 @@
 ---
 title: "GOVT6139</br>Research design"
-subtitle: "Week 08</br>Quantitative Methods (I) </br> Data collection"
+subtitle: "Week 07</br>The Introduction & The Purpose Statement"
 author: "Francesco Bailo"
 institute: "The University of Sydney"
-date: "Semester 1, 2023 (updated: `r Sys.Date()`)"
+date: "Semester 1, 2024 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
-    lib_dir: libs
+    css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+    self_contained: false # if true, fonts will be stored locally
+    seal: true # show a title slide with YAML information
+    includes:
+      in_header: "assets/mathjax-equation-numbers.html"
     nature:
+      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+      navigation:
+        scroll: false # disable slide transitions by scrolling
+
 ---
 
 background-image: url(https://upload.wikimedia.org/wikipedia/en/6/6a/Logo_of_the_University_of_Sydney.svg)
@@ -28,45 +37,53 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
 
 ## Acknowledgement of Country
 
-I would like to acknowledge the Traditional Owners of Australia and recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
 
 ---
+
 
 ## Course outline
 
 .pull-left[
 
-Week 1: Introduction
+**Week 1**: Introduction
 
-Week 2: Foundations: Ontology and Epistemology
+**PART I PRELIMINARY CONSIDERATIONS (Weeks 2-5)**
 
-Week 3: Research Design (I): Questions, Theories, Hypotheses, Variables, Measurements
+**Week 2**: The Selection of a Research Approach
 
-Week 4:	Research Design (II): Case selection
+**Week 3**: Review of the Literature
 
-Week 5: Research Design (III): Causal Inference
+**Week 4**: The Use of Theory
 
-Week 6: Qualitative Methods (I): Data Collection 
+**Week 5**: Writing Strategies and Ethical Considerations + Guest lecture w/t Christopher Pepin-Neff 
 
-Week 7: Qualitative Methods (II): Data Analysis 
+**PART II DESIGNING RESEARCH (Weeks 6-12)**
+
+**Week 6**: The Introduction **no seminar** (public holiday)
+
+⏸️ *Mid Semester break* ⏸️
 
 ]
 
 .pull-right[
 
-⏸️ *Mid Semester break* ⏸️
 
-<mark>Week 8: Quantitative Methods (I): Data Collection</mark> 
+**Week 7**: The Purpose Statement 
 
-*Week 9: 🎉 Public holiday 🎉*
+**Week 8**: Research Questions and Hypotheses + Guest Lecture w/t Charles Robert Butcher 👈
 
-Week 10: Quantitative Methods (II): Data Analysis 
+**Week 9**: Quantitative Methods
 
-Week 11: Quantitative Methods (II): Data Analysis lab
+**Week 10**: Quantitative Methods: Data Analysis Lab (Make sure you install R and RStudio)
 
-Week 12: Research Proposal: Peer Feedback Workshop Week 
+**Week 11**: Qualitative Methods + Guest lecture w/t Peter Chen
 
-Week 13: New frontiers and Conclusions
+**Week 12**: Mixed Methods Procedures + Guest lecture w/t Assel Mussagulova
+
+**Week 13**: Conclusions
+
 
 ]
 
@@ -74,603 +91,187 @@ Week 13: New frontiers and Conclusions
 
 ## Today's class
 
-- Introduction to quantitative methods
-
-- Quantitative Data Collection: Surveys
-
-    - What are surveys?
-    - Asking survey questions
-    - Selecting a sample
-    - Sample size
-    - Survey mode (phone / mail / online / in-person)
-    - Can we trust survey research? What about election polling?
-    
----
-
-# Week 12: Peer feedback workshop
-
-### Part 1: 5-minute project presentation (45 minutes)
-
-- Prepare to present your research proposal in five minutes.
-
-- You are encouraged to preliminary share supporting materials using the [Canvas Group](https://community.canvaslms.com/t5/Canvas-Basics-Guide/What-are-Groups/ta-p/16) page for Week 12 (e.g. a one or two slide deck, or a one-page document). 
-
-- In groups of four, each student will present for five minutes - I will be strict with the timing - and then receive questions and comments for another five minutes.
-
-- You are encouraged to keep discussing this on the Canvas groups page after class.
 
 ---
 
-# Week 12: Peer feedback workshop
+class: inverse, center, middle
 
-### Part 2: Brain storm on the issues you have identified with the presentations you reviewed (30 minutes)
+# Chapter 7
 
-- Prepare a (short) list of issues to discuss with your group (but avoid offering details that could identify the proposal you have reviewed). 
+# Research Questions and Hypotheses
 
-- In the same groups of four, discuss the issues and possible solutions for about 20 minutes.
+.center[Slides adapted from Creswell, Research Design 6e, SAGE Publishing, 2023 for GOVT6139 Research Design.
 
-- Report on your discussion using Padlet (same as before, avoid offering details that could identify specific proposals): list issues and possible solutions.  
-
----
-
-# Introduction to quantitative methods
+Do not reshare]
 
 ---
 
-## Quantitative methods mostly draws upon positivist
+# Chapter 7 Learning Objectives
 
-Key assumptions:
+1. Identify the types of research questions and hypotheses used in a quantitative study.
 
-**Foundationalist ontology**
+2. Learn how to write a good qualitative central question and sub-question.
 
-- The world exists independently of our observations
-
-- There is an ultimate and knowable truth
-
-**Positivist epistemology**
-
-- Can establish ‘real’ relationships between social phenomena
-
-- Can study these relationships via observation
-
-- Objective (researcher’s interpretation should not determine the results)
-
-- Interested in generalisability and causality
+3. Describe how to craft a mixed methods question describing the intent and procedures for a mixed methods study.
 
 ---
 
-## Types of quantitative data in political science
+# Introduction
 
-**Primary and Secondary Data**
-
-- Collected by the researcher (primary)
-
-- Collected by someone else (secondary)
-
-1. Surveys
-    - Data on individual attitudes and reported behaviors
-
-2. Country-level data
-    - Economic conditions
-    - Measures of how democratic a country is
-
-3. Content analysis
-    - E.g. coding newspaper articles, social media posts
-
-4. Data from Experiments
-    - Survey, lab or field experiments
+* Placing signposts for the reader
+  * Purpose statement
+  * Research questions or hypotheses
+* Research questions narrow the purpose statement
+  * Quantitative research questions and hypotheses
+  * Qualitative research questions
+  * Mixed methods research questions
 
 ---
 
-## Why use quantitative methods?
+# Quantitative Research Questions and Hypotheses (1 of 8)
 
-#### Generalizability
-- Results can be representative of the population studied (if designed to be)
-- Comparability, e.g. comparisons cross-nationally, between states, over time, across sub-groups - by gender, race, age-group etc.
-
-#### Assessing relationships between variables
-- Are two variables related?
-- e.g. are young people less satisfied with democracy?
-- Does X cause Y?
-- e.g. did frequent changes of Prime Minister cause Australians to become less satisfied with democracy?
-
-#### Scope
-- Possible to be broad in scope, can look at a whole country, or even comparisons across many countries.
-- Can do large-N research using quantitative methods – that wouldn’t be feasible using qualitative methods.
+* Quantitative research questions
+  * About the relationships among variables that the investigator seeks to know
+* Quantitative hypotheses
+  * Predictions about the expected relationships among variables
+  * Estimates of population values based on data from a sample
 
 ---
 
-# Quantitative Data Collection: Surveys
-
-## 1.	What is a survey
-
-## 2.	Asking survey questions
-
-## 3. Selecting a sample
-
-## 4. Sample size
-
-## 5. Survey mode
-
-## 6. Can we trust survey research?
+* Quantitative objectives
+  * Indicate a study's goals
+  * Often in proposals for funding, less common in health and social sciences
 
 ---
 
-## 1.	What is a survey
+Quantitative research question describing outcomes:
+
+What is the frequency and variation of scores on ____________ (name the variable) for ______________(participants) in the study?
 
 ---
 
-## 1.	What is a survey
+Quantitative research question focused on examining the relationship among variables:
 
-#### Definition
-Data collection tool used to gather information about individuals
-It takes a sample of a larger population, asking questions, and recording the answers
-Note: Unit of Analysis = individuals
-#### Purpose
-To collect original data for describing a population too large to observe directly
-#### What do Survey Researchers do?
-Sample many respondents who answer the same questions;
-They then analyse the data to look at:
-- Average responses to survey questions
-- Relationships between variables (e.g. age group and attitudes towards democracy)
-- Test theories and hypotheses about attitudes / behaviours
+_________ (name the theory) posits that _____ (explain relationships between variables). It is thus predicted that there will be a relationship between ________ (predictor variable) and ________ (outcome variable), such that (explain the direction of the effect between the predictor and outcome variable).
 
 ---
 
-## Surveys vs Interviews
+Quantitative null hypothesis:
 
-#### Fundamental differences
-
-- A survey research (or “polling”) takes a sample of the population, asks questions, records the answers, and examines the distribution of answers.
-- An interview research focuses on specific individuals (e.g., government officers), ask questions, record the answers, and examine the opinions and attitudes of specific individuals.
-
-#### Stylistic differences
-
-- In survey research, each respondent is treated equally, but in an interview, each interviewee is usually treated differently.
-- The sequence of questions is pre-determined in survey research, but can be flexibly modified in an interview research.
-- Most questions are close-ended in survey research, but are open-ended in an interview research.
-- Surveys are usually analyzed with statistics, interviews are usually interpreted qualitatively.
+There is no significant difference between _________ (the control and experimental groups on the independent variable) on _________ (dependent variable).
 
 ---
 
-## How do we go about survey research?
-
-1. Developing a survey questionnaire
-
-2. Selecting a sample (who / how many?)
-
-3. Selecting a survey mode (e.g. phone / mail / online / in- person)
-
-4. Field the survey
-
-5. Analyse the data
-
-
+* Three basic approaches
+  * Compare groups
+  * Relate variables
+  * Describe responses
+* Most rigorous form tests a theory
+* Measure the independent and dependent variables separately
+* Write questions or hypotheses
+* Null and alternative hypotheses
 
 ---
 
-## 2.	Asking survey questions
-
-#### Open vs. Closed Questions
-- Closed: Respondents are given all of the possible answers (mostly used in surveys)
-- Open: Respondents are given a more general question and asked to articulate their own answers (often used in interviews)
-
-#### Writing good survey questions
-- Keep it clear and avoid confusion
-- Keep the respondent’s perspective in mind
-- Give the researcher valid measures (does the concept match the measure?)
-
-#### Other considerations
-- How many questions?
-- Consistency in question wording: to enable comparisons between countries / over time.
+* The use of variables in research questions or hypothesis if one wants to do
+  * An experiment or group comparisons
+  * A survey that correlates variables
+  * A descriptive study
 
 ---
 
-## Asking survey questions: Things to Avoid
-
-- Avoid jargon, slang, abbreviations
-- Avoid ambiguity, confusion, and vagueness
-- Avoid emotional language
-- Avoid double-barreled questions (two or more questions bound together)
-- Avoid leading questions
-- Avoid asking questions that are beyond respondent’s capabilities
-- Avoid asking about future intentions
-- Avoid double negatives
-- Avoid overlapping or unbalanced response categories
+* If writing hypotheses, use a consistent form
+  * Null hypotheses (predict no difference or no relationship)
+  * Alternative hypothesis (predict significant relationship between variables)
+  * Use directional words of quantitative research:
+    * Affect, influence, predict, impact, determine, cause, and relate
 
 ---
 
-## Example survey question: Is this a good question?
+# Qualitative Research Questions (1 of 6)
 
-> Do you agree or disagree with the following statement: "The federal government has gotten totally out of control and threatens our basic liberties unless we clear house and commit to drastic change"
-
---
-
-Problems with the question:
-
---
-
-- Double (or triple/quadruple) barreled question
-
---
-
-- Emotional language
-
---
-
-- Vagueness / ambiguity – e.g. what do they mean by ‘clear house’ and ‘drastic change’
+* Qualitative researchers pose research questions
+  * Not objectives
+  * Not hypotheses
+* Two forms of qualitative research questions
+  * Central question
+    * Broad question that asks for exploration of the central phenomenon
+  * Sub-questions
+    * Questions that narrow the focus of the study
 
 ---
 
-## Example survey question: Is this a good question?
-
-> How serious a threat do you think global warming will pose to you or your way of life in your lifetime? 
-> 1. Very serious
-> 2. Farily serious
-> 3. Not very serious
-> 4. Not at all serious
-
-(Source: Australian Election Study survey)
+* Ask 1–2 central research questions
+  * Broad and ask for exploration of the central phenomenon or concept
+  * Explore the general, complex factors about to the central phenomenon
+  * Present broad perspectives or meanings
 
 ---
 
-## Example survey question: Is this a good question?
-
-<img src = '../img/wvs-question.jpg' width = '100%'></img>
-
-
-(Source: World Values Survey 2012)
-
----
-
-## What questions do we put in our survey?
-
-#### Theory testing
-
-Example: Are young people less interested in politics?
-
-- **Independent variable** (the presumed cause): Age
-- **Dependent variable** (the presumed effect): Interest in politics
-- **Control variables**: e.g. education level, gender
-
-<mark>We’d ask questions about our variables of interest to be able to examine the relationship between variables</mark>
+* No more than 5–7 sub-questions these will narrow the focus but leave open the questioning
+* Relate the central question to the strategy of inquiry
+  * Ethnography – culture sharing group, questions verify accuracy of data
+  * Critical ethnography – build on an existing literature
+  * Phenomenology – what participants experienced
+  * Grounded theory – generate a theory
 
 ---
 
-## What questions do we put in our survey?
+Begin with “what” or “how” to convey an open or emerging design
 
-#### How many questions to ask?
+Focus on a single phenomenon or concept
 
-- Common to include questions that will be relevant for many researchers in the one survey
-
-- More questions = more variables = more that can be done with the data
-
-- However, the longer the questionnaire, the more likely some respondents might not complete the survey
+Use exploratory verbs: report, describe, discover, seek, explore, describe
 
 ---
 
-## 3. Selecting a sample
+Expect questions to evolve and change
+
+Use open-ended questions without reference to the literature or theory (unless indicated)
+
+Specify the participants and research site
 
 ---
 
-## Sampling: Who is asked to complete the survey?
-
-#### Rationale
-- Making inferences about a population from a sample
-#### Terminology
-- Population; Sampling Frame; Sample
-#### Sample Designs
-- Probability Samples
-- Non-Probability Samples
+_________ (How or what?) is the _________ (central phenomenon) for _________ (participants) at _________ (research site).
 
 ---
 
-## What is a sample
+# Mixed Methods Research Questions and Hypotheses (1 of 3)
 
-.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/b/bf/Simple_random_sampling.PNG' width = '90%'></img>]
+Include qualitative, quantitative (or hypotheses), and a mixed methods research question
 
----
+Qualitative and quantitative questions focus the purpose
 
-## What is a sample? Example
+Mixed methods question conveys the importance of integrating
 
-#### Population: 
-
-- Every student in GOVT6139
-
-#### Sample: 
-
-Each and every group we created for the in-class tasks
-
-.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/b/bf/Simple_random_sampling.PNG' width = '50%'></img>]
+Use guidelines for qualitative and quantitative questions and hypotheses
 
 ---
 
-## How do we go from population to sample? The Sampling frame
-
-- To select a sample from our population we first need a sampling frame
-- The sampling frame is the list of all the units (e.g. people) in the population
-- Ideally, the sampling frame would be a list of every member of the population, e.g.
-    - List of all adults in Australia
-    - List of all uni students at USYD
-    - List of all students in GOVT6139
-- In reality this isn’t always possible
- - Need list as close to the population as possible, e.g.:
- - List of enrolled voters
- - List of phone numbers
- - List of addresses
+* Order questions to match the mixed methods design
+  * In a single-phase design, either first
+  * In a two-phase design, order to match the phases
+  * In three-phase, often mixed methods in the middle
 
 ---
 
-# Once we have our sampling frame, who do we select to be part of the sample?
+A  __mixed methods research question __ directly addresses integration
 
-#### Probability Samples
-Those within the sampling frame have an equal chance of being selected into the sample
-- Simple random sample (this is the gold standard)
-- Modifications (e.g. cluster sampling, systematic, stratified)
-- **Can make inferences to the population**
+Mixed methods question:
 
-#### Non-probability Samples
-Those within the sampling frame have a non-equal chance of being selected into the sample
-- Convenience sample / street corner sample
-- Online ‘opt-in’ surveys
-- **Cannot make inferences to the population**
+The mixed methods question in the study purpose or  _intent _ will be to ________ (compare, explain, build, augment) the ________ (quantitative data or qualitative data or process/framework) with ________ (quantitative data or qualitative data) by using a ________ (design: convergent design, explanatory sequential design, exploratory sequential design, embedded design) with the  _procedure _ of ________ (merging, connecting, or embedding).
 
 ---
 
-## Simple random sample
+# Summary
 
-1. Probability sample
+Research questions and hypotheses narrow the purpose statement and add signposts
 
-2. List of the population (sampling frame)
+Qualitative – central question and sub-questions
 
-3. Assign a number to everyone in the list
+Quantitative – describe, related, compare variables
 
-4. Randomly select numbers (e.g. via random number generator)
-
-**Those randomly selected are your sample**
+Mixed methods – qualitative, quantitative, and mixed methods question
 
 ---
-
-### Note on terminology: Random selection vs. random assignment
-
-#### Random selection
-- ‘Refers to the process of randomly selection individuals from a population to be involved in a study.
-- Used in survey research to obtain a sample representative of the population of interest
-
-#### Random assignment
-- ‘Refers to the process of randomly assigning the individuals in a study to either a treatment group or a control group.’
-- Used in experimental research to ensure the treatment and control group will be the same.
-
-.center[<img src = 'https://www.statology.org/wp-content/uploads/2020/01/randomAssign1.jpg' width = '70%'></img>]
-
----
-
-## Cluster Sampling
-
-.pull-left[
-
-.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/b/bf/Simple_random_sampling.PNG' width = '100%'></img>]
-
-]
-
-.pull-right[
-
-- Probability sample
-
-- Randomly select clusters (e.g. districts within the United States)
-
-- Within the selected clusters, randomly select people to be included in the sample
-
-*Why/when would we use this approach instead of a simple random sample?*
-
-- If doing a face to face survey in a large country (e.g. Australia / USA) more feasible – cost/time.
-
-
-]
-
----
-
-## Non-probability sample
-
-- Non-random selection into sample
-
-- E.g. online opt-in survey – why isn’t this ideal?
-
-- E.g. street corner sample – why isn’t this ideal?
-
-
-**Cannot make inferences to the population from a non- probability sample**
-
----
-
-## 4. Sample size
-
----
-
-## How many people do we select to be part of our sample?
-
-#### Law of large numbers
-
--  The larger your sample size, the closer the sample mean (average) will be to the population mean (but only *if the sample is a random sample*)
-
-- What happens if we flip a coin once, ten times, 100 times, 1000 times?
-
-```{r echo = FALSE, message = FALSE, fig.width = 5, fig.height=2, out.width = "100%"}
-
-require(tidyverse)
-
-tossFun <- function(x) {
-  mean(rbinom(n = x, size = 1, prob = .5))
-}
-
-my_seq <- 
-  round(seq(from = 1, to = 1000, length.out = 1000))
-
-res <- 
-  sapply(my_seq, tossFun)
-
-data.frame(x = my_seq,
-           y = res) %>%
-  ggplot(aes(x, y)) +
-  geom_line() +
-  theme_bw() +
-  labs(x = 'Numbers of tosses of a fair coin (average result)', y = NULL) +
-  scale_y_continuous(limits = c(0, 1))
-
-
-```
-
----
-
-#### Law of large numbers
-
-```{r echo = FALSE, message = FALSE, fig.width = 5, fig.height=3, out.width = "100%"}
-
-require(tidyverse)
-
-tossFun <- function(x) {
-  mean(rbinom(n = x, size = 1, prob = .5))
-}
-
-my_seq <- 
-  round(seq(from = 1, to = 50000, length.out = 1000))
-
-res <- 
-  sapply(my_seq, tossFun)
-
-data.frame(x = my_seq,
-           y = res) %>%
-  ggplot(aes(x, y)) +
-  geom_line() +
-  theme_bw() +
-  labs(x = 'Numbers of tosses of a fair coin (average result)', y = NULL) +
-  scale_y_continuous(limits = c(0, 1))
-
-
-```
-
----
-
-## Sample size and margin of error
-
-If your sampling is truly random, you should expect this trend:
-
-* The larger the sample, the narrower the confidence interval (i.e. the expected precision of your result)
-
-* Yet, with a diminishing benefit: at a certain point, increasing your sample size will stop capturing significantly more diversity of your population.  
-
-.center[<img src = '../img/ci-sample-size-line.png' width = '80%'></img>]
-
----
-
-## Common misconception
-
-#### If I wasn’t surveyed how can the results be representative of the population?
-- If the survey:
-    - Uses probability sampling (random selection)
-        * And the sample is drawn from a sampling frame that is very close to a list of all members of the population
-        * And has a sufficiently large number of observations (e.g. 1000- 2000 is common for national surveys).
-        * And ideally has a high response rate.
-- Then survey results for the sample should come very close to the population
-- But still with a small margin of error so depends on how precise estimates need to be.
-
----
-
-## 5. Survey mode
-
----
-
-## Types of Surveys: Overview
-
-#### Interviewer-administered  surveys.
-- e.g., in-person surveys, telephone surveys
-- The interviewer asks questions and records the responses
-
-#### Self-administered surveys
-- e.g., mail surveys, internet surveys
-- The respondents read questions and record their answers
-
----
-
-## Pros and cons of different survey types
-
-| Mode         | Pros                                                                           | Cons                                                                                                     |
-| ------------ | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
-| Online       | • Cheap<br>• Less social desirability bias                                           | • Difficult to get a representative sample (e.g. older people excluded)<br>• What is the sampling frame? |
-| Mail         | • Cheap<br>• Less social desirability bias                                     | • Response rate<br>• Time consuming                                                                      |
-| Telephone    | • Cheaper than face-to-face<br>• Relatively high response rate<br>• Completion | • Social desirability bias<br>• More expensive<br>• Representative samples?                              |
-| Face-to-face | • Relatively high response rate<br>• Completion                                | • Social desirability bias<br>• Most expensive       
-
----
-
-## World Values Survey: Sampling design (Indonesia)
-
-1. **First stage**: We begin with selecting a sample of provinces (the primary sampling units are provinces). Because of different numbers of population between Java and Out of Java, we use sample fraction, where 6 provinces for Java and 4 provinces for Out of Java.
-2. **Second stage**: Select a sample of Regencies or Districts within the provinces selected in
-the first stage (the second-stage sampling units are Regencies or Districts).
-3. **Third stage**: Select a sample of municipalities and sub-districts within the Regencies or Districts selected in the second stage (the third-stage sampling units are Municipalities or sub-districts).
-4. **Fourth stage**: Select a sample of Village within municipalities and sub-districts selected in the third-stage (the fourth-stage sampling units are Village),
-5. **Fifth stage**: Select a sample of blocks within the selected Villages in the fourth-stage, and
-6. **Sixth stage**: Select a sample of people within the selected families (Households).
-
----
-
-## Survey research: Potential researcher challenges
-
-#### Sampling Frame does not reflect population
-- E.g. a list of landline phone numbers that disproportionately excludes younger people (or mobile phone numbers - older people)
-#### Social desirability bias
-- Presence of interviewer (phone / face-to-face) influences interviewee to give socially desirable response (e.g. sexism / racism)
-#### Non-response bias
-- E.g. individuals that respond to the survey have higher levels of education than those that do not respond
-#### How to maximise response rate
-- Big challenge for survey researchers around the world, becoming harder to get people to respond to surveys
-- Participant incentives (e.g. financial incentive $20)
-- Participant reminders
-
----
-
-<img src = '../img/aes-response-rate-table.png' width = '100%'></img>
-
----
-
-## 6. Can we trust survey research?
-
----
-
-## 6. Can we trust survey research?
-
-#### This is not a yes/no question
-
-- Some people have responded to polling failures by saying that we cannot trust all survey research
-
-- But it’s not a case of ALL survey research can be trusted or ALL survey research cannot be trusted
-
-- Rather, to evaluate survey research need to:
-
-    - assess how survey was conducted – ask questions about methodology (any academic publication, e.g. journal article should include this information)
-    
-    - Evaluate any strengths and weaknesses of the approach used
-    
-    - And therefore what inferences can/cannot be drawn based on that approach
-    
-    
----
-
-## Evaluating survey research
-
-#### A few questions for the consumer of survey / poll research:
-
-- What sampling approach was used – can the results be considered representative of a population? What population?
-
-- How and when was the survey administered?
-
-- What were the specific questions asked? Are the questions (measures) a good fit for the concepts? (validity)
-
-- What was the sample size?
-
-- What was the response rate?
-
-- What is the margin of error? Does that have implications for the question of interest - e.g. for many research questions a 2% margin of error will not make a substantive difference to findings, but for predicting election results, 2% error can be the difference between winning/losing
-
-
