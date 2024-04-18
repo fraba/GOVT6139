@@ -114,7 +114,7 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 
 --
 
-<br/><br/>
+<br/>
 
 .content-box-red[
 .large[**Second Warning**: There are **mathematical notation and symbols** are in today's slides.]
@@ -124,7 +124,7 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 
 <br/>
 
-<center><div class="tenor-gif-embed" data-postid="12660494" data-share-method="host" data-aspect-ratio="1.77515" data-width="40%"><a href="https://tenor.com/view/dont-panic-hitchhikers-guide-to-the-galaxy-stay-calm-gif-12660494">Dont Panic Hitchhikers Guide To The Galaxy GIF</a>from <a href="https://tenor.com/search/dont+panic-gifs">Dont Panic GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script></center>
+<center><div class="tenor-gif-embed" data-postid="12660494" data-share-method="host" data-aspect-ratio="1.77515" data-width="35%"><a href="https://tenor.com/view/dont-panic-hitchhikers-guide-to-the-galaxy-stay-calm-gif-12660494">Dont Panic Hitchhikers Guide To The Galaxy GIF</a>from <a href="https://tenor.com/search/dont+panic-gifs">Dont Panic GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script></center>
 
 
 ---
