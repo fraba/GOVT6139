@@ -1,0 +1,42 @@
+"country_name_short","country_name","election_date","start_date","cabinet_name","caretaker","cabinet_party","prime_minister","seats","election_seats_total","party_name_short","party_name","party_name_english","left_right","country_id","election_id","cabinet_id","previous_cabinet_id","party_id","duration_days"
+"GBR","United Kingdom",1918-12-14,1922-10-24,"Bonar Law",0,1,1,382,707,"Con","Conservatives","Conservatives",7.4261,44,905,1294,1295,773,213
+"GBR","United Kingdom",1922-11-15,1923-05-25,"Baldwin I",0,1,1,344,615,"Con","Conservatives","Conservatives",7.4261,44,906,1293,1294,773,243
+"GBR","United Kingdom",1923-12-06,1924-01-23,"MacDonald I",0,1,1,191,615,"Lab","Labour Party","Labour",4.3562,44,907,1292,1293,1556,288
+"GBR","United Kingdom",1924-10-29,1924-11-06,"Baldwin II",0,1,1,412,615,"Con","Conservatives","Conservatives",7.4261,44,908,1291,1292,773,1672
+"GBR","United Kingdom",1929-05-30,1929-06-05,"MacDonald II",0,1,1,287,615,"Lab","Labour Party","Labour",4.3562,44,909,1290,1291,1556,2193
+"GBR","United Kingdom",1931-10-27,1935-06-07,"Baldwin III",0,1,1,470,615,"Con","Conservatives","Conservatives",7.4261,44,910,1287,1289,773,160
+"GBR","United Kingdom",1935-11-14,1935-11-14,"Baldwin IV",0,1,1,387,615,"Con","Conservatives","Conservatives",7.4261,44,911,1288,1287,773,561
+"GBR","United Kingdom",1935-11-14,1937-05-28,"Chamberlain",0,1,1,387,615,"Con","Conservatives","Conservatives",7.4261,44,911,1286,1288,773,1078
+"GBR","United Kingdom",1935-11-14,1940-05-10,"Churchill I",1,1,1,387,615,"Con","Conservatives","Conservatives",7.4261,44,911,1519,1286,773,1839
+"GBR","United Kingdom",1935-11-14,1945-05-23,"Churchill II",1,1,1,387,615,"Con","Conservatives","Conservatives",7.4261,44,911,1520,1519,773,64
+"GBR","United Kingdom",1945-07-05,1945-07-26,"Attlee I",0,1,1,393,640,"Lab","Labour Party","Labour",4.3562,44,609,99,1520,1556,1678
+"GBR","United Kingdom",1950-02-23,1950-02-28,"Attlee II",0,1,1,315,625,"Lab","Labour Party","Labour",4.3562,44,625,88,99,1556,605
+"GBR","United Kingdom",1951-10-25,1951-10-26,"Churchill III",0,1,1,302,625,"Con","Conservatives","Conservatives",7.4261,44,102,691,88,773,1258
+"GBR","United Kingdom",1951-10-25,1955-04-06,"Eden I",0,1,1,302,625,"Con","Conservatives","Conservatives",7.4261,44,102,729,691,773,50
+"GBR","United Kingdom",1955-05-26,1955-05-26,"Eden II",0,1,1,324,630,"Con","Conservatives","Conservatives",7.4261,44,678,184,729,773,595
+"GBR","United Kingdom",1955-05-26,1957-01-10,"Macmillan I",0,1,1,324,630,"Con","Conservatives","Conservatives",7.4261,44,678,404,184,773,1007
+"GBR","United Kingdom",1959-10-08,1959-10-14,"Macmillan II",0,1,1,345,630,"Con","Conservatives","Conservatives",7.4261,44,161,237,404,773,1465
+"GBR","United Kingdom",1959-10-08,1963-10-18,"Douglas-Home",0,1,1,345,630,"Con","Conservatives","Conservatives",7.4261,44,161,63,237,773,364
+"GBR","United Kingdom",1964-10-15,1964-10-16,"Wilson I",0,1,1,317,630,"Lab","Labour Party","Labour",4.3562,44,223,760,63,1556,536
+"GBR","United Kingdom",1966-03-31,1966-04-05,"Wilson II",0,1,1,364,630,"Lab","Labour Party","Labour",4.3562,44,583,733,760,1556,1536
+"GBR","United Kingdom",1970-06-18,1970-06-19,"Heath",0,1,1,330,630,"Con","Conservatives","Conservatives",7.4261,44,311,216,733,773,1354
+"GBR","United Kingdom",1974-02-28,1974-03-04,"Wilson III",0,1,1,301,635,"Lab","Labour Party","Labour",4.3562,44,568,419,216,1556,220
+"GBR","United Kingdom",1974-10-10,1974-10-10,"Wilson IV",0,1,1,319,635,"Lab","Labour Party","Labour",4.3562,44,40,7,419,1556,543
+"GBR","United Kingdom",1974-10-10,1976-04-05,"Callaghan",0,1,1,319,635,"Lab","Labour Party","Labour",4.3562,44,40,590,7,1556,1124
+"GBR","United Kingdom",1979-05-03,1979-05-04,"Thatcher I",0,1,1,339,635,"Con","Conservatives","Conservatives",7.4261,44,243,273,590,773,1497
+"GBR","United Kingdom",1983-06-09,1983-06-09,"Thatcher II",0,1,1,397,650,"Con","Conservatives","Conservatives",7.4261,44,290,646,273,773,1463
+"GBR","United Kingdom",1987-06-11,1987-06-11,"Thatcher III",0,1,1,376,650,"Con","Conservatives","Conservatives",7.4261,44,490,297,646,773,1266
+"GBR","United Kingdom",1987-06-11,1990-11-28,"Major I",0,1,1,376,650,"Con","Conservatives","Conservatives",7.4261,44,490,515,297,773,498
+"GBR","United Kingdom",1992-04-09,1992-04-09,"Major II",0,1,1,336,651,"Con","Conservatives","Conservatives",7.4261,44,514,678,515,773,1849
+"GBR","United Kingdom",1997-05-01,1997-05-02,"Blair I",0,1,1,419,659,"Lab","Labour Party","Labour",4.3562,44,315,838,678,1556,1497
+"GBR","United Kingdom",2001-06-07,2001-06-07,"Blair II",0,1,1,412,659,"Lab","Labour Party","Labour",4.3562,44,208,19,838,1556,1429
+"GBR","United Kingdom",2005-05-05,2005-05-06,"Blair III",0,1,1,355,646,"Lab","Labour Party","Labour",4.3562,44,233,516,19,1556,782
+"GBR","United Kingdom",2005-05-05,2007-06-27,"Brown",0,1,1,355,646,"Lab","Labour Party","Labour",4.3562,44,233,119,516,1556,1049
+"GBR","United Kingdom",2010-05-06,2010-05-11,"Cameron I",0,1,1,307,650,"Con","Conservatives","Conservatives",7.4261,44,582,874,119,773,1823
+"GBR","United Kingdom",2015-05-07,2015-05-08,"Cameron II",0,1,1,331,650,"Con","Conservatives","Conservatives",7.4261,44,856,1162,874,773,432
+"GBR","United Kingdom",2015-05-07,2016-07-13,"May I",0,1,1,331,650,"Con","Conservatives","Conservatives",7.4261,44,856,1489,1162,773,333
+"GBR","United Kingdom",2017-06-08,2017-06-11,"May II",0,1,1,318,650,"Con","Conservatives","Conservatives",7.4261,44,1013,1507,1489,773,773
+"GBR","United Kingdom",2017-06-08,2019-07-24,"Johnson I",0,1,1,318,650,"Con","Conservatives","Conservatives",7.4261,44,1013,1599,1507,773,142
+"GBR","United Kingdom",2019-12-12,2019-12-13,"Johnson II",0,1,1,365,650,"Con","Conservatives","Conservatives",7.4261,44,1086,1606,1599,773,998
+"GBR","United Kingdom",2019-12-12,2022-09-06,"Truss",0,1,1,365,650,"Con","Conservatives","Conservatives",7.4261,44,1086,1676,1606,773,49
+"GBR","United Kingdom",2019-12-12,2022-10-25,"Sunak",0,1,1,365,650,"Con","Conservatives","Conservatives",7.4261,44,1086,1683,1676,773,NA
