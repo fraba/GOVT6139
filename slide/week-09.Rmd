@@ -386,7 +386,7 @@ The arbitrary threshold at 0.05 creates some perverse incentive in variable sele
 
 ---
 
-## Tabular analysis
+## Tabular analysis (two categorical variables)
 
 .center[<img src = '../img/kellstedt-whitten-2013-tab-analysis.png'></img>]
 
@@ -395,6 +395,8 @@ How do we test an hypothesis of association between gender and vote?
 Enter the chi-squared ( $\chi^2$ ) test for tabular association
 
 $$ \chi^2 = \sum\frac{(O - E)^2}{E}$$
+
+
 .footnote[Kellstedt, P. M., & Whitten, G. D. (2013). The fundamentals of political science research. Cambridge University Press.]
 ---
 
@@ -422,5 +424,171 @@ chi_square_result <- chisq.test(movie_data)
 print(chi_square_result)
 ```
 
+
+---
+
+## Difference of means (one categorical and one continuous variable)
+
+> In this type of bivariate hypothesis test, we are looking to see if the means are different across the values of the independent variable.
+
+Karl Pearson's $t$-test: 
+
+$$ t = \frac{\bar{Y}_1-\bar{Y}_2}{se(\bar{Y}_1-\bar{Y}_2)} $$ where $se$ is the standard error.
+
+
+.content-box-green[
+Let's test this hypothesis: In the UK Labour-led cabinets last longer than Conservative-led cabinets.]
+* $X$ = $party$ $\in \{Con, Lab\}$
+* $Y$ = $duration$ $\in \{1,2,3,...\}$
+
+.footnote[Kellstedt, P. M., & Whitten, G. D. (2013). The fundamentals of political science research. Cambridge University Press.]
+
+---
+
+## Difference of means: Import data with R
+
+```{r echo = FALSE, eval = FALSE}
+library(tidyverse)
+
+dat <- 
+  read_csv("https://www.parlgov.org/data/parlgov-development_csv-utf-8/view_cabinet.csv") %>%
+  dplyr::filter(country_name == "United Kingdom" &
+                  party_name_short %in% c("Con", "Lab"))
+
+dat <-
+  dat %>%
+  dplyr::filter(prime_minister == 1) %>%
+  mutate(duration_days = as.numeric(lead(start_date) - start_date))
+
+write.csv(dat, file = "../data/uk_cabinets.csv", row.names = F)
+
+```
+
+
+```{r}
+my_data <- 
+  read.csv("https://raw.githubusercontent.com/fraba/GOVT6139/main/data/uk_cabinets.csv")
+```
+
+
+```{r echo = FALSE}
+library(DT)
+datatable(my_data, options = list(scrollX = TRUE, pageLength = 4))
+```
+
+
+---
+
+## Difference of means: Visualise data with R (boxplot)
+
+```{r fig.height=3, fig.width=4}
+library(ggplot2)
+ggplot(data = my_data, aes(x = party_name_short, y = duration_days)) + geom_boxplot()
+```
+
+---
+
+## Difference of means: Visualise data with R (density) 
+
+```{r fig.height=3, fig.width=7, out.width='80%'}
+library(ggplot2)
+ggplot(data = my_data, aes(x = duration_days, colour = party_name_short)) + geom_density()
+```
+
+---
+
+## Difference of means: Visualise data with R (t-test) 
+
+After visually inspecting the distribution of the data, let's run the t-test...
+
+```{r}
+t_test_result <- t.test(formula =  duration_days ~ party_name_short, data = my_data)
+print(t_test_result)
+```
+
+**Hypothesis**: In the UK Labour-led cabinets last longer than Conservative-led cabinets.
+
+**Result from statistical analysis**: Although on average Labour-led cabinets last longer (`r round(t_test_result$estimate, 2)`), we can't reject the null hypothesis of no statistical association (as the $p-value$ is `r round(t_test_result$p.value, 2)` $>0.05$).
+
+---
+
+## Correlation coefficient (two continuous variables)
+
+Pearson’s correlation coefficient
+
+$$ r = \frac{COV_{XY}}{\sqrt{VAR_XVAR_Y}} $$ 
+
+.content-box-yellow[
+
+Let's now test this hypothesis: The larger the proportion of seats in Parliament of the Prime Minister's party, the longer the duration of the cabinet.
+
+]
+
+
+.footnote[Kellstedt, P. M., & Whitten, G. D. (2013). The fundamentals of political science research. Cambridge University Press.]
+
+--
+
+```{r echo = FALSE}
+library(DT)
+datatable(my_data, options = list(scrollX = TRUE, pageLength = 2))
+```
+
+---
+
+## Correlation coefficient (Code new variable and visualise)
+
+```{r}
+my_data$prop_seats <- my_data$seats / my_data$election_seats_total
+```
+
+(Note in R, I use `$` to access columns in a dataframe)
+
+
+```{r fig.height = 3, fig.width=3, out.width="32%"}
+ggplot(my_data, aes(x = prop_seats, y = duration_days)) + geom_point()
+```
+
+---
+
+## Correlation coefficient (Pearson's test)
+
+```{r}
+cor_test_result <- cor.test(x = my_data$prop_seats, y = my_data$duration_days)
+print(cor_test_result)
+```
+
+
+Statistical results:
+
+* The two variables are **positively correlated** (cor = `r round(cor_test_result$estimate, 2)`); yet
+
+* The two variables are not **significantly correlated** ( $p$-value = `r round(cor_test_result$p.value, 2)`).
+
+We can't reject the null hypothesis of no association. 
+
+---
+
+# Summary 
+
+1. The three approaches to collecting data: observation, survey, experiment.
+
+2. Sampling: Targe population, Sample, Sampling frame.
+
+3. Measurement: Operationalisation and variable construction.
+
+4. Analysis: Using three bivariate hypothesis tests.
+
+---
+
+class: segue-clue
+
+# Check-in
+
+---
+
+class: segue-red
+
+# Individual task
 
 ---
