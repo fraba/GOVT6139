@@ -225,7 +225,7 @@ Note: The allocation population-sample can be *proportionate* or *disproportiona
 
 ---
 
-class: segue-blue
+class: segue-red
 
 # Task 1: Sampling
 
