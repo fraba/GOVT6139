@@ -579,6 +579,16 @@ We can't reject the null hypothesis of no association.
 
 4. Analysis: Using three bivariate hypothesis tests.
 
+# Reminder
+
+.content-box-red[
+
+* An anonymous evaluation survey is available this week if you want to provide any (always appreciated) feedback on the unit. This is the last survey before the official USS. 
+
+* Next week, remember to install R and RStudio on your laptop (both free, like in free beer) and bring your laptop to class for the data analysis lab!
+
+]
+
 ---
 
 class: segue-clue
