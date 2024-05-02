@@ -1,16 +1,25 @@
 ---
 title: "GOVT6139</br>Research design"
-subtitle: "Week 10</br>Quantitative Methods (II) </br> Data analysis"
+subtitle: "Week 10</br>Quantitative Methods: Data Analysis Lab"
 author: "Francesco Bailo"
 institute: "The University of Sydney"
-date: "Semester 1, 2023 (updated: `r Sys.Date()`)"
+date: "Semester 1, 2024 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
-    lib_dir: libs
+    css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+    self_contained: false # if true, fonts will be stored locally
+    seal: true # show a title slide with YAML information
+    includes:
+      in_header: "assets/mathjax-equation-numbers.html"
     nature:
+      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+      navigation:
+        scroll: false # disable slide transitions by scrolling
+
 ---
 
 background-image: url(https://upload.wikimedia.org/wikipedia/en/6/6a/Logo_of_the_University_of_Sydney.svg)
@@ -22,847 +31,811 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
                       dev = 'svg', out.width = "45%", fig.width = 6,
                       fig.align="center")
 
+options(scipen = 999)
 ```
 
 ---
 
 ## Acknowledgement of Country
 
-I would like to acknowledge the Traditional Owners of Australia and recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
 
 ---
+
 
 ## Course outline
 
 .pull-left[
 
-Week 1: Introduction
+**Week 1**: Introduction
 
-Week 2: Foundations: Ontology and Epistemology
+**PART I PRELIMINARY CONSIDERATIONS (Weeks 2-5)**
 
-Week 3: Research Design (I): Questions, Theories, Hypotheses, Variables, Measurements
+**Week 2**: The Selection of a Research Approach
 
-Week 4:	Research Design (II): Case selection
+**Week 3**: Review of the Literature
 
-Week 5: Research Design (III): Causal Inference
+**Week 4**: The Use of Theory
 
-Week 6: Qualitative Methods (I): Data Collection 
+**Week 5**: Writing Strategies and Ethical Considerations + Guest lecture w/t Christopher Pepin-Neff 
 
-Week 7: Qualitative Methods (II): Data Analysis 
+**PART II DESIGNING RESEARCH (Weeks 6-12)**
+
+**Week 6**: The Introduction **no seminar** (public holiday)
+
+⏸️ *Mid Semester break* ⏸️
 
 ]
 
 .pull-right[
 
-⏸️ *Mid Semester break* ⏸️
 
-Week 8: Quantitative Methods (I): Data Collection
+**Week 7**: The Purpose Statement 
 
-*Week 9: 🎉 Public holiday 🎉*
+**Week 8**: Research Questions and Hypotheses + Guest Lecture w/t Charles Robert Butcher 
 
-<mark>Week 10: Quantitative Methods (II): Data Analysis</mark> 
+**Week 9**: Quantitative Methods 
 
-Week 11: Quantitative Methods (II): Data Analysis lab
+**Week 10**: Quantitative Methods: Data Analysis Lab (Make sure you install R and RStudio) 👈
 
-Week 12: Research Proposal: Peer Feedback Workshop Week 
+**Week 11**: Qualitative Methods + Guest lecture w/t Peter Chen
 
-Week 13: New frontiers and Conclusions
+**Week 12**: Mixed Methods Procedures + Guest lecture w/t Assel Mussagulova
+
+**Week 13**: Conclusions
+
 
 ]
+
 
 ---
 
 ## Today's class
 
-### Introduction to quantitative data collection (continued...)
-
-- Can we trust survey research?
-
-### Introduction to quantitative data analysis
-- Variables
-
-- Quantitative Data Analysis
-
-    - Univariate analysis (One variable)
-    
-    - Bivariate analysis (Two variables)
-    
-    - Multivariate analysis (Many variables)
-    
-- R & RStudio
-
-    
----
-
-### General principles of good writing (not specific to this course)
-
-.pull-left[
-
-### Suggestions
-
-- Start with a plan
-- Organise using subheadings
-- Organise ideas into paragraphs
-- Start each paragraph with a clear topic sentence – that summarises the main idea of that paragraph
-- Communicate clearly
-- Use active voice
-- Assume an educated, but non- specialist audience.
-
-]
-
-.pull-right[
-
-### Things to avoid
-
-- Overly long paragraphs
-- Less common – overly short paragraphs
-- Overly long sentences
-- Overuse of passive voice
-- Overuse of quotes
-    - Use quotes selectively
-    - Usually better to paraphrase
-- Plagiarism
-    - Quotes need both a citation and quotation marks
-    - University policies treat accidental and intentional plagiarism the same
-
-
-]
-
----
-
-## Quick recap/reflection on Survey research 
-
-–	Are surveys useful tools?
-
-–	Why / why not?
-
-–	What are the strengths and weaknesses of this approach compared to *interviews*?
-
-.center[<mark>Respond on Canvas then copy/paste to Padlet</mark>]
-
-
-```{r echo = F}
-library(countdown)
-countdown(minutes = 5, seconds = 00)
-```
-
----
-class: inverse, center, middle
-
-# Variables
-
----
-
-## Recap: Variables (I)
-
-> A variable is a characteristic of a unit being observed that may assume more than one of a set of values to which a **numerical measure** or a **category** from a classification can be assigned (e.g. income, age, weight, etc., and “occupation”, “industry”, “disease”, etc.)
-
-OECD https://stats.oecd.org/glossary/detail.asp?ID=2857
-
----
-
-## Recap: Variables (II)
-
-*An attribute that can take on a range of values (e.g. for individuals: education level, age, gender; for countries; type of political regime, economic performance)*
-
-- **Independent variable** (the presumed cause)
-- **Dependent variable** (the presumed effect)
-- **Control variables** (any other variables that may be expected to influence the dependent variable)
-
-.center[<mark>The effect of $X$ (independent variable) on $Y$ (dependent variable), controlling for $Z$ (control variable(s))</mark>]
-
-$$ Y = X + Z $$
-
-### Examples: What is the independent variable and dependent variable?
-
-- What effect does education have on political participation?
-
-- What effect does social media use have on trust in government?
-
-- What effect do gender quotas have on the proportion of women in parliament?
-
-
----
-
-## Variables and measurement
-
-Depending on how variables are measured, they can be one of three types:
-
-1. **Nominal variable** (categorical): no hierarchy (e.g. religion, sex)
-
-    * **Dichotomous variable**: Type of nominal variable where there are only two values (e.g. whether voted / sex)
-    
-2. **Ordinal variable** (categorical): some hierarchy (e.g. income group, level of education, regime type)
-
-3. **Interval variable** (continuous): (e.g. age, income)
-
-**Note**: 
-
-* These categorizations here refer to the way the variable is measured; but ...
-
-* whereas the distinction between independent and dependent variables refers to their role in the hypothesis
-
----
-
-### Questions for you: What type of variables are these (nominal, ordinal or interval)?
-
-(Answer on Menti: https://www.menti.com/alf6dubihfkj)
-
-#### Satisfaction with democracy:
-
-> On the whole, are you very satisfied, fairly satisfied, not very satisfied or not at all satisfied with the way democracy works in Australia? Response categories [Very satisfied; fairly satisfied; not very satisfied; not at all satisfied]
-
-
-#### Leader popularity:
-
-> Using a scale from 0 to 10, please show how much you like or dislike the party leaders. If you don't know much about them, you should give them a rating of 5.
-
-#### Vote:
-
-> In the Federal election for the House of Representatives on Saturday 18 May, which party did you vote for first in the House of Representatives? Response categories [Liberal; Labor; National; Greens; Other; Did not vote]
 
 ---
 
 class: inverse, center, middle
 
-# Univariate analysis
-
----
-
-## Univariate Analysis (One Variable)
-
-### Ways to analyze
-
-- Mean (the average)
-- Other measures of central tendency - median and mode
-- Distribution of responses (e.g. can look at percentage who ‘agree’ or ‘disagree’ to an item)
-
-### How to present
-
-- Tables
-- Graphs – e.g. bar graph, pie chart
-
-###Example findings
-
-- 25% of Australians think that people in government can be trusted.
-- On average Australians rated Scott Morrison at 5.1 on a scale from 0-10 of how much they liked the leader
-
----
-
-### Univariate Analysis: Example table Approval of leadership changes, 2010-2015
-
-*Australian Election Study* 
-
-Question wording: 
-
-> 2019: Do you approve or disapprove of the way the Liberal Party handled the leadership change in August of last year, when Scott Morrison replaced Malcolm Turnbull? [strongly approve, approve, disapprove, strongly disapprove] (Similar questions in 2010, 2013 and 2016)
-
-|                                                       |     Approve (%)    |     Disapprove (%)    |
-|-------------------------------------------------------|--------------------|-----------------------|
-|     2010: Julia Gillard replaced Kevin Rudd           |     26             |     74                |
-|     2013: Kevin Rudd replaced Julia Gillard           |     42             |     58                |
-|     2015: Malcolm Turnbull replaced Tony Abbott       |     49             |     51                |
-|     2018: Scott Morrison replaced Malcolm Turnbull    |     26             |     74                |
-
----
-
-## Univariate Analysis: Example Satisfaction with democracy
-
-*Australian Election Study* 
-
-Question wording:
-
-> On the whole, are you very satisfied, fairly satisfied, not very satisfied or not at all satisfied with the way democracy works in Australia? (2019 survey responses)
-
-|     Very satisfied            |     8%      |
-|-------------------------------|-------------|
-|     Fairly satisfied          |     51%     |
-|     Not very satisfied        |     29%     |
-|     Not   at all satisfied    |     12%     |
-|     Total                     |     100%    |
-
----
-
-class: inverse, center, middle
-
-# Bivariate analysis
-
----
-
-## Bivariate Analysis (Two variables)
-
-### Looking at the relationship between two variables 
-
-### Different kinds of variables – different analyses
-
-- If you have two categorical variables (nominal variables, ordinal variables) – **tables, bar graphs**
-
-- If you have two interval (continuous) variables – **scatterplots**
-
-- If you have one categorical variable (nominal / ordinal) and one interval variable – **group means, line graph**
+# Quantitative Methods: Data Analysis Lab (with R)
 
 
 ---
 
-## Bivariate Analysis: Example table 
+## Week 10 Learning Objectives
 
-## Leadership change and satisfaction with democracy
+- Appreciate what R & Rstudio are and what they can do for you
 
-*Shows the relationship between approval of leadership change (when Malcolm Turnbull replaced Tony Abbott), and satisfaction with democracy.*
+With R and RStudio, learn how to
 
-|     Approval of leadership change    |           Satisfied with democracy (%)    |           Not satisfied with democracy (%)    |                 Total (%)    |
-|--------------------------------------|-------------------------------------------|-----------------------------------------------|------------------------------|
-|     Strongly     disapprove          |           38                              |           62                                  |           100                |
-|           Disapprove                 |           54                              |           46                                  |           100                |
-|           Approve                    |           72                              |           28                                  |           100                |
-|     Strongly approve                 |           75                              |           25                                  |           100                |
+- Create, save and run an R script file
 
----
+- Install new packages 
 
-### Bivariate Analysis: Example bar graph
+- Load data from Excel and CSV data files
 
-### Leadership change and satisfaction with democracy
+- Visualise your variables
 
-*Shows the relationship between approval of leadership changes (in 2010, 2015 and 2018), and satisfaction with democracy*
-
-.center[<img src = '../img/cameron-05.png' width = '90%' ></img>]
+- Run bivariate and multivariate statistical tests
 
 ---
 
-### Bivariate analysis example: Satisfaction with democracy
+## Practical advise to follow this seminar
 
-*Source: Australian Election Study*
+- Launch RStudio on your laptop
 
-> On the whole, are you very satisfied, fairly satisfied, not very satisfied or not at all satisfied with the way democracy works in Australia?
+- Keep these slides open in on your computer (so you can copy/paste into RStudio) move to any slide if needed
 
-.center[<img src = '../img/cameron-01.png' width = '85%' ></img>]
+- You don't need to understand or replicate everything during the seminar
+
+- It's OK to feel a bit overwhelmed
+
+<center><iframe src="https://gifer.com/embed/jU" width=240 height=134.88 frameBorder="0" allowFullScreen></iframe></center>
+
+.content-box-yellow[ 
+
+### `r icons::fontawesome("location-arrow")` The goal of this seminar is to gently walk you into what R could do for you. But this is not a crush course into R.
+
+]
+
+
+---
+class:  segue-red
+
+# R and RStudio
+
+.center[<img src="https://www.r-project.org/logo/Rlogo.svg" style="width: 25%" /> &nbsp; &nbsp; &nbsp; <img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg" style="width: 40%" /> ]
+
 
 ---
 
-### Bivariate analysis (sub-group means) Leadership popularity (0-10 scale) by gender
+## R and RStudio
 
-.center[<img src = '../img/cameron-08.png' width = '100%' ></img>]
+* <img src="https://www.r-project.org/logo/Rlogo.svg" style="width: 8%" /> is an *objected-oriented* computer language, that is a "formal language used to communicate with a computer"). 
 
+    * It is widely used among social scientists to work with data and statistical applications...
+    
+    * ... but it's a fully fledged computer language (so you can use it to send a rocket to Mars, if you want). 
+
+--
+
+* <img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg" style="width: 18%" /> is an application - formally, an integrated development environment (IDE) - designed to facilitate using R. 
+
+    * RStudio comes in two versions: a desktop application and a server application (which you access from a browser)
+    
 ---
 
-## Bivariate Analysis (Two variables)
+## R and RStudio
 
-### Relationships between two continuous variables
 
-- A variable is *related* or *unrelated* to another
 
-- A variable is *positively* or *negatively* related to another
+Using a **car metaphor**...
 
-- A variable is *strongly* or *weakly* related to another
-
-- A variable has a *large* of *small* effect on another
-
-- A variable is *significantly* or *insignificantly* related to another
-
----
-
-## Bivariate Analysis (Two variables)
-
-### Relationships between two interval (continuous) variables
-
-- The **correlation coefficient** (or $r$) measures the strength and direction of a linear relationship between two variables on a scatterplot.
-
-- A complete lack of relationship: $r = 0$
-
-- A completely negative relationship: $r = -1$
-
-- A completely positive relationship: $r = 1$
-
-- Some positive relationship: $0 < r < 1$
-
-- Some negative relationship: $-1 < r < 0$
-
----
-
-## Scatterplots
-
-### Related or unrelated? (What is r?)
-
-```{r echo = FALSE}
-library(MASS)
-library(tidyverse)
-```
-
+.center[<img src="../img/r-vs-rstudio.jpeg" width = '45%'></img>]
 
 .pull-left[
 
-```{r echo = FALSE, out.width='100%', fig.width = 3, fig.height = 3}
+If <img src="https://www.r-project.org/logo/Rlogo.svg" style="width: 16%" /> is the **engine**, 
 
-set.seed(5)
-# create the variance covariance matrix
-sigma<-rbind(c(1,0.8), c(0.8, 1))
-# create the mean vector
-mu<-c(10, 5) 
-# generate the multivariate normal distribution
-df<-as.data.frame(mvrnorm(n=1000, mu=mu, Sigma=sigma))
+]
+
+.pull-right[
+<img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg" style="width: 36%" /> is the **dashboard** (and the steering wheel). 
+]
 
 
-ggplot(data = df, aes(V1, V2)) + geom_point() + theme_bw() + 
-  labs(x = "X", y = "Y", caption = sprintf("Related: r = %s", round(cor(df$V1, df$V2), 2)))
+---
 
-```
+### Rstudio: Let's creat our first R script
+
+.center[<img src="../img/rstudio-open-new-r-script.gif" width = '80%'></img>]
+
+---
+
+### Rstudio: Let's creat our first R script
+
+An R script is a text document that we can edit and save it for later use. 
+
+An R script has a ".R" extension (sometimes lower-cased, ".r"). 
+
+I contains our R code and it can be run by R.
+
+When you open a new R script document it will be blank.
+
+---
+
+## RStudio user interface: How does it look?
+
+After launching RStudio, you should see four windows. Each windows has a number of tabs (like in a web browser). The most important tabs are:
+
+.pull-left[
+
+After launching RStudio, you should see four windows. Each windows has a number of tabs (like in a web browser). The most important tabs are:
 
 ]
 
 .pull-right[
 
-```{r echo = FALSE, out.width='100%', fig.width = 3, fig.height = 3}
-
-set.seed(5)
-# create the variance covariance matrix
-sigma<-rbind(c(1,0.01), c(0.01, 1))
-# create the mean vector
-mu<-c(10, 5) 
-# generate the multivariate normal distribution
-df<-as.data.frame(mvrnorm(n=1000, mu=mu, Sigma=sigma))
-
-
-ggplot(data = df, aes(V1, V2)) + geom_point() + theme_bw() + 
-  labs(x = "X", y = "Y", caption = sprintf("Unrelated: r = %s", round(cor(df$V1, df$V2), 2)))
-
-```
+.center[<img src="../img/rstudio-ui.svg" style="width: 70%" />]
 
 ]
 
+1. **Upper-left window**: Your source code appears in the **source editor**.
+
+2. **Lower-left window**:  The **console**. Your R code will execute here. Code output (including errors and messages) is visualised here.
+
+3. **Lower-right window**: Your local *files* and *plots* can be accessed from here. 
+
+2. **Upper-right window**: This is a list of objects in your current **environment**.
+
+
 ---
 
-### Positively or negatively related?
+### RStudio user interface: How does it look?
+
+
+.center[<img src = '../img/rstudio-ui.gif' width = '75%'></img>]
+
+---
+
+class: segue
+
+# Create, save and run an R script file in RStudio
+
+---
+
+## RStudio: Running code from the editor
+
+If you want to run some code (and for *run* we mean *write* the code, then ask run to *execute* it) you can add it to a new document in your **source editor**. 
+
+In your **source editor** each tab represents a different document. These are text documents containing R code. 
+
+You can write your code here and you can save your document containing the code for later use (with "File" then "Save") as you would save a Word document. 
+
+Once you have a line of code you can *place your cursor* on the line and then hit "Run". 
+
+#### By hitting "Run"...
+
+1. You ask *RStudio* to copy paste your line into the **console**;
+
+2. You ask *R* to execute your code. R will kindly do it and will print any outcome below your code directly in the **console**. 
+
+3. If your code results in creating a *new object*, the object will now appear in the **environment** window.
+
+---
+
+### RStudio: Running code from the editor
+
+
+.center[<img src = '../img/rstudio-running-code.gif' width = '75%'></img>]
+
+
+---
+
+## RStudio: Create and save a script
+
+#### To create a new script 
+- File -> New File -> R Script (or <img src="../img/rstudio-new-button.png" style="width: 4%" />).
+
+#### To save a script
+- File -> Save (or <img src="../img/rstudio-save-button.png" style="width: 4%" />). RStudio will automatically append .r or .R at the end of the filename. This is the extension of R scripts.
+
+.content-box-red[Note: By saving a script you don't save any data!]
+
+#### To run selectet lines 
+- Cursor on line in open script and <img src="../img/rstudio-run-button.png" style="width: 8%" />; or 
+- Highlight more lines in open script (these will be executed top-down) and <img src="../img/rstudio-run-button.png" style="width: 8%" />.
+
+---
+class: segue 
+
+# Install new packages
+
+---
+
+## Understand functions and objects
+
 
 .pull-left[
 
-```{r echo = FALSE, out.width='100%', fig.width = 3, fig.height = 3}
+.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Medium_box%2C_open.jpg/567px-Medium_box%2C_open.jpg' width = '30%'></img> <img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Brooch%2C_arrow_%28AM_13105-1%29.jpg/640px-Brooch%2C_arrow_%28AM_13105-1%29.jpg' width = '30%'></img> <img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Bonsack_machine.png/575px-Bonsack_machine.png' width = '30%'></img>]
 
-set.seed(5)
-# create the variance covariance matrix
-sigma<-rbind(c(1,-0.8), c(-0.8, 1))
-# create the mean vector
-mu<-c(10, 5) 
-# generate the multivariate normal distribution
-df<-as.data.frame(mvrnorm(n=1000, mu=mu, Sigma=sigma))
+* A **function** is a machine that can optionally take an *input* (a list of **arguments** in computer science) - and return an *output*.
 
+* With the arrow `<-` we tell R where to store the *output* from the function. 
 
-ggplot(data = df, aes(V1, V2)) + geom_point() + theme_bw() + 
-  labs(x = "X", y = "Y", caption = sprintf("Negatively related: r = %s", round(cor(df$V1, df$V2), 2)))
-
-```
+* In R information is stored in **objects**. The objects in the *environment* are of different **types** as they contain different type of information. They can be data or functions.
 
 ]
 
 .pull-right[
 
-```{r echo = FALSE, out.width='100%', fig.width = 3, fig.height = 3}
-
-set.seed(5)
-# create the variance covariance matrix
-sigma<-rbind(c(1,0.8), c(0.8, 1))
-# create the mean vector
-mu<-c(10, 5) 
-# generate the multivariate normal distribution
-df<-as.data.frame(mvrnorm(n=1000, mu=mu, Sigma=sigma))
-
-
-ggplot(data = df, aes(V1, V2)) + geom_point() + theme_bw() + 
-  labs(x = "X", y = "Y", caption = sprintf("Positively related: r = %s", round(cor(df$V1, df$V2), 2)))
-
-```
+.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/3/3b/Function_machine2.svg' width = '90%'></img>]
 
 ]
 
 ---
 
-## Strongly or weakly related?
+## R packages
+
+* R is open source and highly modular. 
+
+* When you first install R, that installation comes with some base functions. But you definitely will need to more functions.
+
+* Although you can create your functions, it would be great if you could use functions created by someone else... Well, you can!
 
 .pull-left[
 
-```{r echo = FALSE, out.width='100%', fig.width = 3, fig.height = 3}
+* By .content-box-yellow[installing] a **package** and .content-box-yellow[loading] it into your R environment you get access to
 
-set.seed(5)
-# create the variance covariance matrix
-sigma<-rbind(c(1,-0.75), c(-0.75, 1))
-# create the mean vector
-mu<-c(10, 5) 
-# generate the multivariate normal distribution
-df<-as.data.frame(mvrnorm(n=1000, mu=mu, Sigma=sigma))
-
-
-ggplot(data = df, aes(V1, V2)) + geom_point() + theme_bw() + 
-  labs(x = "X", y = "Y", caption = sprintf("Strongly related: r = %s", round(cor(df$V1, df$V2), 2)))
-
-```
+  1. Functions created by others;
+  2. Documentation explaining how to use these functions; 
+  3. Sometime, data. 
 
 ]
 
 .pull-right[
 
-```{r echo = FALSE, out.width='100%', fig.width = 3, fig.height = 3}
-
-set.seed(5)
-# create the variance covariance matrix
-sigma<-rbind(c(1,0.4), c(0.4, 1))
-# create the mean vector
-mu<-c(10, 5) 
-# generate the multivariate normal distribution
-df<-as.data.frame(mvrnorm(n=1000, mu=mu, Sigma=sigma))
+<center><img src = '../img/happy-child-with-package.webp' width = '60%'></img></center>
+]
 
 
-ggplot(data = df, aes(V1, V2)) + geom_point() + theme_bw() + 
-  labs(x = "X", y = "Y", caption = sprintf("Weakly related: r = %s", round(cor(df$V1, df$V2), 2)))
+---
+
+### How do you install a new package?
+
+- In your console, write `install.packages("tidyverse")` and hit return. This will install the package "tidyverse".
+.content-box-yellow[Note: The name of the package will need to be quoted.]
+- Alternatively, you can click on "Packages" in the lower-right window of RStudio and then "Install".
+.content-box-yellow[Note: You only need to install the package once on your computer!]
+
+### How to you load a package in R?
+- To load a package, you type `library(tidyverse)` and hit return in your console. 
+.content-box-yellow[Note: The name of the package will NOT need to be quoted this time.]
+
+A common error that you might get is
+
+> Error in some_function() : could not find function "some_function"
+
+This means that the function was **misspelled** OR that the **package with that function hasn't been loaded yet**.
+
+---
+
+class: segue
+
+# Load data from CSV and Excel data files
+
+---
+
+### Import the data from a CSV using RStudio
+
+Top-left window: "Environment" -> "Import Dataset" -> "Import From Text (base)..." -> Check the import panel -> "Import"
+
+.center[<img src = '../img/rstudio-import.gif' width = '80%'></img>]
+
+---
+
+## What happened? 
+
+When we use the RStudio **import feature** (shown before), we are actually asking RStudio to write this code for us. 
+
+```{r}
+
+health <- read.csv("../data/health.csv")
 
 ```
+
+After clicking "Import", you will see that code being executed in your console (of course with a different path to your file). 
+.content-box-yellow[Note: You might want to copy/paste that code from the console into your script so that you can quickly replicate it in the future.]
+
+This code does two things:
+
+1. The **function** `read.csv()` read a comma-separated file (CSV) file, which we specify within the two parenthesis and the two quote signs.
+
+2. The **assignment operator** `<-` take the result from the function and assign it to the object `health`.
+
+RStudio will also run another function immediately after `View()` that view the data just loaded in a new tab. You can always view a dataset in your environment by clicking on it...
+
+---
+
+## View the data
+
+.center[<img src = '../img/rstudio-view.gif' width = '65%'></img>]
+
+
+---
+
+class: segue-yellow
+
+# Task: Try know to use the import feature to read in an Excel data file
+
+(Top-left window: "Environment" -> "Import Dataset" -> "From Excel")
+
+
+---
+
+class: segue-red
+
+# Visualise your variables
+
+---
+
+### Let's first read in some new data from the Australian Election Study survey of 2022...
+
+.content-box-yellow[Note: You can download `aes_2022` from Canvas or read it directly from the Internet]
+
+```{r}
+aes_2022 <- read.csv("https://raw.githubusercontent.com/fraba/GOVT6139/main/data/aes_2022.csv")
+```
+
+Then let's have a look at the content with the `View()` function by clicking on the `aes_2022` in our environment
+
+.pull-left[
+
+#### Two variables are continuous (or numeric)
+
+* `age`
+* `left_right_position`
+
+]
+
+
+.pull-right[
+
+#### Four variables are categorical
+
+* `gender`
+* `state`
+* `most_important_issues_2022`
+* `vote_2022`
 
 ]
 
 ---
 
-### Bivariate Analysis: Example scatterplot
+### Let's summarise the content of each continuous variable with `summary()`
 
-### GDP per capita vs. electoral democracy in 1990, $r = 0.69$ 
+.content-box-green[
 
-*Source: Bolt et al. (2020); OWID based on V-Dem (v13)* 
+Note: To access a column in a data frame in R, we use the `$` dollar sign, like `name_dataframe$name_column`
 
-```{r echo = F, out.width='65%', fig.width = 5, fig.height = 4, message = FALSE, warning = F}
+]
 
-dat <- 
-  read.csv("~/Documents/GitHub/GOVT6139/data/gdp-per-capita-vs-electoral-democracy.csv") %>%
-  dplyr::filter(Year == 1990 & !is.na(GDP.per.capita), !is.na(electdem_vdem_owid))
+```{r}
+summary(aes_2022$age)
+```
 
-# cor(dat$GDP.per.capita, dat$electdem_vdem_owid)
-
-dat %>%
-  ggplot(aes(y = log(GDP.per.capita), x = electdem_vdem_owid)) +
-  geom_point() + theme_bw() + geom_smooth(method = "lm") +
-  labs(x = "Electoral democracy index", y = "GDP per capita (log)")
-
+```{r}
+summary(aes_2022$left_right_position)
 ```
 
 ---
-class: inverse, center, middle
 
-# Multivariate analysis
+### Let's summarise the content of each categorical variable with `table()`
 
----
-
-## Multivariate analysis (multiple variables)
-
-### Why multivariate analysis – in particular regression analysis?
-
-#### If we are interested in causal relationships between variables, regression analysis is superior to correlation analysis.
-
-#### Correlation analysis is often done as a first-cut analysis prior to regression analysis.
-
-- Remember correlation $\neq$ causation
-
-- Conditions for causality (correlation, time order, non-spuriousness)
-
-####  In regression analysis, you need to:
-
-- decide a direction of the relationship (i.e., impact of $X$ on $Y$) – researcher needs to make justified assumptions here
-
-- control the effects of other variables.
+```{r}
+table(aes_2022$gender)
+table(aes_2022$state)
+```
 
 ---
 
-## Linear regression model<sup>1</sup>
-
-This is the equation of the **model** for the line that **best fits** the points. 
-
-$$Y_i = \underbrace{\alpha}_{intercept} + \underbrace{\beta}_{slope} X_i + \underbrace{\epsilon_i}_{error\:term}$$
-*  **Coefficients (or parameters)**: $\alpha$ and $\beta$  are the intercept and the slope respectively of the line of best fit.
-
-* Little $i$ in $Y_i$ (and $X_i$, $\epsilon_i$)  means the value of $Y$ for each observation $i$ (or data point): $i$ will assume all value from our data set, one at the time. 
-
-* **Chance of error**: $\epsilon_i$ this captures the errors, as the line does not *perfectly* fit the data points.  
-
-    - That it, each data point is allowed to be off the regression line but
-    
-    - the chance of error is on *average* $0$.
-    
-.footnote[[1] Slides adapted from https://www.mattblackwell.org/files/teaching/gov50/regression.pdf]
-    
----
-
-## Linear regression model
-
-### How do you find the regression line?
-
-- **Fitted (or predicted) value** for each observation $i$: $\widehat{Y}_i = \widehat{\alpha} + \widehat{\beta} X_i$
-
-- **Residual/prediction error** $\widehat{\epsilon_i} = Y_i - \widehat{Y}$
-
-- A $\widehat{hat}$ identifies *estimated* (by the model) values. *Estimates* are our best guesses. 
-
-- This estimates are calculated using the *least squares method*, which *minimises* the **sum of squares residuals** (SSR). 
-
-.pull-left[$$SSR = \sum_{i=1}^{n} \widehat{\epsilon}^2_i$$]
-
-.pull-right[.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/5/53/Linear_least_squares_example2.png' width = '50%'></img>]]
-
----
-
-## Let's assume this data set with two variables: 
-
-* Our **dependent variable**, our *outcome*, is the *weight* in pounds measured on a given day. 
-
-* The **independent variable**, our *predictor*, is the number of *steps* walked the previous day.
-
-So, each record in our data set, or rows, will contain two measurements:
-
-| weight (in pounds) | steps (in 1000s) |
-|--------------------|------------------|
-| 170                | 15               |
-| 172                | 20               |
-| 173                | 21               |
-| ...                | ...              |
-
----
-
-Let's draw our data points (each record/row/observation is a point) and fit a line into it...
-
-
-```{r echo = FALSE, out.width = '85%'}
-library(magick)
-magick::image_read_pdf("../img/blackwell-regression-pages.pdf",
-                       pages = 1, density = 600)
+```{r}
+table(aes_2022$most_important_issues_2022)
+table(aes_2022$vote_2022)
 ```
 
 
-(Sources: https://www.mattblackwell.org/files/teaching/gov50/regression.pdf)
+---
+
+## Visualise data with ggplot2
+
+* **ggplot2** is the most widely used package to visualise data in R. 
+* It is effective for simple as well as very complex visualisation. 
+* If you want to learn only one visualisation package, it should probably be ggplot2. 
+
+
+.center[<img src = 'https://ggplot2.tidyverse.org/logo.png' width = '30%'></img>]
 
 ---
 
-$$\underbrace{\widehat{Y_i}}_{estimated\\(predicted)\:value} = \underbrace{\widehat{\alpha}}_{estimated\:intercept} + \underbrace{\widehat{\beta}}_{estimated\:slope} X_i + \underbrace{\widehat{\epsilon}_i}_{estimated\:error\:term\\(residual)}$$
+## The logics of ggplot2
 
-```{r echo = FALSE, out.width = '85%'}
-library(magick)
-magick::image_read_pdf("../img/blackwell-regression-pages.pdf",
-                       pages = 2, density = 600)
+ggplot2 builds your visualisation by *mapping* 
+
+* **variables** 
+
+onto 
+
+* **visual elements** or **aesthetics**: with the function `aes()` (e.g. lines, dots, colours, shapes, areas, labels, ect...) 
+
+
+```{r eval = F}
+
+ggplot(data = <data>, 
+       mapping = aes(<aesthetic> = <variable>,
+                     <aesthetic> = <variable>,
+                     <   ...   > = <   ...  >))
+# Don't run. Credit: Healy, 2018
+ 
+```
+
+---
+
+## The basics of ggplot2
+
+This creates a ggplot object, with all the instructions to map *variables* to *aesthetics.* But it won't visualise any data yet...
+
+```{r out.width="40%", fig.width=4, fig.height=3}
+library(ggplot2)
+
+ggplot(data = aes_2022, 
+       mapping = aes(x = left_right_position,
+                     y = age))
+```
+
+---
+
+### The basics of ggplot2
+
+After we have specified `data = <data>` and `mapping = aes(...)`, we need to pass at least an additional *layer* specifying the *geometry* we want, so that ggplot2 can visualise the mapping.  
+
+```{r out.width="40%", fig.width=4, fig.height=3}
+library(ggplot2)
+
+ggplot(data = aes_2022, 
+       mapping = aes(x = left_right_position,
+                     y = age)) +
+  geom_point()
+```
+
+---
+
+Or let's replace the `geom_point()` layer with `geom_jitter()`, which add a small amount of random variation... 
+
+```{r out.width="35%", fig.width=4, fig.height=3}
+library(ggplot2)
+
+ggplot(data = aes_2022, 
+       mapping = aes(x = left_right_position,
+                     y = age)) +
+  geom_jitter()
+```
+
+Do you see an association between the two variables? (We can test this hypothesis!)
+
+---
+
+## ggplot2 offers plenty of different geoms, dipending on what kind of variables you want to visualise.
+
+You can refer to this [cheatsheet](https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf) for a full list. 
+
+# Let's only review the most important...
+
+---
+
+### One variable: continuous x
+
+```{r}
+p <- ggplot(data = aes_2022, mapping = aes(x = left_right_position))
+```
+
+```{r out.width = "15%", fig.width=3, fig.height=3}
+p + geom_density()
+```
+
+```{r out.width = "15%", fig.width=3, fig.height=3}
+p + geom_histogram()
+```
+
+---
+
+### One variable: categorical x
+
+```{r}
+p <- ggplot(data = aes_2022, mapping = aes(x = vote_2022))
+```
+
+```{r out.width = "25%", fig.width=3, fig.height=3}
+p + geom_bar()
+```
+
+---
+
+### Two variables: continuous x , continuous y 
+
+```{r}
+p <- ggplot(data = aes_2022, mapping = aes(x = left_right_position, y = age))
+```
+
+```{r out.width = "15%", fig.width=3, fig.height=3}
+p + geom_point()
+```
+
+```{r out.width = "15%", fig.width=3, fig.height=3}
+p + geom_jitter()
+```
+
+---
+
+### Two variables: categorical x, continuous y 
+
+```{r}
+p <- ggplot(data = aes_2022, mapping = aes(x = gender, y = left_right_position))
+```
+
+```{r out.width = "15%", fig.width=3, fig.height=3}
+p + geom_boxplot()
+```
+
+```{r out.width = "15%", fig.width=3, fig.height=3}
+p + geom_col() # It sums values for each categories
+```
+
+---
+
+### Two variables: categorical x, categorical y 
+
+```{r}
+p <- ggplot(data = aes_2022, mapping = aes(x = gender, y = vote_2022))
+```
+
+```{r out.width = "25%", fig.width=3, fig.height=3}
+p + geom_count() # It sums values for each categories
+```
+
+Do we see any association? We can test this hypothesis too!
+---
+
+### Continuous function (e.g., date/year and some value)
+
+Let's bring in some new data first...
+
+```{r}
+midterms <- read.csv("https://raw.githubusercontent.com/fraba/GOVT6139/main/data/midterms.csv")
 ```
 
 
-(Sources: https://www.mattblackwell.org/files/teaching/gov50/regression.pdf)
+```{r}
+p <- ggplot(data = midterms, mapping = aes(x = year, y = seat.change))
+```
+
+```{r out.width = "25%", fig.width=3, fig.height=3}
+p + geom_line()
+```
 
 ---
 
-$$\underbrace{\widehat{Y_i}}_{estimated\\(predicted)\:value} = \underbrace{\widehat{\alpha}}_{estimated\:intercept} + \underbrace{\widehat{\beta}}_{estimated\:slope} X_i + \underbrace{\widehat{\epsilon}_i}_{estimated\:error\:term\\(residual)}$$
+class: segue-red
 
-```{r echo = FALSE, out.width = '85%'}
-library(magick)
-magick::image_read_pdf("../img/blackwell-regression-pages.pdf",
-                       pages = 3, density = 600)
+# Run bivariate and multivariate statistical tests
+
+### Bivariate analysis
+
+#### 1. Tabular analysis (two categorical variables)
+
+#### 2. Difference of means (one categorical and one continuous variable)
+
+#### 3. Correlation coefficient (two continuous variables)
+
+### Multivariate analysis
+
+#### 4\. Multivariate analysis (categorical and continuous variables predicting one continuous variables)
+
+---
+
+#### 1\. Tabular analysis (two categorical variables)
+
+**Hypothesis**: In the 2022 federal election, women were more likely than men to vote for the Labor party.  
+
+```{r out.width = "15%", fig.width=4, fig.height=3}
+ggplot(data = aes_2022, mapping = aes(x = gender, y = vote_2022)) + geom_count()
+```
+
+```{r}
+chisq.test(x = aes_2022$gender, y = aes_2022$vote_2022)
+```
+
+Figure and statistical test support this hypothesis. 
+
+---
+
+## Introducing formulas in R 
+
+* In R, formulas are expressions that define the relationship between a dependent variable and one or more independent variables. 
+
+* Formulas are often used in modelling functions like linear regression or other statistical tests. 
+
+Here is how formulas are structured and used in R:
+
+```{r eval = F}
+dependent_variable ~ independent_variable(s)
+```
+
+Here, the `~` (tilde) operator separates the dependent variable (left side) from the independent variables (right side). You find ~ on the top-left of your keyboard.
+
+* `y ~ x` This formula states that `y` (dependent variable) is modelled as a function of `x` (independent variable).
+
+* `y ~ x1 + x2` Here, `y` is modelled as a function of two independent variables, `x1` and `x2`.
+
+---
+
+#### 2\. Difference of means (one categorical and one continuous variable)
+
+**Hypothesis**: In the 2022 federal election, women were on average more left-leaning than men.
+
+```{r out.width = "15%", fig.width=4, fig.height=3}
+ggplot(data = aes_2022, mapping = aes(x = gender, y = left_right_position)) + geom_boxplot()
 ```
 
 
-(Sources: https://www.mattblackwell.org/files/teaching/gov50/regression.pdf)
-
----
-
-$$\underbrace{\widehat{Y_i}}_{estimated\\(predicted)\:value} = \underbrace{\widehat{\alpha}}_{estimated\:intercept} + \underbrace{\widehat{\beta}}_{estimated\:slope} X_i + \underbrace{\widehat{\epsilon}_i}_{estimated\:error\:term\\(residual)}$$
-
-```{r echo = FALSE, out.width = '85%'}
-library(magick)
-magick::image_read_pdf("../img/blackwell-regression-pages.pdf",
-                       pages = 4, density = 600)
+```{r}
+t.test(formula =  left_right_position ~ gender, data = aes_2022)
 ```
 
 
-(Sources: https://www.mattblackwell.org/files/teaching/gov50/regression.pdf)
 
 ---
 
-$$\underbrace{\widehat{Y_i}}_{estimated\\(predicted)\:value} = \underbrace{\widehat{\alpha}}_{estimated\:intercept} + \underbrace{\widehat{\beta}}_{estimated\:slope} X_i + \underbrace{\widehat{\epsilon}_i}_{estimated\:error\:term\\(residual)}$$
+#### 3\. Correlation coefficient (between two continuous variables)
 
-```{r echo = FALSE, out.width = '85%'}
-library(magick)
-magick::image_read_pdf("../img/blackwell-regression-pages.pdf",
-                       pages = 5, density = 600)
+**Hypothesis**: In the 2022 federal election, younger voters were on average more left-leaning than older voters.
+
+```{r}
+cor.test(x = aes_2022$left_right_position, y = aes_2022$age)
 ```
 
-
-(Sources: https://www.mattblackwell.org/files/teaching/gov50/regression.pdf)
-
----
-
-$$\underbrace{\widehat{Y_i}}_{estimated\\(predicted)\:value} = \underbrace{\widehat{\alpha}}_{estimated\:intercept} + \underbrace{\widehat{\beta}}_{estimated\:slope} X_i + \underbrace{\widehat{\epsilon}_i}_{estimated\:error\:term\\(residual)}$$
-
-```{r echo = FALSE, out.width = '85%'}
-library(magick)
-magick::image_read_pdf("../img/blackwell-regression-pages.pdf",
-                       pages = 6, density = 600)
-```
-
-
-(Sources: https://www.mattblackwell.org/files/teaching/gov50/regression.pdf)
+Yes, age is **positively** (cor = 0.11 $\rightarrow$ cor > 0) and **significantly** ( $p$-value = 0.0000037 $\rightarrow$ $p$-value < 0) associated with a right-leaning value (i.e., a higher value on the `left_right_position` scale form left (0) to right (10)). 
 
 ---
 
-### But why to stop to one independent variables or predictors?<sup>1</sup>
+#### 4\. Multivariate analysis (categorical and continuous variables predicting one continuous variables)
+
+Multivariate analysis is used when you want to assess the relationship between more than two variables, simultaneously. 
+
+More specifically, we might want to estimate how a number of independent variables can explain a single dependent variable. 
+
+This would a formula for a linear regression with one continuous dependent variable $Y$ and a number of independent variables $X_1$, $X_2$, $X_3$, etc.
 
 $$Y_i = \underbrace{\alpha}_{intercept} + \underbrace{\beta_1}_{coefficient\\first\:IV} \ \  \underbrace{X_{i1}}_{values\\first\:IV} \ + \ \underbrace{\beta_2}_{coefficient\\second\:IV} \ \  \underbrace{X_{i2}}_{values\\second\:IV} + ... + \underbrace{\epsilon_i}_{error\:term}$$
-#### Why do we want to add additional predictor variables (IVs)?
 
-1. We improve our **predictions** ($Y_i$), as we provide the model more information. (Of course this assumption rests on the *quality of information* we provide to the model) 
+For example, let's assume we want to explain political position in the Australian electorate using age and gender and state of residence - *simultaneously*. In R, we can specify the formula like this
 
-2. We can offer a better **interpretations** of the relationships among our variables: " $\beta_1$ is the effect of $X_i$ *holding all other independent variables constant* " => a.k.a. **ceteris paribus**.
-
-.footnote[[1] Adapted from https://www.mattblackwell.org/files/teaching/gov50/regression-ii.pdf]
-
----
-
-class: inverse, center, middle
-
-# Interpreting regression model results
-
----
-
-#### Example regression table: explaining satisfaction with democracy
-
-|                                                          |     2019              |     Standard errors    |
-|----------------------------------------------------------|-----------------------|------------------------|
-|     Sociotropic retrospective     economic evaluation    |           0.501***    |           (0.084)      |
-|           Approve leadership change                      |           0.562***    |     (0.1)              |
-|     Voted for election winner                            |     0.653**           |     (0.213             |
-|     Political interest                                   |     0.349***          |     (0.102)            |
-|     University degree                                    |     0.163             |     (0.14)             |
-|     Gender (female)                                      |     -0.161            |     (0.14)             |
-|     Age (deciles)                                        |     0.0712            |     (0.049)            |
-|     Partisanship (base category     Liberal partisan)    |                       |                        |
-|     Labor partisan                                       |     0.238             |     (0.256)            |
-|     National partisan                                    |     -0.159            |     (0.573)            |
-|     Greens partisan                                      |     -0.283            |     (0.316)            |
-|     Other partisan                                       |     -1.780***         |     (0.334)            |
-|     Non-partisan                                         |     -0.559*           |     (0.249)            |
-|     N                                                    |     1,956             |                        |
-|     R2                                                   |     0.36              |                        |
-
----
-
-#### Example regression table: explaining satisfaction with democracy (notes on previous table)
-
-* Four-point measure of satisfaction with democracy is the dependent variable. 
-
-* Standard errors in parentheses. 
-
-* Significance levels: * p<0.05, ** p<0.01, *** p<0.001 
-
-Source: Australian Election Study 2019.
-
----
-
-## How to interpret a regression table?
-
-#### What to look for
-
-##### P-values / statistical significance
-
-* $p<0.05$ is statistically significant (i.e. there is less than 5% probability the result occurred by chance). Often indicated by stars.*
-
-##### Regression Coefficients
-
-* **Sign** (+/-) indicates whether relationship between the independent variable (cause) and dependent variable (effect) is positive/negative
-
-* **Size** indicates how great an impact the independent variable has on the dependent variable. (For a one unit change in the Independent variable, there is … change in the dependent variable.)
-
-##### R-squared ( $R^2$ )
-–	shows how much the variation in the dependent variable is explained by a set of independent variables. (e.g. a $R^2$ of 0.54 means 54% variation in the dependent variable – this is high)
-
----
-
-## What do we mean with statistical significance?
-
-* Tells us whether our results we observe using our sample could have occurred by chance
-
-    - i.e. can you be confident that the relationship you identify is real - $\widehat{\beta} \approx \beta$ - and you would have an unlucky sample if the the relationship is not real, that is if $\widehat{\beta} \neq \beta$.
-     
-* As we are studying a sample, indicates likelihood relationship exists in the population
-
-* If $p<0.05$ (i.e. there is less than 5% probability the result occurred by chance) can reject null hypothesis (no relationship between variables)
-
-* Different $p$-levels e.g. $p<0.1$, $p<0.01$
-
----
-
-#### Example regression table: explaining satisfaction with democracy
-
-|                                                          |     2019              |     Standard errors    |
-|----------------------------------------------------------|-----------------------|------------------------|
-|     Sociotropic retrospective     economic evaluation    |           0.501***    |           (0.084)      |
-|           Approve leadership change                      |           0.562***    |     (0.1)              |
-|     Voted for election winner                            |     0.653**           |     (0.213             |
-|     Political interest                                   |     0.349***          |     (0.102)            |
-|     University degree                                    |     0.163             |     (0.14)             |
-|     Gender (female)                                      |     -0.161            |     (0.14)             |
-|     Age (deciles)                                        |     0.0712            |     (0.049)            |
-|     Partisanship (base category     Liberal partisan)    |                       |                        |
-|     Labor partisan                                       |     0.238             |     (0.256)            |
-|     National partisan                                    |     -0.159            |     (0.573)            |
-|     Greens partisan                                      |     -0.283            |     (0.316)            |
-|     Other partisan                                       |     -1.780***         |     (0.334)            |
-|     Non-partisan                                         |     -0.559*           |     (0.249)            |
-|     N                                                    |     1,956             |                        |
-|     R2                                                   |     0.36              |                        |
-
----
-
-## Reflections
-
-
-* What would you perceive to be the strengths of the quantitative approach?
-
-* What would be the weaknesses?
-
-* For what research questions would quantitative research be a useful tool?
-
-* For what research questions would other approaches be better suited?
-
-.center[<mark>Respond in Canvas</mark>]
-
-
-```{r echo = F}
-library(countdown)
-countdown(minutes = 7, seconds = 00)
+```{r eval = F}
+left_right_position ~ age + gender + state
 ```
 
 ---
 
-### Quantitative approach strengths
+#### 4\. Multivariate analysis (categorical and continuous variables predicting one continuous variables)
 
-* Generalizability
+And this is how we would run the linar regression on our `aes_2022` data with the `lm()` function:
 
-* Can be replicated
+```{r}
+lm_results <- lm(formula = left_right_position ~ age + gender + state, data = aes_2022)
+```
 
-* Process more objective
+Let's now summarise the results with `summary()` to get some of the key statistics our regression. 
 
-* Can do large-N analysis (large number of observations – e.g. countries, or people)
-
-* Good for theory testing 
-
-### Quantitative approach weaknesses:
-
-* Can complex concepts be measured / quantified?
-
-* Large-N approach has trade-offs in terms of specific case knowledge
+```{r eval = F}
+summary(lm_results)
+```
 
 ---
 
-## Group task (if time allows)
+```{r echo = F}
+summary(lm_results)
+```
 
-* Download the "Explaining the Trump vote" paper from Canvas (Week 10 module).
+---
 
-* Go to Table 1 on page 531 (you can read the rest of the paper at home in interested!)
+### Reading through the summary statistics of a linear regression ... 
 
-**Note**: As it is common, the table reports more than one model. Coefficients from each model are in a different column. You might also note that each model has different combination of independent variables.
+In general, when it comes to association between variables there are two aspects we want to focus on:
 
-1. Identify the dependent variable (DV) and the independent variables (IVs)
+1. Size and direction of the association;
 
-2. Identify the coefficients that are *significant*.
+2. Statistical significance of the association.
 
-3. Given the *sign* of the significant coefficients, what intepretations do you give to that relationships (IV - DV)?
+For (1) we check the "Estimate" for each variable while for (2) we check the $p$-value. 
 
-In our own words, explain the results. What do the results from the models tell us about the Trump vote?
+.center[<img src = "../img/R-lm-summary-01.png" width = "40%"></img>]
+
+---
+
+### Reading through the summary statistics of a linear regression: Continous independent variable
+
+In the case of `age`, we can say that
+
+1. There is a positive association between age and a more right-leaning position: 
+
+  * Specifically, keeping the other two independent variables fixed, for each additional year voters are expected to move on the 0-10 political position scale by 0.01 towards the right-wing (is this a big effect?).  
+
+2\. `age` is significantly associated with political position as $p$-value is really small. 
+
+.center[<img src = "../img/R-lm-summary-02.png" width = "40%"></img>]
+
+---
+
+### Reading through the summary statistics of a linear regression: Categorical independent variable with two values
+
+`gender` is a categorical variable that can takes two values "Female" or "Male". Here, R shows the estimate for `gender=Male`. So we interpret the results so that
+
+1. An average male voter is expected to be on the 0-10 political position scale 0.636 on the right than an average female voter.   
+
+2. The association between `gender` and political position is also statistically significant.
+
+.center[<img src = "../img/R-lm-summary-03.png" width = "40%"></img>]
+
+---
+
+### Reading through the summary statistics of a linear regression: Categorical independent variable with more than two values
 
 
+`state` is a categorical value that can takes these values: `r paste0(names(table(aes_2022$state)), collapse = ", ")`. If for `gender`, the baseline for the estimates was `gender=Female` now is `state=Australian Capital Territory`. So each estimate refer to the variation for an average voter from the mentioned state relatively to an average voter from the Australian Capital Territory. 
+
+We see that all estimates are significant (with the exception of the variation ACT->NT) and all estimates indicate that ACT is the most left-leading among state and territories.  
+
+
+.center[<img src = "../img/R-lm-summary-04.png" width = "40%"></img>]

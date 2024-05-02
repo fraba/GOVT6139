@@ -281,6 +281,7 @@ Once you have a line of code you can *place your cursor* on the line and then hi
 
 .center[<img src = '../img/rstudio-running-code.gif' width = '95%'></img>]
 
+
 ---
 
 class: inverse, center, middle
