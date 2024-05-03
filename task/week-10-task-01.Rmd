@@ -1,5 +1,5 @@
 ---
-title: "Week 11 - Task 01"
+title: "Week 10 - Task 01"
 author: "Francesco Bailo"
 date: "2024-05-02"
 output: html_document
@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<font size="6">To reach to this page https://shorturl.at/nzM09 or from Canvas.</font>
+<font size="6">To reach to this page  or from Canvas.</font>
 
 ```{r}
 aes22_pol_part <- 

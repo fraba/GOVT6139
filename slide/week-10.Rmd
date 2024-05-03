@@ -91,11 +91,6 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 
 ---
 
-## Today's class
-
-
----
-
 class: inverse, center, middle
 
 # Quantitative Methods: Data Analysis Lab (with R)
@@ -839,3 +834,11 @@ We see that all estimates are significant (with the exception of the variation A
 
 
 .center[<img src = "../img/R-lm-summary-04.png" width = "40%"></img>]
+
+---
+
+Task
+
+--- 
+
+Check-in
