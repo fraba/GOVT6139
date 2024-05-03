@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<font size="6">To reach to this page https://shorturl.at/gnxFT  or from Canvas.</font>
+<font size="6">To reach this page visit [shorturl.at/gnxFT](https://shorturl.at/gnxFT) or from Canvas.</font>
 
 ```{r}
 aes22_pol_part <- 
@@ -21,7 +21,11 @@ aes22_pol_part <-
 
 1. Aboriginal or Torres Strait Islander are less likely to be contacted by parties to persuade them to vote for them.
 
-2. Aboriginal or Torres Strait Islander are less engaged in politics.
+2. Aboriginal or Torres Strait Islander are less engaged in politics. 
+
+  * (You might need to create an index here)
+  
+You can screenshot your results and share them on [Padlet](https://sydney.padlet.org/francescobailo/2024-govt6139-week-10-task-01-6negi8rb4jbbutaw).
 
 ## Demographics (NOT to be used as DEPENDENT VARIABLE)
 
