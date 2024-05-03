@@ -1,0 +1,99 @@
+---
+title: "Week 11 - Task 01"
+author: "Francesco Bailo"
+date: "2024-05-02"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+aes22_pol_part <- 
+  read.csv("https://raw.githubusercontent.com/fraba/GOVT6139/main/data/aes22_pol_part.csv")
+```
+
+
+## Task: With R provide visual and statistical support to these two hypotheses
+
+1. Aboriginal or Torres Strait Islander are less likely to be contacted by parties to persuade them to vote for them.
+
+2. Aboriginal or Torres Strait Islander are less engaged in politics.
+
+## Demographics (NOT to be used as DEPENDENT VARIABLE)
+
+* `H4` Do you identify yourself as Aboriginal or Torres Strait Islander?
+
+  * Continuous. Values: `0` = No; `1` = Yes.
+  
+* `G3_EDU` Whether have a University-level education
+
+  * Categorical. Values: `Non-University`; `University`. 
+
+* `H1` Are you male or female?
+
+  * Categorical. Values: `Female`; `Male`; `Other` 
+
+* `AGE` Recoded age from year of birth
+
+  * Continuous. Values: `18`, `19`, ..., `107`.
+
+## Political engagement variables
+
+* `A1` Generally speaking, how much interest do you usually have in what's going on in politics?
+
+  * Continuous. Values: `0` = None; `1` = Not much, `2` = Some; `3` =  A good deal.
+
+* `B8_1` Where would you place yourself on a scale from 0 to 10, where 0 means the left and 10 means the right?
+
+  * Continuous. Values: `0` = Left; `5` = Center; `10` = Right.
+
+* `A7_1` Did a candidate or anyone from a political party contact you to persuade you to vote for them
+
+  * Continuous. Values: `0` = No; `1` = Yes. 
+
+* `A10` Would you have voted in the election if voting had not been compulsory?
+
+  * Continuous. Values: `0` = No; `1` = Yes. 
+
+* `A13_1` Did you do any of the following activities online - Signed up to receive information from a party or candidate on Twitter, Facebook, or Instagram
+
+  * Continuous. Values: `0` = No; `1` = Yes. 
+
+* `A13_2` Did you do any of the following activities online - Shared campaign or political content on a blog, Twitter feed or on social network
+
+  * Continuous. Values: `0` = No; `1` = Yes. 
+
+* `A13_3` Did you do any of the following activities online - Joined or started a political group on social networking site (e.g. Facebook etc.)
+
+  * Continuous. Values: `0` = No; `1` = Yes. 
+
+* `C8_1` Over the past five years or so, have you done any of the following things to express your views about something the government should or should not be doing? Contacted a politician or government official by email
+
+  * Continuous. Values: `0` = No; `1` = Yes. 
+
+* `C8_2` Over the past five years or so, have you done any of the following things to express your views about something the government should or should not be doing? Contacted a politician or government official either in person, or in writing
+
+  * Continuous. Values: `0` = No; `1` = Yes. 
+
+* `C8_3` Over the past five years or so, have you done any of the following things to express your views about something the government should or should not be doing? Taken part in a protest, march or demonstration
+
+  * Continuous. Values: `0` = No; `1` = Yes. 
+
+* `C8_4` Over the past five years or so, have you done any of the following things to express your views about something the government should or should not be doing? Worked together with people who shared the same concern
+
+  * Continuous. Values: `0` = No; `1` = Yes. 
+
+* `C8_5` Over the past five years or so, have you done any of the following things to express your views about something the government should or should not be doing? Signed a written petition
+
+  * Continuous. Values: `0` = No; `1` = Yes. 
+
+* `C8_6` Over the past five years or so, have you done any of the following things to express your views about something the government should or should not be doing? Signed an online or e-petition
+
+  * Continuous. Values: `0` = No; `1` = Yes. 
+
+* `W5` Over the last 12 months did you spend any time doing voluntary work through an organisation or group?
+
+  * Continuous. Values: `0` = No; `1` = Yes. 
+
