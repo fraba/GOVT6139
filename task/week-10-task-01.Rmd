@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<font size="6">To reach to this page  or from Canvas.</font>
+<font size="6">To reach to this page https://shorturl.at/gnxFT  or from Canvas.</font>
 
 ```{r}
 aes22_pol_part <- 

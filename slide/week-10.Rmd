@@ -837,8 +837,14 @@ We see that all estimates are significant (with the exception of the variation A
 
 ---
 
-Task
+class: segue-red
+
+# Task: Hands-on
 
 --- 
 
-Check-in
+class: segue
+
+# Check-in
+
+---
