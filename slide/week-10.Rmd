@@ -840,7 +840,7 @@ class: segue-red
 
 # Group Task
 
-[shorturl.at/gnxFT](https://shorturl.at/gnxFT)
+.content-box-yellow[<large>[shorturl.at/gnxFT](https://shorturl.at/gnxFT)</large>]
 
 ---
 class: segue
