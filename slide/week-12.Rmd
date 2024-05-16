@@ -1,16 +1,25 @@
 ---
 title: "GOVT6139</br>Research design"
-subtitle: "Week 12</br>Research Proposal: Peer Feedback Workshop Week"
+subtitle: "Week 12</br>Mixed Methods Procedures"
 author: "Francesco Bailo"
 institute: "The University of Sydney"
-date: "Semester 1, 2023 (updated: `r Sys.Date()`)"
+date: "Semester 1, 2024 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
-    lib_dir: libs
+    css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+    self_contained: false # if true, fonts will be stored locally
+    seal: true # show a title slide with YAML information
+    includes:
+      in_header: "assets/mathjax-equation-numbers.html"
     nature:
+      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+      navigation:
+        scroll: false # disable slide transitions by scrolling
+
 ---
 
 background-image: url(https://upload.wikimedia.org/wikipedia/en/6/6a/Logo_of_the_University_of_Sydney.svg)
@@ -22,116 +31,499 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
                       dev = 'svg', out.width = "45%", fig.width = 6,
                       fig.align="center")
 
-require(knitr)
-require(tidyverse)
-
+options(scipen = 999)
 ```
 
 ---
 
 ## Acknowledgement of Country
 
-I would like to acknowledge the Traditional Owners of Australia and recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
 
 ---
+
 
 ## Course outline
 
 .pull-left[
 
-Week 1: Introduction
+**Week 1**: Introduction
 
-Week 2: Foundations: Ontology and Epistemology
+**PART I PRELIMINARY CONSIDERATIONS (Weeks 2-5)**
 
-Week 3: Research Design (I): Questions, Theories, Hypotheses, Variables, Measurements
+**Week 2**: The Selection of a Research Approach
 
-Week 4:	Research Design (II): Case selection
+**Week 3**: Review of the Literature
 
-Week 5: Research Design (III): Causal Inference
+**Week 4**: The Use of Theory
 
-Week 6: Qualitative Methods (I): Data Collection 
+**Week 5**: Writing Strategies and Ethical Considerations + Guest lecture w/t Christopher Pepin-Neff 
 
-Week 7: Qualitative Methods (II): Data Analysis 
+**PART II DESIGNING RESEARCH (Weeks 6-12)**
+
+**Week 6**: The Introduction **no seminar** (public holiday)
+
+⏸️ *Mid Semester break* ⏸️
 
 ]
 
 .pull-right[
 
-⏸️ *Mid Semester break* ⏸️
 
-Week 8: Quantitative Methods (I): Data Collection
+**Week 7**: The Purpose Statement 
 
-*Week 9: 🎉 Public holiday 🎉*
+**Week 8**: Research Questions and Hypotheses + Guest Lecture w/t Charles Robert Butcher 
 
-Week 10: Quantitative Methods (II): Data Analysis
+**Week 9**: Quantitative Methods 
 
-Week 11: Quantitative Methods (III): Data Analysis lab
+**Week 10**: Quantitative Methods: Data Analysis Lab (Make sure you install R and RStudio) 
 
-<mark>Week 12: Research Proposal: Peer Feedback Workshop Week</mark> 
+**Week 11**: Qualitative Methods + Guest lecture w/t Peter Chen
 
-Week 13: New frontiers and Conclusions
+**Week 12**: Mixed Methods Procedures + Guest lecture w/t Assel Mussagulova 👈
+
+**Week 13**: Conclusions
+
 
 ]
 
 
 ---
 
-## Please complete the Unit of Study Survey for GOVT6139 (if you haven't yet) 
+class: inverse, center, middle
 
-<mark>Your feedback is critical!</mark>
-
-* Past USS results have been used to improve this unit.
-
-* Your feedback will help us keep improving it.
-
-<mark>Please, do it now by visiting</mark>
-
-.center[https://student-surveys.sydney.edu.au/students/]
-
-or use the QR code
-
-.center[<img src = 'https://student-surveys.sydney.edu.au/common/images/student-surveys-QR.png' width = '30%'></img>]
-
-
-```{r echo = F}
-library(countdown)
-countdown(minutes = 8, seconds = 00)
-```
+# Mixed Methods Procedures
 
 ---
 
+# Chapter 10 Learning Objectives (1 of 2)
 
+1. Describe each of the six characteristics of mixed methods research to use in a definition.
 
-# Week 12: Peer feedback workshop
+2. Create a justification for using mixed methods research in a proposal or study.
 
-### Part 1: 5-minute project presentation (45 minutes)
+3. Define key terms used in mixed methods, such as open- and closed-ended data, research design, integration, joint displays, and metainferences when presented in a proposal or study.
 
-- Prepare to present your research proposal in five minutes.
-
-- You are encouraged to preliminary share supporting materials using the [Canvas Group](https://community.canvaslms.com/t5/Canvas-Basics-Guide/What-are-Groups/ta-p/16) page for Week 12 (e.g. a one or two slide deck, or a one-page document). 
-
-- In groups of four (groups have been already created), each student will present for five minutes - I will be strict with the timing - and then receive questions and comments for another five minutes.
-
-- You are encouraged to keep discussing this on the Canvas groups page after class.
-
-```{r echo = F}
-library(countdown)
-countdown(minutes = 5, seconds = 00)
-```
+4. Contrast quantitative and qualitative data when presented in a study.
 
 ---
 
-# Week 12: Peer feedback workshop
+5. Identify for a core design its intent, procedures for data collection, integration, metainferences, and validity.
 
-### Part 2: Brain storm on the issues you have identified with the presentations you reviewed (30 minutes)
+6. Choose a type of mixed methods design for a study, and present reasons for the choice.
 
-- Prepare a (short) list of issues to discuss with your group (but avoid offering details that could identify the proposal you have reviewed). 
+7. Identify the elements that go into an integration statement for a proposal or a study.
 
-- In the same groups of four, discuss the issues and possible solutions for about 20 minutes.
+---
 
-- Report on your discussion using Padlet (same as before, avoid offering details that could identify specific proposals): list issues and possible solutions.  
+# Introduction (1 of 2)
 
-```{r echo = F}
-library(countdown)
-countdown(minutes = 20, seconds = 00)
-```
+* __Mixed methods procedure __ (Table 10.1)
+  * Combining qualitative and quantitative forms for more understanding
+  * Limitations and strengths of each type of data collection
+  * Nature of mixed methods
+  * Reasons to use
+
+---
+
+__Table 10.1: A Checklist of Questions for Designing a Mixed Methods Procedure__
+
+| _____ | Question |
+| :-: | :-: |
+| _____ | Have you defined mixed methods research? |
+| _____ | Do you justify using mixed methods methodology for your problem and question? |
+| _____ | Have you collected both quantitative and qualitative data? |
+| _____ | Have you described your intent for collecting both forms of data? (integration statement) |
+| _____ | Have you identified a mixed methods design or set of procedures to integrate your data? (mixed methods design) |
+| _____ | Have you provided a diagram of your design procedures? |
+| _____ | Have you identified how you will analyze your data for integration? (use of a joint display) |
+| _____ | Have you drawn conclusions (or metainferences) from analyzing the integration? |
+| _____ | Have you discussed validity and ethics related to your research design? |
+| _____ | Have you written your mixed methods study to reflect your use of design? |
+
+---
+
+# Components of Mixed Methods Procedures
+
+* Set of procedures can be used for planning
+* Journals emphasizing mixed methods
+  * _Journal of Mixed Methods Research _
+  * _International Journal of Multiple Research Approaches_
+  * _Quality and Quantity_
+  * _Field Methods_
+* Applications across disciplines
+
+---
+
+# Putting Mixed Methods Research in Perspective (1 of 2)
+
+* “Third methodological movement” sits between and incorporates both quantitative and qualitative research
+* Emerged as distinct methodology in late 1980s
+* Books, journal articles, and reports set dimensions of new field
+  * 2003 –  _Handbook of Mixed Methods in the Social and Behavioral Sciences_
+  * 2007 –  _Journal of Mixed Methods Research _
+  * 2011 – “Best Practices of Mixed Methods Research in the Health Sciences” (National Institutes of Health)
+
+---
+
+2014 – Mixed Methods International Research Association (MMIRA) formed
+
+2015 – NIH Mixed Methods Training program
+
+American Psychological Association included standards for mixed methods research in 7th edition of its  _Publication Manual _ (American Psychological Association, 2020)
+
+---
+
+# Characteristics of Mixed Methods Research
+
+* The mixed methods researcher:
+  * Collects two types of data— _qualitative (open-ended)_  _ and _  _quantitative (closed- ended) _ data—to study the research problem or question
+  * Connects the two data sets, called  _integration_
+  * Uses procedures to integrate the two data sets, called a  _mixed methods design_
+  * Analyzes integration typically in a table, called a  _joint display_ , by representing the two databases together in the procedures
+  * Draws conclusions, insight, or interpretation from the integration analysis, called  _metainferences_
+  * Frames the study with the researcher’s beliefs, values  __(__  _worldview_  __)__ , and explanations drawn from the literature  __(__  _theories_  __)__
+
+---
+
+# Types of Mixed Methods Designs
+
+__Figure 10.1: Essential Components of Mixed Methods Research__
+
+![](img/Creswellrd6e_PPT101.jpg)
+
+---
+
+# Justification for Using Mixed Methods Research
+
+* Reasons for choosing mixed methods
+  * Developing a complete understanding of a research problem by combining quantitative and qualitative results
+  * Explaining quantitative results in detail with qualitative
+  * Improving measures, scales, and instruments
+  * Augmenting experiments
+  * Developing cases
+  * Evaluating programs
+  * Understanding changes needed for marginalized group
+
+---
+
+# Definitions of Mixed Methods Terms (1 of 3)
+
+* __Open-ended data__
+  * Information gathered where researchers ask a question by do not provide a response option
+    * Participants share views, researcher records them
+* __Closed-ended data__
+  * Information gathered where the researcher provides participants with response options
+    * Rating scales
+
+---
+
+* __Research Design	__
+  * Procedure used in conducting a study
+  * Two categories:  _core designs _ and  _complex designs_
+  * __Core Designs__
+    * Designs found in all mixed methods studies including convergent designs, explanatory sequential designs, and exploratory sequential designs
+  * __Complex Designs__
+    * Primary intent not simply integration of two databases but to have mixed methods  _support _ the procedures of a process or framework
+    * Experimental processes, participatory action research frameworks, case study procedures, evaluation processes
+
+---
+
+* __Integration__
+  * Central concept in mixed methods research
+  * Involves combining in a study or a series of studies information from qualitative and quantitative data
+* __Joint Display__
+  * Table or graph that presents side-by-side combination of two combined databases
+* __Metainferences__
+  * Insights that emerge as researcher compares the quantitative and qualitative databases
+
+---
+
+# The Process of Conducting a Mixed Methods Study
+
+* Connecting the quantitative and qualitative data to a specific type of mixed methods design
+  * Researcher draws a diagram of the design
+  * Integrates the two databases
+  * Presents the integration in a table or joint display for analysis
+  * Draws insights or metainferences from results of the integration
+
+---
+
+# Quantitative and Qualitative Data Collection
+
+* Indicate types of qualitative and quantitative data collected; one needs a clear sense of types of data gathered
+* If both quantitative and qualitative data can be gathered, opportunity opens to use mixed methods research
+* Strategy: pose a general problem for the mixed methods study and gather two types of data—quantitative and qualitative—to address the problem
+* Present a table that lists sources of quantitative and qualitative data in a project
+
+---
+
+# Core Mixed Methods Designs (1 of 2)
+
+* Three core mixed methods designs (Figure 10.2)
+  * Convergent design
+  * Explanatory sequential design
+  * Exploratory sequential design
+
+---
+
+__Figure 10.2: Three Core Designs__
+
+![](img/Creswellrd6e_PPT102.jpg)
+
+---
+
+# The Convergent Mixed Methods Design(1 of 4)
+
+* __Intent:__  to  _compare _ results from the qualitative databases with results from the quantitative databases by  _merging _ the results
+* __Key assumption__ : quantitative and qualitative data provide different types of information
+* Most familiar approach
+* Description of the design
+  * Collects both quantitative and qualitative data,
+  * Analyzes them separately,
+  * Compares the results to see if the findings confirm or disconfirm each other
+
+---
+
+* __Data collection__
+  * Use the same or parallel variables, constructs, or concepts
+* __Data analysis and integration__
+  * Analyze qualitative database
+  * Analyze quantitative database
+  * Integrate the two
+  * __Joint display__  – merge forms of data in a single visual display (Table 10.2)
+
+---
+
+__Table 10.2: Template for a Convergent Design Joint Display__
+
+| Scores | Theme 1 | Theme 2 | Theme 3 | Theme 4 | Metainferences |
+| :-: | :-: | :-: | :-: | :-: | :-: |
+| High | Quote/<br />Scores | Quote/<br />Scores | Quote/<br />Scores | Quote/<br />Scores | Insight |
+| Medium | Quote/<br />Scores | Quote/<br />Scores | Quote/<br />Scores | Quote/<br />Scores | Insight |
+| Low | Quote/<br />Scores | Quote/<br />Scores | Quote/<br />Scores | Quote/<br />Scores | Insight |
+| Metainferences | Insight | Insight | Insight | Insight | Insight |
+
+---
+
+* __Interpretation__
+  * Discussion section compares results and notes convergence or divergence
+* __Validity__
+  * Quantitative validity (e.g., construct)
+  * Qualitative validity (e.g., triangulation)
+  * Mixed methods validity (e.g., unequal sample sizes)
+
+---
+
+# The Explanatory Sequential Mixed Methods Design(1 of 4)
+
+* __Intent:__  to  _explain _ initial quantitative _ _ results with  results from qualitative data by  _connecting _ the two databases
+* __Key assumption__ : quantitative results may yield  _surprising _ information that needs  _explanation_
+* Description of the design
+  * Involves a two-phase project
+  * Collection of quantitative data in the first phase
+  * Uses results to plan the second, qualitative phase
+  * Qualitative data help in explain in more detail the initial quantitative results
+
+---
+
+* __Data collection__
+  * Two distinct phases
+  * Rigorous quantitative sampling and purposeful qualitative
+* __Data analysis and integration__
+  * Connecting quantitative results to qualitative data collection
+  * Quantitative results inform sampling and qualitative questions to ask
+
+---
+
+__Table 10.3: Template for an Explanatory Sequential Design Joint Display__
+
+| Quantitative Scores | Qualitative Follow-Up Themes | Metainferences |
+| :-: | :-: | :-: |
+| High Scores | Theme 1<br />Theme 2<br />Theme 3 | How Themes Explain the Scores |
+| Medium Scores | Theme 1<br />Theme 2<br />Theme 3 | How Themes Explain the Scores |
+| Low Scores | Theme 1<br />Theme 2<br />Theme 3 | How Themes Explain the Scores |
+
+---
+
+* __Interpretation __
+  * First phase quantitative results
+  * Second phase qualitative results
+  * How the qualitative findings help to explain the quantitative results
+* __Validity__
+  * Of the scores from the quantitative measures and qualitative findings
+  * Mixed methods (e.g., options for following up on quantitative results)
+
+---
+
+* __Intent:__  to  _explore _ how qualitative data can improve quantitative measures, scales, or instruments
+* __Key assumption__ : quantitative results may yield  _surprising _ information that needs  _explanation_
+* Description of the design
+  * A three-phase design
+  * Start with a qualitative phase
+  * Build to a feature to be tested (e.g., survey instrument)
+  * Followed by a quantitative phase that tests the feature
+
+---
+
+* __Data collection__
+  * Initial qualitative data collection
+  * Test of quantitative feature
+* __Integrative data analysis__
+  * Analyze the two databases separately
+  * Use the findings from the initial exploratory database to build into a feature
+  * Qualitative findings inform design of quantitative phase (e.g., instrument, variables)
+
+---
+
+# The Exploratory Sequential Mixed Methods Design  (3 of 4)
+
+__Table 10.3: Template for an Exploratory Sequential Design Joint Display (using a survey design as an example)__
+
+| Qualitative | Design Features | Metainferences |
+| :-: | :-: | :-: |
+| Qualitative Quotes | Quantitative Survey Items | Analyze the scores on the survey |
+| Qualitative Codes | Quantitative Survey Variables | Identify variables |
+| Qualitative Themes | Quantitative Survey Scales | Identify scales |
+
+---
+
+* __Interpretation __
+  * First report the qualitative finding
+  * Development of feature
+  * Quantitative test results
+  * Determine if qualitative themes can be generalized
+* __ Validity__
+  * Validity of the qualitative data and the quantitative scores
+  * Mixed methods issues (e.g., developing a good instrument)
+
+---
+
+# Complex Mixed Methods Designs
+
+* All mixed methods studies have at least one  __core design __ (e.g., convergent, explanatory sequential, or exploratory sequential)
+* __Complex designs __ have core designs embedded in frameworks larger than simply collecting, analyzing, and integrating quantitative and qualitative data
+
+---
+
+# Types of Complex Designs
+
+Several complex mixed methods designs:
+
+Intersecting a secondary method (mixed methods) within a primary quantitative or qualitative design (e.g., an intervention)
+
+Intersecting mixed methods within another methodology (e.g., evaluation)
+
+Intersecting mixed methods within a theoretical framework (e.g., social justice)
+
+---
+
+# Examples of Complex Designs (1 of 5)
+
+__Mixed methods experimental (intervention) design__  – quantitative and qualitative data within an experiment or trial (Figure 10.3)
+
+__Mixed methods case study design__  – mixed methods within a single or multiple case study (Figure 10.4)
+
+__Mixed methods participatory social justice design__  – core mixed methods design within a larger framework (Figure 10.5)
+
+__Mixed methods evaluation design__  – one or more core designs in an evaluation (Figure 10.6)
+
+---
+
+__Figure 10.3: A Mixed Method Intervention Design Diagram __
+
+![](img/Creswellrd6e_PPT103.jpg)
+
+---
+
+__Figure 10.4: A Multiple Case Study Design Diagram __
+
+![](img/Creswellrd6e_PPT104.jpg)
+
+---
+
+__Figure 10.5: A Mixed Methods Participatory Action Research Design Diagram __
+
+![](img/Creswellrd6e_PPT105.jpg)
+
+---
+
+__Figure 10.6: A Mixed Methods Evaluation Design Diagram __
+
+![](img/Creswellrd6e_PPT106.jpg)
+
+---
+
+# Incorporating Core Designs into Complex Designs
+
+Identify quantitative and qualitative data collection
+
+Draw a diagram of steps
+
+Look in steps for opportunities to collect quantitative and qualitative data
+
+Examine how databases are connected
+
+Discuss overall framework or process and the embedded core designs
+
+---
+
+# Factors Important in Choosing a Mixed Methods Design (1 of 4)
+
+* Choice based on intent and procedures (Table 10.5)
+  * __Integration statement__
+  * Example:
+    * “Integration involved comparing the results from the quantitative and qualitative data by merging so that a more complete understanding emerges than provided by the quantitative or the qualitative results alone.” (convergent design)
+  * __Design intent __ (Figure 10.7)
+  * __Select procedures that match design __ (Figure 10.8)
+
+---
+
+__Table 10.5: Intent and Procedures of Mixed Methods Designs__
+
+| Mixed Methods Design | Intent or Purpose (of mixing the two databases) | Procedure (for conducting the research) |
+| :-: | :-: | :-: |
+| Convergent Design | Compare, Match, Corroborate (Validate), Expand, Enhance, Diffract, Identify Cases, Initiating, Complete Understanding | Merge (putting the databases side-by-side) |
+| Explanatory Sequential Design | Expand, Explain | Connect (quantitative results connection with qualitative data collection) |
+| Exploratory Sequential Design | Build Upon, Transfer, Generalize | Connect (qualitative results lead to design of quantitative assessment that is then tested) |
+| Complex Mixed Methods Design | Augment (optimize, ascertain needs, monitor) | Add into a process/ framework<br /><br />Qualitative, Quantitative, or Both Types of Data |
+
+---
+
+__Figure 10.7: Flowchart for Choosing Your Type of Design (Based on Intent) __
+
+![](img/Creswellrd6e_PPT107.jpg)
+
+---
+
+__Figure 10.8: Flowchart for Choosing Your Type of Design (Based on Procedures) __
+
+![](img/Creswellrd6e_PPT108.jpg)
+
+---
+
+# Other Reasons for Choosing a Design
+
+* Choice based on
+  * Popular designs in a field or discipline
+  * Single researcher or team
+  * Choice by advisors or mentors
+  * Timing in mixed methods data collection – convergent or sequential
+  * Emphasis placed on each database – equal or unequal
+
+---
+
+# Summary
+
+Define mixed methods and core characteristics
+
+Mention historical evolution
+
+Discuss chosen mixed methods design and challenges
+
+Draw a diagram of procedures
+
+Convey elements based on your design
+
+---
