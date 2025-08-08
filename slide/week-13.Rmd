@@ -1,16 +1,25 @@
 ---
 title: "GOVT6139</br>Research design"
-subtitle: "Week 13</br>Research Proposal: New frontiers and Conclusions"
+subtitle: "Week 12</br>Mixed Methods Procedures"
 author: "Francesco Bailo"
 institute: "The University of Sydney"
-date: "Semester 1, 2023 (updated: `r Sys.Date()`)"
+date: "Semester 1, 2024 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
-    lib_dir: libs
+    css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+    self_contained: false # if true, fonts will be stored locally
+    seal: true # show a title slide with YAML information
+    includes:
+      in_header: "assets/mathjax-equation-numbers.html"
     nature:
+      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+      navigation:
+        scroll: false # disable slide transitions by scrolling
+
 ---
 
 background-image: url(https://upload.wikimedia.org/wikipedia/en/6/6a/Logo_of_the_University_of_Sydney.svg)
@@ -22,61 +31,62 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
                       dev = 'svg', out.width = "45%", fig.width = 6,
                       fig.align="center")
 
-require(knitr)
-require(tidyverse)
-
+options(scipen = 999)
 ```
 
 ---
 
 ## Acknowledgement of Country
 
-I would like to acknowledge the Traditional Owners of Australia and recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
 
 ---
+
 
 ## Course outline
 
 .pull-left[
 
-Week 1: Introduction
+**Week 1**: Introduction
 
-Week 2: Foundations: Ontology and Epistemology
+**PART I PRELIMINARY CONSIDERATIONS (Weeks 2-5)**
 
-Week 3: Research Design (I): Questions, Theories, Hypotheses, Variables, Measurements
+**Week 2**: The Selection of a Research Approach
 
-Week 4:	Research Design (II): Case selection
+**Week 3**: Review of the Literature
 
-Week 5: Research Design (III): Causal Inference
+**Week 4**: The Use of Theory
 
-Week 6: Qualitative Methods (I): Data Collection 
+**Week 5**: Writing Strategies and Ethical Considerations + Guest lecture w/t Christopher Pepin-Neff 
 
-Week 7: Qualitative Methods (II): Data Analysis 
+**PART II DESIGNING RESEARCH (Weeks 6-12)**
+
+**Week 6**: The Introduction **no seminar** (public holiday)
+
+⏸️ *Mid Semester break* ⏸️
 
 ]
 
 .pull-right[
 
-⏸️ *Mid Semester break* ⏸️
 
-Week 8: Quantitative Methods (I): Data Collection
+**Week 7**: The Purpose Statement 
 
-*Week 9: 🎉 Public holiday 🎉*
+**Week 8**: Research Questions and Hypotheses + Guest Lecture w/t Charles Robert Butcher 
 
-Week 10: Quantitative Methods (II): Data Analysis
+**Week 9**: Quantitative Methods 
 
-Week 11: Quantitative Methods (III): Data Analysis lab
+**Week 10**: Quantitative Methods: Data Analysis Lab (Make sure you install R and RStudio) 
 
-<mark>Week 12: Research Proposal: Peer Feedback Workshop Week</mark> 
+**Week 11**: Qualitative Methods + Guest lecture w/t Peter Chen
 
-Week 13: New frontiers and Conclusions
+**Week 12**: Mixed Methods Procedures + Guest lecture w/t Assel Mussagulova 
+
+**Week 13**: Conclusions 👈
+
 
 ]
-
-
----
-
-## Please complete the Unit of Study Survey for GOVT6139 (if you haven't yet)!!
 
 ---
 
@@ -87,8 +97,6 @@ Week 13: New frontiers and Conclusions
 - New(ish) frontiers
 
 - Takeaways from GOVT6139 and wrapping up
-
-- Research proposal Q and A
 
 ---
 
@@ -153,9 +161,9 @@ DiagrammeR::grViz("digraph {
 
 ---
 
-## Writing up academic research: Structure
+### Writing up academic research: Structure
 
-### Commonly used structure
+#### Commonly used structure
 
 * Introduction
 
@@ -175,9 +183,9 @@ DiagrammeR::grViz("digraph {
 
 ---
 
-## Writing up academic research: Structure example
+### Writing up academic research: Structure example
 
-### Riding information crises: the performance of far-right Twitter users in Australia during the 2019–2020 bushfires and the COVID-19 pandemic 
+#### Riding information crises: the performance of far-right Twitter users in Australia during the 2019–2020 bushfires and the COVID-19 pandemic 
 (*open access here https://doi.org/10.1080/1369118X.2023.2205479*)
 
 1. Introduction
@@ -201,6 +209,7 @@ DiagrammeR::grViz("digraph {
 **Note**: Every project will look different!
 
 #### Introduction
+
 * Scene setting
 * Research question
 * Rationale
@@ -208,22 +217,30 @@ DiagrammeR::grViz("digraph {
 * Overview of the structure of the paper / thesis
 
 #### Literature Review
+
 * Overview of relevant previous research
 * Key themes and debates
 * Gap(s) that your study will address
+
+
+---
+
+### Writing up academic research: What goes where
+
 
 #### Theory
 * Can be part of or separate to literature review.
 * Theories can come from previous literature, and your own ideas.
 * Can develop the theory / theories you will test (with mechanisms), and any hypotheses.
 
----
-
-### Writing up academic research: What goes where
 
 #### Data and Methods
 * Provides an overview of the research design and methods of analysis.
 * Should be sufficiently detailed that another researcher could replicate what you have done.
+
+---
+
+### Writing up academic research: What goes where
 
 #### Results
 * This is where your analyses will be. May be one section (e.g. for a focused journal article) or multiple sections (e.g. for a PhD thesis)
@@ -343,9 +360,9 @@ https://www.scimagojr.com/
 
 #### Peer review process: Academic journals
 
-.pull-left[
 
 #### Editors provide initial review
+
 
 * Desk reject
      * Poor fit for the journal / not of high enough quality / not innovative enough
@@ -353,15 +370,18 @@ https://www.scimagojr.com/
      * Send to another journal!
 * Or send out to peer reviewers (2-3 normal)
 
+
 #### Peer review
+
 * Double blind
 * Recommend: accept / minor revisions / major revisions / reject
 * Provide overall comments including areas for improvement
 * Editors make a decision on the basis of reviewer feedback
 
-]
+---
 
-.pull-right[
+#### Peer review process: Academic journals
+
 
 #### Revise and resubmit (R&R)
 * Need to make any improvements identified by the reviewers and editors
@@ -373,8 +393,6 @@ https://www.scimagojr.com/
 * For minor revisions, changes may be reviewed directly by the editors
 * Decision (Accept / Another R&R / Reject)
 
-
-]
 
 ---
 
@@ -389,7 +407,7 @@ https://www.scimagojr.com/
 | 17-Mar-2023	| 23-Mar-2023: Accepted |
 |             | 29-Apr-2023: Published online |
 
-.center[<img src = '../img/bailo-2023.png'></img>]
+.center[<img src = '../img/bailo-2023.png' width = "70%"></img>]
 
 ---
 
@@ -413,29 +431,25 @@ https://www.scimagojr.com/
 
 ## LaCour scandal
 
-## Paper retracted from Science 2015
+## Paper retracted from Science 2015 [doi:10.1126/science.1256151](https://www.science.org/doi/10.1126/science.1256151)
 
-.center[<img src = 'https://www.science.org/cms/10.1126/science.1256151/asset/b9f68af8-871e-4336-9365-2a957877535e/assets/graphic/346_1366_f1.jpeg' width = '85%'></img>]
+.center[<img src = 'https://www.science.org/cms/10.1126/science.1256151/asset/b9f68af8-871e-4336-9365-2a957877535e/assets/graphic/346_1366_f1.jpeg' width = '65%'></img>]
 
 https://doi.org/10.1126/science.1256151
 
-
----
-class: inverse, middle, center
-
-# New(ish) frontiers
-
 ---
 
-## Reflections on the two readings
+## The Francesca Gino Case
 
-* Grimmer, J. (2015). We Are All Social Scientists Now: How Big Data, Machine Learning, and Causal Inference Work Together. *PS: Political Science & Politics*, 48(1), 80-83.  https://doi.org/10.1017/S1049096514001784
 
-* King, G. (1995). Replication, Replication. *PS: Political Science & Politics*, 28(3), 444-452.  https://doi.org/10.2307/420301 
-
-#### What are the key takeaways?
-
-#### Discuss in groups for 5 mins then briefly report using Canvas
+- **Background:** Harvard Business School professor Francesca Gino, a noted “dishonesty researcher,” was suspended after allegations of data manipulation in four papers she co-authored.
+- **Lawsuit:** Gino sued Harvard and the bloggers who first published the allegations, claiming defamation.
+- **Harvard's Investigation:**
+  - An independent investigation found evidence of data manipulation in Gino's papers from 2012, 2014, 2015, and 2020.
+  - The investigation report, recently unsealed, found Gino's defense—that a rival manipulated her data—implausible.
+- **Impact on Scientific Community:**
+  - Gino's lawsuit may deter others from exposing fraud due to the high cost and long duration of defamation cases.
+  - Highlights the need for better processes to identify and address scientific fraud.
 
 ---
 
@@ -477,7 +491,7 @@ class: inverse, middle, center
 
 Final Percentage: Obama 51.1%	Romney 47.2%
 
-.center[<img src = '../img/nate-silver-2012.png' width = "100%"><png>]
+.center[<img src = '../img/nate-silver-2012.png' width = "60%"><png>]
 
 ---
 
@@ -494,7 +508,7 @@ Final Percentage: Trump 46.1%	Clinton 48.2%
 
 Final Percentage:	Biden 51.3%	Trump 46.8%
 
-.center[<img src = '../img/nate-silver-2020.png' width = "100%"><png>]
+.center[<img src = '../img/nate-silver-2020.png' width = "60%"><png>]
 
 ---
 
@@ -504,7 +518,7 @@ Pollsters all incorporate priors while crunching their numbers. That is, this ca
 
 For example, even in 2020 I noticed that polls still (even the big miss in 2016) systematically udnerestimates Trump's votes. 
 
-.center[<img src = '../img/trump-2020-polls.png' width = "100%"><png>]
+.center[<img src = '../img/trump-2020-polls.png' width = "70%"><png>]
 
 ---
 
@@ -524,7 +538,7 @@ Pollsters all incorporate priors while crunching their numbers. That is, this ca
 
 For example, even in 2020 I noticed that polls still (even the big miss in 2016) systematically udnerestimates Trump's votes. 
 
-.center[<img src = '../img/trump-2020-point-diagonal.png' width = "75%"><png>]
+.center[<img src = '../img/trump-2020-point-diagonal.png' width = "55%"><png>]
 
 ---
 
@@ -532,7 +546,7 @@ For example, even in 2020 I noticed that polls still (even the big miss in 2016)
 
 https://politicsir.cass.anu.edu.au/research/projects/atrocity-forecasting 
 
-<iframe src = 'https://politicsir.cass.anu.edu.au/sites/default/files/AFP_2021-23_BriefReport.pdf' width = 800 height = 600></iframe>
+.center[<iframe src = 'https://politicsir.cass.anu.edu.au/sites/default/files/AFP_2021-23_BriefReport.pdf' width = 800 height = 600></iframe>]
 
 ---
 class: inverse, center, middle
@@ -604,7 +618,7 @@ Methods:
 
 https://doi.org/10.1609/icwsm.v16i1.19312
 
-.center[<img src = '../img/kong-2022.png' width = '80%'></img>]
+.center[<img src = '../img/kong-2022.png' width = '60%'></img>]
 
 ---
 
@@ -614,7 +628,7 @@ https://doi.org/10.1609/icwsm.v16i1.19312
 
 Bailo, F., Johns, A., & Rizoiu, M.-A. (2023). Riding information crises: The performance of far-right Twitter users in Australia during the 2019–2020 bushfires and the COVID-19 pandemic. *Information, Communication & Society*, 0(0), 1–19. https://doi.org/10.1080/1369118X.2023.2205479
 
-.center[<img src = '../img/bailo-2023.jpeg' wdith = "100%"></img>]
+.center[<img src = '../img/bailo-2023.jpeg' wdith = "50%"></img>]
 
 ---
 
@@ -653,7 +667,7 @@ class: inverse, center, middle
 
 ### Galaxy zoo
 
-.center[<img src = 'https://galaxyzooblog.files.wordpress.com/2018/03/finalfaves.jpg?w=958' width = '60%'></img>]
+.center[<img src = 'https://galaxyzooblog.files.wordpress.com/2018/03/finalfaves.jpg?w=958' width = '40%'></img>]
 
 **Research problems**: Classify galaxies according to their shape
 
@@ -667,7 +681,7 @@ class: inverse, center, middle
 
 Task: Transcribing and digitising historical documents
 
-.center[<img src = 'https://panoptes-uploads.zooniverse.org/subject_location/742f9863-d08a-46eb-813e-7a44f7fb5fb4.jpeg' width = "100%"></img>]
+.center[<img src = 'https://panoptes-uploads.zooniverse.org/subject_location/742f9863-d08a-46eb-813e-7a44f7fb5fb4.jpeg' width = "80%"></img>]
 
 ---
 
@@ -698,7 +712,7 @@ Centola, D. (2010). The spread of behavior in an online social network experimen
 Centola, D. (2010). The spread of behavior in an online social network experiment. *Science*, 329(5996), 1194–1197. https://doi.org/10.1126/science.1185231
 
 
-.center[<img src = 'https://www.science.org/cms/10.1126/science.1185231/asset/2d012acf-ef00-4265-be86-3bbc75bd4f71/assets/graphic/329_1194_f1.jpeg'></img>]
+.center[<img src = 'https://www.science.org/cms/10.1126/science.1185231/asset/2d012acf-ef00-4265-be86-3bbc75bd4f71/assets/graphic/329_1194_f1.jpeg' width = '70%'></img>]
 
 ---
 
@@ -743,6 +757,8 @@ class: inverse, middle, center
 
 ### Key takeaways from this course (I)
 
+.small[
+
 #### Become a critical consumer of research
 * In your other courses
 * In your careers
@@ -758,11 +774,13 @@ class: inverse, middle, center
 * Research in the workplace
 * For evidence-based policymaking
 
+]
+
 ---
 
 ## Survey data example
 
-[Almost one-third of adult Australians say they’re unlikely to get COVID vaccination: survey](https://www.smh.com.au/politics/federal/almost-one-third-of-adult-australians-say-they-re-unlikely-to-get-covid-vaccination-survey-20210518-p57szo.html)
+"[Almost one-third of adult Australians say they’re unlikely to get COVID vaccination: survey](https://www.smh.com.au/politics/federal/almost-one-third-of-adult-australians-say-they-re-unlikely-to-get-covid-vaccination-survey-20210518-p57szo.html)"
 
 .pull-left[
 .center[<img src = '../img/smh-2021.png' width = '100%'><img>]
@@ -782,8 +800,10 @@ class: inverse, middle, center
 
 ### Key takeaways from this course (II)
 
+.small[
+
 #### Some questions to ask when you are reading research articles (or reports/books)
-* Epistemology of researchers (*rarely stated directly*)
+
 * How did the researchers go about it?
 * What cases did they select?
 * What was the timing of the study?
@@ -795,11 +815,18 @@ class: inverse, middle, center
 * If qualitative research e.g. interviewing: How did the researchers go about it? Who did they interview? In what context? Are findings context specific?
 * If there are multiple studies on a similar topic – are the findings pointing in the same direction or is there debate?
 
+]
+
 ---
 
 ## Going about research
 
 * This course a very broad introduction / ‘taster’
+
+  * Now you might want to consider: 
+  
+    * SSPS6004: Social Research Ethics
+    * SSPS6006: Data Analytics for Social Research
 
 * To go about research takes time and training
 
@@ -849,4 +876,30 @@ class: middle, inverse, center
 
 class: inverse, center, middle
 
+# Workshopping Your Research Proposal
+
+
+---
+
+## Workshopping Your Research proposal
+
+1. Write down your **research question** in a single sentence (if you have more than a question, focus on the first/main question)
+
+2. Describe your research design in three sentences: Explain, 
+  * **theory**, what do you think is going on?
+  * **data**, what data will you collect?
+  * **methods/analysis**, how do you plan to analyse the data?
+  
+3. Prepare to present these four sentences in 5 minutes. 
+
+
+
+---
+
+class: inverse, center, middle
+
 # Research proposal Q and A
+
+
+
+
