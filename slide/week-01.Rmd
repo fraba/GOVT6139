@@ -3,7 +3,7 @@ title: "GOVT6139</br>Research design"
 subtitle: "Week 01</br>Introduction and overview"
 author: "Francesco Bailo"
 institute: "The University of Sydney"
-date: "Semester 1, 2024 (updated: `r Sys.Date()`)"
+date: "Semester 2, 2025 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
@@ -47,9 +47,27 @@ Francesco Bailo (francesco.bailo@sydney.edu.au)
 
 I am a Lecturer in the School of Social and Political Sciences, University of Sydney. I am interested in researching forms of political engagement and political talk on social media. I researched the emergence and dynamics of online communities, the role between news organisations and social media, and the interdependence between social media activists and news organisations. I have engaged with and applied quantitative research methods developing expertise in quantitative text analysis (NLP) and network analysis.
 
-This year I am teaching GOVT6139, SSPS4102 & SSPS6006.
+This year I have been teaching GOVT3901, GOVT6139, SSPS4102 & SSPS6006.
 
 Fun fact: I took GOVT6139 in 2014 during my PhD. 
+
+
+---
+
+I am also involved in ...
+
+## Centre for AI, Trust and Governance
+
+The Centre was established this year to promote "research and innovation examining the complexities of emergent AI technologies from a socio-technical perspective."
+
+Feel free to connect with the [Centre](https://www.sydney.edu.au/arts/our-research/centres-institutes-and-groups/centre-for-ai-trust-and-governance.html) and to join its newsletter to know about the events and opportunities we are organising!
+
+## Computational social science lab
+
+The Lab organises training activities and events exploring the computational aspects of research in the social sciences! If interested, you can join the Lab [Canvas page](https://canvas.sydney.edu.au/courses/65547).
+
+We have four events scheduled in August and September - check them out!
+
 
 ---
 class: inverse, center, middle
@@ -75,6 +93,12 @@ class: inverse, center, middle
 
 ## How are seminars run?
 
+.content-box-yellow[
+
+Yes, they are timetabled as Lec+Tut, but let's consider them as a single activity.
+
+]
+
 Mix of 
 
 - Lectures: 
@@ -85,9 +109,28 @@ Mix of
 
 - Discussions (including on readings): Discussions will generally be prompted by questions and answers socialised using Menti and Padlet (this would require you come to class with an Internet connected device) 
 
-- Individual and group tasks with a focus on research design and research writing;
+- Individual and group tasks with a focus on research design and research writing.
 
-- Literature Lab in Week 3 and Data lab (with R and RStudio) in Week 10 (make sure to bring your laptop to class then)
+---
+
+## We have three hands-on in-class activities scheduled
+
+.content-box-purple[
+
+Make sure you prepare for these activities before coming to class! Check-out the syllabus to know what to do.
+
+]
+
+### Week 03 Literature Review with 
+
+.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/5/57/NotebookLM_logo.svg' width = '40%'>]
+
+### Week 10 Quantitative Data Analysis with JASP
+
+.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/0/0d/JASP_logo.svg' width = '10%'>]
+
+### Week 12 Qualitative Data Analysis with NVivo
+
 
 ---
 
@@ -109,6 +152,8 @@ Mix of
 ---
 
 ## Let's get to know the class!
+
+(Complete only first two slides)
 
 .center[<img src = '../img/2024-GOVT6139-W01-menti-qr-code.png' width = '25%'>
 
@@ -137,52 +182,31 @@ Menti link from Canvas
 
 (This is not intended to be a representative summary - just a summary of individual comments)
 
-1. The course provides a structured guide for allocating attention to research proposal components, 
-
-2. it includes peer reviews and in-class assignments that enrich learning, 
-
-3. offers extensive related readings and valuable colleague feedback for constructing research designs, and 
-
-4. allows flexibility in assignment topics within assessment criteria, enabling personalized exploration.
+1. **Wished they had taken this course first** - Skills learned were immediately applicable to other subjects in their program
+2. **Appreciated the balance of art and science** - Course effectively combined theoretical knowledge with practical research skills
+3. **Recognised thoughtful course design** - Content was carefully selected and well-structured throughout
+4. **Course was accessible despite complexity** - Material remained digestible even for students with limited research experience
+5. **Developed transferable critical thinking skills** - Students plan to apply learned techniques in future work and studies
 
 ---
 
-## What some GOVT6139 students had mixed feelings about last year
+## What some GOVT6139 students had mixed feelings about or didn't like last year
 
-### Use of sharing tools such as Menti and Padlet.
+1. **Course scheduling challenges** - Only offered in first semester forces students to enrol early without knowing their research interests or dissertation plans
 
-* Some found that they enriched and supported the experience;
+2. **Class size too large** - Limited opportunities for meaningful peer discussion and individualised feedback from instructor
 
-* Other found them laborious and repetitive after a while.
+3. **Pace sometimes too fast** - Students struggled to keep up with content delivery in some sessions
 
-CLOSING THE LOOP: This year, we will use these tools less frequently and in a more targeted way (for context, last year GOVT6139 was offered in a hybrid mode.) 
+4. **R Studio session ineffective** - Two hours insufficient to learn software; suggested broader overview of research tools instead
 
----
-
-## What some GOVT6139 students didn't like last year
-
-(This is not intendend to be a representative summary - just a summary of individual comments)
-
-1. The course needs to offer more practical exercises for writing proposals, including detailed guidance to enhance students' writing skills. 
-
-2. The lack of timely feedback on in-class group activities due to time constraints makes it challenging for students to understand if they've correctly grasped the concepts. 
-
-3. The assessment's weighting system is described as overly complex and confusing, leading to difficulties in understanding evaluation criteria.
-
-4.  Readings were sometime not utilised in lectures, sometimes felt irrelevant to the course content, or were outdated.
+5. **Peer review guidance lacking** - Students wanted clearer instructions on how to provide quality feedback to classmates
 
 ---
 
-## What some GOVT6139 students didn't like last year
+6\. **Assignment length concerns** - Research proposal considered too long for the assessment type; suggested reducing word count
 
-CLOSING THE LOOP in 2024: 
-
-1. We introduced a textbook which is very much focused on writing a research proposal and we will make sure to discuss that content in class. Guest lectures about practical research experience will complement that. 
-
-2. We will give more time to in-class activities (including about research writing) and to provide in-class feedback on these activities. 
-
-3. I published more resources on Canvas about tasks and weighting (but please, make sure you read them and ask questions if something is not clear)
-
+7\. **Need for more practical examples** - Students wanted case studies linked to each topic for deeper understanding
 
 ---
 class: inverse, center, middle
@@ -207,9 +231,7 @@ Key questions:
 
 ---
 
-## Can we trust research (in the social sciences)?
-
-- Not a matter of research can / cannot be trusted
+## Can we trust research in the social sciences?
 
 - Every study has strengths and weaknesses
 
@@ -272,7 +294,7 @@ So what?
 
 ### What the class is not 
 
-- An advanced statistics course (Will do some #Rstat in week 10 but you should consider [Data Analytics for Social Research SSPS6006](https://www.sydney.edu.au/courses/units-of-study/2024/ssps/ssps6006.html) for a dedicated unit)
+- An advanced qualitative methods or statistics course (Will do some #Rstat in week 10 but you should consider [Data Analytics for Social Research SSPS6006](https://www.sydney.edu.au/courses/units-of-study/2024/ssps/ssps6006.html) for a dedicated unit)
 
 - Opportunity to conduct a research project
 
@@ -405,13 +427,13 @@ class: inverse, center, middle
 
 ### PART I PRELIMINARY CONSIDERATIONS (Weeks 2-5)
 
-**Week 2**: The Selection of a Research Approach
+**Week 2**: The Selection of a Research Approach + Guest lecture w/t Inessa De Angelis (Uni Toronto)
 
-**Week 3**: Review of the Literature
+**Week 3**: Review of the Literature (NotebookLM in-class activity)
 
-**Week 4**: The Use of Theory
+**Week 4**: The Use of Theory + Guest Lecture w/t Assel Mussagulova
 
-**Week 5**: Writing Strategies and Ethical Considerations + Guest lecture w/t Christopher Pepin-Neff
+**Week 5**: Writing Strategies and Ethical Considerations 
 
 ---
 
@@ -419,23 +441,23 @@ class: inverse, center, middle
 
 ### PART II DESIGNING RESEARCH (Weeks 6-12)
 
-**Week 6**: The Introduction (*but public holiday, no seminar*)
-
-*Mid Semester break*
+**Week 6**: The Introduction
 
 **Week 7**: The Purpose Statement
 
-**Week 8**: Research Questions and Hypotheses + Guest Lecture w/t Charles Robert Butcher 
+**Week 8**: Research Questions and Hypotheses + Guest lecture w/t Minglu Chen
+
+*Mid Semester break*
 
 **Week 9**: Quantitative Methods
 
-**Week 10**: Quantitative Methods: Data Analysis Lab (Make sure you install R and RStudio)
+**Week 10**: Quantitative Methods: Data Analysis Lab (JASP in-class activity)
 
-**Week 11**: Qualitative Methods + Guest lecture w/t Peter Chen
+**Week 11**: Qualitative Methods 
 
-**Week 12**: Mixed Methods Procedures + Guest lecture w/t Assel Mussagulova
+**Week 12**: Qualitative Methods: Data Analysis Lab (NVIvo in-class activity) 
 
-**Week 13**: Conclusions
+**Week 13**: Mixed-methods and Conclusions
 
 ---
 
@@ -469,7 +491,7 @@ In addition:
 
 ## To avoid having your participation grade negatively affected
 
-* Attend at least 90% of the seminars (e.g., 10 out of the 12 scheduled seminars)
+* Attend at least 90% of the seminars (e.g., if you can't attend email me so I can set you as an apology!)
 
 * Submit for peer-review either the 500w **Research question** or the 1000w **Research design** in time; 
 
@@ -515,13 +537,13 @@ node [shape = rectangle, style = filled, fillcolor = Linen]
 
 ##  Readings, Tasks and other deadlines in Canvas
 
-* Let's check Canvas [assessment overview page](https://canvas.sydney.edu.au/courses/55191/pages/assessment-overview?module_item_id=2131844)
+* Let's check Canvas [assessment overview page](https://canvas.sydney.edu.au/courses/65715/pages/assessment-overview?module_item_id=2788752)
 
-* Let's check Canvas [assignment page](https://canvas.sydney.edu.au/courses/55191/assignments)
+* Let's check Canvas [assignment page](https://canvas.sydney.edu.au/courses/65715/assignments)
 
-* Let's check Canvas [calendar page](https://canvas.sydney.edu.au/calendar?include_contexts=course_55191#view_name=month&view_start=2024-03-01)
+* Let's check Canvas [calendar page](https://canvas.sydney.edu.au/calendar?include_contexts=course_65715#view_name=month&view_start=2025-08-01)
 
-* Let's check Canvas [due dates (syllabus) page](https://canvas.sydney.edu.au/courses/55191/assignments/syllabus)
+* Let's check Canvas [due dates (syllabus) page](https://canvas.sydney.edu.au/courses/65715/assignments/syllabus)
 
 .center[<img src = 'https://media.giphy.com/media/G4pFuFdDewNyZlUYJV/giphy.gif' width = '40%'></img>]
 
@@ -593,7 +615,7 @@ This is not only cheating but also ChatGPT will never produce *original* (that i
 
 ### Use of GenAI in GOVT6139
 
-Let's check [this Canvas page](https://canvas.sydney.edu.au/courses/55191/pages/use-of-generative-ai-and-other-marvels?module_item_id=2228838)
+Let's check [this Canvas page](https://canvas.sydney.edu.au/courses/65715/pages/use-of-generative-ai-and-other-marvels?module_item_id=2788753)
 
 ---
 
@@ -623,8 +645,7 @@ Given an input, ChatGPT will guess the *best* possible series of words to respon
 
 ### How does it do in practice?
 
-One of the best way to understand the working of any language model available in 2023 is to think about *compression algorithms*.
-
+One of the best way to understand the working of any language model available in 2025 is to think about *compression algorithms* (although many will contest this analogy!).
 
 ### How do compression algorithms work? 
 
@@ -634,8 +655,22 @@ One of the best way to understand the working of any language model available in
 
 ChatGPT is written information what JPEG is for images. Interpolation is what gives the impression of creative knowledge. **In conclusions**, ChatGPT output can be helpful to find new information (e.g. a paper?) but can't be trusted at face value! 
 
-
 See: Ted Chiang's [ChatGPT Is a Blurry JPEG of the Web](https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web) but also Domenic Denicola's [ChatGPT Is Not a Blurry JPEG of the Web. It's a Simulacrum.](https://blog.domenic.me/chatgpt-simulacrum/)
+
+---
+
+### How are we going to use GenAI in class?
+
+- We are going to use Google's NotebookLM for literature review tasks. 
+
+- We are going to provide NotebookLM the context where to find and organise the information we want. 
+
+- We do this by uploading a few papers and documents before starting to ask the questions.
+
+- We are NOT going to ask: find me the relevant literature.
+
+- Instead we are going to say: here the literature, find me relevant information in there!
+
 
 ---
 class: inverse, center, middle
@@ -652,7 +687,7 @@ You are always welcome to send me an email, of course, if you feel you are getti
 
 1. At the end of each class, you can **optionally** provide a quick feedback (not anonymous) as you check-in for attendance. 
 
-<img src = '../img/sres-checkin-screenshot.png' width = '80%'>
+.center[<img src = '../img/sres-checkin-screenshot.png' width = '60%'>]
 
 If you click on the sad face, I will get back to you to check what's wrong.  
 
