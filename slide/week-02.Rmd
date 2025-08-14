@@ -3,7 +3,7 @@ title: "GOVT6139</br>Research design"
 subtitle: "Week 02</br>The Selection of a Research Approach"
 author: "Francesco Bailo"
 institute: "The University of Sydney"
-date: "Semester 1, 2024 (updated: `r Sys.Date()`)"
+date: "Semester 2, 2025 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
@@ -101,10 +101,9 @@ class: middle, center
 
 | Time         | Content                                                                           |
 |--------------|-----------------------------------------------------------------------------------|
-| 1:00 - 1:30  | **Research approach**</br></br>Induction vs Deduction</br></br>**Philosophical Assumptions**      |
-| 1:30 - 1:45  | Task 1 (15 Min)                                                                   |
-| 1:45 - 2:20  | **Research design**</br></br>**Research methods**</br></br>Bringing everything together</br></br>Check-in |
-| 2:20 - 2:50  | Task 2 (30 Min)                                                                   |
+| 3:30 - 4:00  | **Research approach**</br></br>Induction vs Deduction</br></br>**Philosophical Assumptions**      |
+| 4:15 - 4:30  | Task (15 Min)                                                                   |
+| 4:30 - 5:00  | **Research design**</br></br>**Research methods**</br></br>Bringing everything together</br></br>Check-in |                                                             |
 
 ---
 
