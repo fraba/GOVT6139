@@ -469,7 +469,7 @@ node [shape = rectangle, style = filled, fillcolor = Linen]
 
 __Table 1.3: Alternative Research Designs__
 
-| Quantitative Designs | Qualitative Designs | Methods Designs |
+| Quantitative Designs | Qualitative Designs | Mixed-Methods Designs |
 | :-: | :-: | :-: |
 | • Experimental and<br />quasi-experimental designs<br />• Single-subject designs<br />• Nonexperimental designs, such as surveys<br />• Longitudinal designs | • Descriptive method<br />• Narrative research<br />• Phenomenology<br />• Grounded theory<br />• Ethnography<br />• Case study<br />• Convergent<br />• Explanatory sequential<br />• Exploratory sequential<br />• Complex designs with<br />embedded core designs | • Case study<br />• Convergent<br />• Explanatory sequential<br />• Exploratory sequential<br />• Complex designs with<br />embedded core designs |
 
@@ -592,7 +592,7 @@ class: center, middle
 
 class: center, middle
 
-# TASK 2 
+# TASK 2 (If time allows...)
 
 ## The Selection of a Research Approach
 
