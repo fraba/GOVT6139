@@ -3,7 +3,7 @@ title: "GOVT6139</br>Research design"
 subtitle: "Week 03</br>Review of the Literature"
 author: "Francesco Bailo"
 institute: "The University of Sydney"
-date: "Semester 1, 2024 (updated: `r Sys.Date()`)"
+date: "Semester 2, 2025 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
@@ -59,398 +59,456 @@ class: middle, center
 
 ---
 
-## Today's class
+## Today's Activities
 
-| Time         | Content                                                                                                         |
-|--------------|-----------------------------------------------------------------------------------------------------------------|
-| 1:00 - 1:20  | **Research topic**</br></br>**Purpose, Organisation, Design of a Literature Review**                            |
-| 1:20 - 1:50  | Hands-on: Databases, GenAI, Zotero                                                                              |
-| 1:50 - 2:10  | Task 1: In Group (20 min)                                                                                       |
-| 2:10 - 2:30  | **Priority of the Literature**</br></br>**Abstracting the Literature**</br></br>**Key Terms**</br></br>Check-in |
-| 2:30 - 2:50  | Task 2: Individually (20 Min)                                                                                   |
+- **Chapter 2 overview:** Literature review purposes and research topic development
 
----
+- **Web of Science training:** Live database demonstration and search techniques
 
-# Chapter 2 Learning Objectives 
+- **TASK 1 (Groups):** Use NotebookLM to abstract papers
 
-1. Explain the reasons for a literature review to defend its use in a study.
-
-2. Organize a literature review consistent with a quantitative, qualitative or mixed methods approach.
-
-3. Describe the steps typically undertaken when conducting a literature review.
-
-4. Explain how to evaluate literature for inclusion in a literature review.
-
-6. Identify the types of terms needing definition in a scholarly research report.
+- **TASK 2 (Individual):** Find 5+ papers for your research topic, analyse with NotebookLM
 
 ---
 
-# Introduction
+# Chapter 2  Overview
 
-* Topic – subject or subject matter of a study
-  * e.g., "political participation", "democratic development", "compulsory voting"
+### Before you design your proposal, you must:
+
+- Identify a researchable topic
+- Conduct an extensive literature review
+- Understand how literature reviews differ across research approaches
+
+### Key Focus Areas:
+
+- Selecting and evaluating research topics
+- Understanding purposes and organisation of literature reviews
+- Mastering the literature search process
+- Defining key terms appropriately
+
+
+---
+
+## What your Research Proposal A2 should contain
+
+.pull-left[
+
+### Research Question (15%)
+
+- Identify a specific question for your research project
+- Outline why the question is important
+
+###Literature Review (25%)
+- How does your proposed research add new knowledge to the previous literature on the topic?  
+
+]
+
+.pull-right[
+
+### Research Design (60%)
+
+- Theory (and, if appropriate, hypotheses)
+- What data do you propose to collect and how do you plan to go about it OR what existing data source do you plan to use, and how do you plan to use it
+- What case(s) did you select, and why
+- How do you plan to analyse your data
+- The strengths and weaknesses of your proposed approach
+]
+
+---
+
   
-.center[<img src = '../img/old-female-scholar-in-library.jpeg' width = '20%'></img>]
+## The Research Topic
   
-* Conduct literature review about the topic
-  * Worth studying?
-  * Scope?
-  * Can be studied
+### What is a Research Topic?
+  - The **subject or subject matter** of a proposed study
+- Examples: "faculty teaching," "organizational creativity," "psychological stress"
+- Should be described in **a few words or short phrase**
+  - Becomes the **central idea** to learn about or explore
 
 
 ---
 
-# The Research Topic
+### Developing Your Topic
 
-* Gain insight into the topic by
-    * Drafting a working title
-      * “My study is about…”
-    * Posing a brief question
-      * What needs to be answered? (which helps you define your research problem and your research question)
+.pull-left[
 
-First step is to examine research on the topic and ask
+**Strategy 1: Draft a Working Title**
 
-* How does this project contribute to the existing literature?
-
----
-
-# The Research Topic
-
-* The topic **can** be researched if
-  * You have access to participants
-  * You have resources to collect and analyze information
-* The topic **should** be researched if
-  * The research will add to the literature about the topic
-  * Scholars will be interested in the topic
-  * A study of it will advance your personal goals
-  * It is ethical to conduct the study
-
----
-
-# The Purpose of a Literature Review
-
-* Shares the results of other studies
-
-* Relates the study to the larger dialogue in the literature
-
-* Provides a framework for establishing the importance of the study
-
-* Provides a benchmark for comparing the results to other findings
-
-* Studies need to add to the body of literature on a topic
-
----
-
-# Organization of the Literature Review
-
-## Literature reviews take several forms:
-
-  * **Integrate** what others have done and said
-  * **Criticize** previous scholarly works
-  * **Bridge** between related topics
-  * **Identify** the central issues in the field
-
----
-
-# Qualitative approach
-
-In qualitative research, inquirers use the literature in a manner consistent with the assumptions of **learning from the participant, not prescribing the questions** that need to be answered from the researcher’s standpoint. 
-
-One of the chief reasons for conducting a qualitative study is that the study is **exploratory**. This usually means that not much has been written about the topic or the population being studied, and the researcher seeks to listen to participants and build an understanding based on what is heard.
-
----
-
-# A Qualitative Structure
-
-Table 2.1: Using Literature in a Qualitative Study
-
-| Use of Literature | Criteria | Example of Suitable Strategy Types |
-| :-: | :-: | :-: |
-| The literature frames the problem in the introduction to the study.	 | There must be some literature available.	<br /> | Typically, researchers use this way in all types of qualitative studies.<br /> |
-| The literature appears in a separate section.	 | This approach is often acceptable to an audience most familiar with the traditional postpositivist approach to literature reviews.	 | Researchers with a strong quantitative orientation like this approach. 	<br /> |
-| The literature ends the study; it becomes a basis for comparing and contrasting findings of the qualitative study.	<br /> | This approach is most suitable for the inductive process of qualitative research; the literature does not guide and direct the study but becomes an aid once patterns or categories have been identified.	<br /> | Researchers with a strong qualitative orientation like this approach. 	<br /> |
-
----
-
-# A Quantitative Structure
-
-* The use of the literature:
-* In quantitative studies, researchers use literature to:
-  * Provide direction to the research questions and hypotheses
-  * Introduce a problem
-  * Introduce and describe the theory that will be used
-  * Examine the usefulness of the theory
-  * Compare results with existing literature or predictions
-
----
-
-# A Mixed Method Structure
-
-* The use of the literature:
-* In mixed methods studies, researchers use the literature:
-  * In either a quantitative or qualitative approach
-  * In each phase, consistent with either the quantitative or qualitative approach
-  * Relative to the intended audience
+- Complete: "My study is about..."
   
----
-
-# Steps in Conducting a Literature Review
-
-1. Identify key words (we can think of these as key *concepts*)
-
-2. Search databases
-
-3. Identify about 50 research reports in articles or books
-
-4. Collect those that are central to your topic
-
-5. Design a  __literature map__ (optional, but can be helpful to divide the literature under concepts, issues, methods and then relate this)
-
-6. Draft summaries of relevant articles
-
-7. Write a literature review, **organizing it by important concepts**
-
----
-
-class: inverse, center, middle
-
-# Databases, GenAI and Zotero
-
----
-
-## The University of Sydney gives access to a wide range of databases for academic publications
-
-Today we'll give a try to two
-
-### 1. Google Scholar [scholar.google.com.au](https://scholar.google.com.au/)
-
-* Free access
-* Wider underlying collection (paper and books but also pre-prints, blogposts, etc..)
-* Limited filtering functionalities
+- Keep it **straightforward and uncomplicated**
   
-### 2. Web of Science [webofscience.com](https://www.webofscience.com/)
+  - Avoid complex, erudite language early on
+  
+- Follow Wilkinson's (1991) guidelines:
 
-(An alternative to WoS is [Scopus](https://www.scopus.com/search))
+  - Be brief, avoid wasting words
+  - Eliminate "An Approach to..." or "A Study of..."
+  - Limit to 10-12 words
+  - Include the focus/topic
+  
+]
+
+.pull-left[
+
+**Strategy 2: Pose as a Question**
+- "What treatment is best for depression?"
+- "What does it mean to be Arabic in U.S. society today?"
+
+]
 
 
 ---
 
-## Using GenAI for research
+## Evaluating Topic Significance
 
-.pull-left[.center[<img src = '../img/chatgpt-hallucination-01.png' width = '80%'></img>]]
+### Can it be researched?
+- Access to willing participants
+- Available resources (time, computer programs, etc.)
+- Sustainable data collection period
 
-.pull-right[.center[<img src = '../img/chatgpt-hallucination-02.png' width = '80%'></img>]]
-
+### Should it be researched?
+**Key Considerations:**
+1. **Contribution to literature** - Does it add new knowledge?
+2. **Broader interest** - Appeals beyond your institution
+3. **Personal goals** - Aligns with career objectives
+4. **Time investment** - Worth the commitment required
+5. **Ethical considerations** - Is it ethically acceptable to conduct the study?
 
 ---
 
-Do you use GenAI?
+## Evaluating Topic Significance
 
-.center[<img src = '../img/2024-GOVT6139-W03-menti-qr-code.png' width = '25%'>
+**Ways to Contribute:**
+- Address unexamined topics
+- Extend existing discussions
+- Replicate studies in new contexts
+- Study unusual locations or populations
+- Take unexpected perspectives
+- Use novel data collection methods
+- Study timely topics
 
-OR 
+---
 
-[www.menti.com/albb7dk8wj91](https://www.menti.com/albb7dk8wj91) 
+## Purpose of Literature Review
+
+### What Literature Reviews Accomplish:
+
+1. **Share related studies** - Results of closely related research
+2. **Connect to ongoing dialogue** - Fill gaps and extend prior studies
+3. **Establish importance** - Framework for significance
+4. **Provide benchmarks** - Compare results with other findings
+5. **Shape narrative** - From larger problem to narrower issue
+
+### Core Principle:
+.content-box-yellow[
+
+.center[**Studies must add to the body of literature on a topic**]
 
 ]
 
 ---
 
-<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/alpr569mjknqmhb9syry2qo4vspcgav1/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
+## Organising Literature Reviews by Research Approach
+
+### Quantitative Structure
+- **Substantial literature** at the beginning
+- **Deductive approach** - provides direction for questions/hypotheses
+- **Separate section** titled "Related Literature" or "Review of Literature"
+- **Five-component model:**
+  1. Introduction to the review
+  2. Topic 1: Independent variable(s)
+  3. Topic 2: Dependent variable(s)
+  4. Topic 3: Studies relating independent and dependent variables
+  5. Summary highlighting key studies
 
 ---
 
-## Using Cogniti
+## Organising Literature Reviews by Research Approach
 
-* [Literature searching coach (AI agent)](https://canvas.sydney.edu.au/courses/55191/pages/literature-searching-coach-ai-agent?module_item_id=2280367) on Canvas
+### Qualitative Structure
+- **Literature used sparingly** at beginning (unless design requires it)
+- **Inductive approach** - learn from participants
+- **Three placement options:**
+  1. In introduction (frames the problem)
+  2. Separate section (for quantitatively-oriented audiences)
+  3. At the end (compare with findings - preferred for qualitative orientation)
+  
+---
+
+## Organising Literature Reviews by Research Approach
+
+### Mixed Methods Structure
+- **Depends on strategy** and relative weight of qualitative/quantitative
+- **Sequential approach:** Literature presented in each phase
+- **Equal weight:** Choose qualitative or quantitative form based on audience
 
 ---
 
-# Hands-on: Install Zotero on your laptop
+## Steps in Conducting Literature Review
 
-1. Install Zotero (which includes the Word plug-in)
+### 7-Step Process:
 
-2. Install the browser connector 
+1. **Identify keywords** for database searches
+2. **Search databases** (ERIC, Google Scholar, Web of Science, EBSCO, ProQuest, JSTOR)
+3. **Locate ~50 reports** of research articles or books
+4. **Skim and collect** central articles
+5. **Design literature map** (visual organisation)
+6. **Draft summaries** of most relevant articles
+7. **Assemble review** structured thematically with summary
 
-3. Create a free Zotero.org account (optional - to sync across devices)
+### Key Principle:
+**Iterative process** - search, then re-search until finding appropriate material
 
-Instructions: [libguides.nps.edu/zotero/install-setup](https://libguides.nps.edu/zotero/install-setup)
-
----
-
-# Hands-on: Use Zotero for the first time
-
-1. Create a collection;
-
-2. Create an item by importing it; [libguides.nps.edu/zotero/add-items](https://libguides.nps.edu/zotero/add-items)
-
-3. Add a reference in Word. [libguides.nps.edu/zotero/cite-in-word](https://libguides.nps.edu/zotero/cite-in-word)
-
-## I need some volunteers to join the Zoom meeting and share their screen! Ideally, a mix of Windows, Mac, Chrome and Firefox...
 
 ---
 
-# Hands-on: Google Scholar
+## Major Databases for Literature Search in Social Sciences
 
-.center[[scholar.google.com.au](https://scholar.google.com.au/)]
+- **Google Scholar** - Cross-disciplinary (scholar.google.com) Free
 
-* Let's search for works about "compulsory voting"
+- **Web of Science** - Largest abstract and citation database (www.webofscience.com) Access from USyd Library
 
-* Phrase searching `"compulsory voting"`
+- **Scopus** - Largest abstract and citation database (www.scopus.com)  Access from USyd Library
 
-* Exclude terms `"compulsory voting" -australia`
+### Search Tips:
+- Use both free and institutional databases
+- Search multiple databases regardless of your field
+- Use thesaurus guides when available
+- Start with recent articles, work backward
+- Look for full-text access
 
----
-
-# Hands-on: Web of Science
-
-.center[[webofscience.com](https://www.webofscience.com/)]
-
-* Let's search for works about "compulsory voting"
-
-* Phrase searching `"compulsory voting"`
-
-* Exclude terms `"compulsory voting" NOT australia`
-
-* Near term `"compulsory voting" NEAR/8 australia`
-
-* Analyse results
-
-* Filters
 
 ---
 
-class: center, middle
+## Literature Priority and Quality Evaluation
 
-# TASK 1 
+.pull-left[
 
-Complete the **Part 1: In Group** on the Task sheet (also available from Canvas)
+### Search Priority (in order):
+1. **Broad syntheses** - encyclopedias, **review articles**
+2. **Journal articles** - research studies in respected journals
+3. **Books** - research monographs, topic-focused books
+4. **Conference papers** - latest developments
+5. **Web materials** - evaluate carefully for quality
+
+]
+
+.pull-right[
+
+### Quality Evaluation Criteria:
+- **Journals:** National refereed publications with editorial boards
+- **Books:** Recognized publishers, recent publications (last 10 years)
+- **Online sources:** Evidence of quality review
+- **Conference papers:** Included in recent conferences
+- **General:** Seek recommendations from advisors/mentors
+
+]
+
+---
+
+## Let's give it a try!
+
+- Go to [library.sydney.edu.au](https://www.library.sydney.edu.au/)
+
+- Search `Web of Science`
+
+- Click on "Access online"
+
+- If prompted, enter you UniKey and password
+
+- Let's search something!
+
+- Also, get help with your search string here [https://webofscience.help.clarivate.com/en-us/Content/search-rules.htm](https://webofscience.help.clarivate.com/en-us/Content/search-rules.htm)
+
+---
+
+## Abstracting the Literature
+
+### Components of a Research Abstract:
+- **Problem** being addressed
+- **Purpose** or focus of study
+- **Sample information** - population, participants, subjects
+- **Key results** related to your proposed study
+- **Methodological critique** (if applicable)
+
+### Components of Theoretical/Methodological Abstract:
+- **Problem** addressed by article/book
+- **Central theme** of the study
+- **Major conclusions** related to theme
+- **Reasoning/logic flaws** (for methodological reviews)
+
+### Where to Find Information:
+- **Problem/Purpose:** Introduction section
+- **Sample:** Method/procedure section
+- **Results:** Results section addressing each research question
+
+.content-box-yellow[
+
+.center[... or we can ask a LLM chatbot!]
+
+]
+
+---
+
+
+# TASK 1: NotebookLM
+
+
+### In group
+
+- One person for each group to
+
+  1. Download the paper from Canvas (compressed folder) with topic "political participation and social media"
+  2. Open NotebookLM and create a new notebook (use an original name!)
+  3. Upload a selection of the papers or all of them!
+  4. Share the notebook with the other person in the group
+  
+- The group now shares the resources of the notebook, but each member will have separated chats (also invite me: `bailo.francesco@gmail.com`).
+
+---
+
+# TASK 1: NotebookLM (In group)
+
 
 ```{r echo = FALSE}
 library(countdown)
 
-countdown(minutes = 20, seconds = 00)
+countdown(minutes = 30, seconds = 00)
 ```
 
+- **High-level task**: Go back to the previous slide and try to abstract the literature!
 
+- **Low-level tasks** (a few tips, but feel free to be creative and experiment)
 
----
+  - Start from .content-box-green[`For each paper, provide a one line summary`]
+  
+  - Zoom in into single papers, then, and get
+  
+      - **type of paper**: review paper or research paper?
+    
+      - **research abstracts**: ask about "research problems", "sample information", "key findings".
+    
+      - **theoretical and conceptual abstracts**: ask about theories and concepts mentioned in the papers. 
+    
+      - **methodology abstracts**: ask about the methodology and the methods presented in the paper. 
+    
 
-# Priority of the Literature
+  - Ask questions to draw connections/comparison among more than one paper. 
 
-* A priority for selecting literature material:
+.center[.content-box-yellow[.small[When you get an interesting result from the chatbot,]]]
+.center[.content-box-yellow[.small[add it into a "Note" (see right panel)]]]
 
-1. Start with broad syntheses (such as encyclopedias or handbooks if you are new to the topic
-  * E.g. *[The Oxford Handbook of Political Participation](https://global.oup.com/academic/product/the-oxford-handbook-of-political-participation-9780198861126]0)*)
-
-2. Turn to journal articles in peer-reviewed journals
-3. Next, consider books
-4. Then examine conference papers (Google Scholar is king here)
-5. Scan for dissertations
-6. Lastly, consider reports on the web
-
----
-
-# Abstracting the Literature 
-
-### Abstracts summarize major elements of the article
-
-#### For research studies:
-
-* Mention the problem
-* State the central purpose
-* State information about the population and sample
-* Review key results
-* Point out methodological flaws (if a critique or methods review)
-
----
-
-###  Abstracting studies
-
-#### For nonempirical studies (essays, opinions, etc.)
-
-* Mention the problem
-* Identify the central theme
-* State the major conclusions
-* Mention flaws in reasoning or logic (if a methodological review)
-
----
-
-# Definition of Terms
-
-* Identify and define terms that readers need to understand a proposal
-* Define terms introduced in  _all_  sections of the research plan:
-  * Title of the study
-  * Problem statement
-  * Purpose statement
-  * Research questions, hypotheses, or objectives
-  * Literature review
-  * Theory base of the study
-  * Methods section
-
----
-
-## General Guidelines for terms
-
-* Define terms when they first appear in the manuscript
-
-* Use specific operational definitions
-
-* Do not define terms using everyday language, be guided by the literature
-
-* Define terms so that they accomplish different goals
-
-* One may use a definition of terms section in the manuscript
-
----
-
-### Special Terms
-
-* Qualitative studies
-  * Inductive and evolutionary in nature
-  * The definition of terms may appear later in the written report, perhaps in the data analysis
-* Quantitative studies
-  * Deductive with a fixed set of objectives
-  * All relevant terms are comprehensively defined earlier in the study
-* Mixed methods studies
-  * Follows the use of quantitative or qualitative approach
-  * Clarify terms related to mixed methods
-
----
-
-# Summary
-
-* Identify your topic through a brief title or central research question
-* Use the literature to
-  * Present similar studies
-  * Relate the study to the literature
-  * Provide a framework for comparison
-* Different purpose depending on approach
-* Search databases using key terms
 
 
 ---
 
-# Check-in
+## Literature Maps
+
+### Purpose:
+**Visual summary** showing how your study fits within existing literature
+
+### Design Principles:
+1. **Topic at top** of hierarchy (a topic can also be a critical concept, theory or idea)
+2. **Organize into 3+ subtopics** based on your literature
+3. **Include descriptive labels** in each box
+4. **Add major citations** illustrating content
+5. **Create multiple levels** as needed
+6. **Show your study** at bottom with connecting lines
 
 ---
 
-class: center, middle
+### Benefits:
+- Organize your understanding
+- Present to committees
+- Compose journal articles
+- Show how your study extends existing research
 
-# TASK 2
-
-Complete the **Part 2: Individually** on the Task sheet (also available from Canvas)
-
-```{r echo = FALSE}
-library(countdown)
-
-countdown(minutes = 20, seconds = 00)
-```
-
+### Design Options:
+- **Hierarchical** (top-down)
+- **Flowchart** (left-to-right)
+- **Intersecting circles** (overlapping areas indicate research needs)
 
 ---
 
-# First peer-review task is due next week (Friday, 15 Mar)
+.center[<img src = '../img/Creswellrd6e_lit_review_map.png' width = '80%'>]
+
+An example of a literature map from the text book
+
+---
+
+## Definition of Terms
+
+### When to Define Terms:
+- **Individuals outside the field** may not understand
+- **Beyond common language** usage
+- **When terms first appear** in proposal
+- **Any likelihood** readers won't know meaning
+
+### Guidelines for Definitions:
+1. **Define when first mentioned**
+  2. **Use operational/applied level** - specific, not abstract
+3. **Ground in research literature** - not everyday language
+4. **Different purposes:** describe, limit, establish criteria, define operationally
+5. **Separate section** if needed (2-3 pages maximum)
+
+### Approach by Research Type:
+
+**Qualitative:**
+  - **Few terms** defined at beginning
+- **Tentative definitions** may emerge during research
+- **Terms defined** as they surface in findings
+
+**Quantitative:**
+  - **Extensive definitions** early in proposal
+- **Separate section** with precise definitions
+- **Comprehensive** approach using accepted literature definitions
+
+**Mixed Methods:**
+  - **Define mixed methods terminology** (convergent design, integration, etc.)
+- **Approach depends** on which phase comes first
+- **Clarify strategy terms** (concurrent, sequential, specific design names)
+
+---
+  
+## Summary and Key Takeaways
+  
+  ### Before Literature Search:
+  1. **Identify researchable topic** using title/question strategies
+2. **Evaluate significance** - can it and should it be researched?
+  3. **Consider contribution** to existing knowledge
+
+### During Literature Review:
+1. **Understand different purposes** across research approaches
+2. **Follow systematic 7-step process**
+  3. **Use multiple high-quality databases**
+  4. **Prioritize and evaluate sources** carefully
+5. **Create literature map** for organization
+6. **Abstract key information** systematically
+
+### Writing and Style:
+1. **Follow APA 7th edition** consistently
+2. **Define terms** appropriately for your approach
+3. **Structure review** thematically
+4. **End with summary** showing gaps your study will fill
+
+### Final Goal:
+**Position your study within existing literature** and demonstrate how it extends, replicates, or fills gaps in current knowledge
+
+---
+  
+## Key Terms to Remember
+  
+- **Abstract** - Brief review summarizing major elements of a study
+- **Computer databases** - Online repositories providing access to literature
+- **Definition of terms** - Precise meanings for concepts in your study
+- **Literature map** - Visual representation of literature organization
+- **Style manuals** - Guidelines for consistent scholarly communication
+- **Topic** - Subject matter of your proposed study
+
+---
+
+# First peer-review task is due next week (Wed, 27 Aug)
 
 ## Think about a research problem and a research question for your A2 (due in Week 13)
 
@@ -462,6 +520,27 @@ From your textbook's glossary
 
 ... are problems or issues that lead to the need for a study. Research problems become clear when the researcher asks "What is the need for my study?" or "What problem influenced the need to undertake this study?"
 
+---
+
+# TASK 2: Web of Science + NotebookLM (individually)
+
+1. Reflect on a research **topic** (for A2)
+
+2. Think about what **key words** would help you find relevant literature. 
+
+3. Post your **key words*** on **Padlet**!
+
+4. Go the **Web of Science**, search and download **5+ papers** (at least **1 review paper**).
+
+5. Upload the papers to a new notebook in Notebook LM. 
+
+6. Start with **summaries** then try to understand the **research problems** addressed in the paper. 
+
+7. What **YOUR research problem** could be? 
+
+8. Post your research problem on **Padlet**!
+
+.center[.content-box-red[Do you have a question? Asking on this week's discussion board on Canvas!]]
 
 ---
 
