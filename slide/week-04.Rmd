@@ -3,7 +3,7 @@ title: "GOVT6139</br>Research design"
 subtitle: "Week 04</br>Review of the Literature"
 author: "Francesco Bailo"
 institute: "The University of Sydney"
-date: "Semester 1, 2024 (updated: `r Sys.Date()`)"
+date: "Semester 2, 2025 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
@@ -33,8 +33,6 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
 
 ```
 
----
-
 ## Acknowledgement of Country
 
 I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
@@ -59,16 +57,11 @@ class: middle, center
 
 ---
 
-# Additional info on AI agents
-
-There are two GenAI tools available for you from Canvas:
-
-* Literature searching coach (AI agent)
-* Writing coach (AI agent)
+# Additional info on AI agents (e.g. Notebook LM, ChatGPT, Co-pilot, etc.)
 
 Use them with **extreme care** and double check every bit of information coming from them. 
 
-You should consider these tools as **experimental**. Because we are all testing how to use them, it would be great to share our experiences. I have added a [Canvas discussion board](https://canvas.sydney.edu.au/courses/55191/discussion_topics/1222303) to collect what you like to share:
+You should consider these tools as **experimental**. Because we are all testing how to use them, it would be great to share our experiences. I have added a [Canvas discussion board](https://canvas.sydney.edu.au/courses/65715/discussion_topics/1472179) to collect what you like to share:
 
 1. Post your prompts (i.e. your questions);
 
@@ -76,44 +69,7 @@ You should consider these tools as **experimental**. Because we are all testing 
 
 3. Explain how you have used these tools in your learning. 
 
-NOTE: If you have used any GenAI tools for your assignment, you **must** aknowledge their contribution (more details [here](https://canvas.sydney.edu.au/courses/55191/pages/use-of-generative-ai-and-other-marvels?module_item_id=2228838))
-
----
-
-## University expectations of students
-
-From the Student Charter (section 8) 
-
-### The University expects the following personal conduct from students
-
-> (a) treat others with respect regardless of gender, religion, race, sexuality or disability;
-
-> (b) act honestly and ethically in all dealings with the University and members of its community;
-
-> (c) avoid engaging in bullying, harassment or discriminatory behaviour, including on social media;
-
-> (d) maintain a cooperative and collaborative approach to relationships with staff, affiliates and students;
-
-> (e) use University resources equitably, responsibly and with sensitivity to the needs of others, and without impeding access or use by others; and
-
-> (f) support academic freedom and freedom of speech for themselves and for others.
-
-
----
-
-### The University expects the following academic conduct from students:
-
-> (a) comply with applicable policies and procedures, faculty resolutions, award course resolutions and unit of study outlines;
-
-> (b) contribute to learning and the advancement of knowledge through honest, open and respectful discussion and debate of ideas;
-
-> (c) promote high academic standards;
-
-> (d) act honestly and ethically in all academic matters;
-
-> (e) commit to a culture of academic integrity; 
-
-> (f) work collaboratively and contribute equita
+NOTE: If you have used any GenAI tools for your assignment, you **must** aknowledge their contribution (more details [here](https://canvas.sydney.edu.au/courses/65715/pages/use-of-generative-ai-and-other-marvels?module_item_id=2788753))
 
 ---
 
@@ -121,36 +77,36 @@ From the Student Charter (section 8)
 
 | Time         | Content                                                                                                                                 |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| 1:00 - 1:20  | **Varied use of theory**</br></br>**Quantitative theory use**                                                                           |
-| 1:50 - 2:10  | Task 1: In Group (20 min)                                                                                                               |
-| 2:10 - 2:30  | **Qualitative theory use**</br></br>**Mixed methods theory use**</br></br>Check-in</br></br>Week 04 (Anonymous) student feedback survey |
-| 2:30 - 2:50  | Task 2: Individually (20 Min)    
+ 
 
 ---
 
 # Chapter 3 Learning Objectives
 
-1. Identify the seven steps in locating and using theories for incorporation into a proposal or a study.
+1. Identify the seven steps in locating and **using theories for incorporation into a proposal** or a study.
 
-2. Identify the major distinctions between an inductive and deductive use of theory in a research study.
+2. Identify the major distinctions between an **inductive** and **deductive** use of theory in a research study.
 
-3. Define variables, their measurement, and a causal model for inclusion in quantitative research.
+3. **Define variables**, their measurement, and a causal model for inclusion in quantitative research.
 
-4. Distinguish between the deductive approach, a theoretical standpoint, and an end point as ways to incorporate theories into qualitative research.
+4. Distinguish between the **deductive approach**, a **theoretical standpoint**, and an **end point** as ways to incorporate theories into qualitative research.
 
-5. Describe the difference between discipline-based theory and social justice use of theories in mixed methods research.
+5. Describe the difference between **discipline-based theory** and **social justice use of theories** in mixed methods research.
 
 ---
 
 # Introduction
 
-What theories might be used?
+* What theories might be used?
 
-Quantitative researchers test hypotheses from theory
+  * .content-box-yellow[Quantitative] researchers **test hypotheses** from theory
 
-Qualitative researchers may use as a lens or generate a theory
+  * .content-box-green[Qualitative] researchers may 
+    
+      * **use as a lens** or 
+      * **generate a theory**
 
-Mixed methods researchers may do both
+  * .content-box-purple[Mixed methods] researchers may do **both**
 
 
 ---
@@ -161,24 +117,38 @@ Mixed methods researchers may do both
 
 .center[<img src = '../img/from-theory-to-hypothesis-a.png' width = '70%'></img>]
 
+
 ---
 
-# The Varied Use of Theory
+## An yet, in practice the theory-and-observation problem is always going to be a chicken-and-egg problem.
 
-1. Identify the theory from literature search
+.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/c/c9/Maon_Mosaic_Hen.jpg' width = '25%'>]
 
-2. Place the theory at the beginning of the article as an *a priori* framework
+- Our experience (observations) always generates new theories (we are sense-making machines, we can't help it!), 
 
-3. Name the theory to be used and describe how it informs the quantitative, qualitative or mixed methods study
+- An we always experience reality based on some pre-existing theory of reality (sometimes, *biases*).
 
-4. Discuss studies using the theory
 
-5. Diagram the theory
 
-6. Theory provides framework for the study
+---
 
-7. Review theory’s role at end of study in findings and results, and compare to other studies
+# The Varied Use of Theory 
 
+## (seven steps - yes, textbook's authors love the number seven)
+
+1. **Identify** the theory from literature search
+
+2. **Place** the theory at the beginning of the article as an *a priori* framework
+
+3. **Name** the theory to be used and describe how it informs the quantitative, qualitative or mixed methods study
+
+4. **Discuss** studies using the theory
+
+5. **Diagram** the theory
+
+6. **Theory provides framework** for the study
+
+7. **Review** theory’s role at end of study in findings and results, and compare to other studies
 
 ---
 
@@ -227,18 +197,26 @@ node [shape = oval, style = filled, fillcolor = Linen]
 
 </center>
 
-Then a theory would explain why...
+.center[.content-box-yellow[
+
+Then a theory would **explain** why a change in X *causes* a change in Y
+
+]]
 
 ---
 
 # A theory in quantitative research can explains phenomena at different levels 
 
 
-__Micro-level theories__  – limited to a small segment of time, place or number of people
+* __Micro-level theories__  – limited to a small segment of time, place or number of people
 
-__Meso__  __-level theories__  – link micro-level and macro-level theories
+  - e.g. University students in Sydney
 
-__Macro-level theories__  – explain larger scales, for example the entire society
+* __Meso-level theories__  – link micro-level and macro-level theories
+
+* __Macro-level theories__  – explain larger scales, for example the entire society
+
+  - e.g. People and societies everywhere
 
 ---
 
@@ -246,14 +224,18 @@ __Macro-level theories__  – explain larger scales, for example the entire soci
 
 __Variable__  – characteristic of an individual or group that can be **measured** or **observed**
 
-Examples: age, gender, socioeconomic status, attitudes, but also more abstract characteristics such the quality of democracy in a country, 
+.content-box-green[
+
+Examples: age, gender, socioeconomic status, attitudes, but also more abstract characteristics such the quality of democracy in a country.
+
+]
 
 Variables may have temporal order or be measurable or observable
 
-* Independent variable (or predictor variable)
+* **Independent variable** (or **predictor** variable)
   * Variables that probably cause or affect outcomes
   
-* Dependent variable (or outcome variable)
+* **Dependent variable** (or **outcome** variable)
   * The outcomes that depend on the independent variables
   
 ---
@@ -436,26 +418,36 @@ or https://www.menti.com/alacmk9rnt1i]
 
 # Stating Theories in Quantitative Research
 
-## Theory
+.content-box-yellow[
+
+### Theory
 
 A theory should provide an explanation of why something happens
 
-  * X affects Y.
+  * X *affects* (that is, *causes*) Y.
 
-## Hypothesis 
+]
+
+.content-box-green[
+
+### Hypothesis 
 
 An hypothesis should provide a statement that is testable if we measure both X and Y
 
   * **If** X is observed **then** Y is also observed.  
+
+]
+
+
 
 ---
 
 # Placement of Quantitative Theories
 
 * Towards the beginning of the study
-* Used deductivel
-* Framework for study
-* Organizing model for
+* Used a **deductive approach**
+* The theory provides the **framework** for your study
+* Organising model for
   * Research questions or hypotheses
   * Data collection procedure
   
@@ -657,6 +649,4 @@ countdown(minutes = 20, seconds = 00)
 
 ---
 
-## See you next week with our first guest lecture by Christopher Pepin-Neff (slides already available on Canvas)
-
----
+## See you next week with Writing Strategies and Ethical Considerations!
