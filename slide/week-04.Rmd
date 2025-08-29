@@ -55,6 +55,8 @@ class: middle, center
 
 # Any question concerning the content for this week?
 
+(I added some of the NotebookLM notes you shared with me last week to the Canvas [discussion board](https://canvas.sydney.edu.au/courses/65715/discussion_topics/1472179))
+
 ---
 
 # Additional info on AI agents (e.g. Notebook LM, ChatGPT, Co-pilot, etc.)
