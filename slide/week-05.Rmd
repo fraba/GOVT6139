@@ -359,6 +359,31 @@ Choose "academic performance" and use consistently throughout
 
 .footnote[Tarshis, B. (1982). *How to write like a pro: A guide to effective nonfiction writing*. New American Library.]
 
+
+---
+
+## Task 2
+
+.center[<img src ='../img/menti-week-05.png' width = '30%'></img> 
+
+or https://www.menti.com/alwdnw4cuin8]
+
+
+---
+
+.small[
+(1) Despite widespread recognition of climate change as a global challenge, policy implementation at the national level remains inconsistent and inadequate. (2) This implementation gap is particularly evident in three key areas. (3) First, renewable energy adoption rates vary dramatically between developed nations, with some countries achieving over 40% renewable electricity while others lag below 10%. (4) These disparities reflect differences in government incentives, grid infrastructure capacity, and public-private partnerships. (5) Second, carbon pricing mechanisms, while adopted by 46 national jurisdictions, show significant variation in coverage and price levels. (6) For instance, carbon prices range from less than $1 per tonne in some systems to over $130 per tonne in others, undermining global coordination efforts. (7) Finally, international climate finance commitments consistently fall short of pledged amounts. (8) The $100 billion annual pledge to developing countries remains unmet, with actual contributions reaching only $83.3 billion in 2020. (9) Understanding these implementation challenges is crucial for developing more effective climate governance frameworks.
+]
+
+### What is what?
+
+1. **Umbrella Thoughts**: General or core ideas you're conveying (this is likely your core argument)
+2. **Big Thoughts**: Specific ideas that reinforce, clarify, or elaborate umbrella thoughts
+3. **Little Thoughts**: Ideas whose function is to reinforce big thoughts
+4. **Attention/Interest Thoughts**: Ideas that keep readers on track and organize content
+
+
+
 ---
 
 ## Coherence in Writing
