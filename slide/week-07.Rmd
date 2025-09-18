@@ -3,7 +3,7 @@ title: "GOVT6139</br>Research design"
 subtitle: "Week 07</br>The Introduction & The Purpose Statement"
 author: "Francesco Bailo"
 institute: "The University of Sydney"
-date: "Semester 1, 2024 (updated: `r Sys.Date()`)"
+date: "Semester 2, 2025 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
@@ -33,7 +33,6 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
 
 ```
 
----
 
 ## Acknowledgement of Country
 
@@ -43,288 +42,6 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 ---
 
 
-## Course outline
-
-.pull-left[
-
-**Week 1**: Introduction
-
-**PART I PRELIMINARY CONSIDERATIONS (Weeks 2-5)**
-
-**Week 2**: The Selection of a Research Approach
-
-**Week 3**: Review of the Literature
-
-**Week 4**: The Use of Theory
-
-**Week 5**: Writing Strategies and Ethical Considerations + Guest lecture w/t Christopher Pepin-Neff 
-
-**PART II DESIGNING RESEARCH (Weeks 6-12)**
-
-**Week 6**: The Introduction **no seminar** (public holiday)
-
-⏸️ *Mid Semester break* ⏸️
-
-]
-
-.pull-right[
-
-
-**Week 7**: The Purpose Statement 👈
-
-**Week 8**: Research Questions and Hypotheses + Guest Lecture w/t Charles Robert Butcher 
-
-**Week 9**: Quantitative Methods
-
-**Week 10**: Quantitative Methods: Data Analysis Lab (Make sure you install R and RStudio)
-
-**Week 11**: Qualitative Methods + Guest lecture w/t Peter Chen
-
-**Week 12**: Mixed Methods Procedures + Guest lecture w/t Assel Mussagulova
-
-**Week 13**: Conclusions
-
-
-]
-
----
-
-## Today's class
-
-| Time        | Content               |
-|-------------|-----------------------|
-| 1:00 - 1:20 | The Introduction      |
-| 1:20 - 1:50 | Group Task            |
-| 1:50 - 2:00 | The Research Problem  |
-|             | Check-in              |
-| 2:00 - 2:30 | The Purpose Statement |
-| 2:30 - 3:00 | Individual Task       |
-
-
----
-
-class: inverse, center, middle
-
-# Chapter 5
-
-# The Introduction
-
-.center[Slides adapted from Creswell, Research Design 6e, SAGE Publishing, 2023 for GOVT6139 Research Design.
-
-Do not reshare]
-
----
-
-## Chapter 5 Learning Objectives
-
-1. Construct a good abstract for a study with five key components.
-
-2. Describe reasons for an introduction’s role as a key feature of a study.
-
-3. Compare an introduction for a qualitative, quantitative, and mixed methods study. (Not covered in class today, refer to the textbook!)
-
-4. Describe the four components of a good introduction to a study.
-
-
----
-
-## Introduction to a Study
-
-### Proposal introduction has five components:
-
-1. **Establishing the problem** leading to the study
-2. **Reviewing the literature** about the problem
-3. Identifying **deficiencies** (gaps?) in the literature about the problem 
-4. Targeting an **audience** and noting the significance
-5. Identifying the **purpose** of the proposed study
-
----
-
-## The Importance of Introductions
-
-.pull-left[
-
-
-* The introduction is the initial passage in a study or proposal that
-  * Sets the stage for the project
-  * Creates reader **interest** in the topic
-  * Establishes the **problem** leads to the study
-  * Places the study **within the larger literature**
-  * Reaches out to a **specific audience**
-  
-]
-
-.pull-right[
-
-
-
-* A **research problem** is the problem or issue that leads to the need for a study
-* Sources
-  * Personal experience
-  * Debate in the literature
-  * Gaps that need to be addressed
-  * Policy debates
-
-]
-
----
-
-## An Abstract for a Study
-
-* A **brief summary** of the contents of a study
-
-* Allows the reader to **quickly** survey the **essential elements** of the study
-
-* Components
-
-  1. Issue or problem
-  2. Purpose of the study
-  3. What data that will be collected
-  4. Themes, statistical results, or mixed methods integrated findings that are likely
-  5. Practical implications of the study
-  
-  
----
-
-## Group Task
-
-> Choose one of the three abstracts provided on the task sheet. Highlights the **five components** that you find in the abstract. What elements are present, and what elements are missing?
-
-.pull-left[
-
-1. Issue or problem
-2. Purpose of the study
-3. What data that will be collected
-4. Themes, statistical results, or mixed methods integrated findings that are likely
-5. Practical implications of the study
-
-You can work on the task sheet and then share it on Padlet.
-
-]
-
-.pull-right[
-
-.center[<img src = '../img/padlet-week-07-01.png' width = '55%'></img>]
-
-]
-
-
-
----
-
-## A Model for an Introduction (Deficiencies model - of an introduction builds on gaps in the literature)
-
-Table 5.1: Illustration of an Introduction to a Study with Annotated Markers of Components
-
-| Component | Exploring the Conceptions and Misconceptions of Teen Smoking in High Schools: A Multiple Case Analysis |
-| --- | --- |
-| **The Topic**<br /><br />**The Research Problem** | Tobacco use is a leading cause of cancer in American society (McGinnis & Foefe, 1993). Although smoking among adults has **declined in recent years**, it has actually **increased for adolescents**. The Centers for Disease Control and Prevention reported that smoking among high school students had risen from 27.5 percent in 1991 to 34.8 percent in 1995 (USDHHS, 1996). Unless this trend is dramatically reversed, **an estimated 5 million of our nation’s children will ultimately die** a premature death (Centers for Disease Control and Prevention, 1996).	<br /> |
-
----
-
-| Component | Exploring the Conceptions and Misconceptions of Teen Smoking in High Schools: A Multiple Case Analysis |
-| --- | --- |
-| **Evidence from Literature Justifying Problem** | **Previous research** on adolescent tobacco use has focused on four primary topics. Several studies have examined the question of the initiation of smoking by young people, noting that tobacco use initiation begins as early as junior high school (e.g., Heishman et al., 1997). **Other studies** have focused on the prevention of smoking and tobacco use in schools. This research has led to numerous school-based prevention programs and interventions (e.g., Sussman, Dent, Burton, Stacy, & Flay, 1995). **Fewer studies** have examined “quit attempts” or cessation of smoking behaviors among adolescents, a distinct contrast to the extensive investigations into adult cessation attempts (Heishman et al., 1997). **Of interest**, as well, to researchers studying adolescent tobacco use has been the social context and social influence of smoking (Fearnow, Chassin, & Presson, 1998). For example, adolescent smoking may occur in work-related situations, at home where one or more parents or caretakers smoke, at teen social events, or at areas designated as “safe” smoking places near high schools (McVea et al., in press).	<br /> |
-
-
-
-.center[.content-box-yellow[
-Note the thematic division of the literature review
-]]
-
----
-
-
-| Component | Exploring the Conceptions and Misconceptions of Teen Smoking in High Schools: A Multiple Case Analysis |
-| --- | --- |
-| **Deficiencies in Evidence** | **Minimal research attention has been directed** toward the social context of high schools as a site for examining adolescent tobacco use. During high school, students form peer groups which may contribute to adolescent smoking. Often peers become a strong social influence for behavior in general, and belonging to an athletic team, a music group, or the “grunge” crowd can impact thinking about smoking (McVea et al., in press). Schools are also places where adolescents spend most of their day (Fibkins, 1993) and are available research subjects. Schools provide a setting for teachers and administrators to be role models for abstaining from tobacco use and enforcing policies about tobacco use (OHara et al., 1999). **Existing studies** of adolescent tobacco use **are primarily quantitative** with a focus on outcomes and transtheoretical models (Pallonen, 1998). **Qualitative investigations, however**, provide detailed views of students in their own words, complex analyses of multiple perspectives, and specific school contexts of different high schools that shape student experiences with tobacco (Creswell, in press). **Moreover, qualitative inquiry** offers the opportunity to involve high school students as co-researchers, a data collection procedure that can enhance the validity of student views uncontaminated by adult perspectives.	<br /> |
-
-.center[.content-box-yellow[
-Note the identification of a deficiency in our current knowkledge: insights are primarily generated by quantitative research - but a qualitative approach can add something to this.
-]]
-
----
-
-.center[.content-box-yellow[
-Why should we use a qualitative approach?
-]]
-
-| Component | Exploring the Conceptions and Misconceptions of Teen Smoking in High Schools: A Multiple Case Analysis |
-| --- | --- |
-| **Importance of Problem for Audiences** | By examining these multiple school contexts, using qualitative approaches and involving students as co-researchers, **we can better understand** the conceptions and misconceptions adolescents hold about tobacco use in high schools. With this understanding, researchers can **better isolate variables** and develop models about smoking behavior. Administrators and teachers can plan interventions to prevent or change attitudes toward smoking, and school officials can assist with smoking cessation or intervention programs. |
-
----
-
-## The Research Problem 
-
-* Begins with narrative hook
-
-* Easily understood by many readers (Audience!)
-
-* Builds readers’ interest through reference to study participants or posing questions
-
-* Clearly **identify the issue(s) or problem(s)** that lead to a need for the study
-
-* Indicate **why the problem is important** by citing numerous references
-
-
----
-
-## Evidence from the Literature: Justifying the Problem
-
-* Not a complete literature review as in the full literature review (Chapter 2, and in a proposal usually in a different, dedicated section)
-
-* The literature review in the introduction serves to
-
-  * Justify the importance of the problem
-  * Create distinctions between past studies and the proposed study
-  * Set the research problem within ongoing dialogue in the literature
-  
-.blockquote[ 
-#### Tips to consider when reviewing the literature for the introduction:
-* Summarize groups of studies not individual ones
-* Use in-text referencing to remove the emphasis on any one study
-* Review studies that use quantitative, qualitative, and mixed methods approaches
-* Use recent studies (last 10 years) and older studies that are of value
-
-]
-
----
-
-## Deficiencies in the Evidence
-
-* Deficiencies in past literature **may exist because**
-  1. The topic has not been explored with a particular group, sample, or population
-  2. The literature needs to be replicated with new people or sites or countries
-  3. The voice of underrepresented groups has not been heard in published literature
-  
-* **Discuss how** proposed study will
-  * Remedy or address the deficiencies
-  * Provide a unique contribution
-  
-* Consider including:
-  * reasons the study **adds** to the scholarly literature
-  * reasons the study helps to **improve practice**
-  * reasons the study will **improve policy**
-
----
-
-# Summary (Chapter 5)
-
-* The introduction incorporates the research problem
-* Four-part deficiencies model
-  1. Research problem (narrative hook)
-  2. Evidence from the literature justifying the problem
-  3. Deficiencies in the evidence
-  4. The importance of the problem for audiences
-  
----
-
-class: segue-yellow
-
-# Check-in
-  
----
 
 class: inverse, center, middle
 
@@ -338,162 +55,690 @@ Do not reshare]
 
 ---
 
-## Chapter 6 Learning Objectives
+## Learning Objectives
 
-1. Describe the relationship among the problem, the purpose statement, and the research questions.
+By the end of this chapter, you should be able to:
 
-2. In writing a purpose statement (or study aim) for a qualitative study, identify the three major components.
-
-3. Identify the central phenomenon in a qualitative purpose statement.
-
-4. State a quantitative purpose statement with variables and their relationships.
-
-5. Describe the four essential components of a mixed methods purpose statement. (Not covered in class, refer to textbook)
+1. **Describe** the relationship among the problem, the purpose statement, and the research questions
+2. **Identify** the three major components of a qualitative purpose statement
+3. **Identify** the central phenomenon in a qualitative purpose statement
+4. **State** a quantitative purpose statement with variables and their relationships
+5. **Describe** the four essential components of a mixed methods purpose statement
 
 ---
 
-## What is the Purpose (or Study Aim) Statement ? 
+## What is a Purpose Statement?
 
-__Purpose statement__ **establishes the intent** of the entire study
+A purpose statement:
+- **Indicates** why you want to do the study and what you intend to accomplish
+- **Conveys** the overall intent of a proposed study in one sentence or several sentences
+- **Sets forth** the intent of the study
+- Represents the **most important statement** in the study
+- Needs to be **clear, specific, and informative**
 
-* Most important statement in the entire study
+### Distinguished from:
+- The **problem** (the need for the research)
+- The **research questions**
 
-* In articles, final statement in introduction
+---
 
-* In theses and dissertations, stand alone section
+## The Research Hierarchy
+
+```
+The Problem
+    ↓
+The Purpose/Aim
+    ↓
+The Research Questions
+    ↓
+The Data
+```
+
+### Example Flow:
+- **Problem**: People are refusing to get vaccinated for COVID
+- **Purpose**: Identify the factors influencing vaccination refusal
+- **Research Question**: Are participants refusing vaccination because they suspect long-term health consequences?
+- **Data**: Mailed questionnaire to collect data
+
+---
+
+## Purpose Statement Design Guidelines
+
+### General Principles:
+- Set apart as a **separate sentence or paragraph**
+- Use research language: "The purpose of this study is (was) (will be)..."
+- **Present/past tense** for completed studies
+- **Future tense** for proposals
+- Make it the **central organising idea** of the study
+
+---
+
+# Task 1: Identify Four Research Components in Abstracts
+
+## Identify and locate these four components in each abstract:
+
+1. **Problem** - What issue or gap does the study address?
+2. **Purpose** - What is the study's main objective or intent?
+3. **Research Question** - What specific question(s) does the study investigate?
+4. **Data** - What type of data/evidence was collected?
+
+
+---
+
+class: inverse, center, middle
+
+# Qualitative Purpose Statements
+
+---
+
+## Qualitative Purpose Statement Components
+
+A good qualitative purpose statement contains:
+
+1. **Central phenomenon** explored in the study
+2. **Participants** in the study  
+3. **Research site**
+4. **Qualitative approach** used
+5. **Action verbs** indicating how learning will take place
+6. **Neutral, nondirectional language**
+
+---
+
+## What is a Phenomenon?
+
+### Definition in Qualitative Research
+
+A **phenomenon** is the **single central concept** or **key idea** being explored in a qualitative study.
+
+### Key Characteristics
+- **One focused concept** - not multiple ideas or relationships between variables
+- **Exploratory in nature** - something to be understood, discovered, or examined
+- **Experiential or social** - often involves human experiences, behaviors, or social processes
+- **Context-dependent** - understood within specific settings and circumstances
+
+---
+
+### Examples of Phenomena (plural of phenomenon)
+- **Teacher burnout experiences** in urban schools
+- **Identity formation** among first-in-the-family college students  
+- **Grief processes** following sudden loss
+- **Decision-making patterns** in family businesses
+- **Cultural adaptation** of immigrant communities
+- **Leadership emergence** in crisis situations
+
+---
+
+### What Phenomena Are NOT
+- ❌ **Relationships between variables** (that's quantitative)
+- ❌ **Multiple separate concepts** (focus on one)
+- ❌ **Predetermined outcomes** (avoid directional language)
+- ❌ **Measurable constructs** (focus on understanding, not measurement)
+
+**Remember**: The phenomenon is **what you want to understand**, not what you want to prove or measure.
+
+---
+
+## Design Features for Qualitative Purpose Statements
+
+### 1. Signal Words
+- Use words like **purpose, intent, objective**
+- "The purpose of this study is..."
+
+### 2. Single Focus
+- Focus on **one central phenomenon**
+- Narrow to one idea to be explored
+- Avoid relating or comparing variables
+
+### 3. Action Verbs
+- **understand, develop, explore, examine, generate, discover**
+- Keep inquiry open and exploratory
+
+---
+
+## Design Features (Continued)
+
+### 4. Neutral Language
+- Use **nondirectional** words and phrases
+- ✅ "exploring the self-expression experiences"
+- ❌ "successful self-expression experiences"
+- Avoid: useful, positive, informing
+
+### 5. Working Definition
+- Provide **general definition** of central phenomenon
+- "A tentative definition at this time for _____ is..."
+- Acknowledge it may evolve during study
+
+---
+
+## Design Features (Final)
+
+### 6. Qualitative Approach
+- Specify the approach: **ethnography, grounded theory, case study, phenomenology, narrative**
+
+### 7. Participants
+- Mention **individuals, groups, organizations**
+
+### 8. Research Site
+- Identify **homes, classrooms, organizations, programs, events**
+- Provide enough detail for clarity
+
+### 9. Delimitations
+- Scope limitations (e.g., "only women", "one geographic area")
+
+---
+
+## Qualitative Purpose Statement Script
+
+```
+The purpose of this _____ (qualitative approach) study 
+is (was/will be) to _____ (action verb: understand? 
+explore? develop?) the _____ (central phenomenon) 
+for _____ (participants) at _____ (research site). 
+
+At this stage in the research, the _____ (central 
+phenomenon) will be generally defined as _____ 
+(provide a general definition).
+```
+
+---
+
+## Qualitative Example: Phenomenology Study
+
+**Lauterbach (1993)** - mothers who lost babies in late pregnancy:
+
+> "The phenomenological inquiry, as part of uncovering meaning, articulated 'essences' of meaning in mothers' lived experiences when their wished-for babies died. Using the lens of the feminist perspective, the focus was on mothers' memories and their 'living through' experience..."
+
+**Analysis:**
+- **Central phenomenon**: Mothers' lived experiences
+- **Action word**: Articulated, uncovering
+- **Approach**: Phenomenological inquiry
+- **Participants**: Mothers
+- **Site**: Homes
+
+---
+
+## Qualitative Example: Case Study
+
+**Frelin (2015)** - teacher relationships with students:
+
+> "The purpose of this article is to trace and exemplify relational and professional practices that can help teachers and other school staff to assist students to overcome obstacles and be more successful at school."
+
+**Analysis:**
+- **Central phenomenon**: Relational and professional practices  
+- **Action verbs**: Trace, exemplify
+- **Approach**: Case study (one teacher, Gunilla)
+- **Participants**: One teacher
+- **Site**: Municipal school
+
+---
+
+class: inverse, center, middle
+
+# Quantitative Purpose Statements
+
+---
+
+## Quantitative Purpose Statement Components
+
+Quantitative purpose statements focus on **relating or comparing** variables and include:
+
+1. **Variables** and their relationships
+2. **Participants** and research site
+3. **Language** associated with quantitative research
+4. **Theory** being tested
+5. **Deductive** approach
+
+### Key Difference:
+Focus on **variables** rather than phenomena
+
+---
+
+## Major Components of Quantitative Purpose Statements
+
+### 1. Signal Words
+- "The purpose of this study is..."
+
+### 2. Research Approach
+- Specify **survey or experimental** research
+
+### 3. Theory/Framework
+- Identify **theory, model, or conceptual framework**
+
+### 4. Variables
+- **Independent, dependent, mediating, moderating** variables
+
+---
+
+## Major Components (Continued)
+
+### 5. Connecting Words
+- **"relationship", "comparison", "determinants", "correlation", "prediction"**
+- Or simply "describe" variables
+
+### 6. Variable Order
+- **Left to right**: Independent → Mediating → Dependent
+- Independent variable **always first**
+
+### 7. Participants & Site
+- Mention **unit of analysis** and research location
+
+### 8. Variable Definitions
+- **Define key variables** using accepted definitions
+
+---
+
+## Quantitative Purpose Statement Script
+
+```
+The purpose of this _____ (experiment/survey) study 
+is to test the theory of _____ that _____ (explains/
+predicts) that the _____ (independent variable) 
+_____ (compares/relates) to _____ (dependent 
+variable). 
+
+This study aims to recruit _____ (participants) at 
+_____ (research site). The independent variable 
+will be defined as _____. The dependent variable 
+will be defined as _____.
+```
+
+---
+
+## Quantitative Example: Survey Study
+
+**DeGraw (1984)** - educators in correctional institutions:
+
+> "The purpose of this study was to examine the relationship between personal characteristics and the job motivation of certified educators who taught in selected state adult correctional institutions in the United States."
+
+**Analysis:**
+- **Relationship** word used
+- **Independent variable**: Personal characteristics  
+- **Dependent variable**: Job motivation
+- **Participants**: Certified educators
+- **Site**: State correctional institutions
+- Variables **defined** in the statement
+
+---
+
+## Quantitative Example: Experimental Study
+
+**Esposito et al. (2017)** - online shopping nudges:
+
+> "This study was based on this assumption and sought to test how small changes to a website's design can affect purchase behaviour, with particular attention to the interaction with socio-demographic characteristics of the participant."
+
+**Analysis:**
+- **Independent variables**: Website design changes, demographics
+- **Dependent variable**: Purchase behavior
+- **Participants**: 626 participants
+- **Design**: 3 × 2 × 2 experimental design
+
+---
+
+class: inverse, center, middle
+
+# Mixed Methods Purpose Statements
+
+---
+
+## Mixed Methods Purpose Statement Components
+
+A mixed methods purpose statement includes:
+
+1. **Overall intent** of the study
+2. **Type** of mixed methods design
+3. **Both quantitative and qualitative** language
+4. **Integration** of both strands
+5. **Insight** expected from combining databases
+
+---
+
+## Guidelines for Mixed Methods Purpose Statements
 
 .pull-left[
-### The purpose statement
-  * Indicates **why** you want to do **the study**
-  * Indicates **what** you intend **to accomplish**
-  * Is the **central controlling idea** in a study
-  * Is written in a sentence or several sentences
-  * Sets the objectives, the intent, or the major idea of a proposal or a study
+
+### 1. Signal Intent
+- "The purpose of" or "The intent of"
+
+### 2. Overall Content Intent
+- What you want to accomplish by study's end
+- Should have **practical value**
+
 ]
 
 .pull-right[
-.content-box-red[
-### The purpose statement IS NOT
-  * The problem leading to a need for the study (see Chapter 5)
-  * The questions to be answered by collecting data
-  ]
-]
 
----
+### 3. Design Type
+- **Convergent, explanatory sequential, exploratory sequential, complex**
 
-## Figure 6.1: Relationship Among the Problem, the Purpose (Aim), the Research Questions, and the Data
-
-.center[<img src = '../img/Creswellrd6e_PPT061.png' width = '55%'></img>]
-
----
-
-## Qualitative purpose statement
-
-* A good qualitative purpose statement **contains**
-
-  * The **central phenomenon**
-  * The **participants**
-  * The **research site**
-  
-* Include language drawn from qualitative inquiry
-
-  * Use words such as purpose, intent, or objective to signal attention to this statement as the central controlling idea
-  
-  * Focus on a single phenomenon, narrows the study to one idea
-  
-  
----
-
-## Qualitative purpose statement: Example
-
-.blockquote[
-
-The purpose of this .content-box-yellow[( _strategy of inquiry, such as ethnography, case study, or other type_ )] study is  .content-box-yellow[_(was? will be?_ )] to .content-box-yellow[( _understand? explore? develop? discover?_ )] the .content-box-yellow[( _central phenomenon being studied_ )] for .content-box-yellow[( _the participants, such as the individual, groups, organization_ )] at  .content-box-yellow[( _research site_ )]. 
-
-At this stage in the research, the .content-box-yellow[( _central phenomenon being studied_ )] will be generally defined as .content-box-yellow[( _provide a general definition_ )].
+### 4. Mixed Language
+- **Quantitative words**: testing, relating, comparing
+- **Qualitative words**: exploring, understanding, generating
 
 ]
 
 ---
 
-In this example from the textbook (Example 6.1) ...
+## Types of Insight from Integration
 
-> The inquiry, as part of uncovering meaning, articulated “essences” of meaning in mothers’ lived experiences when their wished-for babies died. Using the lens of the feminist perspective, the focus was on mothers’ memories and their “living through” experience. This perspective facilitated breaking through the silence surrounding mothers’ experiences; it assisted in articulating and amplifying mothers’ memories and their stories of loss. Methods of inquiry included phenomenological reflection on data elicited by existential investigation of mothers’ experiences, and investigation of the phenomenon in the creative arts. 
+### Convergent Design
+- **More complete understanding** by comparing quantitative and qualitative results
 
+### Explanatory Sequential Design  
+- **Explain quantitative results** with qualitative follow-up for deeper understanding
 
-.content-box-green[
+### Exploratory Sequential Design
+- **Develop/improve quantitative measures** by first gathering qualitative data
 
-In which sentence does the author disclose the central **phenomenon** explored in the study?
+### Complex Design
+- **Enrich frameworks** by adding qualitative, quantitative data, or both
+
+---
+
+## Mixed Methods Script: Convergent Design
+
+```
+This mixed methods study will address _____ (overall 
+intent). A convergent mixed methods design will be used. 
+In this study, _____ (quantitative data) will be used to 
+test the theory of _____ that predicts _____ (independent 
+variables) will _____ influence _____ (dependent variables) 
+for _____ (participants) at _____ (site). 
+
+The _____ (qualitative data type) will explore _____ 
+(central phenomenon) for _____ (participants) at _____ 
+(site). The insight from combining databases will _____ 
+(provide more complete understanding/validate results).
+```
+
+---
+
+## Mixed Methods Script: Explanatory Sequential
+
+```
+This study will address _____ (overall intent). An 
+explanatory sequential mixed methods design will be used, 
+involving collecting quantitative data first and then 
+explaining results with in-depth qualitative follow-up. 
+
+In the first quantitative phase, _____ (instrument) data 
+will be collected from _____ (participants) to test _____ 
+(theory) to assess whether _____ (independent variables) 
+relate to _____ (dependent variables). 
+
+The second qualitative phase will help explain the 
+quantitative results in more depth. The insight will _____ 
+(provide detailed analysis/explain surprising findings).
+```
+
+---
+
+## Mixed Methods Script: Exploratory Sequential
+
+```
+This study addresses _____ (overall intent). The purpose 
+of this exploratory sequential design will be to first 
+qualitatively explore with a small sample, design or 
+modify a quantitative assessment based on qualitative 
+findings, and then test this assessment with a large sample.
+
+The first phase will qualitatively explore _____ (central 
+phenomenon) with _____ (data types) from _____ 
+(participants) at _____ (site). The qualitative findings 
+will be used to design a cultural or context-specific 
+quantitative assessment. The insight will be _____ 
+(better suited instrument/contextually specific assessment).
+```
+
+---
+
+## Mixed Methods Example: Convergent Design
+
+**Classen et al. (2007)** - older driver safety:
+
+> "This study provided an explicit socio-ecological view explaining the interrelation of possible causative factors, an integrated summary of these factors, and empirical guidelines for developing public health interventions to promote older driver safety. Using a mixed methods approach, we were able to compare and integrate main findings from a national crash dataset with perspectives of stakeholders."
+
+**Analysis:**
+- **Integration**: Compared national data with stakeholder perspectives
+- **Both data types**: Quantitative crash data + qualitative stakeholder views
+- **Outcome**: Guidelines for interventions
+
+---
+
+## Mixed Methods Example: Explanatory Sequential
+
+**Ivankova & Stick (2007)** - student persistence:
+
+> "The purpose of this mixed methods sequential explanatory study was to identify factors contributing to students' persistence in the ELHE program by obtaining quantitative results from a survey of 278 current and former students and then following up with four purposefully selected individuals to explore those results in more depth through a qualitative case study analysis."
+
+**Analysis:**
+- **Phase 1**: Quantitative survey (278 students)
+- **Phase 2**: Qualitative case studies (4 individuals)  
+- **Purpose**: Explore quantitative results in more depth
+- **Mixed language**: "identify" (quantitative) + "explore" (qualitative)
+
+---
+
+## Common Mistakes to Avoid
+
+.small[
+
+.pull-left[
+
+### Qualitative Purpose Statements
+- ❌ Including **multiple phenomena**
+- ❌ Using **directional language** (successful, positive, useful)
+- ❌ Comparing or relating variables
+- ❌ Missing the **central phenomenon**
+
+### Quantitative Purpose Statements  
+- ❌ **Wrong variable order** (dependent before independent)
+- ❌ Missing **connecting words** (relationship, comparison)
+- ❌ Undefined **key variables**
+
 
 ]
 
-.pull-left[.center[<img src ='../img/menti-week-07-01.png' width = '45%'></img> ]]
-.pull-right[or https://www.menti.com/alpimxhp15af]
+.pull-right[
 
----
+- ❌ No mention of **theory/framework**
 
-<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/altu6ruakaopr8xatf6b7c8vktghbn7m/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
+### Mixed Methods Purpose Statements
+- ❌ Missing **integration rationale**
+- ❌ Unclear **design type**
+- ❌ Only quantitative **OR** qualitative language
+- ❌ No **overall intent** statement
 
----
+]
 
-## A quantitative purpose statement
-
-* Differs from the qualitative purpose statement in terms of language and focus
-* Includes
-  * The **variables and their relationship**
-  * The **participants**
-  * The **research site**
-  
-.blockquote[
-The purpose of this .content-box-yellow[( _experiment? survey?_ )] study is .content-box-yellow[( _was? will be?_ )] to test the theory of .content-box-yellow[( _what theory?_ )]  that .content-box-yellow[( _compares? relates?_ )] the .content-box-yellow[( _independent variable_ )] to .content-box-yellow[( _dependent variable_ )], controlling for .content-box-yellow[( _mediating or moderating variables_ )] for .content-box-yellow[( _participants_ )] at .content-box-yellow[( _the research site_ )]. The independent variable(s) .content-box-yellow[( _what variable?_ )] will be defined as .content-box-yellow[( _provide a definition_ )]. The dependent variable(s) will be defined as  .content-box-yellow[( _provide a definition_ )], and the control and intervening variable(s),  .content-box-yellow[ ( _identify intervening variables_ )]  will be defined as .content-box-yellow[( _provide a definition_ )].
 ]
 
 ---
 
-## A Mixed Methods Purpose Statement 
+## Key Takeaways
 
-* Contains
-  * The **overall intent** of the study
-  * **Information about both** the quantitative and qualitative strands of the study
-  * A **rationale for combining** quantitative and qualitative strands
-  
-__A mixed methods purpose statement for Convergent design__:
-  
-.blockquote[
-This mixed methods study will address .content-box-yellow[ [overall content aim] ]. A convergent mixed methods design will be used, and it is a type of design in which qualitative and quantitative data are collected in parallel, analyzed separately, and then merged. In this study, .content-box-yellow[ [quantitative data] ] will be used to test the theory of .content-box-yellow[ [the theory] ] that predicts that .content-box-yellow[ [independent variables] ] will .content-box-yellow[ [positively, negatively] ] influence the .content-box-yellow[ [dependent variables] ] for .content-box-yellow[ [participants] ] at .content-box-yellow[ [the site] ]. The .content-box-yellow[ [type of qualitative data] ] will explore .content-box-yellow[ [the central phenomenon] ] for .content-box-yellow[ [participants] ] at .content-box-yellow[ [the site] ]. The reason for collecting both quantitative and qualitative data is to .content-box-yellow[ [the mixing reason] ].
-]
+### Purpose Statement Importance
+- **Most critical statement** in your study
+- **Sets the direction** for entire research project
+- Must be **clear, specific, and informative**
+
+### Approach-Specific Requirements
+- **Qualitative**: Single phenomenon, neutral language, action verbs
+- **Quantitative**: Variable relationships, theory testing, proper ordering  
+- **Mixed Methods**: Integration rationale, both languages, design type
+
+---
+
+### Writing Tips
+- **Set apart** as separate section
+- Use **appropriate scripts** as starting points
+- Include **all required components**
+- **Define key terms** for reader understanding
+
+---
+
+## Summary
+
+The purpose statement establishes the **intent of the entire research study**:
+
+- **Qualitative** purpose statements contain information about the central phenomenon, participants, and research site
+- **Quantitative** purpose statements focus on relating or comparing variables and include theory, participants, and research site  
+- **Mixed methods** purpose statements indicate overall intent, design type, both quantitative and qualitative elements, and integration rationale
+
+**Remember**: The purpose statement is the **foundation** that guides all other aspects of your research design!
+
+---
+
+# Task 2: Scenario-based Research Design
 
 
 ---
 
-# Summary (Chapter 6)
+class: inverse, center, middle
 
-* Importance of a purpose statement
 
-* Advances central idea in a study
+# Research Design: The Logic of Inference
 
-* Qualitative, quantitative, and mixed methods purpose statements differ
+.footnote[King, G., Keohane, R. O., & Verba, S. (1994). *Designing social inquiry scientific inference in qualitative research*. Princeton University Press.]
+
+---
+
+## Core Argument
+
+### One Logic, Two Styles
+- **Main Goal**: Connect "quantitative" and "qualitative" research traditions through a **unified logic of inference**
+- **Key Insight**: Differences between approaches are mainly **stylistic and technical**, not methodological
+- **Foundation**: Same underlying logic provides framework for **both** research approaches
+
+### The False Dichotomy
+- Quantitative researchers: "Only statistical analysis leads to truth"
+- Qualitative researchers: "Statistical analyses are irrelevant"
+- **Reality**: Both approaches follow the **same fundamental principles** of scientific inference
+
+---
+
+## Two Research Styles Defined
+
+### Quantitative Research Characteristics
+- Uses **numbers and statistical methods**
+- Based on **numerical measurements** of specific phenomena
+- **Abstracts** from particular instances to seek general descriptions
+- Tests **causal hypotheses**
+- Seeks **easily replicable** measurements and analyses
+
+### Qualitative Research Characteristics
+- Focuses on **particular instances** often important in their own right
+- Analyzes events **closely and in full detail**
+- Emphasizes **rich textual and contextual understanding**
+- Studies major changes, elections, decisions, or crises
+- Often linked to **area studies** and specific cultural contexts
+
+---
+
+## The Integration Imperative
+
+### Why Both Approaches Are Necessary
+
+**Real-world complexity requires both:**
+- Some data amenable to **statistical analysis**
+- Other equally significant information that **cannot be quantified**
+- **Patterns and trends** vs. **flow of ideas** and **individual leadership**
+
+### Successful Examples
+- **Lisa Martin** (1992): 99 quantitative cases + 6 detailed case studies of economic sanctions
+- **Robert Putnam** (1993): Large-scale surveys + detailed case studies of 6 Italian regions
+- **Lesson**: Neither approach alone is sufficient for comprehensive understanding
 
 
 ---
 
-## Individual task 
+## Defining Scientific Research
 
-### Writing Exercise
+### Four Essential Characteristics
 
-Write a purpose statement for your research proposal and (optionally) share it on Padlet. 
+Scientific research must have **all four** characteristics:
 
+1. **The goal is inference** - Make descriptive or explanatory inferences beyond particular observations
+2. **The procedures are public** - Use explicit, codified methods that can be assessed and replicated
+3. **The conclusions are uncertain** - Acknowledge that inference is inherently imperfect
+4. **The content is the method** - Focus on methods and rules, not just subject matter
 
-.center[<img src = '../img/padlet-week-07-01.png' width = '35%'></img><br/>]
+---
 
+## Characteristic 1: The Goal is Inference
 
+### Beyond Description
+- **Descriptive inference**: Characterize unobserved phenomena based on observed data
+- **Causal inference**: Learn about causal effects from data we observe
+- **Key principle**: Must go **beyond particular observations** collected
 
+### Examples
+- Using **small sample** to infer about larger population
+- Learning about **contemporary behavior** from historical data  
+- Understanding **general patterns** from specific cases
+- **Distinguishing mark**: Making inferences that **extend beyond** immediate observations
+
+---
+
+## Characteristic 2: Procedures Are Public
+
+### Explicit and Replicable Methods
+> "The sociological analysis of qualitative data often resides in a private world of penetrating but unfathomable insights... However, science is **public, not private**." - Robert K. Merton
+
+### Requirements for Public Procedures
+- **Codified methods** that can be assessed for reliability
+- **Explicit rules** of research procedure and inference
+- **Teachable and shareable** approaches
+- Ability to **evaluate principles of selection** and **logic of conclusions**
+
+---
+
+### Consequence
+- Methods have **limitations** - but these can be **understood and addressed**
+- Results can be **compared across researchers**
+- Studies can be **replicated**
+- Scholars can **learn** from each other's methods
+
+---
+
+## Characteristic 3: Conclusions Are Uncertain
+
+### Embracing Imperfection
+- **Inference is inherently imperfect** - we use data to learn about the world that produced it
+- **Perfect certainty impossible** - this would be tautology, not science
+- **Honest reporting** of uncertainty levels is essential
+- **Limited information** often necessary feature of social inquiry
+
+### Practical Implications
+- **Urgency vs. perfection**: Social world changes rapidly
+- **Better to act** on imperfect information than wait for perfect data
+- **Uncertainty acknowledgment** makes research more valuable, not less
+- **Goal**: Disciplined thought, not dogma
+
+---
+
+## Characteristic 4: Content Is the Method
+
+### Method Over Subject Matter
+> "The unity of all science consists alone in its **method, not in its material**." - Karl Pearson (1892)
+
+### Implications
+- **Same methods** can study virtually anything
+- **Science as social enterprise** - mistakes caught by community
+- **Individual limitations** overcome through collective scrutiny
+- **Contribution value** - even minor work advances field if methodologically sound
+
+---
+
+### Liberation
+- Work need **not be perfect** to make important contribution
+- **Community correction** improves overall knowledge
+- **Public methods** more valuable than private insights
 
 ---
 
 # Thank you! 
 
-Remember to submit your Research design for peer-review by tonight!
+See you next week
 
 
     
