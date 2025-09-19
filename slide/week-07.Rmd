@@ -41,7 +41,23 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 
 ---
 
+## Today's program
 
+
+| **Time** | **Topic** | **Duration** |
+|----------|-----------|--------------|
+| 3:00 - 3:05 PM | **Learning Objectives** | 5 min |
+| 3:05 - 3:15 PM | **Introduction to Purpose Statements** | 10 min |
+| 3:15 - 3:25 PM | **Task 1: Identify Research Components in Abstracts** | 10 min |
+| 3:25 - 3:40 PM | **Qualitative Purpose Statements** | 15 min |
+| 3:40 - 3:45 PM | **Break** | 5 min |
+| 3:45 - 4:00 PM | **Quantitative Purpose Statements** | 15 min |
+| 4:00 - 4:10 PM | **Mixed Methods Purpose Statements** | 10 min |
+| 4:10 - 4:40 PM | **Task 2: Scenario-based Research Design** | 30 min |
+| 4:40 - 4:55 PM | **Research Design: The Logic of Inference** | 15 min |
+| 4:55 - 5:00 PM | **Q&A and Wrap-up** | 5 min |
+
+---
 
 class: inverse, center, middle
 
@@ -144,7 +160,7 @@ A good qualitative purpose statement contains:
 
 ---
 
-## What is a Phenomenon?
+## What is the Phenomenon?
 
 ### Definition in Qualitative Research
 
@@ -175,6 +191,14 @@ A **phenomenon** is the **single central concept** or **key idea** being explore
 - ❌ **Measurable constructs** (focus on understanding, not measurement)
 
 **Remember**: The phenomenon is **what you want to understand**, not what you want to prove or measure.
+
+.content-box-yellow[
+
+With a simplification, we could say: 
+
+- A **phenomenon** is for a *qualitative* study what the **relationship between independent and dependent variable** is for a *quantitative* study. 
+
+]
 
 ---
 
@@ -216,10 +240,10 @@ A **phenomenon** is the **single central concept** or **key idea** being explore
 - Specify the approach: **ethnography, grounded theory, case study, phenomenology, narrative**
 
 ### 7. Participants
-- Mention **individuals, groups, organizations**
+- Mention **individuals, groups, organisations**
 
 ### 8. Research Site
-- Identify **homes, classrooms, organizations, programs, events**
+- Identify **homes, classrooms, organisations, programs, events**
 - Provide enough detail for clarity
 
 ### 9. Delimitations
@@ -618,6 +642,8 @@ class: inverse, center, middle
 
 ## Two Research Styles Defined
 
+.pull-left[
+
 ### Quantitative Research Characteristics
 - Uses **numbers and statistical methods**
 - Based on **numerical measurements** of specific phenomena
@@ -625,12 +651,20 @@ class: inverse, center, middle
 - Tests **causal hypotheses**
 - Seeks **easily replicable** measurements and analyses
 
+]
+
+.pull-right[
+
 ### Qualitative Research Characteristics
 - Focuses on **particular instances** often important in their own right
 - Analyzes events **closely and in full detail**
 - Emphasizes **rich textual and contextual understanding**
 - Studies major changes, elections, decisions, or crises
 - Often linked to **area studies** and specific cultural contexts
+
+]
+
+
 
 ---
 
@@ -736,9 +770,11 @@ Scientific research must have **all four** characteristics:
 
 ---
 
+class: inverse, center, middle, segue
+
 # Thank you! 
 
-See you next week
+See you next week with the Research Question!
 
 
     
