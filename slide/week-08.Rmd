@@ -3,7 +3,7 @@ title: "GOVT6139</br>Research design"
 subtitle: "Week 08</br>Research Questions and Hypotheses"
 author: "Francesco Bailo"
 institute: "The University of Sydney"
-date: "Semester 1, 2024 (updated: `r Sys.Date()`)"
+date: "Semester 2, 2025 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
@@ -33,18 +33,10 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
 
 ```
 
----
-
 ## Acknowledgement of Country
 
 I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
 
-
----
-
-## Student wellbeing services
-
-<center><iframe src = 'https://www.sydney.edu.au/students/health-wellbeing.html' width = '850px' height = '450px'></iframe></center>
 
 ---
 
@@ -57,36 +49,37 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 
 **PART I PRELIMINARY CONSIDERATIONS (Weeks 2-5)**
 
-**Week 2**: The Selection of a Research Approach
+**Week 2**: The Selection of a Research Approach + Guest lecture w/t Inessa De Angelis
 
 **Week 3**: Review of the Literature
 
-**Week 4**: The Use of Theory
+**Week 4**: The Use of Theory + Guest lecture w/t Assel Mussagulova
 
-**Week 5**: Writing Strategies and Ethical Considerations + Guest lecture w/t Christopher Pepin-Neff 
+**Week 5**: Writing Strategies and Ethical Considerations
 
 **PART II DESIGNING RESEARCH (Weeks 6-12)**
 
-**Week 6**: The Introduction **no seminar** (public holiday)
+**Week 6**: The Introduction
 
-⏸️ *Mid Semester break* ⏸️
 
 ]
 
 .pull-right[
 
 
-**Week 7**: The Purpose Statement 
+**Week 7**: The Purpose Statement
 
-**Week 8**: Research Questions and Hypotheses + Guest Lecture w/t Charles Robert Butcher 👈
+**Week 8**: Research Questions and Hypotheses + Guest Lecture w/t Minglu Chen 👈
+
+⏸️ *Mid Semester break* ⏸️
 
 **Week 9**: Quantitative Methods
 
-**Week 10**: Quantitative Methods: Data Analysis Lab (Make sure you install R and RStudio)
+**Week 10**: Quantitative Methods: Data Analysis Lab (Make sure you install JASP)
 
-**Week 11**: Qualitative Methods + Guest lecture w/t Peter Chen
+**Week 11**: Qualitative Methods + Guest lecture w/t Sarah Phillips
 
-**Week 12**: Mixed Methods Procedures + Guest lecture w/t Assel Mussagulova
+**Week 12**: Qualitative Methods: Data Analysis Lab (Make sure you install NVivo)
 
 **Week 13**: Conclusions
 
@@ -100,14 +93,9 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 <br/><br/><br/>
 
 .content-box-yellow[
-.large[* If you haven't done it yet, complete the peer review of a **research design** by today.]
+.large[* If you haven't done it yet, please complete your peer review!.]
 ]
 
-<br/><br/><br/>
-
-.content-box-yellow[
-.large[* An anonymous qualitative feedback survey is available for your to complete from Canvas this week. This is optional but always apreciated. Your feedback counts!.]
-]
 
 
 ---
@@ -115,7 +103,7 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 ## Warnings
 
 .content-box-red[
-.large[**First Warning**: The last three methods chapters of the textbook are substantially longer than the other chapters. Allocate more time to study them.]
+.large[**First Warning**: The last three methods chapters of the textbook are substantially longer than the other chapters. Also, I have added additional required chapters to cover the software (JASP and NVivo). Allocate more time to them!]
 ]
 
 --
@@ -123,14 +111,14 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 <br/>
 
 .content-box-red[
-.large[**Second Warning**: There are **mathematical notation and symbols** are in today's slides.]
+.large[**Second Warning**: There are **mathematical notation and symbols** in today's slides.]
 ]
 
 --
 
 <br/>
 
-<center><div class="tenor-gif-embed" data-postid="12660494" data-share-method="host" data-aspect-ratio="1.77515" data-width="35%"><a href="https://tenor.com/view/dont-panic-hitchhikers-guide-to-the-galaxy-stay-calm-gif-12660494">Dont Panic Hitchhikers Guide To The Galaxy GIF</a>from <a href="https://tenor.com/search/dont+panic-gifs">Dont Panic GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script></center>
+<center><div class="tenor-gif-embed" data-postid="12660494" data-share-method="host" data-aspect-ratio="1.77515" data-width="25%"><a href="https://tenor.com/view/dont-panic-hitchhikers-guide-to-the-galaxy-stay-calm-gif-12660494">Dont Panic Hitchhikers Guide To The Galaxy GIF</a>from <a href="https://tenor.com/search/dont+panic-gifs">Dont Panic GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script></center>
 
 
 ---
@@ -139,7 +127,7 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 
 | Time        | Content                                         |
 |-------------|-------------------------------------------------|
-| 1:00 - 2:00 | Guest lecture: Charles Robert Butcher           |
+| 1:00 - 2:00 | Guest lecture: Minglu Chen           |
 | 2:00 - 2:20 | Quantitative Research Questions and Hypotheses  |
 |             | Check-in                                        |
 | 2:20 - 2:30 | Qualitative Research Questions                  |
@@ -212,15 +200,6 @@ class: segue
   
   * **Estimates** of population values based on data from a sample
 ]
-
-.content-box-blue[
-* Quantitative **objectives**
-
-  * Indicate a **study's goals**
-  
-  * Often in proposals for funding, less common in health and social sciences
-]
-
 ---
 
 ## Quantitative research question describing outcomes
@@ -233,7 +212,7 @@ class: segue
 --
 
 .content-box-yellow[
-What is the frequency and variation of scores on ***standardized test performance*** for ***high school students*** in the study?
+What is the frequency and variation of scores on ***standardised test performance*** for ***high school students*** in the study?
 ]
 
 
@@ -324,9 +303,30 @@ BUT, what about causation $x \rightarrow y$? *Maybe*, as we have a good theory t
   
 Just remember that directionality (i.e., causality) is determined through theory (or design if you run a controlled experiment), not from statistical analysis. 
 
-.center[**Statistical analysis produces correlation estimates but never determines causal relationships.**<sup>1</sup>]
+.center[**Statistical analysis produces correlation estimates but never determines the certainty causal relationships.**<sup>1</sup>]
 
 .footnote[[1] Yes we do have causal inference methods and casual diagrams, but that's a story for another time...]
+
+---
+
+# Task 1: Questions, Hypotheses and Variables
+
+Yang, T. Z. (2025). Normalization of Censorship: Evidence from China. *The Journal of Politics*, 87(4), 1227–1242. https://doi.org/10.1086/734239 [USyd link](https://sydney.primo.exlibrisgroup.com/permalink/61USYD_INST/2rsddf/cdi_proquest_journals_3249289364)
+
+> Authoritarian censorship is traditionally understood as a repressive tool and will cause public backlash against the regime. However, surveys worldwide consistently find that citizens in authoritarian regimes are apathetic toward or even supportive of government censorship. To explain this puzzle, I theorize that citizens are subject to a normalization process. Specifically, individuals become desensitized to censorship activities when the range of censored content expands beyond politically threatening topics, like government criticism and collective action, to other less political issues. Using 28 million censored articles and two original survey experiments in China, I show that (1) a majority of censored articles are indeed unrelated to politically threatening topics, and (2) respondents exposed to the censorship of both political and nonpolitical content report higher support for censorship and the regime than those exposed only to political censorship. These findings highlight how normalizing repressive apparatuses like censorship contributes to authoritarian control and survival.
+
+---
+
+- Skim the paper or upload it to NotebookLM
+
+- What are the hypotheses?
+
+- What are the independent and dependent variables for the two hypotheses? 
+
+You can answer on Menti if you want
+
+.pull-left[.center[<img src ='../img/menti-week-08-01.png' width = '45%'></img> ]]
+.pull-right[or https://www.menti.com/alhhdtovqkmi]
 
 ---
 
