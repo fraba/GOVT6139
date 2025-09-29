@@ -113,6 +113,8 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 
 - Theory doesn't cause events! It explains them
 
+- Avoid quotes!
+
 ---
 
 class: inverse, center, middle
