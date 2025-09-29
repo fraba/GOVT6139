@@ -3,7 +3,7 @@ title: "GOVT6139</br>Research design"
 subtitle: "Week 09</br>Quantitative Methods"
 author: "Francesco Bailo"
 institute: "The University of Sydney"
-date: "Semester 1, 2024 (updated: `r Sys.Date()`)"
+date: "Semester 2, 2025 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
@@ -103,6 +103,13 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 |              | Check-in                                   |
 | 2:30 - 3:00  | Task 02 (Individual)                       |
 
+---
+
+## General Feedback on A1.
+
+- Explain, do not list! (Avoid bullet points)
+
+- Unpack to the lowest possible level allowed by the word limit. 
 
 ---
 
