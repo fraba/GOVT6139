@@ -52,36 +52,37 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 
 **PART I PRELIMINARY CONSIDERATIONS (Weeks 2-5)**
 
-**Week 2**: The Selection of a Research Approach
+**Week 2**: The Selection of a Research Approach + Guest lecture w/t Inessa De Angelis
 
 **Week 3**: Review of the Literature
 
-**Week 4**: The Use of Theory
+**Week 4**: The Use of Theory + Guest lecture w/t Assel Mussagulova
 
-**Week 5**: Writing Strategies and Ethical Considerations + Guest lecture w/t Christopher Pepin-Neff 
+**Week 5**: Writing Strategies and Ethical Considerations
 
 **PART II DESIGNING RESEARCH (Weeks 6-12)**
 
-**Week 6**: The Introduction **no seminar** (public holiday)
+**Week 6**: The Introduction
 
-⏸️ *Mid Semester break* ⏸️
 
 ]
 
 .pull-right[
 
 
-**Week 7**: The Purpose Statement 
+**Week 7**: The Purpose Statement
 
-**Week 8**: Research Questions and Hypotheses + Guest Lecture w/t Charles Robert Butcher 
+**Week 8**: Research Questions and Hypotheses + Guest Lecture w/t Minglu Chen
 
-**Week 9**: Quantitative Methods 👈
+⏸️ *Mid Semester break* ⏸️
 
-**Week 10**: Quantitative Methods: Data Analysis Lab (Make sure you install R and RStudio)
+**Week 9**: Quantitative Methods  👈
 
-**Week 11**: Qualitative Methods + Guest lecture w/t Peter Chen
+**Week 10**: Quantitative Methods: Data Analysis Lab (Make sure you install JASP)
 
-**Week 12**: Mixed Methods Procedures + Guest lecture w/t Assel Mussagulova
+**Week 11**: Qualitative Methods + Guest lecture w/t Sarah Phillips
+
+**Week 12**: Qualitative Methods: Data Analysis Lab (Make sure you install NVivo)
 
 **Week 13**: Conclusions
 
@@ -109,9 +110,11 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 
 - Explain, do not list! (Avoid bullet points)
 
-- Unpack to the lowest possible level allowed by the word limit. 
+- Unpack to the lowest possible level allowed by the word limit.
 
-- Theory doesn't cause events! It explains them
+  - If you can't unpack because you don't have enough room, you are trying to explain too much! Reduce the scope.
+
+- Theory doesn't cause events! It explains them. Make sure that this is reflected in your language. Do not say: People behave this
 
 - Avoid quotes!
 
