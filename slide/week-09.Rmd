@@ -324,35 +324,52 @@ Note: **Internal** and **external** validity *mostly* refers to experiment setti
 
 ---
 
-## What is Probability?
-**Probability vs. Statistics**
-- **Probability**: Known model → predict data
-  - "If I flip a fair coin 10 times, what outcomes can I expect?"
-- **Statistics**: Observed data → infer about model
-  - "I saw 10 heads in 10 flips. Is the coin fair?"
+## Why Probability Matters
 
-*Statistics is learning what we don't know from what we do!*
+Imagine a poll says 23% of Australian voters support a party.
 
----
+**The poll surveyed:** 1,000 voters (*sample* size, $n$)
 
-# Two Views of Probability
-**1. Frequentist View**
-- Probability = long-run frequency
-- Flip a coin infinitely many times → 50% heads
+**Total Australian voters:** 18.126 million (*population* size, $N$)
 
-**2. Bayesian View**
-- Probability = degree of belief
-- "I'm 60% confident it will rain tomorrow"
+  - Note that this is not the whole Australian population (~27.2 million) but Australians on "the electoral roll" according to the Australian Electoral Commission (AEC)
 
-*This course focuses on frequentist methods*
+**Question:** How can we trust this represents everyone?
+
+**Answer:** Probability theory!
+
+This is the bridge from *describing data* to *making inferences*.
+
+- Describing the data (i.e. our sample!) is what we call **descriptive statistics**
+
+- Using the sample to make observation about the population is what we call **inferential statistics**
 
 ---
 
-## Slide 5: Basic Probability Rules
+## Two Views of What we Should Mean with "Probability"
+
+### Frequentist View
+
+- .content-box-yellow[Probability = long-run frequency]
+- "If I flip this coin infinitely many times, 50% will be heads"
+- **Objective**, but limited to repeatable events
+
+### Bayesian View
+
+- .content-box-yellow[Probability = degree of belief]
+- "I'm 80% confident it will rain tomorrow"
+- More flexible, but **subjective**
+
+We'll use the frequentist approach (most common in the social sciences).
+
+
+---
+
+## Basic Probability Rules
 **Key Concepts**
 - Probabilities range from 0 (impossible) to 1 (certain)
 - All possible outcomes sum to 1
-- P(not A) = 1 - P(A)
+- $P(not A) = 1 - P(A)$
 
 **Example: Rolling a die**
 - P(rolling a 4) = 1/6 ≈ 0.167
@@ -360,7 +377,7 @@ Note: **Internal** and **external** validity *mostly* refers to experiment setti
 
 ---
 
-## Slide 6: Probability Distributions
+## Probability Distributions
 **What is a Probability Distribution?**
 - Describes how probabilities are spread across possible outcomes
 - Two types:
@@ -369,27 +386,235 @@ Note: **Internal** and **external** validity *mostly* refers to experiment setti
 
 ---
 
-## Slide 7: The Binomial Distribution
-**For Counting Successes**
+## The Binomial Distribution
+**For Counting "Successes"**
 - Used when:
-  - Fixed number of trials (N)
-  - Each trial has two outcomes (success/failure)
-  - Probability of success (θ) is constant
+  - Fixed number of **trials** ( $N$ )
+  - Each trial has two **outcomes** (success/failure)
+  - Probability of success ( $θ$ ) is **constant** (probability describes the underlying model for generating the data, in this case a dice)
   
-**Example**: Rolling 20 dice, counting skulls
-- N = 20 trials
-- θ = 1/6 (probability of skull)
+.pull-left[
+
+.center[<img src = '../img/skull-dice.png' width = '40%'>]
+
+]
+
+.pull-right[
+
+**Example**: Rolling 20 dice, counting "💀"
+- $N$ = 20 trials
+- $θ$ = 1/6 (probability of "💀")
+
+]  
+
+
 
 ---
 
 ## Slide 8: Binomial Distribution - Visual
-**Example: 20 dice rolls, P(skull) = 1/6**
+**Example**: 20 dice rolls, $P(💀) = 1/6$
 
 Most likely outcome: 3-4 skulls
 - Getting exactly 10 skulls would be very surprising!
 - The distribution shows what to expect
 
-*[Image shows bell-shaped distribution centered around 3-4]*
+```{r echo = FALSE, fig.width=12, fig.height=4, out.width="100%"}
+library(ggplot2)
+
+# Set parameters
+set.seed(123)
+n_trials <- 20
+prob_skull <- 1/6
+n_simulations <- 10000
+
+# Generate data
+skulls <- rbinom(n_simulations, size = n_trials, prob = prob_skull)
+x_values <- 0:20
+theoretical_prob <- dbinom(x_values, size = n_trials, prob = prob_skull)
+
+# Prepare data frames
+sim_data <- data.frame(skulls = skulls)
+theory_data <- data.frame(x = x_values, probability = theoretical_prob)
+
+# ============================================
+# CHART 1: Theoretical Distribution Only
+# ============================================
+
+chart1 <- ggplot(theory_data, aes(x = x, y = probability)) +
+  geom_col(fill = "red", alpha = 0.7, width = 0.7) +
+  geom_point(color = "darkred", size = 3) +
+  # Highlight 2-4 skulls (most likely range)
+  annotate("rect", xmin = 1.5, xmax = 4.5, 
+           ymin = 0, ymax = max(theoretical_prob) * 1.1,
+           alpha = 0.2, fill = "green", color = "darkgreen", 
+           linetype = "dashed", size = 1) +
+  annotate("text", x = 3, y = max(theoretical_prob) * 0.95,
+           label = "Most likely:\n2-4 skulls", 
+           color = "darkgreen", fontface = "bold", size = 5) +
+  geom_vline(xintercept = 10, linetype = "dashed", 
+             color = "orange", size = 1.2) +
+  annotate("text", x = 10.5, y = max(theoretical_prob) * 0.7,
+           label = "10 skulls\n(very rare!)", 
+           color = "orange", fontface = "bold", size = 4, hjust = 0) +
+  labs(title = "Theoretical Binomial Distribution",
+       subtitle = "P(skull) = 1/6, n = 20 dice rolls",
+       x = "Number of Skulls",
+       y = "Probability") +
+  scale_x_continuous(breaks = seq(0, 20, 2)) +
+  theme_minimal(base_size = 14) +
+  theme(plot.title = element_text(face = "bold", hjust = 0.5, size = 16),
+        plot.subtitle = element_text(hjust = 0.5, size = 12),
+        panel.grid.minor = element_blank())
+
+# ============================================
+# CHART 2: Observed Data Only
+# ============================================
+
+chart2 <- ggplot(sim_data, aes(x = skulls)) +
+  geom_histogram(aes(y = after_stat(density)), 
+                 binwidth = 1, 
+                 fill = "steelblue", 
+                 color = "white",
+                 alpha = 0.8) +
+  annotate("text", x = 11, y = max(theoretical_prob) * 0.9,
+           label = sprintf("10,000 simulations\nMean: %.2f\nSD: %.2f", 
+                          mean(skulls), sd(skulls)),
+           color = "steelblue", fontface = "bold", size = 3,
+           hjust = 0) +
+  labs(title = "Observed Results from Simulations",
+       subtitle = "What we actually see in 10,000 experiments",
+       x = "Number of Skulls",
+       y = "Probability Density") +
+  scale_x_continuous(breaks = seq(0, 20, 2), limits = c(0,20)) +
+  theme_minimal(base_size = 14) +
+  theme(plot.title = element_text(face = "bold", hjust = 0.5, size = 16),
+        plot.subtitle = element_text(hjust = 0.5, size = 12),
+        panel.grid.minor = element_blank())
+
+# ============================================
+# CHART 3: Overlay - Theory + Observations
+# ============================================
+
+chart3 <- ggplot() +
+  # Observed data (histogram)
+  geom_histogram(data = sim_data, 
+                 aes(x = skulls, y = after_stat(density)), 
+                 binwidth = 1, 
+                 fill = "steelblue", 
+                 color = "white",
+                 alpha = 0.6) +
+  # Theoretical distribution (line and points)
+  geom_line(data = theory_data, 
+            aes(x = x, y = probability), 
+            color = "red", size = 1.5) +
+  geom_point(data = theory_data, 
+             aes(x = x, y = probability), 
+             color = "red", size = 3) +
+  # Highlight most likely region (2-4 skulls)
+  annotate("rect", xmin = 1.5, xmax = 4.5, 
+           ymin = 0, ymax = max(theoretical_prob) * 1.1,
+           alpha = 0.15, fill = "green") +
+  annotate("text", x = 3, y = max(theoretical_prob) * 0.95,
+           label = "2-4 skulls\nmost likely", 
+           color = "darkgreen", fontface = "bold", size = 4) +
+  # Mark unlikely outcome
+  geom_vline(xintercept = 10, linetype = "dashed", 
+             color = "orange", size = 1) +
+  annotate("text", x = 10.5, y = max(theoretical_prob) * 0.7,
+           label = "Very rare!", 
+           color = "orange", fontface = "bold", size = 4, hjust = 0) +
+  # Legend
+  annotate("text", x = 11, y = max(theoretical_prob) * 0.50,
+           label = "Blue bars = Observed\nRed line = Theory",
+           color = "black", fontface = "bold", size = 3,
+           hjust = 0) +
+  labs(title = "Theory vs. Reality: Perfect Match!",
+       subtitle = "Simulated data matches theoretical predictions",
+       x = "Number of Skulls",
+       y = "Probability") +
+  scale_x_continuous(breaks = seq(0, 20, 2)) +
+  theme_minimal(base_size = 14) +
+  theme(plot.title = element_text(face = "bold", hjust = 0.5, size = 16),
+        plot.subtitle = element_text(hjust = 0.5, size = 12),
+        panel.grid.minor = element_blank())
+
+# ============================================
+# Display all three side by side
+# ============================================
+
+library(gridExtra)
+grid.arrange(chart1, chart2, chart3, ncol = 3)
+
+```
+
+
+---
+
+```{r echo = FALSE}
+library(knitr)
+library(kableExtra)
+
+# Set parameters
+set.seed(123)
+n_trials <- 20
+prob_skull <- 1/6
+n_simulations <- 10000
+
+# Generate simulated data
+skulls <- rbinom(n_simulations, size = n_trials, prob = prob_skull)
+
+# Calculate theoretical probabilities
+x_values <- 0:20
+theoretical_prob <- dbinom(x_values, size = n_trials, prob = prob_skull)
+
+# Count observed frequencies
+observed_freq <- table(factor(skulls, levels = 0:20))
+observed_prob <- as.numeric(observed_freq) / n_simulations
+
+# Create comprehensive comparison table
+comparison_table <- data.frame(
+  `Number of Skulls` = x_values,
+  `Theoretical Probability` = round(theoretical_prob, 4),
+  `Theoretical %` = paste0(round(theoretical_prob * 100, 2), "%"),
+  `Observed Frequency` = as.numeric(observed_freq),
+  `Observed Probability` = round(observed_prob, 4),
+  `Observed %` = paste0(round(observed_prob * 100, 2), "%"),
+  `Difference` = round(observed_prob - theoretical_prob, 4)
+)
+
+```
+
+.pull-left[
+
+```{r, echo = FALSE, result = "asis"}
+library(knitr)
+library(kableExtra)
+
+# Split data into two parts
+split_point <- 10  # Split at 10 skulls
+
+# First half (0-9 skulls)
+table1 <- comparison_table[comparison_table$Number.of.Skulls <= (split_point - 1), ]
+
+# Second half (10-20 skulls)
+table2 <- comparison_table[comparison_table$Number.of.Skulls >= split_point, ]
+
+
+kable(table1)
+
+```
+
+
+]
+
+.pull-right[
+
+```{r echo = FALSE, print = 'asis'}
+kable(table2)
+```
+
+
+]
 
 ---
 
@@ -642,7 +867,7 @@ CI₉₅ = X̄ ± 1.96 × (σ/√N)
 ## Slide 27: The Logic of Hypothesis Testing
 **Research Questions Require Hypothesis Tests**
 
-**Example**: Does ESP exist?
+**Example**: Does ESP (Extrasensory Perception) exist?
 - Test 100 people guessing hidden card colors
 - 62 get it right (expect 50 if guessing)
 - Is this evidence for ESP, or just luck?
