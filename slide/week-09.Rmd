@@ -106,20 +106,34 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 
 ---
 
-## General Feedback on A1.
+## General Feedback on A1
 
-- Explain, do not list! (Avoid bullet points)
+1. *Explain, explain, explain*. 
 
-- Unpack to the lowest possible level allowed by the word limit.
+   - Do not overuse lists! You are not preparing a checklist. When in doubt, drop the list and replace it with a regular paragraph.  
+   
+   - Reduce direct quotes to the minimum (2-3 word quotes are OK but avoid unjustified longer quotes). When in doubt, drop the quote and explain in your own words (still reference others' ideas appropriately).
+   
+2. **Unpack** to the lowest possible level (i.e. with as much **explanation** as possible) allowed by the word limit.
 
-  - If you can't unpack because you don't have enough room, you are trying to explain too much! Reduce the scope.
+   - If you can't unpack something because you don't have enough words available, you are trying to explain too much! Reduce the scope of your explanation.
+   
+   - RULE 0 is: you can't explain everything. 
+   
+   - RULE 1 is: you must explain what (e.g., concepts, theories, issues, events) you reference. 
+---
 
-- Theory doesn't cause events! It explains them. Make sure that this is reflected in your language. Do not say: People behave this
-
-- Avoid quotes!
-
-- Research design is an interdisciplinary language
-
+3\. **Theory doesn't cause events**! It **explains** them. Make sure that this is reflected in your language.
+   - Do not say: "People behave in this way because of that theory." Instead: "That theory is useful to explain why and how people behave in this way". 
+   
+   - This is not semantics. This is you communicating appropriately your understanding of how theory should be used in your research.  
+   
+4\. Research design is a **trans-disciplinary language**. It is independent from any discipline but it can talk about research in any discipline. When you write about your research design (e.g., in a research proposal) you are talking from your discipline to people inside and outside your discipline. 
+   - You must avoid discipline-specific terminology.
+   
+   - You must make discipline-specific research problems accessible to people outside that discipline. 
+   
+   - You must focus your discussion and explanations on your research choices.
 ---
 
 class: inverse, center, middle
@@ -232,7 +246,7 @@ How do you do it in practice?
 Your population is stratified based on characteristics of interest before sampling (e.g., gender, ethnicity). This gives more control on the representation of these characteristics in the final sample. 
 
 
-.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Stratified_sampling.PNG' width = '40%'></img>]
+.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Stratified_sampling.PNG' width = '35%'></img>]
 
 .content-box-yellow[
 Note: The allocation population-sample can be *proportionate* or *disproportionate*, if you want a larger proportion in your sample of some individuals because their characteristics present more variability.
@@ -302,6 +316,953 @@ Note: **Internal** and **external** validity *mostly* refers to experiment setti
 ]
 
 ### Reliability: using this instrument (i.e., question) can you consistently repeat the same measurement? 
+
+
+---
+
+# Probability
+
+---
+
+## What is Probability?
+**Probability vs. Statistics**
+- **Probability**: Known model → predict data
+  - "If I flip a fair coin 10 times, what outcomes can I expect?"
+- **Statistics**: Observed data → infer about model
+  - "I saw 10 heads in 10 flips. Is the coin fair?"
+
+*Statistics is learning what we don't know from what we do!*
+
+---
+
+# Two Views of Probability
+**1. Frequentist View**
+- Probability = long-run frequency
+- Flip a coin infinitely many times → 50% heads
+
+**2. Bayesian View**
+- Probability = degree of belief
+- "I'm 60% confident it will rain tomorrow"
+
+*This course focuses on frequentist methods*
+
+---
+
+## Slide 5: Basic Probability Rules
+**Key Concepts**
+- Probabilities range from 0 (impossible) to 1 (certain)
+- All possible outcomes sum to 1
+- P(not A) = 1 - P(A)
+
+**Example: Rolling a die**
+- P(rolling a 4) = 1/6 ≈ 0.167
+- P(not rolling a 4) = 5/6 ≈ 0.833
+
+---
+
+## Slide 6: Probability Distributions
+**What is a Probability Distribution?**
+- Describes how probabilities are spread across possible outcomes
+- Two types:
+  - **Discrete**: Countable outcomes (e.g., coin flips)
+  - **Continuous**: Infinite possible values (e.g., height, IQ)
+
+---
+
+## Slide 7: The Binomial Distribution
+**For Counting Successes**
+- Used when:
+  - Fixed number of trials (N)
+  - Each trial has two outcomes (success/failure)
+  - Probability of success (θ) is constant
+  
+**Example**: Rolling 20 dice, counting skulls
+- N = 20 trials
+- θ = 1/6 (probability of skull)
+
+---
+
+## Slide 8: Binomial Distribution - Visual
+**Example: 20 dice rolls, P(skull) = 1/6**
+
+Most likely outcome: 3-4 skulls
+- Getting exactly 10 skulls would be very surprising!
+- The distribution shows what to expect
+
+*[Image shows bell-shaped distribution centered around 3-4]*
+
+---
+
+## Slide 9: The Normal Distribution
+**The "Bell Curve"**
+- Most important distribution in statistics
+- Describes many natural phenomena
+- Defined by two parameters:
+  - **Mean (μ)**: Center of distribution
+  - **Standard deviation (σ)**: Spread of distribution
+
+**Examples**: Height, IQ scores, measurement errors
+
+---
+
+## Slide 10: Normal Distribution - Visual
+**Properties**
+- Symmetric around the mean
+- 68.3% of data within 1 SD of mean
+- 95.4% of data within 2 SD of mean
+- 99.7% of data within 3 SD of mean
+
+*[Shows normal curve with shaded regions]*
+
+**IQ Example**: μ = 100, σ = 15
+
+---
+
+## Slide 11: Why the Normal Distribution Matters
+**Three Key Reasons**
+1. Many real-world variables are normally distributed
+2. Averages of random samples tend toward normal (Central Limit Theorem)
+3. Makes statistical inference mathematically tractable
+
+*"The normal distribution is... well, normal!"*
+
+---
+
+## Slide 12: Other Important Distributions
+**You'll Encounter These**
+- **t-distribution**: Like normal but with heavier tails (for small samples)
+- **χ² (chi-square)**: For categorical data analysis
+- **F-distribution**: For comparing variances
+
+*Don't worry about the math - JASP handles these!*
+
+---
+
+## PART 2: ESTIMATING FROM SAMPLES
+
+---
+
+## Slide 13: Samples and Populations
+**Key Distinction**
+- **Population**: All possible observations we want to understand
+  - Often theoretical or impractically large
+  - Has true parameters (μ, σ) we don't know
+  
+- **Sample**: The data we actually collect
+  - Finite and observable
+  - Has statistics (X̄, s) we can calculate
+
+**Goal**: Use sample statistics to estimate population parameters
+
+---
+
+## Slide 14: Why Sampling Matters
+**We Can't Measure Everyone!**
+- Too expensive
+- Too time-consuming
+- Sometimes impossible
+
+**Solution**: Study a sample and make inferences
+- Political polls: Sample 1,000 voters from millions
+- Drug trials: Sample hundreds from entire population
+- Psychology experiments: Sample university students
+
+---
+
+## Slide 15: Simple Random Sampling
+**The Gold Standard**
+- Every member of population has equal chance of selection
+- No bias in selection process
+- Allows valid statistical inference
+
+**Reality Check**
+- Most psychology samples are "convenience samples"
+- Usually undergraduate students
+- Must think carefully about generalization
+
+---
+
+## Slide 16: The Law of Large Numbers
+**Bigger Samples → Better Estimates**
+
+As sample size increases:
+- Sample mean gets closer to population mean
+- Estimates become more accurate
+- Uncertainty decreases
+
+**Mathematical statement**: As N → ∞, X̄ → μ
+
+*"Even the most stupid of men... is convinced that the more observations have been made, the less danger there is of wandering from one's goal" - Jacob Bernoulli, 1713*
+
+---
+
+## Slide 17: Sampling Distributions
+**A Crucial Concept**
+- If we repeated our experiment many times, we'd get different sample means each time
+- The **sampling distribution** shows how these sample means are distributed
+
+**Example**: 
+- Draw 5 IQ scores, calculate mean → X̄₁ = 96
+- Draw 5 more IQ scores, calculate mean → X̄₂ = 107
+- Repeat 10,000 times → sampling distribution
+
+---
+
+## Slide 18: Sampling Distribution - Visual
+**Distribution of Sample Means**
+- Center: Population mean (μ = 100)
+- Spread: Standard error (SE)
+- Shape: Approximately normal (especially for large N)
+
+*[Shows histogram of 10,000 sample means]*
+
+**Key insight**: Sample means vary, but cluster around truth!
+
+---
+
+## Slide 19: The Central Limit Theorem
+**The Most Important Theorem in Statistics**
+
+**Statement**: Regardless of population distribution shape, the sampling distribution of the mean becomes normal as sample size increases
+
+**Implications**:
+1. Sample mean is normally distributed (for large N)
+2. Mean of sampling distribution = μ
+3. SD of sampling distribution = σ/√N (standard error)
+
+---
+
+## Slide 20: Central Limit Theorem - Visual
+**Magic of Averaging**
+
+Even if population is skewed:
+- N = 2: Sampling distribution less skewed
+- N = 4: Nearly normal
+- N = 8: Essentially normal
+
+*[Shows progression from skewed to normal distributions]*
+
+**This is why means are so useful!**
+
+---
+
+## Slide 21: Standard Error
+**Measuring Uncertainty**
+
+**Standard Error of the Mean (SEM)**:
+```
+SEM = σ/√N
+```
+
+**Key points**:
+- Smaller SEM = more precise estimate
+- Doubling precision requires 4× sample size
+- This is why large studies are more reliable
+
+**Example**: σ = 15, N = 100 → SEM = 1.5
+
+---
+
+## Slide 22: Estimating the Population Mean
+**Best Guess**
+- Population mean: μ (unknown)
+- Sample mean: X̄ (calculated from data)
+- **Estimate**: μ̂ = X̄
+
+**Example**:
+- Sample 100 people from Port Pirie
+- Mean IQ = 98.5
+- Best estimate of population mean: μ̂ = 98.5
+
+*Simple, but not the whole story...*
+
+---
+
+## Slide 23: Estimating Population SD
+**A Complication**
+- Sample SD: s = √[Σ(Xᵢ - X̄)²/N]
+- This is **biased** (systematically too small)
+
+**Solution**: Divide by N-1 instead of N
+```
+σ̂ = √[Σ(Xᵢ - X̄)²/(N-1)]
+```
+
+**Why?** Small samples underestimate variability
+- N-1 correction fixes this bias
+- JASP uses this formula automatically
+
+---
+
+## Slide 24: Notation Summary
+**Keep These Straight!**
+
+| Symbol | Meaning | Known? |
+|--------|---------|--------|
+| μ | Population mean | No (almost never) |
+| X̄ | Sample mean | Yes (calculated) |
+| μ̂ | Estimate of population mean | Yes (= X̄) |
+| σ | Population SD | No (almost never) |
+| s | Sample SD | Yes (biased) |
+| σ̂ | Estimate of population SD | Yes (unbiased) |
+
+---
+
+## Slide 25: Confidence Intervals
+**Quantifying Uncertainty**
+
+**95% Confidence Interval**:
+```
+CI₉₅ = X̄ ± 1.96 × (σ/√N)
+```
+
+**Interpretation** (frequentist):
+- If we repeated this experiment many times
+- 95% of confidence intervals would contain the true mean
+- NOT: "95% probability the true mean is in this interval"
+
+---
+
+## Slide 26: Confidence Intervals - Visual
+**Seeing Uncertainty**
+
+*[Shows 50 replications with confidence intervals]*
+- Each line represents one experiment
+- Most intervals (95%) contain true mean (μ = 100)
+- A few (5%) miss the true mean
+
+**Larger samples → narrower intervals → more precision**
+
+---
+
+## PART 3: HYPOTHESIS TESTING
+
+---
+
+## Slide 27: The Logic of Hypothesis Testing
+**Research Questions Require Hypothesis Tests**
+
+**Example**: Does ESP exist?
+- Test 100 people guessing hidden card colors
+- 62 get it right (expect 50 if guessing)
+- Is this evidence for ESP, or just luck?
+
+**Hypothesis testing provides a formal framework for answering such questions**
+
+---
+
+## Slide 28: Null and Alternative Hypotheses
+**Setting Up the Test**
+
+**Null Hypothesis (H₀)**:
+- The "boring" hypothesis
+- Usually "no effect" or "no difference"
+- ESP example: θ = 0.5 (pure guessing)
+
+**Alternative Hypothesis (H₁)**:
+- What we want to demonstrate
+- ESP example: θ ≠ 0.5 (better than guessing)
+
+**Goal**: Show null hypothesis is (probably) wrong
+
+---
+
+## Slide 29: Hypothesis Testing as a Trial
+**Legal Analogy**
+
+- **Defendant**: Null hypothesis
+- **Prosecutor**: Researcher
+- **Judge**: Statistical test
+- **Presumption of innocence**: Assume H₀ is true
+- **Burden of proof**: Must prove "beyond reasonable doubt"
+
+**We protect the null hypothesis from false conviction!**
+
+---
+
+## Slide 30: Two Types of Errors
+**Mistakes We Can Make**
+
+|  | **Retain H₀** | **Reject H₀** |
+|---|---|---|
+| **H₀ true** | ✓ Correct | ✗ **Type I error** (α) |
+| **H₀ false** | ✗ **Type II error** (β) | ✓ Correct (Power) |
+
+**Type I error (α)**: False positive (convicting the innocent)
+**Type II error (β)**: False negative (letting guilty go free)
+
+**We control Type I error rate, typically α = 0.05**
+
+---
+
+## Slide 31: The p-value
+**The Most Misunderstood Concept**
+
+**What it is**:
+- Probability of observing data this extreme (or more extreme) if H₀ is true
+- Small p-value = data are surprising under H₀
+
+**What it is NOT**:
+- ✗ Probability that H₀ is true
+- ✗ Probability that results are due to chance
+- ✗ Importance of the effect
+
+**Decision rule**: If p < 0.05, reject H₀
+
+---
+
+## Slide 32: Significance Levels
+**Conventional Standards**
+
+| **p-value** | **Interpretation** | **Stars** |
+|---|---|---|
+| p > .05 | Not significant | - |
+| p ≤ .05 | Significant | * |
+| p ≤ .01 | Highly significant | ** |
+| p ≤ .001 | Very highly significant | *** |
+
+**α = 0.05 is arbitrary but conventional**
+- 5% chance of Type I error
+- "Reasonable doubt" threshold
+
+---
+
+## Slide 33: One-Tailed vs. Two-Tailed Tests
+**Direction Matters**
+
+**Two-tailed test**: 
+- H₁: θ ≠ 0.5 (different in either direction)
+- Use when direction unknown
+- Most common in psychology
+
+**One-tailed test**:
+- H₁: θ > 0.5 (specific direction)
+- Use only when direction predicted in advance
+- More powerful but riskier
+
+---
+
+## Slide 34: Effect Size and Power
+**Significance ≠ Importance**
+
+**Effect Size**:
+- How big is the difference?
+- Cohen's d = (difference in means) / SD
+- Rules of thumb: 0.2 (small), 0.5 (medium), 0.8 (large)
+
+**Statistical Power**:
+- Probability of detecting a true effect
+- Power = 1 - β
+- Increase power: larger sample, larger effect
+
+---
+
+## PART 4: COMPARING TWO MEANS
+
+---
+
+## Slide 35: t-tests
+**The Workhorse of Psychology**
+
+**When to use**:
+- Outcome variable is continuous (interval/ratio scale)
+- Want to compare means between groups
+- Most common statistical test in psychology
+
+**Three types**:
+1. One-sample t-test
+2. Independent samples t-test
+3. Paired samples t-test
+
+---
+
+## Slide 36: One-Sample t-test
+**Comparing Sample to Known Value**
+
+**Question**: Is our sample mean different from a hypothesized value?
+
+**Example**: 
+- Dr. Zeppo's class should average 67.5%
+- 20 psychology students average 72.3%
+- Is this significantly different?
+
+**Test statistic**:
+```
+t = (X̄ - μ₀)/(σ̂/√N)
+```
+
+**Result**: t(19) = 2.25, p = .036 → Significant!
+
+---
+
+## Slide 37: Independent Samples t-test
+**Comparing Two Different Groups**
+
+**Question**: Do two groups have different means?
+
+**Example**:
+- Anastasia's students: M = 74.5, SD = 9.0, N = 15
+- Bernadette's students: M = 69.1, SD = 5.8, N = 18
+- Are grades significantly different?
+
+**Two versions**:
+- **Student's t-test**: Assumes equal variances
+- **Welch's t-test**: Doesn't assume equal variances (safer)
+
+---
+
+## Slide 38: Paired Samples t-test
+**Comparing Two Related Measurements**
+
+**When to use**:
+- Same participants measured twice
+- Before/after designs
+- Matched pairs
+
+**Example**: Dr. Chico's class
+- Test 1: M = 57%
+- Test 2: M = 58%
+- Did students improve significantly?
+
+**Key**: Test the *difference scores* for each person
+
+---
+
+## Slide 39: JASP Hands-On - One Sample t-test
+**Step-by-Step**
+
+1. Open JASP → Load data
+2. T-Tests → One Sample T-Test
+3. Move variable to "Variables" box
+4. Enter test value (e.g., 67.5)
+5. Check options:
+   - Location parameter
+   - Confidence interval (95%)
+   - Descriptive plots
+
+**Interpreting Output**:
+- t statistic, df, p-value
+- Mean difference and CI
+- Cohen's d (effect size)
+
+---
+
+## Slide 40: JASP Hands-On - Independent Samples t-test
+**Comparing Two Groups**
+
+1. T-Tests → Independent Samples T-Test
+2. Move outcome variable to "Variables"
+3. Move grouping variable to "Grouping Variable"
+4. Check options:
+   - Student (assumes equal variances)
+   - Welch (doesn't assume equal variances)
+   - Mann-Whitney (non-parametric alternative)
+   - Descriptive plots
+   - Assumption checks (normality, equality of variances)
+
+**Read output**:
+- Check assumption violations first
+- t statistic, df, p-value, CI
+- Effect size (Cohen's d)
+- Descriptive statistics table
+
+---
+
+## Summary Slide
+**Key Takeaways**
+
+1. **Probability** provides foundation for statistical inference
+2. **Sampling distributions** describe variability in estimates
+3. **Hypothesis tests** formalize scientific decision-making
+4. **t-tests** compare means between groups
+5. **JASP** makes complex calculations accessible
+
+**Remember**:
+- Larger samples → more precision
+- p < 0.05 → reject null hypothesis
+- Report effect sizes, not just p-values
+- Check assumptions before interpreting results
+
+
+---
+
+class: segue
+
+# 4. Probability
+
+---
+
+## Why Probability Matters
+
+Imagine a poll says 23% of Australian voters support a party.
+
+**The poll surveyed:** 1,000 voters (*sample* size, $n$)
+
+**Total Australian voters:** 18.126 million (*population* size, $N$)
+
+  - Note that this is not the whole Australian population (~27.2 million) but Australians on "the electoral roll" according to the Australian Electoral Commission (AEC)
+
+**Question:** How can we trust this represents everyone?
+
+**Answer:** Probability theory!
+
+This is the bridge from *describing data* to *making inferences*.
+
+- Describing the data (i.e. our sample!) is what we call **descriptive statistics**
+
+- Using the sample to make observation about the population is what we call **inferential statistics**
+
+---
+
+## Two Views of What we Should Mean with "Probability"
+
+### Frequentist View
+
+- .content-box-yellow[Probability = long-run frequency]
+- "If I flip this coin infinitely many times, 50% will be heads"
+- **Objective**, but limited to repeatable events
+
+### Bayesian View
+
+- .content-box-yellow[Probability = degree of belief]
+- "I'm 80% confident it will rain tomorrow"
+- More flexible, but **subjective**
+
+We'll use the frequentist approach (most common in the social sciences).
+
+---
+
+## Probability: The Basics
+
+**Key rules:**
+- Probabilities range from 0 (impossible) to 1 (certain)
+- All possible outcomes must sum to 1
+- P(not A) = 1 - P(A)
+
+**Example:** My trousers
+- Blue jeans: P = 0.5
+- Grey jeans: P = 0.3
+- Black jeans: P = 0.1
+- Tracksuit: P = 0.1
+- Total = 1.0 ✓
+
+---
+
+## The Binomial Distribution
+
+**Scenario:** Roll 20 dice, each has 1/6 chance of showing a skull.
+
+**Question:** What's the probability of getting exactly 4 skulls?
+
+**This is a binomial situation:**
+- Fixed number of trials (N = 20)
+- Two possible outcomes (skull or not)
+- Same probability each time (θ = 1/6)
+- Trials are independent
+
+---
+
+## Binomial Distribution: Visualised
+When N=20, θ=1/6 (rolling dice):
+
+Most likely: ~3 skulls
+P(exactly 4 skulls) ≈ 0.20 (20% chance)
+
+
+**Key insight:** Even with randomness, we can predict patterns!
+
+---
+
+## The Normal Distribution
+
+**The most important distribution in statistics**
+
+Also called:
+- The bell curve
+- Gaussian distribution
+
+**Why it matters:**
+- Appears everywhere in nature
+- Foundation for most statistical tests
+- Described by just two numbers: mean (μ) and standard deviation (σ)
+
+---
+
+## The Normal Distribution: Shape
+
+**Key properties:**
+- Symmetrical around the mean
+- 68% of data within ±1 SD
+- 95% of data within ±2 SD
+- 99.7% of data within ±3 SD
+
+**Example:** IQ scores
+- Mean = 100
+- SD = 15
+- 95% of people score between 70 and 130
+
+---
+
+## Understanding "Area Under the Curve"
+
+**For continuous variables:**
+- We can't ask "What's P(temperature = exactly 23°)?" → Answer is essentially zero
+- Instead: "What's P(temperature between 22.5 and 23.5°)?" → This makes sense!
+
+**The area under the curve = probability**
+
+This is why the y-axis says "probability density" not "probability"
+
+---
+
+## Other Important Distributions
+
+You'll meet these later:
+
+**t-distribution:** Like a normal, but with heavier tails (used when we don't know the population SD)
+
+**χ² distribution:** Skewed, always positive (used for categorical data analysis)
+
+**F-distribution:** For comparing variances (used in ANOVA)
+
+**All are related to the normal distribution!**
+
+---
+
+# Part 2: Sampling and Estimation
+
+---
+
+## The Fundamental Problem
+
+**We want to know:** What's the average IQ in Port Pirie?
+
+**We have:** IQ scores from 100 people (sample)
+
+**Population:** All ~14,000 residents
+
+**Challenge:** How do we learn about the whole population from our sample?
+
+---
+
+## Samples vs Populations
+
+**Population**
+- The complete group we want to understand
+- Has true parameters (μ, σ)
+- Usually impossible to measure completely
+
+**Sample**
+- Subset we actually observe
+- Has statistics we can calculate (x̄, s)
+- Our window into the population
+
+**Goal:** Use sample statistics to estimate population parameters
+
+---
+
+## What Makes a "Good" Sample?
+
+**Simple Random Sample:**
+- Every member has equal chance of selection
+- No bias in selection
+- Sampling without replacement (usually)
+
+**Reality check:**
+- True random samples are rare in psychology
+- We often use convenience samples (e.g., undergrads)
+- This is OK if we're careful about what we can claim
+
+---
+
+## Most Samples Aren't Random
+
+**Other sampling methods:**
+
+**Stratified sampling:** Sample separately from subgroups (e.g., by age)
+
+**Snowball sampling:** Participants recruit others (useful for hard-to-reach groups)
+
+**Convenience sampling:** Whoever is available (most psychology studies!)
+
+**Key question:** Does the sampling method bias our results in ways that matter?
+
+---
+
+## The Law of Large Numbers
+
+**Big idea:** Larger samples give better estimates
+
+**Simulation:** Sample mean from samples of different sizes
+- N=2: Sample means vary wildly
+- N=100: Sample means close to true mean
+- N=10,000: Sample means very close to true mean
+
+**As N → ∞, sample mean → population mean**
+
+This justifies our belief that more data = better answers!
+
+---
+
+## Sampling Distributions
+
+**Thought experiment:** Run the same experiment 10,000 times
+
+Each time:
+- Sample 5 people
+- Calculate mean IQ
+
+**Result:** A distribution of sample means!
+
+This is called the **sampling distribution of the mean**
+
+Even though individual IQs vary widely (SD=15), the sample means cluster much more tightly around the true mean.
+
+---
+
+## The Central Limit Theorem
+
+**The most important theorem in statistics**
+
+**Says:** Even if your data aren't normal, the sampling distribution of the mean *will be* normal (if N is large enough)
+
+**Three key facts:**
+1. Mean of sampling distribution = population mean (μ)
+2. SD of sampling distribution = σ/√N (called Standard Error)
+3. Shape becomes normal as N increases
+
+**This is why the normal distribution is so important!**
+
+---
+
+## Standard Error vs Standard Deviation
+
+**Standard Deviation (SD or s):**
+- Measures variability in your *data*
+- "How spread out are individual observations?"
+- Doesn't change much with sample size
+
+**Standard Error (SE or SEM):**
+- Measures uncertainty in your *estimate*
+- "How precise is our sample mean?"
+- Gets smaller as N increases: SE = SD/√N
+
+**Key insight:** Bigger samples = more precision!
+
+---
+
+## Estimating Population Parameters
+
+**For the mean:**
+- Best estimate = sample mean (x̄)
+- This is an *unbiased estimator*
+
+**For the standard deviation:**
+- We divide by (N-1) instead of N
+- This gives us σ̂ (estimate of σ)
+- Why? The sample SD is systematically too small
+- Dividing by (N-1) corrects this bias
+
+**In JASP:** The SD you see uses (N-1) automatically
+
+---
+
+## Confidence Intervals
+
+**The problem:** Our estimate is uncertain
+
+**The solution:** Report a range, not just a point
+
+**95% Confidence Interval:**
+- Range of plausible values for the true parameter
+- Calculated as: x̄ ± (1.96 × SEM)
+- "We're 95% confident the true mean is in this range"
+
+**Example:** Sample mean = 100, SEM = 2
+- 95% CI: 100 ± (1.96 × 2) = [96.08, 103.92]
+
+---
+
+## What Does "95% Confident" Really Mean?
+
+**Common (wrong) interpretation:**
+"There's a 95% chance the true mean is in this interval"
+
+**Correct (frequentist) interpretation:**
+"If we repeated this study 100 times, about 95 of the intervals would contain the true mean"
+
+**Why the difference?**
+- The true mean is fixed (not random)
+- Our interval is random (changes with each sample)
+- We make probability statements about repeatable events
+
+---
+
+## Visualising Confidence Intervals
+
+**Imagine 50 replications of the same experiment:**
+- Each produces a different CI
+- About 95% of them contain the true mean
+- About 5% miss it (by chance)
+
+**Wider intervals = more uncertainty**
+- Smaller N → wider CI
+- Larger N → narrower CI
+
+---
+
+## Calculating CIs in JASP
+
+**Currently:** JASP Descriptives doesn't show CIs directly
+
+**But you can calculate manually:**
+
+1. Get Mean and SE from Descriptives
+2. Lower 95% CI = Mean - (1.96 × SE)
+3. Upper 95% CI = Mean + (1.96 × SE)
+
+**Later in the course:** Some analyses will plot CIs automatically
+
+---
+
+## Key Takeaways: Probability
+
+1. Probability lets us quantify uncertainty
+2. The normal distribution is everywhere
+3. Understanding distributions helps us understand statistical tests
+4. Area under the curve = probability for continuous variables
+
+---
+
+## Key Takeaways: Sampling
+
+1. Samples let us learn about populations
+2. Larger samples give more precise estimates
+3. The Central Limit Theorem explains why means are normally distributed
+4. Confidence intervals quantify our uncertainty
+5. SE gets smaller as N increases: SE = SD/√N
+
+---
+
+## Next Week: Putting It All Together
+
+**We'll use these concepts to:**
+- Test hypotheses about our data
+- Make decisions under uncertainty
+- Understand when differences are "real" vs chance
+
+**Get ready for:** Hypothesis testing and the t-test!
+
+---
+
+## Questions?
+
+**Remember:**
+- Statistics is a tool for dealing with uncertainty
+- Perfect knowledge is impossible
+- But probability theory helps us make good inferences from imperfect data
+
+**This is what makes science possible!**
 
 ---
 
