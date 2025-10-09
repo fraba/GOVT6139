@@ -4,18 +4,8 @@
     <title>GOVT6139Research design</title>
     <meta charset="utf-8" />
     <meta name="author" content="Francesco Bailo" />
-    <script src="week-09_files/header-attrs-2.27/header-attrs.js"></script>
+    <script src="week-09_files/header-attrs-2.29/header-attrs.js"></script>
     <link href="week-09_files/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="week-09_files/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
-    <script src="week-09_files/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-    <link href="week-09_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-    <script src="week-09_files/datatables-binding-0.33/datatables.js"></script>
-    <script src="week-09_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-    <link href="week-09_files/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
-    <link href="week-09_files/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
-    <script src="week-09_files/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
-    <link href="week-09_files/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
-    <script src="week-09_files/crosstalk-1.2.1/js/crosstalk.min.js"></script>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         TeX: { equationNumbers: { autoNumber: "AMS" } },
@@ -253,7 +243,7 @@ class: segue
 
 ---
 
-Once you have defines your **sampling frame** and your **sample size** ($n$=sample size, `\(N\)`=population size), you can finally draw your **sample**. 
+Once you have defines your **sampling frame** and your **sample size** (`\(n\)`=sample size, `\(N\)`=population size), you can finally draw your **sample**. 
 
 How do you do it in practice?
 
@@ -428,7 +418,7 @@ We'll use the frequentist approach (most common in the social sciences).
 
 **Example**: Rolling 20 dice, counting "💀"
 - `\(N\)` = 20 trials
-- `\(θ\)` = 1/6 (probability of "💀")
+- `\(θ\)` = 1/6 (probability of "💀"), **the**ta for "**the**oretical probability"
 
 ]  
 
@@ -436,7 +426,7 @@ We'll use the frequentist approach (most common in the social sciences).
 
 ---
 
-## Slide 8: Binomial Distribution - Visual
+## Binomial Distribution - Visual
 **Example**: 20 dice rolls, `\(P(💀) = 1/6\)`
 
 Most likely outcome: 3-4 skulls
@@ -448,75 +438,309 @@ Most likely outcome: 3-4 skulls
 
 ---
 
+## What is the **theoretical** probability of observing an outcome an what is the **observed** frequency and probability
 
+
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt; Skulls &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Th. Prob &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Th. % &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Obs. Freq &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Obs. Prob &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Obs. % &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Diff &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0261 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 2.61% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 275 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0275 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 2.75% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0014 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.1043 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 10.43% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1002 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.1002 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 10.02% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -0.0041 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.1982 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 19.82% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 2027 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.2027 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 20.27% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0045 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.2379 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 23.79% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 2404 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.2404 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 24.04% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0025 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.2022 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 20.22% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 2045 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.2045 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 20.45% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0023 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.1294 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 12.94% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1282 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.1282 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 12.82% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -0.0012 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0647 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 6.47% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 626 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0626 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 6.26% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -0.0021 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 7 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0259 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 2.59% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 226 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0226 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 2.26% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -0.0033 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0084 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.84% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 87 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0087 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.87% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0003 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0022 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.22% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 16 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0016 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.16% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -0.0006 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Skulls &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Th. Prob &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Th. % &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Obs. Freq &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Obs. Prob &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Obs. % &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Diff &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0022 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.22% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 16 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0016 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.16% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; -0.0006 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 11 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0005 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.05% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 9 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0009 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.09% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0004 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 12 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 11 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0001 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.01% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0001 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.01% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 13 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 12 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 14 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 13 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 15 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 14 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 16 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 15 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 17 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 16 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 18 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 17 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 19 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 18 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 20 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 19 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 21 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 20 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0% &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 0.0000 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+### 1950s: When Statistics Confronted Industry Deception
+
+#### The smoking - lung cancer link 
+- 1950: Doll &amp; Hill publish first major study
+- Tobacco industry: "No proof smoking causes cancer"
+- Industry claim: Cancer rates same for smokers/non-smokers
+- **Statistical claim**: P(cancer) ≈ 1/6 regardless of smoking
 
 .pull-left[
 
-
-| Number.of.Skulls| Theoretical.Probability|Theoretical.. | Observed.Frequency| Observed.Probability|Observed.. | Difference|
-|----------------:|-----------------------:|:-------------|------------------:|--------------------:|:----------|----------:|
-|                0|                  0.0261|2.61%         |                275|               0.0275|2.75%      |     0.0014|
-|                1|                  0.1043|10.43%        |               1002|               0.1002|10.02%     |    -0.0041|
-|                2|                  0.1982|19.82%        |               2027|               0.2027|20.27%     |     0.0045|
-|                3|                  0.2379|23.79%        |               2404|               0.2404|24.04%     |     0.0025|
-|                4|                  0.2022|20.22%        |               2045|               0.2045|20.45%     |     0.0023|
-|                5|                  0.1294|12.94%        |               1282|               0.1282|12.82%     |    -0.0012|
-|                6|                  0.0647|6.47%         |                626|               0.0626|6.26%      |    -0.0021|
-|                7|                  0.0259|2.59%         |                226|               0.0226|2.26%      |    -0.0033|
-|                8|                  0.0084|0.84%         |                 87|               0.0087|0.87%      |     0.0003|
-|                9|                  0.0022|0.22%         |                 16|               0.0016|0.16%      |    -0.0006|
+&lt;img src="week-09_files/figure-html/unnamed-chunk-5-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
 
 
 ]
 
+--
+
 .pull-right[
 
+&lt;img src="week-09_files/figure-html/unnamed-chunk-6-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
 
-|   | Number.of.Skulls| Theoretical.Probability|Theoretical.. | Observed.Frequency| Observed.Probability|Observed.. | Difference|
-|:--|----------------:|-----------------------:|:-------------|------------------:|--------------------:|:----------|----------:|
-|11 |               10|                  0.0005|0.05%         |                  9|               0.0009|0.09%      |     0.0004|
-|12 |               11|                  0.0001|0.01%         |                  1|               0.0001|0.01%      |     0.0000|
-|13 |               12|                  0.0000|0%            |                  0|               0.0000|0%         |     0.0000|
-|14 |               13|                  0.0000|0%            |                  0|               0.0000|0%         |     0.0000|
-|15 |               14|                  0.0000|0%            |                  0|               0.0000|0%         |     0.0000|
-|16 |               15|                  0.0000|0%            |                  0|               0.0000|0%         |     0.0000|
-|17 |               16|                  0.0000|0%            |                  0|               0.0000|0%         |     0.0000|
-|18 |               17|                  0.0000|0%            |                  0|               0.0000|0%         |     0.0000|
-|19 |               18|                  0.0000|0%            |                  0|               0.0000|0%         |     0.0000|
-|20 |               19|                  0.0000|0%            |                  0|               0.0000|0%         |     0.0000|
-|21 |               20|                  0.0000|0%            |                  0|               0.0000|0%         |     0.0000|
 
 
 ]
 
 ---
 
-## Slide 9: The Normal Distribution
+## The Normal Distribution
 **The "Bell Curve"**
 - Most important distribution in statistics
 - Describes many natural phenomena
 - Defined by two parameters:
-  - **Mean (μ)**: Center of distribution
-  - **Standard deviation (σ)**: Spread of distribution
+  - **Mean ( `\(\mu\)` ) **: Center of distribution
+  - **Standard deviation (SD or `\(\sigma\)` )**: Spread of distribution
 
-**Examples**: Height, IQ scores, measurement errors
+**Examples**: **Height**, **Weight**, but crucially also **Measurement Errors**
 
 ---
 
-## Slide 10: Normal Distribution - Visual
+## Normal Distribution
+
 **Properties**
 - Symmetric around the mean
 - 68.3% of data within 1 SD of mean
 - 95.4% of data within 2 SD of mean
 - 99.7% of data within 3 SD of mean
 
-*[Shows normal curve with shaded regions]*
-
-**IQ Example**: μ = 100, σ = 15
+&lt;img src="week-09_files/figure-html/unnamed-chunk-7-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
 
 ---
 
-## Slide 11: Why the Normal Distribution Matters
+## Why the Normal Distribution Matters
 **Three Key Reasons**
 1. Many real-world variables are normally distributed
 2. Averages of random samples tend toward normal (Central Limit Theorem)
@@ -524,37 +748,47 @@ Most likely outcome: 3-4 skulls
 
 *"The normal distribution is... well, normal!"*
 
----
-
-## Slide 12: Other Important Distributions
-**You'll Encounter These**
-- **t-distribution**: Like normal but with heavier tails (for small samples)
-- **χ² (chi-square)**: For categorical data analysis
-- **F-distribution**: For comparing variances
-
-*Don't worry about the math - JASP handles these!*
 
 ---
 
-## PART 2: ESTIMATING FROM SAMPLES
+# Estimating from Samples
 
 ---
 
-## Slide 13: Samples and Populations
+## Samples and Populations
+
 **Key Distinction**
-- **Population**: All possible observations we want to understand
-  - Often theoretical or impractically large
-  - Has true parameters (μ, σ) we don't know
-  
-- **Sample**: The data we actually collect
-  - Finite and observable
-  - Has statistics (X̄, s) we can calculate
+
+.pull-left[
+**Population**
+- All possible observations
+- Often theoretical or impractically large
+- True parameters (unknown):
+  - Mean: `\(\mu\)`
+  - Standard deviation: `\(\sigma\)`
+]
+
+.pull-right[
+**Sample**
+- The data we actually collect
+- Finite and observable
+- Sample statistics (calculated):
+  - Sample mean: `\(\bar{X}\)`
+  - Sample SD: `\(s\)`
+]
 
 **Goal**: Use sample statistics to estimate population parameters
 
 ---
 
-## Slide 14: Why Sampling Matters
+## Sampling Matters
+
+.content-box-yellow[
+
+Sampling is the act of drawing individuals from a **population** of interest into your **sample** for **measurement**. 
+
+]
+
 **We Can't Measure Everyone!**
 - Too expensive
 - Too time-consuming
@@ -563,254 +797,295 @@ Most likely outcome: 3-4 skulls
 **Solution**: Study a sample and make inferences
 - Political polls: Sample 1,000 voters from millions
 - Drug trials: Sample hundreds from entire population
-- Psychology experiments: Sample university students
 
 ---
 
-## Slide 15: Simple Random Sampling
+## Simple Random Sampling
+
+.content-box-yellow[
+
+But **how** in practice you draw individuals from the population of interest it matters a great deal. 
+
+- A representative small sample is infinite better that a very large non-representative sample. 
+
+- Becase A non-representative sample won't allow you to infer (i.e. estimate) population characteristics (e.g., Internet polls)
+
+]
+
+.pull-left[
+
 **The Gold Standard**
 - Every member of population has equal chance of selection
 - No bias in selection process
 - Allows valid statistical inference
 
+]
+
+.pull-right[
+.small[
 **Reality Check**
-- Most psychology samples are "convenience samples"
-- Usually undergraduate students
-- Must think carefully about generalization
+- In practice, not every individual has the same probability of being selected into the sample.
+- Many samples are "convenience samples" (e.g. people are reached through phone or email instead of sending people to hunt them down)
+- Because of this we must think and discuss carefully about generalisation and study's limitations 
+]
+]
+
+
 
 ---
 
-## Slide 16: The Law of Large Numbers
+## The Law of Large Numbers
+
 **Bigger Samples → Better Estimates**
 
-As sample size increases:
-- Sample mean gets closer to population mean
+.pull-left[
+**What Happens as Sample Size Grows:**
+
+- Sample mean `\(\bar{X}\)` gets closer to population mean `\(\mu\)`
 - Estimates become more accurate
 - Uncertainty decreases
+- Random errors "cancel out"
 
-**Mathematical statement**: As N → ∞, X̄ → μ
+**Mathematical Statement:**
 
-*"Even the most stupid of men... is convinced that the more observations have been made, the less danger there is of wandering from one's goal" - Jacob Bernoulli, 1713*
+`$$\text{As } N \to \infty, \text{ then } \bar{X} \to \mu$$`
+
+*In plain English: With enough data, the sample mean converges to the true population mean*
+]
+
+.pull-right[
+
+&gt; "Even the most stupid of men... is convinced that the more observations have been made, the less danger there is of wandering from one's goal"
+— Jacob Bernoulli, Ars Conjectandi (1713)
+
+Why This Matters: This simple intuition forms the mathematical foundation for all of statistics!
+
+]
 
 ---
 
-## Slide 17: Sampling Distributions
+## Sampling Distributions
 **A Crucial Concept**
 - If we repeated our experiment many times, we'd get different sample means each time
 - The **sampling distribution** shows how these sample means are distributed
 
 **Example**: 
-- Draw 5 IQ scores, calculate mean → X̄₁ = 96
-- Draw 5 more IQ scores, calculate mean → X̄₂ = 107
-- Repeat 10,000 times → sampling distribution
+1. Sample 10 people, measure heights
+   - Calculate mean → `\(\bar{X}_1 = 168\)` cm
+2. Sample 10 different people
+   - Calculate mean → `\(\bar{X}_2 = 172\)` cm
+3. Sample 10 more people
+   - Calculate mean → `\(\bar{X}_3 = 171\)` cm
+4. Repeat 10,000 times...
+5. Plot all these means → **sampling distribution**
 
 ---
 
-## Slide 18: Sampling Distribution - Visual
+## Sampling Distribution - Visual
+
+&lt;img src="week-09_files/figure-html/unnamed-chunk-8-1.svg" width="80%" style="display: block; margin: auto;" /&gt;
+
+.pull-left[
+
+.small[
+
 **Distribution of Sample Means**
-- Center: Population mean (μ = 100)
-- Spread: Standard error (SE)
+- Center: Population mean ( `\(\mu\)` = 100 )
+- Spread: Standard error ( `\(SE\)` )
 - Shape: Approximately normal (especially for large N)
 
-*[Shows histogram of 10,000 sample means]*
+]
 
-**Key insight**: Sample means vary, but cluster around truth!
+]
 
----
+.pull-right[
 
-## Slide 19: The Central Limit Theorem
-**The Most Important Theorem in Statistics**
+.content-box-yellow[
 
-**Statement**: Regardless of population distribution shape, the sampling distribution of the mean becomes normal as sample size increases
+**Key insight**: 
 
-**Implications**:
-1. Sample mean is normally distributed (for large N)
-2. Mean of sampling distribution = μ
-3. SD of sampling distribution = σ/√N (standard error)
+Sample means vary, but cluster around truth!
 
----
+]
 
-## Slide 20: Central Limit Theorem - Visual
-**Magic of Averaging**
-
-Even if population is skewed:
-- N = 2: Sampling distribution less skewed
-- N = 4: Nearly normal
-- N = 8: Essentially normal
-
-*[Shows progression from skewed to normal distributions]*
-
-**This is why means are so useful!**
+]
 
 ---
 
-## Slide 21: Standard Error
-**Measuring Uncertainty**
+## The Central Limit Theorem
 
-**Standard Error of the Mean (SEM)**:
-```
-SEM = σ/√N
-```
+**The Magic of Averaging**
 
-**Key points**:
-- Smaller SEM = more precise estimate
-- Doubling precision requires 4× sample size
-- This is why large studies are more reliable
+.pull-left[
+**The Theorem:**
 
-**Example**: σ = 15, N = 100 → SEM = 1.5
+No matter what the population distribution looks like (skewed, uniform, bimodal), the distribution of sample means will be approximately normal when `\(N\)` is large enough.
 
----
+`$$\text{As } N \to \infty: \quad \bar{X} \sim N\left(\mu, \frac{\sigma^2}{N}\right)$$`
+]
 
-## Slide 22: Estimating the Population Mean
-**Best Guess**
-- Population mean: μ (unknown)
-- Sample mean: X̄ (calculated from data)
-- **Estimate**: μ̂ = X̄
 
-**Example**:
-- Sample 100 people from Port Pirie
-- Mean IQ = 98.5
-- Best estimate of population mean: μ̂ = 98.5
 
-*Simple, but not the whole story...*
+.pull-right[
+
+**Three Guarantees:**
+
+1. **Center**: `\(E(\bar{X}) = \mu\)`
+   - Sample means average to true mean
+
+2. **Spread**: `\(SE(\bar{X}) = \frac{\sigma}{\sqrt{N}}\)`
+   - Precision increases with sample size
+
+3. **Shape**: `\(\bar{X}\)` is approximately normal
+   - Even if original data aren't normal!
+]
 
 ---
 
-## Slide 23: Estimating Population SD
-**A Complication**
-- Sample SD: s = √[Σ(Xᵢ - X̄)²/N]
-- This is **biased** (systematically too small)
+&lt;img src="week-09_files/figure-html/unnamed-chunk-9-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
 
-**Solution**: Divide by N-1 instead of N
-```
-σ̂ = √[Σ(Xᵢ - X̄)²/(N-1)]
-```
-
-**Why?** Small samples underestimate variability
-- N-1 correction fixes this bias
-- JASP uses this formula automatically
+**Key Insight**: This is why we can use normal-based methods even when data aren't normal!
 
 ---
 
-## Slide 24: Notation Summary
-**Keep These Straight!**
-
-| Symbol | Meaning | Known? |
-|--------|---------|--------|
-| μ | Population mean | No (almost never) |
-| X̄ | Sample mean | Yes (calculated) |
-| μ̂ | Estimate of population mean | Yes (= X̄) |
-| σ | Population SD | No (almost never) |
-| s | Sample SD | Yes (biased) |
-| σ̂ | Estimate of population SD | Yes (unbiased) |
+# Hypothesis testing
 
 ---
 
-## Slide 25: Confidence Intervals
-**Quantifying Uncertainty**
+## The Logic of Hypothesis Testing
 
-**95% Confidence Interval**:
-```
-CI₉₅ = X̄ ± 1.96 × (σ/√N)
-```
+**Case Study: Smoking and Lung Cancer**
 
-**Interpretation** (frequentist):
-- If we repeated this experiment many times
-- 95% of confidence intervals would contain the true mean
-- NOT: "95% probability the true mean is in this interval"
+### The 1950s Debate
 
----
+**Tobacco Industry Position:**
+&gt; "There is no proof that smoking causes lung cancer. Cancer rates are the same whether you smoke or not."
 
-## Slide 26: Confidence Intervals - Visual
-**Seeing Uncertainty**
+**Claimed probability**: `\(P(\text{cancer}) = \frac{1}{6} \approx 17\%\)` for everyone (smokers and non-smokers in the adult population)
 
-*[Shows 50 replications with confidence intervals]*
-- Each line represents one experiment
-- Most intervals (95%) contain true mean (μ = 100)
-- A few (5%) miss the true mean
+## This is our baseline hypothesis (a.k.a. the *null hypothesis*). 
 
-**Larger samples → narrower intervals → more precision**
+.content-box-green[
+
+`\(H_0\)` Smokers have the same probability of getting lung cancer as adult non-smokers. 
+
+]
+
+
 
 ---
 
-## PART 3: HYPOTHESIS TESTING
+.pull-left[
+
+### The Scientific Evidence
+
+**Doll &amp; Hill (1950) Study:**
+- Followed 100 heavy smokers for 20 years
+- Result: 13 developed lung cancer
+
+**The Question:**
+
+Is 13 cases significantly different from the 3-4 we'd expect if the industry claim were true?
+
+]
+
+.pull-right[
+
+&lt;img src="week-09_files/figure-html/unnamed-chunk-10-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+
+
+
+
+The Statistical Question:
+Could we see 13 cases by chance alone if the true rate is only 3-4 per 100?
+Hypothesis testing provides a formal framework for answering this.
 
 ---
 
-## Slide 27: The Logic of Hypothesis Testing
-**Research Questions Require Hypothesis Tests**
+## Null and Alternative Hypotheses
 
-**Example**: Does ESP (Extrasensory Perception) exist?
-- Test 100 people guessing hidden card colors
-- 62 get it right (expect 50 if guessing)
-- Is this evidence for ESP, or just luck?
-
-**Hypothesis testing provides a formal framework for answering such questions**
-
----
-
-## Slide 28: Null and Alternative Hypotheses
 **Setting Up the Test**
 
-**Null Hypothesis (H₀)**:
+.pull-left[
+**Null Hypothesis (H₀)**
+
 - The "boring" hypothesis
-- Usually "no effect" or "no difference"
-- ESP example: θ = 0.5 (pure guessing)
+- Usually "no effect" or "no difference"  
+- What the establishment claims
 
-**Alternative Hypothesis (H₁)**:
+**Smoking example**: 
+`$$H_0: \theta = \frac{1}{6}$$`
+
+"Smoking doesn't increase cancer risk. Cancer rate for smokers is same as general population (1/6 or 17%)"
+
+**This is what we test AGAINST**
+]
+
+.pull-right[
+**Alternative Hypothesis (H₁)**
+
 - What we want to demonstrate
-- ESP example: θ ≠ 0.5 (better than guessing)
+- The "interesting" claim
+- Usually involves an effect or difference
 
-**Goal**: Show null hypothesis is (probably) wrong
+**Smoking example**: 
+`$$H_1: \theta \neq \frac{1}{6}$$`
+
+"Smoking DOES affect cancer risk. Cancer rate for smokers is different from 1/6"
+
+**This is what we want to PROVE**
+]
+
+.center[**Goal**: Use data to show null hypothesis is right or wrong.]
 
 ---
 
-## Slide 29: Hypothesis Testing as a Trial
+## Hypothesis Testing as a Trial
 **Legal Analogy**
 
 - **Defendant**: Null hypothesis
 - **Prosecutor**: Researcher
 - **Judge**: Statistical test
-- **Presumption of innocence**: Assume H₀ is true
+- **Presumption of innocence**: Assume `\(H_0\)` is true
 - **Burden of proof**: Must prove "beyond reasonable doubt"
 
 **We protect the null hypothesis from false conviction!**
 
----
+.content-box-yellow[
 
-## Slide 30: Two Types of Errors
-**Mistakes We Can Make**
+- Yet no single study should completely convince us!
+- What we want instead is **replication**: to reject `\(H_0\)` consistently across many independent studies
+- A statistical test will never tell us that an outcome is impossible, only that an outcome is unlikely given our baseline assumption (the `\(H_0\)`): It's not impossible to roll 20 "6" in a row, just unlikely under the assumption that the dice is fair.
 
-|  | **Retain H₀** | **Reject H₀** |
-|---|---|---|
-| **H₀ true** | ✓ Correct | ✗ **Type I error** (α) |
-| **H₀ false** | ✗ **Type II error** (β) | ✓ Correct (Power) |
-
-**Type I error (α)**: False positive (convicting the innocent)
-**Type II error (β)**: False negative (letting guilty go free)
-
-**We control Type I error rate, typically α = 0.05**
+]
 
 ---
 
-## Slide 31: The p-value
+## The `\(p\)`-value
+
 **The Most Misunderstood Concept**
 
 **What it is**:
-- Probability of observing data this extreme (or more extreme) if H₀ is true
-- Small p-value = data are surprising under H₀
+
+- Probability of observing data this extreme (or more extreme) if `\(H_0\)` is true
+- Small `\(p\)`-value = data are surprising under `\(H_0\)`
 
 **What it is NOT**:
-- ✗ Probability that H₀ is true
+- ✗ Probability that `\(H_0\)` is true
 - ✗ Probability that results are due to chance
 - ✗ Importance of the effect
 
-**Decision rule**: If p &lt; 0.05, reject H₀
+**Decision rule**: If `\(p &lt; 0.05\)`, reject `\(H_0\)`
 
 ---
 
-## Slide 32: Significance Levels
-**Conventional Standards**
+## Significance Levels
+
+**Conventional Standards in the social sciences**
 
 | **p-value** | **Interpretation** | **Stars** |
 |---|---|---|
@@ -819,53 +1094,19 @@ CI₉₅ = X̄ ± 1.96 × (σ/√N)
 | p ≤ .01 | Highly significant | ** |
 | p ≤ .001 | Very highly significant | *** |
 
-**α = 0.05 is arbitrary but conventional**
-- 5% chance of Type I error
-- "Reasonable doubt" threshold
-
 ---
 
-## Slide 33: One-Tailed vs. Two-Tailed Tests
-**Direction Matters**
-
-**Two-tailed test**: 
-- H₁: θ ≠ 0.5 (different in either direction)
-- Use when direction unknown
-- Most common in psychology
-
-**One-tailed test**:
-- H₁: θ &gt; 0.5 (specific direction)
-- Use only when direction predicted in advance
-- More powerful but riskier
-
----
-
-## Slide 34: Effect Size and Power
-**Significance ≠ Importance**
-
-**Effect Size**:
-- How big is the difference?
-- Cohen's d = (difference in means) / SD
-- Rules of thumb: 0.2 (small), 0.5 (medium), 0.8 (large)
-
-**Statistical Power**:
-- Probability of detecting a true effect
-- Power = 1 - β
-- Increase power: larger sample, larger effect
-
----
-
-## PART 4: COMPARING TWO MEANS
+# Comparing two means
 
 ---
 
 ## Slide 35: t-tests
-**The Workhorse of Psychology**
 
 **When to use**:
+
 - Outcome variable is continuous (interval/ratio scale)
 - Want to compare means between groups
-- Most common statistical test in psychology
+- One of the most common statistical tests with survey results
 
 **Three types**:
 1. One-sample t-test
@@ -877,837 +1118,84 @@ CI₉₅ = X̄ ± 1.96 × (σ/√N)
 ## Slide 36: One-Sample t-test
 **Comparing Sample to Known Value**
 
-**Question**: Is our sample mean different from a hypothesized value?
+**Question**: Is our sample mean different from a hypothesised value?
+
+
+
 
 **Example**: 
-- Dr. Zeppo's class should average 67.5%
-- 20 psychology students average 72.3%
+- The average height for an adult male in Australia is 175 cm.
+- Here are the heights in cm of the current roster of Australia men's volleyball team: 206, 190, 204, 210, 194, 209, 207, 212, 211, 201, 198, 203, 191, 206. 
 - Is this significantly different?
 
 **Test statistic**:
-```
-t = (X̄ - μ₀)/(σ̂/√N)
-```
 
-**Result**: t(19) = 2.25, p = .036 → Significant!
+`$$t = \frac{\bar{x} - \mu_0}{\bar{\sigma}/\sqrt{n}}$$`
 
 ---
 
-## Slide 37: Independent Samples t-test
+## Let's do some math!
+
+`$$t = \frac{\bar{x} - \mu_0}{\bar{\sigma}/\sqrt{n}}$$`
+
+- Adult male population mean ( `\(\mu_0\)` ) or the *true value*: 175 cm
+
+- Team's mean ( `\(\bar{\bar{x}}\)` ): 203 cm
+
+- Team's standard deviation ( `\(\bar{\sigma}\)` ): 7.2748249 cm
+
+- Team's size ( `\(n\)` ): 14
+
+`$$t = \frac{203 - 175}{7.2748249/\sqrt{14}} = \frac{28}{1.944279} = 14.4012273$$`
+Nice, but what about the `\(p\)`-value? Once you have your test statistics (14.4012273), you can get the corresponding p-value by looking into a statistical table or more likely using a statistical software like Jasp. 
+
+In this case, `\(t = 14.4012273\)`, `\(p\)`-value = 0, which is p &lt; 0.05. Not surprisingly, we can reject the null hypothesis. The difference in averages (sample's mean vs *true value*) is .content-box-yellow[statistically significant].
+
+
+
+---
+
+## Independent Samples t-test
+
 **Comparing Two Different Groups**
 
-**Question**: Do two groups have different means?
+**Question**: Do two groups have different means? (i.e., a statistically significant difference)
 
-**Example**:
-- Anastasia's students: M = 74.5, SD = 9.0, N = 15
-- Bernadette's students: M = 69.1, SD = 5.8, N = 18
-- Are grades significantly different?
 
-**Two versions**:
-- **Student's t-test**: Assumes equal variances
-- **Welch's t-test**: Doesn't assume equal variances (safer)
 
----
+Let's use data from the World Value Survey (2022). The WVS collect survey data from different countries. We focus here on this question:
 
-## Slide 38: Paired Samples t-test
-**Comparing Two Related Measurements**
+&gt; Q121: How would you evaluate the impact of [immigrants] on the development of [your country]?
 
-**When to use**:
-- Same participants measured twice
-- Before/after designs
-- Matched pairs
+Possible answers are ordered (and therefore quantifiable) on a Likert scale
 
-**Example**: Dr. Chico's class
-- Test 1: M = 57%
-- Test 2: M = 58%
-- Did students improve significantly?
-
-**Key**: Test the *difference scores* for each person
-
----
-
-## Slide 39: JASP Hands-On - One Sample t-test
-**Step-by-Step**
-
-1. Open JASP → Load data
-2. T-Tests → One Sample T-Test
-3. Move variable to "Variables" box
-4. Enter test value (e.g., 67.5)
-5. Check options:
-   - Location parameter
-   - Confidence interval (95%)
-   - Descriptive plots
-
-**Interpreting Output**:
-- t statistic, df, p-value
-- Mean difference and CI
-- Cohen's d (effect size)
-
----
-
-## Slide 40: JASP Hands-On - Independent Samples t-test
-**Comparing Two Groups**
-
-1. T-Tests → Independent Samples T-Test
-2. Move outcome variable to "Variables"
-3. Move grouping variable to "Grouping Variable"
-4. Check options:
-   - Student (assumes equal variances)
-   - Welch (doesn't assume equal variances)
-   - Mann-Whitney (non-parametric alternative)
-   - Descriptive plots
-   - Assumption checks (normality, equality of variances)
-
-**Read output**:
-- Check assumption violations first
-- t statistic, df, p-value, CI
-- Effect size (Cohen's d)
-- Descriptive statistics table
-
----
-
-## Summary Slide
-**Key Takeaways**
-
-1. **Probability** provides foundation for statistical inference
-2. **Sampling distributions** describe variability in estimates
-3. **Hypothesis tests** formalize scientific decision-making
-4. **t-tests** compare means between groups
-5. **JASP** makes complex calculations accessible
-
-**Remember**:
-- Larger samples → more precision
-- p &lt; 0.05 → reject null hypothesis
-- Report effect sizes, not just p-values
-- Check assumptions before interpreting results
-
-
----
-
-class: segue
-
-# 4. Probability
-
----
-
-## Why Probability Matters
-
-Imagine a poll says 23% of Australian voters support a party.
-
-**The poll surveyed:** 1,000 voters (*sample* size, `\(n\)`)
-
-**Total Australian voters:** 18.126 million (*population* size, `\(N\)`)
-
-  - Note that this is not the whole Australian population (~27.2 million) but Australians on "the electoral roll" according to the Australian Electoral Commission (AEC)
-
-**Question:** How can we trust this represents everyone?
-
-**Answer:** Probability theory!
-
-This is the bridge from *describing data* to *making inferences*.
-
-- Describing the data (i.e. our sample!) is what we call **descriptive statistics**
-
-- Using the sample to make observation about the population is what we call **inferential statistics**
-
----
-
-## Two Views of What we Should Mean with "Probability"
-
-### Frequentist View
-
-- .content-box-yellow[Probability = long-run frequency]
-- "If I flip this coin infinitely many times, 50% will be heads"
-- **Objective**, but limited to repeatable events
-
-### Bayesian View
-
-- .content-box-yellow[Probability = degree of belief]
-- "I'm 80% confident it will rain tomorrow"
-- More flexible, but **subjective**
-
-We'll use the frequentist approach (most common in the social sciences).
-
----
-
-## Probability: The Basics
-
-**Key rules:**
-- Probabilities range from 0 (impossible) to 1 (certain)
-- All possible outcomes must sum to 1
-- P(not A) = 1 - P(A)
-
-**Example:** My trousers
-- Blue jeans: P = 0.5
-- Grey jeans: P = 0.3
-- Black jeans: P = 0.1
-- Tracksuit: P = 0.1
-- Total = 1.0 ✓
-
----
-
-## The Binomial Distribution
-
-**Scenario:** Roll 20 dice, each has 1/6 chance of showing a skull.
-
-**Question:** What's the probability of getting exactly 4 skulls?
-
-**This is a binomial situation:**
-- Fixed number of trials (N = 20)
-- Two possible outcomes (skull or not)
-- Same probability each time (θ = 1/6)
-- Trials are independent
-
----
-
-## Binomial Distribution: Visualised
-When N=20, θ=1/6 (rolling dice):
-
-Most likely: ~3 skulls
-P(exactly 4 skulls) ≈ 0.20 (20% chance)
-
-
-**Key insight:** Even with randomness, we can predict patterns!
-
----
-
-## The Normal Distribution
-
-**The most important distribution in statistics**
-
-Also called:
-- The bell curve
-- Gaussian distribution
-
-**Why it matters:**
-- Appears everywhere in nature
-- Foundation for most statistical tests
-- Described by just two numbers: mean (μ) and standard deviation (σ)
-
----
-
-## The Normal Distribution: Shape
-
-**Key properties:**
-- Symmetrical around the mean
-- 68% of data within ±1 SD
-- 95% of data within ±2 SD
-- 99.7% of data within ±3 SD
-
-**Example:** IQ scores
-- Mean = 100
-- SD = 15
-- 95% of people score between 70 and 130
-
----
-
-## Understanding "Area Under the Curve"
-
-**For continuous variables:**
-- We can't ask "What's P(temperature = exactly 23°)?" → Answer is essentially zero
-- Instead: "What's P(temperature between 22.5 and 23.5°)?" → This makes sense!
-
-**The area under the curve = probability**
-
-This is why the y-axis says "probability density" not "probability"
-
----
-
-## Other Important Distributions
-
-You'll meet these later:
-
-**t-distribution:** Like a normal, but with heavier tails (used when we don't know the population SD)
-
-**χ² distribution:** Skewed, always positive (used for categorical data analysis)
-
-**F-distribution:** For comparing variances (used in ANOVA)
-
-**All are related to the normal distribution!**
-
----
-
-# Part 2: Sampling and Estimation
-
----
-
-## The Fundamental Problem
-
-**We want to know:** What's the average IQ in Port Pirie?
-
-**We have:** IQ scores from 100 people (sample)
-
-**Population:** All ~14,000 residents
-
-**Challenge:** How do we learn about the whole population from our sample?
-
----
-
-## Samples vs Populations
-
-**Population**
-- The complete group we want to understand
-- Has true parameters (μ, σ)
-- Usually impossible to measure completely
-
-**Sample**
-- Subset we actually observe
-- Has statistics we can calculate (x̄, s)
-- Our window into the population
-
-**Goal:** Use sample statistics to estimate population parameters
-
----
-
-## What Makes a "Good" Sample?
-
-**Simple Random Sample:**
-- Every member has equal chance of selection
-- No bias in selection
-- Sampling without replacement (usually)
-
-**Reality check:**
-- True random samples are rare in psychology
-- We often use convenience samples (e.g., undergrads)
-- This is OK if we're careful about what we can claim
-
----
-
-## Most Samples Aren't Random
-
-**Other sampling methods:**
-
-**Stratified sampling:** Sample separately from subgroups (e.g., by age)
-
-**Snowball sampling:** Participants recruit others (useful for hard-to-reach groups)
-
-**Convenience sampling:** Whoever is available (most psychology studies!)
-
-**Key question:** Does the sampling method bias our results in ways that matter?
-
----
-
-## The Law of Large Numbers
-
-**Big idea:** Larger samples give better estimates
-
-**Simulation:** Sample mean from samples of different sizes
-- N=2: Sample means vary wildly
-- N=100: Sample means close to true mean
-- N=10,000: Sample means very close to true mean
-
-**As N → ∞, sample mean → population mean**
-
-This justifies our belief that more data = better answers!
-
----
-
-## Sampling Distributions
-
-**Thought experiment:** Run the same experiment 10,000 times
-
-Each time:
-- Sample 5 people
-- Calculate mean IQ
-
-**Result:** A distribution of sample means!
-
-This is called the **sampling distribution of the mean**
-
-Even though individual IQs vary widely (SD=15), the sample means cluster much more tightly around the true mean.
-
----
-
-## The Central Limit Theorem
-
-**The most important theorem in statistics**
-
-**Says:** Even if your data aren't normal, the sampling distribution of the mean *will be* normal (if N is large enough)
-
-**Three key facts:**
-1. Mean of sampling distribution = population mean (μ)
-2. SD of sampling distribution = σ/√N (called Standard Error)
-3. Shape becomes normal as N increases
-
-**This is why the normal distribution is so important!**
-
----
-
-## Standard Error vs Standard Deviation
-
-**Standard Deviation (SD or s):**
-- Measures variability in your *data*
-- "How spread out are individual observations?"
-- Doesn't change much with sample size
-
-**Standard Error (SE or SEM):**
-- Measures uncertainty in your *estimate*
-- "How precise is our sample mean?"
-- Gets smaller as N increases: SE = SD/√N
-
-**Key insight:** Bigger samples = more precision!
-
----
-
-## Estimating Population Parameters
-
-**For the mean:**
-- Best estimate = sample mean (x̄)
-- This is an *unbiased estimator*
-
-**For the standard deviation:**
-- We divide by (N-1) instead of N
-- This gives us σ̂ (estimate of σ)
-- Why? The sample SD is systematically too small
-- Dividing by (N-1) corrects this bias
-
-**In JASP:** The SD you see uses (N-1) automatically
-
----
-
-## Confidence Intervals
-
-**The problem:** Our estimate is uncertain
-
-**The solution:** Report a range, not just a point
-
-**95% Confidence Interval:**
-- Range of plausible values for the true parameter
-- Calculated as: x̄ ± (1.96 × SEM)
-- "We're 95% confident the true mean is in this range"
-
-**Example:** Sample mean = 100, SEM = 2
-- 95% CI: 100 ± (1.96 × 2) = [96.08, 103.92]
-
----
-
-## What Does "95% Confident" Really Mean?
-
-**Common (wrong) interpretation:**
-"There's a 95% chance the true mean is in this interval"
-
-**Correct (frequentist) interpretation:**
-"If we repeated this study 100 times, about 95 of the intervals would contain the true mean"
-
-**Why the difference?**
-- The true mean is fixed (not random)
-- Our interval is random (changes with each sample)
-- We make probability statements about repeatable events
-
----
-
-## Visualising Confidence Intervals
-
-**Imagine 50 replications of the same experiment:**
-- Each produces a different CI
-- About 95% of them contain the true mean
-- About 5% miss it (by chance)
-
-**Wider intervals = more uncertainty**
-- Smaller N → wider CI
-- Larger N → narrower CI
-
----
-
-## Calculating CIs in JASP
-
-**Currently:** JASP Descriptives doesn't show CIs directly
-
-**But you can calculate manually:**
-
-1. Get Mean and SE from Descriptives
-2. Lower 95% CI = Mean - (1.96 × SE)
-3. Upper 95% CI = Mean + (1.96 × SE)
-
-**Later in the course:** Some analyses will plot CIs automatically
-
----
-
-## Key Takeaways: Probability
-
-1. Probability lets us quantify uncertainty
-2. The normal distribution is everywhere
-3. Understanding distributions helps us understand statistical tests
-4. Area under the curve = probability for continuous variables
-
----
-
-## Key Takeaways: Sampling
-
-1. Samples let us learn about populations
-2. Larger samples give more precise estimates
-3. The Central Limit Theorem explains why means are normally distributed
-4. Confidence intervals quantify our uncertainty
-5. SE gets smaller as N increases: SE = SD/√N
-
----
-
-## Next Week: Putting It All Together
-
-**We'll use these concepts to:**
-- Test hypotheses about our data
-- Make decisions under uncertainty
-- Understand when differences are "real" vs chance
-
-**Get ready for:** Hypothesis testing and the t-test!
-
----
-
-## Questions?
-
-**Remember:**
-- Statistics is a tool for dealing with uncertainty
-- Perfect knowledge is impossible
-- But probability theory helps us make good inferences from imperfect data
-
-**This is what makes science possible!**
-
----
-
-class: segue
-
-# 4. Analysis: Bivariate hypothesis tests
-
----
-
-## Variable type and appropriate bivariate hypothesis tests 
-
-
-&gt; “Are X and Y related?” By definition – “bivariate” means “two variables” – these tests cannot help us with the important question, “Have we controlled for all confounding variables Z that might make the observed association between X and Y spurious?” 
-
-(We will deal with Z next week!)
-
-&lt;table&gt;
-&lt;thead&gt;
-  &lt;tr&gt;
-    &lt;th&gt;&lt;/th&gt;
-    &lt;th&gt;&lt;/th&gt;
-    &lt;th colspan="2"&gt;Independent variable type&lt;/th&gt;
-  &lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-    &lt;td&gt;&lt;/td&gt;
-    &lt;td&gt;&lt;/td&gt;
-    &lt;td&gt;Categorical&lt;/td&gt;
-    &lt;td&gt;Continuous&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td rowspan="2"&gt;Dependent variable type&lt;/td&gt;
-    &lt;td&gt;Catgorical&lt;/td&gt;
-    &lt;td&gt;Tabular analysis&lt;/td&gt;
-    &lt;td&gt;Probit/Logit&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Continuous&lt;/td&gt;
-    &lt;td&gt;Difference of means&lt;/td&gt;
-    &lt;td&gt;Correlation coefficient, &lt;br&gt;regression model&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-.footnote[Kellstedt, P. M., &amp; Whitten, G. D. (2013). The fundamentals of political science research. Cambridge University Press.]
-
----
-
-## The Logic of `\(p\)`-Values (and statistical tests)
-
-### Is there covariation between X and Y?
-
-We can answer this question *statistically*, by
-
-* **comparing** the actual (observed) **relationship** between X and Y in **sample data** with
-
-* what **we would expect** to find **if** X and Y **were not related** in the **underlying population**.
-
-Statistical tests (and `\(p\)`-values) are about this comparison.
-
-&gt; The p-value, which ranges between 0 and 1, is the probability that we would see the relationship that we are finding because of random chance. Put another way, the p-value tells us the probability that we would see the observed relationship between the two variables in our sample data if there were truly no relationship between them in the unobserved population.
-
-&gt; The **lower** the `\(p\)`-value, the **greater confidence** we have that there is a **systematic relationship** between the two variables for which we estimated the particular `\(p\)`-value.
-
-.footnote[Kellstedt, P. M., &amp; Whitten, G. D. (2013). The fundamentals of political science research. Cambridge University Press.]
-
----
-
-## From `\(p\)`-Values to Statistical Significance
-
-&gt; Lower `\(p\)`-values increase our confidence that there is a relationship between the two variables in question. 
-
-&gt; A common way of referring to such a situation is to state that **the relationship between the two variables is statistically significant**.
-
-&lt;br/&gt;
-
-.content-box-red[
-
-When is a relationship statistically significant? We have a number of arbitrary thresholds. 
-
-* In the social sciences, we usually settle to a 0.05 value. That is,
-
-* `\(p\)`-value `\(&gt;0.05\)` no statistical significance &lt;large&gt;😔&lt;/large&gt;.
-
-* `\(p\)`-value `\(\le 0.05\)` statistical significance and publication &lt;large&gt;😀&lt;/large&gt;.
-
-]
-
-.footnote[Kellstedt, P. M., &amp; Whitten, G. D. (2013). The fundamentals of political science research. Cambridge University Press.]
-
----
-
-## Beware of `\(p\)`-hacking
-
-The arbitrary threshold at 0.05 creates some perverse incentive in variable selection and reporting so to make sure that your `\(p\)`-value will just below it... 
-
-&gt; The distribution of p-values [from 50,000 different tests] exhibits a camel shape with abundant p-values above .25, a valley between .25 and .10 and a bump slightly under .05.
-
-
-.center[&lt;img src = 'https://i.stack.imgur.com/aYg3y.png' width = '60%'&gt;&lt;/img&gt;]
-
-.footnote[Brodeur, Abel and Brodeur, Abel and LÉ, Mathias and Sangnier, Marc and Zylberberg, Yanos, Star Wars: The Empirics Strike Back (June 18, 2012). Paris School of Economics Working Paper No. 2012-29, Available at SSRN: https://ssrn.com/abstract=2089580 or http://dx.doi.org/10.2139/ssrn.2089580]
-
----
-
-## Tabular analysis (two categorical variables)
-
-.center[&lt;img src = '../img/kellstedt-whitten-2013-tab-analysis.png'&gt;&lt;/img&gt;]
-
-How do we test an hypothesis of association between gender and vote? 
-
-Enter the chi-squared ( `\(\chi^2\)` ) test for tabular association
-
-$$ \chi^2 = \sum\frac{(O - E)^2}{E}$$
-
-
-.footnote[Kellstedt, P. M., &amp; Whitten, G. D. (2013). The fundamentals of political science research. Cambridge University Press.]
----
-
-## Tabular analysis: Prepare the data with R
-
-
-``` r
-# Create a matrix for the counts of each category
-movie_data &lt;- matrix(c(20, 50, 50, 30), nrow = 2, byrow = TRUE,
-                     dimnames = list(Preference = c("Action", "Comedy"),
-                                     Gender = c("Male", "Female")))
-
-# Display the matrix
-print(movie_data)
-```
-
-```
-##           Gender
-## Preference Male Female
-##     Action   20     50
-##     Comedy   50     30
-```
-
----
-
-## Tabular analysis: Test for statistical association with R
-
-
-``` r
-# Perform the chi-square test
-chi_square_result &lt;- chisq.test(movie_data)
-
-# Print the results
-print(chi_square_result)
-```
-
-```
-## 
-## 	Pearson's Chi-squared test with Yates' continuity correction
-## 
-## data:  movie_data
-## X-squared = 15.931, df = 1, p-value = 0.0000657
-```
-
-
----
-
-## Difference of means (one categorical and one continuous variable)
-
-&gt; In this type of bivariate hypothesis test, we are looking to see if the means are different across the values of the independent variable.
-
-Karl Pearson's `\(t\)`-test: 
-
-$$ t = \frac{\bar{Y}_1-\bar{Y}_2}{se(\bar{Y}_1-\bar{Y}_2)} $$ where `\(se\)` is the standard error.
-
-
-.content-box-green[
-Let's test this hypothesis: In the UK Labour-led cabinets last longer than Conservative-led cabinets.]
-* `\(X\)` = `\(party\)` `\(\in \{Con, Lab\}\)`
-* `\(Y\)` = `\(duration\)` `\(\in \{1,2,3,...\}\)`
-
-.footnote[Kellstedt, P. M., &amp; Whitten, G. D. (2013). The fundamentals of political science research. Cambridge University Press.]
-
----
-
-## Difference of means: Import data with R
-
-
-
-
-
-``` r
-my_data &lt;- 
-  read.csv("https://raw.githubusercontent.com/fraba/GOVT6139/main/data/uk_cabinets.csv")
-```
-
-
-<div class="datatables html-widget html-fill-item" id="htmlwidget-8213c8232d31420bf992" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-8213c8232d31420bf992">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41"],["GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR"],["United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom"],["1918-12-14","1922-11-15","1923-12-06","1924-10-29","1929-05-30","1931-10-27","1935-11-14","1935-11-14","1935-11-14","1935-11-14","1945-07-05","1950-02-23","1951-10-25","1951-10-25","1955-05-26","1955-05-26","1959-10-08","1959-10-08","1964-10-15","1966-03-31","1970-06-18","1974-02-28","1974-10-10","1974-10-10","1979-05-03","1983-06-09","1987-06-11","1987-06-11","1992-04-09","1997-05-01","2001-06-07","2005-05-05","2005-05-05","2010-05-06","2015-05-07","2015-05-07","2017-06-08","2017-06-08","2019-12-12","2019-12-12","2019-12-12"],["1922-10-24","1923-05-25","1924-01-23","1924-11-06","1929-06-05","1935-06-07","1935-11-14","1937-05-28","1940-05-10","1945-05-23","1945-07-26","1950-02-28","1951-10-26","1955-04-06","1955-05-26","1957-01-10","1959-10-14","1963-10-18","1964-10-16","1966-04-05","1970-06-19","1974-03-04","1974-10-10","1976-04-05","1979-05-04","1983-06-09","1987-06-11","1990-11-28","1992-04-09","1997-05-02","2001-06-07","2005-05-06","2007-06-27","2010-05-11","2015-05-08","2016-07-13","2017-06-11","2019-07-24","2019-12-13","2022-09-06","2022-10-25"],["Bonar Law","Baldwin I","MacDonald I","Baldwin II","MacDonald II","Baldwin III","Baldwin IV","Chamberlain","Churchill I","Churchill II","Attlee I","Attlee II","Churchill III","Eden I","Eden II","Macmillan I","Macmillan II","Douglas-Home","Wilson I","Wilson II","Heath","Wilson III","Wilson IV","Callaghan","Thatcher I","Thatcher II","Thatcher III","Major I","Major II","Blair I","Blair II","Blair III","Brown","Cameron I","Cameron II","May I","May II","Johnson I","Johnson II","Truss","Sunak"],[0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],[382,344,191,412,287,470,387,387,387,387,393,315,302,302,324,324,345,345,317,364,330,301,319,319,339,397,376,376,336,419,412,355,355,307,331,331,318,318,365,365,365],[707,615,615,615,615,615,615,615,615,615,640,625,625,625,630,630,630,630,630,630,630,635,635,635,635,650,650,650,651,659,659,646,646,650,650,650,650,650,650,650,650],["Con","Con","Lab","Con","Lab","Con","Con","Con","Con","Con","Lab","Lab","Con","Con","Con","Con","Con","Con","Lab","Lab","Con","Lab","Lab","Lab","Con","Con","Con","Con","Con","Lab","Lab","Lab","Lab","Con","Con","Con","Con","Con","Con","Con","Con"],["Conservatives","Conservatives","Labour Party","Conservatives","Labour Party","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Labour Party","Labour Party","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Labour Party","Labour Party","Conservatives","Labour Party","Labour Party","Labour Party","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Labour Party","Labour Party","Labour Party","Labour Party","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives"],["Conservatives","Conservatives","Labour","Conservatives","Labour","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Labour","Labour","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Labour","Labour","Conservatives","Labour","Labour","Labour","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Labour","Labour","Labour","Labour","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives"],[7.4261,7.4261,4.3562,7.4261,4.3562,7.4261,7.4261,7.4261,7.4261,7.4261,4.3562,4.3562,7.4261,7.4261,7.4261,7.4261,7.4261,7.4261,4.3562,4.3562,7.4261,4.3562,4.3562,4.3562,7.4261,7.4261,7.4261,7.4261,7.4261,4.3562,4.3562,4.3562,4.3562,7.4261,7.4261,7.4261,7.4261,7.4261,7.4261,7.4261,7.4261],[44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44],[905,906,907,908,909,910,911,911,911,911,609,625,102,102,678,678,161,161,223,583,311,568,40,40,243,290,490,490,514,315,208,233,233,582,856,856,1013,1013,1086,1086,1086],[1294,1293,1292,1291,1290,1287,1288,1286,1519,1520,99,88,691,729,184,404,237,63,760,733,216,419,7,590,273,646,297,515,678,838,19,516,119,874,1162,1489,1507,1599,1606,1676,1683],[1295,1294,1293,1292,1291,1289,1287,1288,1286,1519,1520,99,88,691,729,184,404,237,63,760,733,216,419,7,590,273,646,297,515,678,838,19,516,119,874,1162,1489,1507,1599,1606,1676],[773,773,1556,773,1556,773,773,773,773,773,1556,1556,773,773,773,773,773,773,1556,1556,773,1556,1556,1556,773,773,773,773,773,1556,1556,1556,1556,773,773,773,773,773,773,773,773],[213,243,288,1672,2193,160,561,1078,1839,64,1678,605,1258,50,595,1007,1465,364,536,1536,1354,220,543,1124,1497,1463,1266,498,1849,1497,1429,782,1049,1823,432,333,773,142,998,49,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>country_name_short<\/th>\n      <th>country_name<\/th>\n      <th>election_date<\/th>\n      <th>start_date<\/th>\n      <th>cabinet_name<\/th>\n      <th>caretaker<\/th>\n      <th>cabinet_party<\/th>\n      <th>prime_minister<\/th>\n      <th>seats<\/th>\n      <th>election_seats_total<\/th>\n      <th>party_name_short<\/th>\n      <th>party_name<\/th>\n      <th>party_name_english<\/th>\n      <th>left_right<\/th>\n      <th>country_id<\/th>\n      <th>election_id<\/th>\n      <th>cabinet_id<\/th>\n      <th>previous_cabinet_id<\/th>\n      <th>party_id<\/th>\n      <th>duration_days<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[6,7,8,9,10,14,15,16,17,18,19,20]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"country_name_short","targets":1},{"name":"country_name","targets":2},{"name":"election_date","targets":3},{"name":"start_date","targets":4},{"name":"cabinet_name","targets":5},{"name":"caretaker","targets":6},{"name":"cabinet_party","targets":7},{"name":"prime_minister","targets":8},{"name":"seats","targets":9},{"name":"election_seats_total","targets":10},{"name":"party_name_short","targets":11},{"name":"party_name","targets":12},{"name":"party_name_english","targets":13},{"name":"left_right","targets":14},{"name":"country_id","targets":15},{"name":"election_id","targets":16},{"name":"cabinet_id","targets":17},{"name":"previous_cabinet_id","targets":18},{"name":"party_id","targets":19},{"name":"duration_days","targets":20}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
-
-
----
-
-## Difference of means: Visualise data with R (boxplot)
-
-
-``` r
-library(ggplot2)
-ggplot(data = my_data, aes(x = party_name_short, y = duration_days)) + geom_boxplot()
-```
-
-&lt;img src="week-09_files/figure-html/unnamed-chunk-10-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
-
----
-
-## Difference of means: Visualise data with R (density) 
-
-
-``` r
-library(ggplot2)
-ggplot(data = my_data, aes(x = duration_days, colour = party_name_short)) + geom_density()
-```
-
-&lt;img src="week-09_files/figure-html/unnamed-chunk-11-1.svg" width="80%" style="display: block; margin: auto;" /&gt;
-
----
-
-## Difference of means: Visualise data with R (t-test) 
-
-After visually inspecting the distribution of the data, let's run the t-test...
-
-
-``` r
-t_test_result &lt;- t.test(formula =  duration_days ~ party_name_short, data = my_data)
-print(t_test_result)
-```
-
-```
-## 
-## 	Welch Two Sample t-test
-## 
-## data:  duration_days by party_name_short
-## t = -0.89268, df = 24.542, p-value = 0.3807
-## alternative hypothesis: true difference in means between group Con and group Lab is not equal to 0
-## 95 percent confidence interval:
-##  -606.8215  240.0865
-## sample estimates:
-## mean in group Con mean in group Lab 
-##          853.5556         1036.9231
-```
-
-**Hypothesis**: In the UK Labour-led cabinets last longer than Conservative-led cabinets.
-
-**Result from statistical analysis**: Although on average Labour-led cabinets last longer (853.56, 1036.92), we can't reject the null hypothesis of no statistical association (as the `\(p-value\)` is 0.38 `\(&gt;0.05\)`).
-
----
-
-## Correlation coefficient (two continuous variables)
-
-Pearson’s correlation coefficient
-
-$$ r = \frac{COV_{XY}}{\sqrt{VAR_XVAR_Y}} $$ 
+| Very good | Quite good | Neither good, nor bad | Quite bad | Very bad |
+|---|---|---||---|---|
+| 5 | 4 | 3 | 2 | 1 |
 
 .content-box-yellow[
 
-Let's now test this hypothesis: The larger the proportion of seats in Parliament of the Prime Minister's party, the longer the duration of the cabinet.
+Do Australians respond differently compared to UK respondents, and is this difference statistically significant?
 
 ]
 
-
-.footnote[Kellstedt, P. M., &amp; Whitten, G. D. (2013). The fundamentals of political science research. Cambridge University Press.]
-
---
-
-<div class="datatables html-widget html-fill-item" id="htmlwidget-98ea9d8fa7eed1bb98e6" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-98ea9d8fa7eed1bb98e6">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41"],["GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR","GBR"],["United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom"],["1918-12-14","1922-11-15","1923-12-06","1924-10-29","1929-05-30","1931-10-27","1935-11-14","1935-11-14","1935-11-14","1935-11-14","1945-07-05","1950-02-23","1951-10-25","1951-10-25","1955-05-26","1955-05-26","1959-10-08","1959-10-08","1964-10-15","1966-03-31","1970-06-18","1974-02-28","1974-10-10","1974-10-10","1979-05-03","1983-06-09","1987-06-11","1987-06-11","1992-04-09","1997-05-01","2001-06-07","2005-05-05","2005-05-05","2010-05-06","2015-05-07","2015-05-07","2017-06-08","2017-06-08","2019-12-12","2019-12-12","2019-12-12"],["1922-10-24","1923-05-25","1924-01-23","1924-11-06","1929-06-05","1935-06-07","1935-11-14","1937-05-28","1940-05-10","1945-05-23","1945-07-26","1950-02-28","1951-10-26","1955-04-06","1955-05-26","1957-01-10","1959-10-14","1963-10-18","1964-10-16","1966-04-05","1970-06-19","1974-03-04","1974-10-10","1976-04-05","1979-05-04","1983-06-09","1987-06-11","1990-11-28","1992-04-09","1997-05-02","2001-06-07","2005-05-06","2007-06-27","2010-05-11","2015-05-08","2016-07-13","2017-06-11","2019-07-24","2019-12-13","2022-09-06","2022-10-25"],["Bonar Law","Baldwin I","MacDonald I","Baldwin II","MacDonald II","Baldwin III","Baldwin IV","Chamberlain","Churchill I","Churchill II","Attlee I","Attlee II","Churchill III","Eden I","Eden II","Macmillan I","Macmillan II","Douglas-Home","Wilson I","Wilson II","Heath","Wilson III","Wilson IV","Callaghan","Thatcher I","Thatcher II","Thatcher III","Major I","Major II","Blair I","Blair II","Blair III","Brown","Cameron I","Cameron II","May I","May II","Johnson I","Johnson II","Truss","Sunak"],[0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],[382,344,191,412,287,470,387,387,387,387,393,315,302,302,324,324,345,345,317,364,330,301,319,319,339,397,376,376,336,419,412,355,355,307,331,331,318,318,365,365,365],[707,615,615,615,615,615,615,615,615,615,640,625,625,625,630,630,630,630,630,630,630,635,635,635,635,650,650,650,651,659,659,646,646,650,650,650,650,650,650,650,650],["Con","Con","Lab","Con","Lab","Con","Con","Con","Con","Con","Lab","Lab","Con","Con","Con","Con","Con","Con","Lab","Lab","Con","Lab","Lab","Lab","Con","Con","Con","Con","Con","Lab","Lab","Lab","Lab","Con","Con","Con","Con","Con","Con","Con","Con"],["Conservatives","Conservatives","Labour Party","Conservatives","Labour Party","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Labour Party","Labour Party","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Labour Party","Labour Party","Conservatives","Labour Party","Labour Party","Labour Party","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Labour Party","Labour Party","Labour Party","Labour Party","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives"],["Conservatives","Conservatives","Labour","Conservatives","Labour","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Labour","Labour","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Labour","Labour","Conservatives","Labour","Labour","Labour","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Labour","Labour","Labour","Labour","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives","Conservatives"],[7.4261,7.4261,4.3562,7.4261,4.3562,7.4261,7.4261,7.4261,7.4261,7.4261,4.3562,4.3562,7.4261,7.4261,7.4261,7.4261,7.4261,7.4261,4.3562,4.3562,7.4261,4.3562,4.3562,4.3562,7.4261,7.4261,7.4261,7.4261,7.4261,4.3562,4.3562,4.3562,4.3562,7.4261,7.4261,7.4261,7.4261,7.4261,7.4261,7.4261,7.4261],[44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44],[905,906,907,908,909,910,911,911,911,911,609,625,102,102,678,678,161,161,223,583,311,568,40,40,243,290,490,490,514,315,208,233,233,582,856,856,1013,1013,1086,1086,1086],[1294,1293,1292,1291,1290,1287,1288,1286,1519,1520,99,88,691,729,184,404,237,63,760,733,216,419,7,590,273,646,297,515,678,838,19,516,119,874,1162,1489,1507,1599,1606,1676,1683],[1295,1294,1293,1292,1291,1289,1287,1288,1286,1519,1520,99,88,691,729,184,404,237,63,760,733,216,419,7,590,273,646,297,515,678,838,19,516,119,874,1162,1489,1507,1599,1606,1676],[773,773,1556,773,1556,773,773,773,773,773,1556,1556,773,773,773,773,773,773,1556,1556,773,1556,1556,1556,773,773,773,773,773,1556,1556,1556,1556,773,773,773,773,773,773,773,773],[213,243,288,1672,2193,160,561,1078,1839,64,1678,605,1258,50,595,1007,1465,364,536,1536,1354,220,543,1124,1497,1463,1266,498,1849,1497,1429,782,1049,1823,432,333,773,142,998,49,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>country_name_short<\/th>\n      <th>country_name<\/th>\n      <th>election_date<\/th>\n      <th>start_date<\/th>\n      <th>cabinet_name<\/th>\n      <th>caretaker<\/th>\n      <th>cabinet_party<\/th>\n      <th>prime_minister<\/th>\n      <th>seats<\/th>\n      <th>election_seats_total<\/th>\n      <th>party_name_short<\/th>\n      <th>party_name<\/th>\n      <th>party_name_english<\/th>\n      <th>left_right<\/th>\n      <th>country_id<\/th>\n      <th>election_id<\/th>\n      <th>cabinet_id<\/th>\n      <th>previous_cabinet_id<\/th>\n      <th>party_id<\/th>\n      <th>duration_days<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"pageLength":2,"columnDefs":[{"className":"dt-right","targets":[6,7,8,9,10,14,15,16,17,18,19,20]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"country_name_short","targets":1},{"name":"country_name","targets":2},{"name":"election_date","targets":3},{"name":"start_date","targets":4},{"name":"cabinet_name","targets":5},{"name":"caretaker","targets":6},{"name":"cabinet_party","targets":7},{"name":"prime_minister","targets":8},{"name":"seats","targets":9},{"name":"election_seats_total","targets":10},{"name":"party_name_short","targets":11},{"name":"party_name","targets":12},{"name":"party_name_english","targets":13},{"name":"left_right","targets":14},{"name":"country_id","targets":15},{"name":"election_id","targets":16},{"name":"cabinet_id","targets":17},{"name":"previous_cabinet_id","targets":18},{"name":"party_id","targets":19},{"name":"duration_days","targets":20}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[2,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+.footnote[Haerpfer, C., Inglehart, R., Moreno, A., Welzel, C., Kizilova, K., Diez-Medrano J., M. Lagos, P. Norris, E. Ponarin &amp; B. Puranen (eds.). 2022. World Values Survey: Round Seven – Country-Pooled Datafile Version 6.0. Madrid, Spain &amp; Vienna, Austria: JD Systems Institute &amp; WVSA Secretariat. doi:10.14281/18241.24]
 
 ---
 
-## Correlation coefficient (Code new variable and visualise)
+## WVS Data and Test
 
+- Australia: M = 2.6613348, SD = 1.3151477, N = 1813
+- UK: M = 3.5806823, SD = 1.1096458, N = 2609
 
-``` r
-my_data$prop_seats &lt;- my_data$seats / my_data$election_seats_total
-```
+### Welch Two Sample t-test
 
-(Note in R, I use `$` to access columns in a dataframe)
+And here the result from the test!
 
+.center[&lt;img src = '../img/wvs-jasp-ttest.png' width = '45%'&gt;]
 
+### Is the difference statistically significant?
 
-``` r
-ggplot(my_data, aes(x = prop_seats, y = duration_days)) + geom_point()
-```
-
-&lt;img src="week-09_files/figure-html/unnamed-chunk-15-1.svg" width="32%" style="display: block; margin: auto;" /&gt;
-
----
-
-## Correlation coefficient (Pearson's test)
-
-
-``` r
-cor_test_result &lt;- cor.test(x = my_data$prop_seats, y = my_data$duration_days)
-print(cor_test_result)
-```
-
-```
-## 
-## 	Pearson's product-moment correlation
-## 
-## data:  my_data$prop_seats and my_data$duration_days
-## t = 0.87722, df = 38, p-value = 0.3859
-## alternative hypothesis: true correlation is not equal to 0
-## 95 percent confidence interval:
-##  -0.1784564  0.4333747
-## sample estimates:
-##       cor 
-## 0.1408848
-```
-
-
-Statistical results:
-
-* The two variables are **positively correlated** (cor = 0.14); yet
-
-* The two variables are not **significantly correlated** ( `\(p\)`-value = 0.39).
-
-We can't reject the null hypothesis of no association. 
-
----
-
-# Summary 
-
-1. The three approaches to collecting data: observation, survey, experiment.
-
-2. Sampling: Targe population, Sample, Sampling frame.
-
-3. Measurement: Operationalisation and variable construction.
-
-4. Analysis: Using three bivariate hypothesis tests.
-
-# Reminder
-
-.content-box-red[
-
-* An anonymous evaluation survey is available this week if you want to provide any (always appreciated) feedback on the unit. This is the last survey before the official USS. 
-
-* Next week, remember to install R and RStudio on your laptop (both free, like in free beer) and bring your laptop to class for the data analysis lab!
-
-]
 
 ---
 
@@ -1734,13 +1222,13 @@ class: segue-red
 <script src="assets/remark-zoom.js"></script>
 <script src="https://platform.twitter.com/widgets.js"></script>
 <script>var slideshow = remark.create({
-"highlightStyle": "github",
-"highlightLines": true,
-"countIncrementalSlides": false,
-"ratio": "16:9",
-"navigation": {
-"scroll": false
-}
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false,
+  "ratio": "16:9",
+  "navigation": {
+    "scroll": false
+  }
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
