@@ -1144,6 +1144,8 @@ grid.arrange(p1, p2, p3, ncol = 1)
 
 ---
 
+class: segue
+
 # 6. Hypothesis testing
 
 ---
@@ -1339,11 +1341,11 @@ $$H_1: \theta \neq \frac{1}{6}$$
 **Three types**:
 1. One-sample t-test
 2. Independent samples t-test
-3. Paired samples t-test
+3. Paired samples t-test (we won't cover this today)
 
 ---
 
-## Slide 36: One-Sample t-test
+## One-Sample t-test
 **Comparing Sample to Known Value**
 
 **Question**: Is our sample mean different from a hypothesised value?
