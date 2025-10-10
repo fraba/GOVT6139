@@ -96,13 +96,23 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 
 | Time         | Content                                    |
 |--------------|--------------------------------------------|
-| 1:00 - 1:10  | Quantitative approaches to data collection |
-| 1:10 - 1:20  | Sampling                                   |
-| 1:20 - 1:40  | Task 01 (Group)                            |
-| 1:40 - 2:00  | Measurement                                |
-| 2:00 - 2:30  | Analysis                                   |
-|              | Check-in                                   |
-| 2:30 - 3:00  | Task 02 (Individual)                       |
+| 3:00 - 3:15  | Quantitative approaches to data collection |
+| 3:15 - 3:30  | Sampling                                   |
+| 3:30 - 3:50  | Task 01 (Group)                            |
+| 3:50 - 4:10  | Measurement                                |
+| 4:10 - 4:40  | Analysis                                   |
+| 4:40 - 4:45  | Check-in                                   |
+| 4:45 - 5:00  | Task 02 (Individual)                       |
+
+---
+
+# Please take two minutes to complete the anonymous feedback survey from Canvas
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 2, seconds = 00)
+```
 
 ---
 
@@ -144,17 +154,21 @@ class: inverse, center, middle
 
 ---
 
-# Today's Seminar Learning Objectives
+## Today's Learning Objectives
 
-## Quantitative methods
+By the end of today's class, you will be able to:
 
-1. The three approaches to collecting data: observation, survey, experiment
+1. **Data Collection Approaches**: Distinguish between observational studies, surveys, and experiments, and identify when each is appropriate
 
-2. Sampling: How do you do it?
+2. **Sampling**: Understand sampling terminology (population, sample, sampling frame) and distinguish between random and biased sampling methods
 
-3. Measurement: Operationalisation and variable construction  
+3. **Measurement**: Explain operationalisation, understand validity and reliability, and recognize how abstract concepts are measured quantitatively
 
-4. Analysis: Bivariate hypothesis tests
+4. **Probability**: Understand basic probability distributions (binomial and normal), interpret probability density, and recognize the role of probability in statistical inference
+
+5. **Estimation**: Calculate and interpret estimates of population parameters (mean, standard deviation) from sample statistics, and understand confidence intervals
+
+6. **Hypothesis Testing**: Formulate null and alternative hypotheses, interpret p-values correctly, and recognise the logic of statistical significance testing
 
 
 ---
@@ -191,6 +205,16 @@ class: segue
 | Intervention          | NO          | YES    | YES        |
 | Variable manipulation | NO          | NO     | YES        |
 
+---
+
+## Mentimeter quiz
+
+### 1. Data Collection Approaches
+
+<br><br>
+
+.pull-left[.center[<img src ='../img/menti-week-09.png' width = '45%'></img> ]]
+.pull-right[or https://www.menti.com/alhnkyv2z61j]
 
 ---
 class: segue
@@ -265,6 +289,12 @@ class: segue-red
 
 ]
 
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 20, seconds = 00)
+```
+
 ---
 
 class: segue
@@ -317,10 +347,22 @@ Note: **Internal** and **external** validity *mostly* refers to experiment setti
 
 ### Reliability: using this instrument (i.e., question) can you consistently repeat the same measurement? 
 
+---
+
+## Mentimeter quiz
+
+### 2. Measurement Concepts
+
+<br><br>
+
+.pull-left[.center[<img src ='../img/menti-week-09.png' width = '45%'></img> ]]
+.pull-right[or https://www.menti.com/alhnkyv2z61j]
 
 ---
 
-# Probability
+class: segue
+
+# 4. Probability
 
 ---
 
@@ -822,10 +864,24 @@ ggplot(curve_data, aes(x = x, y = y)) +
 
 *"The normal distribution is... well, normal!"*
 
+---
+
+
+## Mentimeter quiz
+
+### 3. Probability Distributions
+
+<br><br>
+
+.pull-left[.center[<img src ='../img/menti-week-09.png' width = '45%'></img> ]]
+.pull-right[or https://www.menti.com/alhnkyv2z61j]
+
 
 ---
 
-# Estimating from Samples
+class: segue
+
+# 5. Estimating from Samples
 
 ---
 
@@ -1088,7 +1144,7 @@ grid.arrange(p1, p2, p3, ncol = 1)
 
 ---
 
-# Hypothesis testing
+# 6. Hypothesis testing
 
 ---
 
@@ -1230,6 +1286,17 @@ $$H_1: \theta \neq \frac{1}{6}$$
 
 ---
 
+## Mentimeter quiz
+
+### 4. Probability Distributions
+
+<br><br>
+
+.pull-left[.center[<img src ='../img/menti-week-09.png' width = '45%'></img> ]]
+.pull-right[or https://www.menti.com/alhnkyv2z61j]
+
+---
+
 ## The $p$-value
 
 **The Most Misunderstood Concept**
@@ -1261,11 +1328,7 @@ $$H_1: \theta \neq \frac{1}{6}$$
 
 ---
 
-# Comparing two means
-
----
-
-## Slide 35: t-tests
+## The t-tests
 
 **When to use**:
 
@@ -1323,6 +1386,17 @@ Nice, but what about the $p$-value? Once you have your test statistics (`r this_
 
 In this case, $t = `r this_test$statistic`$, $p$-value = `r this_test$p.value`, which is p < 0.05. Not surprisingly, we can reject the null hypothesis. The difference in averages (sample's mean vs *true value*) is .content-box-yellow[statistically significant].
 
+
+---
+
+## Mentimeter quiz
+
+### 5. P-values
+
+<br><br>
+
+.pull-left[.center[<img src ='../img/menti-week-09.png' width = '45%'></img> ]]
+.pull-right[or https://www.menti.com/alhnkyv2z61j]
 
 
 ---

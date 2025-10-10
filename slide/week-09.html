@@ -6,6 +6,8 @@
     <meta name="author" content="Francesco Bailo" />
     <script src="week-09_files/header-attrs-2.29/header-attrs.js"></script>
     <link href="week-09_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="week-09_files/countdown-0.4.0/countdown.css" rel="stylesheet" />
+    <script src="week-09_files/countdown-0.4.0/countdown.js"></script>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         TeX: { equationNumbers: { autoNumber: "AMS" } },
@@ -38,7 +40,7 @@ class: center, middle, inverse, title-slide
 ### The University of Sydney
 ]
 .date[
-### Semester 2, 2025 (updated: 2025-10-09)
+### Semester 2, 2025 (updated: 2025-10-10)
 ]
 
 ---
@@ -111,13 +113,22 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 
 | Time         | Content                                    |
 |--------------|--------------------------------------------|
-| 1:00 - 1:10  | Quantitative approaches to data collection |
-| 1:10 - 1:20  | Sampling                                   |
-| 1:20 - 1:40  | Task 01 (Group)                            |
-| 1:40 - 2:00  | Measurement                                |
-| 2:00 - 2:30  | Analysis                                   |
-|              | Check-in                                   |
-| 2:30 - 3:00  | Task 02 (Individual)                       |
+| 3:00 - 3:15  | Quantitative approaches to data collection |
+| 3:15 - 3:30  | Sampling                                   |
+| 3:30 - 3:50  | Task 01 (Group)                            |
+| 3:50 - 4:10  | Measurement                                |
+| 4:10 - 4:40  | Analysis                                   |
+| 4:40 - 4:45  | Check-in                                   |
+| 4:45 - 5:00  | Task 02 (Individual)                       |
+
+---
+
+# Please take two minutes to complete the anonymous feedback survey from Canvas
+
+<div class="countdown" id="timer_68817cf4" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
 
 ---
 
@@ -159,17 +170,21 @@ class: inverse, center, middle
 
 ---
 
-# Today's Seminar Learning Objectives
+## Today's Learning Objectives
 
-## Quantitative methods
+By the end of today's class, you will be able to:
 
-1. The three approaches to collecting data: observation, survey, experiment
+1. **Data Collection Approaches**: Distinguish between observational studies, surveys, and experiments, and identify when each is appropriate
 
-2. Sampling: How do you do it?
+2. **Sampling**: Understand sampling terminology (population, sample, sampling frame) and distinguish between random and biased sampling methods
 
-3. Measurement: Operationalisation and variable construction  
+3. **Measurement**: Explain operationalisation, understand validity and reliability, and recognize how abstract concepts are measured quantitatively
 
-4. Analysis: Bivariate hypothesis tests
+4. **Probability**: Understand basic probability distributions (binomial and normal), interpret probability density, and recognize the role of probability in statistical inference
+
+5. **Estimation**: Calculate and interpret estimates of population parameters (mean, standard deviation) from sample statistics, and understand confidence intervals
+
+6. **Hypothesis Testing**: Formulate null and alternative hypotheses, interpret p-values correctly, and recognise the logic of statistical significance testing
 
 
 ---
@@ -206,6 +221,16 @@ class: segue
 | Intervention          | NO          | YES    | YES        |
 | Variable manipulation | NO          | NO     | YES        |
 
+---
+
+## Mentimeter quiz
+
+### 1. Data Collection Approaches
+
+&lt;br&gt;&lt;br&gt;
+
+.pull-left[.center[&lt;img src ='../img/menti-week-09.png' width = '45%'&gt;&lt;/img&gt; ]]
+.pull-right[or https://www.menti.com/alhnkyv2z61j]
 
 ---
 class: segue
@@ -280,6 +305,11 @@ class: segue-red
 
 ]
 
+<div class="countdown" id="timer_17900ea0" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">20</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
 ---
 
 class: segue
@@ -332,10 +362,22 @@ Note: **Internal** and **external** validity *mostly* refers to experiment setti
 
 ### Reliability: using this instrument (i.e., question) can you consistently repeat the same measurement? 
 
+---
+
+## Mentimeter quiz
+
+### 2. Measurement Concepts
+
+&lt;br&gt;&lt;br&gt;
+
+.pull-left[.center[&lt;img src ='../img/menti-week-09.png' width = '45%'&gt;&lt;/img&gt; ]]
+.pull-right[or https://www.menti.com/alhnkyv2z61j]
 
 ---
 
-# Probability
+class: segue
+
+# 4. Probability
 
 ---
 
@@ -433,7 +475,7 @@ Most likely outcome: 3-4 skulls
 - Getting exactly 10 skulls would be very surprising!
 - The distribution shows what to expect
 
-&lt;img src="week-09_files/figure-html/unnamed-chunk-1-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="week-09_files/figure-html/unnamed-chunk-3-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -699,7 +741,7 @@ Most likely outcome: 3-4 skulls
 
 .pull-left[
 
-&lt;img src="week-09_files/figure-html/unnamed-chunk-5-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="week-09_files/figure-html/unnamed-chunk-7-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
 
 
 ]
@@ -708,7 +750,7 @@ Most likely outcome: 3-4 skulls
 
 .pull-right[
 
-&lt;img src="week-09_files/figure-html/unnamed-chunk-6-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="week-09_files/figure-html/unnamed-chunk-8-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
 
 
 
@@ -736,7 +778,7 @@ Most likely outcome: 3-4 skulls
 - 95.4% of data within 2 SD of mean
 - 99.7% of data within 3 SD of mean
 
-&lt;img src="week-09_files/figure-html/unnamed-chunk-7-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
+&lt;img src="week-09_files/figure-html/unnamed-chunk-9-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -748,10 +790,24 @@ Most likely outcome: 3-4 skulls
 
 *"The normal distribution is... well, normal!"*
 
+---
+
+
+## Mentimeter quiz
+
+### 3. Probability Distributions
+
+&lt;br&gt;&lt;br&gt;
+
+.pull-left[.center[&lt;img src ='../img/menti-week-09.png' width = '45%'&gt;&lt;/img&gt; ]]
+.pull-right[or https://www.menti.com/alhnkyv2z61j]
+
 
 ---
 
-# Estimating from Samples
+class: segue
+
+# 5. Estimating from Samples
 
 ---
 
@@ -883,7 +939,7 @@ Why This Matters: This simple intuition forms the mathematical foundation for al
 
 ## Sampling Distribution - Visual
 
-&lt;img src="week-09_files/figure-html/unnamed-chunk-8-1.svg" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="week-09_files/figure-html/unnamed-chunk-10-1.svg" width="80%" style="display: block; margin: auto;" /&gt;
 
 .pull-left[
 
@@ -942,13 +998,13 @@ No matter what the population distribution looks like (skewed, uniform, bimodal)
 
 ---
 
-&lt;img src="week-09_files/figure-html/unnamed-chunk-9-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
+&lt;img src="week-09_files/figure-html/unnamed-chunk-11-1.svg" width="45%" style="display: block; margin: auto;" /&gt;
 
 **Key Insight**: This is why we can use normal-based methods even when data aren't normal!
 
 ---
 
-# Hypothesis testing
+# 6. Hypothesis testing
 
 ---
 
@@ -991,7 +1047,7 @@ Is 13 cases significantly different from the 3-4 we'd expect if the industry cla
 
 .pull-right[
 
-&lt;img src="week-09_files/figure-html/unnamed-chunk-10-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="week-09_files/figure-html/unnamed-chunk-12-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
 
 ]
 
@@ -1065,6 +1121,17 @@ Hypothesis testing provides a formal framework for answering this.
 
 ---
 
+## Mentimeter quiz
+
+### 4. Probability Distributions
+
+&lt;br&gt;&lt;br&gt;
+
+.pull-left[.center[&lt;img src ='../img/menti-week-09.png' width = '45%'&gt;&lt;/img&gt; ]]
+.pull-right[or https://www.menti.com/alhnkyv2z61j]
+
+---
+
 ## The `\(p\)`-value
 
 **The Most Misunderstood Concept**
@@ -1096,11 +1163,7 @@ Hypothesis testing provides a formal framework for answering this.
 
 ---
 
-# Comparing two means
-
----
-
-## Slide 35: t-tests
+## The t-tests
 
 **When to use**:
 
@@ -1151,6 +1214,17 @@ Nice, but what about the `\(p\)`-value? Once you have your test statistics (14.4
 
 In this case, `\(t = 14.4012273\)`, `\(p\)`-value = 0, which is p &lt; 0.05. Not surprisingly, we can reject the null hypothesis. The difference in averages (sample's mean vs *true value*) is .content-box-yellow[statistically significant].
 
+
+---
+
+## Mentimeter quiz
+
+### 5. P-values
+
+&lt;br&gt;&lt;br&gt;
+
+.pull-left[.center[&lt;img src ='../img/menti-week-09.png' width = '45%'&gt;&lt;/img&gt; ]]
+.pull-right[or https://www.menti.com/alhnkyv2z61j]
 
 
 ---
