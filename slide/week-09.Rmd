@@ -1457,12 +1457,6 @@ class: segue-clue
 
 class: segue-red
 
-# Task 2: Hypothesis and questions (individual)
-
-.pull-right[
-
-.center[<img src = '../img/padlet-week-09-02.png' width = '55%'></img>]
-
-]
+# See you next week with the first Data Analysis Lab (and remember to install Jasp!)
 
 ---
