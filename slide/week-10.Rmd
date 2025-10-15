@@ -848,3 +848,744 @@ class: segue
 # Check-in
 
 ---
+
+
+---
+
+## Feedback on A1, tips for A2
+
+Overall, well done!
+
+* Be selective: You must explain something but you can't explain everything.
+
+* **Demonstrate and communicate understanding** of ideas covered in the course (you do this by *explaining* and not by *listing* facts)
+
+* **Connect** these research design / methods ideas to your topic of choice
+
+* In your A2, remember to **engage explicitly with research design and methods literature**
+
+---
+
+# Week 12: Peer feedback workshop
+
+
+.center[**Your draft is due tonight**!]
+
+* Make sure that your draft is not longer than 4,000 words (the limit for A2)
+
+* Yet, it is OK to submit a draft that is shorter than 4,000 words (in fact, you should submit whatever version you currently have). 
+
+#### Tomorrow I will start assigning peer reviewers. As peer reviewer
+
+* You should try to offer a feedback to three drafts. 
+
+* After reading a draft, use the rubric you find in Canvas. You can also explain your assessment with a written comment in Canvas (I am sure the other student will appreciate it!). 
+
+* If the document you are assigned to review is longer than 4,000 words, you should only read up to 4,000 words and disregard the rest (you can make a comment about this with your feedback).
+
+* As you review the drafts, take notes on critical/recurrent issues you might have encountered (so to discuss them in Week 12 in class).
+
+---
+
+# Week 12: Peer feedback workshop
+
+### Part 1: 5-minute project presentation (45 minutes)
+
+- Prepare to present your research proposal in five minutes.
+
+- You are encouraged to preliminary share supporting materials using the [Canvas Group](https://community.canvaslms.com/t5/Canvas-Basics-Guide/What-are-Groups/ta-p/16) page for Week 12 (e.g. a one or two slide deck, or a one-page document). 
+
+- In groups of four (groups have been already created), each student will present for five minutes - I will be strict with the timing - and then receive questions and comments for another five minutes.
+
+- You are encouraged to keep discussing this on the Canvas groups page after class.
+
+---
+
+# Week 12: Peer feedback workshop
+
+### Part 2: Brain storm on the issues you have identified with the presentations you reviewed (30 minutes)
+
+- Prepare a (short) list of issues to discuss with your group (but avoid offering details that could identify the proposal you have reviewed). 
+
+- In the same groups of four, discuss the issues and possible solutions for about 20 minutes.
+
+- Report on your discussion using Padlet (same as before, avoid offering details that could identify specific proposals): list issues and possible solutions.  
+
+---
+
+class: inverse, center, middle
+
+# Lab: R for data analysis
+
+---
+
+## (A very ambitious) plan for today
+
+
+1. First look at R and RStudio
+
+2. Loading data
+
+3. Viewing data 
+
+3. Visualising data
+
+4. Calculating the correlation coefficient
+
+4. Running a regression analysis
+
+---
+class: inverse, center, middle
+
+# R and RStudio
+
+.center[<img src="https://www.r-project.org/logo/Rlogo.svg" style="width: 25%" /> &nbsp; &nbsp; &nbsp; <img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg" style="width: 40%" /> ]
+
+
+---
+
+## R and RStudio
+
+* <img src="https://www.r-project.org/logo/Rlogo.svg" style="width: 8%" /> is an *objected-oriented* computer language, that is "formal language used to communicate with a computer"). 
+
+    * It is widely used among social scientists to work with data and statistical applications...
+    
+    * ... but it's a fully fledged computer language (so you can use it to send a rocket to Mars, if you want). 
+
+--
+
+* <img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg" style="width: 18%" /> is an application - formally, an integrated development environment (IDE) - designed to facilitate using R. 
+
+    * RStudio comes in two versions: a desktop application and a server application (which you access from a browser)
+    
+---
+
+## R and RStudio
+
+
+
+Using a **car metaphor**...
+
+.pull-left[
+
+If <img src="https://www.r-project.org/logo/Rlogo.svg" style="width: 16%" /> is the **engine**, 
+
+]
+
+.pull-right[<img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg" style="width: 36%" /> is the **dashboard** (and the steering wheel). ]
+
+</br>
+
+.center[<img src="../img/r-vs-rstudio.jpeg" width = '55%'></img>]
+
+---
+
+### Rstudio: Let's creat our first R script
+
+.center[<img src="../img/rstudio-open-new-r-script.gif" width = '100%'></img>]
+
+---
+
+### Rstudio: Let's creat our first R script
+
+An R script is a text document that we can edit and save it for later use. 
+
+An R script has a ".R" extension (sometimes lower-cased, ".r"). 
+
+I contains our R code and it can be run by R.
+
+When you open a new R script document it will be blank.
+
+---
+
+## RStudio user interface: How does it look?
+
+After launching RStudio, you should see four windows. Each windows has a number of tabs (like in a web browser). The most important tabs are:
+
+.pull-left[
+
+After launching RStudio, you should see four windows. Each windows has a number of tabs (like in a web browser). The most important tabs are:
+
+]
+
+.pull-right[
+
+.center[<img src="../img/rstudio-ui.svg" style="width: 70%" />]
+
+]
+
+1. **Upper-left window**: Your source code appears in the **source editor**.
+
+2. **Lower-left window**:  The **console**. Your R code will execute here. Code output (including errors and messages) is visualised here.
+
+3. **Lower-right window**: Your local *files* and *plots* can be accessed from here. 
+
+2. **Upper-right window**: This is a list of objects in your current **environment**.
+
+
+---
+
+## RStudio user interface: How does it look?
+
+
+.center[<img src = '../img/rstudio-ui.gif' width = '95%'></img>]
+
+---
+
+## RStudio: Running code from the editor
+
+If you want to run some code (and for *run* we mean *write* the code, then ask run to *execute* it) you can add it to a new document in your **source editor**. 
+
+In your **source editor** each tab represents a different document. These are text documents containing R code. 
+
+You can write your code here and you can save your document containing the code for later use (with "File" then "Save") as you would save a Word document. 
+
+Once you have a line of code you can *place your cursor* on the line and then hit "Run". 
+
+#### By hitting "Run"...
+
+1. You ask *RStudio* to copy paste your line into the **console**;
+
+2. You ask *R* to execute your code. R will kindly do it and will print any outcome below your code directly in the **console**. 
+
+3. If your code results in creating a *new object*, the object will now appear in the **environment** window.
+
+---
+
+## RStudio: Running code from the editor
+
+
+.center[<img src = '../img/rstudio-running-code.gif' width = '95%'></img>]
+
+
+---
+
+class: inverse, center, middle
+
+# Predict one variable using another variable
+# Example 1: Health data
+
+---
+
+## Example 1: Health data<sup>1</sup>
+
+```{r echo = F}
+
+health <- read.csv("../data/health.csv")
+
+```
+
+```{r echo = F}
+
+health %>%
+  dplyr::slice(1:5) %>%
+  kable()
+
+```
+
+.footnote[[1] Slides adapted from https://www.mattblackwell.org/files/teaching/gov50/regression.pdf]
+
+---
+
+## Predict one variable using another variable
+
+Given the value $X_i$, what is our best guess for the value of $Y_i$?
+
+* The **dependent variable** $Y_i$ is our *outcome* variable.
+
+* The **independent variable** $X_i$ is our *predictor* (also *explanatory*) variable.
+
+---
+
+## Import the data
+
+```{r}
+
+health <- read.csv("../data/health.csv")
+
+```
+
+
+.center[<img src = '../img/rstudio-import.gif' width = '95%'></img>]
+
+---
+
+## Import the data (breakdown)
+
+When we use the RStudio **import feature** (shown before), we are actually asking RStudio to write this code for us.  
+
+```{r}
+
+health <- read.csv("../data/health.csv")
+
+```
+
+(Once RStudio send this code to the console, we should copy/paste it to our text document open in the source editor window)
+
+This code does two things:
+
+1. The **function** `read.csv("../data/health.csv")` read a comma-separated file (CSV) file, which we specify within the two parenthesis and the two quote signs.
+
+2. The **assignment operator** `<-` take the result from the function and assign it to the object `health`.
+
+---
+
+## Import the data (breakdown)
+
+```{r}
+
+health <- read.csv("../data/health.csv")
+
+```
+
+
+.pull-left[
+
+.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Medium_box%2C_open.jpg/567px-Medium_box%2C_open.jpg' width = '30%'></img> <img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Brooch%2C_arrow_%28AM_13105-1%29.jpg/640px-Brooch%2C_arrow_%28AM_13105-1%29.jpg' width = '30%'></img> <img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Bonsack_machine.png/575px-Bonsack_machine.png' width = '30%'></img>]
+
+* A *function* is a machine that can optionally take an *input* (a list of **arguments** in computer science) - and return an *output*.
+
+* With the arrow `<-` we tell R where to store the *output* from the function. 
+
+* In R information is stored in *objects*. The objects in the *environment* are of different **types** as they contain different type of information. 
+
+]
+
+.pull-right[
+
+.center[<img src = 'https://upload.wikimedia.org/wikipedia/commons/3/3b/Function_machine2.svg' width = '90%'></img>]
+
+]
+
+
+---
+
+## View the data
+
+.center[<img src = '../img/rstudio-view.gif' width = '95%'></img>]
+
+---
+
+## Plot the data
+
+.center[<img src = '../img/rstudio-plot.gif' width = '95%'></img>]
+
+---
+
+## Plot the data (breakdown)
+
+```{r eval = F}
+plot(health$steps.lag, health$steps)
+```
+
+
+1. We need to use a *function* to plot the data. The function we want to use is `plot()`. Functions can take one or more arguments. In this case, our arguments are 
+
+    * the values for the horizontal axis (X), and
+    
+    * the values for the vertical axis (Y)
+    
+2. As we have already imported our dataset `health` (with "import dataset") into our R session (you should be able to see it in the top-right window in RStudio), we can access the values for the two axis with
+
+    * `health$steps.lag`, in which `steps.lag` is the name of our X variable, and
+    
+    * `health$weight` in which `weight` is the name of our Y variable.
+
+---
+
+## Remove missing values
+
+Let's calculate the correlation coefficient between the two variables with the function `cor()`
+
+```{r}
+cor(health$steps.lag, health$weight)
+```
+
+**Ouch**! We have some missing value in our data set (a very common issue). 
+
+Conveniently, R has a function to help us out: `na.omit()`
+
+```{r}
+health <- na.omit(health)
+```
+
+With this code we remove all the records that contain missing values (`NA` in R). You might want to notice that the number of observations changes from 644 to 643 after you running it.
+
+---
+
+## Remove missing values
+
+
+.center[<img src = '../img/rstudio-na-omit.gif' width = '95%'></img>]
+
+---
+
+## Calculate the correlation coefficient
+
+```{r}
+cor(health$steps.lag, health$weight)
+```
+
+Remember that,
+
+1. positive correlation -> upward slope
+
+2. negative correlation -> downward slope
+
+3. high correlation -> tighter, closer to a line
+
+4. correlation cannot capture nonlinear relationship.
+
+
+---
+
+## Linear regression with one Independent Variable (IV)<sup>1</sup>
+
+This is the equation for the model of the line that best fits the points:
+
+$$Y_i = \underbrace{\alpha}_{intercept} + \underbrace{\beta}_{slope} \times X_i + \underbrace{\epsilon_i}_{error\:term}$$
+**Coefficients**/**parameters** ( $\alpha$ , $\beta$ ): true unknown intercept/slope of the line of best fit.
+
+* **Chance error** $\epsilon_i$ : accounts for the fact that the line doesn't perfectly fit the data.
+
+    * Each observation allowed to be off the regression line.
+    * Chance errors are 0 on average.
+    
+We don't know $\alpha$ or $\beta$ . *How can we estimate them*?
+
+.footnote[[1] Slides from https://www.mattblackwell.org/files/teaching/gov50/regression.pdf]
+
+
+---
+
+## Estimating coefficients<sup>1</sup>
+
+* Parameters: $\alpha$, $\beta$
+
+    * Unknown features of the data-generating process.
+
+    * Chance error makes these impossible to observe directly.
+    
+* Estimates: $\widehat{\alpha}$, $\widehat{\beta}$
+
+    * An **estimate** is a function of the data that is our best guess about some
+parameter.
+
+* **Regression line**: $\widehat{Y} = \widehat{\alpha} + \widehat{\beta} \times x$
+
+    * *Average* value of $Y$ when $X$ is equal to $x$.
+    
+    * Represents the *best guess* or *predicted value* of the outcome at $x$.
+
+.footnote[[1] Slides from https://www.mattblackwell.org/files/teaching/gov50/regression.pdf]
+
+---
+
+## Line of best fit<sup>1</sup>
+
+```{r echo = FALSE, out.width = '75%', fig.width=5, fig.height=4}
+
+ggplot(health, aes(x = steps.lag, y = weight)) +
+  geom_point() +
+  geom_smooth(method = 'lm', se = FALSE) +
+  theme_bw() +
+  labs(x = 'Steps on day prior (in 1000s)', 
+       y = "Weight")
+
+```
+
+
+.footnote[[1] Slides from https://www.mattblackwell.org/files/teaching/gov50/regression.pdf]
+
+---
+
+## Why not this line?<sup>1</sup>
+
+```{r echo = FALSE, out.width = '55%', fig.width=5, fig.height=4}
+
+ggplot() +
+  geom_point(data = health, aes(x = steps.lag, y = weight)) +
+  geom_smooth(data = health %>%
+                mutate(weight = rev(weight)), aes(x = steps.lag, y = weight), 
+              method = 'lm', se = FALSE, colour = "red") +
+  theme_bw() +
+  labs(x = 'Steps on day prior (in 1000s)', 
+       y = "Weight")
+
+```
+
+
+Because we minimise the **sum of the squared residuals** (SSR) and this line doesn't minimise SSRs.
+
+.footnote[[1] Slides from https://www.mattblackwell.org/files/teaching/gov50/regression.pdf]
+
+---
+
+## Calculating the least squares line for a data set with `lm()`
+
+In R we "fit the model" with the syntax <mark>`lm(y ~ x, data = mydataset)`</mark>, where `y` is our DV and `x` our IV.
+
+
+```{r}
+fit <- lm(weight ~ steps.lag, data = health)
+```
+
+The object `fit` now contains all the stats from fitting the linear model. 
+
+We get the coefficients $\alpha$ (the coefficient) and $\beta$ by entering `fit` in console
+
+```{r}
+fit
+```
+
+---
+
+#### Intepreting the results from `lm()`
+
+We get more comprehensive results with 
+
+```{r}
+summary(fit)
+```
+
+---
+
+#### Intepreting the results from `lm()`
+
+.center[<img src = '../img/r-lm-summary-1.gif' width = '95%'></img>]
+
+---
+
+#### Intepreting the results from `lm()`
+
+* $\alpha$ (intercept) = 170.67497: *average* weight in pounds when walking 0 steps the previous day.
+
+* $\beta_1 = -0.23077$: *average* change in pounds when walking an extra step the previous day.
+
+* $p = 1.11e-06$ for `steps.lag`: the association between `steps.lag` and `weight` is statistically significant (note significant codes).
+
+* $r^2 = 0.03637$: 3.6% of the variation in the dependent variable `weight` is explained by the variation of the independent variable `steps.lag` (not great, a lot remains uneplained).
+
+---
+
+class: inverse, center, middle
+
+## In class excercise
+
+---
+
+## In class excercise
+
+Discuss in group, then submit individually your response in Canvas.
+
+1. Download the "Explaining the Trump vote" (available from the Assignment page on Canvas).
+
+2. Go to Table 1 on page 531 (you can read the rest of the paper at home in interested!)
+
+**Note**: As it is common, the table reports more than one model. Coefficients from each model are in a different column. You might also note that each model has different combination of independent variables.
+
+#### Task
+
+1. Identify the dependent variable (DV) and the independent variables (IVs)
+
+2. Identify the variables that have a significant effect on voting for Trump (specify the model number).
+
+```{r echo = F}
+library(countdown)
+countdown(minutes = 8, seconds = 00)
+```
+
+---
+
+class: inverse, center, middle
+
+# Linear regression with more than one Independent Variable
+# Example 2: US midterm elections
+
+---
+
+## Example 2: US midterm elections<sup>1</sup>
+
+| Variable name | Description |
+| ------------- | ----------- |
+| `year` | midterm election year |
+| `president` | name of president |
+| `party` | Democrat or Republican |
+| `approval` | Gallup approval rating at midterms |
+| `seat.change` | change in the number of House seat's for the president's party |
+| `rdi.change` | change in real disposable income over the year before |
+
+
+.footnote[[1] Slides from http://www.mattblackwell.org/files/teaching/gov50/regression-ii.pdf]
+
+---
+
+## Import the data in R
+
+Use RStudio's "**Import Dataset feature**" ([here](https://fraba.github.io/GOVT6139/img/rstudio-import.gif) how) to get this code as your *path* th the `midterms.csv` file will be different.
+
+```{r}
+midterms <- read.csv("../data/midterms.csv")
+```
+
+```{r echo = FALSE}
+midterms %>%
+  dplyr::slice(1:5) %>%
+  kable()
+```
+
+
+---
+
+## Linear regression with more than one Independent Variable (IV)<sup>1</sup>
+
+$$Y_i = \underbrace{\alpha}_{intercept} + \underbrace{\beta_1}_{coefficient\\first\:IV} \ \  \underbrace{X_{i1}}_{values\\first\:IV} \ + \ \underbrace{\beta_2}_{coefficient\\second\:IV} \ \  \underbrace{X_{i2}}_{values\\second\:IV} + ... + \underbrace{\epsilon_i}_{error\:term}$$
+
+### Why do we want to add additional predictor variables (IVs)?
+
+1. We improve our **predictions** ( $Y_i$ ), as we provide the model more information. (Of course this assumption rests on the *quality of information* we provide to the model) 
+
+2. We can offer a better **interpretations** of the relationships among our variables: " $\beta_1$ is the effect of $X_i$ *holding all other independent variables constant* " => a.k.a. **ceteris paribus**.
+
+.footnote[[1] Slides from https://www.mattblackwell.org/files/teaching/gov50/regression-ii.pdf]
+
+---
+
+## Predicting with multiple independent variables<sup>1</sup>
+
+Let's say we want to predict the **change of House seat's for the president's party** using 
+
+1. president's **approval rate** and 
+
+2. **change in real disposable income over the year before**. 
+
+#### With this data set, our function will then be
+
+$$ seat.change_i = \alpha + \beta_1 \times approval_i + \beta_2 \times rdi.change_i + \epsilon_i $$
+
+.footnote[[1] Slides from https://www.mattblackwell.org/files/teaching/gov50/regression-ii.pdf]
+---
+
+
+## Predicting with multiple independent variables in R<sup>1</sup>
+
+```{r}
+mult.fit <- lm(seat.change ~ approval + rdi.change, data = midterms)
+
+mult.fit
+```
+
+
+* $\alpha$ = -117.2: *average* seat change president has 0% approval and no change
+in income levels.
+* $\beta_1 = 1.61$: *average* increase in seat change for additional percentage point
+of approval, **holding RDI change fixed**
+* $\beta_2 =  4.213$: *average* increase in seat change for each additional percentage
+point increase of RDI, **holding approval fixed**
+
+.footnote[[1] Slides from https://www.mattblackwell.org/files/teaching/gov50/regression-ii.pdf]
+
+---
+
+#### Predicting with multiple independent variables in R
+
+```{r}
+
+summary(mult.fit)
+
+```
+
+---
+
+## Can we predict the result of the 2018 midterm election?<sup>1</sup>
+
+Let's assume that we are the day before of the 2018 midterm election and we want to estimate the result of the election in terms of seat change. 
+
+Our line of best fit let us produce an estimate for that election...
+
+.center[<img src = 'https://media.tenor.com/QvDDT72U7lUAAAAC/crystal-ball.gif' width = '45%'></img>]
+
+.footnote[[1] Slides from https://www.mattblackwell.org/files/teaching/gov50/regression-ii.pdf]
+
+---
+
+#### Can we predict the result of the 2018 midterm election?<sup>1</sup>
+
+Let's check the values for our predictors (or IVs): `approval` and `rdi.change`.
+
+```{r echo = F}
+midterms %>%
+  dplyr::filter(year == 2018) %>%
+  kable()
+```
+
+and the coefficients from our linear model
+
+```{r}
+mult.fit
+```
+
+.footnote[[1] Slides from https://www.mattblackwell.org/files/teaching/gov50/regression-ii.pdf]
+---
+
+#### Can we predict the result of the 2018 midterm election?
+
+Now we only need to plug the values into our formula
+
+$$seat.change_{2018} = \alpha + \beta_1 \times approval_{2018} + \beta_2 \times rdi.change_{2018}$$
+##### First the coefficients ...
+
+$$seat.change_{2018} = -120.436 + 1.572 \times approval_{2018} + 3.334 \times rdi.change_{2018}$$
+##### Then the measured values of the IVs from 2018 ...
+
+$$ seat.change_{2018} = -120.436 + 1.572 \times 38 + 3.334 \times 4.1 $$
+which we can solve using R
+
+```{r}
+-120.436 + 1.572 * 38 + 3.334 * 4.1
+```
+
+Who can check the Wikipedia page for the 2018 United States House of Representatives elections?
+
+---
+
+## Does the model with a single IV produces better predictions?
+
+```{r}
+fit <- lm(seat.change ~ approval, data = midterms)
+
+fit
+```
+
+Actually, it does ...
+
+```{r}
+-96.845 + 1.424 * 38
+```
+
+Adding the economic variable, which is not significantly associated according to our statistical test, decreases the accuracy of our prediction. 
+
+Approval rate by itself is already a pretty effective predictor.
+
+---
+class: inverse, center, middle
+
+# Where to go next?
+
+---
+
+## R for the social sciences: Resources to get you started
+
+* Llaudet, E., & Imai, K. (2022). _Data analysis for social science: A friendly and practical introduction_. Princeton University Press. https://press.princeton.edu/books/hardcover/9780691199429/data-analysis-for-social-science
+
+* Grolemund, G. (2014). _Hands-on programming with R_. O'Reilly. https://rstudio-education.github.io/hopr/ (HOPR)
+  * Publicly and fully available online: [link](https://rstudio-education.github.io/hopr/)
+  
+* Wickham, H., & Grolemund, G. (2017). _R for data science_. O'Reilly. https://r4ds.had.co.nz/ (R4DS)
+  * Publicly and fully available online: [link](https://r4ds.had.co.nz/)
+  
+* Silge, J., & Robinson, D. (2017). _Text mining with R: A tidy approach_. O’Reilly. https://www.tidytextmining.com/ (TMWR)
+  * Publicly and fully available online: [link](https://www.tidytextmining.com/)
+
+* Xie, Y., Allaire, J. J., & Grolemund, G. (2019). _R Markdown: The definitive guide_. CRC Press. https://bookdown.org/yihui/rmarkdown/ (RMD)
+  * Publicly and fully available online: [link](https://bookdown.org/yihui/rmarkdown/)
