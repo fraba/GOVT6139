@@ -104,11 +104,13 @@ class: inverse, center, middle
 
 ---
 
-## Slide 3: JASP Interface Overview
+## JASP Interface Overview
 
 ### What You See When You Start JASP
 
 **Main Components:**
+
+.pull-left[
 
 1. **Top Menu Bar**
    - File, Edit, Data tabs
@@ -119,15 +121,23 @@ class: inverse, center, middle
    - Each row = one participant/observation
    - Each column = one variable
 
-3. **Right Panel: Results**
+]
+
+.pull-right[
+
+3\. **Right Panel: Results**
    - Analysis output appears here
    - Updates in real-time
    - Can copy/export results
 
-4. **Analysis Options Panel** (center-left when analysis selected)
+4\. **Analysis Options Panel** (center-left when analysis selected)
    - Choose variables
    - Select options
    - Customize analysis
+
+]
+
+
 
 ---
 
@@ -222,12 +232,14 @@ JASP uses **symbols** in column headers to show variable type:
 
 ---
 
-## Slide 7: 🎯 IN-CLASS EXERCISE 1
+## `r icons::fontawesome("laptop")` HANDS-ON
 ### Loading the Titanic Dataset
+
+.pull-left[
 
 **Your Task:**
 
-1. **Download** the file `titanic.csv` from the course materials
+1. **Download** the file `titanic.csv` from the Canvas
 2. **Open JASP** on your computer
 3. **Load the data:**
    - File → Open → Computer → Browse
@@ -238,18 +250,27 @@ JASP uses **symbols** in column headers to show variable type:
    - How many columns (variables)?
    - What variables do you see?
 
-**Take 2 minutes**
+]
+
+--
+
+.pull-right[
 
 **Expected:** 891 rows, 12 columns
 
+]
+
+
 ---
 
-## Slide 8: 🎯 IN-CLASS EXERCISE 2
+## `r icons::fontawesome("laptop")` HANDS-ON
 ### Identifying & Fixing Variable Types
 
 **The Titanic Dataset Variables:**
 
 Look at your data and identify which type each variable should be:
+
+.pull-left[
 
 | Variable | Current Type? | Should Be? |
 |----------|--------------|------------|
@@ -261,16 +282,20 @@ Look at your data and identify which type each variable should be:
 | Age | ? | ? |
 | Fare | ? | ? |
 
+]
+
+.pull-right[
+
 **Your Task:**
 1. Check what type JASP assigned to each variable
 2. Decide what type each should be
 3. Fix any incorrect types by clicking the icon
 
-**Take 3 minutes**
+]
 
 ---
 
-## Slide 9: 🎯 EXERCISE 2 - SOLUTION
+## `r icons::fontawesome("laptop")` HANDS-ON - Solution
 
 ### Correct Variable Types for Titanic
 
@@ -290,11 +315,84 @@ Look at your data and identify which type each variable should be:
 
 ---
 
-## Slide 10: What Are Descriptive Statistics?
+## Adding Value Labels in JASP
 
-### Summarizing Your Data
+### Making Your Data More Readable
+
+.pull-left[
+
+**Why Add Labels?**
+- Numeric codes (0, 1) are hard to interpret
+- Labels make output easier to read
+- Essential for clear reporting and presentations
+
+**Example: Survived Variable**
+- Current: 0 and 1 (confusing!)
+- Better: "Did not survive" and "Survived" (clear!)
+
+]
+
+.pull-right[
+
+**When to Use Labels:**
+- Binary variables (Yes/No, Male/Female)
+- Categorical codes (1=Low, 2=Medium, 3=High)
+- Any nominal variable with numeric codes
+
+]
+
+
+
+---
+
+##  `r icons::fontawesome("laptop")` HANDS-ON: Adding Labels to Survived
+
+### Your Task: Make the Survived Variable More Interpretable
+
+**Step-by-Step Instructions:**
+
+.small[
+
+.pull-left[
+
+1. **Open the Variable Editor (Edit Data):**
+   - Double-click on the **Survived** column header
+   - OR right-click the column → **Edit column**
+
+2. **Add Value Labels:**
+   - In the variable editor window, find the **Labels** section
+   - Click **+ Add label** 
+   - For value **0**, enter label: **"Did not survive"**
+   - Click **+ Add label** again
+   - For value **1**, enter label: **"Survived"**
+
+]
+
+.pull-right[
+
+3. **Apply and Check:**
+   - Click outside the editor or press Enter
+   - Run a frequency table: **Descriptives → Descriptive Statistics**
+   - Move **Survived** to Variables
+   - Check **Frequency tables**
+
+4. **Observe the Difference:**
+   - Your frequency table now shows meaningful labels!
+   - Instead of "0" and "1", you see "Did not survive" and "Survived"
+
+]
+
+]
+
+---
+
+## What Are Descriptive Statistics?
+
+### Summarising Your Data
 
 **Descriptive statistics** help you understand your data by providing:
+
+.pull-left[
 
 **For Continuous Variables (Scale):**
 - **Central tendency:** Where is the "middle"?
@@ -307,18 +405,30 @@ Look at your data and identify which type each variable should be:
 - **Frequencies:** How many in each category?
   - Counts and percentages
 
+]
+
+.pull-right[
+
 **Why Use Them?**
 - Understand your data before analysis
 - Spot errors and outliers
 - Describe your sample in reports
 
+]
+
+
+
 ---
 
-## Slide 11: Measures of Central Tendency
+## Measures of Central Tendency
 
 ### Finding the "Middle" of Your Data
 
 **Three Main Measures:**
+
+.small[
+
+.pull-left[
 
 **1. Mean (Average)**
 - Sum of all values ÷ number of values
@@ -331,6 +441,10 @@ Look at your data and identify which type each variable should be:
 - Robust to outliers
 - Example: Ages = 20, 25, **30**, 35, 100 → Median = 30
 
+]
+
+.pull-right[
+
 **3. Mode**
 - Most frequently occurring value
 - Can be used for any variable type
@@ -341,13 +455,19 @@ Look at your data and identify which type each variable should be:
 - **Skewed data or outliers** → Median
 - **Categorical data** → Mode
 
+]
+
+]
+
 ---
 
-## Slide 12: Measures of Spread
+## Measures of Spread
 
 ### How Variable Is Your Data?
 
 **Common Measures:**
+
+.pull-left[
 
 **1. Standard Deviation (SD)**
 - Average distance from the mean
@@ -359,6 +479,10 @@ Look at your data and identify which type each variable should be:
 - Squared standard deviation
 - Less intuitive but used in calculations
 
+]
+
+.pull-right[
+
 **3. Range**
 - Maximum - Minimum
 - Shows full spread
@@ -368,13 +492,20 @@ Look at your data and identify which type each variable should be:
 - 75th percentile - 25th percentile
 - Robust to outliers
 
+]
+
 ---
 
-## Slide 13: Computing Descriptives in JASP
+## Computing Descriptives in JASP
 
 ### Step-by-Step Guide
 
+.small[
+
+
 **Steps:**
+
+.pull-left[
 
 1. **Open the Analysis Menu:**
    - Click **Descriptives** button (top menu bar)
@@ -383,8 +514,12 @@ Look at your data and identify which type each variable should be:
 2. **Select Variables:**
    - Drag variables from left box to **Variables** box
    - OR click variable and use arrow button
+   
+]
+   
+.pull-right[
 
-3. **Choose Statistics:**
+3\. **Choose Statistics:**
    - Under **Statistics**, check boxes for what you want:
      - ☑ Mean
      - ☑ Median
@@ -392,18 +527,26 @@ Look at your data and identify which type each variable should be:
      - ☑ Minimum / Maximum
      - etc.
 
-4. **View Results:**
+4\. **View Results:**
    - Results appear immediately in right panel
    - Update in real-time as you change options
 
+]
+
+
+]
+
 ---
 
-## Slide 14: 🎯 IN-CLASS EXERCISE 3
+## `r icons::fontawesome("laptop")` HANDS-ON
+
 ### Descriptive Statistics for Age
 
 **Your Task:**
 
 Calculate descriptive statistics for the **Age** variable:
+
+.pull-left[
 
 1. Go to: **Descriptives** → **Descriptive Statistics**
 2. Move **Age** to the **Variables** box
@@ -414,6 +557,11 @@ Calculate descriptive statistics for the **Age** variable:
    - ☑ Minimum
    - ☑ Maximum
    - ☑ Range
+   
+]
+   
+.pull-right[
+
 
 **Questions to Answer:**
 - What is the average age of Titanic passengers?
@@ -421,15 +569,20 @@ Calculate descriptive statistics for the **Age** variable:
 - What is the youngest age? Oldest?
 - Is the mean or median higher? What does this tell us?
 
-**Take 3 minutes**
+]
 
 ---
 
-## Slide 15: 🎯 EXERCISE 3 - DISCUSSION
+## `r icons::fontawesome("laptop")` HANDS-ON - DISCUSSION
 
 ### Interpreting Age Statistics
 
 **Expected Results (approximately):**
+
+.small[
+
+.pull-left[
+
 
 | Statistic | Value | Interpretation |
 |-----------|-------|----------------|
@@ -440,17 +593,27 @@ Calculate descriptive statistics for the **Age** variable:
 | **Max** | ~80 | Oldest was 80 years old |
 | **Range** | ~80 | Ages span 80 years |
 
+]
+
+.pull-right[
+
 **Observations:**
 - Mean > Median → Slight **positive skew** (right tail)
 - Some older passengers pull the mean up
 - Large SD indicates substantial age variation
 - Note: Some ages are missing (Missing = 177)
 
+]
+
+]
+
 ---
 
-## Slide 16: Frequency Tables for Categorical Data
+## Frequency Tables for Categorical Data
 
 ### Counting Categories
+
+.pull-left[
 
 **For Nominal/Ordinal Variables:**
 
@@ -459,21 +622,31 @@ Calculate descriptive statistics for the **Age** variable:
 - Percentage in each category
 - Cumulative percentages (for ordinal)
 
+]
+
+.pull-right[
+
 **How to Create in JASP:**
 
 1. **Descriptives** → **Descriptive Statistics**
 2. Move categorical variable to **Variables** box
-3. Under **Statistics**, check:
-   - ☑ **Frequency tables (nominal and ordinal variables)**
+3. Under **Tables**, check:
+   - ☑ **Frequency tables**
 
 **Result:**
 - Table showing counts and percentages
 - Helps understand distribution of categories
 
+]
+
 ---
 
-## Slide 17: 🎯 IN-CLASS EXERCISE 4
+## `r icons::fontawesome("laptop")` HANDS-ON
 ### Frequency Tables for Survival & Sex
+
+.small[
+
+.pull-left[
 
 **Part A: Survival Status**
 
@@ -490,6 +663,10 @@ Calculate descriptive statistics for the **Age** variable:
    - How many males vs females?
    - What percentage were male?
 
+]
+
+.pull-right[
+
 **Part C: Passenger Class**
 
 5. Create a frequency table for **Pclass**
@@ -497,41 +674,115 @@ Calculate descriptive statistics for the **Age** variable:
    - Which class had the most passengers?
    - What's the distribution across classes?
 
-**Take 5 minutes**
+]
+
+]
+
 
 ---
 
-## Slide 18: 🎯 EXERCISE 4 - EXPECTED RESULTS
+##  `r icons::fontawesome("laptop")` HANDS-ON - EXPECTED RESULTS
 
-### Frequency Table Solutions
+.small[
+
+.pull-left[
 
 **Survived:**
+
 | Value | Count | Percent |
 |-------|-------|---------|
 | 0 (No) | 549 | 61.6% |
 | 1 (Yes) | 342 | 38.4% |
 
 **Sex:**
+
 | Value | Count | Percent |
 |-------|-------|---------|
 | male | 577 | 64.8% |
 | female | 314 | 35.2% |
 
 **Pclass:**
+
 | Value | Count | Percent |
 |-------|-------|---------|
 | 1 (First) | 216 | 24.2% |
 | 2 (Second) | 184 | 20.7% |
 | 3 (Third) | 491 | 55.1% |
 
+]
+
+.pull-right[
+
 **Insights:**
 - Most passengers died (61.6%)
 - More males than females (about 2:1)
 - Most passengers were in 3rd class (55%)
 
+]
+
+]
+
 ---
 
-## Slide 19: Visualizing Distributions
+## `r icons::fontawesome("laptop")` HANDS-ON - Split Frequency Tables
+
+### Understanding Survival Patterns Across Groups
+
+**The Question:** Did survival rates differ by passenger class? By sex?
+
+--
+
+#### **Part A: Survival by Passenger Class (Follow Along)**
+
+.small[
+
+.pull-left[
+
+**Steps:**
+1. Go to: **Descriptives** → **Descriptive Statistics**
+2. Move **Survived** to the **Variables** box
+3. Move **Pclass** to the **Split** box
+4. Under **Statistics**, check: ☑ **Frequency tables**
+
+**What You See:**
+- Separate frequency tables for each class (1st, 2nd, 3rd)
+- Survival counts and percentages within each class
+
+]
+
+]
+
+.pull-right[
+
+**Observe:**
+- Which class had the highest survival rate?
+- Which class had the lowest?
+- What pattern do you notice?
+
+]
+
+---
+
+### `r icons::fontawesome("laptop")` HANDS-ON **Part B: Survival by Sex (Your Turn!)**
+
+**Now You Try:**
+
+Using the same approach:
+1. Keep **Survived** in the **Variables** box
+2. **Replace** Pclass with **Sex** in the **Split** box
+3. Keep **Frequency tables** checked
+
+**Questions to Answer:**
+- What percentage of males survived?
+- What percentage of females survived?
+- Is there a notable difference?
+- What might explain this pattern?
+
+.content-box-yellow[**Discuss:** What story do these two analyses tell us about survival on the Titanic?]
+
+---
+
+## Visualising Distributions
 
 ### Adding Plots to Descriptives
 
@@ -539,7 +790,7 @@ Calculate descriptive statistics for the **Age** variable:
 
 **For Scale Variables:**
 
-Under **Plots** in Descriptive Statistics:
+Under **Basic Plots/Customizable Plots** in Descriptive Statistics:
 - ☑ **Distribution plots** → Histogram
 - ☑ **Display density** → Smooth curve overlay
 - ☑ **Boxplots** → Shows median, quartiles, outliers
