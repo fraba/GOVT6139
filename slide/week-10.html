@@ -4,7 +4,7 @@
     <title>GOVT6139Research design</title>
     <meta charset="utf-8" />
     <meta name="author" content="Francesco Bailo" />
-    <script src="week-10_files/header-attrs-2.25/header-attrs.js"></script>
+    <script src="week-10_files/header-attrs-2.29/header-attrs.js"></script>
     <link href="week-10_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
@@ -29,7 +29,7 @@ class: center, middle, inverse, title-slide
 # GOVT6139</br>Research design
 ]
 .subtitle[
-## Week 10</br>Quantitative Methods: Data Analysis Lab
+## Week 10</br>Quantitative Methods: Data Analysis Lab (with JASP)
 ]
 .author[
 ### Francesco Bailo
@@ -38,7 +38,7 @@ class: center, middle, inverse, title-slide
 ### The University of Sydney
 ]
 .date[
-### Semester 1, 2024 (updated: 2024-05-03)
+### Semester 1, 2024 (updated: 2025-10-16)
 ]
 
 ---
@@ -67,36 +67,37 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 
 **PART I PRELIMINARY CONSIDERATIONS (Weeks 2-5)**
 
-**Week 2**: The Selection of a Research Approach
+**Week 2**: The Selection of a Research Approach + Guest lecture w/t Inessa De Angelis
 
 **Week 3**: Review of the Literature
 
-**Week 4**: The Use of Theory
+**Week 4**: The Use of Theory + Guest lecture w/t Assel Mussagulova
 
-**Week 5**: Writing Strategies and Ethical Considerations + Guest lecture w/t Christopher Pepin-Neff 
+**Week 5**: Writing Strategies and Ethical Considerations
 
 **PART II DESIGNING RESEARCH (Weeks 6-12)**
 
-**Week 6**: The Introduction **no seminar** (public holiday)
+**Week 6**: The Introduction
 
-⏸️ *Mid Semester break* ⏸️
 
 ]
 
 .pull-right[
 
 
-**Week 7**: The Purpose Statement 
+**Week 7**: The Purpose Statement
 
-**Week 8**: Research Questions and Hypotheses + Guest Lecture w/t Charles Robert Butcher 
+**Week 8**: Research Questions and Hypotheses + Guest Lecture w/t Minglu Chen
 
-**Week 9**: Quantitative Methods 
+⏸️ *Mid Semester break* ⏸️
 
-**Week 10**: Quantitative Methods: Data Analysis Lab (Make sure you install R and RStudio) 👈
+**Week 9**: Quantitative Methods  👈
 
-**Week 11**: Qualitative Methods + Guest lecture w/t Peter Chen
+**Week 10**: Quantitative Methods: Data Analysis Lab (w/t JASP)
 
-**Week 12**: Mixed Methods Procedures + Guest lecture w/t Assel Mussagulova
+**Week 11**: Qualitative Methods + Guest lecture w/t Sarah Phillips
+
+**Week 12**: Qualitative Methods: Data Analysis Lab (Make sure you install NVivo)
 
 **Week 13**: Conclusions
 
@@ -108,951 +109,1047 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 
 class: inverse, center, middle
 
-# Quantitative Methods: Data Analysis Lab (with R)
+# Quantitative Methods: Data Analysis Lab (with JASP)
 
 
----
+# Getting Started with JASP
+## Introduction &amp; Descriptive Statistics
 
-## Week 10 Learning Objectives
-
-- Appreciate what R &amp; Rstudio are and what they can do for you
-
-With R and RStudio, learn how to
-
-- Create, save and run an R script file
-
-- Install new packages 
-
-- Load data from Excel and CSV data files
-
-- Visualise your variables
-
-- Run bivariate and multivariate statistical tests
+### A Hands-On Guide with Titanic Dataset
 
 ---
 
-## Practical advise to follow this seminar
+## Slide 3: JASP Interface Overview
 
-- Launch RStudio on your laptop
+### What You See When You Start JASP
 
-- Keep these slides open in on your computer (so you can copy/paste into RStudio) move to any slide if needed
+**Main Components:**
 
-- You don't need to understand or replicate everything during the seminar
+1. **Top Menu Bar**
+   - File, Edit, Data tabs
+   - Analysis buttons (Descriptives, T-Tests, Regression, etc.)
 
-- It's OK to feel a bit overwhelmed
+2. **Left Panel: Data View**
+   - Spreadsheet with rows (cases) and columns (variables)
+   - Each row = one participant/observation
+   - Each column = one variable
 
-&lt;center&gt;&lt;iframe src="https://gifer.com/embed/jU" width=240 height=134.88 frameBorder="0" allowFullScreen&gt;&lt;/iframe&gt;&lt;/center&gt;
+3. **Right Panel: Results**
+   - Analysis output appears here
+   - Updates in real-time
+   - Can copy/export results
 
-.content-box-yellow[ 
-
-### &lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M444.52 3.52L28.74 195.42c-47.97 22.39-31.98 92.75 19.19 92.75h175.91v175.91c0 51.17 70.36 67.17 92.75 19.19l191.9-415.78c15.99-38.39-25.59-79.97-63.97-63.97z"&gt;&lt;/path&gt;&lt;/svg&gt; The goal of this seminar is to gently walk you into what R could do for you. But this is not a crush course into R.
-
-]
-
-
----
-class:  segue-red
-
-# R and RStudio
-
-.center[&lt;img src="https://www.r-project.org/logo/Rlogo.svg" style="width: 25%" /&gt; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg" style="width: 40%" /&gt; ]
-
+4. **Analysis Options Panel** (center-left when analysis selected)
+   - Choose variables
+   - Select options
+   - Customize analysis
 
 ---
 
-## R and RStudio
+## Loading Data into JASP
 
-* &lt;img src="https://www.r-project.org/logo/Rlogo.svg" style="width: 8%" /&gt; is an *objected-oriented* computer language, that is a "formal language used to communicate with a computer"). 
-
-    * It is widely used among social scientists to work with data and statistical applications...
-    
-    * ... but it's a fully fledged computer language (so you can use it to send a rocket to Mars, if you want). 
-
---
-
-* &lt;img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg" style="width: 18%" /&gt; is an application - formally, an integrated development environment (IDE) - designed to facilitate using R. 
-
-    * RStudio comes in two versions: a desktop application and a server application (which you access from a browser)
-    
----
-
-## R and RStudio
-
-
-
-Using a **car metaphor**...
-
-.center[&lt;img src="../img/r-vs-rstudio.jpeg" width = '45%'&gt;&lt;/img&gt;]
+### Two Main Ways to Get Data
 
 .pull-left[
 
-If &lt;img src="https://www.r-project.org/logo/Rlogo.svg" style="width: 16%" /&gt; is the **engine**, 
+**Method 1: Open CSV Files (Most Common)**
+1. Click **File** → **Open**
+2. Select **Computer** → **Browse**
+3. Navigate to your `.csv` file (you can also open Excel files)
+4. Click **Open**
 
+**Method 2: Open .jasp Files**
+- Contains both data AND previous analyses
+- Click **File** → **Open** → Select `.jasp` file
+- (This is also the format for your to save your JASP workspace)
 ]
 
 .pull-right[
-&lt;img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg" style="width: 36%" /&gt; is the **dashboard** (and the steering wheel). 
+
+
+**CSV File Format:**
+- Plain text file
+- Comma-separated values
+- Can be created in Excel, Google Sheets, etc.
+- First row = variable names
+
+**First Dataset:** `titanic.csv`
+
 ]
 
 
----
-
-### Rstudio: Let's creat our first R script
-
-.center[&lt;img src="../img/rstudio-open-new-r-script.gif" width = '80%'&gt;&lt;/img&gt;]
 
 ---
 
-### Rstudio: Let's creat our first R script
+## Understanding Variable Types
 
-An R script is a text document that we can edit and save it for later use. 
+### Three Variable Types in JASP
 
-An R script has a ".R" extension (sometimes lower-cased, ".r"). 
+JASP uses **symbols** in column headers to show variable type:
 
-I contains our R code and it can be run by R.
+| Type | Description | Example |
+|------|-------------|---------|
+| **Scale** | Continuous numerical data | Age, Height, Income |
+| **Ordinal** | Ordered categories | Education level (1=Low, 2=Medium, 3=High) |
+| **Nominal** | Unordered categories | Gender, Color, Country |
 
-When you open a new R script document it will be blank.
+**IMPORTANT:**
+- JASP guesses variable types when loading data
+- **It may guess wrong!**
+- **You must check and fix variable types**
+
+**Why it matters:**
+- Wrong variable type → Wrong analysis options → Wrong results!
 
 ---
 
-## RStudio user interface: How does it look?
+## Changing Variable Types
 
-After launching RStudio, you should see four windows. Each windows has a number of tabs (like in a web browser). The most important tabs are:
+### How to Fix Variable Types
 
 .pull-left[
 
-After launching RStudio, you should see four windows. Each windows has a number of tabs (like in a web browser). The most important tabs are:
+**Two Methods:**
+
+**Method 1: Click the Icon**
+1. Click the symbol in the column header
+2. Select the correct type from dropdown
+3. Done!
+
+**Method 2: Use the Variable Editor**
+1. Double-click the column header
+2. Change measurement level
+3. Can also add labels here
 
 ]
 
 .pull-right[
 
-.center[&lt;img src="../img/rstudio-ui.svg" style="width: 70%" /&gt;]
+**Important Tips:**
+- **IDs should be Nominal** (even if numbers)
+- **Likert scales can be Ordinal or Scale** (your choice)
+- **Binary variables (0/1) should be Nominal**
+- **Age is Scale** (continuous numbers)
 
 ]
 
-1. **Upper-left window**: Your source code appears in the **source editor**.
-
-2. **Lower-left window**:  The **console**. Your R code will execute here. Code output (including errors and messages) is visualised here.
-
-3. **Lower-right window**: Your local *files* and *plots* can be accessed from here. 
-
-2. **Upper-right window**: This is a list of objects in your current **environment**.
 
 
 ---
 
-### RStudio user interface: How does it look?
+## Slide 7: 🎯 IN-CLASS EXERCISE 1
+### Loading the Titanic Dataset
 
+**Your Task:**
 
-.center[&lt;img src = '../img/rstudio-ui.gif' width = '75%'&gt;&lt;/img&gt;]
+1. **Download** the file `titanic.csv` from the course materials
+2. **Open JASP** on your computer
+3. **Load the data:**
+   - File → Open → Computer → Browse
+   - Find `titanic.csv` and open it
 
----
+4. **Examine the data:**
+   - How many rows (passengers)?
+   - How many columns (variables)?
+   - What variables do you see?
 
-class: segue
+**Take 2 minutes**
 
-# Create, save and run an R script file in RStudio
-
----
-
-## RStudio: Running code from the editor
-
-If you want to run some code (and for *run* we mean *write* the code, then ask run to *execute* it) you can add it to a new document in your **source editor**. 
-
-In your **source editor** each tab represents a different document. These are text documents containing R code. 
-
-You can write your code here and you can save your document containing the code for later use (with "File" then "Save") as you would save a Word document. 
-
-Once you have a line of code you can *place your cursor* on the line and then hit "Run". 
-
-#### By hitting "Run"...
-
-1. You ask *RStudio* to copy paste your line into the **console**;
-
-2. You ask *R* to execute your code. R will kindly do it and will print any outcome below your code directly in the **console**. 
-
-3. If your code results in creating a *new object*, the object will now appear in the **environment** window.
+**Expected:** 891 rows, 12 columns
 
 ---
 
-### RStudio: Running code from the editor
+## Slide 8: 🎯 IN-CLASS EXERCISE 2
+### Identifying &amp; Fixing Variable Types
 
+**The Titanic Dataset Variables:**
 
-.center[&lt;img src = '../img/rstudio-running-code.gif' width = '75%'&gt;&lt;/img&gt;]
+Look at your data and identify which type each variable should be:
 
+| Variable | Current Type? | Should Be? |
+|----------|--------------|------------|
+| PassengerId | ? | ? |
+| Survived | ? | ? |
+| Pclass | ? | ? |
+| Name | ? | ? |
+| Sex | ? | ? |
+| Age | ? | ? |
+| Fare | ? | ? |
 
----
+**Your Task:**
+1. Check what type JASP assigned to each variable
+2. Decide what type each should be
+3. Fix any incorrect types by clicking the icon
 
-## RStudio: Create and save a script
-
-#### To create a new script 
-- File -&gt; New File -&gt; R Script (or &lt;img src="../img/rstudio-new-button.png" style="width: 4%" /&gt;).
-
-#### To save a script
-- File -&gt; Save (or &lt;img src="../img/rstudio-save-button.png" style="width: 4%" /&gt;). RStudio will automatically append .r or .R at the end of the filename. This is the extension of R scripts.
-
-.content-box-red[Note: By saving a script you don't save any data!]
-
-#### To run selectet lines 
-- Cursor on line in open script and &lt;img src="../img/rstudio-run-button.png" style="width: 8%" /&gt;; or 
-- Highlight more lines in open script (these will be executed top-down) and &lt;img src="../img/rstudio-run-button.png" style="width: 8%" /&gt;.
-
----
-class: segue 
-
-# Install new packages
+**Take 3 minutes**
 
 ---
 
-## Understand functions and objects
+## Slide 9: 🎯 EXERCISE 2 - SOLUTION
 
+### Correct Variable Types for Titanic
 
-.pull-left[
+| Variable | Should Be | Why? |
+|----------|-----------|------|
+| **PassengerId** | **Nominal** | ID number (not meaningful numerically) |
+| **Survived** | **Nominal** | Binary: 0 = No, 1 = Yes |
+| **Pclass** | **Nominal** or **Ordinal** | Ticket class: 1, 2, 3 (categories) |
+| **Name** | **Nominal** | Text label (categorical) |
+| **Sex** | **Nominal** | male or female (categorical) |
+| **Age** | **Scale** | Continuous number (0-80 years) |
+| **Fare** | **Scale** | Continuous number (price paid) |
 
-.center[&lt;img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Medium_box%2C_open.jpg/567px-Medium_box%2C_open.jpg' width = '30%'&gt;&lt;/img&gt; &lt;img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Brooch%2C_arrow_%28AM_13105-1%29.jpg/640px-Brooch%2C_arrow_%28AM_13105-1%29.jpg' width = '30%'&gt;&lt;/img&gt; &lt;img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Bonsack_machine.png/575px-Bonsack_machine.png' width = '30%'&gt;&lt;/img&gt;]
-
-* A **function** is a machine that can optionally take an *input* (a list of **arguments** in computer science) - and return an *output*.
-
-* With the arrow `&lt;-` we tell R where to store the *output* from the function. 
-
-* In R information is stored in **objects**. The objects in the *environment* are of different **types** as they contain different type of information. They can be data or functions.
-
-]
-
-.pull-right[
-
-.center[&lt;img src = 'https://upload.wikimedia.org/wikipedia/commons/3/3b/Function_machine2.svg' width = '90%'&gt;&lt;/img&gt;]
-
-]
+**Key Decisions:**
+- **Survived**: Could be ordinal, but typically treated as nominal for chi-square tests
+- **Pclass**: Could be ordinal (ordered categories) or nominal—both work!
 
 ---
 
-## R packages
+## Slide 10: What Are Descriptive Statistics?
 
-* R is open source and highly modular. 
+### Summarizing Your Data
 
-* When you first install R, that installation comes with some base functions. But you definitely will need to more functions.
+**Descriptive statistics** help you understand your data by providing:
 
-* Although you can create your functions, it would be great if you could use functions created by someone else... Well, you can!
+**For Continuous Variables (Scale):**
+- **Central tendency:** Where is the "middle"?
+  - Mean, Median, Mode
+- **Spread:** How spread out are the values?
+  - Standard deviation, Variance, Range
+  - Minimum, Maximum, Quartiles
 
-.pull-left[
+**For Categorical Variables (Nominal/Ordinal):**
+- **Frequencies:** How many in each category?
+  - Counts and percentages
 
-* By .content-box-yellow[installing] a **package** and .content-box-yellow[loading] it into your R environment you get access to
-
-  1. Functions created by others;
-  2. Documentation explaining how to use these functions; 
-  3. Sometime, data. 
-
-]
-
-.pull-right[
-
-&lt;center&gt;&lt;img src = '../img/happy-child-with-package.webp' width = '60%'&gt;&lt;/img&gt;&lt;/center&gt;
-]
-
+**Why Use Them?**
+- Understand your data before analysis
+- Spot errors and outliers
+- Describe your sample in reports
 
 ---
 
-### How do you install a new package?
+## Slide 11: Measures of Central Tendency
 
-- In your console, write `install.packages("tidyverse")` and hit return. This will install the package "tidyverse".
-.content-box-yellow[Note: The name of the package will need to be quoted.]
-- Alternatively, you can click on "Packages" in the lower-right window of RStudio and then "Install".
-.content-box-yellow[Note: You only need to install the package once on your computer!]
+### Finding the "Middle" of Your Data
 
-### How to you load a package in R?
-- To load a package, you type `library(tidyverse)` and hit return in your console. 
-.content-box-yellow[Note: The name of the package will NOT need to be quoted this time.]
+**Three Main Measures:**
 
-A common error that you might get is
+**1. Mean (Average)**
+- Sum of all values ÷ number of values
+- Most commonly used
+- Sensitive to outliers
+- Example: Ages = 20, 25, 30, 35, 100 → Mean = 42
 
-&gt; Error in some_function() : could not find function "some_function"
+**2. Median**
+- Middle value when data is sorted
+- Robust to outliers
+- Example: Ages = 20, 25, **30**, 35, 100 → Median = 30
 
-This means that the function was **misspelled** OR that the **package with that function hasn't been loaded yet**.
+**3. Mode**
+- Most frequently occurring value
+- Can be used for any variable type
+- Example: Ages = 20, 25, 25, 25, 30 → Mode = 25
 
----
-
-class: segue
-
-# Load data from CSV and Excel data files
-
----
-
-### Import the data from a CSV using RStudio
-
-Top-left window: "Environment" -&gt; "Import Dataset" -&gt; "Import From Text (base)..." -&gt; Check the import panel -&gt; "Import"
-
-.center[&lt;img src = '../img/rstudio-import.gif' width = '80%'&gt;&lt;/img&gt;]
+**Which to use?**
+- **Normally distributed data** → Mean
+- **Skewed data or outliers** → Median
+- **Categorical data** → Mode
 
 ---
 
-## What happened? 
+## Slide 12: Measures of Spread
 
-When we use the RStudio **import feature** (shown before), we are actually asking RStudio to write this code for us. 
+### How Variable Is Your Data?
 
+**Common Measures:**
 
-```r
-health &lt;- read.csv("../data/health.csv")
-```
+**1. Standard Deviation (SD)**
+- Average distance from the mean
+- Most commonly reported
+- Same units as your data
+- Larger SD = more spread out
 
-After clicking "Import", you will see that code being executed in your console (of course with a different path to your file). 
-.content-box-yellow[Note: You might want to copy/paste that code from the console into your script so that you can quickly replicate it in the future.]
+**2. Variance**
+- Squared standard deviation
+- Less intuitive but used in calculations
 
-This code does two things:
+**3. Range**
+- Maximum - Minimum
+- Shows full spread
 
-1. The **function** `read.csv()` read a comma-separated file (CSV) file, which we specify within the two parenthesis and the two quote signs.
-
-2. The **assignment operator** `&lt;-` take the result from the function and assign it to the object `health`.
-
-RStudio will also run another function immediately after `View()` that view the data just loaded in a new tab. You can always view a dataset in your environment by clicking on it...
-
----
-
-## View the data
-
-.center[&lt;img src = '../img/rstudio-view.gif' width = '65%'&gt;&lt;/img&gt;]
-
+**4. Interquartile Range (IQR)**
+- Range of middle 50% of data
+- 75th percentile - 25th percentile
+- Robust to outliers
 
 ---
 
-class: segue-yellow
+## Slide 13: Computing Descriptives in JASP
 
-# Task: Try know to use the import feature to read in an Excel data file
+### Step-by-Step Guide
 
-(Top-left window: "Environment" -&gt; "Import Dataset" -&gt; "From Excel")
+**Steps:**
 
+1. **Open the Analysis Menu:**
+   - Click **Descriptives** button (top menu bar)
+   - Select **Descriptive Statistics**
 
----
+2. **Select Variables:**
+   - Drag variables from left box to **Variables** box
+   - OR click variable and use arrow button
 
-class: segue-red
+3. **Choose Statistics:**
+   - Under **Statistics**, check boxes for what you want:
+     - ☑ Mean
+     - ☑ Median
+     - ☑ Std. Deviation
+     - ☑ Minimum / Maximum
+     - etc.
 
-# Visualise your variables
-
----
-
-### Let's first read in some new data from the Australian Election Study survey of 2022...
-
-.content-box-yellow[Note: You can download `aes_2022` from Canvas or read it directly from the Internet]
-
-
-```r
-aes_2022 &lt;- read.csv("https://raw.githubusercontent.com/fraba/GOVT6139/main/data/aes_2022.csv")
-```
-
-Then let's have a look at the content with the `View()` function by clicking on the `aes_2022` in our environment
-
-.pull-left[
-
-#### Two variables are continuous (or numeric)
-
-* `age`
-* `left_right_position`
-
-]
-
-
-.pull-right[
-
-#### Four variables are categorical
-
-* `gender`
-* `state`
-* `most_important_issues_2022`
-* `vote_2022`
-
-]
+4. **View Results:**
+   - Results appear immediately in right panel
+   - Update in real-time as you change options
 
 ---
 
-### Let's summarise the content of each continuous variable with `summary()`
+## Slide 14: 🎯 IN-CLASS EXERCISE 3
+### Descriptive Statistics for Age
 
-.content-box-green[
+**Your Task:**
 
-Note: To access a column in a data frame in R, we use the `$` dollar sign, like `name_dataframe$name_column`
+Calculate descriptive statistics for the **Age** variable:
 
-]
+1. Go to: **Descriptives** → **Descriptive Statistics**
+2. Move **Age** to the **Variables** box
+3. Under **Statistics**, select:
+   - ☑ Mean
+   - ☑ Median
+   - ☑ Std. Deviation
+   - ☑ Minimum
+   - ☑ Maximum
+   - ☑ Range
 
+**Questions to Answer:**
+- What is the average age of Titanic passengers?
+- What is the median age?
+- What is the youngest age? Oldest?
+- Is the mean or median higher? What does this tell us?
 
-```r
-summary(aes_2022$age)
-```
-
-```
-##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##   18.00   48.75   63.00   59.43   72.00   96.00
-```
-
-
-```r
-summary(aes_2022$left_right_position)
-```
-
-```
-##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##   0.000   4.000   5.000   5.063   7.000  10.000
-```
+**Take 3 minutes**
 
 ---
 
-### Let's summarise the content of each categorical variable with `table()`
+## Slide 15: 🎯 EXERCISE 3 - DISCUSSION
 
+### Interpreting Age Statistics
 
-```r
-table(aes_2022$gender)
-```
+**Expected Results (approximately):**
 
-```
-## 
-## Female   Male 
-##    822    802
-```
+| Statistic | Value | Interpretation |
+|-----------|-------|----------------|
+| **Mean** | ~29.7 | Average age around 30 years |
+| **Median** | ~28.0 | Middle age is 28 |
+| **SD** | ~14.5 | Typical deviation is ±14-15 years |
+| **Min** | ~0.42 | Youngest passenger was an infant |
+| **Max** | ~80 | Oldest was 80 years old |
+| **Range** | ~80 | Ages span 80 years |
 
-```r
-table(aes_2022$state)
-```
-
-```
-## 
-## Australian Capital Territory              New South Wales 
-##                           46                          525 
-##           Northern Territory                   Queensland 
-##                           13                          310 
-##              South Australia                     Tasmania 
-##                          140                           37 
-##                     Victoria            Western Australia 
-##                          397                          156
-```
+**Observations:**
+- Mean &gt; Median → Slight **positive skew** (right tail)
+- Some older passengers pull the mean up
+- Large SD indicates substantial age variation
+- Note: Some ages are missing (Missing = 177)
 
 ---
 
+## Slide 16: Frequency Tables for Categorical Data
 
-```r
-table(aes_2022$most_important_issues_2022)
-```
+### Counting Categories
 
-```
-## 
-##                   Education              Global warming 
-##                          68                         192 
-##         Health and Medicare                 Immigration 
-##                         190                          40 
-##                Item skipped   Management of the economy 
-##                          11                         339 
-##           National security Refugees and asylum seekers 
-##                          96                          18 
-##                    Taxation          The cost of living 
-##                         136                         394 
-##       The COVID-19 pandemic             The environment 
-##                          43                          97
-```
+**For Nominal/Ordinal Variables:**
 
-```r
-table(aes_2022$vote_2022)
-```
+**Frequency tables show:**
+- Count in each category
+- Percentage in each category
+- Cumulative percentages (for ordinal)
 
-```
-## 
-##   Labor Liberal 
-##     871     753
-```
+**How to Create in JASP:**
 
+1. **Descriptives** → **Descriptive Statistics**
+2. Move categorical variable to **Variables** box
+3. Under **Statistics**, check:
+   - ☑ **Frequency tables (nominal and ordinal variables)**
+
+**Result:**
+- Table showing counts and percentages
+- Helps understand distribution of categories
 
 ---
 
-## Visualise data with ggplot2
+## Slide 17: 🎯 IN-CLASS EXERCISE 4
+### Frequency Tables for Survival &amp; Sex
 
-* **ggplot2** is the most widely used package to visualise data in R. 
-* It is effective for simple as well as very complex visualisation. 
-* If you want to learn only one visualisation package, it should probably be ggplot2. 
+**Part A: Survival Status**
 
+1. Create a frequency table for **Survived**
+2. Answer:
+   - How many passengers survived?
+   - How many died?
+   - What percentage survived?
 
-.center[&lt;img src = 'https://ggplot2.tidyverse.org/logo.png' width = '30%'&gt;&lt;/img&gt;]
+**Part B: Sex Distribution**
 
----
+3. Create a frequency table for **Sex**
+4. Answer:
+   - How many males vs females?
+   - What percentage were male?
 
-## The logics of ggplot2
+**Part C: Passenger Class**
 
-ggplot2 builds your visualisation by *mapping* 
+5. Create a frequency table for **Pclass**
+6. Answer:
+   - Which class had the most passengers?
+   - What's the distribution across classes?
 
-* **variables** 
-
-onto 
-
-* **visual elements** or **aesthetics**: with the function `aes()` (e.g. lines, dots, colours, shapes, areas, labels, ect...) 
-
-
-
-```r
-ggplot(data = &lt;data&gt;, 
-       mapping = aes(&lt;aesthetic&gt; = &lt;variable&gt;,
-                     &lt;aesthetic&gt; = &lt;variable&gt;,
-                     &lt;   ...   &gt; = &lt;   ...  &gt;))
-# Don't run. Credit: Healy, 2018
-```
+**Take 5 minutes**
 
 ---
 
-## The basics of ggplot2
+## Slide 18: 🎯 EXERCISE 4 - EXPECTED RESULTS
 
-This creates a ggplot object, with all the instructions to map *variables* to *aesthetics.* But it won't visualise any data yet...
+### Frequency Table Solutions
 
+**Survived:**
+| Value | Count | Percent |
+|-------|-------|---------|
+| 0 (No) | 549 | 61.6% |
+| 1 (Yes) | 342 | 38.4% |
 
-```r
-library(ggplot2)
+**Sex:**
+| Value | Count | Percent |
+|-------|-------|---------|
+| male | 577 | 64.8% |
+| female | 314 | 35.2% |
 
-ggplot(data = aes_2022, 
-       mapping = aes(x = left_right_position,
-                     y = age))
-```
+**Pclass:**
+| Value | Count | Percent |
+|-------|-------|---------|
+| 1 (First) | 216 | 24.2% |
+| 2 (Second) | 184 | 20.7% |
+| 3 (Third) | 491 | 55.1% |
 
-&lt;img src="week-10_files/figure-html/unnamed-chunk-8-1.svg" width="40%" style="display: block; margin: auto;" /&gt;
-
----
-
-### The basics of ggplot2
-
-After we have specified `data = &lt;data&gt;` and `mapping = aes(...)`, we need to pass at least an additional *layer* specifying the *geometry* we want, so that ggplot2 can visualise the mapping.  
-
-
-```r
-library(ggplot2)
-
-ggplot(data = aes_2022, 
-       mapping = aes(x = left_right_position,
-                     y = age)) +
-  geom_point()
-```
-
-&lt;img src="week-10_files/figure-html/unnamed-chunk-9-1.svg" width="40%" style="display: block; margin: auto;" /&gt;
+**Insights:**
+- Most passengers died (61.6%)
+- More males than females (about 2:1)
+- Most passengers were in 3rd class (55%)
 
 ---
 
-Or let's replace the `geom_point()` layer with `geom_jitter()`, which add a small amount of random variation... 
+## Slide 19: Visualizing Distributions
 
+### Adding Plots to Descriptives
 
-```r
-library(ggplot2)
+**JASP makes it easy to visualize your data!**
 
-ggplot(data = aes_2022, 
-       mapping = aes(x = left_right_position,
-                     y = age)) +
-  geom_jitter()
-```
+**For Scale Variables:**
 
-&lt;img src="week-10_files/figure-html/unnamed-chunk-10-1.svg" width="35%" style="display: block; margin: auto;" /&gt;
+Under **Plots** in Descriptive Statistics:
+- ☑ **Distribution plots** → Histogram
+- ☑ **Display density** → Smooth curve overlay
+- ☑ **Boxplots** → Shows median, quartiles, outliers
 
-Do you see an association between the two variables? (We can test this hypothesis!)
+**Benefits:**
+- **Histograms:** See shape of distribution
+- **Density plots:** Smooth distribution curve
+- **Boxplots:** Quick summary with outliers
 
----
-
-## ggplot2 offers plenty of different geoms, dipending on what kind of variables you want to visualise.
-
-You can refer to this [cheatsheet](https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf) for a full list. 
-
-# Let's only review the most important...
+**For Categorical Variables:**
+- Frequency tables are often sufficient
+- Bar charts can be created elsewhere in JASP
 
 ---
 
-### One variable: continuous x
+## Slide 20: 🎯 IN-CLASS EXERCISE 5
+### Visualizing Age Distribution
 
+**Your Task:**
 
-```r
-p &lt;- ggplot(data = aes_2022, mapping = aes(x = left_right_position))
-```
+Create visualizations for the **Age** variable:
 
+1. Keep Age in the **Variables** box
+2. Under **Plots**, check:
+   - ☑ **Distribution plots**
+   - ☑ **Display density**
+   - ☑ **Boxplots**
 
-```r
-p + geom_density()
-```
+**Observe and Discuss:**
+- What shape is the distribution?
+- Is it symmetric or skewed?
+- Where is the peak?
+- Are there any outliers?
+- What does the boxplot tell you about the median and quartiles?
 
-&lt;img src="week-10_files/figure-html/unnamed-chunk-12-1.svg" width="15%" style="display: block; margin: auto;" /&gt;
-
-
-```r
-p + geom_histogram()
-```
-
-&lt;img src="week-10_files/figure-html/unnamed-chunk-13-1.svg" width="15%" style="display: block; margin: auto;" /&gt;
-
----
-
-### One variable: categorical x
-
-
-```r
-p &lt;- ggplot(data = aes_2022, mapping = aes(x = vote_2022))
-```
-
-
-```r
-p + geom_bar()
-```
-
-&lt;img src="week-10_files/figure-html/unnamed-chunk-15-1.svg" width="25%" style="display: block; margin: auto;" /&gt;
+**Take 3 minutes**
 
 ---
 
-### Two variables: continuous x , continuous y 
+## Slide 21: Reading a Histogram
 
+### Understanding Distribution Plots
 
-```r
-p &lt;- ggplot(data = aes_2022, mapping = aes(x = left_right_position, y = age))
-```
+**What to Look For:**
 
+**Shape:**
+- **Symmetric** (bell-shaped) → Normal distribution
+- **Right skewed** (long right tail) → Most values on left
+- **Left skewed** (long left tail) → Most values on right
+- **Bimodal** (two peaks) → Two subgroups?
 
-```r
-p + geom_point()
-```
+**Center:**
+- Where is the peak (mode)?
+- Is it where you expected?
 
-&lt;img src="week-10_files/figure-html/unnamed-chunk-17-1.svg" width="15%" style="display: block; margin: auto;" /&gt;
+**Spread:**
+- How wide is the distribution?
+- Are values clustered or dispersed?
 
-
-```r
-p + geom_jitter()
-```
-
-&lt;img src="week-10_files/figure-html/unnamed-chunk-18-1.svg" width="15%" style="display: block; margin: auto;" /&gt;
-
----
-
-### Two variables: categorical x, continuous y 
-
-
-```r
-p &lt;- ggplot(data = aes_2022, mapping = aes(x = gender, y = left_right_position))
-```
-
-
-```r
-p + geom_boxplot()
-```
-
-&lt;img src="week-10_files/figure-html/unnamed-chunk-20-1.svg" width="15%" style="display: block; margin: auto;" /&gt;
-
-
-```r
-p + geom_col() # It sums values for each categories
-```
-
-&lt;img src="week-10_files/figure-html/unnamed-chunk-21-1.svg" width="15%" style="display: block; margin: auto;" /&gt;
+**Age Distribution:**
+- Slightly right skewed (mean &gt; median)
+- Peak around 20-30 years
+- Reasonable spread across ages
 
 ---
 
-### Two variables: categorical x, categorical y 
+## Slide 22: Reading a Boxplot
 
+### Understanding Box-and-Whisker Plots
 
-```r
-p &lt;- ggplot(data = aes_2022, mapping = aes(x = gender, y = vote_2022))
+**Anatomy of a Boxplot:**
+
+```
+    ●  ← Outlier (beyond 1.5 × IQR)
+    |
+    ┬  ← Maximum (within 1.5 × IQR)
+    |
+    ┼──┐
+    │  │
+    │──│ ← Median (thick line)
+    │  │
+    └──┼
+    |
+    ┴  ← Minimum (within 1.5 × IQR)
+    |
+    ●  ← Outlier
 ```
 
+**Box:** Contains middle 50% of data (25th to 75th percentile)
+**Whiskers:** Extend to most extreme non-outlier values
+**Dots:** Outliers beyond 1.5 × IQR
 
-```r
-p + geom_count() # It sums values for each categories
-```
-
-&lt;img src="week-10_files/figure-html/unnamed-chunk-23-1.svg" width="25%" style="display: block; margin: auto;" /&gt;
-
-Do we see any association? We can test this hypothesis too!
----
-
-### Continuous function (e.g., date/year and some value)
-
-Let's bring in some new data first...
-
-
-```r
-midterms &lt;- read.csv("https://raw.githubusercontent.com/fraba/GOVT6139/main/data/midterms.csv")
-```
-
-
-
-```r
-p &lt;- ggplot(data = midterms, mapping = aes(x = year, y = seat.change))
-```
-
-
-```r
-p + geom_line()
-```
-
-&lt;img src="week-10_files/figure-html/unnamed-chunk-26-1.svg" width="25%" style="display: block; margin: auto;" /&gt;
+**Quick Assessment:**
+- Symmetric box → Symmetric distribution
+- Long upper whisker → Right skew
+- Dots → Potential outliers to investigate
 
 ---
 
-class: segue-red
+## Slide 23: Grouped Descriptive Statistics
 
-# Run bivariate and multivariate statistical tests
+### Comparing Groups
 
-### Bivariate analysis
+**What if we want to compare subgroups?**
 
-#### 1. Tabular analysis (two categorical variables)
+**Example:** Age statistics separately for males and females
 
-#### 2. Difference of means (one categorical and one continuous variable)
+**How to Do It:**
 
-#### 3. Correlation coefficient (two continuous variables)
+1. **Descriptives** → **Descriptive Statistics**
+2. Move continuous variable (Age) to **Variables**
+3. Move grouping variable (Sex) to **Split** box
+4. Select desired statistics
 
-### Multivariate analysis
+**Result:**
+- Separate statistics for each group
+- Easy comparison across groups
+- Can also split plots!
 
-#### 4\. Multivariate analysis (categorical and continuous variables predicting one continuous variables)
-
----
-
-#### 1\. Tabular analysis (two categorical variables)
-
-**Hypothesis**: In the 2022 federal election, women were more likely than men to vote for the Labor party.  
-
-
-```r
-ggplot(data = aes_2022, mapping = aes(x = gender, y = vote_2022)) + geom_count()
-```
-
-&lt;img src="week-10_files/figure-html/unnamed-chunk-27-1.svg" width="15%" style="display: block; margin: auto;" /&gt;
-
-
-```r
-chisq.test(x = aes_2022$gender, y = aes_2022$vote_2022)
-```
-
-```
-## 
-## 	Pearson's Chi-squared test with Yates' continuity correction
-## 
-## data:  aes_2022$gender and aes_2022$vote_2022
-## X-squared = 20.631, df = 1, p-value = 0.000005568
-```
-
-Figure and statistical test support this hypothesis. 
+**This is useful for:**
+- Comparing survivors vs non-survivors
+- Comparing passenger classes
+- Any categorical breakdown
 
 ---
 
-## Introducing formulas in R 
+## Slide 24: 🎯 IN-CLASS EXERCISE 6
+### Comparing Age by Survival Status
 
-* In R, formulas are expressions that define the relationship between a dependent variable and one or more independent variables. 
+**Your Task:**
 
-* Formulas are often used in modelling functions like linear regression or other statistical tests. 
+Compare age distributions for survivors vs non-survivors:
 
-Here is how formulas are structured and used in R:
+1. **Descriptives** → **Descriptive Statistics**
+2. Move **Age** to **Variables**
+3. Move **Survived** to **Split**
+4. Check: Mean, Median, SD, Min, Max
+5. Under **Plots**, check **Boxplots**
 
+**Questions:**
+- Were survivors younger or older on average?
+- Is there a difference in median age?
+- Do the boxplots show different patterns?
+- What does this suggest?
 
-```r
-dependent_variable ~ independent_variable(s)
-```
-
-Here, the `~` (tilde) operator separates the dependent variable (left side) from the independent variables (right side). You find ~ on the top-left of your keyboard.
-
-* `y ~ x` This formula states that `y` (dependent variable) is modelled as a function of `x` (independent variable).
-
-* `y ~ x1 + x2` Here, `y` is modelled as a function of two independent variables, `x1` and `x2`.
-
----
-
-#### 2\. Difference of means (one categorical and one continuous variable)
-
-**Hypothesis**: In the 2022 federal election, women were on average more left-leaning than men.
-
-
-```r
-ggplot(data = aes_2022, mapping = aes(x = gender, y = left_right_position)) + geom_boxplot()
-```
-
-&lt;img src="week-10_files/figure-html/unnamed-chunk-30-1.svg" width="15%" style="display: block; margin: auto;" /&gt;
-
-
-
-```r
-t.test(formula =  left_right_position ~ gender, data = aes_2022)
-```
-
-```
-## 
-## 	Welch Two Sample t-test
-## 
-## data:  left_right_position by gender
-## t = -6.318, df = 1621.5, p-value = 0.0000000003414
-## alternative hypothesis: true difference in means between group Female and group Male is not equal to 0
-## 95 percent confidence interval:
-##  -0.9285198 -0.4885822
-## sample estimates:
-## mean in group Female   mean in group Male 
-##             4.712895             5.421446
-```
-
-
+**Take 4 minutes**
 
 ---
 
-#### 3\. Correlation coefficient (between two continuous variables)
+## Slide 25: 🎯 EXERCISE 6 - DISCUSSION
 
-**Hypothesis**: In the 2022 federal election, younger voters were on average more left-leaning than older voters.
+### Age by Survival Status
 
+**Expected Pattern:**
 
-```r
-cor.test(x = aes_2022$left_right_position, y = aes_2022$age)
-```
+| Survived | Mean Age | Median Age | Observations |
+|----------|----------|------------|--------------|
+| 0 (Died) | ~30.6 | 28 | Slightly older |
+| 1 (Survived) | ~28.3 | 28 | Slightly younger |
 
-```
-## 
-## 	Pearson's product-moment correlation
-## 
-## data:  aes_2022$left_right_position and aes_2022$age
-## t = 4.643, df = 1622, p-value = 0.000003711
-## alternative hypothesis: true correlation is not equal to 0
-## 95 percent confidence interval:
-##  0.06625317 0.16226465
-## sample estimates:
-##       cor 
-## 0.1145263
-```
+**Insights:**
+- Small difference in mean age
+- Similar median ages
+- Children may have had better survival rates
+- But age alone doesn't tell the whole story!
 
-Yes, age is **positively** (cor = 0.11 `\(\rightarrow\)` cor &gt; 0) and **significantly** ( `\(p\)`-value = 0.0000037 `\(\rightarrow\)` `\(p\)`-value &lt; 0) associated with a right-leaning value (i.e., a higher value on the `left_right_position` scale form left (0) to right (10)). 
+**Next Steps:**
+- These are just descriptive statistics
+- To test if differences are **significant**, we need:
+  - Chi-square test (for categorical comparisons)
+  - t-test (for mean comparisons)
+  - More complex analyses
 
----
-
-#### 4\. Multivariate analysis (categorical and continuous variables predicting one continuous variables)
-
-Multivariate analysis is used when you want to assess the relationship between more than two variables, simultaneously. 
-
-More specifically, we might want to estimate how a number of independent variables can explain a single dependent variable. 
-
-This would a formula for a linear regression with one continuous dependent variable `\(Y\)` and a number of independent variables `\(X_1\)`, `\(X_2\)`, `\(X_3\)`, etc.
-
-`$$Y_i = \underbrace{\alpha}_{intercept} + \underbrace{\beta_1}_{coefficient\\first\:IV} \ \  \underbrace{X_{i1}}_{values\\first\:IV} \ + \ \underbrace{\beta_2}_{coefficient\\second\:IV} \ \  \underbrace{X_{i2}}_{values\\second\:IV} + ... + \underbrace{\epsilon_i}_{error\:term}$$`
-
-For example, let's assume we want to explain political position in the Australian electorate using age and gender and state of residence - *simultaneously*. In R, we can specify the formula like this
-
-
-```r
-left_right_position ~ age + gender + state
-```
+**This is where hypothesis testing comes in!**
 
 ---
 
-#### 4\. Multivariate analysis (categorical and continuous variables predicting one continuous variables)
+## Slide 26: Dealing with Missing Data
 
-And this is how we would run the linar regression on our `aes_2022` data with the `lm()` function:
+### What About Missing Values?
 
+**JASP Handles Missing Data Automatically:**
 
-```r
-lm_results &lt;- lm(formula = left_right_position ~ age + gender + state, data = aes_2022)
-```
+**In the Data:**
+- Missing values shown as blank cells
+- Or sometimes as "." or "NA"
 
-Let's now summarise the results with `summary()` to get some of the key statistics our regression. 
+**In Descriptives:**
+- "Missing" count shows how many are missing
+- "Valid" count shows how many have data
+- Statistics calculated only on valid cases
 
+**Age Variable:**
+- 177 passengers have missing ages
+- Valid N = 714
+- About 20% missing
 
-```r
-summary(lm_results)
-```
-
----
-
-
-```
-## 
-## Call:
-## lm(formula = left_right_position ~ age + gender + state, data = aes_2022)
-## 
-## Residuals:
-##     Min      1Q  Median      3Q     Max 
-## -6.1627 -1.3458 -0.0291  1.4553  5.7362 
-## 
-## Coefficients:
-##                         Estimate Std. Error t value           Pr(&gt;|t|)    
-## (Intercept)             2.925417   0.379062   7.718 0.0000000000000206 ***
-## age                     0.011688   0.003412   3.425           0.000629 ***
-## genderMale              0.636005   0.112223   5.667 0.0000000171483603 ***
-## stateNew South Wales    0.917659   0.343478   2.672           0.007623 ** 
-## stateNorthern Territory 0.769762   0.701941   1.097           0.272971    
-## stateQueensland         1.549358   0.353340   4.385 0.0000123544340214 ***
-## stateSouth Australia    1.232059   0.379863   3.243           0.001205 ** 
-## stateTasmania           1.716507   0.494222   3.473           0.000528 ***
-## stateVictoria           1.006862   0.347979   2.893           0.003861 ** 
-## stateWestern Australia  1.443264   0.374692   3.852           0.000122 ***
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-## 
-## Residual standard error: 2.232 on 1614 degrees of freedom
-## Multiple R-squared:  0.05314,	Adjusted R-squared:  0.04786 
-## F-statistic: 10.06 on 9 and 1614 DF,  p-value: 0.000000000000003539
-```
+**Best Practices:**
+- Always report missing data
+- Check if missing data is random or systematic
+- Consider implications for your analysis
 
 ---
 
-### Reading through the summary statistics of a linear regression ... 
+## Slide 27: 🎯 IN-CLASS EXERCISE 7
+### Complete Descriptive Analysis
 
-In general, when it comes to association between variables there are two aspects we want to focus on:
+**Your Challenge:**
 
-1. Size and direction of the association;
+Perform a complete descriptive analysis of **Fare**:
 
-2. Statistical significance of the association.
+1. Calculate descriptive statistics:
+   - Central tendency (Mean, Median)
+   - Spread (SD, Range, IQR)
+   - Check for missing values
 
-For (1) we check the "Estimate" for each variable while for (2) we check the `\(p\)`-value. 
+2. Create visualizations:
+   - Histogram with density
+   - Boxplot
 
-.center[&lt;img src = "../img/R-lm-summary-01.png" width = "40%"&gt;&lt;/img&gt;]
+3. Compare across passenger classes:
+   - Split by **Pclass**
+   - Compare mean fares
 
----
+4. Interpret:
+   - What is the typical fare?
+   - How variable are the fares?
+   - Do fares differ by class?
 
-### Reading through the summary statistics of a linear regression: Continous independent variable
-
-In the case of `age`, we can say that
-
-1. There is a positive association between age and a more right-leaning position: 
-
-  * Specifically, keeping the other two independent variables fixed, for each additional year voters are expected to move on the 0-10 political position scale by 0.01 towards the right-wing (is this a big effect?).  
-
-2\. `age` is significantly associated with political position as `\(p\)`-value is really small. 
-
-.center[&lt;img src = "../img/R-lm-summary-02.png" width = "40%"&gt;&lt;/img&gt;]
-
----
-
-### Reading through the summary statistics of a linear regression: Categorical independent variable with two values
-
-`gender` is a categorical variable that can takes two values "Female" or "Male". Here, R shows the estimate for `gender=Male`. So we interpret the results so that
-
-1. An average male voter is expected to be on the 0-10 political position scale 0.636 on the right than an average female voter.   
-
-2. The association between `gender` and political position is also statistically significant.
-
-.center[&lt;img src = "../img/R-lm-summary-03.png" width = "40%"&gt;&lt;/img&gt;]
+**Take 5-7 minutes**
 
 ---
 
-### Reading through the summary statistics of a linear regression: Categorical independent variable with more than two values
+## Slide 28: 🎯 EXERCISE 7 - DISCUSSION
 
+### Fare Analysis Insights
 
-`state` is a categorical value that can takes these values: Australian Capital Territory, New South Wales, Northern Territory, Queensland, South Australia, Tasmania, Victoria, Western Australia. If for `gender`, the baseline for the estimates was `gender=Female` now is `state=Australian Capital Territory`. So each estimate refer to the variation for an average voter from the mentioned state relatively to an average voter from the Australian Capital Territory. 
+**Expected Findings:**
 
-We see that all estimates are significant (with the exception of the variation ACT-&gt;NT) and all estimates indicate that ACT is the most left-leading among state and territories.  
+**Overall Statistics:**
+- Mean fare: ~£32 (but highly skewed!)
+- Median fare: ~£14 (more representative)
+- Huge SD and range (some very expensive tickets)
+- Several high-value outliers
 
+**By Passenger Class:**
+| Class | Mean Fare | Median Fare |
+|-------|-----------|-------------|
+| 1st | ~£84 | ~£60 |
+| 2nd | ~£21 | ~£14 |
+| 3rd | ~£13 | ~£8 |
 
-.center[&lt;img src = "../img/R-lm-summary-04.png" width = "40%"&gt;&lt;/img&gt;]
+**Observations:**
+- Fare is heavily right-skewed
+- Median better than mean (outliers present)
+- Clear class differences in ticket prices
+- 1st class passengers paid 6x more on average!
 
 ---
-class: segue-red
 
-# Group Task
+## Slide 29: Exporting Your Results
 
-.content-box-yellow[&lt;large&gt;[shorturl.at/gnxFT](https://shorturl.at/gnxFT)&lt;/large&gt;]
+### Saving Your Work
+
+**Three Main Options:**
+
+**1. Copy Individual Tables/Plots:**
+- Right-click on any result
+- Select **Copy** or **Copy Special**
+- Paste into Word, PowerPoint, etc.
+- Tables are APA-formatted!
+
+**2. Export Data:**
+- **File** → **Export Data**
+- Save as CSV (can open in Excel)
+- Useful if you've computed new variables
+
+**3. Save JASP File:**
+- **File** → **Save As**
+- Saves data AND all analyses
+- Can reopen later and continue work
+- Share with collaborators
+
+**Pro Tip:** Save as .jasp file regularly to preserve your work!
 
 ---
-class: segue
 
-# Check-in
+## Slide 30: Best Practices for Descriptive Statistics
+
+### Tips for Success
+
+✅ **DO:**
+- Always check variable types first!
+- Calculate descriptives before formal tests
+- Visualize your data (plots reveal patterns)
+- Report both central tendency and spread
+- Note missing data
+- Use median for skewed distributions
+- Compare groups when relevant
+
+❌ **DON'T:**
+- Trust JASP's automatic variable type guessing
+- Report only mean without SD
+- Ignore outliers without investigation
+- Forget to check for missing data
+- Over-interpret small differences
+- Use mean for highly skewed data
+
+**Remember:** Descriptive statistics are the foundation of all analyses!
 
 ---
+
+## Slide 31: Summary - What We Learned
+
+### Key Takeaways
+
+**Getting Started with JASP:**
+✓ Installing and launching JASP
+✓ Loading CSV files
+✓ Understanding the interface
+
+**Variable Types:**
+✓ Scale (continuous), Ordinal (ordered), Nominal (categorical)
+✓ How to check and change types
+✓ Why variable types matter
+
+**Descriptive Statistics:**
+✓ Measures of central tendency (mean, median, mode)
+✓ Measures of spread (SD, range, IQR)
+✓ Frequency tables for categorical data
+✓ Visualizations (histograms, boxplots)
+✓ Split analysis by groups
+
+**Titanic Dataset:**
+✓ Practiced with real data
+✓ Explored passenger characteristics
+✓ Compared groups (survivors, classes, sex)
+
+---
+
+## Slide 32: Looking Ahead
+
+### Next Steps in Your JASP Journey
+
+**You now have the foundation to:**
+
+1. **Explore your own data**
+   - Load your datasets
+   - Calculate descriptive statistics
+   - Create informative visualizations
+
+2. **Move to inferential statistics:**
+   - Hypothesis testing (is there a real difference?)
+   - Chi-square tests (categorical relationships)
+   - t-tests (comparing means)
+   - Correlation and regression (relationships)
+
+3. **Build more complex analyses:**
+   - ANOVA (comparing multiple groups)
+   - Multiple regression (many predictors)
+   - Advanced visualizations
+
+**Practice is key!** The more you use JASP, the more comfortable you'll become.
+
+---
+
+## Slide 33: Quick Reference Card
+
+### Essential JASP Commands
+
+| Task | Location | Key Options |
+|------|----------|-------------|
+| **Load data** | File → Open | Choose .csv or .jasp |
+| **Change variable type** | Click column icon | Scale / Ordinal / Nominal |
+| **Descriptive stats** | Descriptives → Descriptive Statistics | Check desired statistics |
+| **Frequency tables** | Same location | Check "Frequency tables" |
+| **Histograms** | Under Plots | Check "Distribution plots" |
+| **Boxplots** | Under Plots | Check "Boxplots" |
+| **Group comparisons** | Move grouping var to Split | Separate stats per group |
+| **Copy results** | Right-click result | Copy or Copy Special |
+| **Save work** | File → Save As | Save as .jasp file |
+
+**Bookmark this page for quick access!**
+
+---
+
+## Slide 34: Practice Problems
+
+### Take Home Exercises
+
+**Challenge Yourself:**
+
+1. **Explore Fare Distribution**
+   - Calculate coefficient of variation (SD/Mean × 100%)
+   - Compare fare distributions across all three classes with boxplots
+   - Identify outliers and investigate them in the data
+
+2. **Survival Analysis**
+   - Create frequency tables for Survived × Sex (cross-tabulation)
+   - Create frequency tables for Survived × Pclass
+   - Calculate survival rates for each group
+
+3. **Age Groups**
+   - Create age categories (Child &lt;18, Adult 18-60, Senior &gt;60)
+   - Compare survival rates across age groups
+   - Compare fare by age groups
+
+**Hint:** Some of these require skills we'll learn in later sessions!
+
+---
+
+## Slide 35: Common Mistakes &amp; Troubleshooting
+
+### When Things Go Wrong
+
+**Problem:** Variable won't show up in analysis options
+- **Solution:** Check variable type (might need to be Scale/Nominal)
+
+**Problem:** "Not enough observations" error
+- **Solution:** Too much missing data or wrong filter applied
+
+**Problem:** Results look strange or unexpected
+- **Solution:** Check variable types, check for outliers, verify data loaded correctly
+
+**Problem:** Can't find a specific analysis option
+- **Solution:** Variable might be wrong type for that analysis
+
+**Problem:** Plots won't display
+- **Solution:** Make sure variable is correct type for that plot type
+
+**Getting Help:**
+- JASP documentation: https://jasp-stats.org/
+- JASP forums and YouTube tutorials
+- Ask your instructor!
+
+---
+
+## Slide 36: Additional Resources
+
+### Keep Learning!
+
+**Official Resources:**
+- **JASP Website:** https://jasp-stats.org/
+- **JASP Documentation:** Comprehensive guides and tutorials
+- **YouTube:** Search "JASP statistics tutorial"
+- **JASP Forum:** Community support
+
+**Textbook:**
+- *Learning Statistics with JASP* (the source for today's material)
+- Free online: https://learnstatswithjasp.com/
+
+**Practice Datasets:**
+- JASP includes built-in example datasets
+- Many free datasets available online
+- UCI Machine Learning Repository
+- Kaggle datasets
+
+**Stay Curious:**
+- Explore JASP's advanced features
+- Try different types of plots
+- Experiment with your own data
+
+---
+
+## Slide 37: Questions &amp; Discussion
+
+### Let's Review
+
+**Key Questions to Consider:**
+
+1. What surprised you about the Titanic data?
+2. Which descriptive statistic do you find most useful?
+3. When would you use median instead of mean?
+4. How do visualizations help you understand data?
+5. What analyses would you like to run on this dataset next?
+
+**Open Discussion:**
+- Share your observations from the exercises
+- Discuss any challenges you encountered
+- Ask questions about anything unclear
+
+**Remember:** There are no silly questions in statistics!
+
+---
+
+## Slide 38: Class Activity - Group Work
+
+### Collaborative Analysis Challenge
+
+**Form groups of 3-4 students**
+
+**Your Mission:**
+Prepare a brief descriptive summary of the Titanic dataset to present to the class. Include:
+
+1. **Sample Description:**
+   - Total passengers
+   - Key demographic information (age, sex distribution)
+   - Passenger class breakdown
+
+2. **Survival Overview:**
+   - Overall survival rate
+   - One interesting pattern you discovered
+
+3. **One Visualization:**
+   - Create one compelling plot
+   - Be ready to explain what it shows
+
+**Time:** 10 minutes to analyze, 2 minutes to present
+
+**This simulates a real research scenario!**
+
+---
+
+## Slide 39: Wrap-Up &amp; Next Session Preview
+
+### Today's Accomplishments
+
+**You Successfully Learned:**
+✓ How to install and navigate JASP
+✓ How to load and inspect data
+✓ How to identify and change variable types
+✓ How to calculate descriptive statistics
+✓ How to create informative visualizations
+✓ How to compare groups using splits
+
+**Next Session Preview:**
+- Hypothesis testing concepts
+- Chi-square tests (categorical data)
+- Comparing survival rates statistically
+- Testing for significant relationships
+- Introduction to t-tests
+
+**Homework:** Practice with the Titanic dataset and bring questions!
+
+---
+
+## Slide 40: Thank You!
+
+### Stay Curious, Keep Analyzing!
+
+**Contact Information:**
+[Your email/office hours]
+
+**Course Materials:**
+[Link to datasets and resources]
+
+**Remember:**
+- **JASP makes statistics accessible**
+- **Start with descriptive statistics**
+- **Visualize before you analyze**
+- **Practice regularly**
+
+### Questions? Feedback? Let's discuss!
+
+**Good luck with your statistical journey!** 📊✨
+
+---
+
+# Appendix: Titanic Variable Codebook
+
+## Complete Variable Descriptions
+
+| Variable | Type | Description | Values |
+|----------|------|-------------|--------|
+| PassengerId | Nominal | Unique ID for each passenger | 1-891 |
+| Survived | Nominal | Survival status | 0 = No, 1 = Yes |
+| Pclass | Nominal/Ordinal | Ticket class (socioeconomic status) | 1 = 1st, 2 = 2nd, 3 = 3rd |
+| Name | Nominal | Passenger name | Text |
+| Sex | Nominal | Gender | male, female |
+| Age | Scale | Age in years | 0.42-80 years |
+| SibSp | Scale/Nominal | # of siblings/spouses aboard | 0-8 |
+| Parch | Scale/Nominal | # of parents/children aboard | 0-6 |
+| Ticket | Nominal | Ticket number | Various |
+| Fare | Scale | Passenger fare in pounds | 0-512 |
+| Cabin | Nominal | Cabin number | Various (many missing) |
+| Embarked | Nominal | Port of embarkation | C=Cherbourg, Q=Queenstown, S=Southampton |
+
+---
+
+# End of Slides
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script src="assets/remark-zoom.js"></script>
 <script src="https://platform.twitter.com/widgets.js"></script>
 <script>var slideshow = remark.create({
-"highlightStyle": "github",
-"highlightLines": true,
-"countIncrementalSlides": false,
-"ratio": "16:9",
-"navigation": {
-"scroll": false
-}
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false,
+  "ratio": "16:9",
+  "navigation": {
+    "scroll": false
+  }
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
