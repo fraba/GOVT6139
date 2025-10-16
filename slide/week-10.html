@@ -111,11 +111,11 @@ class: inverse, center, middle
 
 # Quantitative Methods: Data Analysis Lab (with JASP)
 
+---
 
-# Getting Started with JASP
-## Introduction &amp; Descriptive Statistics
+class: segue
 
-### A Hands-On Guide with Titanic Dataset
+# Getting started with JASP
 
 ---
 
@@ -151,8 +151,6 @@ class: inverse, center, middle
    - Customize analysis
 
 ]
-
-
 
 ---
 
@@ -398,6 +396,12 @@ Look at your data and identify which type each variable should be:
 ]
 
 ]
+
+---
+
+class: segue
+
+# Descriptive statistics
 
 ---
 
@@ -797,11 +801,17 @@ Using the same approach:
 
 ---
 
+class: segue
+
+# Drawing plots with JASP
+
+---
+
 ## Visualising Distributions
 
 ### Adding Plots to Descriptives
 
-**JASP makes it easy to visualize your data!**
+.pull-left[
 
 **For Scale Variables:**
 
@@ -815,24 +825,39 @@ Under **Basic Plots/Customizable Plots** in Descriptive Statistics:
 - **Density plots:** Smooth distribution curve
 - **Boxplots:** Quick summary with outliers
 
+
+]
+
+.pull-right[
+
 **For Categorical Variables:**
 - Frequency tables are often sufficient
 - Bar charts can be created elsewhere in JASP
 
+]
+
+
+
 ---
 
-## Slide 20: 🎯 IN-CLASS EXERCISE 5
-### Visualizing Age Distribution
+## &lt;svg viewBox="0 0 640 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"&gt;&lt;/path&gt;&lt;/svg&gt; HANDS-ON 
+### Visualising Age Distribution
 
 **Your Task:**
 
 Create visualizations for the **Age** variable:
+
+.pull-left[
 
 1. Keep Age in the **Variables** box
 2. Under **Plots**, check:
    - ☑ **Distribution plots**
    - ☑ **Display density**
    - ☑ **Boxplots**
+
+]
+
+.pull-right[
 
 **Observe and Discuss:**
 - What shape is the distribution?
@@ -841,40 +866,15 @@ Create visualizations for the **Age** variable:
 - Are there any outliers?
 - What does the boxplot tell you about the median and quartiles?
 
-**Take 3 minutes**
+]
 
 ---
 
-## Slide 21: Reading a Histogram
-
-### Understanding Distribution Plots
-
-**What to Look For:**
-
-**Shape:**
-- **Symmetric** (bell-shaped) → Normal distribution
-- **Right skewed** (long right tail) → Most values on left
-- **Left skewed** (long left tail) → Most values on right
-- **Bimodal** (two peaks) → Two subgroups?
-
-**Center:**
-- Where is the peak (mode)?
-- Is it where you expected?
-
-**Spread:**
-- How wide is the distribution?
-- Are values clustered or dispersed?
-
-**Age Distribution:**
-- Slightly right skewed (mean &gt; median)
-- Peak around 20-30 years
-- Reasonable spread across ages
-
----
-
-## Slide 22: Reading a Boxplot
+## Reading a Boxplot
 
 ### Understanding Box-and-Whisker Plots
+
+.pull-left[
 
 **Anatomy of a Boxplot:**
 
@@ -894,6 +894,10 @@ Create visualizations for the **Age** variable:
     ●  ← Outlier
 ```
 
+]
+
+.pull-right[
+
 **Box:** Contains middle 50% of data (25th to 75th percentile)
 **Whiskers:** Extend to most extreme non-outlier values
 **Dots:** Outliers beyond 1.5 × IQR
@@ -903,9 +907,13 @@ Create visualizations for the **Age** variable:
 - Long upper whisker → Right skew
 - Dots → Potential outliers to investigate
 
+
+]
+
+
 ---
 
-## Slide 23: Grouped Descriptive Statistics
+## Grouped Descriptive Statistics
 
 ### Comparing Groups
 
@@ -913,11 +921,16 @@ Create visualizations for the **Age** variable:
 
 **Example:** Age statistics separately for males and females
 
+
+.pull-left[
+
+.small[
+
 **How to Do It:**
 
 1. **Descriptives** → **Descriptive Statistics**
 2. Move continuous variable (Age) to **Variables**
-3. Move grouping variable (Sex) to **Split** box
+3. Move grouping variable (Pclass) to **Split** box
 4. Select desired statistics
 
 **Result:**
@@ -925,19 +938,31 @@ Create visualizations for the **Age** variable:
 - Easy comparison across groups
 - Can also split plots!
 
+]
+
+]
+
+.pull-right[
+
 **This is useful for:**
 - Comparing survivors vs non-survivors
 - Comparing passenger classes
 - Any categorical breakdown
 
+]
+
+
+
 ---
 
-## Slide 24: 🎯 IN-CLASS EXERCISE 6
+## &lt;svg viewBox="0 0 640 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"&gt;&lt;/path&gt;&lt;/svg&gt; HANDS-ON 
 ### Comparing Age by Survival Status
 
 **Your Task:**
 
 Compare age distributions for survivors vs non-survivors:
+
+.pull-left[
 
 1. **Descriptives** → **Descriptive Statistics**
 2. Move **Age** to **Variables**
@@ -945,17 +970,21 @@ Compare age distributions for survivors vs non-survivors:
 4. Check: Mean, Median, SD, Min, Max
 5. Under **Plots**, check **Boxplots**
 
+]
+
+.pull-right[
+
 **Questions:**
 - Were survivors younger or older on average?
 - Is there a difference in median age?
 - Do the boxplots show different patterns?
 - What does this suggest?
 
-**Take 4 minutes**
+]
 
 ---
 
-## Slide 25: 🎯 EXERCISE 6 - DISCUSSION
+## &lt;svg viewBox="0 0 640 512" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"&gt;&lt;/path&gt;&lt;/svg&gt; HANDS-ON - DISCUSSION
 
 ### Age by Survival Status
 
