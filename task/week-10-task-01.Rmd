@@ -2,28 +2,26 @@
 title: "Week 10 - Task 01"
 author: "Francesco Bailo"
 date: "2024-05-02"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<font size="6">To reach this page visit [shorturl.at/gnxFT](https://shorturl.at/gnxFT) or from Canvas.</font>
 
-```{r}
-aes22_pol_part <- 
-  read.csv("https://raw.githubusercontent.com/fraba/GOVT6139/main/data/aes22_pol_part.csv")
-```
+- Download and open with JASP *aes22_pol_part.csv*
 
 
-## Task: With R provide visual and statistical support to these two hypotheses
+## Task: With JASP provide visual and statistical support to these two hypotheses
 
 1. Aboriginal or Torres Strait Islander are less likely to be contacted by parties to persuade them to vote for them.
 
 2. Aboriginal or Torres Strait Islander are less engaged in politics. 
 
-  * (You might need to create an index here)
+  * (You might need to create an index here by summing multiple variables)
   
 You can screenshot your results and share them on [Padlet](https://sydney.padlet.org/francescobailo/2024-govt6139-week-10-task-01-6negi8rb4jbbutaw).
 
