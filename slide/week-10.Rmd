@@ -2124,3 +2124,7 @@ $$\text{Left-Right Position} = b_0 + b_1(\text{Age}) + b_2(\text{Gender}) + \eps
 ## Start in class, complete at home!
 
 ---
+
+class: segue-red
+
+# See you next week with Qualitative methods!
