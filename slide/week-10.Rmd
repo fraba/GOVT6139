@@ -19,7 +19,6 @@ output:
       ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
       navigation:
         scroll: false # disable slide transitions by scrolling
-
 ---
 
 background-image: url(https://upload.wikimedia.org/wikipedia/en/6/6a/Logo_of_the_University_of_Sydney.svg)
@@ -34,7 +33,6 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
 options(scipen = 999)
 ```
 
----
 
 ## Acknowledgement of Country
 
@@ -76,9 +74,9 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 
 ⏸️ *Mid Semester break* ⏸️
 
-**Week 9**: Quantitative Methods  👈
+**Week 9**: Quantitative Methods 
 
-**Week 10**: Quantitative Methods: Data Analysis Lab (w/t JASP)
+**Week 10**: Quantitative Methods: Data Analysis Lab (w/t JASP) 👈
 
 **Week 11**: Qualitative Methods + Guest lecture w/t Sarah Phillips
 
@@ -107,6 +105,21 @@ class: inverse, center, middle
 | **4:00 PM - 4:15 PM** | **Drawing plots with JASP** |
 | **4:15 PM - 4:40 PM** | **Hypothesis Testing** |
 | **4:40 PM - 5:00 PM** | **Group Task** (if we have time) |
+
+
+---
+
+## Learning Objectives
+
+1. Navigate the JASP interface and load datasets for statistical analysis
+
+2. Generate and interpret descriptive statistics for both continuous and categorical variables
+
+3. Create effective data visualizations including histograms, box plots, and scatter plots
+
+4. Conduct hypothesis tests including chi-square tests, t-tests, correlation, and linear regression
+
+5. Interpret statistical output and communicate findings from quantitative analyses
 
 ---
 
@@ -396,7 +409,7 @@ Look at your data and identify which type each variable should be:
 
 ---
 
-class: segue
+class: segue-red
 
 # Descriptive statistics
 
@@ -798,7 +811,7 @@ Using the same approach:
 
 ---
 
-class: segue
+class: segue-red
 
 # Drawing plots with JASP
 
@@ -1223,6 +1236,11 @@ Adding 1 to variables that contain zeros is a common, quick-and-dirty trick, to 
 
 ]
 
+---
+
+class: segue
+
+# Break & Check-in
 
 ---
 
@@ -1451,6 +1469,10 @@ A **cross-tabulation** showing the frequency of observations for each combinatio
 
 ### Chi-Squared Test: Survival by Class
 
+.small[
+
+.pull-left[
+
 **Part A: Create the Contingency Table**
 1. **Frequencies → Contingency Tables**
 2. `Survived` to Rows
@@ -1460,6 +1482,10 @@ A **cross-tabulation** showing the frequency of observations for each combinatio
 **Part B: Run Chi-Squared Test**
 5. Under **Statistics**, check $\chi^2$
 6. Examine the output
+
+]
+
+.pull-right[
 
 **Part C: Answer These Questions:**
 - What is the overall survival rate?
@@ -1472,6 +1498,10 @@ A **cross-tabulation** showing the frequency of observations for each combinatio
 - Is there a significant association?
 - Which class had the highest survival rate?
 - Which class had the lowest survival rate?
+
+]
+
+]
 
 ---
 
