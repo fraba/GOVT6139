@@ -480,6 +480,16 @@ Use images to elicit comments and discussion
 
 ---
 
+
+## Mentimeter quiz
+
+<br><br>
+
+.pull-left[.center[<img src ='../img/menti-week-11.png' width = '45%'></img> ]]
+.pull-right[or https://www.menti.com/almtapkkh5dz]
+
+---
+
 ## Sampling Strategy: Purposeful & Saturation
 
 **Purposeful Sampling**
