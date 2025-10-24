@@ -99,9 +99,9 @@ Based on Ercan & Vromen (2022) with insights from Creswell & Creswell (2022)
 
 | Time | Duration | Activity |
 |------|----------|----------|
-| **3:00 - 3:50 PM** | 50 min | **Lecture: Qualitative Research Methods**<br>- What is qualitative research? Core characteristics<br>- When to use qualitative methods<br>- Data generation: Interviews, documents, observation, ethnography<br>- Data recording: Protocols and guides<br>- Ethical considerations and sampling strategies<br>- Data analysis: Coding process, themes, validation<br>- Analysis vs. interpretation |
-| **3:50 - 4:00 PM** | 10 min | **Group Activity: Design a Mini Qualitative Study**<br>- Work in groups of 3-4<br>- Complete task sheet with research design decisions |
-| **4:00 - 5:00 PM** | 60 min | **Guest Lecture: Dr Sarah Phillips**<br>- Qualitative methods in practice<br>- Q&A session |
+| **3:00 - 3:40 PM** | 40 min | **Lecture: Qualitative Research Methods**<br>- What is qualitative research? Core characteristics<br>- When to use qualitative methods<br>- Data generation: Interviews, documents, observation, ethnography<br>- Data recording: Protocols and guides<br>- Ethical considerations and sampling strategies<br>- Data analysis: Coding process, themes, validation<br>- Analysis vs. interpretation |
+| **3:40 - 4:00 PM** | 20 min | **Group Activity: Design a Mini Qualitative Study**<br>- Work in groups of 3-4<br>- Complete task sheet with research design decisions |
+| **4:00 - 5:00 PM** | 60 min | **Guest Lecture: Prof. Sarah Phillips**<br>- Qualitative methods in practice<br>- Q&A session |
 
 
 ---
