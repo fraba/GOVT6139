@@ -110,7 +110,9 @@ class: segue
 
 ## But first let's do a quick review of Quantitative Methods
 
-### How to measure significant in difference among groups.
+.small[
+
+### How to measure significant in difference among groups
 
 Let's read this methods description from a paper (Paper 1 in Canvas)
 
@@ -119,9 +121,17 @@ emergency medicine course. Participants were 118 third-year medical students. Pa
 
 Now, let's check how they report the results. 
 
+.center[
+
+[LINK to PAPER](https://canvas.sydney.edu.au/courses/65715/files/46471811?module_item_id=2900528)
+
+]
+
 - What is statistically significant? 
 
 - How do we know that? 
+
+]
 
 ---
 
