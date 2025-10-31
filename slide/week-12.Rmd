@@ -1,9 +1,9 @@
 ---
 title: "GOVT6139</br>Research design"
-subtitle: "Week 12</br>Mixed Methods Procedures"
+subtitle: "Week 12</br>Qualitative Methods: Data Analysis Lab"
 author: "Francesco Bailo"
 institute: "The University of Sydney"
-date: "Semester 1, 2024 (updated: `r Sys.Date()`)"
+date: "Semester 2, 2025 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
@@ -43,7 +43,6 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 
 ---
 
-
 ## Course outline
 
 .pull-left[
@@ -52,38 +51,925 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 
 **PART I PRELIMINARY CONSIDERATIONS (Weeks 2-5)**
 
-**Week 2**: The Selection of a Research Approach
+**Week 2**: The Selection of a Research Approach + Guest lecture w/t Inessa De Angelis
 
 **Week 3**: Review of the Literature
 
-**Week 4**: The Use of Theory
+**Week 4**: The Use of Theory + Guest lecture w/t Assel Mussagulova
 
-**Week 5**: Writing Strategies and Ethical Considerations + Guest lecture w/t Christopher Pepin-Neff 
+**Week 5**: Writing Strategies and Ethical Considerations
 
 **PART II DESIGNING RESEARCH (Weeks 6-12)**
 
-**Week 6**: The Introduction **no seminar** (public holiday)
+**Week 6**: The Introduction
 
-⏸️ *Mid Semester break* ⏸️
 
 ]
 
 .pull-right[
 
 
-**Week 7**: The Purpose Statement 
+**Week 7**: The Purpose Statement
 
-**Week 8**: Research Questions and Hypotheses + Guest Lecture w/t Charles Robert Butcher 
+**Week 8**: Research Questions and Hypotheses + Guest Lecture w/t Minglu Chen
 
-**Week 9**: Quantitative Methods 
+⏸️ *Mid Semester break* ⏸️
 
-**Week 10**: Quantitative Methods: Data Analysis Lab (Make sure you install R and RStudio) 
+**Week 9**: Quantitative Methods
 
-**Week 11**: Qualitative Methods + Guest lecture w/t Peter Chen
+**Week 10**: Quantitative Methods: Data Analysis Lab (Make sure you install JASP)
 
-**Week 12**: Mixed Methods Procedures + Guest lecture w/t Assel Mussagulova 👈
+**Week 11**: Qualitative Methods + Guest lecture w/t Sarah Phillips
+
+**Week 12**: Qualitative Methods: Data Analysis Lab (Make sure you install NVivo) 👈
 
 **Week 13**: Conclusions
+
+
+]
+
+---
+
+## A2 peer-review: Debriefing
+
+
+<br><br>
+
+.pull-left[.center[<img src ='../img/menti-week-12.png' width = '45%'></img> ]]
+.pull-right[or https://www.menti.com/alnt6t8jtfi7]
+
+
+---
+class: segue
+
+# Qualitative Data Analysis with NVivo
+
+*Seminar materials based on: Mortelmans, D. (2025). Doing Qualitative Data Analysis with NVivo. Springer.*
+
+---
+
+## But first let's do a quick review of Quantitative Methods
+
+### How to measure significant in difference among groups.
+
+Let's read this methods description from a paper (Paper 1 in Canvas)
+
+> METHODS We performed a randomised controlled trial in the setting of a curricular
+emergency medicine course. Participants were 118 third-year medical students. Participants were randomly allocated into 20 groups, 10 of which had free access to 500 g of chocolate cookies during an emergency medicine course session (cookie group) and 10 of which did not (control group). All groups were taught by the same teachers. Educational content and course material were the same for both groups. After the course, all students were asked to complete a 38-question evaluation form.
+
+Now, let's check how they report the results. 
+
+- What is statistically significant? 
+
+- How do we know that? 
+
+---
+
+## How to make your USS feedback count
+
+.small[
+
+Your Unit of Study Survey (USS) feedback is **confidential**. It’s a way to share what you enjoyed and found most useful in your learning, and to provide constructive feedback. It’s also a way to ‘pay it forward’ for the students coming behind you, so that their **learning experience** in this class is as good, or even better, than your own. 
+
+When you complete your USS survey (https://student-surveys.sydney.edu.au), please:
+
+]
+
+.pull-left[
+
+.small[
+
+**Be specific**. 
+Which class tasks, assessments or other activities helped you to learn? Why were they helpful? Which one(s) didn’t help you to learn? Why didn’t they work for you? 
+
+**Be constructive**. 
+What practical changes can you suggest to class tasks, assessments or other activities, to help the next class learn better? 
+
+**Be relevant**. 
+Imagine you are the teacher. 
+
+]
+
+]
+
+
+.pull-right[
+
+ What sort of feedback would you find most useful to help make your teaching more effective?
+
+.center[<img src = 'https://student-surveys.sydney.edu.au/common/images/student-surveys-QR.png' width = '60%'>]
+
+]
+
+
+---
+
+## Seminar Overview
+
+
+**Learning Objectives:**
+- Understand fundamental concepts of qualitative data analysis
+- Learn the Grounded Theory approach to analysis
+- Master basic NVivo operations for coding and querying data
+- Practice hands-on coding and retrieval techniques
+
+---
+
+## What's the difference between Quantitative Data and Qualitative Data?
+
+.pull-left[.center[<img src ='../img/menti-week-12.png' width = '45%'></img> ]]
+.pull-right[or https://www.menti.com/alnt6t8jtfi7]
+
+
+---
+
+## Qualitative Data vs Quantitative Data
+
+- Yes, quantitative data is data that you can count or measure while qualitative data is data that you can interpret without extracting counts or measures. 
+
+### But what about a newspaper articles? Is is quantitative or qualitative piece of data?
+
+It depends on your approach!
+
+- You can **read and interpret** its meaning (qualitative approach, and therfore qualitative data), or
+
+- You can **count** the frequency of each word that appear in the text (e.g., how many times does it mentions "immigration")
+
+Quantitative or qualitative is not an inner or embedded characteristic of the data.
+
+---
+
+
+## Understanding Data Structure: From Unstructured to Structured
+
+#### Layering Research Data
+
+**The Spectrum of Data Structure**
+
+Research data exists on a continuum from completely unstructured to fully structured. Understanding where your data sits on this spectrum is crucial for choosing appropriate analysis methods.
+
+.center[
+```
+UNSTRUCTURED ←―――――――――――――――――→ STRUCTURED
+     |              |              |
+  Raw text    Semi-structured   Database
+  No format   Some structure    Fixed format
+  Flexible    Annotations       Rigid schema
+```
+]
+
+**Key Insight:** This is NOT the same as qualitative vs. quantitative data!
+- Data can be translated from qualitative to quantitative (or vice versa)
+- Different analytical methods can span the spectrum
+- NVivo helps move data from unstructured → semi-structured → structured
+
+---
+
+## What Makes Data Structured or Unstructured?
+
+.pull-left[
+
+**Structured Data:**
+- **Definition:** Data ordered in explicit relationships, typically organized in tables
+- **Characteristics:**
+  - Elements explicitly defined by their position
+  - Each element has a clear sense in the "data world"
+  - Described by items: variables, attributes, properties, etc.
+  - Relationships link an identifiable item (respondent) to values
+  
+]
+
+.pull-right[
+  
+**Example Elements:**
+- A person surveyed (respondent)
+- Their age (numerical value)
+- Their response to "What do you think is democracy?" (open-ended text)
+
+**Machine Processing:** Relationships are explicit and unique, allowing automated analysis
+
+]
+
+---
+
+**Unstructured Data:**
+- **Definition:** Data without explicitly defined relationships
+- **Classic Example:** Plain text document without annotations
+  
+**Continuum Example - Interview Transcripts:**
+
+.center[
+```
+UNSTRUCTURED:
+Plain text file with interview dialogue
+      ↓ (add metadata)
+      
+SEMI-STRUCTURED:
+Header with date, names, location
+Interview text with some formatting
+      ↓ (add coding/themes)
+      
+STRUCTURED:
+Coded segments linked to themes
+Annotations and relationships defined
+Metadata captured systematically
+```
+]
+
+**The NVivo Role:**
+As we code and annotate data in NVivo, we're adding layers of structure to originally unstructured data. This structure enables sophisticated analysis while preserving the rich, contextual nature of qualitative data.
+
+**Important Distinction:**
+- **Structured ≠ Quantitative**
+- **Unstructured ≠ Qualitative**
+- Qualitative data can be structured (coded interviews)
+- Quantitative data can be unstructured (raw sensor readings)
+
+---
+
+### What is Qualitative Research?
+
+**Core Definition:**
+> "Qualitative research is a situated activity that locates the observer in the world. It consists of interpretive, material practices that make the world visible... qualitative researchers study things in their natural settings, attempting to make sense of or interpret phenomena in terms of the meanings people bring to them." (Denzin & Lincoln, 2017)
+
+**Key Characteristics:**
+- **Flexibility in Design:** Research questions serve as a compass, not rigid boundaries
+- **Multiple Data Collection Methods:** Interviews, observations, documents, focus groups
+- **Prolonged Engagement:** Deep, contextual understanding over time
+- **Textual Analysis:** Primary focus on words, meanings, and interpretations
+- **Inductive Approach:** Theory emerges from data rather than testing pre-existing hypotheses
+
+---
+
+## How Qualitative Differs from Quantitative:
+
+- Not about numbers or statistical procedures
+- Emphasizes meaning-making and social processes
+- Requires analytical flexibility
+- Rich contextual descriptions in reporting
+- Participants can be involved in validating findings
+
+---
+
+## Approaches to Qualitative Data Analysis
+
+.pull-left[
+
+**Common Elements Across Methods:**
+Despite diverse methodological paradigms (post-positivism, constructivism, critical approaches), most qualitative analyses share similar steps:
+
+1. **Data Organisation** - Managing collected material
+2. **Data Breakdown** - Coding and segmenting
+3. **Data Description** - Understanding patterns
+4. **Data Connection** - Linking themes and concepts
+5. **Writing Up** - Presenting findings
+
+]
+
+.pull-right[
+
+**The Metaphor of Analysis:**
+Think of it as an archaeologist encountering ruins:
+- Remove debris carefully
+- Number and catalog stones
+- Clean the site
+- Reconstruct buildings piece by piece
+- Return to leftover pieces to fit them in
+
+]
+
+
+---
+
+## Qualitative process
+
+```{r echo = FALSE, out.width = '100%'}
+library(DiagrammeR)
+
+# Create the process flow diagram
+diagram <- grViz("
+digraph qualitative_analysis_process {
+  
+  # Graph attributes
+  graph [layout = dot, 
+         rankdir = LR,
+         bgcolor = '#F8F9FA',
+         fontname = 'Arial']
+  
+  # Node attributes
+  node [shape = box,
+        style = 'rounded,filled',
+        fontname = 'Arial',
+        fontsize = 25,
+        width = 2,
+        height = 0.8]
+  
+  # Edge attributes
+  edge [color = '#2C3E50',
+        fontsize = 25,
+        penwidth = 2,
+        arrowsize = 1]
+  
+  # Define nodes with colors
+  node [fillcolor = '#E8F4F8', color = '#3498DB']
+  A [label = 'Raw Data\n(Unstructured)']
+  
+  node [fillcolor = '#FEF5E7', color = '#F39C12']
+  B [label = 'Dismantling\n(Breaking Down)']
+  
+  node [fillcolor = '#FADBD8', color = '#E74C3C']
+  C [label = 'Coding/Labeling\n(Assigning Meaning)']
+  
+  node [fillcolor = '#EBDEF0', color = '#9B59B6']
+  D [label = 'Rebuilding\n(Organising)']
+  
+  node [fillcolor = '#D5F4E6', color = '#27AE60']
+  E [label = 'Linking/Connecting\n(Finding Patterns)']
+  
+  node [fillcolor = '#AED6F1', color = '#2874A6']
+  F [label = 'Theory/Narrative\n(Final Output)']
+  
+  # Create the flow
+  A -> B [label = '  Read & Review  ']
+  B -> C [label = '  Segment  ']
+  C -> D [label = '  Organise  ']
+  D -> E [label = '  Relate  ']
+  E -> F [label = '  Synthesise  ']
+  
+  # Add feedback loop for constant comparison
+  E -> C [label = '  Constant\n  Comparison  ', 
+          style = dashed, 
+          color = '#95A5A6',
+          constraint = false]
+  
+  # Subgraph for grouping phases
+  subgraph cluster_0 {
+    label = 'Analytical Process in Qualitative Research'
+    fontsize = 25
+    fontname = 'Arial Bold'
+    style = rounded
+    color = '#34495E'
+    B C D E
+  }
+}
+")
+
+# Display the diagram
+diagram
+```
+
+
+---
+
+## Grounded Theory: A Structured Approach
+
+.small[
+
+**Why Grounded Theory?**
+- Most prevalent qualitative analytical approach
+- Historic connection to NVivo (originally NUD*IST)
+- Provides clear procedural guidance
+- Flexible enough for various research contexts
+
+**Core Principles:**
+
+.pull-left[
+
+**1. Theory Building from Data**
+- Analytical induction: concepts emerge from empirical material
+- Not testing pre-existing hypotheses
+- Creating new connections between concepts
+- Focus on "theoretical sensitivity" - the ability to derive meaning and conceptualize data
+
+]
+
+.pull-right[
+
+**2. Cyclical Working (Constant Comparison)**
+- Iterative data collection and analysis
+- Continuous refinement of concepts
+- Each round of data collection becomes more focused
+- Theory is "grounded" in data through constant comparison
+
+]
+
+]
+
+
+
+---
+
+## Three Coding Phases:
+
+### 1. Open Coding:
+
+> "The analytic process through which concepts are identified and their properties and dimensions are discovered."
+
+- Breaking down data into smaller units
+- Assigning labels to text segments
+- Creating initial codes close to the data
+- Building your codebook
+
+**Example:**
+- Raw data: "You need to be honest" + "She's always reliable"
+- Code: "Trust in relationships"
+
+---
+
+### 2. Axial Coding:
+
+> "The process of relating categories to their subcategories... linking categories at the level of properties and dimensions."
+
+- Connecting disparate codes
+- Developing concepts from open codes
+- Creating hierarchies and relationships
+- Moving toward abstraction
+
+---
+
+### 3. Selective Coding:
+
+> "The process of integration and refining the theory."
+
+- Interconnecting concepts
+- Identifying a central category
+- Building the theoretical framework
+- Answering the research question
+
+---
+
+## The Role of CAQDAS and NVivo (10 minutes)
+
+**What is CAQDAS?**
+Computer Assisted Qualitative Data Analysis Software
+
+**What NVivo CAN Do:**
+1. **Data Management** - Store all project materials in one file (.nvp)
+2. **Data Coding** - Label and organize data systematically
+3. **Data Querying** - Retrieve coded material efficiently
+4. **Visualization** - Create coding stripes, hierarchies, and frameworks
+
+**What NVivo CANNOT Do:**
+- Replace creative analysis
+- Automatically produce theoretical frameworks
+- Generate ready-made results
+- Replace reading and interpretation
+
+---
+
+## Important Principle:
+
+.center[
+```
+┌─────────────────────────┐
+│   INSIDE NVIVO:         │
+│   • Data management     │
+│   • Coding data         │
+│   • Querying data       │
+└─────────────────────────┘
+           ↓
+┌─────────────────────────┐
+│   OUTSIDE NVIVO:        │
+│   • Reading             │
+│   • Interpreting        │
+│   • Writing             │
+└─────────────────────────┘
+```
+]
+
+.small[
+**Critical Warnings:**
+- **Avoid "Analytical Madness"** - Coding is not the end goal, just a means
+- **Maintain Context** - Never analyze fragments in isolation
+- **Balance Quantity and Quality** - Don't let counting replace interpretation
+- **Researcher as Analyst** - Software supports but doesn't replace analytical work
+]
+
+**Code-and-Retrieve Logic:**
+The fundamental principle since the 1980s:
+1. Import raw data
+2. Code your data (attach labels)
+3. Retrieve coded material (queries)
+4. Analyze in context
+
+---
+
+class: segue-red
+
+# Hands-On Workshop with NVivo
+
+---
+
+## Hands-On Workshop with NVivo
+
+### Workshop Structure
+
+- Exercise 1: Project Setup and Data Import
+- Exercise 2: Basic Coding Operations
+- Exercise 3: Building a Hierarchical Codebook
+- Exercise 4: Queries and Retrieval
+
+---
+
+## Exercise 1: Setting Up Your NVivo Project
+
+**Objective:** Create a new project and import data
+
+**Step-by-Step Instructions:**
+
+.pull-left[
+
+**1. Create a New Project**
+- Open NVivo
+- File → New Project
+- Choose location and name: "GOVT6139 NVivo"
+- Add description: "Workshop on qualitative data analysis"
+
+]
+
+.pull-right[
+
+**2. Understanding Project Structure**
+Your project file (.nvp) contains EVERYTHING:
+- Raw data
+- Codes
+- Memos
+- Queries
+- Visualisation
+
+]
+
+---
+
+## Continued: Exercise 1: Setting Up Your NVivo Project
+
+.pull-left[
+
+**3. Exploring the Interface**
+- **Navigation View** (left): Project structure and folders
+- **List View** (center): Contents of selected folder
+- **Detail View** (right/bottom): Working area for files
+
+
+]
+
+.pull-right[
+
+**4. Import Sample Data**
+- Go to: Data → Import → Files
+- Select social media posts (download zip folder from Canvas)
+- Option: Create a case for each file (skip for now)
+- Data appears in Data → Files
+
+]
+
+
+
+**Key Locations:**
+- `/Data/Files` - Your primary documents
+- `/Codes` - Your codebook (empty initially)
+- `/Queries` - Saved searches
+
+---
+
+## `r icons::fontawesome("laptop")` HANDS-ON PRACTICE TASK: 
+1. Create your project
+2. Import some social media post files from the folder
+3. Open one document in Detail View
+4. Familiarise yourself with the interface
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 4, seconds = 00)
+```
+
+---
+
+## Exercise 2: Basic Coding Operations
+
+**Objective:** Learn to code text and build an initial codebook
+
+**What is Coding?**
+Coding = Labeling relevant parts of your data with descriptive tags
+
+**Key Concepts:**
+- **Reference** = Selected text fragment
+- **Code** = Label/tag describing the content
+- **Codebook** = Collection of all codes
+
+---
+
+## Method 1: Coding by Selection (Recommended for Beginners)
+
+.small[
+
+.pull-left[
+
+**Step-by-Step:**
+
+1. **Open a Document**
+   - Double-click an interview transcript
+   - Document opens in Detail View
+
+2. **Select Text to Code**
+   - Highlight a relevant passage (sentence or paragraph)
+   - Keep selection close to a meaningful unit
+
+3. **Create and Attach a Code**
+   - With text selected: Right-click → Code Selection → Code Selection at New Code
+   - Or: Click "Code" button in ribbon
+
+]
+
+.pull-right[
+
+   - Enter code name (e.g., "Economic concerns")
+   - Optionally add description
+   - Click OK
+
+4. **Verify Your Coding**
+   - Look for coding stripe on the right side (colored bar)
+   - Each code has a unique color
+
+5. **Code More Text**
+   - Select another passage
+   - Right-click → Code Selection → Code Selection at Existing Codes
+   - Select your existing code or create new one
+
+
+
+]
+
+]
+---
+
+## Method 2: Drag-and-Drop Coding (Faster for Multiple Codes)
+
+**Setup:**
+1. Open document in Detail View
+2. Put codebook in List View (go to Codes section)
+3. Activate Coding Panel: View → Coding Panel (right side)
+
+**Coding Process:**
+1. Select text in document
+2. **Drag to existing code** in Coding Panel = code at that code
+3. **Drag to empty area** at bottom = create new code
+
+**Note:** Two-step drag in NVivo: (1) Select text, (2) Click again and drag
+
+---
+
+## Inductive or Deductive Analysis?
+
+Note that you could also do something else:
+
+1. You could first create all your codes in the code view panel (right-click on the blank part) - but you could also import a set of existing codes (a.k.a. a codebook!)
+
+2. Second use these codes to code your document
+
+.center[
+.content-box-yellow[
+
+What kind of approach would this be? **Inductive** or **Deductive**?
+
+]
+]
+
+---
+
+## Coding Best Practices:
+
+.pull-left[
+
+**Stay Close to Your Data:**
+- Code at a detailed level initially
+- Use respondents' own words when appropriate
+- Avoid overly abstract codes early on
+
+**Example of Good vs. Poor Coding:**
+
+**TOO SPECIFIC (Poor):**
+
+- "Fishing regulations causing job losses in coastal communities"
+- Problem: Too detailed, won't recur often → "once-only codes"
+
+]
+
+.pull-right[
+
+**GOOD (Close to data):**
+- "Fishing regulations"
+- "Job losses"
+- "Economic impact"
+
+**TOO ABSTRACT (Poor at this stage):**
+- "Economic factors"
+- Problem: Too vague, loses meaning
+
+**Optimal Approach:**
+Start specific → Organize hierarchically later → Aggregate upward
+
+
+]
+
+---
+
+## `r icons::fontawesome("laptop")` HANDS-ON PRACTICE TASK 
+
+.small[
+
+.pull-left[
+
+1. **Open your social media posts**
+
+2. **Code 1-2 passages using these guidelines:**
+- Look for: concerns, opinions, experiences
+- Create 3-4 different codes
+- Code some passages with multiple codes where relevant
+
+3. **Example codes to consider:**
+- Border security concerns
+- Economic impact of immigration
+- Cultural integration and identity
+- Humanitarian perspectives
+- Legal immigration policy
+- Personal immigrant experiences
+
+
+
+]
+
+.pull-right[
+
+- National security arguments
+- Labor market effects
+
+4. **Check your work:**
+   - View → Coding Stripes (should see colored bars)
+   - Navigate to Codes section
+   - See your codebook building
+
+**Common Issues:**
+- **Coding stripes not showing?** File → Options → Display → turn on coding stripes
+- **Can't find your codes?** Look in Navigation View → Codes
+- **Made a mistake?** Right-click coded text → Uncode
+
+
+]
+
+]
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes =10, seconds = 00, top = TRUE)
+```
+
+
+---
+
+class: segue
+
+# Check-in
+
+---
+
+## Exercise 3: Building a Hierarchical Codebook
+
+.pull-left[
+
+**Objective:** Organize codes into a logical hierarchy
+
+**Why Hierarchies?**
+- Manage large codebooks (100+ codes)
+- Group related concepts
+- Move from specific to abstract
+- Facilitate analysis
+
+]
+
+.pull-right[
+
+**Structure Example:**
+
+- Economic Arguments (labor market, fiscal, business)
+- Security and Legal Concerns (border, legal status, national security)
+- Social and Cultural Issues (integration, community, identity)
+- Humanitarian Perspectives (refugee rights, family separation, human rights)
+
+]
+
+---
+
+## Creating Hierarchies:
+
+.pull-left[
+
+**Method 1: Create Child Codes Directly**
+1. Go to Codes section
+2. Right-click parent code → New Child Code
+3. Name the child code
+4. Repeat as needed
+
+**Method 2: Drag and Drop Existing Codes**
+1. Select a code in your codebook
+2. Click again and drag onto another code
+3. Dropped code becomes child of target code
+4. Note: Two-step process!
+
+]
+
+.pull-right[
+
+**Method 3: Multiple Levels**
+- Create children of children
+- Build multi-level hierarchies
+- Up to many levels deep
+
+]
+
+---
+
+## Aggregating Coding (POWERFUL FEATURE):
+
+**The Problem:**
+You code at detailed level, but want to see all related coding at higher level
+
+**The Solution: Aggregate Function**
+
+**How it works:**
+1. Right-click on parent code → Properties
+2. Check: "Aggregate coding from children"
+3. Or: Right-click → Aggregate Coding from Children
+
+**Effect:**
+- All coding from child codes appears at parent level
+- No need to code twice
+- Always code at lowest level, view at any level
+
+---
+
+## `r icons::fontawesome("laptop")` HANDS-ON PRACTICE TASK
+
+1. **Review your codes from Exercise 2**
+
+2. **Create a 2-level hierarchy:**
+   - Identify 2-3 main themes
+   - Create parent codes for these themes
+   - Move existing codes as children
+
+3. **Activate aggregation** on your parent codes
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 10, seconds = 00)
+```
+
+---
+
+## Exercise 4: Queries and Retrieval
+
+**Objective:** Learn to retrieve and analyse coded data
+
+**What are Queries?**
+Searches that retrieve coded material based on criteria
+- 8 different query types in NVivo
+- Most powerful analysis tool
+- Results show references with context
+
+---
+
+## Query Type 1: Basic Coding Query
+
+.pull-left[
+
+**Purpose:** Retrieve all instances of a specific code
+
+**Steps:**
+1. Explore → Coding Query
+2. Coding Criteria: Select your code
+3. Click Run
+4. Results window shows all references
+
+
+
+]
+
+.pull-right[
+
+**Results Window Features:**
+- **References** from multiple documents
+- **Coding stripes** show which codes present
+- **Context** - can expand to see surrounding text
+- **Source information** - which document, which person
+
+**Expanding Context:**
+1. In results: Right-click on reference
+2. Spread Coding → Broad Context
+3. See surrounding sentences/paragraphs
+4. CRITICAL: Never analyse out of context!
 
 
 ]
@@ -91,538 +977,268 @@ I would like to acknowledge the Traditional Owners of Australia and  recognise t
 
 ---
 
-## What is your approach in your research proposal?
+## Query Type 2: Compound Coding Query
 
-.center[<img src ='../img/menti-week-12-01.png' width = '30%'></img> 
+.pull-left[
 
-or https://www.menti.com/al58cddjjy7b]
+**Purpose:** Complex searches using Boolean logic
 
+**Boolean Operators:**
+
+**AND** - Must have both codes
+
+.content-box-yellow[
+
+"Economic impact" AND "Labor market"
+→ Shows where both topics discussed together
+
+]
+
+**OR** - Has either code
+
+.content-box-yellow[
+
+"Border security" OR "National security" 
+→ Shows all security codes
+
+]
+
+]
+
+.pull-right[
+
+
+**NOT** - Has one code but not another
+
+.content-box-yellow[
+
+"Immigration policy" NOT "Humanitarian"
+→ Policy topics excluding humanitarian
+
+]
+
+**NEAR** - Codes close together in text
+
+.content-box-yellow[
+
+"Cultural" NEAR "Integration"
+→ Within specified word distance
+
+]
+
+]
 
 ---
 
+## Query Type 3: Matrix Coding Query
 
-<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/alnok2u5hpbeu8r4b58uwrzcnj5q2bss/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
+.small[
+
+| Pro-immigration | Anti-immigration | Mixed views |
+--------------------|-----------------|------------------|-------------|
+Economic arguments  |       15        |        23        |      8      |
+Security concerns   |       22        |        18        |     12     |
+Cultural issues     |       10        |        15        |     20     |
+
+<br>
+
+.pull-left[
+
+**Purpose:** Compare coding across different dimensions
+
+**Most Powerful Tool in NVivo!**
+
+**Basic Setup:**
+- **Rows:** Select codes or themes
+- **Columns:** Select cases or attributes
+- **Result:** Matrix showing intersections
 
 
+]
+
+.pull-right[
+
+**Each cell = number of references at that intersection**
+**Click cell → See actual coded text**
+
+**Use Cases:**
+- Compare themes across age groups
+- Compare themes across genders
+- Compare themes across locations
+- Any rows × columns comparison
+
+
+]
+
+]
 
 ---
 
-## What is research all about?
+## `r icons::fontawesome("laptop")` HANDS-ON PRACTICE TASK
 
-Do you remember the chocolate study mentioned in Week #1? What were the **findings** from that study?
+.small[
+
+.pull-left[
+
+**Task 1: Basic Coding Query (3 min)**
+1. Explore → Coding Query
+2. Select one of your codes
+3. Run query
+4. Review results
+5. Try expanding context on a reference
+
+**Task 2: Compound Query (4 min)**
+1. Create new Coding Query
+2. Select TWO codes
+3. Use AND operator
+4. Run and observe results
+5. Try OR operator - notice difference
 
 
-.center[<img src = '../img/chocolate-study.png' width = '60%'></img>]
+]
 
-.footnote[Youmans, R. J., & Jee, B. D. (2007). Fudging the numbers: Distributing chocolate influences student evaluations of an undergraduate course. *Teaching of Psychology*, 34(4), 245–247. https://doi.org/10.1080/00986280701700318]
+.pull-right[
 
----
+**Task 3: Matrix Coding Query (5 min)**
+*Note: This requires classifications (demographics) - if not available, observe demo*
 
-### Please take 10 minutes to complete the USS for GOVT6139 now!
+1. Explore → Matrix Coding Query
+2. Rows: Select 2-3 of your main codes
+3. Columns: Select other codes
+4. Run query
+5. Examine the matrix
+6. Double-click a cell to see references
 
-```{r echo = FALSE, out.width = "80%"}
-magick::image_read_pdf("https://student-surveys.sydney.edu.au/students/info/docs/USS_slide.pdf",
-                       pages = 1)
-```
+
+]
+
+]
+
+
 
 ```{r echo = FALSE}
 library(countdown)
 
-countdown(minutes = 10, seconds = 00, start_immediately = TRUE)
+countdown(minutes = 10, seconds = 00)
 ```
 
 ---
 
-class: inverse, center, middle
+## Best Practices and Wrap-Up
 
-# Mixed Methods Procedures
 
----
+**1. Qualitative Analysis Fundamentals**
+- It's an interpretive, iterative process
+- Flexibility is essential
+- Context matters enormously
+- Software supports but doesn't replace thinking
 
-# Chapter 10 Learning Objectives
-
-1. Describe each of the six characteristics of mixed methods research to use in a definition.
-
-2. Create a justification for using mixed methods research in a proposal or study.
-
-3. Define key terms used in mixed methods, such as open- and closed-ended data, research design, integration, joint displays, and metainferences when presented in a proposal or study.
-
-4. Contrast quantitative and qualitative data when presented in a study.
-
-5. Identify for a core design its intent, procedures for data collection, integration, metainferences, and validity.
-
-6. Choose a type of mixed methods design for a study, and present reasons for the choice.
-
-7. Identify the elements that go into an integration statement for a proposal or a study.
+**2. Grounded Theory Approach**
+- Theory emerges from data (inductive)
+- Three coding phases: Open → Axial → Selective
+- Constant comparison is key
+- Theoretical sensitivity develops with practice
 
 ---
 
-class: segue-red
+**3. NVivo Best Practices**
 
-# Introduction
+.pull-left[
+
+**DO:**
+- ✓ Code at a detailed level initially
+- ✓ Use hierarchies and aggregation
+- ✓ Always view context when analyzing
+- ✓ Make regular backups (.nvp file)
+- ✓ Use coding stripes and highlighting
+- ✓ Write memos about your thinking
+- ✓ Keep codebook organized
+
+]
+
+.pull-right[
+
+**DON'T:**
+- ✗ Code too abstractly at first
+- ✗ Create "once-only" codes (too specific)
+- ✗ Analyze fragments without context
+- ✗ Let counting replace interpretation
+- ✗ Forget that YOU are the analyst
+- ✗ Ignore inconsistencies (they're informative!)
+
+]
 
 
----
 
-# Introduction
 
-## Mixed methods procedure
-
-* Combining qualitative and quantitative forms for more understanding
-
-* Limitations and strengths of each type of data collection
-
-* Nature of mixed methods
-
-* Reasons to use
-
----
-
-# Characteristics of Mixed Methods Research
-
-## The mixed methods researcher:
-
-1. Collects two types of data— _qualitative (open-ended)_  _ and _  _quantitative (closed- ended) _ data—to study the research problem or question
-
-2. Connects the two data sets, called  _integration_
-
-3. Uses procedures to integrate the two data sets, called a  _mixed methods design_
-
-4. Analyses integration typically in a table, called a  _joint display_ , by representing the two databases together in the procedures
-
-5. Draws conclusions, insight, or interpretation from the integration analysis, called  _metainferences_
-
-6. Frames the study with the researcher’s beliefs, values (**worldview**), and explanations drawn from the literature (**theories**)
-
----
-
-# Types of Mixed Methods Designs
-
-__Figure 10.1: Essential Components of Mixed Methods Research__
-
-<img src = '../img/Creswellrd6e_PPT101.jpg' width = "90%"></img>
-
----
-
-# Justification for Using Mixed Methods Research
-
-## Reasons for choosing mixed methods
-
-* Developing a **complete understanding** of a research problem by combining **quantitative** and **qualitative** results
-
-* Explaining quantitative results in detail with qualitative descriptions
-
-* Improving measures, scales, and instruments
-
-But also, 
-
-* Augmenting experiments
-
-* Developing cases
-
-* Evaluating programs
-
-* Understanding changes needed for marginalized group
-
----
-
-# Definitions of Mixed Methods Terms
-
-### Open-ended data
-
-* Information gathered where researchers ask a question but do not provide a response option
-  
-  * E.g., Participants share views, researcher records them
-    
-* Information gathered when researchers provide a qualitative description of a document (sociql media post)
-    
-### Closed-ended data
-
-* Information gathered where the researcher provides participants with response options
-  
-  * E.g., Rating scales (likert)
-    
-* Information generated classifying a document's topic (like a media post) using software 
-
----
-
-# Research Design
-
-## Procedure used in conducting a study
-
-Two categories:  **core designs** and  **complex designs**
-
-### Core Designs
-
-Designs found in all mixed methods studies including convergent designs, explanatory sequential designs, and exploratory sequential designs
-
-### Complex Designs
-
-Primary intent not simply integration of two databases but to have mixed methods  _support _ the procedures of a process or framework
 
 
 ---
 
-# More key terminology for mixed-methods research
+.pull-left[
 
-### Integration
+**4. Common Pitfalls to Avoid**
 
-* Central concept in mixed methods research
+**Reification of Researcher and Data:**
+- Danger: Software distances you from data
+- Solution: Always use "spread to" for context
+- Remember: Coded fragments come from interviews with real people
 
-* Involves combining in a study or a series of studies information from qualitative and quantitative data
+**Analytical Madness:**
+- Danger: Over-focus on coding mechanics
+- Solution: Coding is a means, not the end
+- Keep asking: "So what does this mean?"
 
-### Joint Display
 
-* Table or graph that presents side-by-side combination of two combined databases
-  
-### Metainferences
+]
 
-* Insights that emerge as researcher compares the quantitative and qualitative databases
+.pull-right[
 
----
+**Quantification Creep:**
+- Danger: Counting codes becomes analysis
+- Solution: Numbers describe, don't explain
+- Focus on patterns, meanings, and relationships
 
-# The Process of Conducting a Mixed Methods Study
+]
 
-## Connecting the quantitative and qualitative data to a specific type of mixed methods design
 
-1. Researcher draws a diagram of the design
 
-2. Integrates the two databases
-
-3. Presents the integration in a table or joint display for analysis
-
-4. Draws insights or **metainferences** from results of the integration
-
----
-
-class: segue
-
-# Core Mixed Methods Designs
 
 ---
 
-# Core Mixed Methods Designs
+### Continuing Your Learning Journey
 
-## Three core mixed methods designs
 
-1. **Convergent** design (One-phase design)
+**Next Steps (if you want):**
 
-2. **Explanatory** sequential design (Two-phase design)
+.pull-left[
 
-3. **Exploratory** sequential design  (Three-phase design)
+**1. Practice Coding (Essential)**
+- Start with 2-3 interviews (check out Canvas, for interview on a fictional project about understanding political efficacy)
+- Code thoroughly at detailed level
+- Organise into hierarchies
+- Aggregate upward
 
----
 
-__Figure 10.2: Three Core Designs__
+]
 
-.center[<img src = '../img/Creswellrd6e_PPT102.jpg' width = '80%'></img>]
+.pull-right[
 
----
+**2. Advanced Features to Explore**
+- Auto-coding (AI-assisted)
+- Text search queries
+- Framework matrices
+- Visualisations (models, charts)
+- Annotations and memos
 
-# The Convergent Mixed Methods Design
+]
 
-* __Intent:__  to  _compare _ results from the qualitative databases with results from the quantitative databases by  _merging _ the results
-* __Key assumption__ : quantitative and qualitative data provide different types of information
-* Most familiar approach
-* Description of the design
-  * Collects both quantitative and qualitative data,
-  * Analyzes them separately,
-  * Compares the results to see if the findings confirm or disconfirm each other
-
----
-
-# The Convergent Mixed Methods Design
-
-### Data collection
-
-* Use the same or parallel variables, constructs, or concepts
-
-### Data analysis and integration
-
-* Analyse qualitative database
-* Analyse quantitative database
-* Integrate the two
-* __Joint display__  – merge forms of data in a single visual display (Table 10.2)
-
----
-
-__Table 10.2: Template for a Convergent Design Joint Display__
-
-| Scores | Theme 1 | Theme 2 | Theme 3 | Theme 4 | Metainferences |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| High | Quote/<br />Scores | Quote/<br />Scores | Quote/<br />Scores | Quote/<br />Scores | Insight |
-| Medium | Quote/<br />Scores | Quote/<br />Scores | Quote/<br />Scores | Quote/<br />Scores | Insight |
-| Low | Quote/<br />Scores | Quote/<br />Scores | Quote/<br />Scores | Quote/<br />Scores | Insight |
-| Metainferences | Insight | Insight | Insight | Insight | Insight |
-
----
-
-__Figure 10.2: Three Core Designs__
-
-.center[<img src = '../img/Creswellrd6e_PPT102.jpg' width = '80%'></img>]
-
----
-
-# The Explanatory Sequential Mixed Methods Design
-
-* __Intent:__  to  _explain _ initial quantitative _ _ results with  results from qualitative data by  _connecting _ the two databases
-* __Key assumption__ : quantitative results may yield  _surprising _ information that needs  _explanation_
-* Description of the design
-  * Involves a two-phase project
-  * Collection of quantitative data in the first phase
-  * Uses results to plan the second, qualitative phase
-  * Qualitative data help in explain in more detail the initial quantitative results
-
----
-
-# The Explanatory Sequential Mixed Methods Design
-
-### Data collection
-
-* Two distinct phases
-
-* Rigorous quantitative sampling and purposeful qualitative
-
-### Data analysis and integration
-
-* Connecting quantitative results to qualitative data collection
-  
-* Quantitative results inform sampling and qualitative questions to ask
-
----
-
-__Table 10.3: Template for an Explanatory Sequential Design Joint Display__
-
-| Quantitative Scores | Qualitative Follow-Up Themes | Metainferences |
-| :-: | :-: | :-: |
-| High Scores | Theme 1<br />Theme 2<br />Theme 3 | How Themes Explain the Scores |
-| Medium Scores | Theme 1<br />Theme 2<br />Theme 3 | How Themes Explain the Scores |
-| Low Scores | Theme 1<br />Theme 2<br />Theme 3 | How Themes Explain the Scores |
-
----
-
-__Figure 10.2: Three Core Designs__
-
-.center[<img src = '../img/Creswellrd6e_PPT102.jpg' width = '80%'></img>]
-
----
-
-# The Exploratory Sequential Mixed Methods Design
-
-* __Intent:__  to  _explore _ how qualitative data can improve quantitative measures, scales, or instruments
-* __Key assumption__ : quantitative results may yield  _surprising _ information that needs  _explanation_
-* Description of the design
-  * A three-phase design
-  * Start with a qualitative phase
-  * Build to a feature to be tested (e.g., survey instrument)
-  * Followed by a quantitative phase that tests the feature
-
----
-
-# The Exploratory Sequential Mixed Methods Design
-
-### Data collection
-
-* Initial qualitative data collection
-
-* Test of quantitative feature
-
-### Integrative data analysis
-
-* Analyse the two databases separately
-
-* Use the findings from the initial exploratory database to build into a feature
-
-* Qualitative findings inform design of quantitative phase (e.g., instrument, variables)
-
----
-
-# The Exploratory Sequential Mixed Methods Design
-
-__Table 10.3: Template for an Exploratory Sequential Design Joint Display (using a survey design as an example)__
-
-| Qualitative | Design Features | Metainferences |
-| :-: | :-: | :-: |
-| Qualitative Quotes | Quantitative Survey Items | Analyze the scores on the survey |
-| Qualitative Codes | Quantitative Survey Variables | Identify variables |
-| Qualitative Themes | Quantitative Survey Scales | Identify scales |
 
 ---
 
 class: segue-red
 
-# Group task
-
----
-
-class: segue
-
-# Complex Mixed Methods Designs
-
----
-
-# Complex Mixed Methods Designs
-
-* All mixed methods studies have at least one  **core design** (e.g., convergent, explanatory sequential, or exploratory sequential)
-
-* **Complex designs** have core designs embedded in frameworks larger than simply collecting, analysing, and integrating quantitative and qualitative data
-
----
-
-# Types of Complex Designs
-
-Several complex mixed methods designs:
-
-
-* Intersecting a secondary method (mixed methods) within a primary quantitative or qualitative design (e.g., an intervention)
-
-* Intersecting mixed methods within another methodology (e.g., evaluation)
-
-* Intersecting mixed methods within a theoretical framework (e.g., social justice)
-
----
-
-# Examples of Complex Designs
-
-__Mixed methods experimental (intervention) design__  – quantitative and qualitative data within an experiment or trial (Figure 10.3)
-
-__Mixed methods case study design__  – mixed methods within a single or multiple case study (Figure 10.4)
-
-__Mixed methods participatory social justice design__  – core mixed methods design within a larger framework (Figure 10.5)
-
-__Mixed methods evaluation design__  – one or more core designs in an evaluation (Figure 10.6)
-
----
-
-__Figure 10.3: A Mixed Method Intervention Design Diagram __
-
-.center[<img src = '../img/Creswellrd6e_PPT103.jpg' width = "80%"><img>]
-
----
-
-__Figure 10.4: A Multiple Case Study Design Diagram __
-
-.center[<img src = '../img/Creswellrd6e_PPT104.jpg' width = "50%"><img>]
-
----
-
-__Figure 10.5: A Mixed Methods Participatory Action Research Design Diagram __
-
-.center[<img src = '../img/Creswellrd6e_PPT105.jpg' width = "60%"><img>]
-
----
-
-__Figure 10.6: A Mixed Methods Evaluation Design Diagram __
-
-.center[<img src = '../img/Creswellrd6e_PPT106.jpg' width = "60%"><img>]
----
-
-# Incorporating Core Designs into Complex Designs
-
-* Identify quantitative and qualitative data collection
-
-* Draw a diagram of steps
-
-* Look in steps for opportunities to collect quantitative and qualitative data
-
-* Examine how databases are connected
-
-* Discuss overall framework or process and the embedded core designs
-
----
-
-## Factors Important in Choosing a Mixed Methods Design
-
-### Choice based on intent and procedures
-
-1. **Integration statement**
-
-> Integration involved comparing the results from the quantitative and qualitative data by merging so that a more complete understanding emerges than provided by the quantitative or the qualitative results alone.” (convergent design example)
-
-2\. **Design intent**
-  
-3\. **Select procedures that match design**
-
----
-
-__Table 10.5: Intent and Procedures of Mixed Methods Designs__
-
-| Mixed Methods Design | Intent or Purpose (of mixing the two databases) | Procedure (for conducting the research) |
-| :-: | :-: | :-: |
-| Convergent Design | Compare, Match, Corroborate (Validate), Expand, Enhance, Diffract, Identify Cases, Initiating, Complete Understanding | Merge (putting the databases side-by-side) |
-| Explanatory Sequential Design | Expand, Explain | Connect (quantitative results connection with qualitative data collection) |
-| Exploratory Sequential Design | Build Upon, Transfer, Generalize | Connect (qualitative results lead to design of quantitative assessment that is then tested) |
-| Complex Mixed Methods Design | Augment (optimize, ascertain needs, monitor) | Add into a process/ framework<br /><br />Qualitative, Quantitative, or Both Types of Data |
-
----
-
-__Figure 10.7: Flowchart for Choosing Your Type of Design (Based on Intent) __
-
-.center[<img src = '../img/Creswellrd6e_PPT107.jpg' width = "60%"><img>]
-
----
-
-__Figure 10.8: Flowchart for Choosing Your Type of Design (Based on Procedures) __
-
-.center[<img src = '../img/Creswellrd6e_PPT108.jpg' width = "60%"><img>]
-
----
-
-## Other Reasons for Choosing a Design
-
-### Choice based on
-
-* Popular designs in a field or discipline
-
-* Single researcher or team
-
-* Choice by advisors or mentors
-
-* Timing in mixed methods data collection – convergent or sequential
-
-* Emphasis placed on each database – equal or unequal
-
----
-
-__Table 10\.1: A Checklist of Questions for Designing a Mixed Methods Procedure__
-
-| _____ | Question |
-| :-: | :-: |
-| _____ | Have you defined mixed methods research? |
-| _____ | Do you justify using mixed methods methodology for your problem and question? |
-| _____ | Have you collected both quantitative and qualitative data? |
-| _____ | Have you described your intent for collecting both forms of data? (integration statement) |
-| _____ | Have you identified a mixed methods design or set of procedures to integrate your data? (mixed methods design) |
-| _____ | Have you provided a diagram of your design procedures? |
-| _____ | Have you identified how you will analyze your data for integration? (use of a joint display) |
-| _____ | Have you drawn conclusions (or metainferences) from analyzing the integration? |
-| _____ | Have you discussed validity and ethics related to your research design? |
-| _____ | Have you written your mixed methods study to reflect your use of design? |
-
----
-
-# Summary
-
-Define mixed methods and core characteristics
-
-Discuss chosen mixed methods design and challenges
-
-Draw a diagram of procedures
-
-Convey elements based on your design
-
----
-
-class: segue-red
-
-# Writing task (to complete at home)
-
-
----
-
-class: 
-
-# Check-in
+# See you next week for the final seminar!
 
 
 ---
