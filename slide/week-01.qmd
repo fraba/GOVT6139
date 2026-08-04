@@ -2,8 +2,7 @@
 title: "GOVT6139<br>Research design"
 subtitle: "Week 01<br>Introduction and overview"
 author: "Francesco Bailo"
-institute: "The University of Sydney"
-date: "Semester 2, 2026"
+institute: "The University of Sydney<br>Semester 2, 2026"
 format:
   revealjs:
     self-contained: true
@@ -170,11 +169,13 @@ Menti link from Canvas
 
 ## What are your expectations for GOVT6139?
 
+::: {style="text-align: center;"}
 [Link to Padlet](https://padlet.com/sydney/2026-govt6139-week-01-expectations-what-are-your-expectation-e9h77tcpfsmkr22y)
 
 OR 
 
 Padlet link from Canvas
+:::
 
 
 # An overview
@@ -261,7 +262,7 @@ So what?
 
 ### What the class is not
 
-- An advanced qualitative methods or statistics course (Will do some #Rstat in week 10 but you should consider [Data Analytics for Social Research SSPS6006](https://www.sydney.edu.au/courses/units-of-study/2024/ssps/ssps6006.html) for a dedicated unit)
+- An advanced qualitative methods or statistics course (Will do some #Rstat in week 10 but you should consider [Data Analytics for Social Research SSPS6006](https://www.sydney.edu.au/courses/units-of-study/2025/ssps/ssps6006.html) for a dedicated unit)
 
 - Opportunity to conduct a research project
 
@@ -306,46 +307,36 @@ Then answer these questions:
 
 ## What do I study?
 
-### 1. Emergence, interaction, and diffusion of *political opinions* online
+I study how political opinions, misinformation and knowledge *emerge*, *interact* and *diffuse* on social media and other digital platforms — and how these platforms reshape *political participation and organisation*, including in under-studied and high-risk contexts.
 
 ::: {style="text-align: center;"}
 <img src = "../img/bailo-research-lines.png" height=320px />
 :::
 
-### 2. Impacts of social media technologies and services on *political participation and organisation*
-
 ---
 
-## 1. Emergence, interaction, and diffusion of *political opinions* online
+### Some current projects:
 
-* Cross-disciplinary research: Digital ethnography, Computer science and Political science.
+* **Mobilisation networks** (Italy, 2013 election) — social capital, the geographic diffusion of Internet-organised "meetups", and their effect on political talk and voting.
+* **Information disorder** — a scalable, LLM-based method for measuring how much a social media/information space converges on, or fragments over, shared facts.
+* **The Undersphere** — how GenAI tools are reshaping online communities into transactional, knowledge-driven spaces rather than social ones.
+* **Vietnam** — misinformation exposure (incl. on TikTok) and its effect on political attitudes amid rapid media change.
+* **Afghanistan** — a pilot survey of how political participation on social media is reconfigured under Taliban rule.
+* Affiliated with the [Centre for AI, Trust and Governance](https://www.sydney.edu.au/arts/our-research/centres-institutes-and-groups/centre-for-ai-trust-and-governance.html) (AI & platforms/media; AI & law/policy).
 
-* Loops involving Qualitative, Quantitative & Computational methods.
+## Key research questions
 
-### Key research questions
+* Does social capital predict where offline political mobilisation happens — and can Internet-mediated networks substitute for it where social capital is weak?
 
-* What opinions do **emerge** online, but also when and where?
+* Can we build a scalable, near-real-time measure of "information disorder" — how much an information space converges on shared facts versus fragments into disagreement?
 
-* How do opinions **interact** with other opinions through the Cloud and its online communities?
+* How are new, GenAI-centred online communities organised, and what happens to trust and knowledge production when interaction becomes transactional rather than social?
 
-* What factors determine the speed and reach of the **diffusion** of opinions?
+* How does exposure to misinformation on platforms like TikTok shape political attitudes in societies undergoing rapid media change?
 
----
+* How is political participation on social media reorganised when the state itself constrains and surveils it?
 
-## 2. Impact of social media technologies and services on *political participation and organisation*
 
-* Political science research: Parties, Movements, Campaigns and Elections.
-* Qualitative, Quantitative & Computational methods.
-
-### Key research questions
-
-* Can "Internet capital" offset a lack of social capital in facilitating participation and organisation?
-
-* Does Internet capital facilitate the organisation of political discontent from the margin (low-social capital areas)?
-
-* Do Internet technologies and services create more political instability by facilitating the emergence of new political actors (individuals or organisations)?
-
-* Do social media negatively affect the quality of political deliberation? What factors, technologies or services are important in reducing the quality of online conversation?
 
 # Reflection
 
@@ -363,9 +354,15 @@ In groups, introduce yourself, and discuss briefly (5 mins):
 
 After discussing, share your answers about 2. and 3. as group on Padlet (next slide...)
 
----
+::: {style="text-align: center;"}
 
-<div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://sydney.padlet.org/embed/fooi1rl3hn5hmw0t" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p><div style="display:flex;align-items:center;justify-content:end;margin:0;height:28px"><a href="https://padlet.com?ref=embed" style="display:block;flex-grow:0;margin:0;border:none;padding:0;text-decoration:none" target="_blank"><div style="display:flex;align-items:center;"><img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" style="padding:0;margin:0;background:0 0;border:none;box-shadow:none" alt="Made with Padlet"></div></a></div></div>
+[Link to Padlet](https://padlet.com/sydney/2026-govt6139-week-01-reflections-ai5luwp4vmmwbkfl)
+
+OR 
+
+From Canvas
+:::
+
 
 # Course Outline
 
@@ -475,15 +472,19 @@ digraph peer_review_diagram {
 
 ---
 
+# A3 In-class quiz
+
+---
+
 ##  Readings, Tasks and other deadlines in Canvas
 
-* Let's check Canvas [assessment overview page](https://canvas.sydney.edu.au/courses/65715/pages/assessment-overview?module_item_id=2788752)
+* Let's check Canvas [assessment overview page](https://canvas.sydney.edu.au/courses/74158/pages/assessment-overview?module_item_id=3119403)
 
-* Let's check Canvas [assignment page](https://canvas.sydney.edu.au/courses/65715/assignments)
+* Let's check Canvas [assignment page](https://canvas.sydney.edu.au/courses/74158/assignments)
 
-* Let's check Canvas [calendar page](https://canvas.sydney.edu.au/calendar?include_contexts=course_65715#view_name=month&view_start=2026-08-01)
+* Let's check Canvas [calendar page](https://canvas.sydney.edu.au/calendar?include_contexts=course_74158#view_name=month&view_start=2026-08-01)
 
-* Let's check Canvas [due dates (syllabus) page](https://canvas.sydney.edu.au/courses/65715/assignments/syllabus)
+* Let's check Canvas [due dates (syllabus) page](https://canvas.sydney.edu.au/courses/74158/assignments/syllabus)
 
 ::: {style="text-align: center;"}
 <img src = 'https://media.giphy.com/media/G4pFuFdDewNyZlUYJV/giphy.gif' width = '40%'></img>
@@ -493,125 +494,107 @@ digraph peer_review_diagram {
 
 <img src = 'https://media.giphy.com/media/l0G18BkChcRRctMZ2/giphy.gif' width = '50%'></img>
 
-## Let's talk about... tools! (1/2)
+## Let's talk about... tools! (1/4)
 
-* You need a **reference management software**. And you need it now!
+* Familiarise yourself with **search tools** for academic works (in A2 you will need to produce a literature review): start with the *library website*, *Google Scholar*, *Web of Science* or *Scopus*, and *Research Rabbit* (https://researchrabbitapp.com/home).
 
-    * If you are not using one yet I suggest you install Zotero (+ browser plugin, + Word plugin). Other popular option is EndNote. What RMS are you using?
-
-::: {style="text-align: center;"}
-<img src ='../img/menti-week-01.png' width = '30%'>
-
-or https://www.menti.com/al8jn8dsxbqa
-:::
-
----
-
-## Let's talk about... tools! (2/2)
-
-* Familiarise yourself with **search tools** for academic works (in A2 you will need to produce a literature review): start with thr *library website*, *Google Scholar*, *Web of Science* or *Scopus*, and *Research Rabbit* (https://researchrabbitapp.com/home).
+* New: Google Scholar now has an experimental **AI/chat search feature** — worth trying, but treat it like any GenAI output: a lead to verify, not a citation to trust blindly.
 
 ::: {style="text-align: center;"}
 <img src = 'https://media.giphy.com/media/YGlRW1Am9q7e0/giphy.gif' width = '20%'></img>
 :::
 
+---
+
 Remember that a good literature review aims for *relevance* more than *completeness* (simply, you can't win the completeness battle!). As you keep accumulating interesting works, keep asking yourself: why are these relevant? How does this support my own research project?
 
 ---
 
-## Let's talk about... ChatGPT and GenAI (1/4)
+## Let's talk about... tools! (2/4)
+
+* You need a **reference management software**. And you need it now!
+
+    * If you are not using one yet I suggest you install [Zotero](https://www.zotero.org/) (+ browser plugin, + Word plugin) — free, open source, and animated by a huge community. Other popular option is EndNote.
+
+---
+
+## Let's talk about... tools! (3/4)
+
+* You also need a system for taking and connecting notes as you read — don't let it live only scattered across Word docs.
+
+* I'd recommend [Obsidian](https://obsidian.md/) notes are plain local text files, it's **free** (you only pay if you want their optional cloud sync across devices), and it's backed by a huge community building thousands of plugins.
+
+* One of its most useful features: you can **link across notes very easily** — so something you mention in one note can be linked directly to a related note elsewhere, letting your notes form a connected web rather than a flat pile.
+
+---
+
+## Let's talk about... tools! (4/4)
+
+* The University will likely offer its own supported AI assistant soon — watch Canvas for updates.
+
+* In the meantime, generous free(-ish) tiers exist: ChatGPT (OpenAI), Gemini (Google), and others.
+
+* We'll specifically use **Antigravity** (Google) in Week 3 for the literature review activity — it brings an LLM onto *your own computer*, able to read, organise and manipulate your files via natural language, rather than living only in a chat window.
+
+## Let's talk about... GenAI for research (1/4)
+
+But first let's complete the last two slides in Menti.
 
 ::: {style="text-align: center;"}
-<img src = 'https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg' width = '20%'></img>
-:::
-
-### Do you use it and how?
-
-::: {style="text-align: center;"}
-<img src = '../img/2024-GOVT6139-W01-menti-qr-code.png' width = '20%'>
-
-OR
-
+<img src = '../img/2024-GOVT6139-W01-menti-qr-code.png' width = '25%'>
 [www.menti.com/alxf5iwcwtzu](https://www.menti.com/alxf5iwcwtzu)
 :::
 
+* "Doing a literature review" — or "writing a proposal" — isn't one task. It's a chain of quite different activities, some mechanical, some pure judgment.
+
+* Treating it as one blob is exactly how you end up either **over-trusting** AI (letting it "do the review," "write the section") or **under-using** it (only ever asking for a summary).
+
+* For every task, ask two questions: what can I genuinely **offload**, and what has to **stay mine** no matter what?
+
+::: callout-note
+The message for today: **use the tool, don't be used by it.**
+:::
+
 ---
 
-## Let's talk about... ChatGPT and GenAI (2/4)
+## Let's talk about... GenAI for research (2/4)
 
-### Should I use it?
+### Literature review — offload vs. retain
+
+**Offload:** brainstorming search terms and angles on your question; a first-pass screen of titles/abstracts against your own inclusion rule; pulling what a paper *reports* (sample, method, findings) into a structured note.
+
+**Retain:** judging whether the gap you've found is real and worth pursuing; running the actual database search — an LLM's "memory" of the literature is not a search index, and it will confidently invent plausible-sounding citations that don't exist; appraising whether a study's method was actually *any good*, not just what it reports; the argument for why your synthesis matters.
+
+::: callout-tip
+Worth trying: Google Scholar's new experimental AI/chat search — a genuine step toward *grounded* search (a real index, not a model's memory). Still: click through and verify every result yourself.
+:::
+
+---
+
+## Let's talk about... GenAI for research (3/4)
+
+### Research writing — offload vs. retain
+
+**Offload:** drafting candidate phrasings of a paragraph; checking clarity and flow · distilling your own notes into a shorter summary; tightening prose once the substance is already yours.
+
+**Retain:** the actual claim each sentence makes, and why it follows from your evidence; the connections you draw between ideas. A note or paragraph isn't proof you understood something — if AI supplied the reasoning that connects it, that reasoning isn't yours yet.
+
+This applies just as much to your **purpose statement and research questions (A2)** as to a lit review paragraph — the exact wording matters, because you'll be asked to defend it (next slide...).
+
+---
+
+## Let's talk about... GenAI for research (4/4)
+
+* No matter which tool you use — Zotero, Obsidian, Antigravity, ChatGPT, Gemini, Google Scholar AI — at the end of the day **you are accountable for what you author and submit to others**
+
+* You must be able to **explain it, justify it, and defend it** — under questioning, without the tool in front of you.
+
+* This isn't abstract: it's literally what **A1 (Viva Voce)** tests. And it's exactly what A3's marking rewards — a rougher answer that's genuinely yours beats a polished, generic one that isn't.
 
 ::: {style="text-align: center;"}
-<img src = 'https://media.giphy.com/media/l2JhNkxsr2EtjfXwY/giphy.gif' width ='35%'></img>
+### Use the tool. Don't be used by it.
 :::
 
-Definitely!
-
-### Problem is how to use it!
-
-No need to say that the wrong way to use it is copying/pasting ChatGPT answers into your *original* work.
-
-This is not only cheating but also ChatGPT will never produce *original* (that is, *creative*) work!
-
-Remember also that **A3 is an open assessment**: using AI to help you think is fine, but generic AI output that doesn't engage with your own research project will score lower than a rougher, more specific answer.
-
----
-
-### Use of GenAI in GOVT6139
-
-Let's check [this Canvas page](https://canvas.sydney.edu.au/courses/65715/pages/use-of-generative-ai-and-other-marvels?module_item_id=2788753)
-
----
-
-## Let's talk about... ChatGPT (3/4)
-
-### What is ChatGPT?
-
-ChatGPT is a *chatbot* build on a very sophisticated *language model* trained on one of the most comprehensive corpus of texts ever assembled in the history on our human civilisation.
-
-### What does it do in practice?
-
-::: columns
-::: {.column width="50%"}
-Given an input, ChatGPT will guess the *best* possible series of words to respond to that input. In doing so, it simulate a person that is not only very knowledgeable on the topic but also naturally competent in the English language.
-:::
-
-::: {.column width="50%"}
-![](https://media.giphy.com/media/19OIUml06udBC/giphy.gif)
-:::
-:::
-
----
-
-## Let's talk about... ChatGPT (4/4)
-
-### How does it do in practice?
-
-One of the best way to understand the working of any language model available today is to think about *compression algorithms* (although many will contest this analogy!).
-
-### How do compression algorithms work?
-
-* First excluding some information and
-
-* second interpolating information to fill gaps.
-
-ChatGPT is written information what JPEG is for images. Interpolation is what gives the impression of creative knowledge. **In conclusions**, ChatGPT output can be helpful to find new information (e.g. a paper?) but can't be trusted at face value!
-
-See: Ted Chiang's [ChatGPT Is a Blurry JPEG of the Web](https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web) but also Domenic Denicola's [ChatGPT Is Not a Blurry JPEG of the Web. It's a Simulacrum.](https://blog.domenic.me/chatgpt-simulacrum/)
-
----
-
-### How are we going to use GenAI in class?
-
-- We are going to use Google's NotebookLM for literature review tasks.
-
-- We are going to provide NotebookLM the context where to find and organise the information we want.
-
-- We do this by uploading a few papers and documents before starting to ask the questions.
-
-- We are NOT going to ask: find me the relevant literature.
-
-- Instead we are going to say: here the literature, find me relevant information in there!
 
 # Issues with the unit?
 
@@ -622,12 +605,6 @@ There are a number of channels for your to provide feedback during the course of
 You are always welcome to send me an email, of course, if you feel you are getting behind or confused. On top of this:
 
 1. At the end of each class, you can **optionally** provide a quick feedback (not anonymous) as you check-in for attendance.
-
-::: {style="text-align: center;"}
-<img src = '../img/sres-checkin-screenshot.png' width = '60%'>
-:::
-
-If you click on the sad face, I will get back to you to check what's wrong.
 
 ---
 
