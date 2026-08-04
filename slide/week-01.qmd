@@ -1,0 +1,715 @@
+---
+title: "GOVT6139<br>Research design"
+subtitle: "Week 01<br>Introduction and overview"
+author: "Francesco Bailo"
+institute: "The University of Sydney"
+date: "Semester 2, 2026"
+format:
+  revealjs:
+    self-contained: true
+    fig-format: svg
+    toc: false
+    theme: [default, "assets/sydney.scss"]
+    code-line-numbers: false
+    slide-number: c
+    scrollable: false
+    pdf-max-pages-per-slide: 1
+    history: false
+    ratio: 4-3
+    include-in-header: "assets/mathjax-equation-numbers.html"
+execute:
+  echo: true
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      dev = 'svg', out.width = "45%", fig.width = 6,
+                      fig.align="center")
+
+```
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
+---
+
+## Your teacher
+
+Francesco Bailo (francesco.bailo@sydney.edu.au)
+
+I am a Senior Lecturer in the School of Social and Political Sciences, University of Sydney. I am interested in researching forms of political engagement and political talk on social media. I researched the emergence and dynamics of online communities, the role between news organisations and social media, and the interdependence between social media activists and news organisations. I have engaged with and applied quantitative research methods developing expertise in quantitative text analysis (NLP) and network analysis.
+
+This year I have been teaching GOVT3901, GOVT6139, SSPS4102 & SSPS6006.
+
+Fun fact: I took GOVT6139 in 2014 during my PhD.
+
+---
+
+I am also involved in ...
+
+## Centre for AI, Trust and Governance
+
+The Centre was established this year to promote "research and innovation examining the complexities of emergent AI technologies from a socio-technical perspective."
+
+Feel free to connect with the [Centre](https://www.sydney.edu.au/arts/our-research/centres-institutes-and-groups/centre-for-ai-trust-and-governance.html) and to join its newsletter to know about the events and opportunities we are organising!
+
+## Computational social science lab
+
+The Lab organises training activities and events exploring the computational aspects of research in the social sciences! If interested, you can join the Lab [Canvas page](https://canvas.sydney.edu.au/courses/65547).
+
+# Let's get started with Research methods...
+
+## Some preliminary tips
+
+* Ask questions sooner than later, and ask questions at any point.
+
+. . .
+
+* All seminar slides are available from Canvas (go to "Modules") by the beginning of the seminar, so keep them open on your laptop (this makes opening links much easier).
+
+. . .
+
+::: {style="text-align: center;"}
+<img src = "https://media.giphy.com/media/pNpONEEg3pLIQ/giphy.gif"></img>
+:::
+
+---
+
+## How are seminars run?
+
+::: callout-note
+Yes, they are timetabled as Lec+Tut, but let's consider them as a single activity.
+:::
+
+Mix of
+
+- Lectures:
+
+    * on the content covered by textbook and;
+
+    * about the practice of research design (also with four guest lectures)
+
+- Discussions (including on readings): Discussions will generally be prompted by questions and answers socialised using Menti and Padlet (this would require you come to class with an Internet connected device)
+
+- Individual and group tasks with a focus on research design and research writing.
+
+---
+
+## We have three hands-on in-class activities scheduled
+
+::: callout-important
+Make sure you prepare for these activities before coming to class! Check-out the syllabus to know what to do.
+:::
+
+### Week 03 Literature Review with
+
+::: {style="text-align: center;"}
+<img src = 'https://upload.wikimedia.org/wikipedia/commons/5/50/Google_Antigravity_Logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original' width = '40%'>
+:::
+
+### Week 10 Quantitative Data Analysis with JASP
+
+::: {style="text-align: center;"}
+<img src = 'https://upload.wikimedia.org/wikipedia/commons/0/0d/JASP_logo.svg' width = '10%'>
+:::
+
+### Week 12 Qualitative Data Analysis with NVivo
+
+::: {style="text-align: center;"}
+<img src = 'https://upload.wikimedia.org/wikipedia/en/3/33/NVivo_Logo_2018.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original' width = '10%'>
+:::
+
+
+
+---
+
+## My expectations
+
+- Get your own copy of the textbook: Creswell, J. W., & Creswell, J. D. (2023). *Research design qualitative, quantitative, and mixed methods approaches* (6th edition). SAGE.
+
+- Read the textbook chapter assigned each week before coming to class and come to class prepared to contribute to the discussion and share reflections on the readings.
+
+- Attend and engage in class (the expectation is that you will attend at least 90% of classes).
+
+::: columns
+::: {.column width="50%"}
+::: {style="text-align: center;"}
+<img src = '../img/creswell-textbook-fourth.png' width = '45%'>
+:::
+:::
+
+::: {.column width="50%"}
+::: {style="text-align: center;"}
+<img src = '../img/creswell-textbook-fifth.png' width = '45%'>
+:::
+:::
+:::
+
+---
+
+## Let's get to know the class!
+
+(Complete only first two slides)
+
+::: {style="text-align: center;"}
+<img src = '../img/2024-GOVT6139-W01-menti-qr-code.png' width = '25%'>
+
+OR
+
+[www.menti.com/alxf5iwcwtzu](https://www.menti.com/alxf5iwcwtzu)
+
+OR
+
+Menti link from Canvas
+:::
+
+
+---
+
+## What are your expectations for GOVT6139?
+
+[Link to Padlet](https://padlet.com/sydney/2026-govt6139-week-01-expectations-what-are-your-expectation-e9h77tcpfsmkr22y)
+
+OR 
+
+Padlet link from Canvas
+
+
+# An overview
+
+## What do we mean by Research Design?
+
+A class focused on how research in the social sciences is conducted.
+
+Key questions:
+
+* What is *knowledge*? *How* do we know? And *what* we know and what can we know?
+
+* How do we critically evaluate research?
+
+* How do we do research and conduct our research processes?
+
+::: {style="text-align: right;"}
+<img src = 'https://media.giphy.com/media/3orieUe6ejxSFxYCXe/giphy.gif' width = '90%'></img>
+:::
+
+---
+
+## Can we trust research in the social sciences?
+
+- Every study has strengths and weaknesses
+
+- Different types of studies have different knowledge claims (interpretivism vs positivism)
+
+- Many areas are debated: e.g. economic conditions and protest
+
+- Research results specific to the context in which they were studied
+
+- Knowledge a cumulative endeavor (meta-analyses / systematic reviews)
+
+- Surveys: All depends on how the survey was conducted
+
+---
+
+## This semester is about unpacking ...
+
+1. What is **knowledge** (in the social and political sciences) and
+
+2. How is it **generated**?
+
+::: {style="text-align: center;"}
+<img src = "https://media.giphy.com/media/3oKIP9cJEOO9ljKoCc/giphy.gif" width = "50%"></img>
+:::
+
+---
+
+## Why to take this class? (1/2)
+
+### Understand the processes by which research is conducted in the social sciences.
+
+So what?
+
+- Become a critical consumer of research
+
+- Build a foundation to be able to conduct social science research
+
+- Real world relevance, e.g. understand how survey research is conducted and whether it can be trusted
+
+- Understand strengths and weaknesses of different research approaches e.g. interviews vs surveys
+
+- Understand new frontiers on methods
+
+- Evidence-based policy making
+
+- Professionally relevant skills
+
+---
+
+## Why to take this class? (2/2)
+
+### What the class is
+
+- Broad introduction to research design and methods
+
+- Both qualitative and quantitative approaches
+
+- Opportunity to develop a research proposal
+
+- Foundation for future research (e.g. Masters / PhD / work settings)
+
+### What the class is not
+
+- An advanced qualitative methods or statistics course (Will do some #Rstat in week 10 but you should consider [Data Analytics for Social Research SSPS6006](https://www.sydney.edu.au/courses/units-of-study/2024/ssps/ssps6006.html) for a dedicated unit)
+
+- Opportunity to conduct a research project
+
+# A quick excercise on research and knowledge
+
+## What is research? What is research design? And what do we mean by research methods?
+
+Let's take this chocolate study...
+
+::: {style="text-align: center;"}
+<img src = '../img/chocolate-study.png' width = '60%'></img>
+:::
+
+Youmans, R. J., & Jee, B. D. (2007). Fudging the numbers: Distributing chocolate influences student evaluations of an undergraduate course. *Teaching of Psychology*, 34(4), 245–247. https://doi.org/10.1080/00986280701700318
+
+---
+
+https://doi.org/10.1080/00986280701700318
+
+Let's skim through the paper (is very short!)
+
+Then answer these questions:
+
+1. What *knowledge* is produced by the paper?
+
+2. How was that *knowledge* produced? That is, how was the research *designed*?
+
+3. How much do you *trust* this knowledge?
+
+4. And why?
+
+**Add your answers into Menti** (same link as before)
+
+::: {style="text-align: center;"}
+<img src = '../img/2024-GOVT6139-W01-menti-qr-code.png' width = '25%'>
+[www.menti.com/alxf5iwcwtzu](https://www.menti.com/alxf5iwcwtzu)
+:::
+
+# Something about my own research
+
+<img src = 'https://media.giphy.com/media/MqE9IzBsmmShq/giphy.gif'></img>
+
+## What do I study?
+
+### 1. Emergence, interaction, and diffusion of *political opinions* online
+
+::: {style="text-align: center;"}
+<img src = "../img/bailo-research-lines.png" height=320px />
+:::
+
+### 2. Impacts of social media technologies and services on *political participation and organisation*
+
+---
+
+## 1. Emergence, interaction, and diffusion of *political opinions* online
+
+* Cross-disciplinary research: Digital ethnography, Computer science and Political science.
+
+* Loops involving Qualitative, Quantitative & Computational methods.
+
+### Key research questions
+
+* What opinions do **emerge** online, but also when and where?
+
+* How do opinions **interact** with other opinions through the Cloud and its online communities?
+
+* What factors determine the speed and reach of the **diffusion** of opinions?
+
+---
+
+## 2. Impact of social media technologies and services on *political participation and organisation*
+
+* Political science research: Parties, Movements, Campaigns and Elections.
+* Qualitative, Quantitative & Computational methods.
+
+### Key research questions
+
+* Can "Internet capital" offset a lack of social capital in facilitating participation and organisation?
+
+* Does Internet capital facilitate the organisation of political discontent from the margin (low-social capital areas)?
+
+* Do Internet technologies and services create more political instability by facilitating the emergence of new political actors (individuals or organisations)?
+
+* Do social media negatively affect the quality of political deliberation? What factors, technologies or services are important in reducing the quality of online conversation?
+
+# Reflection
+
+## Group task: Experiences of engaging with research
+
+In groups, introduce yourself, and discuss briefly (5 mins):
+
+1. A situation where you had to deal with questions of research methods
+
+    - E.g. in your studies, or in your work, or understanding reporting in the media
+
+2. What challenges did you face?
+
+3. What questions do you have about the process of how research is conducted?
+
+After discussing, share your answers about 2. and 3. as group on Padlet (next slide...)
+
+---
+
+<div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://sydney.padlet.org/embed/fooi1rl3hn5hmw0t" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p><div style="display:flex;align-items:center;justify-content:end;margin:0;height:28px"><a href="https://padlet.com?ref=embed" style="display:block;flex-grow:0;margin:0;border:none;padding:0;text-decoration:none" target="_blank"><div style="display:flex;align-items:center;"><img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" style="padding:0;margin:0;background:0 0;border:none;box-shadow:none" alt="Made with Padlet"></div></a></div></div>
+
+# Course Outline
+
+## Course Outline (1/2)
+
+**Week 1**: Introduction
+
+### PART I PRELIMINARY CONSIDERATIONS (Weeks 2-5)
+
+**Week 2**: The Selection of a Research Approach
+
+**Week 3**: Review of the Literature (Antigravity in-class activity)
+
+**Week 4**: The Use of Theory
+
+**Week 5**: Writing Strategies and Ethical Considerations
+
+---
+
+## Course Outline (2/2)
+
+### PART II DESIGNING RESEARCH (Weeks 6-13)
+
+**Week 6**: The Introduction
+
+**Week 7**: The Purpose Statement
+
+**Week 8**: Research Questions and Hypotheses
+
+*Mid Semester break*
+
+**Week 9**: Quantitative Methods — **A1 Viva Voce due (30%)**
+
+**Week 10**: Quantitative Methods: Data Analysis Lab (JASP in-class activity)
+
+**Week 11**: Qualitative Methods
+
+**Week 12**: Qualitative Methods: Data Analysis Lab (NVivo in-class activity)
+
+**Week 13**: Mixed-methods and Conclusions
+
+---
+
+## Assessment weighting
+
+1. **A1 — Viva Voce of Project Proposal** (30%) — 15-minute individual oral exam, 1,700wd equivalent, due Week 9 (in fact we will likely start scheduling from Week 8)
+
+2. **A2 — Research Proposal** (50%) — 3,000wd written proposal, due in the study period
+
+3. **A3 — In-class Quizzes and Short Answers** (20%) — 13 × 100wd equivalent, one per teaching week
+
+::: {style="text-align: center;"}
+<img src = 'https://media.giphy.com/media/ybQIv0CsYm1XY9A8Dm/giphy.gif' width = '35%'></img>
+:::
+
+---
+
+## A1, A2 and A3 in a nutshell
+
+::: callout-note
+### A1 — Viva Voce (30%)
+
+Orally defend your emerging research design (problem, worldview, purpose statement, research questions, anticipated design) in a 15-minute in-person exam, Week 9. Only draws on Weeks 1–8 content.
+:::
+
+::: callout-note
+### A2 — Research Proposal (50%)
+
+The capstone: a coherent 3,000-word research proposal incorporating feedback from A1 (and the optional peer-review exercise below). Due in the study period.
+:::
+
+::: callout-note
+### A3 — In-class Quizzes and Short Answers (20%)
+
+A short quiz or 100-word short answer every teaching week. Best 10 of 13 count, so up to three missed/low weeks cost you nothing.
+:::
+
+---
+
+## Optional (but recommended): peer-review tasks supporting A2
+
+On top of A1, A2 and A3, you're invited to take part in an **optional but recommended** peer-review exercise to help prepare A2. Three written submissions and three peer reviews, spread across the semester — you're free to reuse this writing in your final A2 submission.
+
+```{r echo = F, out.width='100%'}
+
+require(DiagrammeR)
+
+grViz("
+digraph peer_review_diagram {
+
+  graph [rankdir = TB]
+  node [shape = rectangle, style = filled, fillcolor = Linen]
+
+  '500w\nResearch Question\n(Task 1, W04)'
+  '1000w\nResearch Design\n(Task 2, W07)'
+  '3000w\nA2 Full Draft\n(Task 3, W11)'
+  '3000w\nA2 Final Submission'
+
+  '500w\nResearch Question\n(Task 1, W04)' -> '1000w\nResearch Design\n(Task 2, W07)' [label = 'peer-review']
+  '1000w\nResearch Design\n(Task 2, W07)' -> '3000w\nA2 Full Draft\n(Task 3, W11)' [label = 'peer-review']
+  '500w\nResearch Question\n(Task 1, W04)' -> '3000w\nA2 Full Draft\n(Task 3, W11)' [label = 'peer-review']
+  '3000w\nA2 Full Draft\n(Task 3, W11)' -> '3000w\nA2 Final Submission' [label = 'peer-review']
+}
+")
+
+```
+
+---
+
+##  Readings, Tasks and other deadlines in Canvas
+
+* Let's check Canvas [assessment overview page](https://canvas.sydney.edu.au/courses/65715/pages/assessment-overview?module_item_id=2788752)
+
+* Let's check Canvas [assignment page](https://canvas.sydney.edu.au/courses/65715/assignments)
+
+* Let's check Canvas [calendar page](https://canvas.sydney.edu.au/calendar?include_contexts=course_65715#view_name=month&view_start=2026-08-01)
+
+* Let's check Canvas [due dates (syllabus) page](https://canvas.sydney.edu.au/courses/65715/assignments/syllabus)
+
+::: {style="text-align: center;"}
+<img src = 'https://media.giphy.com/media/G4pFuFdDewNyZlUYJV/giphy.gif' width = '40%'></img>
+:::
+
+# Tools
+
+<img src = 'https://media.giphy.com/media/l0G18BkChcRRctMZ2/giphy.gif' width = '50%'></img>
+
+## Let's talk about... tools! (1/2)
+
+* You need a **reference management software**. And you need it now!
+
+    * If you are not using one yet I suggest you install Zotero (+ browser plugin, + Word plugin). Other popular option is EndNote. What RMS are you using?
+
+::: {style="text-align: center;"}
+<img src ='../img/menti-week-01.png' width = '30%'>
+
+or https://www.menti.com/al8jn8dsxbqa
+:::
+
+---
+
+## Let's talk about... tools! (2/2)
+
+* Familiarise yourself with **search tools** for academic works (in A2 you will need to produce a literature review): start with thr *library website*, *Google Scholar*, *Web of Science* or *Scopus*, and *Research Rabbit* (https://researchrabbitapp.com/home).
+
+::: {style="text-align: center;"}
+<img src = 'https://media.giphy.com/media/YGlRW1Am9q7e0/giphy.gif' width = '20%'></img>
+:::
+
+Remember that a good literature review aims for *relevance* more than *completeness* (simply, you can't win the completeness battle!). As you keep accumulating interesting works, keep asking yourself: why are these relevant? How does this support my own research project?
+
+---
+
+## Let's talk about... ChatGPT and GenAI (1/4)
+
+::: {style="text-align: center;"}
+<img src = 'https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg' width = '20%'></img>
+:::
+
+### Do you use it and how?
+
+::: {style="text-align: center;"}
+<img src = '../img/2024-GOVT6139-W01-menti-qr-code.png' width = '20%'>
+
+OR
+
+[www.menti.com/alxf5iwcwtzu](https://www.menti.com/alxf5iwcwtzu)
+:::
+
+---
+
+## Let's talk about... ChatGPT and GenAI (2/4)
+
+### Should I use it?
+
+::: {style="text-align: center;"}
+<img src = 'https://media.giphy.com/media/l2JhNkxsr2EtjfXwY/giphy.gif' width ='35%'></img>
+:::
+
+Definitely!
+
+### Problem is how to use it!
+
+No need to say that the wrong way to use it is copying/pasting ChatGPT answers into your *original* work.
+
+This is not only cheating but also ChatGPT will never produce *original* (that is, *creative*) work!
+
+Remember also that **A3 is an open assessment**: using AI to help you think is fine, but generic AI output that doesn't engage with your own research project will score lower than a rougher, more specific answer.
+
+---
+
+### Use of GenAI in GOVT6139
+
+Let's check [this Canvas page](https://canvas.sydney.edu.au/courses/65715/pages/use-of-generative-ai-and-other-marvels?module_item_id=2788753)
+
+---
+
+## Let's talk about... ChatGPT (3/4)
+
+### What is ChatGPT?
+
+ChatGPT is a *chatbot* build on a very sophisticated *language model* trained on one of the most comprehensive corpus of texts ever assembled in the history on our human civilisation.
+
+### What does it do in practice?
+
+::: columns
+::: {.column width="50%"}
+Given an input, ChatGPT will guess the *best* possible series of words to respond to that input. In doing so, it simulate a person that is not only very knowledgeable on the topic but also naturally competent in the English language.
+:::
+
+::: {.column width="50%"}
+![](https://media.giphy.com/media/19OIUml06udBC/giphy.gif)
+:::
+:::
+
+---
+
+## Let's talk about... ChatGPT (4/4)
+
+### How does it do in practice?
+
+One of the best way to understand the working of any language model available today is to think about *compression algorithms* (although many will contest this analogy!).
+
+### How do compression algorithms work?
+
+* First excluding some information and
+
+* second interpolating information to fill gaps.
+
+ChatGPT is written information what JPEG is for images. Interpolation is what gives the impression of creative knowledge. **In conclusions**, ChatGPT output can be helpful to find new information (e.g. a paper?) but can't be trusted at face value!
+
+See: Ted Chiang's [ChatGPT Is a Blurry JPEG of the Web](https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web) but also Domenic Denicola's [ChatGPT Is Not a Blurry JPEG of the Web. It's a Simulacrum.](https://blog.domenic.me/chatgpt-simulacrum/)
+
+---
+
+### How are we going to use GenAI in class?
+
+- We are going to use Google's NotebookLM for literature review tasks.
+
+- We are going to provide NotebookLM the context where to find and organise the information we want.
+
+- We do this by uploading a few papers and documents before starting to ask the questions.
+
+- We are NOT going to ask: find me the relevant literature.
+
+- Instead we are going to say: here the literature, find me relevant information in there!
+
+# Issues with the unit?
+
+## How to provide feedback (before the USS at the end of the semester)
+
+There are a number of channels for your to provide feedback during the course of the semester.
+
+You are always welcome to send me an email, of course, if you feel you are getting behind or confused. On top of this:
+
+1. At the end of each class, you can **optionally** provide a quick feedback (not anonymous) as you check-in for attendance.
+
+::: {style="text-align: center;"}
+<img src = '../img/sres-checkin-screenshot.png' width = '60%'>
+:::
+
+If you click on the sad face, I will get back to you to check what's wrong.
+
+---
+
+## How to provide feedback
+
+2. You will be invite to provide some anonymous feedback through Canvas in Week 4 and Week 9. The survey in Week 9 will also asked you about your experience with the textbook we are adopting.
+
+---
+
+## General unit queries:
+
+1. Bring to seminar
+
+2. Canvas discussion boards
+
+## Assignment queries:
+
+1. Bring to seminar.
+
+2. Check if your query has been addressed already in the submission pages
+
+3. Post the question in the dedicated discussion board.
+
+## Personal queries:
+
+Email me (francesco.bailo@sydney.edu.au, add GOVT6139 to your email's subject) or book an appointment [here](https://outlook.office.com/bookwithme/user/846b379784f440f185dfc56ee6d18f1f%40sydney.edu.au/meetingtype/5e97692b-d0e1-4d86-a501-3b6a33300e6d?anonymous).
+
+---
+
+## All queries and request about extensions (also simple extensions of five days or less) should be directed to special considerations
+
+=> https://www.sydney.edu.au/students/special-consideration.html
+
+### Remember
+
+> Deduction of 5% of the maximum mark for each calendar day after the due date.
+
+> After ten calendar days late, a mark of zero will be awarded.
+
+---
+
+## Academic Honesty & Plagiarism
+
+- If you use other peoples work or AI tools, acknowledge it.
+
+- If you do use direct quotes, put it in quotation marks and acknowledge it.
+
+- Assignments are submitted to Turnitin. Turnitin will find copied work.
+
+- If Turnitin highlights issues, per Usyd policy the assignment will be referred to the Educational Integrity Officer who will assess.
+
+- Note University of Sydney policies on plagiarism do not distinguish between accidental and intentional plagiarism.
+
+    * **Most student plagiarims is non-intentional**. Be careful and use a RMS!
+
+- Academic Honesty Education Module - https://canvas.sydney.edu.au/courses/15270
+
+- Policy - http://sydney.edu.au/policies/showdoc.aspx?recnum=PDOC2012/254&RendNum=0
+
+---
+
+## Need help? University of Sydney resources
+
+- University of Sydney Learning Hub
+
+    - Workshops and consultation on study skills, writing, referencing
+
+    - https://www.sydney.edu.au/students/learning-hub-academic-language.html
+
+- University of Sydney Library
+
+    - https://library.sydney.edu.au/study/student-support/
+
+- Health and wellbeing
+
+     - https://sydney.edu.au/students/browse.html?category=support-andservices&topic=health-wellbeing-and-support-services
+
+     - Counselling and mental health support, disability support, and other
+services
+
+- Many support services for students, do not hesitate to reach out!
+
+# Questions?
+
+## See you next week with The Selection of a Research Approach
