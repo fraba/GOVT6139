@@ -1,0 +1,660 @@
+---
+title: "GOVT6139<br>Research design"
+subtitle: "Week 02<br>The Selection of a Research Approach"
+author: "Francesco Bailo"
+institute: "The University of Sydney<br>Semester 2, 2026"
+format:
+  revealjs:
+    self-contained: true
+    fig-format: svg
+    toc: false
+    theme: [default, "assets/sydney.scss"]
+    code-line-numbers: false
+    slide-number: c
+    scrollable: false
+    pdf-max-pages-per-slide: 1
+    history: false
+    ratio: 4-3
+    include-in-header: "assets/mathjax-equation-numbers.html"
+execute:
+  echo: true
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      dev = 'svg', out.width = "45%", fig.width = 6,
+                      fig.align="center")
+
+```
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
+# Chapter 1: The Selection of a Research Approach
+
+::: {style="text-align: center;"}
+Slides adapted from Creswell, Research Design 6e, SAGE Publishing, 2023 for GOVT6139 Research Design.
+:::
+
+---
+
+## Any question concerning the content for this week?
+
+---
+
+## Chapter 1 Learning Objectives
+
+1. Define major research terms used in the textbook so that you can incorporate them into your projects.
+
+2. Describe the **three major methodologies** and their differences to select an appropriate methodology for your study.
+
+3. Describe the relationship among the terms, **philosophical worldview assumptions**, **designs**, and **methods**. How would you connect these three components in your study?
+
+4. Appraise which one of the philosophical worldviews fits your experiences, training, and cultural orientation.
+
+5. Identify which one of the types of research designs you will use in your study.
+
+6. Describe the differences between quantitative methods, qualitative methods, and mixed methods research.
+
+7. Identify the reasons for choosing either a quantitative, qualitative, or mixed methods approach to use in your study.
+
+---
+
+## Plan for today
+
+1. **Research approach** — Induction vs Deduction, **Philosophical Assumptions**
+
+2. Task 1
+
+3. **Research design** and **Research methods** — bringing everything together
+
+4. A3 in-class quiz
+
+5. Task 2 (if time allows) and check-in
+
+---
+
+## Introducing Key Terms in this Chapter
+
+**Research approaches** – procedures for research that span the steps from broad assumptions to detailed methods of data collection, analysis, and interpretation
+
+**Research designs** – procedures for inquiry
+
+**Research methods** – specific data collection, analysis, and interpretation methods
+
+**Research problem** – issue being addressed
+
+---
+
+The book uses three key terms throughout: **Research approaches**, **research designs**, and **research methods**. They represent the perspective about research from broad constructions of research to the narrow procedures of methods.
+
+---
+
+## Key Terms (1/2): Philosophical Assumptions
+
+A researcher's **point of view and set of beliefs** about the research process, brought to the study before it begins.
+
+* These are *beliefs* and *values* — what the researcher holds to be most important in conducting a study
+
+* Develop from training in a discipline or field (e.g., political science)
+
+* Also shaped by prior research experience and cultural environment
+
+---
+
+## Key Terms (1/2): Research Approach
+
+Used **synonymously with *research methodology*** — the broad type of research being undertaken.
+
+* Represents different types of research that have historically emerged
+
+* Three broad methodologies in this book: **quantitative**, **qualitative**, **mixed methods**
+
+---
+
+## Key Terms (2/2): Research Design
+
+The **ways of conducting research** within a broad methodology (approach).
+
+* Each broad methodology can be subdivided into different types of designs
+
+* Each design has its own procedures for conducting a study
+
+---
+
+## Key Terms (2/2): Research Methods
+
+Within a particular design, how the researcher **gathers, analyzes, and interprets data**.
+
+* Specific data collection, analysis, and interpretation techniques
+
+* These are the concrete methods used in a study
+
+---
+
+```{r echo = F, out.width='100%'}
+
+require(DiagrammeR)
+
+grViz("                           # All instructions are within a large character string
+digraph research_diagram {    # 'digraph' means 'directional graph', then the graph name
+
+  # graph statement
+  #################
+graph [rankdir = TB]
+node [shape = rectangle, style = filled, fillcolor = Linen]
+
+  'START HERE' [width=1, shape = oval, fillcolor = Green]
+  'YOUR Philosophical Assumptions' [width=1]  # names of nodes
+  'YOUR Research Approach/Methodology' [width=0.8]
+  'YOUR Research Design' [width=0.6]
+  'YOUR Research Methods' [width=0.4]
+
+  # edges
+  #######
+  'START HERE' -> 'YOUR Philosophical Assumptions'
+  'YOUR Philosophical Assumptions'   -> 'YOUR Research Approach/Methodology' [label = 'are consistent with']
+  'YOUR Research Approach/Methodology' -> 'YOUR Research Design' [label = 'is consistent with']
+  'YOUR Research Design' -> 'YOUR Research Methods' [label = 'is consistent with']
+}
+")
+
+```
+
+###  BUT alternatively ...
+
+---
+
+###  BUT alternatively ...
+
+```{r echo = F, out.width='100%'}
+
+require(DiagrammeR)
+
+grViz("                           # All instructions are within a large character string
+digraph research_diagram {    # 'digraph' means 'directional graph', then the graph name
+
+  # graph statement
+  #################
+graph [rankdir = TB]
+node [shape = rectangle, style = filled, fillcolor = Linen]
+
+  'START HERE' [width=1, shape = oval, fillcolor = Green]
+  'YOUR Philosophical Assumptions' [width=1]  # names of nodes
+  'YOUR Research Approach/Methodology' [width=0.8]
+  'YOUR Research Design' [width=0.6]
+  'YOUR Research Methods' [width=0.4]
+
+  # edges
+  #######
+  'START HERE' -> 'YOUR Research Approach/Methodology'
+  'YOUR Research Approach/Methodology' -> 'YOUR Philosophical Assumptions' [label = 'is consistent with']
+  'YOUR Research Approach/Methodology' -> 'YOUR Research Design' [label = 'is consistent with']
+  'YOUR Research Design' -> 'YOUR Research Methods' [label = 'is consistent with']
+}
+")
+
+```
+
+---
+
+### Now, Let's check more in detail each node...
+
+```{r echo = F, out.width='100%'}
+
+require(DiagrammeR)
+
+grViz("                           # All instructions are within a large character string
+digraph research_diagram {    # 'digraph' means 'directional graph', then the graph name
+
+  # graph statement
+  #################
+graph [rankdir = TB]
+node [shape = rectangle, style = filled, fillcolor = Linen]
+
+  'YOUR Philosophical Assumptions' [width=1]  # names of nodes
+  'YOUR Research Approach/Methodology' [width=0.8, fillcolor = Green]
+  'YOUR Research Design' [width=0.6]
+  'YOUR Research Methods' [width=0.4]
+
+  # edges
+  #######
+  'YOUR Research Approach/Methodology'
+  'YOUR Research Approach/Methodology' -> 'YOUR Philosophical Assumptions' [label = 'is consistent with']
+  'YOUR Research Approach/Methodology' -> 'YOUR Research Design' [label = 'is consistent with']
+  'YOUR Research Design' -> 'YOUR Research Methods' [label = 'is consistent with']
+}
+")
+
+```
+
+---
+
+## Three Approaches or Methodologies in Research
+
+* Qualitative
+
+* Quantitative
+
+* Mixed methods
+
+---
+
+## Qualitative research
+
+* Focuses on *understanding meaning*
+
+* Uses emerging questions
+
+* Collects data in participant's setting
+
+* Uses an **inductive** approach to analysis
+
+* Has a written report that is flexible in structure
+
+---
+
+## Quantitative research
+
+* *Tests objective theories*
+
+* Examines relationships among measurable variables
+
+* Uses survey instruments that produce numbered data
+
+* Uses statistical analysis of data generated
+
+* Tests theories **deductively**
+
+* Uses a set structure for the final report
+
+---
+
+## Mixed methods research
+
+* Collects both quantitative and qualitative data
+
+* Integrates the two forms of data
+
+* Uses distinct designs that may involve philosophy or theory
+
+* Yields additional insight to a research problem
+
+---
+
+## Two types of reasoning: Induction and deduction
+
+### Relationship between observations (evidence) and theory
+
+::: {style="text-align: center;"}
+<img src = '../img/from-theory-to-hypothesis-a.png' width = '70%'></img>
+:::
+
+---
+
+## Does Sherlock Holmes use inductive or deductive reasoning to solve a crime?
+
+::: columns
+::: {.column width="50%"}
+::: {style="text-align: center;"}
+<img src = 'https://upload.wikimedia.org/wikipedia/commons/9/9e/The_Adventure_of_the_Abbey_Grange_03.jpg'></img>
+:::
+:::
+
+::: {.column width="50%"}
+::: {style="text-align: center;"}
+<img src = 'https://upload.wikimedia.org/wikipedia/commons/7/7e/The_Adventure_of_the_Priory_School_08.jpg' ></img>
+:::
+:::
+:::
+
+---
+
+### You can share your answer with Menti if you want
+
+::: {style="text-align: center;"}
+<img src ='../img/menti-week-02.png' width = '30%'></img>
+
+or https://www.menti.com/alaj9frntnz5
+:::
+
+
+# Three Major Components of a Research Approach
+
+* Philosophical worldviews
+
+* Research designs
+
+* Research methods
+
+---
+
+### Let's examing the Philosophical Assumpytions or Worlviews now...
+
+```{r echo = F, out.width='100%'}
+
+require(DiagrammeR)
+
+grViz("                           # All instructions are within a large character string
+digraph research_diagram {    # 'digraph' means 'directional graph', then the graph name
+
+  # graph statement
+  #################
+graph [rankdir = TB]
+node [shape = rectangle, style = filled, fillcolor = Linen]
+
+  'YOUR Philosophical Assumptions' [width=1, fillcolor = Green]  # names of nodes
+  'YOUR Research Approach/Methodology' [width=0.8, fillcolor = Gray]
+  'YOUR Research Design' [width=0.6]
+  'YOUR Research Methods' [width=0.4]
+
+  # edges
+  #######
+  'YOUR Research Approach/Methodology'
+  'YOUR Research Approach/Methodology' -> 'YOUR Philosophical Assumptions' [label = 'is consistent with']
+  'YOUR Research Approach/Methodology' -> 'YOUR Research Design' [label = 'is consistent with']
+  'YOUR Research Design' -> 'YOUR Research Methods' [label = 'is consistent with']
+}
+")
+
+```
+
+---
+
+## Philosophical Worldviews
+
+* Beliefs about the world and nature of research
+
+* Make explicit in proposal
+
+* Four common worldviews:
+
+  * Postpositivism
+
+  * Constructivism
+
+  * Transformative
+
+  * Pragmatism
+
+---
+
+## Four Worldviews (1/4): Postpositivism
+
+The traditional "scientific method" — associated more with quantitative than qualitative research.
+
+* **Determination** — causes (probably) determine effects or outcomes
+
+* **Reductionism** — ideas are reduced to a small, discrete set to test (e.g. variables in a hypothesis)
+
+* **Empirical observation and measurement** — of the objective reality "out there"
+
+* **Theory verification** — begin with a theory, collect data that supports or refutes it, revise and test again
+
+> Researchers don't *prove* a hypothesis — they report a *failure to reject* it. Knowledge is always conjectural and fallible.
+
+---
+
+## Four Worldviews (2/4): Constructivism
+
+Used mainly in **qualitative research** (often paired with *interpretivism*).
+
+* **Understanding** — individuals seek to understand the world they live and work in
+
+* **Multiple participant meanings** — meanings are varied, so the researcher looks for complexity, not a few fixed categories
+
+* **Social and historical construction** — meanings are negotiated through interaction with others, and shaped by culture/history, not just imprinted on individuals
+
+* **Theory generation** — rather than starting with a theory (postpositivism), the researcher inductively *generates* one from the data
+
+> E.g. broad, open-ended interview questions let participants construct meaning in their own words.
+
+---
+
+## Four Worldviews (3/4): Transformative
+
+Arose in the 1980s–90s from researchers who felt postpositivism didn't address power, oppression, and marginalisation.
+
+* **Political** — research is intertwined with a political change agenda
+
+* **Power and justice oriented** — focuses on inequities of gender, race, ethnicity, disability, sexual orientation, class
+
+* **Collaborative** — participants may help design questions, collect data, or analyse findings, so they aren't further marginalised by the research
+
+* **Change oriented** — an action agenda for reform, aiming to improve participants' lives
+
+> E.g. feminist, critical race, queer, disability, and indigenous methodologies.
+
+---
+
+## Four Worldviews (4/4): Pragmatism
+
+The common philosophical basis for **mixed methods** research.
+
+* **Consequences of action** — arises from actions, situations, and consequences, not fixed antecedent conditions
+
+* **Problem centered** — focus is on the research problem/question, not on any one method
+
+* **Pluralistic** — draws liberally from both quantitative and qualitative assumptions; not committed to one system
+
+* **Real-world practice oriented** — concerned with applications: "what works" to solve the problem
+
+> "Truth is what works at the time" — researchers are free to choose whatever methods best fit their research question.
+
+---
+
+## TASK 1
+
+### Of the four philosophical worldviews, which do you think is more appropriate for your research and why?
+
+### Form a group with the students around you and briefly discuss
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 8, seconds = 00)
+```
+
+You can optionally & individually share your comment with Padlet (make sure to add your name)
+
+---
+
+## Padlet
+
+<div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://sydney.padlet.org/embed/9sv1ysi560nifokh" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p><div style="display:flex;align-items:center;justify-content:end;margin:0;height:28px"><a href="https://padlet.com?ref=embed" style="display:block;flex-grow:0;margin:0;border:none;padding:0;text-decoration:none" target="_blank"><div style="display:flex;align-items:center;"><img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" style="padding:0;margin:0;background:0 0;border:none;box-shadow:none" alt="Made with Padlet"></div></a></div></div>
+
+---
+
+### Let's examing the Research design now...
+
+```{r echo = F, out.width='100%'}
+
+require(DiagrammeR)
+
+grViz("                           # All instructions are within a large character string
+digraph research_diagram {    # 'digraph' means 'directional graph', then the graph name
+
+  # graph statement
+  #################
+graph [rankdir = TB]
+node [shape = rectangle, style = filled, fillcolor = Linen]
+
+  'YOUR Philosophical Assumptions' [width=1, fillcolor = Gray]  # names of nodes
+  'YOUR Research Approach/Methodology' [width=0.8, fillcolor = Gray]
+  'YOUR Research Design' [width=0.6, fillcolor = Green]
+  'YOUR Research Methods' [width=0.4]
+
+  # edges
+  #######
+  'YOUR Research Approach/Methodology'
+  'YOUR Research Approach/Methodology' -> 'YOUR Philosophical Assumptions' [label = 'is consistent with']
+  'YOUR Research Approach/Methodology' -> 'YOUR Research Design' [label = 'is consistent with']
+  'YOUR Research Design' -> 'YOUR Research Methods' [label = 'is consistent with']
+}
+")
+
+```
+
+---
+
+## Research Designs
+
+* Types of inquiry
+
+* Qualitative, quantitative, or mixed methods
+
+* Provides specific direction for procedures
+
+* Types of designs have grown
+
+---
+
+__Table 1.3: Alternative Research Designs__
+
+| Quantitative Designs | Qualitative Designs | Mixed-Methods Designs |
+| :-: | :-: | :-: |
+| • Experimental and<br />quasi-experimental designs<br />• Single-subject designs<br />• Nonexperimental designs, such as surveys<br />• Longitudinal designs | • Descriptive method<br />• Narrative research<br />• Phenomenology<br />• Grounded theory<br />• Ethnography<br />• Case study<br />• Convergent<br />• Explanatory sequential<br />• Exploratory sequential<br />• Complex designs with<br />embedded core designs | • Case study<br />• Convergent<br />• Explanatory sequential<br />• Exploratory sequential<br />• Complex designs with<br />embedded core designs |
+
+---
+
+### And finally, let's examing the Research methods now...
+
+```{r echo = F, out.width='100%'}
+
+require(DiagrammeR)
+
+grViz("                           # All instructions are within a large character string
+digraph research_diagram {    # 'digraph' means 'directional graph', then the graph name
+
+  # graph statement
+  #################
+graph [rankdir = TB]
+node [shape = rectangle, style = filled, fillcolor = Linen]
+
+  'YOUR Philosophical Assumptions' [width=1, fillcolor = Gray]  # names of nodes
+  'YOUR Research Approach/Methodology' [width=0.8, fillcolor = Gray]
+  'YOUR Research Design' [width=0.6, fillcolor = Gray]
+  'YOUR Research Methods' [width=0.4, fillcolor = Green]
+
+  # edges
+  #######
+  'YOUR Research Approach/Methodology'
+  'YOUR Research Approach/Methodology' -> 'YOUR Philosophical Assumptions' [label = 'is consistent with']
+  'YOUR Research Approach/Methodology' -> 'YOUR Research Design' [label = 'is consistent with']
+  'YOUR Research Design' -> 'YOUR Research Methods' [label = 'is consistent with']
+}
+")
+
+```
+
+---
+
+## Research Methods
+
+* Specific forms of
+
+  * Data collection (e.g., instrument, observations)
+
+  * Analysis (e.g., statistical analysis, interpret themes)
+
+  * Interpretation
+
+---
+
+__Table 1.4: Quantitative, Mixed, and Qualitative Methods__
+
+| Quantitative Methods | Mixed Methods | Qualitative Methods |
+| :-: | :-: | :-: |
+| Predetermined | Both predetermined and emerging methods | Emerging methods |
+| Instrument-based questions | Both open- and closed-ended questions | Open-ended questions |
+| Performance data, attitude data, observational data, and census data | Multiple forms of data drawing on all possibilities | Interview data, observation data, document data, and audiovisual data |
+| Statistical analysis | Statistical and text analysis | Text and image analysis |
+| Statistical interpretation | Across databases interpretation | Themes, patterns, and interpretation |
+
+---
+
+## Interconnecting Worldviews, Designs, and Methods
+
+The three components we've just covered don't stand alone — they **combine** to produce a research approach:
+
+**Worldview** (philosophical assumptions) + **Design** (procedures/strategy) + **Methods** (data collection/analysis) → **quantitative, qualitative, or mixed methods approach**
+
+Table 1.5 (next slides) sets out which worldview, designs, and methods *typically* go together for each of the three approaches — useful when choosing (and justifying) your own.
+
+---
+
+## Table 1.5 (1/2): Assumptions, designs & methods {.smaller}
+
+| Tends to... | Qualitative | Quantitative | Mixed Methods |
+| :-- | :-- | :-- | :-- |
+| **Philosophical assumptions** | Constructivist/transformative | Postpositivist | Pragmatic |
+| **Designs** | Phenomenology, grounded theory, ethnography, case study, narrative | Surveys, experiments (true, quasi-, single-subject) | Sequential, convergent, complex designs |
+| **Methods** | Open-ended questions, emerging approaches, text/image data | Closed-ended questions, predetermined approaches, numeric data | Both open- & closed-ended, emerging & predetermined, quant & qual data |
+
+---
+
+## Table 1.5 (2/2): Practices of research {.smaller}
+
+| Tends to... | Qualitative | Quantitative | Mixed Methods |
+| :-- | :-- | :-- | :-- |
+| **Practices** | Positions themselves; collects participant meanings; focuses on a single concept; brings personal values in; studies context/setting; validates accuracy of findings; interprets data; creates a change agenda; collaborates with participants; uses text analysis | Tests/verifies theories; identifies variables; relates variables in questions/hypotheses; uses validity/reliability standards; observes & measures numerically; uses unbiased approaches; uses statistical procedures | Collects quant & qual data; develops a rationale for mixing; integrates data at different stages; presents visual pictures of procedures; employs practices of both approaches |
+
+---
+
+## Chaper 1 Summary
+
+* Identify approach as qualitative, quantitative, or mixed methods
+
+* Approach includes worldview, research design, and research methods
+
+* Choice of approach
+
+  * Research problem
+
+  * Personal experiences
+
+  * Audience
+
+---
+
+## Week 02 Check-in
+
+---
+
+## A3 — In-class Quiz
+
+Take 5 minutes to complete this week's A3 quiz on Canvas — worth 10 points, on the Selection of a Research Approach.
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 5, seconds = 00)
+```
+
+---
+
+## TASK 2 (If time allows...)
+
+### The Selection of a Research Approach
+
+### In groups, select a research problem that you would like to study and address the questions on the task sheet.
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 12, seconds = 00)
+```
+
+(Once you have completed the task sheet, one person per group can add them to Padlet for further discussion)
+
+---
+
+<div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://sydney.padlet.org/embed/whfx3xzavuynpzg0" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p><div style="display:flex;align-items:center;justify-content:end;margin:0;height:28px"><a href="https://padlet.com?ref=embed" style="display:block;flex-grow:0;margin:0;border:none;padding:0;text-decoration:none" target="_blank"><div style="display:flex;align-items:center;"><img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" style="padding:0;margin:0;background:0 0;border:none;box-shadow:none" alt="Made with Padlet"></div></a></div></div>
+
+---
+
+## See you next week with the **Review of the Literature**.
+
+## Remember to bring your own laptop for the literature lab!
