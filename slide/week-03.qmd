@@ -52,11 +52,13 @@ Do not reshare
 
 2. **Web of Science training** — live database demonstration and search techniques
 
-3. Task 1 (groups): abstracting papers with Antigravity
+3. Task 1 (individual): summarise and connect your own papers with Antigravity
 
-4. A3 in-class short answer
+4. Task 2 (groups): abstracting papers with Antigravity
 
-5. Task 2 (individual): find papers and identify your research problem
+5. A3 in-class short answer
+
+6. Task 3 (individual): find papers and identify your research problem
 
 ---
 
@@ -318,19 +320,49 @@ Also, get help with your search string here: [webofscience.help.clarivate.com/en
 
 ---
 
-## TASK 1: Antigravity (in group)
+## TASK 1: Antigravity (individually)
+
+- Each student to:
+
+  1. Gather **3–5 papers** (PDFs) related to your own research interest and save them in a folder on your laptop
+  2. Open Antigravity, create a **New Project**, and **Add Folder** pointing at your papers
+  3. Ask Antigravity to write a **Markdown (.md) document**: for each paper, a **two-sentence summary**, plus a note on **why the paper is relevant to your research** — your first attempt at a research topic/problem
+
+- Save the `.md` file — you'll come back to it
+
+---
+
+## TASK 1: Antigravity (individually) {.smaller}
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 5, seconds = 00)
+```
+
+- **High-level task**: get Antigravity to produce a running summary + relevance note for each of your papers
+
+- **Low-level tips** (a few pointers, but feel free to experiment):
+
+  - No papers on hand yet? Use any readings from this unit as a placeholder
+  - Try: *"For each paper in this folder, write a two-sentence summary, then explain why it's relevant to a study on [your topic]"*
+
+> Don't worry about landing on the "right" research problem yet — this is a first attempt you'll revise
+
+---
+
+## TASK 2: Antigravity (in group)
 
 - Each group member to:
 
   1. Download the papers from Canvas (compressed folder) with topic "political participation and social media"
   2. Open Antigravity, create a **New Project**, and **Add Folder** pointing at the downloaded papers
-  3. Choose **Local Mode** when prompted for how the agent should run
 
 - Work individually from here — Antigravity runs locally on your own laptop, so there's no notebook to share and nothing to invite anyone to
 
 ---
 
-## TASK 1: Antigravity (in group) {.smaller}
+## TASK 2: Antigravity (in group) {.smaller}
 
 ```{r echo = FALSE}
 library(countdown)
@@ -398,6 +430,33 @@ An example of a literature map from the textbook
 
 ---
 
+## From Literature Map to Zettelkasten
+
+### A method for turning readings into linked notes
+
+- **Zettelkasten** ("slip box"): a note-taking method for building a web of connected notes, not just a pile of sources
+- Each **zettel** (note) = **one idea**, written in **your own words**, with a source reference
+- Core principles:
+  - **Atomicity** — one idea per note, so it can be linked precisely
+  - **Own words** — forces understanding, not copying
+  - **Explicit links** — state *why* two notes connect, not just that they do
+
+> "Links without explanation will not create knowledge." — [zettelkasten.de/introduction](https://zettelkasten.de/introduction/)
+
+---
+
+## Applying Zettelkasten to Your Literature Review
+
+- For each paper, write **one or more atomic notes**: a claim, a method, a finding — not a full summary
+- **Link notes across papers**, explaining the connection (agreement, contradiction, extension, gap)
+- Build **structure notes** — meta-notes clustering related zettels into themes — these become the skeleton of your review
+- Compare with a literature map:
+  - **Literature map** — one visual, top-down snapshot
+  - **Zettelkasten** — a growing, linkable archive you keep writing into as you read
+- Your Antigravity per-paper summaries (Task 1) are a good **starting point**: rewrite them as atomic notes in your own words, then link them
+
+---
+
 ## Definition of Terms: When to Define
 
 - **Individuals outside the field** may not understand
@@ -452,8 +511,8 @@ An example of a literature map from the textbook
 1. Understand different purposes across research approaches
 2. Follow systematic 7-step process
 3. Use multiple high-quality databases
-4. Prioritize and evaluate sources carefully
-5. Create literature map for organization
+4. Prioritise and evaluate sources carefully
+5. Create literature map for organisation
 
 ### Writing and style:
 
@@ -470,7 +529,7 @@ An example of a literature map from the textbook
 
 ## Key Terms to Remember
 
-- **Abstract** — brief review summarizing major elements of a study
+- **Abstract** — brief review summarising major elements of a study
 - **Computer databases** — online repositories providing access to literature
 - **Definition of terms** — precise meanings for concepts in your study
 - **Literature map** — visual representation of literature organization
@@ -481,12 +540,12 @@ An example of a literature map from the textbook
 
 ## A3 — In-class Short Answer
 
-Take 5 minutes to complete this week's A3 short answer on Canvas — worth 10 points, on distinguishing a research topic from a research problem (Ch. 2, Review of the Literature).
+Take 10 minutes to complete this week's A3 short answer on Canvas — worth 10 points, on distinguishing a research topic from a research problem (Ch. 2, Review of the Literature).
 
 ```{r echo = FALSE}
 library(countdown)
 
-countdown(minutes = 5, seconds = 00)
+countdown(minutes = 10, seconds = 00)
 ```
 
 ---
@@ -503,7 +562,7 @@ From your textbook's glossary:
 
 ---
 
-## TASK 2: Web of Science + Antigravity (individually)
+## TASK 3: Web of Science + Antigravity (individually, if time allows)
 
 1. Reflect on a research **topic** (for A2)
 2. Think about what **key words** would help you find relevant literature
