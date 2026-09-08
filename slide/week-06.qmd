@@ -1,0 +1,582 @@
+---
+title: "GOVT6139<br>Research design"
+subtitle: "Week 06<br>The Introduction"
+author: "Francesco Bailo"
+institute: "The University of Sydney<br>Semester 2, 2026"
+format:
+  revealjs:
+    self-contained: true
+    fig-format: svg
+    toc: false
+    theme: [default, "assets/sydney.scss"]
+    code-line-numbers: false
+    slide-number: c
+    scrollable: false
+    pdf-max-pages-per-slide: 1
+    history: false
+    ratio: 4-3
+    include-in-header: "assets/mathjax-equation-numbers.html"
+execute:
+  echo: true
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      dev = 'svg', out.width = "45%", fig.width = 6,
+                      fig.align="center")
+
+```
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
+# Chapter 5: The Introduction
+
+::: {style="text-align: center;"}
+Slides adapted from Creswell, Research Design 6e, SAGE Publishing, 2023 for GOVT6139 Research Design.
+
+Do not reshare
+:::
+
+---
+
+## Any question concerning the content for this week?
+
+---
+
+## Plan for today
+
+1. **What an introduction does** — the research problem, and why a problem is not a topic
+
+2. Task 1 (Menti): knowledge check
+
+3. **Gap-spotting and its critics** — Alvesson & Sandberg; Davis on "interestingness"
+
+4. Task 2: find the research problem in a news article
+
+5. **The abstract** — five components; Task 3 on an APSR abstract
+
+6. **Introductions by approach** — quantitative, qualitative, mixed methods
+
+7. **The deficiencies model** — the four-part template; Task 4 on a real opening paragraph
+
+8. Task 5 (group): build a proposal framework from Weeks 1–6
+
+9. A3 in-class short answer + check-in
+
+---
+
+## Chapter 5 Learning Objectives
+
+By the end of this session, you will be able to:
+
+1. **Construct** an abstract for a study with its five key components
+2. **Explain** the role of the introduction as a key feature of a study
+3. **Compare** introductions for quantitative, qualitative, and mixed methods studies
+4. **Describe** the four components of a good introduction using the deficiencies model
+
+# Part I: What an Introduction Does
+
+---
+
+## What Is an Introduction?
+
+The **first passage** in a proposal, journal article, dissertation, or scholarly study.
+
+It sets the stage for the entire project by:
+
+- Establishing the **issue or concern** that leads to the research
+- Creating reader **interest** in the problem
+- Placing the study within the larger context of **scholarly literature**
+- Reaching out to a specific **audience**
+
+> First impressions matter — a weak introduction gives the reader a reason to stop reading.
+
+---
+
+## The Research Problem
+
+**Research problem** = the problem or issue that leads to the *need* for a study.
+
+Where research problems come from:
+
+- The researcher's personal experience or workplace situation
+- Debates in the academic literature
+- "Gaps" that need addressing — though the idea of a gap is contested
+- Areas of *instability* in what we think we know
+- Policy debates in government or organisations
+
+> **The key move:** don't just describe what the literature contains — identify a **problem that requires a solution**.
+
+---
+
+## A Problem Is Not a Topic
+
+Creswell & Creswell's warning: researchers too often state what *exists* rather than what is *wrong*.
+
+| Topic / fact | Research problem |
+| :-- | :-- |
+| "Teenage pregnancy is prevalent." | "Schools have done a poor job of accommodating pregnant teenagers." |
+| "Tobacco use is common among adolescents." | "We know little about how the high-school social context shapes teen smoking." |
+
+The problem states **what needs attention** and **why the study is needed** — not just that a phenomenon exists.
+
+---
+
+## Task 1: Knowledge Check {.smaller}
+
+::: {style="text-align: center;"}
+(Anonymous — self-assessment only)
+
+<img src='../img/menti-week-06.png' width='30%'></img>
+
+or <https://www.menti.com/alcumrq77k67>
+:::
+
+# Part II: Gap-Spotting and Its Critics
+
+---
+
+## The Problem With Gap-Spotting
+
+**Gap-spotting** — "X has not been studied, so I will study X" — is the dominant way social scientists frame problems. Yet it rarely produces the most interesting or influential work.
+
+Why it falls short:
+
+- It tends to **reproduce rather than challenge** the assumptions behind existing theory
+- It builds *incrementally* within established frameworks instead of questioning them
+- It is **consensus-seeking** — it preserves the current paradigm rather than reframing the problem
+
+::: footer
+Alvesson, M., & Sandberg, J. (2024). *Constructing Research Questions: Doing Interesting Research*. SAGE. https://doi.org/10.4135/9781529682588
+:::
+
+---
+
+## What Makes Research Interesting?
+
+**Davis's (1971) argument:** research becomes interesting when it **challenges an audience's assumptions** about how things are — not when it merely adds to what is known.
+
+The formula:
+
+> **"What seems to be X is in reality non-X."**
+
+::: {style="text-align: center;"}
+<img src='../img/gaps-vs-instability.png' width='40%'>
+:::
+
+::: footer
+Davis, M. S. (1971). That's interesting! *Philosophy of the Social Sciences*, 1, 309–344.
+:::
+
+---
+
+## Assumption-Challenging Research
+
+- **Durkheim on suicide** — challenged the assumption that suicide is purely individual; showed it is a *social* phenomenon
+- **Weber on the Protestant ethic** — challenged the assumption that the economy determines religion; argued religion shaped economic conduct
+- **Marx on capitalism** — challenged assumptions about how economic processes are organised
+
+> Despite knowing this, researchers across *all* paradigms — positivist to poststructuralist — still predominantly use gap-spotting. Instability-spotting is harder, but it is where the interesting problems are.
+
+---
+
+## Task 2: What Is the Research Problem Here?
+
+1. Go to **The Conversation** (<https://theconversation.com/>)
+2. Open the *Politics + Society* section — or any section that interests you
+3. Read one article closely
+
+::: {style="text-align: center;"}
+> **What is the research problem stated or implied in the article?**
+:::
+
+Remember: the problem (or issue) is what leads to the *need* for a study — not the topic itself.
+
+4. Post your answer on **Padlet** (link on Canvas)
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 10, seconds = 00)
+```
+
+# Part III: The Abstract
+
+---
+
+## The Abstract: Your Study's First Impression
+
+A brief summary (≈ 250 words) that lets readers grasp the essentials quickly.
+
+**Five components, in order:**
+
+1. **Problem / issue** — start with the issue under investigation
+2. **Data sources** — who or what the data come from, and their key characteristics
+3. **Method** — the essential features of the design and analysis
+4. **Findings** — the basic results (with statistics, for quantitative work)
+5. **Implications** — conclusions and applications
+
+---
+
+## Abstract Example {.smaller}
+
+> "The issue that this study addresses is the lack of women in martial arts competitions. To address this problem, the purpose of this study will be exploring the motivation of female athletes in Tae Kwon Do competitions. To gather data, interviews with 4 female Tae Kwon Do tournament competitors were conducted. The interviews were transcribed and analyzed. This data leads to the following 3 themes: social support, self-efficacy, and goal orientation. These themes will be useful for understanding the optimal way to increase motivation in female martial artists."
+
+::: {style="text-align: center;"}
+*Which sentence is doing which job?*
+:::
+
+1. Problem / issue &nbsp;&nbsp; 2. Data sources &nbsp;&nbsp; 3. Method &nbsp;&nbsp; 4. Findings &nbsp;&nbsp; 5. Implications
+
+---
+
+## Task 3: Find the Five Components
+
+1. Open the *American Political Science Review*
+   (<https://www.cambridge.org/core/journals/american-political-science-review>)
+2. Pick an article and read its abstract
+3. Can you find all five components? Is anything missing or only implied?
+
+Keep this article open — we will use it again for Task 4.
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 8, seconds = 00)
+```
+
+# Part IV: Introductions by Research Approach
+
+---
+
+## Quantitative vs Qualitative Introductions
+
+::: columns
+::: {.column width="50%"}
+**Quantitative**
+
+- Focuses on the **factors or variables** that influence an outcome
+- Often seeks to **test or extend a theory**
+- Written from an **impersonal** point of view, in the past tense
+- Follows an established, **structured** pattern
+:::
+
+::: {.column width="50%"}
+**Qualitative**
+
+- Describes a problem best understood by **exploring a concept or phenomenon**
+- Used when the variables, questions, and theory are **not yet known**
+- May include a **personal statement** from the researcher
+- Written from a **personal, subjective** point of view
+:::
+:::
+
+---
+
+## Mixed Methods Introductions
+
+- Can lead with a **qualitative or a quantitative** framing (or hold them in balance)
+- May **tip toward one approach** or give both equal weight
+- The problem needs **both**: understanding relationships among variables *and* exploring a topic in depth
+
+**Signals that a mixed methods framing fits:**
+
+- Existing research is dominated by a single methodology
+- There is a need for more inclusive, diverse evidence
+
+# Part V: The Deficiencies Model
+
+---
+
+## The Deficiencies Model: A Template
+
+A four-part structure — about two pages, roughly one paragraph each:
+
+1. **State the research problem** — with a narrative hook
+2. **Review the evidence** from the literature that frames the problem
+3. **Indicate the deficiencies** in that evidence — gaps, *and* instability
+4. **State the importance** of the problem for specific audiences
+
+> The same template works for quantitative, qualitative, and mixed methods proposals.
+
+---
+
+## Component 1: The Research Problem (the Hook)
+
+**Narrative hook** — the opening words that draw the reader into the study.
+
+Tips for the opening paragraph:
+
+- Write a first sentence that genuinely stimulates interest
+- Avoid quotations in the lead sentence
+- Avoid idiomatic expressions
+- Consider a striking number for impact
+- Clearly identify the research problem
+- Cite enough references to establish that it matters
+
+**Metaphor:** lower the barrel slowly into the well — acclimatise the reader rather than plunging them into unfamiliar depths.
+
+---
+
+## Narrative Hook Examples
+
+**Effective openings:**
+
+- *"Who controls the process of chief executive succession?"*
+- *"Tobacco use is a leading cause of cancer in American society."*
+
+**Weak openings:**
+
+- A long block quotation
+- An idiom or cliché
+- A flat statement of a fact with no problem attached
+
+---
+
+## Task 4: Does the Opening Follow the Tips?
+
+1. Go back to the APSR article from Task 3
+2. Read the **first paragraph of the article itself** (not the abstract)
+3. Check it against the checklist:
+
+> - Opening sentence stimulates interest
+> - No quotation in the lead sentence
+> - No idiomatic expressions
+> - Numeric information used for impact
+> - Research problem clearly identified
+> - References cited to justify importance
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 6, seconds = 00)
+```
+
+---
+
+## Component 2: Evidence From the Literature
+
+**Purpose:** justify the study's importance and locate it in an ongoing scholarly dialogue.
+
+Guidelines:
+
+- Review **groups of studies**, not one study at a time
+- Focus on **empirical** work (quantitative, qualitative, mixed); review articles can help orient
+- Prefer **recent literature** (roughly the past 10 years)
+- Place citations at the **end of paragraphs** so no single study dominates
+
+---
+
+## Component 3: Deficiencies in the Evidence
+
+Types of deficiency:
+
+- A topic unexplored with particular **groups or populations**
+- A need for **replication** because results are mixed
+- **Underrepresented voices** missing from the literature
+- **Methodological** limitations
+- **Unstable** understanding of a phenomenon
+
+**Where to find them:** the *"future research"* and *"limitations"* sections of published studies; overlooked variables or populations; unsatisfactory explanations.
+
+---
+
+## Deficiencies by Research Type {.smaller}
+
+::: columns
+::: {.column width="50%"}
+**Qualitative**
+
+- Special populations not explored
+- New sites not investigated
+- Underrepresented groups not given voice
+- Lack of interview / observation data
+:::
+
+::: {.column width="50%"}
+**Quantitative**
+
+- Inadequate theory development
+- Invalid or unreliable measures
+- Inattention to mediating variables
+:::
+:::
+
+**Mixed methods:** a lack of integrated quantitative and qualitative data; missing insight from connecting the two databases.
+
+---
+
+## Component 4: Importance for Audiences
+
+**Purpose:** give the reader a clear rationale for why the study matters, and show it has wide relevance.
+
+Include:
+
+- **3–4 reasons** the study adds to or improves scholarly research
+- **Several reasons** it helps improve practice
+- **Multiple reasons** it could improve policy or decision-making
+
+---
+
+## Putting It Together: A Worked Example
+
+**Study:** "Exploring the Conceptions and Misconceptions of Teen Smoking in High Schools"
+
+1. **Problem** — tobacco use causes cancer; adolescent smoking is increasing
+2. **Literature** — four established research areas on adolescent smoking
+3. **Deficiencies** — minimal attention to the high-school *social* context
+4. **Audiences** — researchers, school administrators, health officials
+
+---
+
+## Common Mistakes to Avoid
+
+1. **Stating facts instead of problems**
+   - Weak: "Teenage pregnancy is prevalent."
+   - Better: "Schools have done a poor job of accommodating pregnant teenagers."
+
+2. **Leaving the problem vague** — the reader is left to decide whether it matters
+
+3. **Confusing the research problem with the research questions**
+   - Problem = an *issue* requiring a solution
+   - Questions = *specific queries* answered by your data (Week 8)
+
+---
+
+## Research Problem vs Research Question {.smaller}
+
+| Research problem | Research question |
+| :-- | :-- |
+| Describes an **issue or concern** | Poses a **specific question** (ends with "?") |
+| States **what is wrong** or needs attention | Asks **what you want to find out** |
+| Justifies **why** the study is needed | Guides **what data** you collect |
+| Often uses "concern", "challenge", "lack of", "threatens" | Often starts with "What", "How", "Why", "To what extent" |
+| Creates the **need** for research | Directs the **focus** of research |
+
+---
+
+## Quality Checklist
+
+A strong introduction:
+
+- [ ] Hooks the reader with a compelling opening
+- [ ] States the research problem clearly
+- [ ] Justifies the problem with substantial literature
+- [ ] Identifies specific deficiencies (gaps *or* instability)
+- [ ] Addresses one or more concrete audiences
+- [ ] Ends with a clear contribution statement
+- [ ] Stays consistent with the study's research approach
+
+# Part VI: Group Exercise
+
+---
+
+## Task 5 (Group): Build a Proposal Framework
+
+Work in groups of 3–4. You will be assigned one scenario. Develop the framework for a research proposal using concepts from **Weeks 1–6**.
+
+::: columns
+::: {.column width="50%"}
+**A — Electoral participation**
+The effect of compulsory voting on political engagement and democratic legitimacy in Australia, compared with voluntary systems.
+
+**B — Political communication**
+How social media algorithms shape political opinion formation and polarisation among Australian voters.
+:::
+
+::: {.column width="50%"}
+**C — Indigenous political representation**
+Barriers to Indigenous political participation in local-government elections across remote Australian communities.
+
+**D — Policy implementation**
+The role of bureaucratic discretion in implementing state-level climate policy in Australia.
+:::
+:::
+
+---
+
+## Task 5 (Group): What to Produce {.smaller}
+
+::: columns
+::: {.column width="50%"}
+**1. Problem identification**
+
+- A clear research problem statement
+- A narrative-hook opening sentence
+- Why the problem matters
+
+**2. Approach**
+
+- Quantitative, qualitative, or mixed methods
+- The worldview that best fits
+- Justify both choices
+:::
+
+::: {.column width="50%"}
+**3. Theory and literature**
+
+- How theory might be used in the study
+- Key terms that need defining
+
+**4. Methods and ethics preview**
+
+- What kind of data you would collect
+- Two ethical considerations
+- Who the audience(s) would be
+:::
+:::
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 25, seconds = 00)
+```
+
+---
+
+## Group Presentations
+
+Two minutes per group — the problem statement, the hook, and the chosen approach.
+
+# Wrap-up
+
+---
+
+## Summary: Key Takeaways
+
+- The introduction **sets the stage** for the whole project and shapes the reader's first impression
+- A **research problem** is an issue that requires a solution — not a topic, and not a fact
+- **Gap-spotting** is common but limited; the interesting problems often lie in **instability**, not absence
+- The **abstract** has five components: problem, data, method, findings, implications
+- The **deficiencies model** gives a four-part template: problem/hook → evidence → deficiencies → importance
+- The template adapts to **quantitative, qualitative, and mixed methods** introductions
+
+---
+
+## A3 — In-class Short Answer
+
+Take 10 minutes to complete this week's A3 short answer on Canvas — worth 10 points, marked 0 / 5 / 10 (≤ 100 words).
+
+For **your own** emerging project: (1) write **one narrative-hook sentence**, and (2) write **one sentence stating your research problem** — the issue or deficiency, not just your topic.
+
+> A fact about your topic ("voter turnout in remote communities is low") is not a problem. A problem names what is wrong or unresolved ("we do not know which barriers actually keep remote voters from the ballot box").
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 10, seconds = 00)
+```
+
+---
+
+## Week 06 Check-in
+
+Anything unclear from this week — or from Weeks 1–6 ahead of A1?
+
+---
+
+## See you next week with **The Purpose Statement** (Ch. 6)
+
