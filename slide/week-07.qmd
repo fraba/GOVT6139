@@ -1,0 +1,525 @@
+---
+title: "GOVT6139<br>Research design"
+subtitle: "Week 07<br>The Purpose Statement"
+author: "Francesco Bailo"
+institute: "The University of Sydney<br>Semester 2, 2026"
+format:
+  revealjs:
+    self-contained: true
+    fig-format: svg
+    toc: false
+    theme: [default, "assets/sydney.scss"]
+    code-line-numbers: false
+    slide-number: c
+    scrollable: false
+    pdf-max-pages-per-slide: 1
+    history: false
+    ratio: 4-3
+    include-in-header: "assets/mathjax-equation-numbers.html"
+execute:
+  echo: true
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      dev = 'svg', out.width = "45%", fig.width = 6,
+                      fig.align="center")
+
+```
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
+# Chapter 6: The Purpose Statement
+
+::: {style="text-align: center;"}
+Slides adapted from Creswell, Research Design 6e, SAGE Publishing, 2023 for GOVT6139 Research Design.
+
+Do not reshare
+:::
+
+---
+
+## Any question concerning the content for this week?
+
+---
+
+## Plan for today
+
+1. **What a purpose statement does** — distinguishing it from the problem and the research questions
+2. Task 1 (Menti): knowledge check
+3. **Qualitative purpose statements** — the central phenomenon, design features, and script
+4. Task 2: identify the four research components in a published abstract
+5. **Quantitative purpose statements** — variables, theory, and script
+6. **Mixed methods purpose statements** — integration, design types, and script
+7. **Common mistakes** across all three approaches
+8. Task 3: draft a purpose statement for an assigned scenario
+9. A3 in-class short answer + check-in
+
+---
+
+## Chapter 6 Learning Objectives
+
+By the end of this session, you will be able to:
+
+1. **Describe** the relationship among the problem, the purpose statement, and the research questions
+2. **Identify** the three major components of a qualitative purpose statement
+3. **Identify** the central phenomenon in a qualitative purpose statement
+4. **State** a quantitative purpose statement with variables and their relationships
+5. **Describe** the four essential components of a mixed methods purpose statement
+
+# Part I: What Is a Purpose Statement?
+
+---
+
+## What Is a Purpose Statement?
+
+A purpose statement:
+
+- **Indicates** why you want to do the study and what you intend to accomplish
+- **Conveys** the overall intent of a proposed study in one sentence or several sentences
+- Represents the **most important statement** in the study
+- Needs to be **clear, specific, and informative**
+
+Distinguished from:
+
+- The **problem** — the need for the research (Week 6)
+- The **research questions** — the specific queries answered by your data (Week 8)
+
+---
+
+## The Research Hierarchy
+
+::: {style="text-align: center;"}
+**The Problem** → **The Purpose / Aim** → **The Research Questions** → **The Data**
+:::
+
+**Example flow:**
+
+- **Problem** — people are refusing to get vaccinated for COVID
+- **Purpose** — identify the factors influencing vaccination refusal
+- **Research question** — are participants refusing vaccination because they suspect long-term health consequences?
+- **Data** — mailed questionnaire to collect data
+
+---
+
+## Purpose Statement Design Guidelines
+
+- Set apart as a **separate sentence or paragraph**
+- Use research language: *"The purpose of this study is (was) (will be)..."*
+- **Present/past tense** for completed studies, **future tense** for proposals
+- Make it the **central organising idea** of the study
+
+---
+
+## Task 1 (Menti): Knowledge Check {.smaller}
+
+::: {style="text-align: center;"}
+(Anonymous — self-assessment only)
+
+<img src='../img/menti-week-07-01.png' width='30%'></img>
+
+or <https://www.menti.com/alpimxhp15af>
+:::
+
+---
+
+## Task 2: Identify Four Research Components in an Abstract
+
+Working from an assigned abstract, locate:
+
+1. **Problem** — what issue or gap does the study address?
+2. **Purpose** — what is the study's main objective or intent?
+3. **Research question** — what specific question(s) does the study investigate?
+4. **Data** — what type of data/evidence was collected?
+
+Post your answers on **Padlet**:
+
+<https://padlet.com/sydney/2026-govt6139-week-07-task-02-s023m06qrj91hj04t8pd>
+:::
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 10, seconds = 00)
+```
+
+# Part II: Qualitative Purpose Statements
+
+---
+
+## Qualitative Purpose Statement Components
+
+A good qualitative purpose statement contains:
+
+1. **Central phenomenon** explored in the study
+2. **Participants** in the study
+3. **Research site**
+4. **Qualitative approach** used
+5. **Action verbs** indicating how learning will take place
+6. **Neutral, nondirectional language**
+
+---
+
+## What Is the Phenomenon?
+
+A **phenomenon** is the **single central concept** or **key idea** being explored in a qualitative study.
+
+- **One focused concept** — not multiple ideas or relationships between variables
+- **Exploratory in nature** — something to be understood, discovered, or examined
+- **Experiential or social** — often involves human experiences, behaviours, or social processes
+- **Context-dependent** — understood within specific settings and circumstances
+
+---
+
+## Examples of Phenomena {.smaller}
+
+- **Teacher burnout experiences** in urban schools
+- **Identity formation** among first-in-the-family college students
+- **Grief processes** following sudden loss
+- **Decision-making patterns** in family businesses
+- **Cultural adaptation** of immigrant communities
+- **Leadership emergence** in crisis situations
+
+> A **phenomenon** is for a *qualitative* study what the **relationship between independent and dependent variable** is for a *quantitative* study.
+
+---
+
+## What Phenomena Are NOT
+
+- **Relationships between variables** (that's quantitative)
+- **Multiple separate concepts** (focus on one)
+- **Predetermined outcomes** (avoid directional language)
+- **Measurable constructs** (focus on understanding, not measurement)
+
+**Remember**: the phenomenon is **what you want to understand**, not what you want to prove or measure.
+
+---
+
+## Design Features for Qualitative Purpose Statements {.smaller}
+
+::: columns
+::: {.column width="50%"}
+1. **Signal words** — purpose, intent, objective ("The purpose of this study is...")
+2. **Single focus** — one central phenomenon; avoid relating or comparing variables
+3. **Action verbs** — understand, develop, explore, examine, generate, discover
+4. **Neutral language** — nondirectional wording (✅ "exploring the experiences" / ❌ "successful experiences")
+:::
+
+::: {.column width="50%"}
+5. **Working definition** — a tentative, general definition of the central phenomenon
+6. **Qualitative approach** — ethnography, grounded theory, case study, phenomenology, narrative
+7. **Participants and site** — individuals/groups/organisations; homes/classrooms/programs
+8. **Delimitations** — scope limits (e.g. "only women", "one geographic area")
+:::
+:::
+
+---
+
+## Qualitative Purpose Statement Script
+
+```
+The purpose of this _____ (qualitative approach) study
+is (was/will be) to _____ (action verb: understand?
+explore? develop?) the _____ (central phenomenon)
+for _____ (participants) at _____ (research site).
+
+At this stage in the research, the _____ (central
+phenomenon) will be generally defined as _____
+(provide a general definition).
+```
+
+---
+
+## Qualitative Example: Phenomenology Study {.smaller}
+
+**Lauterbach (1993)** — mothers who lost babies in late pregnancy:
+
+> "The phenomenological inquiry, as part of uncovering meaning, articulated 'essences' of meaning in mothers' lived experiences when their wished-for babies died..."
+
+- **Central phenomenon**: mothers' lived experiences
+- **Action words**: articulated, uncovering
+- **Approach**: phenomenological inquiry
+- **Participants / site**: mothers / homes
+
+---
+
+## Qualitative Example: Case Study {.smaller}
+
+**Frelin (2015)** — teacher relationships with students:
+
+> "The purpose of this article is to trace and exemplify relational and professional practices that can help teachers and other school staff to assist students to overcome obstacles and be more successful at school."
+
+- **Central phenomenon**: relational and professional practices
+- **Action verbs**: trace, exemplify
+- **Approach**: case study (one teacher, Gunilla)
+- **Participants / site**: one teacher / municipal school
+
+# Part III: Quantitative Purpose Statements
+
+---
+
+## Quantitative Purpose Statement Components
+
+Quantitative purpose statements focus on **relating or comparing** variables:
+
+1. **Variables** and their relationships
+2. **Participants** and research site
+3. **Language** associated with quantitative research
+4. **Theory** being tested
+5. **Deductive** approach
+
+**Key difference:** focus on **variables** rather than phenomena.
+
+---
+
+## Major Components of Quantitative Purpose Statements {.smaller}
+
+::: columns
+::: {.column width="50%"}
+1. **Signal words** — "The purpose of this study is..."
+2. **Research approach** — survey or experimental
+3. **Theory/framework** — identify theory, model, or conceptual framework
+4. **Variables** — independent, dependent, mediating, moderating
+:::
+
+::: {.column width="50%"}
+5. **Connecting words** — "relationship", "comparison", "determinants", "correlation", "prediction"
+6. **Variable order** — independent → mediating → dependent (left to right)
+7. **Participants and site** — unit of analysis and research location
+8. **Variable definitions** — using accepted definitions
+:::
+:::
+
+---
+
+## Quantitative Purpose Statement Script
+
+```
+The purpose of this _____ (experiment/survey) study
+is to test the theory of _____ that _____ (explains/
+predicts) that the _____ (independent variable)
+_____ (compares/relates) to _____ (dependent
+variable).
+
+This study aims to recruit _____ (participants) at
+_____ (research site). The independent variable
+will be defined as _____. The dependent variable
+will be defined as _____.
+```
+
+---
+
+## Quantitative Example: Survey Study {.smaller}
+
+**DeGraw (1984)** — educators in correctional institutions:
+
+> "The purpose of this study was to examine the relationship between personal characteristics and the job motivation of certified educators who taught in selected state adult correctional institutions in the United States."
+
+- **Relationship word** used; **IV**: personal characteristics; **DV**: job motivation
+- **Participants / site**: certified educators / state correctional institutions
+- Variables **defined** in the statement
+
+---
+
+## Quantitative Example: Experimental Study {.smaller}
+
+**Esposito et al. (2017)** — online shopping nudges:
+
+> "...sought to test how small changes to a website's design can affect purchase behaviour, with particular attention to the interaction with socio-demographic characteristics of the participant."
+
+- **IVs**: website design changes, demographics
+- **DV**: purchase behaviour
+- **Participants**: 626 participants; **design**: 3 × 2 × 2 experimental
+
+# Part IV: Mixed Methods Purpose Statements
+
+---
+
+## Mixed Methods Purpose Statement Components
+
+A mixed methods purpose statement includes:
+
+1. **Overall intent** of the study
+2. **Type** of mixed methods design
+3. **Both quantitative and qualitative** language
+4. **Integration** of both strands
+5. **Insight** expected from combining databases
+
+---
+
+## Guidelines for Mixed Methods Purpose Statements
+
+::: columns
+::: {.column width="50%"}
+**Signal intent**
+
+- "The purpose of" or "The intent of"
+- What you want to accomplish by study's end — should have **practical value**
+:::
+
+::: {.column width="50%"}
+**Design type & language**
+
+- **Convergent, explanatory sequential, exploratory sequential, complex**
+- **Quantitative words**: testing, relating, comparing
+- **Qualitative words**: exploring, understanding, generating
+:::
+:::
+
+---
+
+## Types of Insight from Integration {.smaller}
+
+- **Convergent** — more complete understanding by comparing quantitative and qualitative results
+- **Explanatory sequential** — explain quantitative results with qualitative follow-up for deeper understanding
+- **Exploratory sequential** — develop/improve quantitative measures by first gathering qualitative data
+- **Complex** — enrich frameworks by adding qualitative, quantitative, or both
+
+---
+
+## Mixed Methods Script: Convergent Design {.smaller}
+
+```
+This mixed methods study will address _____ (overall
+intent). A convergent mixed methods design will be used.
+In this study, _____ (quantitative data) will be used to
+test the theory of _____ that predicts _____ (independent
+variables) will _____ influence _____ (dependent variables)
+for _____ (participants) at _____ (site).
+
+The _____ (qualitative data type) will explore _____
+(central phenomenon) for _____ (participants) at _____
+(site). The insight from combining databases will _____
+(provide more complete understanding/validate results).
+```
+
+---
+
+## Mixed Methods Script: Explanatory Sequential {.smaller}
+
+```
+This study will address _____ (overall intent). An
+explanatory sequential mixed methods design will be used,
+involving collecting quantitative data first and then
+explaining results with in-depth qualitative follow-up.
+
+In the first quantitative phase, _____ (instrument) data
+will be collected from _____ (participants) to test _____
+(theory) to assess whether _____ (independent variables)
+relate to _____ (dependent variables). The second
+qualitative phase will help explain the quantitative
+results in more depth.
+```
+
+---
+
+## Mixed Methods Example: Convergent Design {.smaller}
+
+**Classen et al. (2007)** — older driver safety:
+
+> "...we were able to compare and integrate main findings from a national crash dataset with perspectives of stakeholders."
+
+- **Integration**: compared national data with stakeholder perspectives
+- **Both data types**: quantitative crash data + qualitative stakeholder views
+- **Outcome**: guidelines for interventions
+
+---
+
+## Mixed Methods Example: Explanatory Sequential {.smaller}
+
+**Ivankova & Stick (2007)** — student persistence:
+
+> "...to identify factors contributing to students' persistence...by obtaining quantitative results from a survey of 278 current and former students and then following up with four purposefully selected individuals...through a qualitative case study analysis."
+
+- **Phase 1**: quantitative survey (278 students); **Phase 2**: qualitative case studies (4 individuals)
+- **Mixed language**: "identify" (quantitative) + "explore" (qualitative)
+
+# Part V: Putting It Together
+
+---
+
+## Common Mistakes to Avoid {.smaller}
+
+::: columns
+::: {.column width="33%"}
+**Qualitative**
+
+- Multiple phenomena
+- Directional language (successful, positive, useful)
+- Comparing/relating variables
+- Missing central phenomenon
+:::
+
+::: {.column width="33%"}
+**Quantitative**
+
+- Wrong variable order
+- Missing connecting words
+- Undefined key variables
+- No theory/framework
+:::
+
+::: {.column width="33%"}
+**Mixed methods**
+
+- Missing integration rationale
+- Unclear design type
+- Only one language, not both
+- No overall intent statement
+:::
+:::
+
+---
+
+## Task 3: Scenario-Based Research Design
+
+Working in your assigned group, draft a one-sentence purpose statement for your scenario, using the script matching its intended approach (qualitative, quantitative, or mixed methods).
+
+Post your draft on **Padlet**:
+
+<https://padlet.com/sydney/2026-govt6139-week-07-task-03-s023m0el680s42iw27kb>
+:::
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 15, seconds = 00)
+```
+
+---
+
+## Key Takeaways
+
+- The purpose statement is the **most critical statement** in your study — it sets the direction for the entire project
+- **Qualitative**: single phenomenon, neutral language, action verbs
+- **Quantitative**: variable relationships, theory testing, proper ordering
+- **Mixed methods**: integration rationale, both languages, design type
+
+# Wrap-up
+
+---
+
+## A3 — In-class Short Answer
+
+Take 10 minutes to complete this week's A3 short answer on Canvas — worth 10 points, marked 0 / 5 / 10 (≤ 100 words).
+
+Draft a one- or two-sentence purpose statement for **your own** emerging research project, using the fill-in script for your approach (qualitative / quantitative / mixed methods). Fill in the blanks with your actual project details — don't leave the template generic.
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 10, seconds = 00)
+```
+
+---
+
+## Week 07 Check-in
+
+Anything unclear from this week — or from Weeks 1–7 ahead of A1?
+
+---
+
+## See you next week with **Research Questions and Hypotheses** (Ch. 7)
