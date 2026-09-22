@@ -1,0 +1,485 @@
+---
+title: "GOVT6139<br>Research design"
+subtitle: "Week 08<br>Research Questions and Hypotheses"
+author: "Francesco Bailo"
+institute: "The University of Sydney<br>Semester 2, 2026"
+format:
+  revealjs:
+    self-contained: true
+    fig-format: svg
+    toc: false
+    theme: [default, "assets/sydney.scss"]
+    code-line-numbers: false
+    slide-number: c
+    scrollable: false
+    pdf-max-pages-per-slide: 1
+    history: false
+    ratio: 4-3
+    include-in-header: "assets/mathjax-equation-numbers.html"
+execute:
+  echo: true
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      dev = 'svg', out.width = "45%", fig.width = 6,
+                      fig.align="center")
+
+```
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
+# Chapter 7: Research Questions and Hypotheses
+
+::: {style="text-align: center;"}
+Slides adapted from Creswell, Research Design 6e, SAGE Publishing, 2023 for GOVT6139 Research Design.
+
+Do not reshare
+:::
+
+---
+
+## Any question concerning the content for this week?
+
+---
+
+## Plan for today
+
+1. Warm-up: label examples as topic, problem, or research question — then Task 1 (harder): find all three in an unlabelled example
+2. **From purpose statement to research questions** — where signposts fit in the research hierarchy
+3. **Quantitative research questions and hypotheses** — describing, relating, comparing
+4. Task 2: identify the hypotheses and variables in a published abstract
+5. **Qualitative research questions** — the central question and sub-questions
+6. Task 3: identify the central phenomenon in a published example
+7. **Mixed methods research questions and hypotheses** — integrating both languages
+8. **Recap** — tying together the introduction, purpose statement, and research questions
+9. A3 in-class short answer + check-in
+
+---
+
+## Chapter 7 Learning Objectives
+
+By the end of this session, you will be able to:
+
+1. **Identify** the types of research questions and hypotheses used in a *quantitative* study
+2. **Write** a good qualitative **central question** and **sub-questions**
+3. **Describe** how to craft a *mixed methods* question conveying the intent and procedures of a mixed methods study
+
+---
+
+## Warm-up: Topic, Problem, or Research Question?
+
+Over the last three weeks we've met four building blocks of a study: the **topic**, the **problem**, the **purpose statement**, and — from today — the **research question or hypothesis**.
+
+For each statement below, label it as a **topic**, a **problem**, or a **research question**:
+
+1. Divorce
+2. The high divorce rate among married couples
+3. Whether financial issues contribute to divorce
+4. Worker cutbacks
+5. Worker cutbacks — a problem for all employees
+6. What factors influence businesses to downsize
+
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 5, seconds = 00)
+```
+
+---
+
+## Warm-up: Answers {.smaller}
+
+**Divorce** (Creswell & Creswell, 2022, Ch. 5)
+
+- **Topic** — divorce
+- **Problem** — the high divorce rate among married couples
+- **Research question** — whether financial issues contribute to divorce
+
+**Worker cutbacks / downsizing** (Creswell & Creswell, 2022, Ch. 5)
+
+- **Topic** — worker cutbacks
+- **Problem** — worker cutbacks, a problem for all employees
+- **Research question** — what factors influence businesses to downsize
+
+---
+
+## Find the Topic, Problem, and Research Question {.smaller}
+
+**Exploring the Conceptions and Misconceptions of Teen Smoking in High Schools: A Multiple Case Analysis** (Plano Clark et al., 2002, adapted in Creswell & Creswell, 2022, Ch. 5)
+
+> Tobacco use is a leading cause of cancer in American society (McGinnis & Foefe, 1993). Although smoking among adults has declined in recent years, it has actually increased for adolescents. The Centers for Disease Control and Prevention reported that smoking among high school students had risen from 27.5 percent in 1991 to 34.8 percent in 1995 (USDHHS, 1996). Unless this trend is dramatically reversed, an estimated 5 million of our nation's children will ultimately die a premature death (Centers for Disease Control and Prevention, 1996).
+
+Unlike the sets above, nothing here is pre-labelled.
+
+---
+
+## Task 1: Your Job {.smaller}
+
+1. Which sentence(s) set up the **topic**?
+2. Which sentence(s) state the **problem**?
+3. This is a **qualitative, multiple-case study**. Given the title above, draft a plausible **central research question** it might ask.
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 8, seconds = 00)
+```
+
+---
+
+## Task 1: Discussion {.smaller}
+
+- **Topic** — tobacco use and its health effects, and adolescent smoking specifically (the first two sentences orient the reader before the stakes are raised)
+- **Problem** — the *rising* rate of teen smoking despite a decline among adults, and its life-or-death consequences (the CDC statistic and "5 million... premature death") — this is what creates the *need* for the study
+- A plausible **central question**: *"What are high school students' conceptions and misconceptions of smoking?"* — matching the qualitative, exploratory framing signalled by the title ("Exploring...")
+
+The textbook itself doesn't draw a hard line between topic and problem here — in real writing they often blend into one opening paragraph. What matters is that a **topic orients** the reader, while a **problem creates the need** for the study.
+
+# Part I: Quantitative Research Questions and Hypotheses
+
+---
+
+## From Purpose Statement to Research Questions
+
+Investigators place **signposts** to carry the reader through the plan for a study:
+
+1. **The purpose statement** (Week 7) — establishes the **central intent** for the study
+2. **Research questions or hypotheses** (this week) — **narrow the purpose statement** to predictions about what will be learned, or questions to be answered
+
+::: {style="text-align: center;"}
+**The Purpose Statement** → **Research Questions / Hypotheses** → **The Data**
+:::
+
+Each form — quantitative, qualitative, mixed methods — has its **own script and language**.
+
+---
+
+## Quantitative Research Questions and Hypotheses
+
+**Research questions** — about the **relationships among variables** the investigator seeks to know
+
+**Hypotheses** —
+
+- **Predictions** about the expected relationships among variables
+- **Estimates** of population values based on data from a sample
+
+---
+
+## Three Basic Approaches (Quantitative)
+
+1. **Describe** responses to variables
+2. **Relate** variables (e.g., multivariate analysis)
+3. **Compare** groups — practically similar to (2), as *group* is an additional independent variable
+
+**Most rigorous form tests a theory:**
+
+- Measure the **independent** and **dependent** variables separately
+- Write **questions** or **hypotheses**
+- State **null** and **alternative** hypotheses
+
+---
+
+## Quantitative Research Question: Describing Outcomes
+
+```
+What is the frequency and variation of scores on
+_____ (name the variable) for _____ (participants)
+in the study?
+```
+
+**Filled in:**
+
+> What is the frequency and variation of scores on **standardised test performance** for **high school students** in the study?
+
+---
+
+## Quantitative Research Question: Examining Relationships
+
+```
+_____ (name the theory) posits that _____ (explain
+relationship between variables). It is thus predicted
+that there will be a relationship between _____
+(predictor variable) and _____ (outcome variable),
+such that (explain the direction of the effect).
+```
+
+---
+
+## Quantitative Research Question: Examining Relationships {.smaller}
+
+**Filled in:**
+
+> **Social Learning Theory** posits that individuals learn behaviours and norms through observing others and the consequences they face. It is thus predicted that there will be a relationship between **exposure to aggressive behaviour in media** and **aggressive behaviour in children**, such that the more children are exposed to aggressive behaviour in media, the more likely they are to exhibit aggressive behaviours themselves.
+
+---
+
+## Quantitative Null Hypothesis
+
+```
+There is no significant difference between _____
+(the control and experimental groups on the
+independent variable) on _____ (dependent variable).
+```
+
+**Filled in:**
+
+> There is no significant difference between **the control and experimental groups on the use of traditional vs. innovative teaching methods** on **student engagement levels**.
+
+---
+
+## Writing Hypotheses: Use a Consistent Form
+
+- **Null hypothesis** — predicts *no difference* or no relationship
+- **Alternative hypothesis** — predicts a *significant relationship* between variables
+- Use **directional words**: affect, influence, predict, impact, determine, cause, relate
+
+Directionality (i.e., causality) is determined through **theory** — or through design, if you run a controlled experiment — **not from statistical analysis alone**.
+
+---
+
+## A Reminder About Correlation and Causation
+
+::: {style="text-align: center;"}
+<img src='https://imgs.xkcd.com/comics/correlation_2x.png' width='55%'></img>
+:::
+
+Two variables can be correlated — but that alone never tells us whether one **causes** the other. We need a good **theory** (or an experimental design) to argue for causation.
+
+---
+
+## Task 2: Questions, Hypotheses and Variables {.smaller}
+
+Yang, T. Z. (2025). Normalization of Censorship: Evidence from China. *The Journal of Politics*, 87(4), 1227–1242. <https://doi.org/10.1086/734239>
+
+> Authoritarian censorship is traditionally understood as a repressive tool that will cause public backlash against the regime. However, surveys worldwide consistently find that citizens in authoritarian regimes are apathetic toward or even supportive of government censorship. To explain this puzzle, I theorize that citizens are subject to a normalization process... Using 28 million censored articles and two original survey experiments in China, I show that (1) a majority of censored articles are indeed unrelated to politically threatening topics, and (2) respondents exposed to the censorship of both political and nonpolitical content report higher support for censorship and the regime than those exposed only to political censorship.
+
+---
+
+## Task 2: Questions, Hypotheses and Variables
+
+- Skim the abstract
+- What are the **hypotheses**?
+- What are the **independent** and **dependent variables** for each hypothesis?
+
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 8, seconds = 00)
+```
+
+# Part II: Qualitative Research Questions
+
+---
+
+## Qualitative Research Questions
+
+Qualitative researchers pose **research questions** — not objectives, not hypotheses.
+
+**Two forms of qualitative research questions:**
+
+1. **Central question** — a broad question asking for exploration of the central phenomenon
+2. **Sub-questions** — questions that narrow the focus of the study
+
+---
+
+## Ask 1–2 Central Research Questions
+
+- Broad, asking for exploration of the **central phenomenon** or concept
+- Explore the general, **complex factors** related to the phenomenon
+- Present **broad perspectives** or **meanings**
+
+**No more than 5–7 sub-questions** — narrow the focus but leave the questioning open. Relate the central question to your **strategy of inquiry**:
+
+- **Ethnography** — questions verify accuracy of data about a culture-sharing group
+- **Phenomenology** — what participants experienced
+- **Grounded theory** — generate a theory from observation
+
+---
+
+## Formulating a Qualitative Research Question
+
+- Begin with **WHAT** or **HOW** to convey an open or emerging design
+- Focus on a **single phenomenon** or concept
+- Use exploratory verbs: report, describe, discover, seek, explore
+- Use **open-ended** questions, without reference to the literature or theory (unless indicated)
+- Specify the **participants** and **research site**
+
+Expect the questions to **evolve and change** as the study proceeds.
+
+---
+
+## Qualitative Central Question Script
+
+```
+_____ (How or what?) is the _____ (central
+phenomenon) for _____ (participants) at _____
+(research site)?
+```
+
+**Filled in:**
+
+> **How** is **job satisfaction experienced** for **faculty members** at **a university**?
+
+---
+
+## Task 3: Identify the Central Phenomenon {.smaller}
+
+**Example 7.5 from the textbook:**
+
+> How do participants engage in an intergenerational playgroup (IGP) within the context of a residential aged care facility (RACF)?
+
+What is the **central phenomenon** investigated here?
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 5, seconds = 00)
+```
+
+---
+
+## Qualitative Sub-questions {.smaller}
+
+Sub-questions sub-divide the central question's phenomenon into narrower questions — often becoming the key questions in interviews or observations (Creswell & Bàez, 2020).
+
+**Central question:** What is the campus climate toward diversity?
+
+**Sub-questions:**
+
+- What are students' **attitudes** on campus toward forming diverse social groups?
+- How is diversity **encouraged** by the central administration?
+- How is diversity **encouraged** in the undergraduate classes on campus?
+- How is diversity **encouraged** by the campus police force?
+
+# Part III: Mixed Methods Research Questions and Hypotheses
+
+---
+
+## Mixed Methods Research Questions and Hypotheses
+
+A mixed methods study includes:
+
+- A **qualitative** question
+- A **quantitative** question (or hypotheses)
+- A **mixed methods** question that conveys the importance of **integrating** the two
+
+Use the same guidelines already covered for qualitative and quantitative questions and hypotheses.
+
+---
+
+## Order Questions to Match the Design
+
+- **Single-phase design** — either qualitative or quantitative question first
+- **Two-phase design** — order the questions to match the phases
+- **Three-phase design** — the mixed methods question is often placed in the middle
+
+---
+
+## A Mixed Methods Research Question
+
+```
+The mixed methods question in the study purpose or
+intent will be to _____ (compare, explain, build,
+augment) the _____ (quantitative or qualitative data
+or process/framework) with _____ (quantitative or
+qualitative data) by using a _____ (convergent,
+explanatory sequential, exploratory sequential, or
+embedded design) with the procedure of _____
+(merging, connecting, or embedding).
+```
+
+---
+
+## Example 7.8: Research Questions in a Mixed Methods Study {.smaller}
+
+DeCoito and Estaiteyeh (2022) studied science/STEM **teachers' experiences with online teaching and learning** in a Canadian province — combining quantitative and qualitative results on curriculum planning and assessment strategies.
+
+- **What digital tools and resources** were teachers using in an online environment? *(descriptive, quantitative)*
+- **What strategies** did teachers' online curriculum development and implementation embrace? *(descriptive, quantitative)*
+- **What models** of student assessment did the teachers implement online? *(quantitative, supported by qualitative experiences — a mixed methods question)*
+- **What were the impacts** of online teaching on students' outcomes as observed by teachers? *(quantitative)*
+
+# Part IV: Recap — Introduction, Purpose Statement, Research Questions
+
+---
+
+## The Research Hierarchy, Revisited
+
+::: {style="text-align: center;"}
+**Topic** → **Problem** (Ch. 5, Week 6) → **Purpose Statement** (Ch. 6, Week 7) → **Research Questions / Hypotheses** (Ch. 7, Week 8) → **The Data**
+:::
+
+- **Topic** — the general subject area
+- **Problem** — the issue or gap that leads to the study
+- **Purpose statement** — the central intent, in one sentence
+- **Research questions / hypotheses** — narrow the purpose statement into what will be learned or answered
+
+---
+
+## One Example, Three Weeks
+
+- **Problem** — people are refusing to get vaccinated for COVID
+- **Purpose** — identify the factors influencing vaccination refusal
+- **Research question** — are participants refusing vaccination because they suspect long-term health consequences?
+- **Data** — mailed questionnaire to collect data
+
+*(the same chain introduced in Week 7 — now complete with this week's research question)*
+
+---
+
+## Common Threads Across Qualitative, Quantitative, and Mixed Methods {.smaller}
+
+|  | Central focus | Question form |
+|---|---|---|
+| **Qualitative** | a single **phenomenon** | central question + sub-questions |
+| **Quantitative** | **variables** and their relationships | descriptive, relational, or comparative questions/hypotheses |
+| **Mixed methods** | both, plus their **integration** | a qualitative question, a quantitative question, and a mixed methods question |
+
+Each signpost — topic, problem, purpose, research question — **narrows** the one before it.
+
+# Wrap-up
+
+---
+
+## Summary
+
+- Research questions and hypotheses **narrow the purpose statement** and add signposts
+- **Qualitative** — central question and sub-questions
+- **Quantitative** — describe, relate, or compare variables
+- **Mixed methods** — a qualitative question, a quantitative question, and a mixed methods question
+
+---
+
+## A3 — In-class Short Answer
+
+Take 10 minutes to complete this week's A3 short answer on Canvas — worth 10 points, marked 0 / 5 / 10 (≤ 100 words).
+
+Draft the **central research question** (or, if your project is quantitative, a **hypothesis**) for your emerging project.
+
+- **Qualitative** — one broad, open-ended central question beginning with "what" or "how", naming your central phenomenon and (if fixed) participants/site, plus 1–2 sub-questions
+- **Quantitative** — state your key variables and write one directional or non-directional hypothesis (or a relationship/comparison research question) specifying the predicted relationship
+- **Mixed methods** — do both, plus one sentence on what integrating them will let you learn
+
+State clearly which approach you're using — fill in the blanks with your actual project details, not a generic template.
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 10, seconds = 00)
+```
+
+---
+
+## Week 08 Check-in
+
+Anything unclear from this week — or from Weeks 1–8 ahead of A1?
+
+---
+
+## See you next week with **Quantitative Methods** (Ch. 8)
