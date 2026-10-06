@@ -149,10 +149,12 @@ Lohr, S. L. (2021). Sampling: Design and Analysis. Chapman and Hall/CRC. https:/
 ## Target population vs sampled population {.smaller}
 
 ::: {style="text-align: center;"}
-<img src = "../img/lohr-2021-sampling.png" width = '45%'></img>
+<img src = "../img/lohr-2021-sampling.png" width = '40%'></img>
 :::
 
+::: {style="font-size: 0.85em; line-height: 1.25;"}
 > **Target population** and **sampled population** in a *telephone survey* of *registered voters*. Some persons in the target population do not have a telephone or will not be associated with a telephone number in the sampling frame. In some households with telephones, the residents are not registered to vote and hence are not eligible for the survey. Some eligible persons in the sampling frame population do not respond because they cannot be contacted, some refuse to respond to the survey, and some may be ill and incapable of responding.
+:::
 
 ::: aside
 Lohr, S. L. (2021). Sampling: Design and Analysis. Chapman and Hall/CRC. https://doi.org/10.1201/9780429298899
@@ -180,8 +182,10 @@ Your population is stratified based on characteristics of interest before sampli
 <img src = 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Stratified_sampling.PNG' width = '35%'></img>
 :::
 
+::: {style="font-size: 0.85em; line-height: 1.25;"}
 ::: callout-note
 The allocation population-sample can be *proportionate* or *disproportionate*, if you want a larger proportion in your sample of some individuals because their characteristics present more variability.
+:::
 :::
 
 ---
@@ -195,7 +199,7 @@ The allocation population-sample can be *proportionate* or *disproportionate*, i
 ```{r echo = FALSE}
 library(countdown)
 
-countdown(minutes = 20, seconds = 00)
+countdown(minutes = 15, seconds = 00)
 ```
 
 # 3. Measurement: Operationalisation and variable construction
@@ -239,6 +243,8 @@ Kellstedt, P. M., & Whitten, G. D. (2013). The fundamentals of political science
 
 ## Validity vs Reliability (from textbook) {.smaller}
 
+::: {style="font-size: 0.95em; line-height: 1.25;"}
+
 ### Validity: can you draw accurate inferences from scores on the instruments?
 
 * **Construct validity**: Does the survey instrument accurately measure the hypothetical construct or concept it was intended to measure?
@@ -252,6 +258,8 @@ Kellstedt, P. M., & Whitten, G. D. (2013). The fundamentals of political science
 
 ::: callout-note
 **Internal** and **external** validity *mostly* refers to experiment settings. Internal validity is about biases (e.g., selection bias) that can threaten *internal* inferences. External validity is about generalisation of findings outside of the sample, that is *external* inferences about individuals not in the sample.
+:::
+
 :::
 
 ---
@@ -286,29 +294,48 @@ Describe your design with Campbell & Stanley's notation:
 
 ## Designs in Campbell & Stanley notation {.smaller}
 
+```{r echo = FALSE, fig.height = 5}
+DiagrammeR::grViz("
+digraph cs {
+  rankdir = LR; compound = true; nodesep = 0.15; ranksep = 0.35
+  node [shape = plaintext, fontname = Helvetica, fontsize = 14]
+  edge [arrowhead = none, penwidth = 1.5]
+
+  subgraph cluster1 { label = <<b>Pre-experimental</b>: one-group pretest–posttest>; labeljust = l; color = '#c0392b'
+    a1 [label = 'Group A'];  o1 [label = 'O'];  x1 [label = <<font color='#c0392b'><b>X</b></font>>];  p1 [label = 'O']
+    a1 -> o1 [style = invis]; o1 -> x1 -> p1 }
+
+  subgraph cluster2 { label = <<b>Quasi-experimental</b>: nonequivalent control group (no R)>; labeljust = l; color = '#e08e0b'
+    a2 [label = 'Group A']; o2 [label = 'O']; x2 [label = <<font color='#c0392b'><b>X</b></font>>]; p2 [label = 'O']
+    b2 [label = 'Group B']; q2 [label = 'O']; y2 [label = '']; r2 [label = 'O']
+    a2 -> o2 [style = invis]; o2 -> x2 -> p2
+    b2 -> q2 [style = invis]; q2 -> y2 -> r2
+    {rank = same; a2; b2} }
+
+  subgraph cluster3 { label = <<b>True experiment</b>: pretest–posttest control group>; labeljust = l; color = '#2e8b57'
+    a3 [label = <Group A  <b>R</b>>]; o3 [label = 'O']; x3 [label = <<font color='#c0392b'><b>X</b></font>>]; p3 [label = 'O']
+    b3 [label = <Group B  <b>R</b>>]; q3 [label = 'O']; y3 [label = '']; r3 [label = 'O']
+    a3 -> o3 [style = invis]; o3 -> x3 -> p3
+    b3 -> q3 [style = invis]; q3 -> y3 -> r3 }
+
+  subgraph cluster4 { label = <<b>True experiment</b>: posttest-only control group>; labeljust = l; color = '#2e8b57'
+    a4 [label = <Group A  <b>R</b>>]; o4 [label = '']; x4 [label = <<font color='#c0392b'><b>X</b></font>>]; p4 [label = 'O']
+    b4 [label = <Group B  <b>R</b>>]; q4 [label = '']; y4 [label = '']; r4 [label = 'O']
+    a4 -> o4 [style = invis]; o4 -> x4 [style = invis]; x4 -> p4
+    b4 -> q4 [style = invis]; q4 -> y4 [style = invis]; y4 -> r4 }
+}
+")
 ```
-Pre-experimental — one-group pretest–posttest
-  Group A      O1 ------ X ------ O2
 
-Quasi-experimental — nonequivalent control group (no R!)
-  Group A      O ------- X ------- O
-  ---------------------------------
-  Group B      O ----------------- O
-
-True experiment — pretest–posttest control group
-  Group A   R  O ------- X ------- O
-  Group B   R  O ----------------- O
-
-True experiment — posttest-only control group
-  Group A   R  --------- X ------- O
-  Group B   R  ------------------- O
-```
+**O** = observation · **X** = treatment · **R** = random assignment · time runs left → right
 
 ---
 
 ## Threats to internal validity (Table 8.5) {.smaller}
 
 Can you conclude that the *treatment* — and not something else — changed the outcome?
+
+::: {style="font-size: 0.85em; line-height: 1.25;"}
 
 | Threat | What goes wrong |
 |---|---|
@@ -322,6 +349,8 @@ Can you conclude that the *treatment* — and not something else — changed the
 | **Compensatory rivalry** | The control group tries harder because it feels devalued |
 | **Testing** | Participants remember the pretest |
 | **Instrumentation** | The instrument changes between pretest and posttest |
+
+:::
 
 ---
 
@@ -414,7 +443,7 @@ We'll use the frequentist approach (most common in the social sciences).
 - Used when:
   - Fixed number of **trials** ( $N$ )
   - Each trial has two **outcomes** (success/failure)
-  - Probability of success ( $θ$ ) is **constant** (probability describes the underlying model for generating the data, in this case a dice)
+  - Probability of success ( $θ$ ) is **constant** (probability describes the underlying *theoretical* model for generating the data, in this case a dice)
 
 :::: columns
 ::: {.column width="50%"}
@@ -1338,6 +1367,8 @@ or https://www.menti.com/alhnkyv2z61j
 
 ## Independent Samples t-test {.smaller}
 
+::: {style="font-size: 0.85em; line-height: 1.25;"}
+
 **Comparing Two Different Groups**
 
 **Question**: Do two groups have different means? (i.e., a statistically significant difference)
@@ -1360,6 +1391,8 @@ Possible answers are ordered (and therefore quantifiable) on a Likert scale
 
 ::: callout-note
 Do Australians respond differently compared to UK respondents, and is this difference statistically significant?
+:::
+
 :::
 
 ::: aside
