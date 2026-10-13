@@ -1,10 +1,10 @@
 ---
 title: "Week 10 - Task 01"
 author: "Francesco Bailo"
-date: "2024-05-02"
+date: "2026-10-14"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}

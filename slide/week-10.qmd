@@ -1,0 +1,1793 @@
+---
+title: "GOVT6139<br>Research design"
+subtitle: "Week 10<br>Quantitative Methods: Data Analysis Lab (with JASP)"
+author: "Francesco Bailo"
+institute: "The University of Sydney<br>Semester 2, 2026"
+format:
+  revealjs:
+    self-contained: true
+    fig-format: svg
+    toc: false
+    theme: [default, "assets/sydney.scss"]
+    code-line-numbers: false
+    slide-number: c
+    scrollable: false
+    pdf-max-pages-per-slide: 1
+    history: false
+    ratio: 4-3
+    include-in-header: "assets/mathjax-equation-numbers.html"
+execute:
+  echo: true
+knitr:
+  opts_chunk:
+    dev: svglite
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      dev = 'svglite', out.width = "45%", fig.width = 6,
+                      fig.align="center")
+
+options(scipen = 999)
+```
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
+# Quantitative Methods: Data Analysis Lab (with JASP)
+
+---
+
+## Any question concerning the content for this week?
+
+---
+
+## Plan for today
+
+1. Getting started with JASP
+2. Descriptive statistics
+3. Drawing plots with JASP
+4. Hypothesis testing: one-sample *t*-test, chi-squared, independent *t*-test, correlation, linear regression
+5. A3 in-class quiz + check-in
+6. Group task (if time allows)
+
+::: callout-note
+Make sure you have **JASP installed** on your laptop and have downloaded the three datasets from Canvas: `titanic.csv`, `aus_male_volley.csv` and `aes_2022.csv`.
+:::
+
+---
+
+## Today's Learning Objectives
+
+By the end of today's class, you will be able to:
+
+1. Navigate the JASP interface and load datasets for statistical analysis
+
+2. Generate and interpret descriptive statistics for both continuous and categorical variables
+
+3. Create effective data visualisations including histograms, box plots, and scatter plots
+
+4. Conduct hypothesis tests including chi-square tests, t-tests, correlation, and linear regression
+
+5. Interpret statistical output and communicate findings from quantitative analyses
+
+# 1. Getting started with JASP
+
+---
+
+## JASP Interface Overview {.smaller}
+
+### What You See When You Start JASP
+
+:::: columns
+::: {.column width="50%"}
+1. **Top Menu Bar**
+   - File, Edit, Data tabs
+   - Analysis buttons (Descriptives, T-Tests, Regression, etc.)
+
+2. **Left Panel: Data View**
+   - Spreadsheet with rows (cases) and columns (variables)
+   - Each row = one participant/observation
+   - Each column = one variable
+:::
+::: {.column width="50%"}
+3. **Right Panel: Results**
+   - Analysis output appears here
+   - Updates in real-time
+   - Can copy/export results
+
+4. **Analysis Options Panel** (centre-left when an analysis is selected)
+   - Choose variables
+   - Select options
+   - Customise analysis
+:::
+::::
+
+---
+
+## Loading Data into JASP {.smaller}
+
+### Two Main Ways to Get Data
+
+:::: columns
+::: {.column width="50%"}
+**Method 1: Open CSV Files (Most Common)**
+
+1. Click **File** → **Open**
+2. Select **Computer** → **Browse**
+3. Navigate to your `.csv` file (you can also open Excel files)
+4. Click **Open**
+
+**Method 2: Open .jasp Files**
+
+- Contains both data AND previous analyses
+- Click **File** → **Open** → Select `.jasp` file
+- (This is also the format to save your JASP workspace)
+:::
+::: {.column width="50%"}
+**CSV File Format:**
+
+- Plain text file
+- Comma-separated values
+- Can be created in Excel, Google Sheets, etc.
+- First row = variable names
+
+**First Dataset:** `titanic.csv`
+:::
+::::
+
+---
+
+## Understanding Variable Types {.smaller}
+
+JASP uses **symbols** in column headers to show variable type:
+
+| Type | Description | Example |
+|------|-------------|---------|
+| **Scale** | Continuous numerical data | Age, Height, Income |
+| **Ordinal** | Ordered categories | Education level (1=Low, 2=Medium, 3=High) |
+| **Nominal** | Unordered categories | Gender, Colour, Country |
+
+**IMPORTANT:**
+
+- JASP guesses variable types when loading data
+- **It may guess wrong!**
+- **You must check and fix variable types**
+
+::: callout-note
+**Why it matters:** wrong variable type → wrong analysis options → wrong results!
+:::
+
+---
+
+## Changing Variable Types {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**Method 1: Click the Icon**
+
+1. Click the symbol in the column header
+2. Select the correct type from dropdown
+3. Done!
+
+**Method 2: Use the Variable Editor**
+
+1. Double-click the column header
+2. Change measurement level
+3. Can also add labels here
+:::
+::: {.column width="50%"}
+**Important Tips:**
+
+- **IDs should be Nominal** (even if numbers)
+- **Likert scales can be Ordinal or Scale** (your choice)
+- **Binary variables (0/1) should be Nominal**
+- **Age is Scale** (continuous numbers)
+:::
+::::
+
+---
+
+## 💻 HANDS-ON: Loading the Titanic Dataset
+
+:::: columns
+::: {.column width="60%"}
+**Your Task:**
+
+1. **Download** the file `titanic.csv` from Canvas
+2. **Open JASP** on your computer
+3. **Load the data:**
+   - File → Open → Computer → Browse
+   - Find `titanic.csv` and open it
+4. **Examine the data:**
+   - How many rows (passengers)?
+   - How many columns (variables)?
+   - What variables do you see?
+:::
+::: {.column width="40%" .fragment}
+**Expected:** 891 rows, 12 columns
+:::
+::::
+
+---
+
+## 💻 HANDS-ON: Identifying & Fixing Variable Types {.smaller}
+
+Look at your data and identify which type each variable should be:
+
+:::: columns
+::: {.column width="55%"}
+| Variable | Current Type? | Should Be? |
+|----------|--------------|------------|
+| PassengerId | ? | ? |
+| Survived | ? | ? |
+| Pclass | ? | ? |
+| Name | ? | ? |
+| Sex | ? | ? |
+| Age | ? | ? |
+| Fare | ? | ? |
+:::
+::: {.column width="45%"}
+**Your Task:**
+
+1. Check what type JASP assigned to each variable
+2. Decide what type each should be
+3. Fix any incorrect types by clicking the icon
+:::
+::::
+
+---
+
+## 💻 HANDS-ON — Solution {.smaller}
+
+| Variable | Should Be | Why? |
+|----------|-----------|------|
+| **PassengerId** | **Nominal** | ID, not a quantity |
+| **Survived** | **Nominal** | Binary: 0 = No, 1 = Yes |
+| **Pclass** | **Nominal**/**Ordinal** | Ticket class 1, 2, 3 |
+| **Name** | **Nominal** | Text label |
+| **Sex** | **Nominal** | male / female |
+| **Age** | **Scale** | Continuous (0–80 years) |
+| **Fare** | **Scale** | Continuous (price paid) |
+
+**Key Decisions:**
+
+- **Survived**: Could be ordinal, but typically treated as nominal for chi-square tests
+- **Pclass**: Could be ordinal (ordered categories) or nominal — both work!
+
+---
+
+## Adding Value Labels in JASP {.smaller}
+
+### Making Your Data More Readable
+
+:::: columns
+::: {.column width="50%"}
+**Why Add Labels?**
+
+- Numeric codes (0, 1) are hard to interpret
+- Labels make output easier to read
+- Essential for clear reporting and presentations
+
+**Example: Survived Variable**
+
+- Current: 0 and 1 (confusing!)
+- Better: "Did not survive" and "Survived" (clear!)
+:::
+::: {.column width="50%"}
+**When to Use Labels:**
+
+- Binary variables (Yes/No, Male/Female)
+- Categorical codes (1=Low, 2=Medium, 3=High)
+- Any nominal variable with numeric codes
+:::
+::::
+
+---
+
+## 💻 HANDS-ON: Adding Labels to Survived {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+1. **Open the Variable Editor (Edit Data):**
+   - Double-click on the **Survived** column header
+   - OR right-click the column → **Edit column**
+
+2. **Add Value Labels:**
+   - In the variable editor window, find the **Labels** section
+   - Click **+ Add label**
+   - For value **0**, enter label: **"Did not survive"**
+   - Click **+ Add label** again
+   - For value **1**, enter label: **"Survived"**
+:::
+::: {.column width="50%"}
+3. **Apply and Check:**
+   - Click outside the editor or press Enter
+   - Run a frequency table: **Descriptives → Descriptive Statistics**
+   - Move **Survived** to Variables
+   - Check **Frequency tables**
+
+4. **Observe the Difference:**
+   - Your frequency table now shows meaningful labels!
+   - Instead of "0" and "1", you see "Did not survive" and "Survived"
+:::
+::::
+
+# 2. Descriptive statistics
+
+---
+
+## What Are Descriptive Statistics? {.smaller}
+
+**Descriptive statistics** help you understand your data by providing:
+
+:::: columns
+::: {.column width="60%"}
+**For Continuous Variables (Scale):**
+
+- **Central tendency:** Where is the "middle"?
+  - Mean, Median, Mode
+- **Spread:** How spread out are the values?
+  - Standard deviation, Variance, Range
+  - Minimum, Maximum, Quartiles
+
+**For Categorical Variables (Nominal/Ordinal):**
+
+- **Frequencies:** How many in each category?
+  - Counts and percentages
+:::
+::: {.column width="40%"}
+**Why Use Them?**
+
+- Understand your data before analysis
+- Spot errors and outliers
+- Describe your sample in reports
+:::
+::::
+
+---
+
+## Measures of Central Tendency {.smaller}
+
+### Finding the "Middle" of Your Data
+
+:::: columns
+::: {.column width="50%"}
+**1. Mean (Average)**
+
+- Sum of all values ÷ number of values
+- Most commonly used
+- Sensitive to outliers
+- Example: Ages = 20, 25, 30, 35, 100 → Mean = 42
+
+**2. Median**
+
+- Middle value when data is sorted
+- Robust to outliers
+- Example: Ages = 20, 25, **30**, 35, 100 → Median = 30
+:::
+::: {.column width="50%"}
+**3. Mode**
+
+- Most frequently occurring value
+- Can be used for any variable type
+- Example: Ages = 20, 25, 25, 25, 30 → Mode = 25
+
+**Which to use?**
+
+- **Normally distributed data** → Mean
+- **Skewed data or outliers** → Median
+- **Categorical data** → Mode
+:::
+::::
+
+---
+
+## Measures of Spread {.smaller}
+
+### How Variable Is Your Data?
+
+:::: columns
+::: {.column width="50%"}
+**1. Standard Deviation (SD)**
+
+- Average distance from the mean
+- Most commonly reported
+- Same units as your data
+- Larger SD = more spread out
+
+**2. Variance**
+
+- Squared standard deviation
+- Less intuitive but used in calculations
+:::
+::: {.column width="50%"}
+**3. Range**
+
+- Maximum − Minimum
+- Shows full spread
+
+**4. Interquartile Range (IQR)**
+
+- Range of middle 50% of data
+- 75th percentile − 25th percentile
+- Robust to outliers
+:::
+::::
+
+---
+
+## Computing Descriptives in JASP {.smaller}
+
+### Step-by-Step Guide
+
+:::: columns
+::: {.column width="50%"}
+1. **Open the Analysis Menu:**
+   - Click **Descriptives** button (top menu bar)
+   - Select **Descriptive Statistics**
+
+2. **Select Variables:**
+   - Drag variables from left box to **Variables** box
+   - OR click variable and use arrow button
+:::
+::: {.column width="50%"}
+3. **Choose Statistics:**
+   - Under **Statistics**, check boxes for what you want:
+     - ☑ Mean
+     - ☑ Median
+     - ☑ Std. Deviation
+     - ☑ Minimum / Maximum
+     - etc.
+
+4. **View Results:**
+   - Results appear immediately in right panel
+   - Update in real-time as you change options
+:::
+::::
+
+---
+
+## 💻 HANDS-ON: Descriptive Statistics for Age {.smaller}
+
+Calculate descriptive statistics for the **Age** variable:
+
+:::: columns
+::: {.column width="50%"}
+1. Go to: **Descriptives** → **Descriptive Statistics**
+2. Move **Age** to the **Variables** box
+3. Under **Statistics**, select:
+   - ☑ Mean
+   - ☑ Median
+   - ☑ Std. Deviation
+   - ☑ Minimum
+   - ☑ Maximum
+   - ☑ Range
+:::
+::: {.column width="50%"}
+**Questions to Answer:**
+
+- What is the average age of Titanic passengers?
+- What is the median age?
+- What is the youngest age? Oldest?
+- Is the mean or median higher? What does this tell us?
+:::
+::::
+
+---
+
+## 💻 HANDS-ON — Discussion: Interpreting Age Statistics {.smaller}
+
+**Expected Results (approximately):**
+
+:::: columns
+::: {.column width="60%"}
+| Statistic | Value | Interpretation |
+|-----------|-------|----------------|
+| **Mean** | ~29.7 | Average age around 30 years |
+| **Median** | ~28.0 | Middle age is 28 |
+| **SD** | ~14.5 | Typical deviation is ±14–15 years |
+| **Min** | ~0.42 | Youngest passenger was an infant |
+| **Max** | ~80 | Oldest was 80 years old |
+| **Range** | ~80 | Ages span 80 years |
+:::
+::: {.column width="40%"}
+**Observations:**
+
+- Mean > Median → Slight **positive skew** (right tail)
+- Some older passengers pull the mean up
+- Large SD indicates substantial age variation
+- Note: Some ages are missing (Missing = 177)
+:::
+::::
+
+---
+
+## Frequency Tables for Categorical Data
+
+:::: columns
+::: {.column width="50%"}
+**For Nominal/Ordinal Variables:**
+
+**Frequency tables show:**
+
+- Count in each category
+- Percentage in each category
+- Cumulative percentages (for ordinal)
+:::
+::: {.column width="50%"}
+**How to Create in JASP:**
+
+1. **Descriptives** → **Descriptive Statistics**
+2. Move categorical variable to **Variables** box
+3. Under **Tables**, check:
+   - ☑ **Frequency tables**
+
+**Result:**
+
+- Table showing counts and percentages
+- Helps understand distribution of categories
+:::
+::::
+
+---
+
+## 💻 HANDS-ON: Frequency Tables for Survival & Sex {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**Part A: Survival Status**
+
+1. Create a frequency table for **Survived**
+2. Answer:
+   - How many passengers survived?
+   - How many died?
+   - What percentage survived?
+
+**Part B: Sex Distribution**
+
+3. Create a frequency table for **Sex**
+4. Answer:
+   - How many males vs females?
+   - What percentage were male?
+:::
+::: {.column width="50%"}
+**Part C: Passenger Class**
+
+5. Create a frequency table for **Pclass**
+6. Answer:
+   - Which class had the most passengers?
+   - What's the distribution across classes?
+:::
+::::
+
+---
+
+## 💻 HANDS-ON — Expected Results {.smaller}
+
+:::: columns
+::: {.column width="33%"}
+**Survived:**
+
+| Value | Count | Percent |
+|-------|-------|---------|
+| 0 (No) | 549 | 61.6% |
+| 1 (Yes) | 342 | 38.4% |
+
+**Sex:**
+
+| Value | Count | Percent |
+|-------|-------|---------|
+| male | 577 | 64.8% |
+| female | 314 | 35.2% |
+:::
+::: {.column width="33%"}
+**Pclass:**
+
+| Value | Count | Percent |
+|-------|-------|---------|
+| 1 (First) | 216 | 24.2% |
+| 2 (Second) | 184 | 20.7% |
+| 3 (Third) | 491 | 55.1% |
+:::
+::: {.column width="33%"}
+**Insights:**
+
+- Most passengers died (61.6%)
+- More males than females (about 2:1)
+- Most passengers were in 3rd class (55%)
+:::
+::::
+
+---
+
+## 💻 HANDS-ON: Split Frequency Tables {.smaller}
+
+**The Question:** Did survival rates differ by passenger class? By sex?
+
+. . .
+
+**Part A: Survival by Passenger Class (Follow Along)**
+
+:::: columns
+::: {.column width="55%"}
+**Steps:**
+
+1. Go to: **Descriptives** → **Descriptive Statistics**
+2. Move **Survived** to the **Variables** box
+3. Move **Pclass** to the **Split** box
+4. Under **Statistics**, check: ☑ **Frequency tables**
+
+**What You See:**
+
+- Separate frequency tables for each class (1st, 2nd, 3rd)
+- Survival counts and percentages within each class
+:::
+::: {.column width="45%"}
+**Observe:**
+
+- Which class had the highest survival rate?
+- Which class had the lowest?
+- What pattern do you notice?
+:::
+::::
+
+---
+
+## 💻 HANDS-ON: Survival by Sex (Your Turn!)
+
+Using the same approach:
+
+1. Keep **Survived** in the **Variables** box
+2. **Replace** Pclass with **Sex** in the **Split** box
+3. Keep **Frequency tables** checked
+
+**Questions to Answer:**
+
+- What percentage of males survived?
+- What percentage of females survived?
+- Is there a notable difference?
+- What might explain this pattern?
+
+::: callout-note
+**Discuss:** What story do these two analyses tell us about survival on the Titanic?
+:::
+
+# 3. Drawing plots with JASP
+
+---
+
+## Visualising Distributions {.smaller}
+
+### Adding Plots to Descriptives
+
+:::: columns
+::: {.column width="60%"}
+**For Scale Variables:**
+
+Under **Basic Plots/Customizable Plots** in Descriptive Statistics:
+
+- ☑ **Distribution plots** → Histogram
+- ☑ **Display density** → Smooth curve overlay
+- ☑ **Boxplots** → Shows median, quartiles, outliers
+
+**Benefits:**
+
+- **Histograms:** See shape of distribution
+- **Density plots:** Smooth distribution curve
+- **Boxplots:** Quick summary with outliers
+:::
+::: {.column width="40%"}
+**For Categorical Variables:**
+
+- Frequency tables are often sufficient
+- Bar charts can be created elsewhere in JASP
+:::
+::::
+
+---
+
+## 💻 HANDS-ON: Visualising Age Distribution
+
+Create visualisations for the **Age** variable:
+
+:::: columns
+::: {.column width="50%"}
+1. Keep Age in the **Variables** box
+2. Under **Plots**, check:
+   - ☑ **Distribution plots**
+   - ☑ **Display density**
+   - ☑ **Boxplots**
+:::
+::: {.column width="50%"}
+**Observe and Discuss:**
+
+- What shape is the distribution?
+- Is it symmetric or skewed?
+- Where is the peak?
+- Are there any outliers?
+- What does the boxplot tell you about the median and quartiles?
+:::
+::::
+
+---
+
+## Reading a Boxplot {.smaller}
+
+### Understanding Box-and-Whisker Plots
+
+:::: columns
+::: {.column width="45%"}
+```
+    ●  ← Outlier (beyond 1.5 × IQR)
+    |
+    ┬  ← Maximum (within 1.5 × IQR)
+    |
+    ┼──┐
+    │  │
+    │──│ ← Median (thick line)
+    │  │
+    └──┼
+    |
+    ┴  ← Minimum (within 1.5 × IQR)
+    |
+    ●  ← Outlier
+```
+:::
+::: {.column width="55%"}
+- **Box:** Contains middle 50% of data (25th to 75th percentile)
+- **Whiskers:** Extend to most extreme non-outlier values
+- **Dots:** Outliers beyond 1.5 × IQR
+
+**Quick Assessment:**
+
+- Symmetric box → Symmetric distribution
+- Long upper whisker → Right skew
+- Dots → Potential outliers to investigate
+:::
+::::
+
+---
+
+## Grouped Descriptive Statistics {.smaller}
+
+### Comparing Groups
+
+**What if we want to compare subgroups?** Example: Age statistics separately for each passenger class
+
+:::: columns
+::: {.column width="55%"}
+**How to Do It:**
+
+1. **Descriptives** → **Descriptive Statistics**
+2. Move continuous variable (Age) to **Variables**
+3. Move grouping variable (Pclass) to **Split** box
+4. Select desired statistics
+
+**Result:**
+
+- Separate statistics for each group
+- Easy comparison across groups
+- Can also split plots!
+:::
+::: {.column width="45%"}
+**This is useful for:**
+
+- Comparing survivors vs non-survivors
+- Comparing passenger classes
+- Any categorical breakdown
+:::
+::::
+
+---
+
+## 💻 HANDS-ON: Comparing Age by Survival Status
+
+Compare age distributions for survivors vs non-survivors:
+
+:::: columns
+::: {.column width="50%"}
+1. **Descriptives** → **Descriptive Statistics**
+2. Move **Age** to **Variables**
+3. Move **Survived** to **Split**
+4. Check: Mean, Median, SD, Min, Max
+5. Under **Plots**, check **Boxplots**
+:::
+::: {.column width="50%"}
+**Questions:**
+
+- Were survivors younger or older on average?
+- Is there a difference in median age?
+- Do the boxplots show different patterns?
+- What does this suggest?
+:::
+::::
+
+---
+
+## 💻 HANDS-ON — Discussion: Age by Survival Status {.smaller}
+
+**Expected Pattern:**
+
+| Survived | Mean Age | Median Age | Observations |
+|----------|----------|------------|--------------|
+| 0 (Died) | ~30.6 | 28 | Slightly older |
+| 1 (Survived) | ~28.3 | 28 | Slightly younger |
+
+:::: columns
+::: {.column width="50%"}
+**Insights:**
+
+- Small difference in mean age
+- Similar median ages
+- Children may have had better survival rates
+- But age alone doesn't tell the whole story!
+:::
+::: {.column width="50%"}
+**Next Steps:**
+
+- These are just descriptive statistics
+- To test if differences are **significant**, we need:
+  - Chi-square test (for categorical comparisons)
+  - *t*-test (for mean comparisons)
+  - More complex analyses
+
+**This is where hypothesis testing comes in!**
+:::
+::::
+
+---
+
+## 💻 HANDS-ON: Complete Descriptive Analysis
+
+**Your Challenge:** Perform a complete descriptive analysis of **Fare**:
+
+:::: columns
+::: {.column width="50%"}
+1. Calculate descriptive statistics:
+   - Central tendency (Mean, Median)
+   - Spread (SD, Range, IQR)
+   - Check for missing values
+
+2. Create visualisations:
+   - Histogram with density
+   - Boxplot
+:::
+::: {.column width="50%"}
+3. Compare across passenger classes:
+   - Split by **Pclass**
+   - Compare mean fares
+
+4. Interpret:
+   - What is the typical fare?
+   - How variable are the fares?
+   - Do fares differ by class?
+:::
+::::
+
+---
+
+## Creating Computed Variables {.smaller}
+
+### Transforming Data in JASP
+
+:::: columns
+::: {.column width="50%"}
+**What are Computed Variables?**
+
+- New variables created by performing calculations on existing variables
+- Useful for: transformations, sum scores, z-scores, differences, ratios
+
+**Common Uses:**
+
+- **Log transformations** → Normalise skewed data
+- **Z-scores** → Standardise variables
+- **Sum scores** → Combine multiple items
+- **Difference scores** → Change from baseline
+- **Means** → Average across variables
+:::
+::: {.column width="50%"}
+**How to Create:**
+
+1. Click the **"+"** button in the column header row
+2. Name your new variable
+3. Select **"Computed type"** → **"Computed with drag-and-drop"**
+4. Enter your formula
+5. Click **"Compute column"**
+:::
+::::
+
+---
+
+## 💻 HANDS-ON: Let's create two new variables together
+
+- `FARE + 1`, and then — using this new variable —
+- `log(FARE + 1)`
+
+::: callout-note
+What's the point of taking the log of `FARE + 1`? This is necessary because some passengers paid 0 as `FARE`, and $\log(0) = -\infty$. Of course, $-\infty$ would be impossible to visualise.
+
+Adding 1 to variables that contain zeros is a common, quick-and-dirty trick to still return meaningful visualisations...
+:::
+
+---
+
+## Understanding the Log Transformation {.smaller}
+
+### What Did We Just Do?
+
+**The Formula: log(Fare+1)**
+
+- Takes the natural logarithm (base *e*) of each Fare+1 value
+- Compresses large values more than small values
+- Result: more symmetric distribution
+
+:::: columns
+::: {.column width="55%"}
+| Original Fare | log(Fare+1) | Interpretation |
+|---------------|-----------|----------------|
+| £0 | 0.00 | Log of 1 is 0 |
+| £9 | 2.30 | |
+| £99 | 4.61 | Less difference at high end |
+| £499 | 6.21 | |
+:::
+::: {.column width="45%"}
+**Notice:** The gap between £0 and £99 is huge in the original scale, but only 4.61 units in log scale. Meanwhile, £99 to £499 (a 5× increase in Fare+1) is only 1.6 log units.
+:::
+::::
+
+---
+
+## 💻 HANDS-ON — Verification: Original vs Log-Transformed Fare {.smaller}
+
+:::: columns
+::: {.column width="55%"}
+1. **Create histograms for both:**
+   - **Descriptives** → **Descriptive Statistics**
+   - Move both **FARE** AND **log(FARE + 1)** to Variables
+   - Under **Basic Plots**, check:
+     - ☑ Distribution plots
+     - ☑ Display density
+   - Under **Customizable Plots**, check:
+     - ☑ Boxplot
+
+2. **Calculate descriptives for both:**
+   - Check: Mean, Median, SD, Min, Max, Skewness
+:::
+::: {.column width="45%"}
+**Questions to Answer:**
+
+- Which distribution looks more normal?
+- How did the skewness change?
+- Which measure (mean or median) is more similar after transformation?
+- What happened to the outliers?
+:::
+::::
+
+---
+
+## Exporting Your Results {.smaller}
+
+### Saving Your Work
+
+:::: columns
+::: {.column width="50%"}
+**1. Copy Individual Tables/Plots:**
+
+- Right-click on any result
+- Select **Copy** or **Copy Special**
+- Paste into Word, PowerPoint, etc.
+- Tables are APA-formatted!
+
+**2. Export Data:**
+
+- **File** → **Export Data**
+- Save as CSV (can open in Excel)
+- Useful if you've computed new variables
+:::
+::: {.column width="50%"}
+**3. Save JASP File:**
+
+- **File** → **Save As**
+- Saves data AND all analyses
+- Can reopen later and continue work
+- Share with collaborators
+
+::: callout-tip
+Save as a `.jasp` file regularly to preserve your work!
+:::
+:::
+::::
+
+# Break & Check-in
+
+# 4. Hypothesis Testing
+
+---
+
+## Understanding the Basics
+
+**Key concepts** (from last week):
+
+- **Null hypothesis ( $H_0$ ):** No effect/difference exists
+- **Alternative hypothesis ( $H_1$ ):** Effect/difference exists
+- **$p$-value:** Probability of observing data this extreme (or more extreme) if $H_0$ is true
+- **Decision:** $p < 0.05$ → Reject $H_0$ (significant result)
+
+---
+
+## 💻 HANDS-ON: One-Sample *t*-Test {.smaller}
+
+### Testing Against a Known Mean
+
+**Dataset:** Australian Male Volleyball Team (`aus_male_volley.csv`)
+
+**Question:** Are Australian male volleyball players significantly taller than the average Australian male height of 175 cm ( $\mu = 175$ )?
+
+:::: columns
+::: {.column width="50%"}
+**Known Population Parameter:**
+
+- Average Australian male height: $\mu = 175$ cm
+
+**Research Question:**
+
+- Are elite volleyball players taller than the general population?
+:::
+::: {.column width="50%"}
+**Hypotheses:**
+
+- **$H_0$ (Null):** Mean volleyball player height = 175 cm
+  - $H_0: \mu = 175$
+- **$H_1$ (Alternative):** Mean volleyball player height ≠ 175 cm
+  - $H_1: \mu \neq 175$
+:::
+::::
+
+---
+
+## One-Sample *t*-Test: Steps in JASP
+
+**1. Load the Data:**
+
+- Load `aus_male_volley.csv`
+- Check that `Height` variable is set to **Scale**
+
+**2. Run the Analysis:**
+
+- Go to: **T-Tests → One Sample T-Test**
+- Move `Height` to **Variables** box
+- Set **Test value = 175**
+
+::: callout-note
+**Expected Outcome:** We anticipate volleyball players are significantly taller (one of the few times we have a strong prior expectation!). Compare your output with the hand calculation from last week.
+:::
+
+---
+
+## Variable types and appropriate bivariate hypothesis tests {.smaller}
+
+::: callout-note
+This was the simplest possible test. We compared the mean of a sample to a known mean.
+
+Now let's move on to compare 2+ variables that are present in our data.
+
+- The type of test depends on the type of variables we have!
+:::
+
+|  | **Independent Variable: Categorical** | **Independent Variable: Continuous** |
+|---|---|---|
+| **Dependent Variable: Categorical** | Tabular analysis | Probit/logit |
+| **Dependent Variable: Continuous** | Difference of means | Correlation coefficient; bivariate regression model |
+
+::: aside
+Kellstedt, P. M., & Whitten, G. D. (2013). The fundamentals of political science research (Second edition). Cambridge University Press.
+:::
+
+# Tabular Analysis: Chi-Squared Test
+
+---
+
+## Introduction to Tabular Analysis
+
+### When Do We Use Chi-Squared Tests?
+
+**Research Scenario:**
+
+- **Two categorical variables**
+- Want to know if they're **associated** (related)
+
+**Example Questions:**
+
+- Is survival related to passenger class on the Titanic?
+- Do males and females have different survival rates?
+- Is there a relationship between embarkation port and survival?
+
+**The Tool:** Chi-Squared ( $\chi^2$ ) Test of Independence — tests whether two categorical variables are independent or associated
+
+---
+
+## Our Research Question {.smaller}
+
+### Titanic Dataset: Survival by Passenger Class
+
+:::: columns
+::: {.column width="50%"}
+**Variables:**
+
+1. **Survived** (Nominal)
+   - 0 = Died
+   - 1 = Survived
+
+2. **Pclass** (Nominal/Ordinal)
+   - 1 = First class
+   - 2 = Second class
+   - 3 = Third class
+:::
+::: {.column width="50%"}
+**Research Question:**
+
+> Was survival on the Titanic related to passenger class?
+
+**Hypotheses:**
+
+- **$H_0$:** Survival and passenger class are **independent** (no association)
+- **$H_1$:** Survival and passenger class are **associated** (related)
+:::
+::::
+
+---
+
+## Understanding Contingency Tables {.smaller}
+
+A **cross-tabulation** showing the frequency of observations for each combination of categories.
+
+**Structure:**
+
+- **Rows:** One categorical variable (e.g., Survived)
+- **Columns:** Another categorical variable (e.g., Pclass)
+- **Cells:** Count of observations in each combination
+
+**Example Structure:**
+
+|           | 1st Class | 2nd Class | 3rd Class | **Total** |
+|-----------|-----------|-----------|-----------|-----------|
+| **Died**  | ?         | ?         | ?         | ?         |
+| **Survived** | ?      | ?         | ?         | ?         |
+| **Total** | ?         | ?         | ?         | **891**   |
+
+---
+
+## The Logic of the Chi-Squared Test
+
+### Observed vs Expected Frequencies
+
+**Key Idea:** Compare what we **observe** to what we'd **expect** if variables were independent
+
+**If $H_0$ is true (independence):**
+
+- Survival rate should be the same across all classes
+- Any differences are just random chance
+
+---
+
+## Running the Chi-Squared Test in JASP {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**1. Load the Data:**
+
+- Open `titanic.csv` in JASP
+- Verify variable types:
+  - `Survived`: Nominal
+  - `Pclass`: Nominal
+
+**2. Navigate to Analysis:**
+
+- Click **Frequencies** (top menu)
+- Select **Contingency Tables**
+
+**3. Set Up the Analysis:**
+
+- Move `Survived` to **Rows**
+- Move `Pclass` to **Columns**
+:::
+::: {.column width="50%"}
+**4. Request Statistics:**
+
+- Under **Statistics**, check:
+  - ☑ **χ²** (Chi-squared test)
+
+**5. Request Cell Information:**
+
+- Under **Cells**, check:
+  - ☑ **Observed counts**
+  - ☑ **Expected counts**
+  - ☑ **Row** percentages
+  - ☑ **Column** percentages
+:::
+::::
+
+---
+
+## 💻 HANDS-ON: Chi-Squared Test — Survival by Class {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**Part A: Create the Contingency Table**
+
+1. **Frequencies → Contingency Tables**
+2. `Survived` to Rows
+3. `Pclass` to Columns
+4. Check: Observed counts, Expected counts, Row %
+
+**Part B: Run Chi-Squared Test**
+
+5. Under **Statistics**, check $\chi^2$
+6. Examine the output
+:::
+::: {.column width="50%"}
+**Part C: Answer These Questions:**
+
+- What is the overall survival rate?
+- What percentage survived in each class?
+- What is the $\chi^2$ statistic?
+- What is the $p$-value?
+- Can we reject $H_0$?
+
+**Part D: Interpret**
+
+- Is there a significant association?
+- Which class had the highest survival rate?
+- Which class had the lowest survival rate?
+:::
+::::
+
+# Independent Samples *t*-Test: Comparing Political Ideology by Gender
+
+---
+
+## Introduction to the Dataset {.smaller}
+
+| Variable | Type | Description | Range/Values |
+|----------|------|-------------|--------------|
+| `gender` | Nominal | Respondent's gender | Male, Female |
+| `age` | Scale | Respondent's age | 18–96 years |
+| `left_right_position` | Scale | Political ideology | 0 (left) to 10 (right) |
+| `state` | Nominal | Australian state | NSW, VIC, QLD, etc. |
+| `vote_2022` | Nominal | Party voted for | Labor, Liberal, etc. |
+
+:::: columns
+::: {.column width="55%"}
+**About the Data:**
+
+- **Source:** Australian Election Study (AES) 2022
+- **Sample Size:** N = 1,624 Australian voters
+- **Collection:** Post-2022 federal election survey
+- **Purpose:** Understanding political attitudes and voting behaviour
+:::
+::: {.column width="45%"}
+**Focus:**
+
+- Independent *t*-test: Does political ideology differ by gender?
+- Linear regression: Can we predict ideology from age and gender?
+:::
+::::
+
+---
+
+## Understanding Left-Right Political Position {.smaller}
+
+```
+LEFT ←───────────────────────────────────────→ RIGHT
+0    1    2    3    4    5    6    7    8    9    10
+
+Progressive              Moderate              Conservative
+Labor-leaning            Centre                Liberal-leaning
+```
+
+:::: columns
+::: {.column width="50%"}
+**Question Asked:**
+
+> "In politics, people sometimes talk of left and right. Where would you place yourself on a scale from 0 to 10 where 0 means the left and 10 means the right?"
+:::
+::: {.column width="50%"}
+**What It Measures:**
+
+- Economic policies (redistribution vs free market)
+- Social issues (progressive vs conservative)
+- Government role (intervention vs limited)
+
+**Sample Distribution:**
+
+- **Mean:** 5.06 (slightly right of centre)
+- **SD:** 2.29
+- **Range:** 0 to 10 (full scale used)
+:::
+::::
+
+---
+
+## Research Question — Gender Differences {.smaller}
+
+**Research Question:**
+
+> Is there a significant difference in left-right political position between males and females in Australia?
+
+:::: columns
+::: {.column width="50%"}
+**Hypotheses:**
+
+**$H_0$ (Null Hypothesis):**
+$$\mu_{\text{male}} = \mu_{\text{female}}$$
+No difference in mean political position between genders
+
+**$H_1$ (Alternative Hypothesis):**
+$$\mu_{\text{male}} \neq \mu_{\text{female}}$$
+There is a difference in mean political position between genders
+:::
+::: {.column width="50%"}
+**Variables:**
+
+- **Independent Variable (IV):** Gender (categorical: Male vs Female)
+- **Dependent Variable (DV):** Left-right position (continuous: 0–10)
+
+**Appropriate Test:** Independent samples *t*-test
+:::
+::::
+
+---
+
+## Descriptive Statistics by Gender {.smaller}
+
+### Initial Exploration
+
+| Gender | n | Mean | SD | Min | Max | Median |
+|--------|---|------|-----|-----|-----|--------|
+| **Female** | 822 | 4.71 | 2.31 | 0 | 10 | 5.0 |
+| **Male** | 802 | 5.42 | 2.21 | 0 | 10 | 5.0 |
+| **Difference** | – | **0.71** | – | – | – | – |
+
+**Initial Observations:**
+
+- Males score higher (more right-leaning) on average
+- Difference: 0.71 scale points
+- Similar variability (SD ≈ 2.3)
+- Both groups span the full scale
+
+**Question:** Is this difference statistically significant?
+
+---
+
+## Running the Independent *t*-Test in JASP {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**1. Load the Data:**
+
+- Open `aes_2022.csv` in JASP
+- Verify variable types:
+  - `gender`: **Nominal**
+  - `left_right_position`: **Scale**
+  - `age`: **Scale**
+
+**2. Navigate to Analysis:**
+
+- Click **T-Tests** (top menu)
+- Select **Independent Samples T-Test**
+
+**3. Set Up Variables:**
+
+- Move `left_right_position` to **Variables** box
+- Move `gender` to **Grouping Variable** box
+:::
+::: {.column width="50%"}
+**4. Request Statistics:**
+
+- Under **Tests**, keep default (Student's *t*-test)
+- Under **Additional Statistics**, check:
+  - ☑ **Descriptives**
+  - ☑ **Descriptives plots**
+  - ☑ **Effect size** (Cohen's d)
+  - ☑ **Confidence interval**
+:::
+::::
+
+---
+
+## 💻 HANDS-ON: Independent *t*-Test — Gender and Political Ideology
+
+:::: columns
+::: {.column width="50%"}
+**Part A: Run the Analysis**
+
+1. Load `aes_2022.csv` in JASP
+2. Set variable types correctly
+3. Run Independent Samples T-Test
+   - DV: `left_right_position`
+   - IV: `gender`
+4. Check all boxes for descriptives, plots, and assumptions
+:::
+::: {.column width="50%"}
+**Part B: Answer These Questions:**
+
+1. What are the mean scores for each gender?
+2. What is the mean difference?
+3. What is the $p$-value?
+4. Can we reject $H_0$?
+:::
+::::
+
+# Simple Correlation Analysis: Understanding Bivariate Relationships
+
+---
+
+## Correlation: Purpose {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**Purpose of Correlation:**
+
+- Examine the relationship between **two continuous variables**
+- Quantify strength and direction of association
+- Foundation for regression analysis
+
+**Our Analysis:**
+
+- **Variable 1:** Age (18–96 years)
+- **Variable 2:** Left-right political position (0–10 scale)
+- **Question:** Are age and political ideology related?
+:::
+::: {.column width="50%"}
+**Why Start with Correlation?**
+
+1. Simpler than regression (one predictor)
+2. Establishes basic relationship
+3. No assumptions about causality
+4. Easy to visualise with scatterplot
+5. Foundation for understanding regression coefficient
+
+**Prediction:**
+
+- Older individuals → more right-leaning?
+- Positive correlation expected
+:::
+::::
+
+---
+
+## Pearson Correlation Coefficient
+
+### Understanding the *r* Statistic
+
+:::: columns
+::: {.column width="50%"}
+**Pearson's *r*: Measures Linear Relationship**
+
+- **Range:** −1 to +1
+- **Sign:** Direction of relationship
+  - Positive (+): Both variables increase together
+  - Negative (−): One increases, other decreases
+- **Magnitude:** Strength of relationship
+:::
+::: {.column width="50%"}
+**Key Points:**
+
+- *r* measures only **linear** relationships
+- *r* does not imply causation
+- *r* is affected by outliers
+- $r^2$ = proportion of shared variance
+:::
+::::
+
+---
+
+## Running Correlation in JASP (1/2) {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**1. Navigate to Analysis:**
+
+- Click **Regression** (top menu)
+- Select **Classical** → **Correlation**
+
+**2. Select Variables:**
+
+- Move `age` to **Variables** box
+- Move `left_right_position` to **Variables** box
+
+:::
+::: {.column width="50%"}
+**3. Request Statistics:**
+
+- Under **Correlation Coefficients**, check:
+  - ☑ **Pearson** (default, for linear relationships)
+- Under **Additional Options**, check:
+  - ☑ **Display pairwise** (shows significance tests)
+  - ☑ **Report significance**
+  - ☑ **Flag significant correlations**
+:::
+::::
+
+---
+
+## Running Correlation in JASP (2/2) {.smaller}
+
+**4. Request Plots:**
+
+- Under **Plots**, check:
+  - ☑ **Scatter plots** (visualise relationship)
+  - ☑ **Densities for variables** (marginal distributions)
+  - ☑ **Statistics** (adds correlation and CI to plot)
+
+**5. Additional Options (Optional):**
+
+- **Sample correlation matrix**
+- **Confidence intervals**
+
+---
+
+## 💻 HANDS-ON: Correlation — Age and Political Ideology (1/2) {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**Part A: Run the Correlation**
+
+1. Open `aes_2022.csv` (should already be loaded)
+2. Go to: **Regression → Classical → Correlation**
+3. Add both `age` and `left_right_position` to Variables
+4. Check: Pearson, Display pairwise, Scatter plots
+5. Add densities and statistics to plot
+:::
+::: {.column width="50%"}
+**Part B: Examine the Scatterplot**
+
+- What pattern do you see?
+- Positive or negative relationship?
+- Strong or weak?
+- Any outliers?
+- Linear or curved?
+:::
+::::
+
+---
+
+## 💻 HANDS-ON: Correlation — Age and Political Ideology (2/2) {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**Part C: Answer These Questions:**
+
+1. What is Pearson's *r*?
+2. What is the $p$-value?
+3. Is the correlation significant ( $p < .05$ )?
+4. How would you describe the strength?
+:::
+::: {.column width="50%"}
+**Part D: Interpret:**
+
+5. Write one sentence summarising the relationship
+6. Does this support the prediction that older → more right?
+7. How does this relate to the regression we'll run next?
+:::
+::::
+
+# Linear Regression: Predicting Political Ideology from Age and Gender
+
+---
+
+## From Comparison to Prediction {.smaller}
+
+### Moving to Multiple Predictors
+
+:::: columns
+::: {.column width="50%"}
+**Independent *t*-Test:**
+
+- Compares means between TWO groups
+- One predictor (gender)
+- Answers: "Do groups differ?"
+
+**Linear Regression:**
+
+- Predicts continuous outcome from MULTIPLE predictors
+- Can include both categorical and continuous predictors
+- Answers: "How much does each predictor explain?"
+:::
+::: {.column width="50%"}
+**Our Research Questions:**
+
+1. Does age predict political ideology?
+2. Does gender predict political ideology (controlling for age)?
+3. How much variance do age and gender explain together?
+4. What is the unique contribution of each predictor?
+
+**Advantages:**
+
+- Control for confounding
+- Quantify relative importance
+- Make predictions
+:::
+::::
+
+---
+
+## Research Questions — Predicting Left-Right Position {.smaller}
+
+:::: columns
+::: {.column width="45%"}
+**Dependent Variable (DV):**
+
+- `left_right_position` (0–10 scale)
+- What we're trying to predict
+
+**Independent Variables (IVs/Predictors):**
+
+1. `age` (continuous: 18–96 years)
+2. `gender` (categorical: Male/Female)
+:::
+::: {.column width="55%"}
+1. **Simple effects:** Does age predict ideology (older → more right?) Does gender? (already know: yes)
+2. **Multiple regression:** Controlling for age, does gender still matter — and vice versa? Which predictor is stronger?
+3. **Model performance:** How much variance ( $R^2$ ) do they explain together? Is the overall model significant?
+:::
+::::
+
+---
+
+## The Regression Equation {.smaller}
+
+**General Form:**
+$$Y = b_0 + b_1X_1 + b_2X_2 + \epsilon$$
+
+**For Our Analysis:**
+$$\text{Left-Right Position} = b_0 + b_1(\text{Age}) + b_2(\text{Gender}) + \epsilon$$
+
+| Symbol | Name | Meaning |
+|--------|------|---------|
+| $Y$ | Dependent variable | Left-right position (0–10) |
+| $b_0$ | Intercept | Predicted $Y$ when all predictors = 0 |
+| $b_1$ | Slope for Age | Change in $Y$ per 1-year increase in age |
+| $b_2$ | Slope for Gender | Difference between males and females |
+| $X_1$ | Age | Continuous predictor |
+| $X_2$ | Gender | Categorical predictor (0 = Female, 1 = Male) |
+| $\epsilon$ | Residual/Error | Unexplained variance |
+
+---
+
+## Expected Relationships {.smaller}
+
+### Hypotheses About Predictors
+
+:::: columns
+::: {.column width="50%"}
+**Age Hypothesis:**
+
+- **Expectation:** Older people → more right-leaning
+- **Reasoning:**
+  - Life-cycle effects (people become more conservative)
+  - Generational differences (older cohorts more conservative)
+- **Predicted sign:** $b_1 > 0$ (positive relationship)
+:::
+::: {.column width="50%"}
+**Gender Hypothesis:**
+
+- **Expectation:** Males → more right-leaning (we already know this)
+- **Reasoning:** *t*-test showed 0.71 point difference
+- **Predicted sign:** $b_2 > 0$ (positive, since Male = 1)
+- **Predicted magnitude:** $b_2 \approx 0.7$
+
+**Key Question:**
+
+- When we include BOTH predictors, do the effects hold?
+- Does age explain the gender difference?
+- Does gender explain the age effect?
+:::
+::::
+
+---
+
+## Running Linear Regression in JASP {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**1. Prepare Variables:**
+
+- Ensure `left_right_position` is **Scale**
+- Ensure `age` is **Scale**
+- Ensure `gender` is **Nominal**
+
+**2. Navigate to Analysis:**
+
+- Click **Regression** (top menu)
+- Select **Linear Regression**
+
+**3. Set Up Model:**
+
+- Move `left_right_position` to **Dependent Variable**
+- Move `age` to **Covariates**
+- Move `gender` to **Factors**
+:::
+::: {.column width="50%"}
+**4. Request Statistics:**
+
+- Under **Statistics**, check:
+  - ☑ **Estimates** (coefficients)
+  - ☑ **Confidence intervals**
+  - ☑ **Model fit** ( $R^2$, adjusted $R^2$ )
+  - ☑ **Descriptives**
+:::
+::::
+
+---
+
+## 💻 HANDS-ON: Multiple Linear Regression {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**Part A: Run the Analysis**
+
+1. Open `aes_2022.csv` (should already be loaded)
+2. Run Linear Regression:
+   - DV: `left_right_position`
+   - Covariates: `age`
+   - Factors: `gender`
+3. Check all relevant statistics and plots
+:::
+::: {.column width="50%"}
+**Part B: Answer These Questions:**
+
+**Model Performance:**
+
+1. What is $R^2$? What does it mean?
+
+**Age Predictor:**
+
+2. What is the coefficient ( $b_1$ ) for age?
+3. Is it significant ( $p$-value)?
+4. Interpretation: For each 1-year increase in age, how much does ideology change?
+
+**Gender Predictor:**
+
+5. What is the coefficient ( $b_2$ ) for gender?
+6. Is it significant ( $p$-value)?
+7. Interpretation: How much do males differ from females (controlling for age)?
+:::
+::::
+
+# Wrap-up
+
+---
+
+## A3 — In-class Quiz
+
+Take 10 minutes to complete this week's A3 quiz on Canvas — worth 10 points, on quantitative data analysis with JASP.
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 10, seconds = 00)
+```
+
+---
+
+## Please take 2 mins to complete the anonymous Week 10 Student feedback survey (link from Canvas)
+
+---
+
+## Week 10 Check-in
+
+Anything unclear from this week?
+
+---
+
+## Group Task (if time allows)
+
+Start in class, complete at home!
+
+---
+
+## See you next week with **Qualitative Methods**!
