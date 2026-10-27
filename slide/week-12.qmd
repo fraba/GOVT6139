@@ -1,0 +1,1235 @@
+---
+title: "GOVT6139<br>Research design"
+subtitle: "Week 12<br>Qualitative Methods: Data Analysis Lab (with NVivo)"
+author: "Francesco Bailo"
+institute: "The University of Sydney<br>Semester 2, 2026"
+format:
+  revealjs:
+    self-contained: true
+    fig-format: svg
+    toc: false
+    theme: [default, "assets/sydney.scss"]
+    code-line-numbers: false
+    slide-number: c
+    scrollable: false
+    pdf-max-pages-per-slide: 1
+    history: false
+    ratio: 4-3
+    include-in-header: "assets/mathjax-equation-numbers.html"
+execute:
+  echo: true
+knitr:
+  opts_chunk:
+    dev: svglite
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      dev = 'svglite', out.width = "45%", fig.width = 6,
+                      fig.align="center")
+
+options(scipen = 999)
+```
+
+## Acknowledgement of Country
+
+I would like to acknowledge the Traditional Owners of Australia and  recognise their continuing connection to land, water and culture. The  University of Sydney is located on the land of the Gadigal people  of the Eora Nation. I pay my respects to their Elders, past and present.
+
+# Qualitative Data Analysis with NVivo
+
+*Seminar materials based on: Mortelmans, D. (2025). Doing Qualitative Data Analysis with NVivo. Springer.*
+
+---
+
+## Any question concerning the content for this week?
+
+---
+
+## Plan for today
+
+1. A2 peer-review debriefing
+2. Quick review of quantitative methods
+3. Analysing data (catching up on Week 11)
+4. Qualitative data: structure and approaches to analysis
+5. Grounded theory and the three coding phases
+6. CAQDAS and NVivo
+7. Hands-on workshop with NVivo (Exercises 1–4)
+8. Best practices and wrap-up
+9. A3 in-class quiz + check-in
+
+::: callout-note
+Make sure you have **NVivo installed** on your laptop and have downloaded the social media posts (zip folder) from Canvas.
+:::
+
+---
+
+## Today's Learning Objectives
+
+By the end of today's class, you will be able to:
+
+1. Choose an analysis method, a coding approach and validity/reliability strategies for a qualitative study
+
+2. Explain the fundamental concepts of qualitative data analysis
+
+3. Describe the Grounded Theory approach to analysis
+
+4. Carry out basic NVivo operations for coding and querying data
+
+5. Practise hands-on coding and retrieval techniques
+
+
+---
+
+## But first let's do a quick review of Quantitative Methods {.smaller}
+
+### How to measure significant differences among groups
+
+Let's read this methods description from a paper (Paper 1 in Canvas)
+
+> METHODS We performed a randomised controlled trial in the setting of a curricular emergency medicine course. Participants were 118 third-year medical students. Participants were randomly allocated into 20 groups, 10 of which had free access to 500 g of chocolate cookies during an emergency medicine course session (cookie group) and 10 of which did not (control group). All groups were taught by the same teachers. Educational content and course material were the same for both groups. After the course, all students were asked to complete a 38-question evaluation form.
+
+Now, let's check how they report the results.
+
+::: {style="text-align: center;"}
+[LINK to PAPER](https://canvas.sydney.edu.au/courses/65715/files/46471811?module_item_id=2900528)
+:::
+
+- What is statistically significant?
+- How do we know that?
+
+---
+
+## How to make your USS feedback count
+
+:::: columns
+::: {.column width="55%"}
+Your Unit of Study Survey (USS) feedback is **confidential**, and it helps the students coming after you.
+
+- **Be specific:** what helped you learn, and what didn't? Why?
+- **Be constructive:** what practical changes would help the next class?
+- **Be relevant:** imagine you are the teacher.
+:::
+
+::: {.column width="45%"}
+::: {style="text-align: center;"}
+<img src = '../img/uss-qr-govt6139-2026.png' width = '85%'>
+
+<https://student-surveys.sydney.edu.au>
+:::
+:::
+::::
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 5, seconds = 00)
+```
+
+# 1. Analysing data (catching up on Week 11)
+
+---
+
+## Methods of Qualitative Analysis {.smaller}
+
+Choose the method that fits your research question and data type. Common methods in political science:
+
+1. **Content or theme analysis:** analyse data in relation to your research questions and interpret its social and political meaning (interviews, documents, images, speeches)
+2. **Discourse analysis:** how people represent their actions in text and language; language patterns reveal meanings and **power relationships**
+3. **Frame analysis:** how actors define issues through **diagnosis** (what is the problem?), **prognosis** (what is the solution?) and a **call to action** (who should act?)
+4. **Dramaturgical analysis:** politics as performance (actors, stages, scripts and audiences)
+
+---
+
+## The Coding Process
+
+**Seven Key Steps:**
+
+1. **Organise and prepare** - transcribe, sort
+2. **Read through all data** - get general sense
+3. **Code the data** - bracket chunks, label categories
+4. **Identify themes** - group codes into 5-7 themes
+5. **Develop story line** - interconnect themes
+6. **Add framework** (optional) - apply specific tradition
+7. **Represent and interpret** - narratives, visuals, tables
+
+---
+
+## Codes: Types and Approaches {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**Three types of codes**
+
+- **Expected:** based on literature and common sense (e.g. "attitudes toward oneself" in a bullying study)
+- **Surprising:** unexpected, emerged from the data
+- **Unusual/conceptual:** of particular interest to readers (e.g. "retriggering" in a campus response study)
+:::
+
+::: {.column width="50%"}
+**Three coding approaches**
+
+- **Emergent only:** codes develop from the data (traditional in social sciences)
+- **Predetermined only:** theory-based codebook (popular in health sciences)
+- **Combination (recommended):** start with a codebook, let it evolve with the data
+:::
+::::
+
+---
+
+## Ensuring Quality: Validity and Reliability {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**Validity:** are the findings **accurate and credible**? Use at least 2-3 strategies:
+
+- **Triangulation** across data sources
+- **Member checking** with participants
+- **Rich, thick description**
+- **Clarify researcher bias** (reflexivity)
+- Also: negative cases, prolonged engagement, peer debriefing, external auditor
+:::
+
+::: {.column width="50%"}
+**Reliability:** is your approach **consistent** across researchers and over time?
+
+- Check transcripts for mistakes
+- Avoid **code drift**: keep a codebook with clear definitions
+- Coordinate across coders in a team
+- Cross-check codes: **intercoder agreement** (target: roughly 80%)
+:::
+::::
+
+::: aside
+Creswell & Creswell (2022), Ch. 9
+:::
+
+---
+
+## Analysis vs. Interpretation
+
+:::: columns
+::: {.column width="50%"}
+### Analysis
+
+*What the data shows*
+
+Organising, coding, identifying themes, developing story lines, representing patterns
+
+**Output:** themes, patterns, descriptions, visual models
+:::
+
+::: {.column width="50%"}
+### Interpretation
+
+*What the data means*
+
+Lessons learned, comparing to literature/theory, implications, limitations, future research
+
+**Output:** the "so what?", theoretical and practical contributions
+:::
+::::
+
+# 2. Qualitative data: structure and approaches
+
+---
+
+## What's the difference between Quantitative Data and Qualitative Data?
+
+---
+
+## Qualitative Data vs Quantitative Data
+
+- Yes, quantitative data is data that you can count or measure while qualitative data is data that you can interpret without extracting counts or measures.
+
+### But what about a newspaper article? Is it a quantitative or qualitative piece of data?
+
+It depends on your approach!
+
+- You can **read and interpret** its meaning (qualitative approach, and therefore qualitative data), or
+- You can **count** the frequency of each word that appears in the text (e.g., how many times does it mention "immigration")
+
+Quantitative or qualitative is not an inner or embedded characteristic of the data.
+
+---
+
+## Understanding Data Structure: From Unstructured to Structured {.smaller}
+
+### Layering Research Data
+
+**The Spectrum of Data Structure**
+
+Research data exists on a continuum from completely unstructured to fully structured. Understanding where your data sits on this spectrum is crucial for choosing appropriate analysis methods.
+
+```
+UNSTRUCTURED ←―――――――――――――――――→ STRUCTURED
+     |              |              |
+  Raw text    Semi-structured   Database
+  No format   Some structure    Fixed format
+  Flexible    Annotations       Rigid schema
+```
+
+**Key Insight:** This is NOT the same as qualitative vs. quantitative data!
+
+- Data can be translated from qualitative to quantitative (or vice versa)
+- Different analytical methods can span the spectrum
+- NVivo helps move data from unstructured → semi-structured → structured
+
+---
+
+## What Makes Data Structured? {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**Structured Data:**
+
+- **Definition:** Data ordered in explicit relationships, typically organised in tables
+- **Characteristics:**
+  - Elements explicitly defined by their position
+  - Each element has a clear sense in the "data world"
+  - Described by items: variables, attributes, properties, etc.
+  - Relationships link an identifiable item (respondent) to values
+:::
+
+::: {.column width="50%"}
+**Example Elements:**
+
+- A person surveyed (respondent)
+- Their age (numerical value)
+- Their response to "What do you think is democracy?" (open-ended text)
+
+**Machine Processing:** Relationships are explicit and unique, allowing automated analysis
+:::
+::::
+
+---
+
+## What Makes Data Unstructured? {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**Unstructured Data:**
+
+- **Definition:** Data without explicitly defined relationships
+- **Classic Example:** Plain text document without annotations
+
+**Continuum Example - Interview Transcripts:**
+
+```
+UNSTRUCTURED:
+Plain text file with interview dialogue
+      ↓ (add metadata)
+
+SEMI-STRUCTURED:
+Header with date, names, location
+Interview text with some formatting
+      ↓ (add coding/themes)
+
+STRUCTURED:
+Coded segments linked to themes
+Annotations and relationships defined
+Metadata captured systematically
+```
+:::
+
+::: {.column width="50%"}
+**The NVivo Role:**
+As we code and annotate data in NVivo, we're adding layers of structure to originally unstructured data. This structure enables sophisticated analysis while preserving the rich, contextual nature of qualitative data.
+
+**Important Distinction:**
+
+- **Structured ≠ Quantitative**
+- **Unstructured ≠ Qualitative**
+- Qualitative data can be structured (coded interviews)
+- Quantitative data can be unstructured (raw sensor readings)
+:::
+::::
+
+---
+
+## What is Qualitative Research? {.smaller}
+
+**Core Definition:**
+
+> "Qualitative research is a situated activity that locates the observer in the world. It consists of interpretive, material practices that make the world visible... qualitative researchers study things in their natural settings, attempting to make sense of or interpret phenomena in terms of the meanings people bring to them." (Denzin & Lincoln, 2017)
+
+**Key Characteristics:**
+
+- **Flexibility in Design:** Research questions serve as a compass, not rigid boundaries
+- **Multiple Data Collection Methods:** Interviews, observations, documents, focus groups
+- **Prolonged Engagement:** Deep, contextual understanding over time
+- **Textual Analysis:** Primary focus on words, meanings, and interpretations
+- **Inductive Approach:** Theory emerges from data rather than testing pre-existing hypotheses
+
+---
+
+## How Qualitative Differs from Quantitative
+
+- Not about numbers or statistical procedures
+- Emphasises meaning-making and social processes
+- Requires analytical flexibility
+- Rich contextual descriptions in reporting
+- Participants can be involved in validating findings
+
+---
+
+## Approaches to Qualitative Data Analysis {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**Common Elements Across Methods:**
+Despite diverse methodological paradigms (post-positivism, constructivism, critical approaches), most qualitative analyses share similar steps:
+
+1. **Data Organisation** - Managing collected material
+2. **Data Breakdown** - Coding and segmenting
+3. **Data Description** - Understanding patterns
+4. **Data Connection** - Linking themes and concepts
+5. **Writing Up** - Presenting findings
+:::
+
+::: {.column width="50%"}
+**The Metaphor of Analysis:**
+Think of it as an archaeologist encountering ruins:
+
+- Remove debris carefully
+- Number and catalogue stones
+- Clean the site
+- Reconstruct buildings piece by piece
+- Return to leftover pieces to fit them in
+:::
+::::
+
+---
+
+## Qualitative process
+
+```{dot}
+//| echo: false
+//| fig-width: 10
+digraph qualitative_analysis_process {
+
+  graph [layout = dot,
+         rankdir = LR,
+         bgcolor = "#F8F9FA",
+         fontname = "Arial"]
+
+  node [shape = box,
+        style = "rounded,filled",
+        fontname = "Arial",
+        fontsize = 25,
+        width = 2,
+        height = 0.8]
+
+  edge [color = "#2C3E50",
+        fontsize = 25,
+        penwidth = 2,
+        arrowsize = 1]
+
+  node [fillcolor = "#E8F4F8", color = "#3498DB"]
+  A [label = "Raw Data\n(Unstructured)"]
+
+  node [fillcolor = "#FEF5E7", color = "#F39C12"]
+  B [label = "Dismantling\n(Breaking Down)"]
+
+  node [fillcolor = "#FADBD8", color = "#E74C3C"]
+  C [label = "Coding/Labelling\n(Assigning Meaning)"]
+
+  node [fillcolor = "#EBDEF0", color = "#9B59B6"]
+  D [label = "Rebuilding\n(Organising)"]
+
+  node [fillcolor = "#D5F4E6", color = "#27AE60"]
+  E [label = "Linking/Connecting\n(Finding Patterns)"]
+
+  node [fillcolor = "#AED6F1", color = "#2874A6"]
+  F [label = "Theory/Narrative\n(Final Output)"]
+
+  A -> B [label = "  Read & Review  "]
+  B -> C [label = "  Segment  "]
+  C -> D [label = "  Organise  "]
+  D -> E [label = "  Relate  "]
+  E -> F [label = "  Synthesise  "]
+
+  // Feedback loop for constant comparison
+  E -> C [label = "  Constant\n  Comparison  ",
+          style = dashed,
+          color = "#95A5A6",
+          constraint = false]
+
+  subgraph cluster_0 {
+    label = "Analytical Process in Qualitative Research"
+    fontsize = 25
+    fontname = "Arial Bold"
+    style = rounded
+    color = "#34495E"
+    B C D E
+  }
+}
+```
+
+# 3. Grounded theory and coding
+
+---
+
+## Grounded Theory: A Structured Approach {.smaller}
+
+**Why Grounded Theory?**
+
+- Most prevalent qualitative analytical approach
+- Historic connection to NVivo (originally NUD\*IST)
+- Provides clear procedural guidance
+- Flexible enough for various research contexts
+
+**Core Principles:**
+
+:::: columns
+::: {.column width="50%"}
+**1. Theory Building from Data**
+
+- Analytical induction: concepts emerge from empirical material
+- Not testing pre-existing hypotheses
+- Creating new connections between concepts
+- Focus on "theoretical sensitivity" - the ability to derive meaning and conceptualise data
+:::
+
+::: {.column width="50%"}
+**2. Cyclical Working (Constant Comparison)**
+
+- Iterative data collection and analysis
+- Continuous refinement of concepts
+- Each round of data collection becomes more focused
+- Theory is "grounded" in data through constant comparison
+:::
+::::
+
+---
+
+## Three Coding Phases (1/3): Open Coding
+
+> "The analytic process through which concepts are identified and their properties and dimensions are discovered."
+
+- Breaking down data into smaller units
+- Assigning labels to text segments
+- Creating initial codes close to the data
+- Building your codebook
+
+**Example:**
+
+- Raw data: "You need to be honest" + "She's always reliable"
+- Code: "Trust in relationships"
+
+---
+
+## Three Coding Phases (2/3): Axial Coding
+
+> "The process of relating categories to their subcategories... linking categories at the level of properties and dimensions."
+
+- Connecting disparate codes
+- Developing concepts from open codes
+- Creating hierarchies and relationships
+- Moving toward abstraction
+
+---
+
+## Three Coding Phases (3/3): Selective Coding
+
+> "The process of integration and refining the theory."
+
+- Interconnecting concepts
+- Identifying a central category
+- Building the theoretical framework
+- Answering the research question
+
+# 4. CAQDAS and NVivo
+
+---
+
+## The Role of CAQDAS and NVivo
+
+**What is CAQDAS?**
+Computer Assisted Qualitative Data Analysis Software
+
+**What NVivo CAN Do:**
+
+1. **Data Management** - Store all project materials in one file (.nvp)
+2. **Data Coding** - Label and organise data systematically
+3. **Data Querying** - Retrieve coded material efficiently
+4. **Visualisation** - Create coding stripes, hierarchies, and frameworks
+
+**What NVivo CANNOT Do:**
+
+- Replace creative analysis
+- Automatically produce theoretical frameworks
+- Generate ready-made results
+- Replace reading and interpretation
+
+---
+
+## Important Principle {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+```
+┌─────────────────────────┐
+│   INSIDE NVIVO:         │
+│   • Data management     │
+│   • Coding data         │
+│   • Querying data       │
+└─────────────────────────┘
+           ↓
+┌─────────────────────────┐
+│   OUTSIDE NVIVO:        │
+│   • Reading             │
+│   • Interpreting        │
+│   • Writing             │
+└─────────────────────────┘
+```
+
+**Code-and-Retrieve Logic:**
+The fundamental principle since the 1980s:
+
+1. Import raw data
+2. Code your data (attach labels)
+3. Retrieve coded material (queries)
+4. Analyse in context
+:::
+
+::: {.column width="50%"}
+**Critical Warnings:**
+
+- **Avoid "Analytical Madness"** - Coding is not the end goal, just a means
+- **Maintain Context** - Never analyse fragments in isolation
+- **Balance Quantity and Quality** - Don't let counting replace interpretation
+- **Researcher as Analyst** - Software supports but doesn't replace analytical work
+:::
+::::
+
+# 5. Hands-on workshop with NVivo
+
+---
+
+## Workshop Structure
+
+- Exercise 1: Project Setup and Data Import
+- Exercise 2: Basic Coding Operations
+- Exercise 3: Building a Hierarchical Codebook
+- Exercise 4: Queries and Retrieval
+
+---
+
+## Exercise 1: Setting Up Your NVivo Project
+
+**Objective:** Create a new project and import data
+
+:::: columns
+::: {.column width="50%"}
+**1. Create a New Project**
+
+- Open NVivo
+- File → New Project
+- Choose location and name: "GOVT6139 NVivo"
+- Add description: "Workshop on qualitative data analysis"
+:::
+
+::: {.column width="50%"}
+**2. Understanding Project Structure**
+
+Your project file (.nvp) contains EVERYTHING:
+
+- Raw data
+- Codes
+- Memos
+- Queries
+- Visualisation
+:::
+::::
+
+---
+
+## Continued: Exercise 1: Setting Up Your NVivo Project {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**3. Exploring the Interface**
+
+- **Navigation View** (left): Project structure and folders
+- **List View** (centre): Contents of selected folder
+- **Detail View** (right/bottom): Working area for files
+:::
+
+::: {.column width="50%"}
+**4. Import Sample Data**
+
+- Go to: Import → Documents
+- Select social media posts (download zip folder from Canvas)
+- Option: Create a case for each file (skip for now)
+- Data appears in Data → Files
+:::
+::::
+
+**Key Locations:**
+
+- `/Data/Files` - Your primary documents
+- `/Codes` - Your codebook (empty initially)
+- `/Queries` - Saved searches
+
+---
+
+## 💻 HANDS-ON: Set up your project
+
+1. Create your project
+2. Import some social media post files from the folder
+3. Open one document in Detail View
+4. Familiarise yourself with the interface
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 4, seconds = 00)
+```
+
+---
+
+## Exercise 2: Basic Coding Operations
+
+**Objective:** Learn to code text and build an initial codebook
+
+**What is Coding?**
+Coding = Labelling relevant parts of your data with descriptive tags
+
+**Key Concepts:**
+
+- **Reference** = Selected text fragment
+- **Code** = Label/tag describing the content
+- **Codebook** = Collection of all codes
+
+---
+
+## Method 1: Coding by Selection (Recommended for Beginners) {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**Step-by-Step:**
+
+1. **Open a Document**
+   - Double-click an interview transcript
+   - Document opens in Detail View
+
+2. **Select Text to Code**
+   - Highlight a relevant passage (sentence or paragraph)
+   - Keep selection close to a meaningful unit
+
+3. **Create and Attach a Code**
+   - With text selected: Right-click → Code Selection → Code Selection at New Code
+   - Or: Click "Code" button in ribbon
+   - Enter code name (e.g., "Economic concerns")
+   - Optionally add description
+   - Click OK
+:::
+
+::: {.column width="50%"}
+4\. **Verify Your Coding**
+
+- Look for coding stripe on the right side (coloured bar)
+- Each code has a unique colour
+
+5\. **Code More Text**
+
+- Select another passage
+- Right-click → Code Selection → Code Selection at Existing Codes
+- Select your existing code or create new one
+:::
+::::
+
+---
+
+## Method 2: Drag-and-Drop Coding (Faster for Multiple Codes) {.smaller}
+
+**Setup:**
+
+1. Open document in Detail View
+2. Put codebook in List View (go to Codes section)
+3. Activate Coding Panel: View → Coding Panel (right side)
+
+**Coding Process:**
+
+1. Select text in document
+2. **Drag to existing code** in Coding Panel = code at that code
+3. **Drag to empty area** at bottom = create new code
+
+**Note:** Two-step drag in NVivo: (1) Select text, (2) Click again and drag
+
+---
+
+## Inductive or Deductive Analysis?
+
+Note that you could also do something else:
+
+1. You could first create all your codes in the code view panel (right-click on the blank part) - but you could also import a set of existing codes (a.k.a. a codebook!)
+
+2. Second, use these codes to code your document
+
+::: callout-note
+What kind of approach would this be? **Inductive** or **Deductive**?
+:::
+
+---
+
+## Coding Best Practices {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**Stay Close to Your Data:**
+
+- Code at a detailed level initially
+- Use respondents' own words when appropriate
+- Avoid overly abstract codes early on
+
+**Example of Good vs. Poor Coding:**
+
+**TOO SPECIFIC (Poor):**
+
+- "Fishing regulations causing job losses in coastal communities"
+- Problem: Too detailed, won't recur often → "once-only codes"
+:::
+
+::: {.column width="50%"}
+**GOOD (Close to data):**
+
+- "Fishing regulations"
+- "Job losses"
+- "Economic impact"
+
+**TOO ABSTRACT (Poor at this stage):**
+
+- "Economic factors"
+- Problem: Too vague, loses meaning
+
+**Optimal Approach:**
+Start specific → Organise hierarchically later → Aggregate upward
+:::
+::::
+
+---
+
+## 💻 HANDS-ON: Code your posts {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+1. **Open your social media posts**
+
+2. **Code 1-2 passages using these guidelines:**
+   - Look for: concerns, opinions, experiences
+   - Create 3-4 different codes
+   - Code some passages with multiple codes where relevant
+
+3. **Example codes to consider:**
+   - Border security concerns
+   - Economic impact of immigration
+   - Cultural integration and identity
+   - Humanitarian perspectives
+   - Legal immigration policy
+   - Personal immigrant experiences
+   - National security arguments
+   - Labour market effects
+:::
+
+::: {.column width="50%"}
+4\. **Check your work:**
+
+- View → Coding Stripes (should see coloured bars)
+- Navigate to Codes section
+- See your codebook building
+
+**Common Issues:**
+
+- **Coding stripes not showing?** File → Options → Display → turn on coding stripes
+- **Can't find your codes?** Look in Navigation View → Codes
+- **Made a mistake?** Right-click coded text → Uncode
+:::
+::::
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 10, seconds = 00, top = TRUE)
+```
+
+# Check-in
+
+---
+
+## Exercise 3: Building a Hierarchical Codebook
+
+:::: columns
+::: {.column width="50%"}
+**Objective:** Organise codes into a logical hierarchy
+
+**Why Hierarchies?**
+
+- Manage large codebooks (100+ codes)
+- Group related concepts
+- Move from specific to abstract
+- Facilitate analysis
+:::
+
+::: {.column width="50%"}
+**Structure Example:**
+
+- Economic Arguments (labour market, fiscal, business)
+- Security and Legal Concerns (border, legal status, national security)
+- Social and Cultural Issues (integration, community, identity)
+- Humanitarian Perspectives (refugee rights, family separation, human rights)
+:::
+::::
+
+---
+
+## Creating Hierarchies {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**Method 1: Create Child Codes Directly**
+
+1. Go to Codes section
+2. Right-click parent code → New Child Code
+3. Name the child code
+4. Repeat as needed
+
+**Method 2: Drag and Drop Existing Codes**
+
+1. Select a code in your codebook
+2. Click again and drag onto another code
+3. Dropped code becomes child of target code
+4. Note: Two-step process!
+:::
+
+::: {.column width="50%"}
+**Method 3: Multiple Levels**
+
+- Create children of children
+- Build multi-level hierarchies
+- Up to many levels deep
+:::
+::::
+
+---
+
+## Aggregating Coding (Powerful Feature) {.smaller}
+
+**The Problem:**
+You code at detailed level, but want to see all related coding at higher level
+
+**The Solution: Aggregate Function**
+
+**How it works:**
+
+1. Right-click on parent code → Properties
+2. Check: "Aggregate coding from children"
+3. Or: Right-click → Aggregate Coding from Children
+
+**Effect:**
+
+- All coding from child codes appears at parent level
+- No need to code twice
+- Always code at lowest level, view at any level
+
+---
+
+## 💻 HANDS-ON: Build your hierarchy
+
+1. **Review your codes from Exercise 2**
+
+2. **Create a 2-level hierarchy:**
+   - Identify 2-3 main themes
+   - Create parent codes for these themes
+   - Move existing codes as children
+
+3. **Activate aggregation** on your parent codes
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 10, seconds = 00)
+```
+
+---
+
+## Exercise 4: Queries and Retrieval
+
+**Objective:** Learn to retrieve and analyse coded data
+
+**What are Queries?**
+Searches that retrieve coded material based on criteria
+
+- 8 different query types in NVivo
+- Most powerful analysis tool
+- Results show references with context
+
+---
+
+## Query Type 1: Basic Coding Query {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**Purpose:** Retrieve all instances of a specific code
+
+**Steps:**
+
+1. Explore → Coding Query
+2. Coding Criteria: Select your code
+3. Click Run
+4. Results window shows all references
+:::
+
+::: {.column width="50%"}
+**Results Window Features:**
+
+- **References** from multiple documents
+- **Coding stripes** show which codes present
+- **Context** - can expand to see surrounding text
+- **Source information** - which document, which person
+
+**Expanding Context:**
+
+1. In results: Right-click on reference
+2. Spread Coding → Broad Context
+3. See surrounding sentences/paragraphs
+4. CRITICAL: Never analyse out of context!
+:::
+::::
+
+---
+
+## Query Type 2: Compound Coding Query {.smaller}
+
+**Purpose:** Complex searches using Boolean logic
+
+:::: columns
+::: {.column width="50%"}
+**AND** - Must have both codes
+
+> "Economic impact" AND "Labor market"<br>
+> → Shows where both topics discussed together
+
+**OR** - Has either code
+
+> "Border security" OR "National security"<br>
+> → Shows all security codes
+:::
+
+::: {.column width="50%"}
+**NOT** - Has one code but not another
+
+> "Immigration policy" NOT "Humanitarian"<br>
+> → Policy topics excluding humanitarian
+
+**NEAR** - Codes close together in text
+
+> "Cultural" NEAR "Integration"<br>
+> → Within specified word distance
+:::
+::::
+
+---
+
+## Query Type 3: Matrix Coding Query {.smaller}
+
+|                    | Pro-immigration | Anti-immigration | Mixed views |
+|--------------------|:---------------:|:----------------:|:-----------:|
+| Economic arguments |       15        |        23        |      8      |
+| Security concerns  |       22        |        18        |     12      |
+| Cultural issues    |       10        |        15        |     20      |
+
+:::: columns
+::: {.column width="50%"}
+**Purpose:** Compare coding across different dimensions
+
+**Most Powerful Tool in NVivo!**
+
+**Basic Setup:**
+
+- **Rows:** Select codes or themes
+- **Columns:** Select cases or attributes
+- **Result:** Matrix showing intersections
+:::
+
+::: {.column width="50%"}
+**Each cell = number of references at that intersection**
+
+**Click cell → See actual coded text**
+
+**Use Cases:**
+
+- Compare themes across age groups, genders, locations
+- Any rows × columns comparison
+:::
+::::
+
+---
+
+## 💻 HANDS-ON: Run your queries {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**Task 1: Basic Coding Query (3 min)**
+
+1. Explore → Coding Query
+2. Select one of your codes
+3. Run query
+4. Review results
+5. Try expanding context on a reference
+
+**Task 2: Compound Query (4 min)**
+
+1. Create new Coding Query
+2. Select TWO codes
+3. Use AND operator
+4. Run and observe results
+5. Try OR operator - notice difference
+:::
+
+::: {.column width="50%"}
+**Task 3: Matrix Coding Query (5 min)**
+
+*Note: This requires classifications (demographics) - if not available, observe demo*
+
+1. Explore → Matrix Coding Query
+2. Rows: Select 2-3 of your main codes
+3. Columns: Select other codes
+4. Run query
+5. Examine the matrix
+6. Double-click a cell to see references
+:::
+::::
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 10, seconds = 00)
+```
+
+# 6. Best practices and wrap-up
+
+---
+
+## Best Practices and Wrap-Up
+
+**1. Qualitative Analysis Fundamentals**
+
+- It's an interpretive, iterative process
+- Flexibility is essential
+- Context matters enormously
+- Software supports but doesn't replace thinking
+
+**2. Grounded Theory Approach**
+
+- Theory emerges from data (inductive)
+- Three coding phases: Open → Axial → Selective
+- Constant comparison is key
+- Theoretical sensitivity develops with practice
+
+---
+
+## 3. NVivo Best Practices
+
+:::: columns
+::: {.column width="50%"}
+**DO:**
+
+- ✓ Code at a detailed level initially
+- ✓ Use hierarchies and aggregation
+- ✓ Always view context when analysing
+- ✓ Make regular backups (.nvp file)
+- ✓ Use coding stripes and highlighting
+- ✓ Write memos about your thinking
+- ✓ Keep codebook organised
+:::
+
+::: {.column width="50%"}
+**DON'T:**
+
+- ✗ Code too abstractly at first
+- ✗ Create "once-only" codes (too specific)
+- ✗ Analyse fragments without context
+- ✗ Let counting replace interpretation
+- ✗ Forget that YOU are the analyst
+- ✗ Ignore inconsistencies (they're informative!)
+:::
+::::
+
+---
+
+## 4. Common Pitfalls to Avoid {.smaller}
+
+:::: columns
+::: {.column width="50%"}
+**Reification of Researcher and Data:**
+
+- Danger: Software distances you from data
+- Solution: Always use "spread to" for context
+- Remember: Coded fragments come from interviews with real people
+
+**Analytical Madness:**
+
+- Danger: Over-focus on coding mechanics
+- Solution: Coding is a means, not the end
+- Keep asking: "So what does this mean?"
+:::
+
+::: {.column width="50%"}
+**Quantification Creep:**
+
+- Danger: Counting codes becomes analysis
+- Solution: Numbers describe, don't explain
+- Focus on patterns, meanings, and relationships
+:::
+::::
+
+---
+
+## Continuing Your Learning Journey {.smaller}
+
+**Next Steps (if you want):**
+
+:::: columns
+::: {.column width="50%"}
+**1. Practise Coding (Essential)**
+
+- Start with 2-3 interviews (check out Canvas for interviews on a fictional project about understanding political efficacy)
+- Code thoroughly at detailed level
+- Organise into hierarchies
+- Aggregate upward
+:::
+
+::: {.column width="50%"}
+**2. Advanced Features to Explore**
+
+- Auto-coding (AI-assisted)
+- Text search queries
+- Framework matrices
+- Visualisations (models, charts)
+- Annotations and memos
+:::
+::::
+
+---
+
+## A3 — In-class Quiz
+
+Take 10 minutes to complete this week's A3 quiz on Canvas — worth 10 points, on qualitative data analysis with NVivo.
+
+```{r echo = FALSE}
+library(countdown)
+
+countdown(minutes = 10, seconds = 00)
+```
+
+---
+
+## Week 12 Check-in
+
+Anything unclear from this week?
+
+---
+
+## See you next week for the final seminar!
