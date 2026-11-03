@@ -63,9 +63,8 @@ or <https://www.menti.com/al58cddjjy7b>
 3. Group task: choose a design
 4. Complex designs, and how to choose a design
 5. Workshopping your research proposal
-6. Replication
-7. Key takeaways from GOVT6139
-8. A3 in-class short answer, wrap-up and A2 Q&A
+6. Key takeaways from GOVT6139
+7. A3 in-class short answer, wrap-up and A2 Q&A
 
 ---
 
@@ -604,28 +603,8 @@ library(countdown)
 countdown(minutes = 10, seconds = 00)
 ```
 
-# 6. Replication
 
----
-
-## Replication
-
-**The replication crisis (of quantitative research)**
-
-- Many published studies could not be reproduced
-- Especially in psychology (also medical science)
-
-**A rising standard for researchers (quantitative and qualitative):**
-
-- Present your research so that another researcher could **replicate** your analyses
-- Many journals expect replication datasets and supplementary materials
-- **Pre-registration** of studies
-
-**Learning how to do research?**
-
-- Start by trying to replicate a published paper
-
-# 7. Key takeaways from GOVT6139
+# 6. Key takeaways from GOVT6139
 
 ---
 
